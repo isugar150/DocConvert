@@ -23,13 +23,13 @@ namespace DocConvert
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            textBox1.Text = @"C:\Users\Jm\Desktop\test.xlsx";
+            textBox1.Text = @"C:\Users\Jm\Desktop\test.pptx";
             textBox2.Text = @"C:\Users\Jm\Desktop\test.pdf";
         }
         
         private void button1_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = "지원하는 형식 (*.docx;*.doc;*.xlsx;*.xls)|*.docx;*.doc;*.xlsx;*.xls|All Files (*.*)|*.*";
+            openFileDialog1.Filter = "지원하는 형식 (*.docx;*.doc;*.xlsx;*.xls;*.ppt;*.pptx)|*.docx;*.doc;*.xlsx;*.xls;*.ppt;*.pptx|All Files (*.*)|*.*";
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.RestoreDirectory = true;
 
@@ -66,6 +66,18 @@ namespace DocConvert
                     label3.Text = "상태: 변환 성공";
                 else
                     label3.Text = "상태: 변환 실패";
+            }
+            else if (Path.GetExtension(textBox1.Text).Equals(".pptx") || Path.GetExtension(textBox1.Text).Equals(".ppt"))
+            {
+                status = PowerPointConvert_Core.PowerPointSaveAs(textBox1.Text, textBox2.Text, null);
+                if (status)
+                    label3.Text = "상태: 변환 성공";
+                else
+                    label3.Text = "상태: 변환 실패";
+            }
+            else
+            {
+                label3.Text = "상태: 지원포맷 아님";
             }
         }
 

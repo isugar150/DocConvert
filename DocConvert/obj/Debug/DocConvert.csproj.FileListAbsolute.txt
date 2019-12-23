@@ -13,3 +13,10 @@ C:\Users\Jm\source\repos\DocConvert\DocConvert\obj\Debug\DocConvert.csproj.Gener
 C:\Users\Jm\source\repos\DocConvert\DocConvert\obj\Debug\DocConvert.csproj.CopyComplete
 C:\Users\Jm\source\repos\DocConvert\DocConvert\obj\Debug\DocConvert.exe
 C:\Users\Jm\source\repos\DocConvert\DocConvert\obj\Debug\DocConvert.pdb
+C:\Users\Jm\source\repos\DocConvert\DocConvert\bin\Debug\NetOffice.dll
+C:\Users\Jm\source\repos\DocConvert\DocConvert\bin\Debug\OfficeApi.dll
+C:\Users\Jm\source\repos\DocConvert\DocConvert\bin\Debug\VBIDEApi.dll
+C:\Users\Jm\source\repos\DocConvert\DocConvert\bin\Debug\stdole.dll
+C:\Users\Jm\source\repos\DocConvert\DocConvert\bin\Debug\NetOffice.xml
+C:\Users\Jm\source\repos\DocConvert\DocConvert\bin\Debug\OfficeApi.xml
+C:\Users\Jm\source\repos\DocConvert\DocConvert\bin\Debug\VBIDEApi.xml
