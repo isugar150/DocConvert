@@ -30,8 +30,7 @@ namespace DocConvert.OfficeLib
             try
             {
                 _Application powerpoint = new Application();
-                Presentations multiPresentations = null;
-                multiPresentations = powerpoint.Presentations;
+                Presentations multiPresentations = powerpoint.Presentations;
 
                 #region 열기 옵션
                 MsoTriState ReadOnly = MsoTriState.msoTrue;
@@ -65,7 +64,7 @@ namespace DocConvert.OfficeLib
             }
             catch (Exception e1)
             {
-                logger.Error(e1.Message);
+                logger.Error("변환 실패: " + e1.Message);
                 return false;
             }
             finally

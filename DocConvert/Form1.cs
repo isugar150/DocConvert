@@ -49,11 +49,13 @@ namespace DocConvert
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Debug.WriteLine(Path.GetExtension(textBox1.Text));
             bool status = false;
+            String passwd = null;
+            if (!textBox3.Text.Equals(""))
+                passwd = textBox3.Text;
             if (Path.GetExtension(textBox1.Text).Equals(".docx") || Path.GetExtension(textBox1.Text).Equals(".doc"))
             {
-                status = WordConvert_Core.WordSaveAs(textBox1.Text, textBox2.Text, null);
+                status = WordConvert_Core.WordSaveAs(textBox1.Text, textBox2.Text, passwd);
                 if (status)
                     label3.Text = "상태: 변환 성공";
                 else
@@ -61,7 +63,7 @@ namespace DocConvert
             }
             else if (Path.GetExtension(textBox1.Text).Equals(".xlsx") || Path.GetExtension(textBox1.Text).Equals(".xls"))
             {
-                status = ExcelConvert_Core.ExcelSaveAs(textBox1.Text, textBox2.Text, null);
+                status = ExcelConvert_Core.ExcelSaveAs(textBox1.Text, textBox2.Text, passwd);
                 if (status)
                     label3.Text = "상태: 변환 성공";
                 else
@@ -69,7 +71,7 @@ namespace DocConvert
             }
             else if (Path.GetExtension(textBox1.Text).Equals(".pptx") || Path.GetExtension(textBox1.Text).Equals(".ppt"))
             {
-                status = PowerPointConvert_Core.PowerPointSaveAs(textBox1.Text, textBox2.Text, null);
+                status = PowerPointConvert_Core.PowerPointSaveAs(textBox1.Text, textBox2.Text, passwd);
                 if (status)
                     label3.Text = "상태: 변환 성공";
                 else

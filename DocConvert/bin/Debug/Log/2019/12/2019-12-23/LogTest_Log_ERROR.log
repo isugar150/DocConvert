@@ -10,3 +10,5 @@
 2019-12-23 16:53:21.1839 ERROR - 예외가 발생한 HRESULT: 0x800A03EC
 2019-12-23 16:56:46.5228 ERROR - 예외가 발생한 HRESULT: 0x800A03EC
 2019-12-23 17:29:10.1227 ERROR - Application (unknown member) : Invalid request.  Hiding the application window is not allowed.
+2019-12-23 17:34:48.8801 ERROR - 암호가 정확하지 않습니다. Word(으)로 문서를 열 수 없습니다. (C:\Users\Jm\Desktop\test.docx)
+2019-12-23 17:49:17.7561 ERROR - 예외가 발생한 HRESULT: 0x800A03EC
