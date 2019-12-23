@@ -14,9 +14,9 @@ using DocConvert.OfficeLib;
 
 namespace DocConvert
 {
-    public partial class Form1 : Form
+    public partial class Convert_Test : Form
     {
-        public Form1()
+        public Convert_Test()
         {
             InitializeComponent();
         }
