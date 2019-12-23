@@ -49,6 +49,7 @@ namespace DocConvert
 
         private void button3_Click(object sender, EventArgs e)
         {
+            label3.Text = "상태: 변환중";
             bool status = false;
             String passwd = null;
             if (!textBox3.Text.Equals(""))

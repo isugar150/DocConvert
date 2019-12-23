@@ -88,3 +88,19 @@
 2019-12-23 17:49:22.9141  INFO - Method: ExcelSaveAs, FilePath: C:\Users\Jm\Desktop\test.xlsx, outPath: C:\Users\Jm\Desktop\test.pdf, docPassword: tion123!@#
 2019-12-23 17:49:42.4359  INFO - 변환 성공
 2019-12-23 17:49:42.4359  INFO - ==================== End ====================
+2019-12-23 18:15:50.2333  INFO - ==================== Start ====================
+2019-12-23 18:15:50.2583  INFO - Method: PowerPointSaveAs, FilePath: C:\Users\Jm\Desktop\test.pptx, outPath: C:\Users\Jm\Desktop\test.pdf, docPassword: 
+2019-12-23 18:15:53.8872  INFO - 변환 성공
+2019-12-23 18:15:53.8872  INFO - ==================== End ====================
+2019-12-23 18:18:25.8621  INFO - ==================== Start ====================
+2019-12-23 18:18:25.8621  INFO - Method: ExcelSaveAs, FilePath: C:\Users\Jm\Desktop\test.xlsx, outPath: C:\Users\Jm\Desktop\test.pdf, docPassword: 
+2019-12-23 18:18:45.8246  INFO - 변환 성공
+2019-12-23 18:18:45.8246  INFO - ==================== End ====================
+2019-12-23 18:25:09.9467  INFO - ==================== Start ====================
+2019-12-23 18:25:09.9467  INFO - Method: ExcelSaveAs, FilePath: C:\Users\Jm\Desktop\test.xlsx, outPath: C:\Users\Jm\Desktop\test.pdf, docPassword: 
+2019-12-23 18:25:29.8803  INFO - 변환 성공
+2019-12-23 18:25:29.8803  INFO - ==================== End ====================
+2019-12-23 18:26:06.0457  INFO - ==================== Start ====================
+2019-12-23 18:26:06.0457  INFO - Method: WordSaveAs, FilePath: C:\Users\Jm\Desktop\test.docx, outPath: C:\Users\Jm\Desktop\test.pdf, docPassword: 
+2019-12-23 18:26:10.7420  INFO - 변환 성공
+2019-12-23 18:26:10.7420  INFO - ==================== End ====================
