@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using DocConvert.FileLib;
 using Microsoft.Office.Interop.Word;
 using NLog;
 using Word = Microsoft.Office.Interop.Word;
@@ -19,12 +19,21 @@ namespace DocConvert.OfficeLib
         /// <param name="FilePath">소스파일</param>
         /// <param name="outPath">저장파일</param>
         /// <param name="docPassword">문서 비밀번호</param>
-        /// <param name="format">저장 형식</param>
         /// <returns></returns>
         public static bool WordSaveAs(String FilePath, String outPath, String docPassword)
         {
             logger.Info("==================== Start ====================");
             logger.Info("Method: WordSaveAs, FilePath: " + FilePath + ", outPath: " + outPath + ", docPassword: " + docPassword);
+            try
+            {
+                LockFile.UnLock_File(FilePath);
+                logger.Info("파일 언락 성공!");
+            }
+            catch (Exception e1)
+            {
+                logger.Info("파일 언락 실패! 자세한내용 로그 참고");
+                logger.Error(e1.Message);
+            }
             try
             {
                 _Application word = new Word.Application
@@ -89,7 +98,7 @@ namespace DocConvert.OfficeLib
                 object CompatibilityMode = Type.Missing;
                 #endregion
                 #region PDF저장
-                doc.SaveAs2(
+                 doc.SaveAs2(
                     outPath,
                     FileFormat,
                     LockComments,

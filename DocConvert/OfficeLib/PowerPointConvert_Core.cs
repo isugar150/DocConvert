@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using DocConvert.FileLib;
 using Microsoft.Office.Interop.PowerPoint;
 using NetOffice.OfficeApi.Enums;
 using NLog;
@@ -21,12 +21,21 @@ namespace DocConvert.OfficeLib
         /// <param name="FilePath">소스파일</param>
         /// <param name="outPath">저장파일</param>
         /// <param name="docPassword">문서 비밀번호</param>
-        /// <param name="format">저장 형식</param>
         /// <returns></returns>
         public static bool PowerPointSaveAs(String FilePath, String outPath, String docPassword)
         {
             logger.Info("==================== Start ====================");
             logger.Info("Method: PowerPointSaveAs, FilePath: " + FilePath + ", outPath: " + outPath + ", docPassword: " + docPassword);
+            try
+            {
+                LockFile.UnLock_File(FilePath);
+                logger.Info("파일 언락 성공!");
+            }
+            catch (Exception e1)
+            {
+                logger.Info("파일 언락 실패! 자세한내용 로그 참고");
+                logger.Error(e1.Message);
+            }
             try
             {
                 _Application powerpoint = new Application();
