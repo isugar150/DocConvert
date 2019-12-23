@@ -1,0 +1,15 @@
+C:\Users\Jm\source\repos\DocConvert\DocConvert\bin\Debug\NLog.config
+C:\Users\Jm\source\repos\DocConvert\DocConvert\bin\Debug\DocConvert.exe.config
+C:\Users\Jm\source\repos\DocConvert\DocConvert\bin\Debug\DocConvert.exe
+C:\Users\Jm\source\repos\DocConvert\DocConvert\bin\Debug\DocConvert.pdb
+C:\Users\Jm\source\repos\DocConvert\DocConvert\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Jm\source\repos\DocConvert\DocConvert\bin\Debug\NLog.dll
+C:\Users\Jm\source\repos\DocConvert\DocConvert\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Jm\source\repos\DocConvert\DocConvert\bin\Debug\NLog.xml
+C:\Users\Jm\source\repos\DocConvert\DocConvert\obj\Debug\DocConvert.csprojAssemblyReference.cache
+C:\Users\Jm\source\repos\DocConvert\DocConvert\obj\Debug\DocConvert.Form1.resources
+C:\Users\Jm\source\repos\DocConvert\DocConvert\obj\Debug\DocConvert.Properties.Resources.resources
+C:\Users\Jm\source\repos\DocConvert\DocConvert\obj\Debug\DocConvert.csproj.GenerateResource.cache
+C:\Users\Jm\source\repos\DocConvert\DocConvert\obj\Debug\DocConvert.csproj.CopyComplete
+C:\Users\Jm\source\repos\DocConvert\DocConvert\obj\Debug\DocConvert.exe
+C:\Users\Jm\source\repos\DocConvert\DocConvert\obj\Debug\DocConvert.pdb
