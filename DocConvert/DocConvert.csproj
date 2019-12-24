@@ -100,6 +100,7 @@
       <DependentUpon>Convert_Test.cs</DependentUpon>
     </Compile>
     <Compile Include="FileLib\LockFile.cs" />
+    <Compile Include="HWPLib\HWPConvert_Core.cs" />
     <Compile Include="OfficeLib\ExcelConvert_Core.cs" />
     <Compile Include="OfficeLib\PowerPointConvert_Core.cs" />
     <Compile Include="OfficeLib\WordConvert_Core.cs" />
@@ -138,6 +139,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="HWPCONTROLLib">
+      <Guid>{86E6E883-3879-4514-A25B-81023981DA19}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

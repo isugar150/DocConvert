@@ -167,3 +167,18 @@
 2019-12-23 22:42:49.3975  INFO - Method: WordSaveAs, FilePath: C:\Users\o0_0o\Desktop\test.docx, outPath: C:\Users\Jm\Desktop\test.pdf, docPassword: 
 2019-12-23 22:42:49.5052  INFO - 파일 언락 성공!
 2019-12-23 22:43:16.5379  INFO - ==================== End ====================
+2019-12-23 22:50:49.5833  INFO - ==================== Start ====================
+2019-12-23 22:50:49.6103  INFO - Method: ExcelSaveAs, FilePath: C:\Users\Jm\Desktop\test.xlsx, outPath: C:\Users\Jm\Desktop\test.pdf, docPassword: 
+2019-12-23 22:50:49.6103  INFO - 파일 언락 성공!
+2019-12-23 22:51:11.4657  INFO - 변환 성공
+2019-12-23 22:51:11.4657  INFO - ==================== End ====================
+2019-12-23 22:52:02.9373  INFO - ==================== Start ====================
+2019-12-23 22:52:02.9373  INFO - Method: WordSaveAs, FilePath: C:\Users\Jm\Desktop\test.docx, outPath: C:\Users\Jm\Desktop\test.pdf, docPassword: 
+2019-12-23 22:52:02.9403  INFO - 파일 언락 성공!
+2019-12-23 22:52:09.8623  INFO - 변환 성공
+2019-12-23 22:52:09.8623  INFO - ==================== End ====================
+2019-12-23 22:52:33.0524  INFO - ==================== Start ====================
+2019-12-23 22:52:33.0524  INFO - Method: PowerPointSaveAs, FilePath: C:\Users\Jm\Desktop\test.pptx, outPath: C:\Users\Jm\Desktop\test.pdf, docPassword: 
+2019-12-23 22:52:33.0524  INFO - 파일 언락 성공!
+2019-12-23 22:52:37.4604  INFO - 변환 성공
+2019-12-23 22:52:37.4604  INFO - ==================== End ====================

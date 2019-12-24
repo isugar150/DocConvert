@@ -1,0 +1,5 @@
+2019-12-24 09:27:30.7712  INFO - ==================== Start ====================
+2019-12-24 09:27:30.8071  INFO - Method: WordSaveAs, FilePath: C:\Users\Jm\Desktop\test.docx, outPath: C:\Users\Jm\Desktop\test.pdf, docPassword: 
+2019-12-24 09:27:30.8071  INFO - 파일 언락 성공!
+2019-12-24 09:27:35.4407  INFO - 변환 성공
+2019-12-24 09:27:35.4407  INFO - ==================== End ====================

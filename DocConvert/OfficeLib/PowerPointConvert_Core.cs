@@ -73,6 +73,7 @@ namespace DocConvert.OfficeLib
             }
             catch (Exception e1)
             {
+                logger.Info("변환중 오류발생 자세한 내용은 오류로그 참고");
                 logger.Error("변환 실패: " + e1.Message);
                 return false;
             }
