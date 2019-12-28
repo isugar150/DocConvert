@@ -10,7 +10,7 @@ using Word = Microsoft.Office.Interop.Word;
 
 namespace DocConvert.OfficeLib
 {
-    class WordConvert_Core
+    public class WordConvert_Core
     {
         private static Logger logger = LogManager.GetLogger("DocConvert_Log");
         /// <summary>

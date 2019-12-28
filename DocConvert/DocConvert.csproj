@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -93,11 +93,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Convert_Test.cs">
+    <Compile Include="Converter_Server.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Convert_Test.Designer.cs">
-      <DependentUpon>Convert_Test.cs</DependentUpon>
+    <Compile Include="Converter_Server.Designer.cs">
+      <DependentUpon>Converter_Server.cs</DependentUpon>
     </Compile>
     <Compile Include="FileLib\LockFile.cs" />
     <Compile Include="HWPLib\HWPConvert_Core.cs" />
@@ -106,8 +106,8 @@
     <Compile Include="OfficeLib\WordConvert_Core.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Convert_Test.resx">
-      <DependentUpon>Convert_Test.cs</DependentUpon>
+    <EmbeddedResource Include="Converter_Server.resx">
+      <DependentUpon>Converter_Server.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +17,7 @@ namespace DocConvert
 {
     public partial class Convert_Test : Form
     {
+        IPAddress ipAddress;
         public Convert_Test()
         {
             InitializeComponent();
@@ -24,7 +26,6 @@ namespace DocConvert
         private void Form1_Load(object sender, EventArgs e)
         {
             textBox1.Text = @"C:\Users\Jm\Desktop\test.pptx";
-            textBox2.Text = @"C:\Users\Jm\Desktop\test.pdf";
         }
         
         private void button1_Click(object sender, EventArgs e)
@@ -39,24 +40,17 @@ namespace DocConvert
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if(saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                textBox2.Text = saveFileDialog1.FileName;
-            }
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             label3.Text = "상태: 변환중";
             bool status = false;
-            String passwd = null;
+            string passwd = null;
+            string outPath = Path.GetDirectoryName(textBox1.Text) + @"\" + Path.GetFileNameWithoutExtension(textBox1.Text) + ".pdf";
             if (!textBox3.Text.Equals(""))
                 passwd = textBox3.Text;
             if (Path.GetExtension(textBox1.Text).Equals(".docx") || Path.GetExtension(textBox1.Text).Equals(".doc"))
             {
-                status = WordConvert_Core.WordSaveAs(textBox1.Text, textBox2.Text, passwd);
+                status = WordConvert_Core.WordSaveAs(textBox1.Text, outPath, passwd);
                 if (status)
                     label3.Text = "상태: 변환 성공";
                 else
@@ -64,7 +58,7 @@ namespace DocConvert
             }
             else if (Path.GetExtension(textBox1.Text).Equals(".xlsx") || Path.GetExtension(textBox1.Text).Equals(".xls"))
             {
-                status = ExcelConvert_Core.ExcelSaveAs(textBox1.Text, textBox2.Text, passwd);
+                status = ExcelConvert_Core.ExcelSaveAs(textBox1.Text, outPath, passwd);
                 if (status)
                     label3.Text = "상태: 변환 성공";
                 else
@@ -72,7 +66,7 @@ namespace DocConvert
             }
             else if (Path.GetExtension(textBox1.Text).Equals(".pptx") || Path.GetExtension(textBox1.Text).Equals(".ppt"))
             {
-                status = PowerPointConvert_Core.PowerPointSaveAs(textBox1.Text, textBox2.Text, passwd);
+                status = PowerPointConvert_Core.PowerPointSaveAs(textBox1.Text, outPath, passwd);
                 if (status)
                     label3.Text = "상태: 변환 성공";
                 else
@@ -87,6 +81,21 @@ namespace DocConvert
         private void button4_Click(object sender, EventArgs e)
         {
             Process.Start(Application.StartupPath+@"\Log");
+        }
+
+        private void ipAddressControl1_KeyUp(object sender, KeyEventArgs e)
+        {
+            Console.WriteLine("KeyUp: {0}", e.KeyValue);
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            ipAddressControl1.Enabled = true;
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            ipAddressControl1.Enabled = false;
         }
     }
 }

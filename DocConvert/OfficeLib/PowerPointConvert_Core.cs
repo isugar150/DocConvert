@@ -12,7 +12,7 @@ using MsoTriState = Microsoft.Office.Core.MsoTriState;
 
 namespace DocConvert.OfficeLib
 {
-    class PowerPointConvert_Core
+    public class PowerPointConvert_Core
     {
         private static Logger logger = LogManager.GetLogger("DocConvert_Log");
         /// <summary>
@@ -66,6 +66,7 @@ namespace DocConvert.OfficeLib
                 );
                 #endregion
                 #region 문서 종료
+                
                 powerpoint.Quit();
                 #endregion
                 logger.Info("변환 성공");

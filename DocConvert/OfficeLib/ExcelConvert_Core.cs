@@ -10,7 +10,7 @@ using Excel = Microsoft.Office.Interop.Excel;
 
 namespace DocConvert.OfficeLib
 {
-    class ExcelConvert_Core
+    public class ExcelConvert_Core
     {
         private static Logger logger = LogManager.GetLogger("DocConvert_Log");
         /// <summary>

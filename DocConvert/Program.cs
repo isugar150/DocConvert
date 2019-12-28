@@ -16,7 +16,7 @@ namespace DocConvert
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Convert_Test());
+            Application.Run(new Converter_Server());
         }
     }
 }
