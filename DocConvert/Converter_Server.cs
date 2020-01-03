@@ -51,6 +51,9 @@ namespace DocConvert
                 SettingsForm.Setting = Setting;
                 SettingsForm.ShowDialog(this);
                 Setting = SettingsForm.Setting;
+
+                textBox1.AppendText("설정된 포트번호: " + Setting["port"] + "\r\n");
+                textBox1.AppendText("저장 경로: " + Setting["path"] + "\r\n");
             }
         }
 
