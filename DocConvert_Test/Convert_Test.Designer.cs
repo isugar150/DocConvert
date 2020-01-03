@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ipAddressControl1 = new IPAddressControlLib.IPAddressControl();
+            this.label2 = new System.Windows.Forms.Label();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -39,10 +43,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.ipAddressControl1 = new IPAddressControlLib.IPAddressControl();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +66,54 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Convert to PDF";
+            // 
+            // ipAddressControl1
+            // 
+            this.ipAddressControl1.AllowInternalTab = false;
+            this.ipAddressControl1.AutoHeight = true;
+            this.ipAddressControl1.BackColor = System.Drawing.SystemColors.Window;
+            this.ipAddressControl1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ipAddressControl1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ipAddressControl1.Enabled = false;
+            this.ipAddressControl1.Location = new System.Drawing.Point(97, 60);
+            this.ipAddressControl1.Name = "ipAddressControl1";
+            this.ipAddressControl1.ReadOnly = false;
+            this.ipAddressControl1.Size = new System.Drawing.Size(114, 19);
+            this.ipAddressControl1.TabIndex = 13;
+            this.ipAddressControl1.Text = "...";
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(8, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 12);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "IP Address:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(97, 20);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(59, 16);
+            this.radioButton2.TabIndex = 11;
+            this.radioButton2.Text = "Server";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(10, 20);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(54, 16);
+            this.radioButton1.TabIndex = 10;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Local";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // textBox3
             // 
@@ -146,59 +194,11 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(10, 20);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(54, 16);
-            this.radioButton1.TabIndex = 10;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Local";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(97, 20);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(59, 16);
-            this.radioButton2.TabIndex = 11;
-            this.radioButton2.Text = "Server";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(8, 63);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 12);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "IP Address:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // ipAddressControl1
-            // 
-            this.ipAddressControl1.AllowInternalTab = false;
-            this.ipAddressControl1.AutoHeight = true;
-            this.ipAddressControl1.BackColor = System.Drawing.SystemColors.Window;
-            this.ipAddressControl1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ipAddressControl1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ipAddressControl1.Enabled = false;
-            this.ipAddressControl1.Location = new System.Drawing.Point(97, 60);
-            this.ipAddressControl1.Name = "ipAddressControl1";
-            this.ipAddressControl1.ReadOnly = false;
-            this.ipAddressControl1.Size = new System.Drawing.Size(114, 19);
-            this.ipAddressControl1.TabIndex = 13;
-            this.ipAddressControl1.Text = "...";
-            // 
             // Convert_Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 390);
+            this.ClientSize = new System.Drawing.Size(414, 287);
             this.Controls.Add(this.groupBox1);
             this.MinimumSize = new System.Drawing.Size(430, 240);
             this.Name = "Convert_Test";

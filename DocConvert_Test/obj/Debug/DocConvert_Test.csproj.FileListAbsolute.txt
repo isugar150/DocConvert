@@ -18,3 +18,14 @@ D:\sources\DocConvert\bin\Debug\NLog.config
 D:\sources\DocConvert\bin\Debug\DocConvert_Test.exe.config
 D:\sources\DocConvert\bin\Debug\DocConvert_Test.exe
 D:\sources\DocConvert\bin\Debug\DocConvert_Test.pdb
+C:\Users\Jm\Source\Repos\DocConvert\bin\Debug\NLog.config
+C:\Users\Jm\Source\Repos\DocConvert\bin\Debug\DocConvert_Test.exe.config
+C:\Users\Jm\Source\Repos\DocConvert\bin\Debug\DocConvert_Test.exe
+C:\Users\Jm\Source\Repos\DocConvert\bin\Debug\DocConvert_Test.pdb
+C:\Users\Jm\Source\Repos\DocConvert\DocConvert_Test\obj\Debug\DocConvert_Test.csprojAssemblyReference.cache
+C:\Users\Jm\Source\Repos\DocConvert\DocConvert_Test\obj\Debug\DocConvert.Convert_Test.resources
+C:\Users\Jm\Source\Repos\DocConvert\DocConvert_Test\obj\Debug\DocConvert_Test.Properties.Resources.resources
+C:\Users\Jm\Source\Repos\DocConvert\DocConvert_Test\obj\Debug\DocConvert_Test.csproj.GenerateResource.cache
+C:\Users\Jm\Source\Repos\DocConvert\DocConvert_Test\obj\Debug\DocConvert_Test.csproj.CopyComplete
+C:\Users\Jm\Source\Repos\DocConvert\DocConvert_Test\obj\Debug\DocConvert_Test.exe
+C:\Users\Jm\Source\Repos\DocConvert\DocConvert_Test\obj\Debug\DocConvert_Test.pdb

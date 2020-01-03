@@ -9,12 +9,15 @@ using NetOffice.OfficeApi.Enums;
 using NLog;
 using PowerPoint = Microsoft.Office.Interop.PowerPoint;
 using MsoTriState = Microsoft.Office.Core.MsoTriState;
+using System.Runtime.InteropServices;
+using System.Reflection;
+using System.Diagnostics;
 
 namespace DocConvert.OfficeLib
 {
     public class PowerPointConvert_Core
     {
-        private static Logger logger = LogManager.GetLogger("DocConvert_Log");
+        private static Logger logger = LogManager.GetLogger("DocConvert_Engine_Log");
         /// <summary>
         /// 워드파일을 PDF로 변환
         /// </summary>
@@ -25,7 +28,8 @@ namespace DocConvert.OfficeLib
         public static bool PowerPointSaveAs(String FilePath, String outPath, String docPassword)
         {
             logger.Info("==================== Start ====================");
-            logger.Info("Method: PowerPointSaveAs, FilePath: " + FilePath + ", outPath: " + outPath + ", docPassword: " + docPassword);
+            logger.Info("Method: " + MethodBase.GetCurrentMethod().Name + ", FilePath: " + FilePath + ", outPath: " + outPath + ", docPassword: " + docPassword);
+            #region File Unlock
             try
             {
                 LockFile.UnLock_File(FilePath);
@@ -36,9 +40,15 @@ namespace DocConvert.OfficeLib
                 logger.Info("파일 언락 실패! 자세한내용 로그 참고");
                 logger.Error(e1.Message);
             }
+            #endregion
+            _Application powerpoint = null;
             try
             {
-                _Application powerpoint = new Application();
+                powerpoint = new Application
+                {
+                    Visible = MsoTriState.msoTrue,
+                    DisplayAlerts = PpAlertLevel.ppAlertsNone
+                };
                 Presentations multiPresentations = powerpoint.Presentations;
 
                 #region 열기 옵션
@@ -65,9 +75,8 @@ namespace DocConvert.OfficeLib
                     msoTriState
                 );
                 #endregion
-                #region 문서 종료
-                
-                powerpoint.Quit();
+                #region 문서 닫기
+                doc.Close();
                 #endregion
                 logger.Info("변환 성공");
                 return true;
@@ -75,11 +84,22 @@ namespace DocConvert.OfficeLib
             catch (Exception e1)
             {
                 logger.Info("변환중 오류발생 자세한 내용은 오류로그 참고");
+                logger.Error("==================== Method: " + MethodBase.GetCurrentMethod().Name + " ====================");
+                logger.Error(new StackTrace(e1, true));
                 logger.Error("변환 실패: " + e1.Message);
+                logger.Error("==================== End ====================");
                 return false;
             }
             finally
             {
+                #region 앱 종료
+                powerpoint.Quit();
+                // 아래작업을 안하면 앱이 정상적으로 종료가 안됨.
+                Marshal.ReleaseComObject(powerpoint);
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+
+                #endregion
                 logger.Info("==================== End ====================");
             }
         }

@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using DocConvert.FileLib;
@@ -12,7 +15,7 @@ namespace DocConvert.OfficeLib
 {
     public class ExcelConvert_Core
     {
-        private static Logger logger = LogManager.GetLogger("DocConvert_Log");
+        private static Logger logger = LogManager.GetLogger("DocConvert_Engine_Log");
         /// <summary>
         /// 워드파일을 PDF로 변환
         /// </summary>
@@ -23,7 +26,8 @@ namespace DocConvert.OfficeLib
         public static bool ExcelSaveAs(String FilePath, String outPath, String docPassword)
         {
             logger.Info("==================== Start ====================");
-            logger.Info("Method: ExcelSaveAs, FilePath: " + FilePath + ", outPath: " + outPath + ", docPassword: " + docPassword);
+            logger.Info("Method: " + MethodBase.GetCurrentMethod().Name + ", FilePath: " + FilePath + ", outPath: " + outPath + ", docPassword: " + docPassword);
+            #region File Unlock
             try
             {
                 LockFile.UnLock_File(FilePath);
@@ -33,11 +37,13 @@ namespace DocConvert.OfficeLib
                 logger.Info("파일 언락 실패! 자세한내용 로그 참고");
                 logger.Error(e1.Message);
             }
+            #endregion
+            _Application excel = null;
             try
             {
-                _Application excel = new Excel.Application
+                excel = new Excel.Application
                 {
-                    Visible = false,
+                    Visible = true,
                     DisplayAlerts = false
                 };
 
@@ -103,8 +109,8 @@ namespace DocConvert.OfficeLib
                     FixedFormatExtClassPtr
                 );
                 #endregion
-                #region 문서 종료
-                excel.Quit();
+                #region 문서 닫기
+                doc.Close();
                 #endregion
                 logger.Info("변환 성공");
                 return true;
@@ -112,11 +118,19 @@ namespace DocConvert.OfficeLib
             catch (Exception e1)
             {
                 logger.Info("변환중 오류발생 자세한 내용은 오류로그 참고");
-                logger.Error(e1.Message);
+                logger.Error("==================== Method: " + MethodBase.GetCurrentMethod().Name + " ====================");
+                logger.Error(new StackTrace(e1, true));
+                logger.Error("변환 실패: " + e1.Message);
+                logger.Error("==================== End ====================");
                 return false;
             }
             finally
             {
+                #region 앱 종료
+                excel.Quit();
+                Marshal.ReleaseComObject(excel);
+                excel = null;
+                #endregion
                 logger.Info("==================== End ====================");
             }
         }

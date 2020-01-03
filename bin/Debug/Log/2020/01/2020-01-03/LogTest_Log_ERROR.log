@@ -1,0 +1,30 @@
+2020-01-03 13:07:58.3727 ERROR - ==================== Start ====================
+2020-01-03 13:07:58.3807 ERROR - Line: 120
+2020-01-03 13:07:58.3807 ERROR - 변환 실패: 원격 프로시저를 호출하지 못했습니다. (예외가 발생한 HRESULT: 0x800706BE)
+2020-01-03 13:07:58.3807 ERROR - ==================== End ====================
+2020-01-03 13:15:19.4640 ERROR - ==================== Method: ExcelSaveAs ====================
+2020-01-03 13:15:19.4640 ERROR - Line:    위치: Microsoft.Office.Interop.Excel._Workbook.ExportAsFixedFormat(XlFixedFormatType Type, Object Filename, Object Quality, Object IncludeDocProperties, Object IgnorePrintAreas, Object From, Object To, Object OpenAfterPublish, Object FixedFormatExtClassPtr)
+   위치: DocConvert.OfficeLib.ExcelConvert_Core.ExcelSaveAs(String FilePath, String outPath, String docPassword) 파일 C:\Users\Jm\Source\Repos\DocConvert\DocConvert\OfficeLib\ExcelConvert_Core.cs:줄 100
+
+2020-01-03 13:15:19.4640 ERROR - 변환 실패: 원격 프로시저를 호출하지 못했습니다. (예외가 발생한 HRESULT: 0x800706BE)
+2020-01-03 13:15:19.4640 ERROR - ==================== End ====================
+2020-01-03 14:07:55.7426 ERROR - ==================== Method: button1_Click ====================
+2020-01-03 14:07:55.7426 ERROR -    위치: DocConvert.Settings.button1_Click(Object sender, EventArgs e) 파일 C:\Users\Jm\Source\Repos\DocConvert\DocConvert\Settings.cs:줄 53
+
+2020-01-03 14:07:55.7426 ERROR - 오류: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+2020-01-03 14:07:55.7426 ERROR - ==================== End ====================
+2020-01-03 14:08:16.7895 ERROR - ==================== Method: button1_Click ====================
+2020-01-03 14:08:16.7895 ERROR -    위치: DocConvert.Settings.button1_Click(Object sender, EventArgs e) 파일 C:\Users\Jm\Source\Repos\DocConvert\DocConvert\Settings.cs:줄 53
+
+2020-01-03 14:08:16.7895 ERROR - 오류: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+2020-01-03 14:08:16.7895 ERROR - ==================== End ====================
+2020-01-03 14:08:45.1451 ERROR - ==================== Method: button1_Click ====================
+2020-01-03 14:08:45.5019 ERROR -    위치: DocConvert.Settings.button1_Click(Object sender, EventArgs e) 파일 C:\Users\Jm\Source\Repos\DocConvert\DocConvert\Settings.cs:줄 53
+
+2020-01-03 14:08:45.7928 ERROR - 오류: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+2020-01-03 14:08:46.0336 ERROR - ==================== End ====================
+2020-01-03 14:11:44.2830 ERROR - ==================== Method: button1_Click ====================
+2020-01-03 14:11:44.2860 ERROR -    위치: DocConvert.Settings.button1_Click(Object sender, EventArgs e) 파일 C:\Users\Jm\Source\Repos\DocConvert\DocConvert\Settings.cs:줄 53
+
+2020-01-03 14:11:44.2860 ERROR - 오류: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+2020-01-03 14:11:44.2860 ERROR - ==================== End ====================

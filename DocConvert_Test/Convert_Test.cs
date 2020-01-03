@@ -30,6 +30,7 @@ namespace DocConvert
         
         private void button1_Click(object sender, EventArgs e)
         {
+            openFileDialog1.FileName = "";
             openFileDialog1.Filter = "지원하는 형식 (*.docx;*.doc;*.xlsx;*.xls;*.ppt;*.pptx)|*.docx;*.doc;*.xlsx;*.xls;*.ppt;*.pptx|All Files (*.*)|*.*";
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.RestoreDirectory = true;

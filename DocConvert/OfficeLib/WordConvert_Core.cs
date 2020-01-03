@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using DocConvert.FileLib;
@@ -12,7 +15,7 @@ namespace DocConvert.OfficeLib
 {
     public class WordConvert_Core
     {
-        private static Logger logger = LogManager.GetLogger("DocConvert_Log");
+        private static Logger logger = LogManager.GetLogger("DocConvert_Engine_Log");
         /// <summary>
         /// 워드파일을 PDF로 변환
         /// </summary>
@@ -23,7 +26,8 @@ namespace DocConvert.OfficeLib
         public static bool WordSaveAs(String FilePath, String outPath, String docPassword)
         {
             logger.Info("==================== Start ====================");
-            logger.Info("Method: WordSaveAs, FilePath: " + FilePath + ", outPath: " + outPath + ", docPassword: " + docPassword);
+            logger.Info("Method: " + MethodBase.GetCurrentMethod().Name + ", FilePath: " + FilePath + ", outPath: " + outPath + ", docPassword: " + docPassword);
+            #region File Unlock
             try
             {
                 LockFile.UnLock_File(FilePath);
@@ -34,11 +38,14 @@ namespace DocConvert.OfficeLib
                 logger.Info("파일 언락 실패! 자세한내용 로그 참고");
                 logger.Error(e1.Message);
             }
+            #endregion
+            _Application word = null;
             try
             {
-                _Application word = new Word.Application
+                word = new Word.Application
                 {
-                    Visible = false
+                    Visible = true,
+                    DisplayAlerts = WdAlertLevel.wdAlertsNone
                 };
 
                 #region 열기 옵션
@@ -118,12 +125,8 @@ namespace DocConvert.OfficeLib
                     CompatibilityMode
                 );
                 #endregion
-                #region 문서 종료
-                object SaveChanges = Type.Missing;
-                object OriginalFormat = Type.Missing;
-                object RouteDocument = Type.Missing;
-
-                word.Quit(SaveChanges, OriginalFormat, RouteDocument);
+                #region 문서 닫기
+                doc.Close();
                 #endregion
                 logger.Info("변환 성공");
                 return true;
@@ -131,11 +134,19 @@ namespace DocConvert.OfficeLib
             catch(Exception e1)
             {
                 logger.Info("변환중 오류발생 자세한 내용은 오류로그 참고");
-                logger.Error(e1.Message);
+                logger.Error("==================== Method: " + MethodBase.GetCurrentMethod().Name + " ====================");
+                logger.Error(new StackTrace(e1, true));
+                logger.Error("변환 실패: " + e1.Message);
+                logger.Error("==================== End ====================");
                 return false;
             }
             finally
             {
+                #region 앱 종료
+                word.Quit();
+                Marshal.ReleaseComObject(word);
+                word = null;
+                #endregion
                 logger.Info("==================== End ====================");
             }
         }
