@@ -90,7 +90,6 @@ C:\Users\Jm\Source\Repos\DocConvert\bin\Debug\NLog.config
 C:\Users\Jm\Source\Repos\DocConvert\bin\Debug\DocConvert.exe.config
 C:\Users\Jm\Source\Repos\DocConvert\bin\Debug\DocConvert.exe
 C:\Users\Jm\Source\Repos\DocConvert\bin\Debug\DocConvert.pdb
-C:\Users\Jm\Source\Repos\DocConvert\DocConvert\obj\Debug\DocConvert.csprojAssemblyReference.cache
 C:\Users\Jm\Source\Repos\DocConvert\DocConvert\obj\Debug\Interop.HWPCONTROLLib.dll
 C:\Users\Jm\Source\Repos\DocConvert\DocConvert\obj\Debug\DocConvert.csproj.ResolveComReference.cache
 C:\Users\Jm\Source\Repos\DocConvert\DocConvert\obj\Debug\DocConvert.Converter_Server.resources

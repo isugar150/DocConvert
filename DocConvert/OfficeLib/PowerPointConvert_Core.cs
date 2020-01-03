@@ -76,7 +76,10 @@ namespace DocConvert.OfficeLib
                 );
                 #endregion
                 #region 문서 닫기
-                doc.Close();
+                if (powerpoint.Presentations.Count <= 1)
+                {
+                    doc.Close();
+                }
                 #endregion
                 logger.Info("변환 성공");
                 return true;
@@ -94,11 +97,9 @@ namespace DocConvert.OfficeLib
             {
                 #region 앱 종료
                 powerpoint.Quit();
-                // 아래작업을 안하면 앱이 정상적으로 종료가 안됨.
                 Marshal.ReleaseComObject(powerpoint);
                 GC.Collect();
                 GC.WaitForPendingFinalizers();
-
                 #endregion
                 logger.Info("==================== End ====================");
             }

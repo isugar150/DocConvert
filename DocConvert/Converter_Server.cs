@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,11 +25,16 @@ namespace DocConvert
             CheckForIllegalCrossThreadCalls = false;
         }
 
+        [Obsolete]
         private void Converter_Server_Load(object sender, EventArgs e)
         {
             if(File.Exists(Application.StartupPath + @"\Settings.json")){
                 Setting = JObject.Parse(File.ReadAllText(Application.StartupPath + @"\Settings.json"));
                 textBox1.AppendText("설정 파일을 불러왔습니다.\r\n");
+                for(int i = 0; i< Dns.GetHostByName(Dns.GetHostName()).AddressList.Length; i++)
+                {
+                    textBox1.AppendText("내부 IP[" + i + "]: " + Dns.GetHostByName(Dns.GetHostName()).AddressList[i].ToString() + "\r\n");
+                }
                 textBox1.AppendText("설정된 포트번호: " + Setting["port"] + "\r\n");
                 textBox1.AppendText("저장 경로: " + Setting["path"] + "\r\n");
             }
@@ -44,11 +50,7 @@ namespace DocConvert
             {
                 SettingsForm.Setting = Setting;
                 SettingsForm.ShowDialog(this);
-                if (Setting != SettingsForm.Setting)
-                {
-                    Setting = SettingsForm.Setting;
-                    textBox1.AppendText("설정 파일이 변경되었습니다.");
-                }
+                Setting = SettingsForm.Setting;
             }
         }
 
