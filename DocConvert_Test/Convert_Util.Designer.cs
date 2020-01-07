@@ -1,6 +1,6 @@
 ﻿namespace DocConvert
 {
-    partial class Convert_Test
+    partial class Convert_Util
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Convert_Util));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ipAddressControl1 = new IPAddressControlLib.IPAddressControl();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,7 +44,14 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.axHwpCtrl1 = new AxHWPCONTROLLib.AxHwpCtrl();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axHwpCtrl1)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -60,7 +68,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(247, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(390, 268);
             this.groupBox1.TabIndex = 0;
@@ -194,18 +202,63 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // Convert_Test
+            // axHwpCtrl1
+            // 
+            this.axHwpCtrl1.Enabled = true;
+            this.axHwpCtrl1.Location = new System.Drawing.Point(-100, -50);
+            this.axHwpCtrl1.Name = "axHwpCtrl1";
+            this.axHwpCtrl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axHwpCtrl1.OcxState")));
+            this.axHwpCtrl1.Size = new System.Drawing.Size(100, 50);
+            this.axHwpCtrl1.TabIndex = 14;
+            this.axHwpCtrl1.Visible = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.pictureBox1);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(229, 268);
+            this.groupBox2.TabIndex = 15;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Option";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DocConvert_Util.Properties.Resources.switch_off;
+            this.pictureBox1.Location = new System.Drawing.Point(122, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 22);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(8, 24);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(108, 12);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "HWP DLL 등록:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // Convert_Util
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 287);
+            this.ClientSize = new System.Drawing.Size(648, 287);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.axHwpCtrl1);
             this.Controls.Add(this.groupBox1);
             this.MinimumSize = new System.Drawing.Size(430, 240);
-            this.Name = "Convert_Test";
-            this.Text = "Convert_Test";
+            this.Name = "Convert_Util";
+            this.Text = "Convert_Util";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axHwpCtrl1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -227,6 +280,10 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label2;
         private IPAddressControlLib.IPAddressControl ipAddressControl1;
+        private AxHWPCONTROLLib.AxHwpCtrl axHwpCtrl1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

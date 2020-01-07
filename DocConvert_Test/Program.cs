@@ -1,11 +1,10 @@
-﻿using DocConvert;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DocConvert_Test
+namespace DocConvert
 {
     static class Program
     {
@@ -17,7 +16,7 @@ namespace DocConvert_Test
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Convert_Test());
+            Application.Run(new Convert_Util());
         }
     }
 }

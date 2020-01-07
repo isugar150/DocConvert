@@ -31,10 +31,7 @@ namespace DocConvert
             if(File.Exists(Application.StartupPath + @"\Settings.json")){
                 Setting = JObject.Parse(File.ReadAllText(Application.StartupPath + @"\Settings.json"));
                 textBox1.AppendText("설정 파일을 불러왔습니다.\r\n");
-                for(int i = 0; i< Dns.GetHostByName(Dns.GetHostName()).AddressList.Length; i++)
-                {
-                    textBox1.AppendText("내부 IP[" + i + "]: " + Dns.GetHostByName(Dns.GetHostName()).AddressList[i].ToString() + "\r\n");
-                }
+                textBox1.AppendText("내부 IP: " + Dns.GetHostByName(Dns.GetHostName()).AddressList[Dns.GetHostByName(Dns.GetHostName()).AddressList.Length-1].ToString() + "\r\n");
                 textBox1.AppendText("설정된 포트번호: " + Setting["port"] + "\r\n");
                 textBox1.AppendText("저장 경로: " + Setting["path"] + "\r\n");
             }

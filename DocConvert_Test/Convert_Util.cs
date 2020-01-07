@@ -13,12 +13,15 @@ using System.Windows.Forms;
 
 using DocConvert.OfficeLib;
 
+using DocConvert.HWPLib;
+using Microsoft.Win32;
+
 namespace DocConvert
 {
-    public partial class Convert_Test : Form
+    public partial class Convert_Util : Form
     {
-        IPAddress ipAddress;
-        public Convert_Test()
+        private bool HWPREGDLL = false;
+        public Convert_Util()
         {
             InitializeComponent();
         }
@@ -31,7 +34,11 @@ namespace DocConvert
         private void button1_Click(object sender, EventArgs e)
         {
             openFileDialog1.FileName = "";
-            openFileDialog1.Filter = "지원하는 형식 (*.docx;*.doc;*.xlsx;*.xls;*.ppt;*.pptx)|*.docx;*.doc;*.xlsx;*.xls;*.ppt;*.pptx|All Files (*.*)|*.*";
+            openFileDialog1.Filter = "지원하는 형식 (*.docx;*.doc;*.hwp;*.xlsx;*.xls;*.pptx;*.ppt)|*.docx;*.doc;*.hwp;*.xlsx;*.xls;*.pptx;*.ppt" +
+                "|Word 형식 (*.docx;*.doc;*.hwp;)|*.docx;*.doc;*.hwp;" +
+                "|Cell 형식 (*.xlsx;*.xls;)|*.xlsx;*.xls;" +
+                "|PPT 형식 (*.pptx;*.ppt;)|*.pptx;*.ppt;" +
+                "|All Files (*.*)|*.*";
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.RestoreDirectory = true;
 
@@ -43,6 +50,11 @@ namespace DocConvert
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (Path.GetExtension(textBox1.Text).Equals(".hwp") && textBox3.Text.Length > 0)
+            {
+                MessageBox.Show("비밀번호 해제후 다시시도해주세요.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             label3.Text = "상태: 변환중";
             bool status = false;
             string passwd = null;
@@ -73,6 +85,14 @@ namespace DocConvert
                 else
                     label3.Text = "상태: 변환 실패";
             }
+            else if (Path.GetExtension(textBox1.Text).Equals(".hwp"))
+            {
+                status = HWPConvert_Core.HwpSaveAs(textBox1.Text, outPath);
+                if (status)
+                    label3.Text = "상태: 변환 성공";
+                else
+                    label3.Text = "상태: 변환 실패";
+            }
             else
             {
                 label3.Text = "상태: 지원포맷 아님";
@@ -97,6 +117,52 @@ namespace DocConvert
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             ipAddressControl1.Enabled = false;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (HWPREGDLL)
+            {
+                /*RegistryKey regKey = Registry.CurrentUser.CreateSubKey(@"Software\HNC\HwpCtrl\Modules", RegistryKeyPermissionCheck.ReadWriteSubTree);
+                try
+                {
+                    regKey.DeleteSubKey("FilePathCheckerModuleExample", true);
+                }
+                catch(Exception e1)
+                {
+                    MessageBox.Show(e1.Message, "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                finally
+                {
+                    regKey.Close();
+                }
+
+                pictureBox1.Image = DocConvert_Util.Properties.Resources.switch_off;
+                HWPREGDLL = false;*/
+            }
+            else
+            {
+                if (File.Exists(Application.StartupPath + @"\FilePathCheckerModuleExample.dll"))
+                {
+                    RegistryKey regKey = Registry.CurrentUser.CreateSubKey(@"Software\HNC\HwpCtrl\Modules", RegistryKeyPermissionCheck.ReadWriteSubTree);
+                    try {
+                        regKey.SetValue("FilePathCheckerModuleExample", Application.StartupPath + @"\FilePathCheckerModuleExample.dll", RegistryValueKind.String);
+                    }
+                    catch (Exception e1)
+                    {
+                        MessageBox.Show(e1.Message, "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    finally
+                    {
+                        regKey.Close();
+                    }
+                }
+
+                pictureBox1.Image = DocConvert_Util.Properties.Resources.switch_on;
+                HWPREGDLL = true;
+            }
         }
     }
 }

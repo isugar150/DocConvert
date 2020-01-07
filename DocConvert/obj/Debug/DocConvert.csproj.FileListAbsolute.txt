@@ -29,7 +29,6 @@ C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\bin\Debug\NLog.xml
 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\bin\Debug\OfficeApi.xml
 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\bin\Debug\VBIDEApi.xml
 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert.csprojAssemblyReference.cache
-C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert.Convert_Test.resources
 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert.Properties.Resources.resources
 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert.csproj.GenerateResource.cache
 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert.csproj.CopyComplete
@@ -99,3 +98,12 @@ C:\Users\Jm\Source\Repos\DocConvert\DocConvert\obj\Debug\DocConvert.csproj.CopyC
 C:\Users\Jm\Source\Repos\DocConvert\DocConvert\obj\Debug\DocConvert.exe
 C:\Users\Jm\Source\Repos\DocConvert\DocConvert\obj\Debug\DocConvert.pdb
 C:\Users\Jm\Source\Repos\DocConvert\DocConvert\obj\Debug\DocConvert.Settings.resources
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\bin\Debug\NLog.config
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\bin\Debug\DocConvert.exe.config
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\bin\Debug\DocConvert.exe
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\bin\Debug\DocConvert.pdb
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\Interop.HWPCONTROLLib.dll
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert.csproj.ResolveComReference.cache
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert.Converter_Server.resources
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert.Settings.resources
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\AxInterop.HWPCONTROLLib.dll
