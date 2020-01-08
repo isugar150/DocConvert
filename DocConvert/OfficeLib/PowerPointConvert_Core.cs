@@ -12,6 +12,7 @@ using MsoTriState = Microsoft.Office.Core.MsoTriState;
 using System.Runtime.InteropServices;
 using System.Reflection;
 using System.Diagnostics;
+using System.Threading;
 
 namespace DocConvert.OfficeLib
 {
@@ -76,10 +77,7 @@ namespace DocConvert.OfficeLib
                 );
                 #endregion
                 #region 문서 닫기
-                if (powerpoint.Presentations.Count <= 1)
-                {
-                    doc.Close();
-                }
+                doc.Close();
                 #endregion
                 logger.Info("변환 성공");
                 return true;
@@ -98,6 +96,11 @@ namespace DocConvert.OfficeLib
                 #region 앱 종료
                 powerpoint.Quit();
                 Marshal.ReleaseComObject(powerpoint);
+                powerpoint = null;
+                powerpoint = new Application{};
+                powerpoint.Quit();
+                Marshal.ReleaseComObject(powerpoint);
+                powerpoint = null;
                 GC.Collect();
                 GC.WaitForPendingFinalizers();
                 #endregion

@@ -42,21 +42,27 @@ namespace DocConvert.HWPLib
             try
             {
                 AxHWPCONTROLLib.AxHwpCtrl axHwpCtrl = new AxHWPCONTROLLib.AxHwpCtrl();
-                /*axHwpCtrl.RegisterModule("FilePathCheckDLL", "FilePathCheckerModuleExample");*/
                 axHwpCtrl.CreateControl();
                 axHwpCtrl.Enabled = true;
+                axHwpCtrl.RegisterModule("FilePathCheckDLL", "FilePathCheckerModuleExample");
                 #region 문서 열기
-                axHwpCtrl.Open(FilePath, "HWP", "suspendpassword:TRUE;forceopen:TRUE;versionwarning:FALSE");
+                if(axHwpCtrl.Open(FilePath, "HWP", "suspendpassword:TRUE;forceopen:TRUE;versionwarning:FALSE"))
+                {
+                    #region PDF저장
+                    axHwpCtrl.SaveAs(outPath, "PDF", "");
+                    #endregion
+                    #region 문서 닫기
+                    axHwpCtrl.Clear();
+                    #endregion
+                    logger.Info("변환 성공");
+                    return true;
+                }
+                else
+                {
+                    logger.Info("한글 파일 ");
+                    return false;
+                }
                 #endregion
-                logger.Info("페이지 번호: "+axHwpCtrl.PageCount);
-                #region PDF저장
-                axHwpCtrl.SaveAs(outPath, "PDF", "");
-                #endregion
-                #region 문서 닫기
-                axHwpCtrl.Clear();
-                #endregion
-                logger.Info("변환 성공");
-                return true;
             }
 
             catch (Exception e1)

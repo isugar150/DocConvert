@@ -144,5 +144,8 @@
   <ItemGroup>
     <None Include="Resources\switch-off.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_grey_24x24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
