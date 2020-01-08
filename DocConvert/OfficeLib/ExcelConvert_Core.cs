@@ -23,7 +23,7 @@ namespace DocConvert.OfficeLib
         /// <param name="outPath">저장파일</param>
         /// <param name="docPassword">문서 비밀번호</param>
         /// <returns></returns>
-        public static bool ExcelSaveAs(String FilePath, String outPath, String docPassword)
+        public static bool ExcelSaveAs(String FilePath, String outPath, String docPassword, bool appvisible)
         {
             logger.Info("==================== Start ====================");
             logger.Info("Method: " + MethodBase.GetCurrentMethod().Name + ", FilePath: " + FilePath + ", outPath: " + outPath + ", docPassword: " + docPassword);
@@ -41,11 +41,22 @@ namespace DocConvert.OfficeLib
             _Application excel = null;
             try
             {
-                excel = new Excel.Application
+                if (appvisible)
                 {
-                    Visible = true,
-                    DisplayAlerts = false
-                };
+                    excel = new Excel.Application
+                    {
+                        Visible = true,
+                        DisplayAlerts = false
+                    };
+                }
+                else
+                {
+                    excel = new Excel.Application
+                    {
+                        Visible = false,
+                        DisplayAlerts = false
+                    };
+                }
 
                 #region 열기 옵션
                 object UpdateLinks = false;

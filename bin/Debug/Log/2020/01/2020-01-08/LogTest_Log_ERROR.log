@@ -16,3 +16,51 @@
 
 2020-01-08 14:17:35.5317 ERROR - 변환 실패: 'System.Windows.Forms.AxHost+InvalidActiveXStateException' 형식의 예외가 Throw되었습니다.
 2020-01-08 14:17:35.5317 ERROR - ==================== End ====================
+2020-01-08 21:35:11.3888 ERROR - ==================== Method: PowerPointSaveAs ====================
+2020-01-08 21:35:11.4078 ERROR -    위치: Microsoft.Office.Interop.PowerPoint.ApplicationClass.set_Visible(MsoTriState Visible)
+   위치: DocConvert.OfficeLib.PowerPointConvert_Core.PowerPointSaveAs(String FilePath, String outPath, String docPassword, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\PowerPointConvert_Core.cs:줄 57
+
+2020-01-08 21:35:11.4078 ERROR - 변환 실패: Application (unknown member) : Invalid request.  Hiding the application window is not allowed.
+2020-01-08 21:35:11.4217 ERROR - ==================== End ====================
+2020-01-08 21:35:31.4210 ERROR - ==================== Method: PowerPointSaveAs ====================
+2020-01-08 21:35:31.4210 ERROR -    위치: Microsoft.Office.Interop.PowerPoint.ApplicationClass.set_Visible(MsoTriState Visible)
+   위치: DocConvert.OfficeLib.PowerPointConvert_Core.PowerPointSaveAs(String FilePath, String outPath, String docPassword, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\PowerPointConvert_Core.cs:줄 57
+
+2020-01-08 21:35:31.4429 ERROR - 변환 실패: Application (unknown member) : Invalid request.  Hiding the application window is not allowed.
+2020-01-08 21:35:31.4429 ERROR - ==================== End ====================
+2020-01-08 21:36:30.4749 ERROR - ==================== Method: PowerPointSaveAs ====================
+2020-01-08 21:36:30.4939 ERROR -    위치: Microsoft.Office.Interop.PowerPoint.ApplicationClass.set_Visible(MsoTriState Visible)
+   위치: DocConvert.OfficeLib.PowerPointConvert_Core.PowerPointSaveAs(String FilePath, String outPath, String docPassword, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\PowerPointConvert_Core.cs:줄 57
+
+2020-01-08 21:36:30.5039 ERROR - 변환 실패: Application (unknown member) : Invalid request.  Hiding the application window is not allowed.
+2020-01-08 21:36:30.5039 ERROR - ==================== End ====================
+2020-01-08 21:36:55.0940 ERROR - ==================== Method: PowerPointSaveAs ====================
+2020-01-08 21:36:55.1090 ERROR -    위치: Microsoft.Office.Interop.PowerPoint.ApplicationClass.set_Visible(MsoTriState Visible)
+   위치: DocConvert.OfficeLib.PowerPointConvert_Core.PowerPointSaveAs(String FilePath, String outPath, String docPassword, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\PowerPointConvert_Core.cs:줄 57
+
+2020-01-08 21:36:55.1090 ERROR - 변환 실패: Application (unknown member) : Invalid request.  Hiding the application window is not allowed.
+2020-01-08 21:36:55.1249 ERROR - ==================== End ====================
+2020-01-08 21:37:35.5182 ERROR - ==================== Method: PowerPointSaveAs ====================
+2020-01-08 21:37:35.5357 ERROR -    위치: Microsoft.Office.Interop.PowerPoint.ApplicationClass.set_Visible(MsoTriState Visible)
+   위치: DocConvert.OfficeLib.PowerPointConvert_Core.PowerPointSaveAs(String FilePath, String outPath, String docPassword, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\PowerPointConvert_Core.cs:줄 57
+
+2020-01-08 21:37:35.5467 ERROR - 변환 실패: Application (unknown member) : Invalid request.  Hiding the application window is not allowed.
+2020-01-08 21:37:35.5467 ERROR - ==================== End ====================
+2020-01-08 21:39:21.1741 ERROR - ==================== Method: PowerPointSaveAs ====================
+2020-01-08 21:39:21.7176 ERROR -    위치: Microsoft.Office.Interop.PowerPoint.ApplicationClass.set_Visible(MsoTriState Visible)
+   위치: DocConvert.OfficeLib.PowerPointConvert_Core.PowerPointSaveAs(String FilePath, String outPath, String docPassword, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\PowerPointConvert_Core.cs:줄 57
+
+2020-01-08 21:39:22.1997 ERROR - 변환 실패: Application (unknown member) : Invalid request.  Hiding the application window is not allowed.
+2020-01-08 21:40:25.8601 ERROR - ==================== End ====================
+2020-01-08 21:41:05.0780 ERROR - ==================== Method: PowerPointSaveAs ====================
+2020-01-08 21:41:05.1063 ERROR -    위치: Microsoft.Office.Interop.PowerPoint.ApplicationClass.set_Visible(MsoTriState Visible)
+   위치: DocConvert.OfficeLib.PowerPointConvert_Core.PowerPointSaveAs(String FilePath, String outPath, String docPassword, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\PowerPointConvert_Core.cs:줄 57
+
+2020-01-08 21:41:05.1172 ERROR - 변환 실패: Application (unknown member) : Invalid request.  Hiding the application window is not allowed.
+2020-01-08 21:41:05.1242 ERROR - ==================== End ====================
+2020-01-08 21:42:13.2352 ERROR - ==================== Method: PowerPointSaveAs ====================
+2020-01-08 21:42:13.2622 ERROR -    위치: Microsoft.Office.Interop.PowerPoint.ApplicationClass.set_Visible(MsoTriState Visible)
+   위치: DocConvert.OfficeLib.PowerPointConvert_Core.PowerPointSaveAs(String FilePath, String outPath, String docPassword, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\PowerPointConvert_Core.cs:줄 57
+
+2020-01-08 21:42:13.2731 ERROR - 변환 실패: Application (unknown member) : Invalid request.  Hiding the application window is not allowed.
+2020-01-08 21:42:13.2791 ERROR - ==================== End ====================

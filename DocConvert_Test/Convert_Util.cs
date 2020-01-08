@@ -13,6 +13,8 @@ using System.Windows.Forms;
 
 using DocConvert.OfficeLib;
 
+using Newtonsoft.Json.Linq;
+
 using DocConvert.HWPLib;
 using Microsoft.Win32;
 
@@ -20,7 +22,9 @@ namespace DocConvert
 {
     public partial class Convert_Util : Form
     {
+        private JObject Setting = new JObject();
         private bool HWPREGDLL = false;
+        private bool APPVISIBLE = false;
         public Convert_Util()
         {
             InitializeComponent();
@@ -28,6 +32,35 @@ namespace DocConvert
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            #region JSON파일 파싱
+            if (File.Exists(Application.StartupPath + @"\Settings.json"))
+            {
+                Setting = JObject.Parse(File.ReadAllText(Application.StartupPath + @"\Settings.json"));
+                try
+                {
+                    if(bool.Parse(Setting["appvisible"].ToString()))
+                    {
+                        pictureBox4.Image = DocConvert_Util.Properties.Resources.switch_on;
+                        APPVISIBLE = true;
+                    }
+                    else
+                    {
+                        pictureBox4.Image = DocConvert_Util.Properties.Resources.switch_off;
+                        APPVISIBLE = false;
+                    }
+                }
+                catch (Exception)
+                {
+                    pictureBox4.Image = DocConvert_Util.Properties.Resources.switch_on;
+                    APPVISIBLE = true;
+                    Setting["appvisible"] = APPVISIBLE;
+                }
+            }
+            else
+            {
+                tb2_appendText("[정보]   설정 파일이 존재하지 않습니다.\r\n");
+            }
+            #endregion
             #region 한글 레지스트리 등록 확인
             RegistryKey regKey = Registry.CurrentUser.CreateSubKey(@"Software\HNC\HwpCtrl\Modules", RegistryKeyPermissionCheck.ReadWriteSubTree);
             try
@@ -89,7 +122,7 @@ namespace DocConvert
                     passwd = textBox3.Text;
                 if (Path.GetExtension(textBox1.Text).Equals(".docx") || Path.GetExtension(textBox1.Text).Equals(".doc"))
                 {
-                    status = WordConvert_Core.WordSaveAs(textBox1.Text, outPath, passwd);
+                    status = WordConvert_Core.WordSaveAs(textBox1.Text, outPath, passwd, APPVISIBLE);
                     if (status)
                         tb2_appendText("[상태]   변환 성공");
                     else
@@ -97,7 +130,7 @@ namespace DocConvert
                 }
                 else if (Path.GetExtension(textBox1.Text).Equals(".xlsx") || Path.GetExtension(textBox1.Text).Equals(".xls"))
                 {
-                    status = ExcelConvert_Core.ExcelSaveAs(textBox1.Text, outPath, passwd);
+                    status = ExcelConvert_Core.ExcelSaveAs(textBox1.Text, outPath, passwd, APPVISIBLE);
                     if (status)
                         tb2_appendText("[상태]   변환 성공");
                     else
@@ -105,7 +138,7 @@ namespace DocConvert
                 }
                 else if (Path.GetExtension(textBox1.Text).Equals(".pptx") || Path.GetExtension(textBox1.Text).Equals(".ppt"))
                 {
-                    status = PowerPointConvert_Core.PowerPointSaveAs(textBox1.Text, outPath, passwd);
+                    status = PowerPointConvert_Core.PowerPointSaveAs(textBox1.Text, outPath, passwd, APPVISIBLE);
                     if (status)
                         tb2_appendText("[상태]   변환 성공");
                     else
@@ -133,6 +166,8 @@ namespace DocConvert
             }
         }
 
+        #region 자잘한 이벤트
+
         private void button4_Click(object sender, EventArgs e)
         {
             Process.Start(Application.StartupPath+@"\Log");
@@ -158,6 +193,8 @@ namespace DocConvert
             textBox2.AppendText(System.DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss.fff") + "   " + str + "\r\n");
         }
 
+        #endregion
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             #region 한글 DLL 레지스트리 관리
@@ -167,7 +204,7 @@ namespace DocConvert
                 try
                 {
                     Registry.CurrentUser.DeleteSubKey(@"Software\HNC\HwpCtrl\Modules");
-                    tb2_appendText("[정보]   HWP DLL을 레지스트리에 등록하였습니다.");
+                    tb2_appendText("[정보]   HWP DLL을 레지스트리에서 등록 해제 했습니다.");
                 }
                 catch(Exception e1)
                 {
@@ -190,7 +227,7 @@ namespace DocConvert
                     try
                     {
                         regKey.SetValue("FilePathCheckerModuleExample", Application.StartupPath + @"\FilePathCheckerModuleExample.dll", RegistryValueKind.String);
-                        tb2_appendText("[정보]   HWP DLL을 레지스트리에서 등록 해제 했습니다.");
+                        tb2_appendText("[정보]   HWP DLL을 레지스트리에 등록하였습니다.");
                     }
                     catch (Exception e1)
                     {
@@ -209,6 +246,32 @@ namespace DocConvert
 
                 pictureBox1.Image = DocConvert_Util.Properties.Resources.switch_on;
                 HWPREGDLL = true;
+            }
+            #endregion
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            #region 변환창 보이기 설정
+            if (APPVISIBLE)
+            {
+                pictureBox4.Image = DocConvert_Util.Properties.Resources.switch_off;
+                APPVISIBLE = false;
+            }
+            else
+            {
+                pictureBox4.Image = DocConvert_Util.Properties.Resources.switch_on;
+                APPVISIBLE = true;
+            }
+            Setting["appvisible"] = APPVISIBLE;
+            tb2_appendText("[정보]   변환창 보이기 설정: " + APPVISIBLE);
+            try
+            {
+                File.WriteAllText(Application.StartupPath + @"\Settings.json", Setting.ToString());
+            }
+            catch (Exception e1)
+            {
+                tb2_appendText("[오류]   " + e1.Message);
             }
             #endregion
         }

@@ -23,7 +23,7 @@ namespace DocConvert.OfficeLib
         /// <param name="outPath">저장파일</param>
         /// <param name="docPassword">문서 비밀번호</param>
         /// <returns></returns>
-        public static bool WordSaveAs(String FilePath, String outPath, String docPassword)
+        public static bool WordSaveAs(String FilePath, String outPath, String docPassword, bool appvisible)
         {
             logger.Info("==================== Start ====================");
             logger.Info("Method: " + MethodBase.GetCurrentMethod().Name + ", FilePath: " + FilePath + ", outPath: " + outPath + ", docPassword: " + docPassword);
@@ -42,11 +42,22 @@ namespace DocConvert.OfficeLib
             _Application word = null;
             try
             {
-                word = new Word.Application
+                if (appvisible)
                 {
-                    Visible = true,
-                    DisplayAlerts = WdAlertLevel.wdAlertsNone
-                };
+                    word = new Word.Application
+                    {
+                        Visible = true,
+                        DisplayAlerts = WdAlertLevel.wdAlertsNone
+                    };
+                }
+                else
+                {
+                    word = new Word.Application
+                    {
+                        Visible = false,
+                        DisplayAlerts = WdAlertLevel.wdAlertsNone
+                    };
+                }
 
                 #region 열기 옵션
                 object UpdateLinks = false;

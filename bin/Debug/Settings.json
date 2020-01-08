@@ -1,4 +1,5 @@
 {
   "port": "12200",
-  "path": "C:\\DocData"
+  "path": "C:\\DocData",
+  "appvisible": true
 }

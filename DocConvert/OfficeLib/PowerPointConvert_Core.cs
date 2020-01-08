@@ -26,7 +26,7 @@ namespace DocConvert.OfficeLib
         /// <param name="outPath">저장파일</param>
         /// <param name="docPassword">문서 비밀번호</param>
         /// <returns></returns>
-        public static bool PowerPointSaveAs(String FilePath, String outPath, String docPassword)
+        public static bool PowerPointSaveAs(String FilePath, String outPath, String docPassword, bool appvisible)
         {
             logger.Info("==================== Start ====================");
             logger.Info("Method: " + MethodBase.GetCurrentMethod().Name + ", FilePath: " + FilePath + ", outPath: " + outPath + ", docPassword: " + docPassword);
@@ -42,20 +42,27 @@ namespace DocConvert.OfficeLib
                 logger.Error(e1.Message);
             }
             #endregion
-            _Application powerpoint = null;
+            _Application powerpoint = new Application();
             try
             {
-                powerpoint = new Application
-                {
-                    Visible = MsoTriState.msoTrue,
-                    DisplayAlerts = PpAlertLevel.ppAlertsNone
-                };
                 Presentations multiPresentations = powerpoint.Presentations;
+                #region 앱 옵션
+                powerpoint.AutomationSecurity = Microsoft.Office.Core.MsoAutomationSecurity.msoAutomationSecurityForceDisable; // 매크로 실행 안되게
+                powerpoint.DisplayAlerts = PowerPoint.PpAlertLevel.ppAlertsNone;
+                #endregion
 
                 #region 열기 옵션
                 MsoTriState ReadOnly = MsoTriState.msoTrue;
                 MsoTriState Untitled = MsoTriState.msoFalse;
-                MsoTriState WithWindow = MsoTriState.msoFalse;
+                MsoTriState WithWindow;
+                if (appvisible)
+                {
+                    WithWindow = MsoTriState.msoTrue;
+                }
+                else
+                {
+                    WithWindow = MsoTriState.msoFalse;
+                }
                 #endregion
                 #region 문서 열기
                 Presentation doc = multiPresentations.Open(
@@ -97,7 +104,7 @@ namespace DocConvert.OfficeLib
                 powerpoint.Quit();
                 Marshal.ReleaseComObject(powerpoint);
                 powerpoint = null;
-                powerpoint = new Application{};
+                powerpoint = new Application { };
                 powerpoint.Quit();
                 Marshal.ReleaseComObject(powerpoint);
                 powerpoint = null;
