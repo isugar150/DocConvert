@@ -1,0 +1,13 @@
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\bin\Debug\NLog.config
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\bin\Debug\DocConvert_Core.dll.config
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\bin\Debug\DocConvert_Core.dll
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\bin\Debug\DocConvert_Core.pdb
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\Interop.HWPCONTROLLib.dll
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\AxInterop.HWPCONTROLLib.dll
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert_Core.csproj.ResolveComReference.cache
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert_Core.Properties.Resources.resources
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert_Core.csproj.GenerateResource.cache
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert_Core.csproj.CopyComplete
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert_Core.dll
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert_Core.pdb
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert_Core.csprojAssemblyReference.cache

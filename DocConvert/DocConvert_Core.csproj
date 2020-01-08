@@ -5,9 +5,9 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E66D151A-0A14-4EE5-97D8-DFC33B913AE0}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>DocConvert</RootNamespace>
-    <AssemblyName>DocConvert</AssemblyName>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DocConvert_Core</RootNamespace>
+    <AssemblyName>DocConvert_Core</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -39,8 +39,9 @@
   <PropertyGroup>
     <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
-    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
@@ -134,28 +135,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Converter_Server.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Converter_Server.Designer.cs">
-      <DependentUpon>Converter_Server.cs</DependentUpon>
-    </Compile>
     <Compile Include="FileLib\LockFile.cs" />
     <Compile Include="HWPLib\HWPConvert_Core.cs" />
     <Compile Include="OfficeLib\ExcelConvert_Core.cs" />
     <Compile Include="OfficeLib\PowerPointConvert_Core.cs" />
     <Compile Include="OfficeLib\WordConvert_Core.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Settings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Settings.Designer.cs">
-      <DependentUpon>Settings.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Converter_Server.resx">
-      <DependentUpon>Converter_Server.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -164,18 +149,15 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Content Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="Settings.resx">
-      <DependentUpon>Settings.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
-    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -7,11 +7,11 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-using DocConvert.FileLib;
+using DocConvert_Core.FileLib;
 using Microsoft.Win32;
 using NLog;
 
-namespace DocConvert.HWPLib
+namespace DocConvert_Core.HWPLib
 {
     public class HWPConvert_Core
     {

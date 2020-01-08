@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DocConvert.FileLib
+namespace DocConvert_Core.FileLib
 {
     class LockFile
     {

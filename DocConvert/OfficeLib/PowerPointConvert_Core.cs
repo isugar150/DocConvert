@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DocConvert.FileLib;
+using DocConvert_Core.FileLib;
 using Microsoft.Office.Interop.PowerPoint;
 using NetOffice.OfficeApi.Enums;
 using NLog;
@@ -14,7 +14,7 @@ using System.Reflection;
 using System.Diagnostics;
 using System.Threading;
 
-namespace DocConvert.OfficeLib
+namespace DocConvert_Core.OfficeLib
 {
     public class PowerPointConvert_Core
     {

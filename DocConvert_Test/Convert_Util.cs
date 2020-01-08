@@ -11,14 +11,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using DocConvert.OfficeLib;
+using DocConvert_Core.OfficeLib;
 
 using Newtonsoft.Json.Linq;
 
-using DocConvert.HWPLib;
+using DocConvert_Core.HWPLib;
 using Microsoft.Win32;
 
-namespace DocConvert
+namespace DocConvert_Util
 {
     public partial class Convert_Util : Form
     {

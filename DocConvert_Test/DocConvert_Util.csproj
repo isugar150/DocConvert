@@ -106,9 +106,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DocConvert\DocConvert.csproj">
+    <ProjectReference Include="..\DocConvert\DocConvert_Core.csproj">
       <Project>{e66d151a-0a14-4ee5-97d8-dfc33b913ae0}</Project>
-      <Name>DocConvert</Name>
+      <Name>DocConvert_Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

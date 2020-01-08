@@ -1,4 +1,4 @@
-﻿namespace DocConvert
+﻿namespace DocConvert_Util
 {
     partial class Convert_Util
     {
@@ -44,8 +44,11 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.axHwpCtrl1 = new AxHWPCONTROLLib.AxHwpCtrl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -53,20 +56,17 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.axHwpCtrl1 = new AxHWPCONTROLLib.AxHwpCtrl();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axHwpCtrl1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axHwpCtrl1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -159,7 +159,7 @@
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(225, 239);
+            this.button4.Location = new System.Drawing.Point(225, 238);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 7;
@@ -208,16 +208,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // axHwpCtrl1
-            // 
-            this.axHwpCtrl1.Enabled = true;
-            this.axHwpCtrl1.Location = new System.Drawing.Point(-100, -50);
-            this.axHwpCtrl1.Name = "axHwpCtrl1";
-            this.axHwpCtrl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axHwpCtrl1.OcxState")));
-            this.axHwpCtrl1.Size = new System.Drawing.Size(100, 50);
-            this.axHwpCtrl1.TabIndex = 14;
-            this.axHwpCtrl1.Visible = false;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.panel2);
@@ -228,6 +218,45 @@
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Option";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.pictureBox4);
+            this.panel2.Location = new System.Drawing.Point(6, 54);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(217, 28);
+            this.panel2.TabIndex = 17;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::DocConvert_Util.Properties.Resources.help_grey_24x24;
+            this.pictureBox3.Location = new System.Drawing.Point(191, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox3.TabIndex = 16;
+            this.pictureBox3.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox3, "문서 변환시 진행상황을 표시합니다.");
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(11, 8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 12);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "변환창 보이기:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::DocConvert_Util.Properties.Resources.switch_off;
+            this.pictureBox4.Location = new System.Drawing.Point(125, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(55, 22);
+            this.pictureBox4.TabIndex = 15;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // panel1
             // 
@@ -293,44 +322,15 @@
             this.textBox2.Size = new System.Drawing.Size(610, 158);
             this.textBox2.TabIndex = 0;
             // 
-            // panel2
+            // axHwpCtrl1
             // 
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Location = new System.Drawing.Point(6, 54);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(217, 28);
-            this.panel2.TabIndex = 17;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::DocConvert_Util.Properties.Resources.help_grey_24x24;
-            this.pictureBox3.Location = new System.Drawing.Point(191, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox3.TabIndex = 16;
-            this.pictureBox3.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox3, "문서 변환시 진행상황을 표시합니다.");
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(11, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 12);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "변환창 보이기:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::DocConvert_Util.Properties.Resources.switch_off;
-            this.pictureBox4.Location = new System.Drawing.Point(125, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(55, 22);
-            this.pictureBox4.TabIndex = 15;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.axHwpCtrl1.Enabled = true;
+            this.axHwpCtrl1.Location = new System.Drawing.Point(-100, -50);
+            this.axHwpCtrl1.Name = "axHwpCtrl1";
+            this.axHwpCtrl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axHwpCtrl1.OcxState")));
+            this.axHwpCtrl1.Size = new System.Drawing.Size(100, 50);
+            this.axHwpCtrl1.TabIndex = 14;
+            this.axHwpCtrl1.Visible = false;
             // 
             // Convert_Util
             // 
@@ -349,16 +349,16 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axHwpCtrl1)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axHwpCtrl1)).EndInit();
             this.ResumeLayout(false);
 
         }

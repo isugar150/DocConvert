@@ -6,12 +6,12 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-using DocConvert.FileLib;
+using DocConvert_Core.FileLib;
 using Microsoft.Office.Interop.Excel;
 using NLog;
 using Excel = Microsoft.Office.Interop.Excel;
 
-namespace DocConvert.OfficeLib
+namespace DocConvert_Core.OfficeLib
 {
     public class ExcelConvert_Core
     {

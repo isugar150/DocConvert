@@ -6,12 +6,12 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-using DocConvert.FileLib;
+using DocConvert_Core.FileLib;
 using Microsoft.Office.Interop.Word;
 using NLog;
 using Word = Microsoft.Office.Interop.Word;
 
-namespace DocConvert.OfficeLib
+namespace DocConvert_Core.OfficeLib
 {
     public class WordConvert_Core
     {
