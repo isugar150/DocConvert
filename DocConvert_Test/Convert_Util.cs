@@ -23,6 +23,8 @@ namespace DocConvert_Util
     public partial class Convert_Util : Form
     {
         private JObject Setting = new JObject();
+        private String[] FileNames = new String[30];
+        private short FILELENGHT = 0;
         private bool HWPREGDLL = false;
         private bool APPVISIBLE = false;
         private bool RUNAFTER = false;
@@ -119,10 +121,28 @@ namespace DocConvert_Util
                 "|All Files (*.*)|*.*";
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.RestoreDirectory = true;
-
             if(openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                textBox1.Text = openFileDialog1.FileName;
+                if (openFileDialog1.FileNames.Length >= 30)
+                {
+                    tb2_appendText("최대 파일 수는 30개입니다.");
+                    return;
+                }
+                textBox1.Text = "";
+                FILELENGHT = short.Parse(openFileDialog1.FileNames.Length.ToString());
+                for(int i = 0; i < openFileDialog1.FileNames.Length; i++)
+                {
+                    FileNames[i] = openFileDialog1.FileNames[i];
+                    if ((i+1) == openFileDialog1.FileNames.Length)
+                    {
+                        textBox1.AppendText(openFileDialog1.FileNames[i]);
+
+                    }
+                    else
+                    {
+                        textBox1.AppendText(openFileDialog1.FileNames[i] + "|");
+                    }
+                }
             }
         }
 
@@ -130,63 +150,67 @@ namespace DocConvert_Util
         {
             if (radioButton1.Checked)
             {
-                #region Local 변환시
-                if (Path.GetExtension(textBox1.Text).Equals(".hwp") && textBox3.Text.Length > 0)
+                tb2_appendText("요청받은 파일수: " + FILELENGHT);
+                for (int i = 0; i < FILELENGHT; i++)
                 {
-                    MessageBox.Show("비밀번호 해제후 다시시도해주세요.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                bool status = false;
-                string passwd = null;
-                string outPath = Path.GetDirectoryName(textBox1.Text) + @"\" + Path.GetFileNameWithoutExtension(textBox1.Text) + ".pdf";
-                tb2_appendText("[상태]   변환 요청");
-                tb2_appendText("[정보]   소스 경로: " + textBox1.Text);
-                tb2_appendText("[정보]   출력 경로: " + Path.GetDirectoryName(textBox1.Text) + @"\" + Path.GetFileNameWithoutExtension(textBox1.Text) + ".pdf");
-                if (!textBox3.Text.Equals(""))
-                    passwd = textBox3.Text;
-                if (Path.GetExtension(textBox1.Text).Equals(".docx") || Path.GetExtension(textBox1.Text).Equals(".doc"))
-                {
-                    status = WordConvert_Core.WordSaveAs(textBox1.Text, outPath, passwd, APPVISIBLE);
-                    if (status)
-                        tb2_appendText("[상태]   변환 성공");
+                    #region Local 변환시
+                    if (Path.GetExtension(FileNames[i]).Equals(".hwp") && textBox3.Text.Length > 0)
+                    {
+                        MessageBox.Show("비밀번호 해제후 다시시도해주세요.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    bool status = false;
+                    string passwd = null;
+                    string outPath = Path.GetDirectoryName(FileNames[i]) + @"\" + Path.GetFileNameWithoutExtension(FileNames[i]) + ".pdf";
+                    tb2_appendText("[상태]   변환 요청 (" + (i + 1) + "/" + FILELENGHT + ")");
+                    tb2_appendText("[정보]   소스 경로: " + FileNames[i]);
+                    tb2_appendText("[정보]   출력 경로: " + Path.GetDirectoryName(FileNames[i]) + @"\" + Path.GetFileNameWithoutExtension(FileNames[i]) + ".pdf");
+                    if (!textBox3.Text.Equals(""))
+                        passwd = textBox3.Text;
+                    if (Path.GetExtension(FileNames[i]).Equals(".docx") || Path.GetExtension(FileNames[i]).Equals(".doc"))
+                    {
+                        status = WordConvert_Core.WordSaveAs(FileNames[i], outPath, passwd, APPVISIBLE);
+                        if (status)
+                            tb2_appendText("[상태]   변환 성공");
+                        else
+                            tb2_appendText("[상태]   변환 실패");
+                    }
+                    else if (Path.GetExtension(FileNames[i]).Equals(".xlsx") || Path.GetExtension(FileNames[i]).Equals(".xls"))
+                    {
+                        status = ExcelConvert_Core.ExcelSaveAs(FileNames[i], outPath, passwd, APPVISIBLE);
+                        if (status)
+                            tb2_appendText("[상태]   변환 성공");
+                        else
+                            tb2_appendText("[상태]   변환 실패");
+                    }
+                    else if (Path.GetExtension(FileNames[i]).Equals(".pptx") || Path.GetExtension(FileNames[i]).Equals(".ppt"))
+                    {
+                        status = PowerPointConvert_Core.PowerPointSaveAs(FileNames[i], outPath, passwd, APPVISIBLE);
+                        if (status)
+                            tb2_appendText("[상태]   변환 성공");
+                        else
+                            tb2_appendText("[상태]   변환 실패");
+                    }
+                    else if (Path.GetExtension(FileNames[i]).Equals(".hwp"))
+                    {
+                        status = HWPConvert_Core.HwpSaveAs(FileNames[i], outPath);
+                        if (status)
+                            tb2_appendText("[상태]   변환 성공");
+                        else
+                            tb2_appendText("[상태]   변환 실패");
+                    }
                     else
-                        tb2_appendText("[상태]   변환 실패");
+                    {
+                        tb2_appendText("[상태]   지원포맷 아님. 파싱한 확장자: " + Path.GetExtension(FileNames[i]));
+                    }
+                    #endregion
+                    #region 변환 후 실행
+                    if (RUNAFTER && status)
+                    {
+                        Process.Start(Path.GetDirectoryName(FileNames[i]) + @"\" + Path.GetFileNameWithoutExtension(FileNames[i]) + ".pdf");
+                    }
+                    #endregion
                 }
-                else if (Path.GetExtension(textBox1.Text).Equals(".xlsx") || Path.GetExtension(textBox1.Text).Equals(".xls"))
-                {
-                    status = ExcelConvert_Core.ExcelSaveAs(textBox1.Text, outPath, passwd, APPVISIBLE);
-                    if (status)
-                        tb2_appendText("[상태]   변환 성공");
-                    else
-                        tb2_appendText("[상태]   변환 실패");
-                }
-                else if (Path.GetExtension(textBox1.Text).Equals(".pptx") || Path.GetExtension(textBox1.Text).Equals(".ppt"))
-                {
-                    status = PowerPointConvert_Core.PowerPointSaveAs(textBox1.Text, outPath, passwd, APPVISIBLE);
-                    if (status)
-                        tb2_appendText("[상태]   변환 성공");
-                    else
-                        tb2_appendText("[상태]   변환 실패");
-                }
-                else if (Path.GetExtension(textBox1.Text).Equals(".hwp"))
-                {
-                    status = HWPConvert_Core.HwpSaveAs(textBox1.Text, outPath);
-                    if (status)
-                        tb2_appendText("[상태]   변환 성공");
-                    else
-                        tb2_appendText("[상태]   변환 실패");
-                }
-                else
-                {
-                    tb2_appendText("[상태]   지원포맷 아님. 파싱한 확장자: " + Path.GetExtension(textBox1.Text));
-                }
-                #endregion
-                #region 변환 후 실행
-                if (RUNAFTER && status)
-                {
-                    Process.Start(Path.GetDirectoryName(textBox1.Text) + @"\" + Path.GetFileNameWithoutExtension(textBox1.Text) + ".pdf");
-                }
-                #endregion
             }
             else if (radioButton2.Checked)
             {
