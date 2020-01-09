@@ -23,8 +23,6 @@ namespace DocConvert_Util
     public partial class Convert_Util : Form
     {
         private JObject Setting = new JObject();
-        private String[] FileNames = new String[30];
-        private short FILELENGHT = 0;
         private bool HWPREGDLL = false;
         private bool APPVISIBLE = false;
         private bool RUNAFTER = false;
@@ -129,10 +127,8 @@ namespace DocConvert_Util
                     return;
                 }
                 textBox1.Text = "";
-                FILELENGHT = short.Parse(openFileDialog1.FileNames.Length.ToString());
                 for(int i = 0; i < openFileDialog1.FileNames.Length; i++)
                 {
-                    FileNames[i] = openFileDialog1.FileNames[i];
                     if ((i+1) == openFileDialog1.FileNames.Length)
                     {
                         textBox1.AppendText(openFileDialog1.FileNames[i]);
@@ -150,19 +146,24 @@ namespace DocConvert_Util
         {
             if (radioButton1.Checked)
             {
-                tb2_appendText("요청받은 파일수: " + FILELENGHT);
-                for (int i = 0; i < FILELENGHT; i++)
+                #region Local 변환시
+                String[] FileNames = textBox1.Text.Split('|');
+                tb2_appendText("요청받은 파일수: " + FileNames.Length);
+                for (int i = 0; i < FileNames.Length; i++)
                 {
-                    #region Local 변환시
+                    if (!File.Exists(FileNames[i]))
+                    {
+                        tb2_appendText(FileNames[i] + "해당 경로에 파일이 존재하지 않습니다.");
+                    }
                     if (Path.GetExtension(FileNames[i]).Equals(".hwp") && textBox3.Text.Length > 0)
                     {
-                        MessageBox.Show("비밀번호 해제후 다시시도해주세요.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        tb2_appendText("비밀번호 해제후 다시시도해주세요.");
                         return;
                     }
                     bool status = false;
                     string passwd = null;
                     string outPath = Path.GetDirectoryName(FileNames[i]) + @"\" + Path.GetFileNameWithoutExtension(FileNames[i]) + ".pdf";
-                    tb2_appendText("[상태]   변환 요청 (" + (i + 1) + "/" + FILELENGHT + ")");
+                    tb2_appendText("[상태]   변환 요청 (" + (i + 1) + "/" + FileNames.Length + ")");
                     tb2_appendText("[정보]   소스 경로: " + FileNames[i]);
                     tb2_appendText("[정보]   출력 경로: " + Path.GetDirectoryName(FileNames[i]) + @"\" + Path.GetFileNameWithoutExtension(FileNames[i]) + ".pdf");
                     if (!textBox3.Text.Equals(""))
@@ -203,7 +204,6 @@ namespace DocConvert_Util
                     {
                         tb2_appendText("[상태]   지원포맷 아님. 파싱한 확장자: " + Path.GetExtension(FileNames[i]));
                     }
-                    #endregion
                     #region 변환 후 실행
                     if (RUNAFTER && status)
                     {
@@ -211,6 +211,7 @@ namespace DocConvert_Util
                     }
                     #endregion
                 }
+                #endregion
             }
             else if (radioButton2.Checked)
             {
