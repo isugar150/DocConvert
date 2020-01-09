@@ -1,5 +1,6 @@
 {
   "port": "12200",
   "path": "C:\\DocData",
-  "appvisible": true
+  "appvisible": false,
+  "runafter": true
 }

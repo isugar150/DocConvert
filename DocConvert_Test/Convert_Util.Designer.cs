@@ -57,6 +57,10 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.axHwpCtrl1 = new AxHWPCONTROLLib.AxHwpCtrl();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -67,6 +71,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axHwpCtrl1)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -86,7 +93,7 @@
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Location = new System.Drawing.Point(247, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(390, 268);
+            this.groupBox1.Size = new System.Drawing.Size(390, 195);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Convert to PDF";
@@ -118,7 +125,6 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Enabled = false;
             this.radioButton2.Location = new System.Drawing.Point(97, 20);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(59, 16);
@@ -160,7 +166,7 @@
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(225, 238);
+            this.button4.Location = new System.Drawing.Point(225, 165);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 7;
@@ -171,7 +177,7 @@
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(306, 238);
+            this.button3.Location = new System.Drawing.Point(306, 165);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 6;
@@ -211,11 +217,12 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.panel3);
             this.groupBox2.Controls.Add(this.panel2);
             this.groupBox2.Controls.Add(this.panel1);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(229, 268);
+            this.groupBox2.Size = new System.Drawing.Size(229, 195);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Option";
@@ -304,9 +311,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Location = new System.Drawing.Point(12, 286);
+            this.groupBox3.Location = new System.Drawing.Point(12, 213);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(625, 184);
+            this.groupBox3.Size = new System.Drawing.Size(625, 181);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Output";
@@ -320,7 +327,7 @@
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(610, 158);
+            this.textBox2.Size = new System.Drawing.Size(610, 155);
             this.textBox2.TabIndex = 0;
             // 
             // axHwpCtrl1
@@ -333,17 +340,56 @@
             this.axHwpCtrl1.TabIndex = 14;
             this.axHwpCtrl1.Visible = false;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.pictureBox5);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.pictureBox6);
+            this.panel3.Location = new System.Drawing.Point(6, 86);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(217, 28);
+            this.panel3.TabIndex = 18;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::DocConvert_Util.Properties.Resources.help_grey_24x24;
+            this.pictureBox5.Location = new System.Drawing.Point(191, 2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox5.TabIndex = 16;
+            this.pictureBox5.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox5, "문서를 변환 후 실행합니다.");
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(11, 8);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(108, 12);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "변환후 실행:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::DocConvert_Util.Properties.Resources.switch_off;
+            this.pictureBox6.Location = new System.Drawing.Point(125, 3);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(55, 22);
+            this.pictureBox6.TabIndex = 15;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
             // Convert_Util
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(648, 482);
+            this.ClientSize = new System.Drawing.Size(648, 406);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.axHwpCtrl1);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(664, 521);
+            this.MinimumSize = new System.Drawing.Size(664, 445);
             this.Name = "Convert_Util";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Convert_Util";
@@ -360,6 +406,9 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axHwpCtrl1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -393,6 +442,10 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
 

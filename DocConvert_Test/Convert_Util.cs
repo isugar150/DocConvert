@@ -25,6 +25,7 @@ namespace DocConvert_Util
         private JObject Setting = new JObject();
         private bool HWPREGDLL = false;
         private bool APPVISIBLE = false;
+        private bool RUNAFTER = false;
         public Convert_Util()
         {
             InitializeComponent();
@@ -36,6 +37,7 @@ namespace DocConvert_Util
             if (File.Exists(Application.StartupPath + @"\Settings.json"))
             {
                 Setting = JObject.Parse(File.ReadAllText(Application.StartupPath + @"\Settings.json"));
+                #region 변환창 보이기 초기데이터
                 try
                 {
                     if(bool.Parse(Setting["appvisible"].ToString()))
@@ -55,13 +57,35 @@ namespace DocConvert_Util
                     APPVISIBLE = true;
                     Setting["appvisible"] = APPVISIBLE;
                 }
+                #endregion
+                #region 변환후 실행 초기 데이터
+                try
+                {
+                    if (bool.Parse(Setting["runafter"].ToString()))
+                    {
+                        pictureBox6.Image = DocConvert_Util.Properties.Resources.switch_on;
+                        RUNAFTER = true;
+                    }
+                    else
+                    {
+                        pictureBox6.Image = DocConvert_Util.Properties.Resources.switch_off;
+                        RUNAFTER = false;
+                    }
+                }
+                catch (Exception)
+                {
+                    pictureBox6.Image = DocConvert_Util.Properties.Resources.switch_on;
+                    RUNAFTER = true;
+                    Setting["runafter"] = RUNAFTER;
+                }
+                #endregion
             }
             else
             {
-                tb2_appendText("[정보]   설정 파일이 존재하지 않습니다.\r\n");
+                tb2_appendText("[정보]   설정 파일이 존재하지 않습니다.");
             }
             #endregion
-            #region 한글 레지스트리 등록 확인
+            #region 아래 한글 레지스트리 등록 확인
             RegistryKey regKey = Registry.CurrentUser.CreateSubKey(@"Software\HNC\HwpCtrl\Modules", RegistryKeyPermissionCheck.ReadWriteSubTree);
             try
             {
@@ -157,8 +181,14 @@ namespace DocConvert_Util
                     tb2_appendText("[상태]   지원포맷 아님. 파싱한 확장자: " + Path.GetExtension(textBox1.Text));
                 }
                 #endregion
+                #region 변환 후 실행
+                if (RUNAFTER && status)
+                {
+                    Process.Start(Path.GetDirectoryName(textBox1.Text) + @"\" + Path.GetFileNameWithoutExtension(textBox1.Text) + ".pdf");
+                }
+                #endregion
             }
-            else
+            else if (radioButton2.Checked)
             {
                 #region Server 변환시
 
@@ -180,11 +210,13 @@ namespace DocConvert_Util
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
+            groupBox2.Enabled = false;
             ipAddressControl1.Enabled = true;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
+            groupBox2.Enabled = true;
             ipAddressControl1.Enabled = false;
         }
 
@@ -192,8 +224,6 @@ namespace DocConvert_Util
         {
             textBox2.AppendText(System.DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss.fff") + "   " + str + "\r\n");
         }
-
-        #endregion
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -206,7 +236,7 @@ namespace DocConvert_Util
                     Registry.CurrentUser.DeleteSubKey(@"Software\HNC\HwpCtrl\Modules");
                     tb2_appendText("[정보]   HWP DLL을 레지스트리에서 등록 해제 했습니다.");
                 }
-                catch(Exception e1)
+                catch (Exception e1)
                 {
                     tb2_appendText("[오류]   레지스트리 등록 해제중 다음 오류 발생: " + e1.Message);
                     return;
@@ -228,6 +258,9 @@ namespace DocConvert_Util
                     {
                         regKey.SetValue("FilePathCheckerModuleExample", Application.StartupPath + @"\FilePathCheckerModuleExample.dll", RegistryValueKind.String);
                         tb2_appendText("[정보]   HWP DLL을 레지스트리에 등록하였습니다.");
+
+                        pictureBox1.Image = DocConvert_Util.Properties.Resources.switch_on;
+                        HWPREGDLL = true;
                     }
                     catch (Exception e1)
                     {
@@ -243,9 +276,6 @@ namespace DocConvert_Util
                 {
                     tb2_appendText("[오류]   레지스트리 등록에 필요한 파일이 존재하지 않습니다.\r\n확인후 다시시도하세요.");
                 }
-
-                pictureBox1.Image = DocConvert_Util.Properties.Resources.switch_on;
-                HWPREGDLL = true;
             }
             #endregion
         }
@@ -275,5 +305,34 @@ namespace DocConvert_Util
             }
             #endregion
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+            #region 파일 변환 후 실행
+            if (RUNAFTER)
+            {
+                pictureBox6.Image = DocConvert_Util.Properties.Resources.switch_off;
+                RUNAFTER = false;
+            }
+            else
+            {
+                pictureBox6.Image = DocConvert_Util.Properties.Resources.switch_on;
+                RUNAFTER = true;
+            }
+            Setting["runafter"] = RUNAFTER;
+            tb2_appendText("[정보]   변환 후 실행 설정: " + RUNAFTER);
+            try
+            {
+                File.WriteAllText(Application.StartupPath + @"\Settings.json", Setting.ToString());
+            }
+            catch (Exception e1)
+            {
+                tb2_appendText("[오류]   " + e1.Message);
+            }
+            #endregion
+        }
+
+        #endregion
     }
 }
