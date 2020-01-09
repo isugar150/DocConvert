@@ -1,0 +1,14 @@
+2020-01-09 15:15:53.5327 ERROR - ==================== Method: WordSaveAs ====================
+2020-01-09 15:15:53.5497 ERROR -    위치: Microsoft.Office.Interop.Word.DocumentClass.Close(Object& SaveChanges, Object& OriginalFormat, Object& RouteDocument)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean appvisible) 파일 C:\Users\Jm\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 140
+
+2020-01-09 15:15:53.5497 ERROR - 변환 실패: 이 파일은 읽기 전용이므로 저장할 수 없습니다.
+변경 내용을 유지하려면 문서를 새 이름으로 저장하거나 다른 위치에 저장해야 합니다. (D:\INSTALL\TION_TDV_Install Manual.docx)
+2020-01-09 15:15:53.5497 ERROR - ==================== End ====================
+2020-01-09 15:16:17.2680 ERROR - ==================== Method: WordSaveAs ====================
+2020-01-09 15:16:17.2680 ERROR -    위치: Microsoft.Office.Interop.Word.DocumentClass.Close(Object& SaveChanges, Object& OriginalFormat, Object& RouteDocument)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean appvisible) 파일 C:\Users\Jm\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 140
+
+2020-01-09 15:16:17.2680 ERROR - 변환 실패: 이 파일은 읽기 전용이므로 저장할 수 없습니다.
+변경 내용을 유지하려면 문서를 새 이름으로 저장하거나 다른 위치에 저장해야 합니다. (D:\INSTALL\TION_TDV_Install Manual.docx)
+2020-01-09 15:16:17.2680 ERROR - ==================== End ====================

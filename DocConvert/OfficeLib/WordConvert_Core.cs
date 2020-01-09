@@ -59,7 +59,7 @@ namespace DocConvert_Core.OfficeLib
                     };
                 }
 
-                #region 열기 옵션
+                #region 열기 옵션 https://docs.microsoft.com/en-us/dotnet/api/microsoft.office.interop.word.documents.open?view=word-pia
                 object UpdateLinks = false;
                 object ReadOnly = true;
                 object Format = Type.Missing;
@@ -98,7 +98,7 @@ namespace DocConvert_Core.OfficeLib
 
                 doc.Activate();
                 #endregion
-                #region 저장 옵션
+                #region 저장 옵션 https://docs.microsoft.com/ko-kr/dotnet/api/microsoft.office.tools.word.document.saveas2?view=vsto-2017
                 object FileFormat = WdSaveFormat.wdFormatPDF;
                 object LockComments = Type.Missing;
                 object AddToRecentFiles = Type.Missing;
@@ -136,8 +136,13 @@ namespace DocConvert_Core.OfficeLib
                     CompatibilityMode
                 );
                 #endregion
+                #region 문서 닫기 옵션 https://docs.microsoft.com/en-us/dotnet/api/microsoft.office.interop.word.documents.close?view=word-pia
+                object SaveChanges = WdSaveOptions.wdDoNotSaveChanges;
+                object OriginalFormat = WdOriginalFormat.wdWordDocument;
+                object RouteDocument = true;
+                #endregion
                 #region 문서 닫기
-                doc.Close();
+                doc.Close(SaveChanges, OriginalFormat, RouteDocument);
                 #endregion
                 logger.Info("변환 성공");
                 return true;

@@ -48,6 +48,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>DocConvert.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="IPAddressControlLib, Version=1.0.3039.20052, Culture=neutral, PublicKeyToken=9695e912950a5d9b">
       <SpecificVersion>False</SpecificVersion>
@@ -150,6 +153,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\help_grey_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DocConvert.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

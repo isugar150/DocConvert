@@ -58,7 +58,7 @@ namespace DocConvert_Core.OfficeLib
                     };
                 }
 
-                #region 열기 옵션
+                #region 열기 옵션 https://docs.microsoft.com/en-us/dotnet/api/microsoft.office.interop.excel.workbooks.open?view=excel-pia
                 object UpdateLinks = false;
                 object ReadOnly = true;
                 object Format = Type.Missing;
@@ -97,7 +97,7 @@ namespace DocConvert_Core.OfficeLib
 
                 doc.Activate();
                 #endregion
-                #region 저장 옵션
+                #region 저장 옵션 https://docs.microsoft.com/ko-kr/dotnet/api/microsoft.office.tools.excel.workbook.exportasfixedformat?view=vsto-2017
                 XlFixedFormatType FileFormat = XlFixedFormatType.xlTypePDF;
                 XlFixedFormatQuality Quality = XlFixedFormatQuality.xlQualityMinimum;
                 object IncludeDocProperties = Type.Missing;
@@ -120,8 +120,13 @@ namespace DocConvert_Core.OfficeLib
                     FixedFormatExtClassPtr
                 );
                 #endregion
+                #region  문서 닫기 옵션 https://docs.microsoft.com/en-us/dotnet/api/microsoft.office.interop.excel._workbook.close?view=excel-pia
+                object SaveChanges = false;
+                object Filename = Type.Missing;
+                object RouteWorkbook = false;
+                #endregion
                 #region 문서 닫기
-                doc.Close();
+                doc.Close(SaveChanges, Filename, RouteWorkbook);
                 #endregion
                 logger.Info("변환 성공");
                 return true;

@@ -51,7 +51,7 @@ namespace DocConvert_Core.OfficeLib
                 powerpoint.DisplayAlerts = PowerPoint.PpAlertLevel.ppAlertsNone;
                 #endregion
 
-                #region 열기 옵션
+                #region 열기 옵션 https://docs.microsoft.com/en-us/previous-versions/office/developer/office-2010/ff763759(v%3Doffice.14)
                 MsoTriState ReadOnly = MsoTriState.msoTrue;
                 MsoTriState Untitled = MsoTriState.msoFalse;
                 MsoTriState WithWindow;
@@ -72,7 +72,7 @@ namespace DocConvert_Core.OfficeLib
                     WithWindow
                 );
                 #endregion
-                #region 저장 옵션
+                #region 저장 옵션 https://docs.microsoft.com/en-us/previous-versions/office/developer/office-2010/ff762466(v%3Doffice.14)
                 #endregion
                 #region PDF저장
                 PpSaveAsFileType ppSaveAsFileType = PpSaveAsFileType.ppSaveAsPDF;

@@ -26,3 +26,17 @@ C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert_Test\obj\Release\Doc
 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert_Test\obj\Release\DocConvert_Util.csproj.CopyComplete
 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert_Test\obj\Release\DocConvert_Util.exe
 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert_Test\obj\Release\DocConvert_Util.pdb
+C:\Users\Jm\Source\Repos\isugar150\DocConvert\bin\Release\NLog.config
+C:\Users\Jm\Source\Repos\isugar150\DocConvert\bin\Release\DocConvert_Util.exe.config
+C:\Users\Jm\Source\Repos\isugar150\DocConvert\bin\Release\DocConvert_Util.exe
+C:\Users\Jm\Source\Repos\isugar150\DocConvert\bin\Release\DocConvert_Util.pdb
+C:\Users\Jm\Source\Repos\isugar150\DocConvert\DocConvert_Test\obj\Release\DocConvert_Util.csprojAssemblyReference.cache
+C:\Users\Jm\Source\Repos\isugar150\DocConvert\DocConvert_Test\obj\Release\Interop.HWPCONTROLLib.dll
+C:\Users\Jm\Source\Repos\isugar150\DocConvert\DocConvert_Test\obj\Release\AxInterop.HWPCONTROLLib.dll
+C:\Users\Jm\Source\Repos\isugar150\DocConvert\DocConvert_Test\obj\Release\DocConvert_Util.csproj.ResolveComReference.cache
+C:\Users\Jm\Source\Repos\isugar150\DocConvert\DocConvert_Test\obj\Release\DocConvert_Util.Convert_Util.resources
+C:\Users\Jm\Source\Repos\isugar150\DocConvert\DocConvert_Test\obj\Release\DocConvert_Util.Properties.Resources.resources
+C:\Users\Jm\Source\Repos\isugar150\DocConvert\DocConvert_Test\obj\Release\DocConvert_Util.csproj.GenerateResource.cache
+C:\Users\Jm\Source\Repos\isugar150\DocConvert\DocConvert_Test\obj\Release\DocConvert_Util.csproj.CopyComplete
+C:\Users\Jm\Source\Repos\isugar150\DocConvert\DocConvert_Test\obj\Release\DocConvert_Util.exe
+C:\Users\Jm\Source\Repos\isugar150\DocConvert\DocConvert_Test\obj\Release\DocConvert_Util.pdb
