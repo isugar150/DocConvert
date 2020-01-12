@@ -59,7 +59,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.axHwpCtrl1 = new AxHWPCONTROLLib.AxHwpCtrl();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -72,7 +71,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axHwpCtrl1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -412,17 +410,6 @@
             this.textBox2.Size = new System.Drawing.Size(610, 193);
             this.textBox2.TabIndex = 0;
             // 
-            // axHwpCtrl1
-            // 
-            this.axHwpCtrl1.Enabled = true;
-            this.axHwpCtrl1.Location = new System.Drawing.Point(-100, -50);
-            this.axHwpCtrl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.axHwpCtrl1.Name = "axHwpCtrl1";
-            this.axHwpCtrl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axHwpCtrl1.OcxState")));
-            this.axHwpCtrl1.Size = new System.Drawing.Size(100, 50);
-            this.axHwpCtrl1.TabIndex = 14;
-            this.axHwpCtrl1.Visible = false;
-            // 
             // Convert_Util
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -430,7 +417,6 @@
             this.ClientSize = new System.Drawing.Size(648, 508);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.axHwpCtrl1);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -454,7 +440,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axHwpCtrl1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -474,7 +459,6 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label2;
         private IPAddressControlLib.IPAddressControl ipAddressControl1;
-        private AxHWPCONTROLLib.AxHwpCtrl axHwpCtrl1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;

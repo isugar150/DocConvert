@@ -1,0 +1,12 @@
+2020-01-12 18:22:43.0061 ERROR - ==================== Method: HwpSaveAs ====================
+2020-01-12 18:22:43.0201 ERROR -    위치: AxHWPCONTROLLib.AxHwpCtrl.RegisterModule(String moduleType, Object moduleData)
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath) 파일 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 48
+
+2020-01-12 18:22:43.0291 ERROR - 변환 실패: 'System.Windows.Forms.AxHost+InvalidActiveXStateException' 형식의 예외가 Throw되었습니다.
+2020-01-12 18:22:43.0291 ERROR - ==================== End ====================
+2020-01-12 18:23:44.3015 ERROR - ==================== Method: HwpSaveAs ====================
+2020-01-12 18:23:44.3165 ERROR -    위치: AxHWPCONTROLLib.AxHwpCtrl.RegisterModule(String moduleType, Object moduleData)
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath) 파일 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 49
+
+2020-01-12 18:23:44.3245 ERROR - 변환 실패: 'System.Windows.Forms.AxHost+InvalidActiveXStateException' 형식의 예외가 Throw되었습니다.
+2020-01-12 18:23:44.3245 ERROR - ==================== End ====================

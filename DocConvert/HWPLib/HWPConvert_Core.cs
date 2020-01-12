@@ -4,9 +4,10 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 using DocConvert_Core.FileLib;
 using Microsoft.Win32;
 using NLog;
@@ -38,12 +39,13 @@ namespace DocConvert_Core.HWPLib
                 logger.Error(e1.Message);
             }
             #endregion
-
+            AxHWPCONTROLLib.AxHwpCtrl axHwpCtrl = null;
             try
             {
-                AxHWPCONTROLLib.AxHwpCtrl axHwpCtrl = new AxHWPCONTROLLib.AxHwpCtrl();
+                 axHwpCtrl = new AxHWPCONTROLLib.AxHwpCtrl();
+                
                 axHwpCtrl.CreateControl();
-                axHwpCtrl.Enabled = true;
+                
                 axHwpCtrl.RegisterModule("FilePathCheckDLL", "FilePathCheckerModuleExample");
                 #region 문서 열기
                 if(axHwpCtrl.Open(FilePath, "HWP", "suspendpassword:TRUE;forceopen:TRUE;versionwarning:FALSE"))
@@ -52,7 +54,7 @@ namespace DocConvert_Core.HWPLib
                     axHwpCtrl.SaveAs(outPath, "PDF", "");
                     #endregion
                     #region 문서 닫기
-                    axHwpCtrl.Clear();
+                    axHwpCtrl.Clear(1);
                     #endregion
                     logger.Info("변환 성공");
                     return true;
@@ -78,6 +80,7 @@ namespace DocConvert_Core.HWPLib
             finally
             {
                 #region 앱 종료
+                axHwpCtrl.Dispose();
                 #endregion
                 logger.Info("==================== End ====================");
             }

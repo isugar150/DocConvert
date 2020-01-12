@@ -1,0 +1,20 @@
+2020-01-12 18:17:28.3917  INFO - ==================== Start ====================
+2020-01-12 18:17:28.4186  INFO - Method: HwpSaveAs, FilePath: D:\Document\Welcome to Hwp.hwp, outPath: D:\Document\Welcome to Hwp.pdf
+2020-01-12 18:17:28.4186  INFO - 파일 언락 성공!
+2020-01-12 18:17:31.6900  INFO - 변환 성공
+2020-01-12 18:17:31.6900  INFO - ==================== End ====================
+2020-01-12 18:22:42.9194  INFO - ==================== Start ====================
+2020-01-12 18:22:42.9453  INFO - Method: HwpSaveAs, FilePath: D:\Document\Welcome to Hwp.hwp, outPath: D:\Document\Welcome to Hwp.pdf
+2020-01-12 18:22:42.9533  INFO - 파일 언락 성공!
+2020-01-12 18:22:43.0061  INFO - 변환중 오류발생 자세한 내용은 오류로그 참고
+2020-01-12 18:22:43.0291  INFO - ==================== End ====================
+2020-01-12 18:23:44.2218  INFO - ==================== Start ====================
+2020-01-12 18:23:44.2457  INFO - Method: HwpSaveAs, FilePath: D:\Document\Welcome to Hwp.hwp, outPath: D:\Document\Welcome to Hwp.pdf
+2020-01-12 18:23:44.2457  INFO - 파일 언락 성공!
+2020-01-12 18:23:44.3015  INFO - 변환중 오류발생 자세한 내용은 오류로그 참고
+2020-01-12 18:23:44.3245  INFO - ==================== End ====================
+2020-01-12 18:29:58.7473  INFO - ==================== Start ====================
+2020-01-12 18:29:58.7712  INFO - Method: HwpSaveAs, FilePath: D:\Document\Welcome to Hwp.hwp, outPath: D:\Document\Welcome to Hwp.pdf
+2020-01-12 18:29:58.7870  INFO - 파일 언락 성공!
+2020-01-12 18:30:02.1326  INFO - 변환 성공
+2020-01-12 18:30:02.1415  INFO - ==================== End ====================

@@ -121,11 +121,6 @@ namespace DocConvert_Util
             openFileDialog1.RestoreDirectory = true;
             if(openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                if (openFileDialog1.FileNames.Length >= 30)
-                {
-                    tb2_appendText("최대 파일 수는 30개입니다.");
-                    return;
-                }
                 textBox1.Text = "";
                 for(int i = 0; i < openFileDialog1.FileNames.Length; i++)
                 {
@@ -222,34 +217,40 @@ namespace DocConvert_Util
         }
 
         #region 자잘한 이벤트
-
+        
+        // 로그 폴더 실행
         private void button4_Click(object sender, EventArgs e)
         {
             Process.Start(Application.StartupPath+@"\Log");
         }
 
+        // IP입력창 키 이벤트
         private void ipAddressControl1_KeyUp(object sender, KeyEventArgs e)
         {
             Console.WriteLine("KeyUp: {0}", e.KeyValue);
         }
 
+        // 서버 버튼 누를 때
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             groupBox2.Enabled = false;
             ipAddressControl1.Enabled = true;
         }
 
+        //로컬 버튼 누를 때
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             groupBox2.Enabled = true;
             ipAddressControl1.Enabled = false;
         }
-
+        
+        // textBox2  문자열 추가
         private void tb2_appendText(string str)
         {
             textBox2.AppendText(System.DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss.fff") + "   " + str + "\r\n");
         }
-
+        
+        // 한글 DLL 등록 버튼
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             #region 한글 DLL 레지스트리 관리
@@ -305,6 +306,7 @@ namespace DocConvert_Util
             #endregion
         }
 
+        // 변환창 보이기 버튼
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             #region 변환창 보이기 설정
@@ -331,6 +333,7 @@ namespace DocConvert_Util
             #endregion
         }
 
+        // 변환 후 실행 버튼
         private void pictureBox6_Click(object sender, EventArgs e)
         {
 
