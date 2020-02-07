@@ -8,14 +8,14 @@
   <input>
     <loadpaths />
     <asmlist>
-      <inputassembly refid="5c7cc846-2098-4c81-b67d-a351e8ba474b">
+      <inputassembly refid="7c09601c-07e8-4fc4-8295-4b6a2f21a6a3">
         <option>honoroas</option>
         <option>stripoa</option>
         <option>library</option>
         <option>transformxaml</option>
         <file dir="C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Release" name="DocConvert_Core.dll" />
       </inputassembly>
-      <inputassembly refid="eefce02b-f98f-4590-8e72-d716df0e36e4">
+      <inputassembly refid="aede8703-4275-45c3-a066-c43ae8b06bf0">
         <option>honoroas</option>
         <option>stripoa</option>
         <option>library</option>

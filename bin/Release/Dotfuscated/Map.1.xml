@@ -2,7 +2,7 @@
 <!DOCTYPE dotfuscatorMap SYSTEM "http://www.preemptive.com/dotfuscator/dtd/dotfuscatorMap_v1.2.dtd">
 <dotfuscatorMap version="1.1">
     <header>
-        <timestamp>2020-01-12T18:36:09</timestamp>
+        <timestamp>2020-01-09T19:39:58</timestamp>
         <product version="5.44.0.10087" user="등록 취소 " serial="000-00-000-391">Dotfuscator Community</product>
     </header>
     <mapping>
@@ -1262,17 +1262,27 @@
                     <field>
                         <signature>bool</signature>
                         <name>APPVISIBLE</name>
+                        <newname>e</newname>
+                    </field>
+                    <field>
+                        <signature>int16</signature>
+                        <name>FILELENGHT</name>
                         <newname>c</newname>
                     </field>
                     <field>
-                        <signature>bool</signature>
-                        <name>HWPREGDLL</name>
+                        <signature>string[]</signature>
+                        <name>FileNames</name>
                         <newname>b</newname>
                     </field>
                     <field>
                         <signature>bool</signature>
-                        <name>RUNAFTER</name>
+                        <name>HWPREGDLL</name>
                         <newname>d</newname>
+                    </field>
+                    <field>
+                        <signature>bool</signature>
+                        <name>RUNAFTER</name>
+                        <newname>f</newname>
                     </field>
                     <field>
                         <signature>Newtonsoft.Json.Linq.JObject</signature>
@@ -1280,154 +1290,159 @@
                         <newname>a</newname>
                     </field>
                     <field>
-                        <signature>System.Windows.Forms.Button</signature>
-                        <name>button1</name>
-                        <newname>h</newname>
+                        <signature>AxHWPCONTROLLib.AxHwpCtrl</signature>
+                        <name>axHwpCtrl1</name>
+                        <newname>u</newname>
                     </field>
                     <field>
                         <signature>System.Windows.Forms.Button</signature>
-                        <name>button3</name>
+                        <name>button1</name>
                         <newname>j</newname>
                     </field>
                     <field>
                         <signature>System.Windows.Forms.Button</signature>
-                        <name>button4</name>
+                        <name>button3</name>
                         <newname>l</newname>
+                    </field>
+                    <field>
+                        <signature>System.Windows.Forms.Button</signature>
+                        <name>button4</name>
+                        <newname>n</newname>
                     </field>
                     <field>
                         <signature>System.ComponentModel.IContainer</signature>
                         <name>components</name>
-                        <newname>e</newname>
+                        <newname>g</newname>
                     </field>
                     <field>
                         <signature>System.Windows.Forms.GroupBox</signature>
                         <name>groupBox1</name>
-                        <newname>f</newname>
+                        <newname>h</newname>
                     </field>
                     <field>
                         <signature>System.Windows.Forms.GroupBox</signature>
                         <name>groupBox2</name>
-                        <newname>s</newname>
+                        <newname>v</newname>
                     </field>
                     <field>
                         <signature>System.Windows.Forms.GroupBox</signature>
                         <name>groupBox3</name>
-                        <newname>y</newname>
+                        <newname>ab</newname>
                     </field>
                     <field>
                         <signature>IPAddressControlLib.IPAddressControl</signature>
                         <name>ipAddressControl1</name>
-                        <newname>r</newname>
-                    </field>
-                    <field>
-                        <signature>System.Windows.Forms.Label</signature>
-                        <name>label1</name>
-                        <newname>g</newname>
-                    </field>
-                    <field>
-                        <signature>System.Windows.Forms.Label</signature>
-                        <name>label2</name>
-                        <newname>q</newname>
-                    </field>
-                    <field>
-                        <signature>System.Windows.Forms.Label</signature>
-                        <name>label3</name>
-                        <newname>ac</newname>
-                    </field>
-                    <field>
-                        <signature>System.Windows.Forms.Label</signature>
-                        <name>label4</name>
-                        <newname>m</newname>
-                    </field>
-                    <field>
-                        <signature>System.Windows.Forms.Label</signature>
-                        <name>label5</name>
                         <newname>t</newname>
                     </field>
                     <field>
                         <signature>System.Windows.Forms.Label</signature>
+                        <name>label1</name>
+                        <newname>i</newname>
+                    </field>
+                    <field>
+                        <signature>System.Windows.Forms.Label</signature>
+                        <name>label2</name>
+                        <newname>s</newname>
+                    </field>
+                    <field>
+                        <signature>System.Windows.Forms.Label</signature>
+                        <name>label3</name>
+                        <newname>af</newname>
+                    </field>
+                    <field>
+                        <signature>System.Windows.Forms.Label</signature>
+                        <name>label4</name>
+                        <newname>o</newname>
+                    </field>
+                    <field>
+                        <signature>System.Windows.Forms.Label</signature>
+                        <name>label5</name>
+                        <newname>w</newname>
+                    </field>
+                    <field>
+                        <signature>System.Windows.Forms.Label</signature>
                         <name>label6</name>
-                        <newname>ag</newname>
+                        <newname>aj</newname>
                     </field>
                     <field>
                         <signature>System.Windows.Forms.OpenFileDialog</signature>
                         <name>openFileDialog1</name>
-                        <newname>k</newname>
+                        <newname>m</newname>
                     </field>
                     <field>
                         <signature>System.Windows.Forms.Panel</signature>
                         <name>panel1</name>
-                        <newname>v</newname>
+                        <newname>y</newname>
                     </field>
                     <field>
                         <signature>System.Windows.Forms.Panel</signature>
                         <name>panel2</name>
-                        <newname>aa</newname>
+                        <newname>ad</newname>
                     </field>
                     <field>
                         <signature>System.Windows.Forms.Panel</signature>
                         <name>panel3</name>
-                        <newname>ae</newname>
+                        <newname>ah</newname>
                     </field>
                     <field>
                         <signature>System.Windows.Forms.PictureBox</signature>
                         <name>pictureBox1</name>
-                        <newname>u</newname>
+                        <newname>x</newname>
                     </field>
                     <field>
                         <signature>System.Windows.Forms.PictureBox</signature>
                         <name>pictureBox2</name>
-                        <newname>w</newname>
+                        <newname>z</newname>
                     </field>
                     <field>
                         <signature>System.Windows.Forms.PictureBox</signature>
                         <name>pictureBox3</name>
-                        <newname>ab</newname>
+                        <newname>ae</newname>
                     </field>
                     <field>
                         <signature>System.Windows.Forms.PictureBox</signature>
                         <name>pictureBox4</name>
-                        <newname>ad</newname>
+                        <newname>ag</newname>
                     </field>
                     <field>
                         <signature>System.Windows.Forms.PictureBox</signature>
                         <name>pictureBox5</name>
-                        <newname>af</newname>
+                        <newname>ai</newname>
                     </field>
                     <field>
                         <signature>System.Windows.Forms.PictureBox</signature>
                         <name>pictureBox6</name>
-                        <newname>ah</newname>
+                        <newname>ak</newname>
                     </field>
                     <field>
                         <signature>System.Windows.Forms.RadioButton</signature>
                         <name>radioButton1</name>
-                        <newname>p</newname>
+                        <newname>r</newname>
                     </field>
                     <field>
                         <signature>System.Windows.Forms.RadioButton</signature>
                         <name>radioButton2</name>
-                        <newname>o</newname>
+                        <newname>q</newname>
                     </field>
                     <field>
                         <signature>System.Windows.Forms.TextBox</signature>
                         <name>textBox1</name>
-                        <newname>i</newname>
+                        <newname>k</newname>
                     </field>
                     <field>
                         <signature>System.Windows.Forms.TextBox</signature>
                         <name>textBox2</name>
-                        <newname>z</newname>
+                        <newname>ac</newname>
                     </field>
                     <field>
                         <signature>System.Windows.Forms.TextBox</signature>
                         <name>textBox3</name>
-                        <newname>n</newname>
+                        <newname>p</newname>
                     </field>
                     <field>
                         <signature>System.Windows.Forms.ToolTip</signature>
                         <name>toolTip1</name>
-                        <newname>x</newname>
+                        <newname>aa</newname>
                     </field>
                 </fieldlist>
                 <propertylist />
@@ -1566,7 +1581,7 @@
         </statisticline>
         <statisticline>
             <description>Total Fields</description>
-            <statistic>144</statistic>
+            <statistic>147</statistic>
         </statisticline>
         <statisticline>
             <description>Total Properties</description>
@@ -1588,8 +1603,8 @@
         </statisticline>
         <statisticline>
             <description>Total Fields Renamed</description>
-            <statistic>44</statistic>
-            <statistic>30.56 %</statistic>
+            <statistic>47</statistic>
+            <statistic>31.97 %</statistic>
         </statisticline>
         <statisticline>
             <description>Total Properties Renamed</description>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DocConvert_Core.interfaces;
 using DocConvert_Core.FileLib;
 using Microsoft.Office.Interop.PowerPoint;
 using NetOffice.OfficeApi.Enums;
@@ -26,8 +27,9 @@ namespace DocConvert_Core.OfficeLib
         /// <param name="outPath">저장파일</param>
         /// <param name="docPassword">문서 비밀번호</param>
         /// <returns></returns>
-        public static bool PowerPointSaveAs(String FilePath, String outPath, String docPassword, bool appvisible)
+        public static ReturnValue PowerPointSaveAs(String FilePath, String outPath, String docPassword, bool appvisible)
         {
+            ReturnValue returnValue = new ReturnValue();
             logger.Info("==================== Start ====================");
             logger.Info("Method: " + MethodBase.GetCurrentMethod().Name + ", FilePath: " + FilePath + ", outPath: " + outPath + ", docPassword: " + docPassword);
             #region File Unlock
@@ -72,6 +74,19 @@ namespace DocConvert_Core.OfficeLib
                     WithWindow
                 );
                 #endregion
+                #region 페이지수 얻기
+                Slides slides = null;
+                try
+                {
+                    slides = doc.Slides;
+                    returnValue.PageCount = slides.Count;
+                } catch(Exception e1)
+                {
+                    returnValue.PageCount = -1;
+                    logger.Error("페이지 카운트 가져오는중 오류발생");
+                    logger.Error("오류내용: " + e1.Message);
+                }
+                #endregion
                 #region 저장 옵션 https://docs.microsoft.com/en-us/previous-versions/office/developer/office-2010/ff762466(v%3Doffice.14)
                 #endregion
                 #region PDF저장
@@ -87,7 +102,9 @@ namespace DocConvert_Core.OfficeLib
                 doc.Close();
                 #endregion
                 logger.Info("변환 성공");
-                return true;
+                returnValue.isSuccess = true;
+                returnValue.Message = "변환에 성공하였습니다.";
+                return returnValue;
             }
             catch (Exception e1)
             {
@@ -96,7 +113,9 @@ namespace DocConvert_Core.OfficeLib
                 logger.Error(new StackTrace(e1, true));
                 logger.Error("변환 실패: " + e1.Message);
                 logger.Error("==================== End ====================");
-                return false;
+                returnValue.isSuccess = false;
+                returnValue.Message = e1.Message;
+                return returnValue;
             }
             finally
             {

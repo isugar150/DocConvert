@@ -317,7 +317,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 21);
             this.label3.TabIndex = 14;
-            this.label3.Text = "진행상황 보이기:";
+            this.label3.Text = "디버깅 모드:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pictureBox4

@@ -6,10 +6,12 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using DocConvert_Core.interfaces;
 using DocConvert_Core.FileLib;
 using Microsoft.Office.Interop.Word;
 using NLog;
 using Word = Microsoft.Office.Interop.Word;
+using Microsoft.Office.Core;
 
 namespace DocConvert_Core.OfficeLib
 {
@@ -23,8 +25,9 @@ namespace DocConvert_Core.OfficeLib
         /// <param name="outPath">저장파일</param>
         /// <param name="docPassword">문서 비밀번호</param>
         /// <returns></returns>
-        public static bool WordSaveAs(String FilePath, String outPath, String docPassword, bool appvisible)
+        public static ReturnValue WordSaveAs(String FilePath, String outPath, String docPassword, bool appvisible)
         {
+            ReturnValue returnValue = new ReturnValue();
             logger.Info("==================== Start ====================");
             logger.Info("Method: " + MethodBase.GetCurrentMethod().Name + ", FilePath: " + FilePath + ", outPath: " + outPath + ", docPassword: " + docPassword);
             #region File Unlock
@@ -58,57 +61,62 @@ namespace DocConvert_Core.OfficeLib
                         DisplayAlerts = WdAlertLevel.wdAlertsNone
                     };
                 }
+                // 매크로 실행 안되게 처리 (https://msdn.microsoft.com/en-us/library/microsoft.office.core.msoautomationsecurity.aspx?f=255&MSPPError=-2147217396)                                
+                word.AutomationSecurity = MsoAutomationSecurity.msoAutomationSecurityForceDisable;
+                word.DisplayAlerts = Word.WdAlertLevel.wdAlertsNone;
 
                 #region 열기 옵션 https://docs.microsoft.com/en-us/dotnet/api/microsoft.office.interop.word.documents.open?view=word-pia
-                object UpdateLinks = false;
+                object ConfirmConversions = false;
                 object ReadOnly = true;
-                object Format = Type.Missing;
-                object Password = Type.Missing;
+                object AddToRecentFiles = false;
+                object PasswordDocument = Type.Missing;
                 if (docPassword != null)
-                    Password = docPassword;
-                object WriteResPassword = Type.Missing;
-                object IgnoreReadOnlyRecommended = true;
-                object Origin = Type.Missing;
-                object Delimiter = Type.Missing;
-                object Editable = false;
-                object Notify = false;
-                object Converter = Type.Missing;
-                object AddToMru = Type.Missing;
-                object Local = false;
-                object CorruptLoad = Type.Missing;
+                    PasswordDocument = docPassword;
+                object PasswordTemplate = Type.Missing;
+                object Revert = Type.Missing;
+                object WritePasswordDocument = Type.Missing;
+                object WritePasswordTemplate = Type.Missing;
+                object Format = Type.Missing;
+                object Encoding = Type.Missing;
+                object Visible = appvisible;
+                object OpenAndRepair = true;
+                object DocumentDirection = Type.Missing;
+                object NoEncodingDialog = Type.Missing;
+                object XMLTransform = Type.Missing;
                 #endregion
                 #region 문서 열기
                 _Document doc = word.Documents.Open(
                     FilePath,
-                    UpdateLinks,
                     ReadOnly,
+                    PasswordDocument,
+                    PasswordTemplate,
+                    Revert,
+                    WritePasswordDocument,
+                    WritePasswordTemplate,
                     Format,
-                    Password,
-                    WriteResPassword,
-                    IgnoreReadOnlyRecommended,
-                    Origin,
-                    Delimiter,
-                    Editable,
-                    Notify,
-                    Converter,
-                    AddToMru,
-                    Local,
-                    CorruptLoad
+                    Encoding,
+                    Visible,
+                    OpenAndRepair,
+                    DocumentDirection,
+                    NoEncodingDialog,
+                    XMLTransform
                 );
 
                 doc.Activate();
                 #endregion
+                #region 페이지수 얻기
+                returnValue.PageCount = doc.ComputeStatistics(WdStatistic.wdStatisticPages, -1);
+                #endregion
                 #region 저장 옵션 https://docs.microsoft.com/ko-kr/dotnet/api/microsoft.office.tools.word.document.saveas2?view=vsto-2017
                 object FileFormat = WdSaveFormat.wdFormatPDF;
                 object LockComments = Type.Missing;
-                object AddToRecentFiles = Type.Missing;
+                object Password = Type.Missing;
                 object WritePassword = Type.Missing;
                 object ReadOnlyRecommended = Type.Missing;
                 object EmbedTrueTypeFonts = Type.Missing;
                 object SaveNativePictureFormat = Type.Missing;
                 object SaveFormsData = Type.Missing;
                 object SaveAsAOCELetter = Type.Missing;
-                object Encoding = Type.Missing;
                 object InsertLineBreaks = Type.Missing;
                 object AllowSubstitutions = Type.Missing;
                 object LineEnding = Type.Missing;
@@ -145,7 +153,9 @@ namespace DocConvert_Core.OfficeLib
                 doc.Close(SaveChanges, OriginalFormat, RouteDocument);
                 #endregion
                 logger.Info("변환 성공");
-                return true;
+                returnValue.isSuccess = true;
+                returnValue.Message = "변환에 성공하였습니다.";
+                return returnValue;
             }
             catch(Exception e1)
             {
@@ -154,7 +164,9 @@ namespace DocConvert_Core.OfficeLib
                 logger.Error(new StackTrace(e1, true));
                 logger.Error("변환 실패: " + e1.Message);
                 logger.Error("==================== End ====================");
-                return false;
+                returnValue.isSuccess = false;
+                returnValue.Message = e1.Message;
+                return returnValue;
             }
             finally
             {

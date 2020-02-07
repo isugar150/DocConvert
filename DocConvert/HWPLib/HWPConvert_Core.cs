@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DocConvert_Core.interfaces;
 using DocConvert_Core.FileLib;
 using Microsoft.Win32;
 using NLog;
@@ -23,8 +24,9 @@ namespace DocConvert_Core.HWPLib
         /// <param name="FilePath">소스 경로</param>
         /// <param name="outPath">내보낼 경로</param>
         /// <returns></returns>
-        public static bool HwpSaveAs(String FilePath, String outPath)
+        public static ReturnValue HwpSaveAs(String FilePath, String outPath)
         {
+            ReturnValue returnValue = new ReturnValue();
             logger.Info("==================== Start ====================");
             logger.Info("Method: " + MethodBase.GetCurrentMethod().Name + ", FilePath: " + FilePath + ", outPath: " + outPath);
             #region File Unlock
@@ -50,19 +52,32 @@ namespace DocConvert_Core.HWPLib
                 #region 문서 열기
                 if(axHwpCtrl.Open(FilePath, "HWP", "suspendpassword:TRUE;forceopen:TRUE;versionwarning:FALSE"))
                 {
+                    #region 페이지수 얻기
+                    try
+                    {
+                        returnValue.PageCount = axHwpCtrl.PageCount;
+                    } catch (Exception e1)
+                    {
+                        returnValue.PageCount = -1;
+                        logger.Error("페이지 카운트 가져오는중 오류발생");
+                        logger.Error("오류내용: " + e1.Message);
+                    }
+                    #endregion
                     #region PDF저장
                     axHwpCtrl.SaveAs(outPath, "PDF", "");
                     #endregion
                     #region 문서 닫기
                     axHwpCtrl.Clear(1);
                     #endregion
-                    logger.Info("변환 성공");
-                    return true;
+                    returnValue.isSuccess = true;
+                    returnValue.Message = "변환에 성공하였습니다.";
+                    return returnValue;
                 }
                 else
                 {
-                    logger.Info("한글 파일 ");
-                    return false;
+                    returnValue.isSuccess = false;
+                    returnValue.Message = "문서 변환에 실패하였습니다. (알수없는 오류)";
+                    return returnValue;
                 }
                 #endregion
             }
@@ -74,7 +89,9 @@ namespace DocConvert_Core.HWPLib
                 logger.Error(new StackTrace(e1, true));
                 logger.Error("변환 실패: " + e1.Message);
                 logger.Error("==================== End ====================");
-                return false;
+                returnValue.isSuccess = false;
+                returnValue.Message = e1.Message;
+                return returnValue;
             }
 
             finally

@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using DocConvert_Core.interfaces;
 using DocConvert_Core.FileLib;
 using Microsoft.Office.Interop.Excel;
 using NLog;
@@ -23,8 +24,9 @@ namespace DocConvert_Core.OfficeLib
         /// <param name="outPath">저장파일</param>
         /// <param name="docPassword">문서 비밀번호</param>
         /// <returns></returns>
-        public static bool ExcelSaveAs(String FilePath, String outPath, String docPassword, bool appvisible)
+        public static ReturnValue ExcelSaveAs(String FilePath, String outPath, String docPassword, bool appvisible)
         {
+            ReturnValue returnValue = new ReturnValue();
             logger.Info("==================== Start ====================");
             logger.Info("Method: " + MethodBase.GetCurrentMethod().Name + ", FilePath: " + FilePath + ", outPath: " + outPath + ", docPassword: " + docPassword);
             #region File Unlock
@@ -97,6 +99,40 @@ namespace DocConvert_Core.OfficeLib
 
                 doc.Activate();
                 #endregion
+                #region 페이지수 얻기
+                int sheetCount = 0, pageCount = 0;
+                Sheets sheets = null;
+                Worksheet sheet = null;
+                PageSetup pageSetup = null;
+                Pages pages = null;
+                try
+                {
+                    sheets = doc.Worksheets;
+                    sheetCount = sheets.Count;
+
+                    for (int index = 1; index <= sheetCount; index++)
+                    {
+                        sheet = (Excel.Worksheet)sheets[index];
+                        sheet.Activate();
+
+                        pageSetup = sheet.PageSetup;
+
+                        pageSetup.Orientation = Excel.XlPageOrientation.xlLandscape;
+                        pageSetup.PaperSize = Excel.XlPaperSize.xlPaperA4;
+
+                        pages = pageSetup.Pages;
+                        pageCount += pages.Count;
+                    }
+
+                    returnValue.PageCount = pageCount;
+                }
+                catch (Exception e1)
+                {
+                    returnValue.PageCount = -1;
+                    logger.Error("페이지 카운트 가져오는중 오류발생");
+                    logger.Error("오류내용: " + e1.Message);
+                }
+                #endregion
                 #region 저장 옵션 https://docs.microsoft.com/ko-kr/dotnet/api/microsoft.office.tools.excel.workbook.exportasfixedformat?view=vsto-2017
                 XlFixedFormatType FileFormat = XlFixedFormatType.xlTypePDF;
                 XlFixedFormatQuality Quality = XlFixedFormatQuality.xlQualityMinimum;
@@ -129,7 +165,9 @@ namespace DocConvert_Core.OfficeLib
                 doc.Close(SaveChanges, Filename, RouteWorkbook);
                 #endregion
                 logger.Info("변환 성공");
-                return true;
+                returnValue.isSuccess = true;
+                returnValue.Message = "변환에 성공하였습니다.";
+                return returnValue;
             }
             catch (Exception e1)
             {
@@ -138,7 +176,9 @@ namespace DocConvert_Core.OfficeLib
                 logger.Error(new StackTrace(e1, true));
                 logger.Error("변환 실패: " + e1.Message);
                 logger.Error("==================== End ====================");
-                return false;
+                returnValue.isSuccess = false;
+                returnValue.Message = e1.Message;
+                return returnValue;
             }
             finally
             {

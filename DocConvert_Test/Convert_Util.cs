@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using DocConvert_Core.interfaces;
 using DocConvert_Core.OfficeLib;
 
 using Newtonsoft.Json.Linq;
@@ -112,8 +113,8 @@ namespace DocConvert_Util
         private void button1_Click(object sender, EventArgs e)
         {
             openFileDialog1.FileName = "";
-            openFileDialog1.Filter = "지원하는 형식 (*.docx;*.doc;*.hwp;*.xlsx;*.xls;*.pptx;*.ppt)|*.docx;*.doc;*.hwp;*.xlsx;*.xls;*.pptx;*.ppt" +
-                "|Word 형식 (*.docx;*.doc;*.hwp;)|*.docx;*.doc;*.hwp;" +
+            openFileDialog1.Filter = "지원하는 형식 (*.docx;*.doc;*.hwp;*.xlsx;*.xls;*.pptx;*.ppt)|*.docx;*.doc;*.txt;*.hwp;*.xlsx;*.xls;*.pptx;*.ppt" +
+                "|Word 형식 (*.docx;*.doc;*.hwp;)|*.docx;*.doc;*.hwp;*.txt;" +
                 "|Cell 형식 (*.xlsx;*.xls;)|*.xlsx;*.xls;" +
                 "|PPT 형식 (*.pptx;*.ppt;)|*.pptx;*.ppt;" +
                 "|All Files (*.*)|*.*";
@@ -143,7 +144,7 @@ namespace DocConvert_Util
             {
                 #region Local 변환시
                 String[] FileNames = textBox1.Text.Split('|');
-                tb2_appendText("요청받은 파일수: " + FileNames.Length);
+                short SuccessCount = 0;
                 for (int i = 0; i < FileNames.Length; i++)
                 {
                     if (!File.Exists(FileNames[i]))
@@ -155,7 +156,7 @@ namespace DocConvert_Util
                         tb2_appendText("비밀번호 해제후 다시시도해주세요.");
                         return;
                     }
-                    bool status = false;
+                    ReturnValue status = null;
                     string passwd = null;
                     string outPath = Path.GetDirectoryName(FileNames[i]) + @"\" + Path.GetFileNameWithoutExtension(FileNames[i]) + ".pdf";
                     tb2_appendText("[상태]   변환 요청 (" + (i + 1) + "/" + FileNames.Length + ")");
@@ -163,49 +164,45 @@ namespace DocConvert_Util
                     tb2_appendText("[정보]   출력 경로: " + Path.GetDirectoryName(FileNames[i]) + @"\" + Path.GetFileNameWithoutExtension(FileNames[i]) + ".pdf");
                     if (!textBox3.Text.Equals(""))
                         passwd = textBox3.Text;
-                    if (Path.GetExtension(FileNames[i]).Equals(".docx") || Path.GetExtension(FileNames[i]).Equals(".doc"))
+                    if (Path.GetExtension(FileNames[i]).Equals(".docx") || Path.GetExtension(FileNames[i]).Equals(".doc") || Path.GetExtension(FileNames[i]).Equals(".txt"))
                     {
                         status = WordConvert_Core.WordSaveAs(FileNames[i], outPath, passwd, APPVISIBLE);
-                        if (status)
-                            tb2_appendText("[상태]   변환 성공");
-                        else
-                            tb2_appendText("[상태]   변환 실패");
                     }
                     else if (Path.GetExtension(FileNames[i]).Equals(".xlsx") || Path.GetExtension(FileNames[i]).Equals(".xls"))
                     {
                         status = ExcelConvert_Core.ExcelSaveAs(FileNames[i], outPath, passwd, APPVISIBLE);
-                        if (status)
-                            tb2_appendText("[상태]   변환 성공");
-                        else
-                            tb2_appendText("[상태]   변환 실패");
                     }
                     else if (Path.GetExtension(FileNames[i]).Equals(".pptx") || Path.GetExtension(FileNames[i]).Equals(".ppt"))
                     {
                         status = PowerPointConvert_Core.PowerPointSaveAs(FileNames[i], outPath, passwd, APPVISIBLE);
-                        if (status)
-                            tb2_appendText("[상태]   변환 성공");
-                        else
-                            tb2_appendText("[상태]   변환 실패");
                     }
                     else if (Path.GetExtension(FileNames[i]).Equals(".hwp"))
                     {
                         status = HWPConvert_Core.HwpSaveAs(FileNames[i], outPath);
-                        if (status)
-                            tb2_appendText("[상태]   변환 성공");
-                        else
-                            tb2_appendText("[상태]   변환 실패");
                     }
                     else
                     {
                         tb2_appendText("[상태]   지원포맷 아님. 파싱한 확장자: " + Path.GetExtension(FileNames[i]));
                     }
+                    tb2_appendText("[정보]   페이지 수: " + Convert.ToString(status.PageCount));
+
+                    if (status.isSuccess)
+                        tb2_appendText("[상태]   " + status.Message);
+                    else
+                        tb2_appendText("[오류]   " + status.Message);
+                    if (status.isSuccess)
+                    SuccessCount += 1;
                     #region 변환 후 실행
-                    if (RUNAFTER && status)
+                    if (RUNAFTER && status.isSuccess)
                     {
                         Process.Start(Path.GetDirectoryName(FileNames[i]) + @"\" + Path.GetFileNameWithoutExtension(FileNames[i]) + ".pdf");
                     }
                     #endregion
                 }
+                if (FileNames.Length == SuccessCount)
+                    tb2_appendText("[상태]   모든 파일을 변환완료 하였습니다.");
+                else
+                    tb2_appendText("[상태]   일부 파일 변환을 실패하였습니다.");
                 #endregion
             }
             else if (radioButton2.Checked)
