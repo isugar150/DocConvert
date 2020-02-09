@@ -113,8 +113,8 @@ namespace DocConvert_Util
         private void button1_Click(object sender, EventArgs e)
         {
             openFileDialog1.FileName = "";
-            openFileDialog1.Filter = "지원하는 형식 (*.docx;*.doc;*.hwp;*.xlsx;*.xls;*.pptx;*.ppt)|*.docx;*.doc;*.txt;*.hwp;*.xlsx;*.xls;*.pptx;*.ppt" +
-                "|Word 형식 (*.docx;*.doc;*.hwp;)|*.docx;*.doc;*.hwp;*.txt;" +
+            openFileDialog1.Filter = "지원하는 형식 (*.docx;*.doc;*.hwp;*.xlsx;*.xls;*.pptx;*.ppt)|*.docx;*.doc;*.hwp;*.xlsx;*.xls;*.pptx;*.ppt" +
+                "|Word 형식 (*.docx;*.doc;*.hwp;)|*.docx;*.doc;*.hwp;" +
                 "|Cell 형식 (*.xlsx;*.xls;)|*.xlsx;*.xls;" +
                 "|PPT 형식 (*.pptx;*.ppt;)|*.pptx;*.ppt;" +
                 "|All Files (*.*)|*.*";
@@ -164,7 +164,7 @@ namespace DocConvert_Util
                     tb2_appendText("[정보]   출력 경로: " + Path.GetDirectoryName(FileNames[i]) + @"\" + Path.GetFileNameWithoutExtension(FileNames[i]) + ".pdf");
                     if (!textBox3.Text.Equals(""))
                         passwd = textBox3.Text;
-                    if (Path.GetExtension(FileNames[i]).Equals(".docx") || Path.GetExtension(FileNames[i]).Equals(".doc") || Path.GetExtension(FileNames[i]).Equals(".txt"))
+                    if (Path.GetExtension(FileNames[i]).Equals(".docx") || Path.GetExtension(FileNames[i]).Equals(".doc"))
                     {
                         status = WordConvert_Core.WordSaveAs(FileNames[i], outPath, passwd, APPVISIBLE);
                     }

@@ -61,9 +61,8 @@ namespace DocConvert_Core.OfficeLib
                         DisplayAlerts = WdAlertLevel.wdAlertsNone
                     };
                 }
-                // 매크로 실행 안되게 처리 (https://msdn.microsoft.com/en-us/library/microsoft.office.core.msoautomationsecurity.aspx?f=255&MSPPError=-2147217396)                                
+                // 매크로 실행 안되게 처리 (https://msdn.microsoft.com/en-us/library/microsoft.office.core.msoautomationsecurity.aspx?f=255&MSPPError=-2147217396)
                 word.AutomationSecurity = MsoAutomationSecurity.msoAutomationSecurityForceDisable;
-                word.DisplayAlerts = Word.WdAlertLevel.wdAlertsNone;
 
                 #region 열기 옵션 https://docs.microsoft.com/en-us/dotnet/api/microsoft.office.interop.word.documents.open?view=word-pia
                 object ConfirmConversions = false;
@@ -78,8 +77,8 @@ namespace DocConvert_Core.OfficeLib
                 object WritePasswordTemplate = Type.Missing;
                 object Format = Type.Missing;
                 object Encoding = Type.Missing;
-                object Visible = appvisible;
-                object OpenAndRepair = true;
+                object Visible = false;
+                object OpenAndRepair = Type.Missing;
                 object DocumentDirection = Type.Missing;
                 object NoEncodingDialog = Type.Missing;
                 object XMLTransform = Type.Missing;
