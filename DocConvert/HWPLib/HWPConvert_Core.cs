@@ -24,9 +24,10 @@ namespace DocConvert_Core.HWPLib
         /// <param name="FilePath">소스 경로</param>
         /// <param name="outPath">내보낼 경로</param>
         /// <returns></returns>
-        public static ReturnValue HwpSaveAs(String FilePath, String outPath)
+        public static ReturnValue HwpSaveAs(String FilePath, String outPath, bool PageCounting)
         {
             ReturnValue returnValue = new ReturnValue();
+
             logger.Info("==================== Start ====================");
             logger.Info("Method: " + MethodBase.GetCurrentMethod().Name + ", FilePath: " + FilePath + ", outPath: " + outPath);
             #region File Unlock
@@ -50,17 +51,21 @@ namespace DocConvert_Core.HWPLib
                 
                 axHwpCtrl.RegisterModule("FilePathCheckDLL", "FilePathCheckerModuleExample");
                 #region 문서 열기
-                if(axHwpCtrl.Open(FilePath, "HWP", "suspendpassword:TRUE;forceopen:TRUE;versionwarning:FALSE"))
+                if (axHwpCtrl.Open(FilePath, "HWP", "suspendpassword:TRUE;forceopen:TRUE;versionwarning:FALSE"))
                 {
                     #region 페이지수 얻기
-                    try
+                    if (PageCounting)
                     {
-                        returnValue.PageCount = axHwpCtrl.PageCount;
-                    } catch (Exception e1)
-                    {
-                        returnValue.PageCount = -1;
-                        logger.Error("페이지 카운트 가져오는중 오류발생");
-                        logger.Error("오류내용: " + e1.Message);
+                        try
+                        {
+                            returnValue.PageCount = axHwpCtrl.PageCount;
+                        }
+                        catch (Exception e1)
+                        {
+                            returnValue.PageCount = -1;
+                            logger.Error("페이지 카운트 가져오는중 오류발생");
+                            logger.Error("오류내용: " + e1.Message);
+                        }
                     }
                     #endregion
                     #region PDF저장

@@ -25,7 +25,7 @@ namespace DocConvert_Core.OfficeLib
         /// <param name="outPath">저장파일</param>
         /// <param name="docPassword">문서 비밀번호</param>
         /// <returns></returns>
-        public static ReturnValue WordSaveAs(String FilePath, String outPath, String docPassword, bool appvisible)
+        public static ReturnValue WordSaveAs(String FilePath, String outPath, String docPassword, bool pageCounting, bool appvisible)
         {
             ReturnValue returnValue = new ReturnValue();
             logger.Info("==================== Start ====================");
@@ -104,7 +104,8 @@ namespace DocConvert_Core.OfficeLib
                 doc.Activate();
                 #endregion
                 #region 페이지수 얻기
-                returnValue.PageCount = doc.ComputeStatistics(WdStatistic.wdStatisticPages, -1);
+                if (pageCounting)
+                    returnValue.PageCount = doc.ComputeStatistics(WdStatistic.wdStatisticPages, -1);
                 #endregion
                 #region 저장 옵션 https://docs.microsoft.com/ko-kr/dotnet/api/microsoft.office.tools.word.document.saveas2?view=vsto-2017
                 object FileFormat = WdSaveFormat.wdFormatPDF;

@@ -29,6 +29,7 @@ namespace DocConvert_Util
         private bool HWPREGDLL = false;
         private bool APPVISIBLE = false;
         private bool RUNAFTER = false;
+        private bool PAGINGNUM = false;
         public Convert_Util()
         {
             InitializeComponent();
@@ -80,6 +81,27 @@ namespace DocConvert_Util
                     pictureBox6.Image = DocConvert_Util.Properties.Resources.switch_on;
                     RUNAFTER = true;
                     Setting["runafter"] = RUNAFTER;
+                }
+                #endregion
+                #region 페이징 번호
+                try
+                {
+                    if (bool.Parse(Setting["pagingnum"].ToString()))
+                    {
+                        pictureBox8.Image = DocConvert_Util.Properties.Resources.switch_on;
+                        PAGINGNUM = true;
+                    }
+                    else
+                    {
+                        pictureBox8.Image = DocConvert_Util.Properties.Resources.switch_off;
+                        PAGINGNUM = false;
+                    }
+                }
+                catch (Exception)
+                {
+                    pictureBox8.Image = DocConvert_Util.Properties.Resources.switch_on;
+                    PAGINGNUM = true;
+                    Setting["pagingnum"] = PAGINGNUM;
                 }
                 #endregion
             }
@@ -171,30 +193,35 @@ namespace DocConvert_Util
                         passwd = textBox3.Text;
                     if (Path.GetExtension(FileNames[i]).Equals(".docx") || Path.GetExtension(FileNames[i]).Equals(".doc"))
                     {
-                        status = WordConvert_Core.WordSaveAs(FileNames[i], outPath, passwd, APPVISIBLE);
+                        status = WordConvert_Core.WordSaveAs(FileNames[i], outPath, passwd, PAGINGNUM, APPVISIBLE);
                     }
                     else if (Path.GetExtension(FileNames[i]).Equals(".xlsx") || Path.GetExtension(FileNames[i]).Equals(".xls"))
                     {
-                        status = ExcelConvert_Core.ExcelSaveAs(FileNames[i], outPath, passwd, APPVISIBLE);
+                        status = ExcelConvert_Core.ExcelSaveAs(FileNames[i], outPath, passwd, PAGINGNUM, APPVISIBLE);
                     }
                     else if (Path.GetExtension(FileNames[i]).Equals(".pptx") || Path.GetExtension(FileNames[i]).Equals(".ppt"))
                     {
-                        status = PowerPointConvert_Core.PowerPointSaveAs(FileNames[i], outPath, passwd, APPVISIBLE);
+                        status = PowerPointConvert_Core.PowerPointSaveAs(FileNames[i], outPath, passwd, PAGINGNUM, APPVISIBLE);
                     }
                     else if (Path.GetExtension(FileNames[i]).Equals(".hwp"))
                     {
-                        status = HWPConvert_Core.HwpSaveAs(FileNames[i], outPath);
+                        status = HWPConvert_Core.HwpSaveAs(FileNames[i], outPath, PAGINGNUM);
                     }
                     else if (Path.GetExtension(FileNames[i]).Equals(".pdf"))
                     {
-
+                        ReturnValue pdfreturnValue = new ReturnValue();
+                        pdfreturnValue.isSuccess = true;
+                        pdfreturnValue.Message = "PDF파일은 변환할 필요가 없습니다.";
+                        pdfreturnValue.PageCount = ConvertImg.pdfPageCount(FileNames[i]);
+                        status = pdfreturnValue;
                     }
                     else
                     {
                         tb2_appendText("[상태]   지원포맷 아님. 파싱한 확장자: " + Path.GetExtension(FileNames[i]));
                     }
-                    if(status != null) { 
-                        tb2_appendText("[정보]   페이지 수: " + Convert.ToString(status.PageCount));
+                    if(status != null) {
+                        if (PAGINGNUM)
+                            tb2_appendText("[정보]   페이지 수: " + Convert.ToString(status.PageCount));
 
                         if (status.isSuccess)
                             tb2_appendText("[상태]   " + status.Message);
@@ -359,7 +386,6 @@ namespace DocConvert_Util
         // 변환 후 실행 버튼
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-
             #region 파일 변환 후 실행
             if (RUNAFTER)
             {
@@ -385,5 +411,31 @@ namespace DocConvert_Util
         }
 
         #endregion
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            #region 페이지 번호 추출
+            if (PAGINGNUM)
+            {
+                pictureBox8.Image = DocConvert_Util.Properties.Resources.switch_off;
+                PAGINGNUM = false;
+            }
+            else
+            {
+                pictureBox8.Image = DocConvert_Util.Properties.Resources.switch_on;
+                PAGINGNUM = true;
+            }
+            Setting["pagingnum"] = PAGINGNUM;
+            tb2_appendText("[정보]   페이지 번호 추출: " + PAGINGNUM);
+            try
+            {
+                File.WriteAllText(Application.StartupPath + @"\Settings.json", Setting.ToString());
+            }
+            catch (Exception e1)
+            {
+                tb2_appendText("[오류]   " + e1.Message);
+            }
+            #endregion
+        }
     }
 }

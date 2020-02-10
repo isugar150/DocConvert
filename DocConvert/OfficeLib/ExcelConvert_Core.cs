@@ -24,7 +24,7 @@ namespace DocConvert_Core.OfficeLib
         /// <param name="outPath">저장파일</param>
         /// <param name="docPassword">문서 비밀번호</param>
         /// <returns></returns>
-        public static ReturnValue ExcelSaveAs(String FilePath, String outPath, String docPassword, bool appvisible)
+        public static ReturnValue ExcelSaveAs(String FilePath, String outPath, String docPassword, bool pageCounting, bool appvisible)
         {
             ReturnValue returnValue = new ReturnValue();
             logger.Info("==================== Start ====================");
@@ -100,37 +100,40 @@ namespace DocConvert_Core.OfficeLib
                 doc.Activate();
                 #endregion
                 #region 페이지수 얻기
-                int sheetCount = 0, pageCount = 0;
-                Sheets sheets = null;
-                Worksheet sheet = null;
-                PageSetup pageSetup = null;
-                Pages pages = null;
-                try
+                if (pageCounting)
                 {
-                    sheets = doc.Worksheets;
-                    sheetCount = sheets.Count;
-
-                    for (int index = 1; index <= sheetCount; index++)
+                    int sheetCount = 0, pageCount = 0;
+                    Sheets sheets = null;
+                    Worksheet sheet = null;
+                    PageSetup pageSetup = null;
+                    Pages pages = null;
+                    try
                     {
-                        sheet = (Excel.Worksheet)sheets[index];
-                        sheet.Activate();
+                        sheets = doc.Worksheets;
+                        sheetCount = sheets.Count;
 
-                        pageSetup = sheet.PageSetup;
+                        for (int index = 1; index <= sheetCount; index++)
+                        {
+                            sheet = (Excel.Worksheet)sheets[index];
+                            sheet.Activate();
 
-                        pageSetup.Orientation = Excel.XlPageOrientation.xlLandscape;
-                        pageSetup.PaperSize = Excel.XlPaperSize.xlPaperA4;
+                            pageSetup = sheet.PageSetup;
 
-                        pages = pageSetup.Pages;
-                        pageCount += pages.Count;
+                            pageSetup.Orientation = Excel.XlPageOrientation.xlLandscape;
+                            pageSetup.PaperSize = Excel.XlPaperSize.xlPaperA4;
+
+                            pages = pageSetup.Pages;
+                            pageCount += pages.Count;
+                        }
+
+                        returnValue.PageCount = pageCount;
                     }
-
-                    returnValue.PageCount = pageCount;
-                }
-                catch (Exception e1)
-                {
-                    returnValue.PageCount = -1;
-                    logger.Error("페이지 카운트 가져오는중 오류발생");
-                    logger.Error("오류내용: " + e1.Message);
+                    catch (Exception e1)
+                    {
+                        returnValue.PageCount = -1;
+                        logger.Error("페이지 카운트 가져오는중 오류발생");
+                        logger.Error("오류내용: " + e1.Message);
+                    }
                 }
                 #endregion
                 #region 저장 옵션 https://docs.microsoft.com/ko-kr/dotnet/api/microsoft.office.tools.excel.workbook.exportasfixedformat?view=vsto-2017

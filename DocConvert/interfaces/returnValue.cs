@@ -16,7 +16,7 @@ namespace DocConvert_Core.interfaces
     {
         private bool _isSuccess;
         private string _Message;
-        private int _PageCount;
+        private int _PageCount = -1;
         public bool isSuccess { get { return _isSuccess; } set { _isSuccess = value; } }
         public string Message { get { return _Message; } set { _Message = value; } }
         public int PageCount { get { return _PageCount; } set { _PageCount = value; } }

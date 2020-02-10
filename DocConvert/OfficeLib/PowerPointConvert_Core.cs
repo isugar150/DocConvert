@@ -27,7 +27,7 @@ namespace DocConvert_Core.OfficeLib
         /// <param name="outPath">저장파일</param>
         /// <param name="docPassword">문서 비밀번호</param>
         /// <returns></returns>
-        public static ReturnValue PowerPointSaveAs(String FilePath, String outPath, String docPassword, bool appvisible)
+        public static ReturnValue PowerPointSaveAs(String FilePath, String outPath, String docPassword, bool pageCounting, bool appvisible)
         {
             ReturnValue returnValue = new ReturnValue();
             logger.Info("==================== Start ====================");
@@ -75,16 +75,20 @@ namespace DocConvert_Core.OfficeLib
                 );
                 #endregion
                 #region 페이지수 얻기
-                Slides slides = null;
-                try
+                if (pageCounting)
                 {
-                    slides = doc.Slides;
-                    returnValue.PageCount = slides.Count;
-                } catch(Exception e1)
-                {
-                    returnValue.PageCount = -1;
-                    logger.Error("페이지 카운트 가져오는중 오류발생");
-                    logger.Error("오류내용: " + e1.Message);
+                    Slides slides = null;
+                    try
+                    {
+                        slides = doc.Slides;
+                        returnValue.PageCount = slides.Count;
+                    }
+                    catch (Exception e1)
+                    {
+                        returnValue.PageCount = -1;
+                        logger.Error("페이지 카운트 가져오는중 오류발생");
+                        logger.Error("오류내용: " + e1.Message);
+                    }
                 }
                 #endregion
                 #region 저장 옵션 https://docs.microsoft.com/en-us/previous-versions/office/developer/office-2010/ff762466(v%3Doffice.14)

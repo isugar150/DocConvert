@@ -9,11 +9,14 @@ using System.Threading.Tasks;
 
 using DocConvert_Core.interfaces;
 using System.Diagnostics;
+using NLog;
 
 namespace DocConvert_Core.imageLib
 {
     public class ConvertImg
     {
+        private static Logger logger = LogManager.GetLogger("DocConvert_Engine_Log");
+
         // 참고문서: https://github.com/pvginkel/PdfiumViewer
         public static ReturnValue PDFtoJpeg(string SourcePDF, string outPath)
         {
@@ -25,7 +28,6 @@ namespace DocConvert_Core.imageLib
                     var pageCount = document.PageCount;
                     for (int i = 0; i < pageCount; i++)
                     {
-                        Debug.WriteLine(outPath + (i + 1) + ".jpg");
                         var dpi = 300;
 
                         using (var image = document.Render(i, dpi, dpi, PdfRenderFlags.CorrectFromDpi))
@@ -41,6 +43,9 @@ namespace DocConvert_Core.imageLib
                             returnValue.PageCount = pageCount;
                             returnValue.isSuccess = true;
                             returnValue.Message = "이미지 변환에 성공하였습니다.";
+                            logger.Info("이미지 변환 성공!");
+                            logger.Info("Source image: "+ SourcePDF);
+                            logger.Info("outFiles: " + outPath + (i + 1) + ".jpg");
                         }
                     }
                 }
@@ -50,6 +55,9 @@ namespace DocConvert_Core.imageLib
                 returnValue.PageCount = -1;
                 returnValue.isSuccess = false;
                 returnValue.Message = e1.Message;
+                logger.Info("이미지 변환 실패!");
+                logger.Info("Source image: " + SourcePDF);
+                logger.Info(e1.Message);
             }
             return returnValue;
         }
@@ -81,6 +89,9 @@ namespace DocConvert_Core.imageLib
                             returnValue.PageCount = pageCount;
                             returnValue.isSuccess = true;
                             returnValue.Message = "이미지 변환에 성공하였습니다.";
+                            logger.Info("이미지 변환 성공!");
+                            logger.Info("Source image: " + SourcePDF);
+                            logger.Info("outFiles: " + outPath + (i + 1) + ".bmp");
                         }
                     }
                 }
@@ -90,6 +101,9 @@ namespace DocConvert_Core.imageLib
                 returnValue.PageCount = -1;
                 returnValue.isSuccess = false;
                 returnValue.Message = e1.Message;
+                logger.Info("이미지 변환 실패!");
+                logger.Info("Source image: " + SourcePDF);
+                logger.Info(e1.Message);
             }
             return returnValue;
         }
@@ -121,6 +135,9 @@ namespace DocConvert_Core.imageLib
                             returnValue.PageCount = pageCount;
                             returnValue.isSuccess = true;
                             returnValue.Message = "이미지 변환에 성공하였습니다.";
+                            logger.Info("이미지 변환 성공!");
+                            logger.Info("Source image: " + SourcePDF);
+                            logger.Info("outFiles: " + outPath + (i + 1) + ".png");
                         }
                     }
                 }
@@ -130,8 +147,29 @@ namespace DocConvert_Core.imageLib
                 returnValue.PageCount = -1;
                 returnValue.isSuccess = false;
                 returnValue.Message = e1.Message;
+                logger.Info("이미지 변환 실패!");
+                logger.Info("Source image: " + SourcePDF);
+                logger.Info(e1.Message);
             }
             return returnValue;
+        }
+
+        public static int pdfPageCount(string SourcePDF)
+        {
+            try
+            {
+                using (var document = PdfDocument.Load(SourcePDF))
+                {
+                    return document.PageCount;
+                }
+            }
+            catch (Exception e1)
+            {
+                logger.Info("이미지 카운팅 실패!");
+                logger.Info("Source image: " + SourcePDF);
+                logger.Info(e1.Message);
+                return -1;
+            }
         }
     }
 }
