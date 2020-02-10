@@ -40,3 +40,5 @@ D:\sources\DocConvert\DocConvert_Test\obj\Debug\DocConvert_Util.csproj.GenerateR
 D:\sources\DocConvert\DocConvert_Test\obj\Debug\DocConvert_Util.csproj.CopyComplete
 D:\sources\DocConvert\DocConvert_Test\obj\Debug\DocConvert_Util.exe
 D:\sources\DocConvert\DocConvert_Test\obj\Debug\DocConvert_Util.pdb
+D:\sources\DocConvert\bin\Debug\pdfium_x86\pdfium.dll
+D:\sources\DocConvert\bin\Debug\FilePathCheckerModuleExample.dll

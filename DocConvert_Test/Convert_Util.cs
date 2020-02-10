@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using DocConvert_Core.imageLib;
 using DocConvert_Core.interfaces;
 using DocConvert_Core.OfficeLib;
 
@@ -18,6 +19,7 @@ using Newtonsoft.Json.Linq;
 
 using DocConvert_Core.HWPLib;
 using Microsoft.Win32;
+using System.Threading;
 
 namespace DocConvert_Util
 {
@@ -108,15 +110,17 @@ namespace DocConvert_Util
                 regKey.Close();
             }
             #endregion
+            comboBox1.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             openFileDialog1.FileName = "";
-            openFileDialog1.Filter = "지원하는 형식 (*.docx;*.doc;*.hwp;*.xlsx;*.xls;*.pptx;*.ppt)|*.docx;*.doc;*.hwp;*.xlsx;*.xls;*.pptx;*.ppt" +
+            openFileDialog1.Filter = "지원하는 형식 (*.docx;*.doc;*.hwp;*.xlsx;*.xls;*.pptx;*.ppt;*.pdf)|*.docx;*.doc;*.hwp;*.xlsx;*.xls;*.pptx;*.ppt;*.ppt;*.pdf" +
                 "|Word 형식 (*.docx;*.doc;*.hwp;)|*.docx;*.doc;*.hwp;" +
                 "|Cell 형식 (*.xlsx;*.xls;)|*.xlsx;*.xls;" +
                 "|PPT 형식 (*.pptx;*.ppt;)|*.pptx;*.ppt;" +
+                "|PDF 형식 (*.pdf)|*.pdf" +
                 "|All Files (*.*)|*.*";
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.RestoreDirectory = true;
@@ -144,6 +148,7 @@ namespace DocConvert_Util
             {
                 #region Local 변환시
                 String[] FileNames = textBox1.Text.Split('|');
+                String outPath = null;
                 short SuccessCount = 0;
                 for (int i = 0; i < FileNames.Length; i++)
                 {
@@ -158,10 +163,10 @@ namespace DocConvert_Util
                     }
                     ReturnValue status = null;
                     string passwd = null;
-                    string outPath = Path.GetDirectoryName(FileNames[i]) + @"\" + Path.GetFileNameWithoutExtension(FileNames[i]) + ".pdf";
+                    outPath = Path.GetDirectoryName(FileNames[i]) + @"\" + Path.GetFileNameWithoutExtension(FileNames[i]) + ".pdf";
                     tb2_appendText("[상태]   변환 요청 (" + (i + 1) + "/" + FileNames.Length + ")");
                     tb2_appendText("[정보]   소스 경로: " + FileNames[i]);
-                    tb2_appendText("[정보]   출력 경로: " + Path.GetDirectoryName(FileNames[i]) + @"\" + Path.GetFileNameWithoutExtension(FileNames[i]) + ".pdf");
+                    tb2_appendText("[정보]   출력 경로: " + outPath);
                     if (!textBox3.Text.Equals(""))
                         passwd = textBox3.Text;
                     if (Path.GetExtension(FileNames[i]).Equals(".docx") || Path.GetExtension(FileNames[i]).Equals(".doc"))
@@ -180,18 +185,53 @@ namespace DocConvert_Util
                     {
                         status = HWPConvert_Core.HwpSaveAs(FileNames[i], outPath);
                     }
+                    else if (Path.GetExtension(FileNames[i]).Equals(".pdf"))
+                    {
+
+                    }
                     else
                     {
                         tb2_appendText("[상태]   지원포맷 아님. 파싱한 확장자: " + Path.GetExtension(FileNames[i]));
                     }
-                    tb2_appendText("[정보]   페이지 수: " + Convert.ToString(status.PageCount));
+                    if(status != null) { 
+                        tb2_appendText("[정보]   페이지 수: " + Convert.ToString(status.PageCount));
 
-                    if (status.isSuccess)
-                        tb2_appendText("[상태]   " + status.Message);
-                    else
-                        tb2_appendText("[오류]   " + status.Message);
-                    if (status.isSuccess)
-                    SuccessCount += 1;
+                        if (status.isSuccess)
+                            tb2_appendText("[상태]   " + status.Message);
+                        else
+                            tb2_appendText("[오류]   " + status.Message);
+                        if (status.isSuccess)
+                            SuccessCount += 1;
+                    }
+                    // PDF To Image
+                    if (comboBox1.SelectedIndex != 0)
+                    {
+                        ReturnValue pdfToImgReturn = null;
+                        String imageOutput = Path.GetDirectoryName(outPath) + "\\" + Path.GetFileNameWithoutExtension(outPath) + "\\";
+                        if (!new DirectoryInfo(imageOutput).Exists)
+                            new DirectoryInfo(imageOutput).Create();
+                        if (comboBox1.SelectedIndex == 1)
+                        {
+                            pdfToImgReturn = ConvertImg.PDFtoJpeg(outPath, imageOutput);
+                        }
+                        else if (comboBox1.SelectedIndex == 2)
+                        {
+                            pdfToImgReturn = ConvertImg.PDFtoPng(outPath, imageOutput);
+                        }
+                        else if (comboBox1.SelectedIndex == 3)
+                        {
+                            pdfToImgReturn = ConvertImg.PDFtoBmp(outPath, imageOutput);
+                        }
+                        if (pdfToImgReturn.isSuccess)
+                        {
+                            tb2_appendText("[상태]   " + pdfToImgReturn.Message);
+                            tb2_appendText("[상태]   이미지로 내보낸 페이지수: " + pdfToImgReturn.PageCount);
+                        }
+                        else
+                        {
+                            tb2_appendText("[오류]   " + pdfToImgReturn.Message);
+                        }
+                    }
                     #region 변환 후 실행
                     if (RUNAFTER && status.isSuccess)
                     {
@@ -225,20 +265,6 @@ namespace DocConvert_Util
         private void ipAddressControl1_KeyUp(object sender, KeyEventArgs e)
         {
             Console.WriteLine("KeyUp: {0}", e.KeyValue);
-        }
-
-        // 서버 버튼 누를 때
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            groupBox2.Enabled = false;
-            ipAddressControl1.Enabled = true;
-        }
-
-        //로컬 버튼 누를 때
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            groupBox2.Enabled = true;
-            ipAddressControl1.Enabled = false;
         }
         
         // textBox2  문자열 추가

@@ -1,0 +1,2565 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Patagames.Pdf.WinForms</name>
+    </assembly>
+    <members>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.BookmarksViewer">
+            <summary>
+            Represents the BookmarksViewer control for displaying bookmarks contained in PDF document.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.BookmarksViewer.PdfViewer">
+            <summary>
+            Gets or sets PdfViewer control associated with this BookmarkViewer control
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.BookmarksViewer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Patagames.Pdf.Net.Controls.WinForms.BookmarksViewer"/> class. 
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.BookmarksViewer.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Patagames.Pdf.Net.Controls.WinForms.BookmarksViewer"/> class. 
+            </summary>
+            <param name="container">Container</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.BookmarksViewer.OnAfterSelect(System.Windows.Forms.TreeViewEventArgs)">
+            <summary>
+            Raises the System.Windows.Forms.TreeView.AfterSelect event.
+            </summary>
+            <param name="e">A System.Windows.Forms.TreeViewEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.BookmarksViewer.OnPdfViewerChanging(Patagames.Pdf.Net.Controls.WinForms.PdfViewer,Patagames.Pdf.Net.Controls.WinForms.PdfViewer)">
+            <summary>
+            Called when the current PdfViewer control associated with the ToolStrip is changing.
+            </summary>
+            <param name="oldValue">PdfViewer control of which was associated with the ToolStrip.</param>
+            <param name="newValue">PdfViewer control of which will be associated with the ToolStrip.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.BookmarksViewer.RebuildTree">
+            <summary>
+            Constructs the tree of bookmarks
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.BookmarksViewer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.BookmarksViewer.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.BookmarksViewer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.BookmarksViewerNode">
+            <summary>
+            Represents a node of a BookmarksViewer.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.BookmarksViewerNode.Bookmark">
+            <summary>
+            Gets bookmark under this node
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.BookmarksViewerNode.#ctor(Patagames.Pdf.Net.PdfBookmark)">
+            <summary>
+            Create a new instance of a BookmarksViewerNode class
+            </summary>
+            <param name="bookmark">The bookmark</param>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.HighlightInfo">
+            <summary>
+            Represents information about highlighted text in the control
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.HighlightInfo.CharIndex">
+            <summary>
+            The starting character index of the highlighted text.
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.HighlightInfo.CharsCount">
+            <summary>
+            The number of highlighted characters in the text
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.HighlightInfo.Color">
+            <summary>
+            Text highlighted color
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.HighlightInfo.Inflate">
+            <summary>
+            Gets or sets delta values for each edge of the rectangles of the highlighted text.
+            </summary>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.MouseModes">
+            <summary>
+            Specifies how the PdfViewer will process mouse events
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.MouseModes.Default">
+            <summary>
+            By default. Select text, process links
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.MouseModes.None">
+            <summary>
+            Any action is missing
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.MouseModes.SelectTextTool">
+            <summary>
+            Select text only
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.MouseModes.PanTool">
+            <summary>
+            Move the page
+            </summary>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.NamedDestinationsViewer">
+            <summary>
+            Represents the NamedDestinationsViewer control for displaying named destinations contained in PDF document
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.NamedDestinationsViewer.PdfViewer">
+            <summary>
+            Gets or sets PdfViewer control associated with this NamedDestinationsViewer control
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.NamedDestinationsViewer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Patagames.Pdf.Net.Controls.WinForms.NamedDestinationsViewer"/> class. 
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.NamedDestinationsViewer.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Patagames.Pdf.Net.Controls.WinForms.NamedDestinationsViewer"/> class. 
+            </summary>
+            <param name="container">Container</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.NamedDestinationsViewer.OnMouseDoubleClick(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Raises the System.Windows.Forms.Control.MouseDoubleClick event.
+            </summary>
+            <param name="e">An System.Windows.Forms.MouseEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.NamedDestinationsViewer.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Raises the System.Windows.Forms.Control.KeyDown event.
+            </summary>
+            <param name="e">A System.Windows.Forms.KeyEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.NamedDestinationsViewer.OnPdfViewerChanging(Patagames.Pdf.Net.Controls.WinForms.PdfViewer,Patagames.Pdf.Net.Controls.WinForms.PdfViewer)">
+            <summary>
+            Called when the current PdfViewer control associated with the ToolStrip is changing.
+            </summary>
+            <param name="oldValue">PdfViewer control of which was associated with the ToolStrip.</param>
+            <param name="newValue">PdfViewer control of which will be associated with the ToolStrip.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.NamedDestinationsViewer.RebuildList">
+            <summary>
+            Constructs the list of named destinations
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.NamedDestinationsViewer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.NamedDestinationsViewer.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.NamedDestinationsViewer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PRCollection.IsNeedContinuePaint">
+            <summary>
+            Checks whether all visible pages are rendered
+            </summary>
+            <value>True if they still need to be painted, False otherwise.</value>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PRCollection.IsNeedPause(Patagames.Pdf.Net.PdfPage)">
+            <summary>
+            Checks whether rendering should be paused and control should be returned to UI thread.
+            </summary>
+            <returns>True means that application shoul continue painting.</returns>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PRCollection.RenderPage(Patagames.Pdf.Net.PdfPage,System.Drawing.Rectangle,Patagames.Pdf.Enums.PageRotate,Patagames.Pdf.Enums.RenderFlags,System.Boolean)">
+            <summary>
+            Start/Continue progressive rendering for specified page
+            </summary>
+            <param name="page">Pdf page object</param>
+            <param name="pageRect">Actual page's rectangle. </param>
+            <param name="pageRotate">Page orientation: 0 (normal), 1 (rotated 90 degrees clockwise), 2 (rotated 180 degrees), 3 (rotated 90 degrees counter-clockwise).</param>
+            <param name="renderFlags">0 for normal display, or combination of flags defined above.</param>
+            <param name="useProgressiveRender">True for use progressive render</param>
+            <returns>Null if page still painting, PdfBitmap object if page successfully rendered.</returns>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PRCollection.ProcessExisting(Patagames.Pdf.Net.PdfBitmap,Patagames.Pdf.Net.PdfPage,System.Drawing.Rectangle,Patagames.Pdf.Enums.PageRotate,Patagames.Pdf.Enums.RenderFlags)">
+            <summary>
+            Process existing pages
+            </summary>
+            <returns>Null if page still painting, PdfBitmap object if page successfully rendered.</returns>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PRCollection.ProcessNew(Patagames.Pdf.Net.PdfPage)">
+            <summary>
+            Adds page into collection
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PRCollection.PageRemove(Patagames.Pdf.Net.PdfPage)">
+            <summary>
+            Delete page from colection
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PRCollection.ReleasePage(Patagames.Pdf.Net.PdfPage)">
+            <summary>
+            Stops progressive rendering if need and unsubscribe events
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PRCollection.Page_Disposed(System.Object,System.EventArgs)">
+            <summary>
+            Occurs then the page is disposed
+            </summary>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.BeforeRenderPageEventArgs">
+            <summary>
+            Represents the class that contain event data for the PrintPageLoaded event.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.BeforeRenderPageEventArgs.Page">
+            <summary>
+            The page what will be printed.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.BeforeRenderPageEventArgs.Width">
+            <summary>
+            The page's width calculated to match the sheet size.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.BeforeRenderPageEventArgs.Height">
+            <summary>
+            The page's height calculated to match the sheet size.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.BeforeRenderPageEventArgs.Rotation">
+            <summary>
+            The page rotation.
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.BeforeRenderPageEventArgs.#ctor(Patagames.Pdf.Net.PdfPage,System.Double,System.Double,Patagames.Pdf.Enums.PageRotate)">
+            <summary>
+            Construct new instnace of the PrintPageLoadedEventArgs class
+            </summary>
+            <param name="page">The page what will be printed.</param>
+            <param name="width">The page's width calculated to match the sheet size.</param>
+            <param name="height">The page's height calculated to match the sheet size.</param>
+            <param name="rotation">The page rotation.</param>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.PdfPrintDocument">
+            <summary>
+            Defines a reusable object that sends output to a printer, when printing from a Windows Forms application.
+            </summary>
+            <seealso href="https://pdfium.patagames.com/c-pdf-library/">Printing PDF Files With C#</seealso>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfPrintDocument.BeforeRenderPage">
+            <summary>
+            Occurs after the page of the document is loaded and before prints.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfPrintDocument.AutoRotate">
+            <summary>
+            Automatically rotate pages when printing
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfPrintDocument.AutoCenter">
+            <summary>
+            Gets or sets a Boolean indicating whether a page will be centered automatically on the sheet when printing.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfPrintDocument.Document">
+            <summary>
+            Gets or sets a value indicating the PDF document that will be printed.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfPrintDocument.PrintSizeMode">
+            <summary>
+            Gets or sets the size mode for the pages.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfPrintDocument.Scale">
+            <summary>
+            The scale of the pages in prcent. Must be between 1 and 1000
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfPrintDocument.RenderFlags">
+            <summary>
+            Gets or sets a combination of <see cref="T:Patagames.Pdf.Enums.RenderFlags"/> for printing.
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfPrintDocument.#ctor(Patagames.Pdf.Net.PdfDocument,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Patagames.Pdf.Net.Controls.WinForms.PdfPrintDocument"/> class.
+            </summary>
+            <param name="Document">The document to print</param>
+            <param name="mode">Reserved. Must be zero.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfPrintDocument.OnBeforeRenderPage(Patagames.Pdf.Net.PdfPage,System.Double,System.Double,Patagames.Pdf.Enums.PageRotate)">
+            <summary>
+            Raises the BeforeRenderPage event.
+            </summary>
+            <param name="page">The pagewhat will be printed.</param>
+            <param name="width">The page's width calculated to match the sheet size.</param>
+            <param name="height">The page's height calculated to match the sheet size.</param>
+            <param name="rotation">The page rotation.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfPrintDocument.OnBeginPrint(System.Drawing.Printing.PrintEventArgs)">
+            <summary>
+            Raises the System.Drawing.Printing.PrintDocument.BeginPrint event. It is called
+            after the System.Drawing.Printing.PrintDocument.Print method is called and before
+            the first page of the document prints.
+            </summary>
+            <param name="e">A System.Drawing.Printing.PrintEventArgs that contains the event data.</param>
+            <seealso href="https://pdfium.patagames.com/c-pdf-library/">C# Print PDF</seealso>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfPrintDocument.OnEndPrint(System.Drawing.Printing.PrintEventArgs)">
+            <summary>
+            Raises the System.Drawing.Printing.PrintDocument.EndPrint event. It is called
+            when the last page of the document has printed.
+            </summary>
+            <param name="e">A System.Drawing.Printing.PrintEventArgs that contains the event data.</param>
+            <seealso href="https://pdfium.patagames.com/c-pdf-library/">C# Print PDF</seealso>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfPrintDocument.OnPrintPage(System.Drawing.Printing.PrintPageEventArgs)">
+            <summary>
+            Raises the System.Drawing.Printing.PrintDocument.PrintPage event. It is called
+            before a page prints.
+            </summary>
+            <param name="e"> A System.Drawing.Printing.PrintPageEventArgs that contains the event data.</param>
+            <seealso href="https://pdfium.patagames.com/c-pdf-library/">C# Print PDF</seealso>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.PrintSizeMode">
+            <summary>
+            Represents the scaling options of the page for printing
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.PrintSizeMode.Fit">
+            <summary>
+            Fit page
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.PrintSizeMode.ActualSize">
+            <summary>
+            Actual size
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.PrintSizeMode.CustomScale">
+            <summary>
+            Custom scale
+            </summary>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.Properties.Error">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.Error.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.Error.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.Error.err0001">
+            <summary>
+              Looks up a localized string similar to To set the document property instead of using LoadDocument method set the AllowSetDocument property to True. Please read the documentation before you do it..
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.Error.err0002">
+            <summary>
+              Looks up a localized string similar to The page index is out of range..
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.Error.err0003">
+            <summary>
+              Looks up a localized string similar to The value must be between {0} and {1}..
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.Error.ErrorHeader">
+            <summary>
+              Looks up a localized string similar to Error!.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.Error.InfoHeader">
+            <summary>
+              Looks up a localized string similar to Information.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.Error.LoadingText">
+            <summary>
+              Looks up a localized string similar to Loading....
+            </summary>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnActualSize16Image">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnActualSizeImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnActualSizeText">
+             <summary>
+               Looks up a localized string similar to Actual
+            Size.
+             </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnActualSizeToolTipText">
+            <summary>
+              Looks up a localized string similar to Set the zoom level to the page&apos;s actual size.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnCopyImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnCopyText">
+            <summary>
+              Looks up a localized string similar to Copy.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnCopyToolTipText">
+            <summary>
+              Looks up a localized string similar to Copy the selection to the clipboard.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnFirstPageImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnFirstPageText">
+             <summary>
+               Looks up a localized string similar to First
+            Page.
+             </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnFirstPageToolTipText">
+            <summary>
+              Looks up a localized string similar to View the first page of the file.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnFitHeight16Image">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnFitHeightImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnFitHeightText">
+             <summary>
+               Looks up a localized string similar to Fit
+            Height.
+             </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnFitHeightToolTipText">
+            <summary>
+              Looks up a localized string similar to Set the zoom level so the page height fits the window height.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnFitPage16Image">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnFitPageImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnFitPageText">
+             <summary>
+               Looks up a localized string similar to Fit
+            Page.
+             </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnFitPageToolTipText">
+            <summary>
+              Looks up a localized string similar to Set the zoom level so one full page fits in the window.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnFitWidth16Image">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnFitWidthImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnFitWidthText">
+             <summary>
+               Looks up a localized string similar to Fit
+            Width.
+             </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnFitWidthToolTipText">
+            <summary>
+              Looks up a localized string similar to Set the zoom level so the page width fits the window width.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnLastPageImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnLastPageText">
+             <summary>
+               Looks up a localized string similar to Last
+            Page.
+             </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnLastPageToolTipText">
+            <summary>
+              Looks up a localized string similar to View the last page of the file.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnModeHorizontalImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnModeHorizontalText">
+             <summary>
+               Looks up a localized string similar to Continuous
+            Horizontal.
+             </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnModeHorizontalToolTipText">
+            <summary>
+              Looks up a localized string similar to View pages continuously with horizontal scrolling enabled.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnModeSingleImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnModeSingleText">
+             <summary>
+               Looks up a localized string similar to Single
+            Page.
+             </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnModeSingleToolTipText">
+            <summary>
+              Looks up a localized string similar to View one page at time.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnModeTilesImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnModeTilesText">
+             <summary>
+               Looks up a localized string similar to Continuous
+            Facing.
+             </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnModeTilesToolTipText">
+            <summary>
+              Looks up a localized string similar to View pages side-by-side with continuous scrolling enabled.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnModeTwoPage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnModeTwoPageText">
+            <summary>
+              Looks up a localized string similar to Facing.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnModeTwoPageToolTipText">
+            <summary>
+              Looks up a localized string similar to View two pages side-by-side.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnModeVerticalImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnModeVerticalText">
+             <summary>
+               Looks up a localized string similar to Continuous
+            Vertical.
+             </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnModeVerticalToolTipText">
+            <summary>
+              Looks up a localized string similar to View pages continuously with vertical scrolling enabled.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnNextPageImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnNextPageText">
+             <summary>
+               Looks up a localized string similar to Next
+            Page.
+             </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnNextPageToolTipText">
+            <summary>
+              Looks up a localized string similar to Go forward one page.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnOpenImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnOpenText">
+            <summary>
+              Looks up a localized string similar to Open.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnOpenToolTipText">
+            <summary>
+              Looks up a localized string similar to Click to open a PDF file.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnPreviousPageImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnPreviousPageText">
+             <summary>
+               Looks up a localized string similar to Previous
+            Page.
+             </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnPreviousPageToolTipText">
+            <summary>
+              Looks up a localized string similar to Go back one page.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnPrintImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnPrintText">
+            <summary>
+              Looks up a localized string similar to Print.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnPrintToolTipText">
+            <summary>
+              Looks up a localized string similar to Click to print the PDF file.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnRotateLeftImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnRotateLeftText">
+             <summary>
+               Looks up a localized string similar to Rotate
+            Left.
+             </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnRotateLeftToolTipText">
+            <summary>
+              Looks up a localized string similar to Rotate the page view 90 degrees counterclockwise.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnRotateRightImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnRotateRightText">
+             <summary>
+               Looks up a localized string similar to Rotate
+            Right.
+             </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnRotateRightToolTipText">
+            <summary>
+              Looks up a localized string similar to Rotate the page view 90 degrees clockwise.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnSelectAllImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnSelectAllText">
+             <summary>
+               Looks up a localized string similar to Select
+            All.
+             </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnSelectAllToolTipText">
+            <summary>
+              Looks up a localized string similar to Select the entire document.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnZoomComboText">
+            <summary>
+              Looks up a localized string similar to Zoom.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnZoomComboToolTipText">
+            <summary>
+              Looks up a localized string similar to Set the zoom level to a specific value.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnZoomExInImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnZoomExOutImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnZoomInImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnZoomInText">
+             <summary>
+               Looks up a localized string similar to Zoom
+            In.
+             </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnZoomInToolTipText">
+            <summary>
+              Looks up a localized string similar to Increase the zoom level.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnZoomOutImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnZoomOutText">
+             <summary>
+               Looks up a localized string similar to Zoom
+            Out.
+             </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.btnZoomOutToolTipText">
+            <summary>
+              Looks up a localized string similar to Decrease the zoom level.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.menuItemMatchCase">
+            <summary>
+              Looks up a localized string similar to Match Case.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.menuItemMatchWholeWord">
+            <summary>
+              Looks up a localized string similar to Match Whole Word.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.OpenDialogFilter">
+            <summary>
+              Looks up a localized string similar to PDF Files (*.pdf)|*.pdf.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.searchLblnfo">
+            <summary>
+              Looks up a localized string similar to {0} of {1}.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.searchNextDisabledImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.searchNextImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.searchPrevDisabledImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.Properties.PdfToolStrip.searchPrevImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.PdfViewer">
+            <summary>
+            Represents a pdf view control for displaying an Pdf document.
+            </summary>	
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.AfterDocumentChanged">
+            <summary>
+            Occurs whenever the Document property is changed.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.BeforeDocumentChanged">
+            <summary>
+            Occurs immediately before the document property would be changed.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DocumentLoaded">
+            <summary>
+            Occurs whenever the document loads.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DocumentClosing">
+            <summary>
+            Occurs before the document unloads.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DocumentClosed">
+            <summary>
+            Occurs whenever the document unloads.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.SizeModeChanged">
+            <summary>
+            Occurs when the <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.SizeMode"/> property has changed.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PageBackColorChanged">
+            <summary>
+            Event raised when the value of the <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PageBackColor"/> property is changed on Control..
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PageMarginChanged">
+            <summary>
+            Occurs when the <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PageMargin"/> property has changed.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PageBorderColorChanged">
+            <summary>
+            Event raised when the value of the <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PageBorderColor"/> property is changed on Control.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.TextSelectColorChanged">
+            <summary>
+            Event raised when the value of the <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.TextSelectColor"/> property is changed on Control.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.FormHighlightColorChanged">
+            <summary>
+            Event raised when the value of the <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.FormHighlightColor"/> property is changed on Control.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ZoomChanged">
+            <summary>
+            Occurs when the <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.Zoom"/> property has changed.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.SelectionChanged">
+            <summary>
+            Occurs when the current selection has changed.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ViewModeChanged">
+            <summary>
+            Occurs when the <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ViewMode"/> property has changed.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PageSeparatorColorChanged">
+            <summary>
+            Occurs when the <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PageSeparatorColor"/> property has changed.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ShowPageSeparatorChanged">
+            <summary>
+            Occurs when the <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ShowPageSeparator"/> property has changed.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.CurrentPageChanged">
+            <summary>
+            Occurs when the <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.CurrentPage"/> or <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.CurrentIndex"/> property has changed.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.CurrentPageHighlightColorChanged">
+            <summary>
+            Occurs when the <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.CurrentPageHighlightColor"/> property has changed.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ShowCurrentPageHighlightChanged">
+            <summary>
+            Occurs when the <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ShowCurrentPageHighlight"/> property has changed.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PageAlignChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PageAlign"/> property has changed.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.BeforeLinkClicked">
+            <summary>
+            Occurs before PdfLink or WebLink on the page was clicked.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.AfterLinkClicked">
+            <summary>
+            Occurs after PdfLink or WebLink on the page was clicked.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.RenderFlagsChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.RenderFlags"/> property has changed.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.TilesCountChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.TilesCount"/> property has changed.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.HighlightedTextChanged">
+            <summary>
+            Occurs when the text highlighting changed
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.MouseModeChanged">
+            <summary>
+            Occurs when the value of the <see cref="T:Patagames.Pdf.Net.Controls.WinForms.MouseModes"/> property has changed.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ShowLoadingIconChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ShowLoadingIcon"/> property has changed.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.UseProgressiveRenderChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.UseProgressiveRender"/> property has changed.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.LoadingIconTextChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.LoadingIconText"/> property has changed.
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.FormsBlendModeChanged">
+            <summary>
+            Occurs when the <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.FormsBlendMode"/> property has changed.
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnAfterDocumentChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.AfterDocumentChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnBeforeDocumentChanged(Patagames.Pdf.Net.EventArguments.DocumentClosingEventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.BeforeDocumentChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+            <returns>True if changing should be canceled, False otherwise</returns>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnDocumentLoaded(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DocumentLoaded"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnDocumentClosing(Patagames.Pdf.Net.EventArguments.DocumentClosingEventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DocumentClosing"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+            <returns>True if closing should be canceled, False otherwise</returns>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnDocumentClosed(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DocumentClosed"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnSizeModeChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.SizeModeChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnPageBackColorChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PageBackColorChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnPageMarginChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PageMarginChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnPageBorderColorChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PageBorderColorChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnTextSelectColorChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.TextSelectColorChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnFormHighlightColorChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.FormHighlightColorChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnZoomChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ZoomChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnSelectionChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.SelectionChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnViewModeChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ViewModeChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnPageSeparatorColorChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PageSeparatorColorChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnShowPageSeparatorChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ShowPageSeparatorChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnCurrentPageChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.CurrentPageChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnCurrentPageHighlightColorChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.CurrentPageHighlightColorChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnShowCurrentPageHighlightChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ShowCurrentPageHighlightChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnPageAlignChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PageAlignChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnBeforeLinkClicked(Patagames.Pdf.Net.EventArguments.PdfBeforeLinkClickedEventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.BeforeLinkClicked"/> event.
+            </summary>
+            <param name="e">An PdfBeforeLinkClickedEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnAfterLinkClicked(Patagames.Pdf.Net.EventArguments.PdfAfterLinkClickedEventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.AfterLinkClicked"/> event.
+            </summary>
+            <param name="e">An PdfAfterLinkClickedEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnRenderFlagsChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.RenderFlagsChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnTilesCountChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.TilesCountChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnHighlightedTextChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.HighlightedTextChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnMouseModeChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.MouseModeChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnShowLoadingIconChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ShowLoadingIconChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnUseProgressiveRenderChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.UseProgressiveRenderChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnLoadingIconTextChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.LoadingIconTextChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnFormsBlendModeChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.FormsBlendModeChanged"/> event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.FormsBlendMode">
+            <summary>
+            Gets or sets blend mode which is used in drawing of acro forms.
+            </summary>
+            <remarks>
+            <para>Default value: <strong>FXDIB_BLEND_MULTIPLY</strong></para>
+            </remarks>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.FillForms">
+            <summary>
+            Gets the Forms object associated with the current PdfViewer control.
+            </summary>
+            <remarks>The FillForms object are used for the correct processing of forms within the PdfViewer control</remarks>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.Document">
+            <summary>
+            Gets or sets the PDF document associated with the current PdfViewer control.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PageBackColor">
+            <summary>
+            Gets or sets the background color for the control under PDF page.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PageMargin">
+            <summary>
+            Specifies space between pages margins
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.Padding">
+            <summary>
+            Gets or sets padding within the control.
+            </summary>
+            <value>A System.Windows.Forms.Padding representing the control's internal spacing characteristics.</value>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PageBorderColor">
+            <summary>
+            Gets or sets the border color of the page
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.SizeMode">
+            <summary>
+            Control how the PdfViewer will handle  pages placement and control sizing
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.TextSelectColor">
+            <summary>
+            Gets or sets the selection color of the control.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.FormHighlightColor">
+            <summary>
+            Gets or set the highlight color of the form fields in the document.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.Zoom">
+            <summary>
+            This property allows you to scale the PDF page. To take effect the <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.SizeMode"/> property should be Zoom
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.SelectedText">
+            <summary>
+            Gets selected text from PdfView control
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.SelectInfo">
+            <summary>
+            Gets information about selected text in a PdfView control
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ViewMode">
+            <summary>
+            Control how the PdfViewer will display pages
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PageSeparatorColor">
+            <summary>
+            Gets or sets the page separator color.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ShowPageSeparator">
+            <summary>
+            Determines whether the page separator is visible or hidden
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.CurrentPageHighlightColor">
+            <summary>
+            Gets or sets the current page highlight color.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ShowCurrentPageHighlight">
+            <summary>
+            Determines whether the current page's highlight is visible or hidden.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.CurrentIndex">
+            <summary>
+            Gets or sets the current index of a page in PdfPageCollection
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.CurrentPage">
+            <summary>
+            Gets the current PdfPage item by <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.CurrentIndex"/>
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.AllowSetDocument">
+            <summary>
+            Gets or sets a value indicating whether the control can accept PDF document through Document property.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PageAlign">
+            <summary>
+            Gets or sets the alignment of page in the control.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.RenderFlags">
+            <summary>
+            Gets or sets a RenderFlags. None for normal display, or combination of <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.RenderFlags"/>
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.TilesCount">
+            <summary>
+            Gets or sets visible page count for tiles view mode
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.HighlightedTextInfo">
+            <summary>
+            Gets information about highlighted text in a PdfView control
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.MouseMode">
+            <summary>
+            Gets or sets mouse mode for pdf viewer control
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ShowLoadingIcon">
+            <summary>
+            Determines whether the page's loading icon should be shown
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.UseProgressiveRender">
+            <summary>
+            If true the progressive rendering is used for render page
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.LoadingIconText">
+            <summary>
+            Gets or sets loading icon text in progressive rendering mode
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PageAutoDispose">
+            <summary>
+            Gets or sets a value indicating whether the PdfViewer will dispose any pages placed outside of its visible boundaries.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OptimizedLoadThreshold">
+            <summary>
+            Gets or sets the threshold value in the number of pages after which the optimized document load is activated.
+            </summary>
+            <value>Default: 1000</value>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ScrollToPage(System.Int32)">
+            <summary>
+            Scrolls the control view to the specified page.
+            </summary>
+            <param name="index">Zero-based index of a page.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ScrollToChar(System.Int32)">
+            <summary>
+            Scrolls the control view to the specified character on the current page
+            </summary>
+            <param name="charIndex">Character index</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ScrollToChar(System.Int32,System.Int32)">
+            <summary>
+            Scrolls the control view to the specified character on the specified page
+            </summary>
+            <param name="charIndex">Character index</param>
+            <param name="pageIndex">Zero-based index of a page.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ScrollToPoint(System.Int32,System.Drawing.PointF)">
+            <summary>
+            Scrolls the control view to the specified point on the specified page
+            </summary>
+            <param name="pageIndex">Zero-based index of a page.</param>
+            <param name="pagePoint">Point on the page in the page's coordinate system</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.RotatePage(System.Int32,Patagames.Pdf.Enums.PageRotate)">
+            <summary>
+            Rotates the specified page to the specified angle.
+            </summary>
+            <param name="pageIndex">Zero-based index of a page for rotation.</param>
+            <param name="angle">The angle which must be turned page</param>
+            <remarks>The PDF page rotates clockwise. See <see cref="T:Patagames.Pdf.Enums.PageRotate"/> for details.</remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.SelectText(Patagames.Pdf.Net.Controls.WinForms.SelectInfo)">
+            <summary>
+            Selects the text contained in specified pages.
+            </summary>
+            <param name="SelInfo"><see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.SelectInfo"/> structure that describe text selection parameters.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.SelectText(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Selects the text contained in specified pages.
+            </summary>
+            <param name="startPage">Zero-based index of a starting page.</param>
+            <param name="startIndex">Zero-based char index on a startPage.</param>
+            <param name="endPage">Zero-based index of a ending page.</param>
+            <param name="endIndex">Zero-based char index on a endPage.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DeselectText">
+            <summary>
+            Clear text selection
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PointInPage(System.Drawing.Point)">
+            <summary>
+            Determines if the specified point is contained within Pdf page.
+            </summary>
+            <param name="pt">The System.Drawing.Point to test.</param>
+            <returns>
+            This method returns the zero based page index if the point represented by pt is contained within this page; otherwise -1.
+            </returns>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ClientToPage(System.Int32,System.Drawing.Point)">
+            <summary>
+            Computes the location of the specified client point into page coordinates.
+            </summary>
+            <param name="pageIndex">Page index. Can be obtained by <see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PointInPage(System.Drawing.Point)"/> method.</param>
+            <param name="pt">The client coordinate Point to convert. </param>
+            <returns>A Point that represents the converted Point, pt, in page coordinates.</returns>
+            <exception cref="T:System.IndexOutOfRangeException">The page index is out of range</exception>
+            <remarks>Permitted range of pages depends on the current view type and on some other parameters in the control.</remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PageToClient(System.Int32,System.Drawing.PointF)">
+            <summary>
+            Computes the location of the specified page point into client coordinates.
+            </summary>
+            <param name="pageIndex">Page index. Can be obtained by <see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.PointInPage(System.Drawing.Point)"/> method.</param>
+            <param name="pt">The page coordinate Point to convert. </param>
+            <returns>A Point that represents the converted Point, pt, in client coordinates.</returns>
+            <exception cref="T:System.IndexOutOfRangeException">The page index is out of range</exception>
+            <remarks>Permitted range of pages depends on the current view type and on some other parameters in the control.</remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.HighlightText(System.Int32,Patagames.Pdf.Net.Controls.WinForms.HighlightInfo)">
+            <summary>
+            Highlight text on the page
+            </summary>
+            <param name="pageIndex">Zero-based index of the page</param>
+            <param name="highlightInfo">Sets the options for highlighting text</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.HighlightText(System.Int32,System.Int32,System.Int32,System.Drawing.Color)">
+            <summary>
+            Highlight text on the page
+            </summary>
+            <param name="pageIndex">Zero-based index of the page</param>
+            <param name="charIndex">Zero-based char index on the page.</param>
+            <param name="charsCount">The number of highlighted characters on the page or -1 for highlight text from charIndex to end of the page.</param>
+            <param name="color">Highlight color</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.HighlightText(System.Int32,System.Int32,System.Int32,System.Drawing.Color,Patagames.Pdf.FS_RECTF)">
+            <summary>
+            Highlight text on the page
+            </summary>
+            <param name="pageIndex">Zero-based index of the page</param>
+            <param name="charIndex">Zero-based char index on the page.</param>
+            <param name="charsCount">The number of highlighted characters on the page or -1 for highlight text from charIndex to end of the page.</param>
+            <param name="color">Highlight color</param>
+            <param name="inflate">A delta values for each edge of the rectangles of the highlighted text.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.RemoveHighlightFromText">
+            <summary>
+            Removes highlight from the text
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.RemoveHighlightFromText(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Removes highlight from the text
+            </summary>
+            <param name="pageIndex">Zero-based index of the page</param>
+            <param name="charIndex">Zero-based char index on the page.</param>
+            <param name="charsCount">The number of highlighted characters on the page or -1 for highlight text from charIndex to end of the page.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.HilightSelectedText(System.Drawing.Color)">
+            <summary>
+            Highlight selected text on the page by specified color
+            </summary>
+            <param name="color">Highlight color</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.HighlightSelectedText(System.Drawing.Color)">
+            <summary>
+            Highlight selected text on the page by specified color
+            </summary>
+            <param name="color">Highlight color</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.RemoveHilightFromSelectedText">
+            <summary>
+            Removes highlight from selected text
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.RemoveHighlightFromSelectedText">
+            <summary>
+            Removes highlight from selected text
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.UpdateLayout">
+            <summary>
+            Ensures that all sizes and positions of pages of a PdfViewer control are properly updated for layout.
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.ClearRenderBuffer">
+            <summary>
+            Clear internal render buffer for rerender pages in Progressive mode
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.CalcActualRect(System.Int32)">
+            <summary>
+            Calculates the actual rectangle of the specified page in client coordinates
+            </summary>
+            <param name="index">Zero-based page index</param>
+            <returns>Calculated rectangle</returns>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.GetSelectedRects(System.Int32)">
+            <summary>
+            Get a collection of rectangles that represent the selected text on a specified page.
+            </summary>
+            <param name="pageIndex">Zero-based index of a page.</param>
+            <returns>A collection of rectangles or an empty collection if the page does not contain selected text.</returns>
+            <remarks>The rectangles are given in the user control coordinate system.</remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.GetSelectedRects(System.Int32,Patagames.Pdf.Net.Controls.WinForms.SelectInfo)">
+            <summary>
+            Get a collection of rectangles that represent the selected text on a specific page and in accordance with the specified <see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.SelectInfo"/> structure.
+            </summary>
+            <param name="pageIndex">Zero-based index of a page.</param>
+            <param name="selInfo">A<see cref="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.SelectInfo"/> structure that represent the selected text.</param>
+            <returns>A collection of rectangles or an empty collection if the page does not contain selected text.</returns>
+            <remarks>The rectangles are given in the user control coordinate system.</remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.GetHighlightedRects(System.Int32,Patagames.Pdf.Net.Controls.WinForms.HighlightInfo)">
+            <summary>
+            Get a collection of rectangles that represent the highlighted text on a specific page and in accordance with the specified <see cref="T:Patagames.Pdf.Net.Controls.WinForms.HighlightInfo"/> structure.
+            </summary>
+            <param name="pageIndex">Zero-based index of a page.</param>
+            <param name="selInfo">A <see cref="T:Patagames.Pdf.Net.Controls.WinForms.HighlightInfo"/> structure that represent the highlighted text.</param>
+            <returns>A collection of rectangles or an empty collection if the page does not contain highlighted text.</returns>
+            <remarks>The rectangles are given in the user control coordinate system.</remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.LoadDocument(System.String,System.String)">
+            <summary>
+            Open and load a PDF document from a file.
+            </summary>
+            <param name="path">Path to the PDF file (including extension)</param>
+            <param name="password">A string used as the password for PDF file. If no password needed, empty or NULL can be used.</param>
+            <exception cref="T:Patagames.Pdf.Net.Exceptions.UnknownErrorException">unknown error</exception>
+            <exception cref="T:Patagames.Pdf.Net.Exceptions.PdfFileNotFoundException">file not found or could not be opened</exception>
+            <exception cref="T:Patagames.Pdf.Net.Exceptions.BadFormatException">file not in PDF format or corrupted</exception>
+            <exception cref="T:Patagames.Pdf.Net.Exceptions.InvalidPasswordException">password required or incorrect password</exception>
+            <exception cref="T:Patagames.Pdf.Net.Exceptions.UnsupportedSecuritySchemeException">unsupported security scheme</exception>
+            <exception cref="T:Patagames.Pdf.Net.Exceptions.PdfiumException">Error occured in PDFium. See ErrorCode for detail</exception>
+            <exception cref="T:Patagames.Pdf.Net.Exceptions.NoLicenseException">This exception thrown only in trial mode if document cannot be opened due to a license restrictions"</exception>
+            <remarks>
+            <note type="note">
+            With the trial version the documents which size is smaller than 1024 Kb, or greater than 10 Mb can be loaded without any restrictions. For other documents the allowed ranges is 1.5 - 2 Mb; 2.5 - 3 Mb; 3.5 - 4 Mb; 4.5 - 5 Mb and so on.
+            </note> 
+            </remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.LoadDocument(System.IO.Stream,System.String)">
+            <summary>
+            Loads the PDF document from the specified stream.
+            </summary>
+            <param name="stream">The stream containing the PDF document to load. The stream must support seeking.</param>
+            <param name="password">A string used as the password for PDF file. If no password needed, empty or NULL can be used.</param>
+            <exception cref="T:Patagames.Pdf.Net.Exceptions.UnknownErrorException">unknown error</exception>
+            <exception cref="T:Patagames.Pdf.Net.Exceptions.PdfFileNotFoundException">file not found or could not be opened</exception>
+            <exception cref="T:Patagames.Pdf.Net.Exceptions.BadFormatException">file not in PDF format or corrupted</exception>
+            <exception cref="T:Patagames.Pdf.Net.Exceptions.InvalidPasswordException">password required or incorrect password</exception>
+            <exception cref="T:Patagames.Pdf.Net.Exceptions.UnsupportedSecuritySchemeException">unsupported security scheme</exception>
+            <exception cref="T:Patagames.Pdf.Net.Exceptions.PdfiumException">Error occured in PDFium. See ErrorCode for detail</exception>
+            <exception cref="T:Patagames.Pdf.Net.Exceptions.NoLicenseException">This exception thrown only in trial mode if document cannot be opened due to a license restrictions"</exception>
+            <remarks>
+            <note type="note">
+            <para>The application should maintain the stream resources being valid until the PDF document close.</para>
+            <para>With the trial version the documents which size is smaller than 1024 Kb, or greater than 10 Mb can be loaded without any restrictions. For other documents the allowed ranges is 1.5 - 2 Mb; 2.5 - 3 Mb; 3.5 - 4 Mb; 4.5 - 5 Mb and so on.</para>
+            </note> 
+            </remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.LoadDocument(System.Byte[],System.String)">
+            <summary>
+            Loads the PDF document from the specified byte array.
+            </summary>
+            <param name="pdf">The byte array containing the PDF document to load.</param>
+            <param name="password">A string used as the password for PDF file. If no password needed, empty or NULL can be used.</param>
+            <exception cref="T:Patagames.Pdf.Net.Exceptions.UnknownErrorException">unknown error</exception>
+            <exception cref="T:Patagames.Pdf.Net.Exceptions.PdfFileNotFoundException">file not found or could not be opened</exception>
+            <exception cref="T:Patagames.Pdf.Net.Exceptions.BadFormatException">file not in PDF format or corrupted</exception>
+            <exception cref="T:Patagames.Pdf.Net.Exceptions.InvalidPasswordException">password required or incorrect password</exception>
+            <exception cref="T:Patagames.Pdf.Net.Exceptions.UnsupportedSecuritySchemeException">unsupported security scheme</exception>
+            <exception cref="T:Patagames.Pdf.Net.Exceptions.PdfiumException">Error occured in PDFium. See ErrorCode for detail</exception>
+            <exception cref="T:Patagames.Pdf.Net.Exceptions.NoLicenseException">This exception thrown only in trial mode if document cannot be opened due to a license restrictions"</exception>
+            <remarks>
+            <note type="note">
+            <para>The application should maintain the byte array being valid until the PDF document close.</para>
+            <para>With the trial version the documents which size is smaller than 1024 Kb, or greater than 10 Mb can be loaded without any restrictions. For other documents the allowed ranges is 1.5 - 2 Mb; 2.5 - 3 Mb; 3.5 - 4 Mb; 4.5 - 5 Mb and so on.</para>
+            </note> 
+            </remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.CloseDocument">
+            <summary>
+            Close a loaded PDF document.
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.#ctor">
+            <summary>
+            Initializes a new instance of the PdfViewer class.
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnMouseWheel(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Raises the System.Windows.Forms.Control.MouseWheel event.
+            </summary>
+            <param name="e">A System.Windows.Forms.MouseEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnScroll(System.Windows.Forms.ScrollEventArgs)">
+            <summary>
+            Raises the System.Windows.Forms.ScrollableControl.Scroll event
+            </summary>
+            <param name="se">A System.Windows.Forms.ScrollEventArgs that contains the event data.</param>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.AutoScrollPosition">
+            <summary>
+             Gets or sets the location of the auto-scroll position.
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnResize(System.EventArgs)">
+            <summary>
+            Raises the Resize event
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Raises the System.Windows.Forms.Control.Paint event.
+            </summary>
+            <param name="e">A System.Windows.Forms.PaintEventArgs that contains the event data.</param>
+            <remarks>
+            The page rendering is performed in the following order:
+            <list type="bullet">
+            <item><see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawPageBackColor(Patagames.Pdf.Net.PdfBitmap,System.Int32,System.Int32,System.Int32,System.Int32)"/></item>
+            <item><see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.RegenerateAnnots(System.Int32)"/></item>
+            <item><see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawPage(Patagames.Pdf.Net.PdfBitmap,Patagames.Pdf.Net.PdfPage,System.Drawing.Rectangle)"/></item>
+            <item><see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawFillForms(Patagames.Pdf.Net.PdfBitmap,Patagames.Pdf.Net.PdfPage,System.Drawing.Rectangle)"/></item>
+            <item><see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawFillFormsSelection(Patagames.Pdf.Net.PdfBitmap,System.Collections.Generic.List{System.Drawing.Rectangle})"/></item>
+            <item><see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawTextHighlight(Patagames.Pdf.Net.PdfBitmap,System.Collections.Generic.List{Patagames.Pdf.Net.Controls.WinForms.HighlightInfo},System.Int32)"/></item>
+            <item><see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawTextSelection(Patagames.Pdf.Net.PdfBitmap,Patagames.Pdf.Net.Controls.WinForms.SelectInfo,System.Int32)"/></item>
+            <item><see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawRenderedPagesToDevice(System.Drawing.Graphics,Patagames.Pdf.Net.PdfBitmap,Patagames.Pdf.Net.PdfBitmap,System.Drawing.Size)"/></item>
+            <item><see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawPageSeparators(System.Drawing.Graphics,System.Collections.Generic.List{System.Drawing.Point}@)"/></item>
+            <item><see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawLoadingIcon(System.Drawing.Graphics,Patagames.Pdf.Net.PdfPage,System.Drawing.Rectangle)"/> if page is still drawing</item>
+            <item><see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawPageBorder(System.Drawing.Graphics,System.Drawing.Rectangle)"/></item>
+            <item><see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawFillFormsSelection(System.Drawing.Graphics,System.Collections.Generic.List{System.Drawing.Rectangle})"/></item>
+            <item><see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawTextHighlight(System.Drawing.Graphics,System.Collections.Generic.List{Patagames.Pdf.Net.Controls.WinForms.HighlightInfo},System.Int32)"/></item>
+            <item><see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawTextSelection(System.Drawing.Graphics,Patagames.Pdf.Net.Controls.WinForms.SelectInfo,System.Int32)"/></item>
+            <item><see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawCurrentPageHighlight(System.Drawing.Graphics,System.Int32,System.Drawing.Rectangle)"/></item>
+            </list>
+            </remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.RegenerateAnnots(System.Int32)">
+            <summary>
+            Create an appearance stream for annotations which do not have this one.
+            </summary>
+            <param name="pageIndex">Page index with which annotations are associated.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnMouseDoubleClick(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Raises the System.Windows.Forms.Control.MouseDoubleClick event.
+            </summary>
+            <param name="e">A System.Windows.Forms.MouseEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Raises the System.Windows.Forms.Control.MouseDown event.
+            </summary>
+            <param name="e">A System.Windows.Forms.MouseEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Raises the System.Windows.Forms.Control.MouseMove event.
+            </summary>
+            <param name="e">A System.Windows.Forms.MouseEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Raises the System.Windows.Forms.Control.MouseUp event.
+            </summary>
+            <param name="e">A System.Windows.Forms.MouseEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnPreviewKeyDown(System.Windows.Forms.PreviewKeyDownEventArgs)">
+            <summary>
+            Raises the System.Windows.Forms.Control.PreviewKeyDown event.
+            </summary>
+            <param name="e">A System.Windows.Forms.PreviewKeyDownEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnKeyUp(System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Raises the System.Windows.Forms.Control.KeyUp event.
+            </summary>
+            <param name="e">A System.Windows.Forms.KeyEventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.IsInputKey(System.Windows.Forms.Keys)">
+            <summary>
+            Determines whether the specified key is a regular input key or a special key that requires preprocessing.
+            </summary>
+            <param name="keyData">One of the System.Windows.Forms.Keys values.</param>
+            <returns>true if the specified key is a regular input key; otherwise, false.</returns>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawPageBackColor(Patagames.Pdf.Net.PdfBitmap,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Draws page background
+            </summary>
+            <param name="bitmap">The drawing surface</param>
+            <param name="x">Actual X position of the page</param>
+            <param name="y">Actual Y position of the page</param>
+            <param name="width">Actual width of the page</param>
+            <param name="height">Actual height of the page</param>
+            <remarks>
+            Please see the remarks section of <see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnPaint(System.Windows.Forms.PaintEventArgs)"/> for getting more info about page rendering order.
+            </remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawPage(Patagames.Pdf.Net.PdfBitmap,Patagames.Pdf.Net.PdfPage,System.Drawing.Rectangle)">
+            <summary>
+            Draws page content and fillforms
+            </summary>
+            <param name="bitmap">The drawing surface</param>
+            <param name="page">Page to be drawn</param>
+            <param name="actualRect">Page bounds in control coordinates</param>
+            <remarks>
+            Please see the remarks section of <see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnPaint(System.Windows.Forms.PaintEventArgs)"/> for getting more info about page rendering order.
+            </remarks>
+            <returns>true if page was rendered; false if any error is occurred or page is still rendering.</returns>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawFillForms(Patagames.Pdf.Net.PdfBitmap,Patagames.Pdf.Net.PdfPage,System.Drawing.Rectangle)">
+            <summary>
+            Draw fill forms
+            </summary>
+            <param name="bitmap">The drawing surface</param>
+            <param name="page">Page to be drawn</param>
+            <param name="actualRect">Page bounds in control coordinates</param>
+            <remarks>
+            Please see the remarks section of <see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnPaint(System.Windows.Forms.PaintEventArgs)"/> for getting more info about page rendering order.
+            </remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawFillFormsSelection(Patagames.Pdf.Net.PdfBitmap,System.Collections.Generic.List{System.Drawing.Rectangle})">
+            <summary>
+            Draws highlights inside a forms
+            </summary>
+            <param name="bitmap">The drawing surface</param>
+            <param name="selectedRectangles">A collection of rectangles to be drawn</param>
+            <remarks>
+            Please see the remarks section of <see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnPaint(System.Windows.Forms.PaintEventArgs)"/> for getting more info about page rendering order.
+            </remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawTextHighlight(Patagames.Pdf.Net.PdfBitmap,System.Collections.Generic.List{Patagames.Pdf.Net.Controls.WinForms.HighlightInfo},System.Int32)">
+            <summary>
+            Draws text highlights
+            </summary>
+            <param name="bitmap">The drawing surface</param>
+            <param name="entries">Highlights info.</param>
+            <param name="pageIndex">Page index to be drawn</param>
+            <remarks>
+            Please see the remarks section of <see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnPaint(System.Windows.Forms.PaintEventArgs)"/> for getting more info about page rendering order.
+            </remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawTextSelection(Patagames.Pdf.Net.PdfBitmap,Patagames.Pdf.Net.Controls.WinForms.SelectInfo,System.Int32)">
+            <summary>
+            Draws text selection
+            </summary>
+            <param name="bitmap">The drawing surface</param>
+            <param name="selInfo">Selection info</param>
+            <param name="pageIndex">Page index to be drawn</param>
+            <remarks>
+            Please see the remarks section of <see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnPaint(System.Windows.Forms.PaintEventArgs)"/> for getting more info about page rendering order.
+            </remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawLoadingIcon(System.Drawing.Graphics,Patagames.Pdf.Net.PdfPage,System.Drawing.Rectangle)">
+            <summary>
+            Draw loading icon
+            </summary>
+            <param name="graphics">GDI+ drawing surface</param>
+            <param name="page">Page to be drawn</param>
+            <param name="actualRect">Page bounds in control coordinates</param>
+            <remarks>
+            Please see the remarks section of <see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnPaint(System.Windows.Forms.PaintEventArgs)"/> for getting more info about page rendering order.
+            </remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawPageBorder(System.Drawing.Graphics,System.Drawing.Rectangle)">
+            <summary>
+            Draws page's border
+            </summary>
+            <param name="graphics">The drawing surface</param>
+            <param name="BBox">Page's bounding box</param>
+            <remarks>
+            Please see the remarks section of <see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnPaint(System.Windows.Forms.PaintEventArgs)"/> for getting more info about page rendering order.
+            </remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawFillFormsSelection(System.Drawing.Graphics,System.Collections.Generic.List{System.Drawing.Rectangle})">
+            <summary>
+            Left for backward compatibility. Actually the fillforms selection is drawn in <see cref = "M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawFillFormsSelection(Patagames.Pdf.Net.PdfBitmap,System.Collections.Generic.List{System.Drawing.Rectangle})" /> method.
+            </summary>
+            <param name="graphics">The drawing surface</param>
+            <param name="selectedRectangles">A collection of rectangles to be drawn</param>
+            <remarks>
+            Please see the remarks section of <see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnPaint(System.Windows.Forms.PaintEventArgs)"/> for getting more info about page rendering order.
+            </remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawTextHighlight(System.Drawing.Graphics,System.Collections.Generic.List{Patagames.Pdf.Net.Controls.WinForms.HighlightInfo},System.Int32)">
+            <summary>
+            Left for backward compatibility. Actually the text highlight is drawn in <see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawTextHighlight(Patagames.Pdf.Net.PdfBitmap,System.Collections.Generic.List{Patagames.Pdf.Net.Controls.WinForms.HighlightInfo},System.Int32)"/> method.
+            </summary>
+            <param name="graphics">The drawing surface</param>
+            <param name="entries">Highlights info.</param>
+            <param name="pageIndex">Page index to be drawn</param>
+            <remarks>
+            Please see the remarks section of <see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnPaint(System.Windows.Forms.PaintEventArgs)"/> for getting more info about page rendering order.
+            </remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawTextSelection(System.Drawing.Graphics,Patagames.Pdf.Net.Controls.WinForms.SelectInfo,System.Int32)">
+            <summary>
+            Left for backward compatibility. Actually the text selection is drawn in <see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawTextSelection(Patagames.Pdf.Net.PdfBitmap,Patagames.Pdf.Net.Controls.WinForms.SelectInfo,System.Int32)"/> method.
+            </summary>
+            <param name="graphics">The drawing surface</param>
+            <param name="selInfo">Selection info</param>
+            <param name="pageIndex">Page index to be drawn</param>
+            <remarks>
+            Please see the remarks section of <see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnPaint(System.Windows.Forms.PaintEventArgs)"/> for getting more info about page rendering order.
+            </remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawCurrentPageHighlight(System.Drawing.Graphics,System.Int32,System.Drawing.Rectangle)">
+            <summary>
+            Draws current page highlight
+            </summary>
+            <param name="graphics">The drawing surface</param>
+            <param name="pageIndex">Page index to be drawn</param>
+            <param name="actualRect">Page bounds in control coordinates</param>
+            <remarks>
+            Please see the remarks section of <see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnPaint(System.Windows.Forms.PaintEventArgs)"/> for getting more info about page rendering order.
+            </remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawRenderedPagesToDevice(System.Drawing.Graphics,Patagames.Pdf.Net.PdfBitmap,Patagames.Pdf.Net.PdfBitmap,System.Drawing.Size)">
+            <summary>
+            Combine two buffers (rendered pages and forms) and draw them to graphics
+            </summary>
+            <param name="graphics">The drawing surface</param>
+            <param name="canvasBitmap">Bitmap with rendered pages</param>
+            <param name="formsBitmap">Bitmap with rendered forms</param>
+            <param name="canvasSize">Size of buffer</param>
+            <remarks>
+            This method should combine bitmaps with alpha blending and draw result to graphics surface.
+            Please see the remarks section of <see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnPaint(System.Windows.Forms.PaintEventArgs)"/> for getting more info about page rendering order.
+            </remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.DrawPageSeparators(System.Drawing.Graphics,System.Collections.Generic.List{System.Drawing.Point}@)">
+            <summary>
+            Draws pages separatoes.
+            </summary>
+            <param name="graphics">The drawing surface</param>
+            <param name="separator">List of pair of points what represents separator</param>
+            <remarks>
+            Please see the remarks section of <see cref="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnPaint(System.Windows.Forms.PaintEventArgs)"/> for getting more info about page rendering order.
+            </remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.InternalSetCursor(Patagames.Pdf.Enums.CursorTypes)">
+            <summary>
+            Sets the cursor that is displayed when the mouse pointer is over the control.
+            </summary>
+            <param name="cursor">A <see cref="T:Patagames.Pdf.Enums.CursorTypes"/> that represents the cursor to display when the mouse pointer is over the control.</param>
+            <remarks>You can override this method to change the logic of cursor setting in the control.</remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnFormsInvalidate(Patagames.Pdf.Net.EventArguments.InvalidatePageEventArgs)">
+            <summary>
+            Called by the engine when it is required to redraw the page
+            </summary>
+            <param name="e">An <see cref="T:Patagames.Pdf.Net.EventArguments.InvalidatePageEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnFormsGotoPage(Patagames.Pdf.Net.EventArguments.EventArgs{System.Int32})">
+            <summary>
+            Called by the engine when it is required to execute GoTo operation
+            </summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnFormsDoNamedAction(Patagames.Pdf.Net.EventArguments.EventArgs{System.String})">
+            <summary>
+            Called by the engine when it is required to execute a named action
+            </summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnFormsDoGotoAction(Patagames.Pdf.Net.EventArguments.DoGotoActionEventArgs)">
+            <summary>
+            Called by the engine when it is required to execute a GoTo action
+            </summary>
+            <param name="e">An <see cref="T:Patagames.Pdf.Net.EventArguments.DoGotoActionEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnFormsAppBeep(Patagames.Pdf.Net.EventArguments.EventArgs{Patagames.Pdf.Enums.BeepTypes})">
+            <summary>
+            Called by the engine when it is required to play the sound
+            </summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnFormsOutputSelectedRect(Patagames.Pdf.Net.EventArguments.InvalidatePageEventArgs)">
+            <summary>
+            Called by the engine when it is required to draw selected regions in FillForms
+            </summary>
+            <param name="e">An <see cref="T:Patagames.Pdf.Net.EventArguments.InvalidatePageEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.OnFormsSetCursor(Patagames.Pdf.Net.EventArguments.SetCursorEventArgs)">
+            <summary>
+            Called by the engine when it is required to change the cursor
+            </summary>
+            <param name="e">An <see cref="T:Patagames.Pdf.Net.EventArguments.SetCursorEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.PdfViewer.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.SelectInfo">
+            <summary>
+            Represents the information about the selected text in the control
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.SelectInfo.StartPage">
+            <summary>
+            Zero-based index of a starting page.
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.SelectInfo.StartIndex">
+            <summary>
+            Zero-based char index on a startPage.
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.SelectInfo.EndPage">
+            <summary>
+            Zero-based index of a ending page.
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.SelectInfo.EndIndex">
+            <summary>
+            Zero-based char index on a endPage.
+            </summary>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.SizeModes">
+            <summary>
+            Specifies how an pdf page is positioned within a PdfView control.
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.SizeModes.FitToSize">
+            <summary>
+            The page is scaled to fit the page to worksheet.
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.SizeModes.FitToWidth">
+            <summary>
+            Phe page is scaled to fit the width to worksheet.
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.SizeModes.FitToHeight">
+            <summary>
+            The page is scaled to fit the height to worksheet.
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.SizeModes.Zoom">
+            <summary>
+            The page is scaled with specified coefficient.
+            </summary>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStrip">
+            <summary>
+            Represents the base functionality for all PdfToolStrips
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStrip.PdfViewer">
+            <summary>
+            Gets or sets PdfViewer control associated with this PdfToolStrip control
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStrip.#ctor">
+            <summary>
+            Initialize the new instance of PdfToolStrip class
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStrip.InitializeButtons">
+            <summary>
+            Create all buttons and add its into toolbar. Override this method to create custom buttons
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStrip.UpdateButtons">
+            <summary>
+            Called when the ToolStrip's items need to change its states
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStrip.OnPdfViewerChanging(Patagames.Pdf.Net.Controls.WinForms.PdfViewer,Patagames.Pdf.Net.Controls.WinForms.PdfViewer)">
+            <summary>
+            Called when the current PdfViewer control associated with the ToolStrip is changing.
+            </summary>
+            <param name="oldValue">PdfViewer control of which was associated with the ToolStrip.</param>
+            <param name="newValue">PdfViewer control of which will be associated with the ToolStrip.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStrip.CreateButton(System.String,System.String,System.String,System.Drawing.Image,System.EventHandler,System.Windows.Forms.ToolStripItemDisplayStyle)">
+            <summary>
+            Create a new instance of ToolStripButton class with the specified name that displays the specified text and image and that raises the Click event.
+            </summary>
+            <param name="name">The name of the ToolStripButton.</param>
+            <param name="text">The text to display on the ToolStripButton.</param>
+            <param name="toolTipText">Specify the text that appears as a ToolTip for a control.</param>
+            <param name="image">The image to display on the ToolStripButton.</param>
+            <param name="onClick">An event handler that raises the Click event.</param>
+            <param name="displayStyle">Specify whether text and images are displayed on a ToolStripItem.</param>
+            <returns>Tool strip item</returns>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripClipboard">
+            <summary>
+            Provides a container for Windows toolbar objects with predefined functionality for working with clipboard
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripClipboard.InitializeButtons">
+            <summary>
+            Create all buttons and add its into toolbar. Override this method to create custom buttons
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripClipboard.UpdateButtons">
+            <summary>
+            Called when the ToolStrip's items need to change its states
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripClipboard.OnPdfViewerChanging(Patagames.Pdf.Net.Controls.WinForms.PdfViewer,Patagames.Pdf.Net.Controls.WinForms.PdfViewer)">
+            <summary>
+            Called when the current PdfViewer control associated with the ToolStrip is changing.
+            </summary>
+            <param name="oldValue">PdfViewer control of which was associated with the ToolStrip.</param>
+            <param name="newValue">PdfViewer control of which will be associated with the ToolStrip.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripClipboard.OnSelectAllClick(System.Windows.Forms.ToolStripButton)">
+            <summary>
+            Occurs when the Select All button is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripClipboard.OnCopyClick(System.Windows.Forms.ToolStripButton)">
+            <summary>
+            Occurs when the Copy button is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripMain">
+            <summary>
+            Provides a container for Windows toolbar objects with predefined functionality for opening and printing
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripMain.PasswordRequired">
+            <summary>
+            Occurs when the loaded document protected by password. Application should return the password through Value property
+            </summary>
+        </member>
+        <member name="E:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripMain.PdfPrintDocumentCreated">
+            <summary>
+            Occurs after an instance of PdfPrintDocument class is created and before printing is started.
+            </summary>
+            <remarks>
+            You can use this event to get access to PdfPrintDialog which is used in printing routine.
+            For example, the printing routine shows the standard dialog with printing progress. 
+            If you want to suppress it you can write in event handler the following:
+            <code>
+            private void ToolbarMain1_PdfPrintDocumentCreated(object sender, EventArgs&lt;PdfPrintDocument&gt; e)
+            {
+            	e.Value.PrintController = new StandardPrintController();
+            }
+            </code>
+            </remarks>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripMain.InitializeButtons">
+            <summary>
+            Create all buttons and add its into toolbar. Override this method to create custom buttons
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripMain.UpdateButtons">
+            <summary>
+            Called when the ToolStrip's items need to change its states
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripMain.OnPdfViewerChanging(Patagames.Pdf.Net.Controls.WinForms.PdfViewer,Patagames.Pdf.Net.Controls.WinForms.PdfViewer)">
+            <summary>
+            Called when the current PdfViewer control associated with the ToolStrip is changing.
+            </summary>
+            <param name="oldValue">PdfViewer control of which was associated with the ToolStrip.</param>
+            <param name="newValue">PdfViewer control of which will be associated with the ToolStrip.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripMain.OnOpenClick(System.Windows.Forms.ToolStripButton)">
+            <summary>
+            Occurs when the Open button is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripMain.OnPasswordRequired">
+            <summary>
+            Occurs when the Loaded document protected by password. Application should return the password
+            </summary>
+            <returns>Password to the document must be returned.</returns>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripMain.OnPrintClick(System.Windows.Forms.ToolStripButton)">
+            <summary>
+            Occurs when the Print button is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripMain.OnPdfPrinDocumentCreaded(Patagames.Pdf.Net.EventArguments.EventArgs{Patagames.Pdf.Net.Controls.WinForms.PdfPrintDocument})">
+            <summary>
+            Occurs after an instance of PdfPrintDocument class is created and before printing is started.
+            </summary>
+            <param name="e">Event arguments</param>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripPages">
+            <summary>
+            Provides a container for Windows toolbar objects with predefined functionality for working with pages
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripPages.InitializeButtons">
+            <summary>
+            Create all buttons and add its into toolbar. Override this method to create custom buttons
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripPages.UpdateButtons">
+            <summary>
+            Called when the ToolStrip's items need to change its states
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripPages.OnPdfViewerChanging(Patagames.Pdf.Net.Controls.WinForms.PdfViewer,Patagames.Pdf.Net.Controls.WinForms.PdfViewer)">
+            <summary>
+            Called when the current PdfViewer control associated with the ToolStrip is changing.
+            </summary>
+            <param name="oldValue">PdfViewer control of which was associated with the ToolStrip.</param>
+            <param name="newValue">PdfViewer control of which will be associated with the ToolStrip.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripPages.OnPageNumberKeyDown(System.Windows.Forms.ToolStripTextBox,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Occurs when a key is pressed and held down while the PageNumber textbox has focus.
+            </summary>
+            <param name="item">PageNumber item</param>
+            <param name="e">Key event args</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripPages.OnToBeginClick(System.Windows.Forms.ToolStripButton)">
+            <summary>
+            Occurs when the First Page button is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripPages.OnToLeftClick(System.Windows.Forms.ToolStripButton)">
+            <summary>
+            Occurs when the Previous Page button is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripPages.OnToRightClick(System.Windows.Forms.ToolStripButton)">
+            <summary>
+            Occurs when the Next Page button is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripPages.OnToEndClick(System.Windows.Forms.ToolStripButton)">
+            <summary>
+            Occurs when the Last Page button is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripRotate">
+            <summary>
+            Provides a container for Windows toolbar objects with predefined functionality for pages rotation
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripRotate.InitializeButtons">
+            <summary>
+            Create all buttons and add its into toolbar. Override this method to create custom buttons
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripRotate.UpdateButtons">
+            <summary>
+            Called when the ToolStrip's items need to change its states
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripRotate.OnPdfViewerChanging(Patagames.Pdf.Net.Controls.WinForms.PdfViewer,Patagames.Pdf.Net.Controls.WinForms.PdfViewer)">
+            <summary>
+            Called when the current PdfViewer control associated with the ToolStrip is changing.
+            </summary>
+            <param name="oldValue">PdfViewer control of which was associated with the ToolStrip.</param>
+            <param name="newValue">PdfViewer control of which will be associated with the ToolStrip.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripRotate.OnRotateLeftClick(System.Windows.Forms.ToolStripButton)">
+            <summary>
+            Occurs when the Rotate Left button is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripRotate.OnRotateRightClick(System.Windows.Forms.ToolStripButton)">
+            <summary>
+            Occurs when the Rotate Right button is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripSearch">
+            <summary>
+            Provides a container for Windows toolbar objects with predefined functionality for searching
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripSearch.InflateHighlight">
+            <summary>
+            Gets or sets delta values for each edge of the rectangles of the highlighted text.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripSearch.HighlightColor">
+            <summary>
+            Gets or sets the color of the found text.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripSearch.ActiveRecordColor">
+            <summary>
+            Gets or sets the color of the found text.
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripSearch.SearchText">
+            <summary>
+            Gets or sets search text
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripSearch.SearchFlags">
+            <summary>
+            Gets or sets search flags
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripSearch.CurrentRecord">
+            <summary>
+            Gets or sets the current found record
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripSearch.TotalRecords">
+            <summary>
+            Gets the total number of found records
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripSearch.#ctor">
+            <summary>
+            Initialize the new instance of PdfToolStripSearch class
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripSearch.InitializeButtons">
+            <summary>
+            Create all buttons and add its into toolbar. Override this method to create custom buttons
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripSearch.UpdateButtons">
+            <summary>
+            Called when the ToolStrip's items need to change its states
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripSearch.OnPdfViewerChanging(Patagames.Pdf.Net.Controls.WinForms.PdfViewer,Patagames.Pdf.Net.Controls.WinForms.PdfViewer)">
+            <summary>
+            Called when the current PdfViewer control associated with the ToolStrip is changing.
+            </summary>
+            <param name="oldValue">PdfViewer control of which was associated with the ToolStrip.</param>
+            <param name="newValue">PdfViewer control of which will be associated with the ToolStrip.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripSearch.OnCurrentRecordChanged(System.Int32,System.Int32)">
+            <summary>
+            Called when current recordchanged
+            </summary>
+            <param name="currentRecord">The number of current record</param>
+            <param name="totalRecords">The total number of records</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripSearch.OnNeedSearch(Patagames.Pdf.Enums.FindFlags,System.String)">
+            <summary>
+            Called when the search routine should be launched
+            </summary>
+            <param name="searchFlags">Search flags</param>
+            <param name="searchText">Text for search</param>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripSizes">
+            <summary>
+            Provides a container for Windows toolbar objects with predefined functionality for changing pages size mode
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripSizes.InitializeButtons">
+            <summary>
+            Create all buttons and add its into toolbar. Override this method to create custom buttons
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripSizes.UpdateButtons">
+            <summary>
+            Called when the ToolStrip's items need to change its states
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripSizes.OnPdfViewerChanging(Patagames.Pdf.Net.Controls.WinForms.PdfViewer,Patagames.Pdf.Net.Controls.WinForms.PdfViewer)">
+            <summary>
+            Called when the current PdfViewer control associated with the ToolStrip is changing.
+            </summary>
+            <param name="oldValue">PdfViewer control of which was associated with the ToolStrip.</param>
+            <param name="newValue">PdfViewer control of which will be associated with the ToolStrip.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripSizes.OnActualSizeClick(System.Windows.Forms.ToolStripButton)">
+            <summary>
+            Occurs when the Actual Size button is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripSizes.OnFitPageClick(System.Windows.Forms.ToolStripButton)">
+            <summary>
+            Occurs when the Fit Page button is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripSizes.OnFitWidthClick(System.Windows.Forms.ToolStripButton)">
+            <summary>
+            Occurs when the Fit Width button is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripSizes.OnFitHeightClick(System.Windows.Forms.ToolStripButton)">
+            <summary>
+            Occurs when the Fit Height button is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripViewModes">
+            <summary>
+            Provides a container for Windows toolbar objects with predefined functionality for changing view modes
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripViewModes.InitializeButtons">
+            <summary>
+            Create all buttons and add its into toolbar. Override this method to create custom buttons
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripViewModes.UpdateButtons">
+            <summary>
+            Called when the ToolStrip's items need to change its states
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripViewModes.OnPdfViewerChanging(Patagames.Pdf.Net.Controls.WinForms.PdfViewer,Patagames.Pdf.Net.Controls.WinForms.PdfViewer)">
+            <summary>
+            Called when the current PdfViewer control associated with the ToolStrip is changing.
+            </summary>
+            <param name="oldValue">PdfViewer control of which was associated with the ToolStrip.</param>
+            <param name="newValue">PdfViewer control of which will be associated with the ToolStrip.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripViewModes.OnModeSingleClick(System.Windows.Forms.ToolStripButton)">
+            <summary>
+            Occurs when the Single Page button is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripViewModes.OnModeVerticalClick(System.Windows.Forms.ToolStripButton)">
+            <summary>
+            Occurs when the Continuous Vertical button is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripViewModes.OnModeHorizontalClick(System.Windows.Forms.ToolStripButton)">
+            <summary>
+            Occurs when the Continuous Horizontal button is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripViewModes.OnModeTilesClick(System.Windows.Forms.ToolStripButton)">
+            <summary>
+            Occurs when the Continuous Facing button is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripViewModes.OnModeTwoPageClick(System.Windows.Forms.ToolStripButton)">
+            <summary>
+            Occurs when the Facing button is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoom">
+            <summary>
+            Provides a container for Windows toolbar objects with predefined functionality for zooming
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoom.InitializeButtons">
+            <summary>
+            Create all buttons and add its into toolbar. Override this method to create custom buttons
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoom.UpdateButtons">
+            <summary>
+            Called when the ToolStrip's items need to change its states
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoom.OnComboBoxSelectedIndexChanged(System.Windows.Forms.ToolStripComboBox,System.Int32)">
+            <summary>
+            Occurs the the selected index changed
+            </summary>
+            <param name="item">ComboBox</param>
+            <param name="selectedIndex">Selected index</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoom.OnComboBoxKeyDown(System.Windows.Forms.ToolStripComboBox,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Occurs when a key is pressed and held down while the ComboBox has focus.
+            </summary>
+            <param name="item">ComboBox</param>
+            <param name="e">Key event args</param>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoomEx">
+            <summary>
+            Provides a container for Windows toolbar objects with predefined functionality for zooming
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoomEx.ZoomLevel">
+            <summary>
+            Gets or sets the array with zoom values for ComboBox or TrackBar
+            </summary>
+        </member>
+        <member name="P:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoomEx.Zoom">
+            <summary>
+            Calculate the current zoom
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoomEx.InitializeButtons">
+            <summary>
+            Create all buttons and add its into toolbar. Override this method to create custom buttons
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoomEx.UpdateButtons">
+            <summary>
+            Called when the ToolStrip's items need to change its states
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoomEx.OnPdfViewerChanging(Patagames.Pdf.Net.Controls.WinForms.PdfViewer,Patagames.Pdf.Net.Controls.WinForms.PdfViewer)">
+            <summary>
+            Called when the current PdfViewer control associated with the ToolStrip is changing.
+            </summary>
+            <param name="oldValue">PdfViewer control of which was associated with the ToolStrip.</param>
+            <param name="newValue">PdfViewer control of which will be associated with the ToolStrip.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoomEx.OnLayoutCompleted(System.EventArgs)">
+            <summary>
+            Raises the LayoutCompleted event.
+            </summary>
+            <param name="e">An EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoomEx.SetZoom(System.Int32)">
+            <summary>
+            Sets specified zoom level for Pdf document
+            </summary>
+            <param name="zoomIndex">Index of the zoom in ZoomLevel</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoomEx.SetZoom(System.Single)">
+            <summary>
+            Sets specified zoom for Pdf document
+            </summary>
+            <param name="zoom">zoom value</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoomEx.CalcCurrentZoomLevel">
+            <summary>
+            Calculate zoom level for current <see cref="P:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoomEx.Zoom"/> and store it in internal field
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoomEx.OnTrackBarValueChanged(System.Windows.Forms.ToolStripControlHost)">
+            <summary>
+            Occurs when the Value property of a track bar changes, either by movement of the scroll box or by manipulation in code.
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoomEx.OnZoomLevelClick(System.Windows.Forms.ToolStripMenuItem,System.Single)">
+            <summary>
+            Occurs when the any item with zoom level clicked in ZoomDropDown button
+            </summary>
+            <param name="item">The item that has been clicked</param>
+            <param name="zoom">The zoom value of item that was clicked</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoomEx.OnZoomExInClick(System.Windows.Forms.ToolStripButton)">
+            <summary>
+            Occurs when the Zoom In button is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoomEx.OnZoomExOutClick(System.Windows.Forms.ToolStripButton)">
+            <summary>
+            Occurs when the Zoom Out button is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoomEx.OnActualSizeClick(System.Windows.Forms.ToolStripMenuItem)">
+            <summary>
+            Occurs when the Actual Size item is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoomEx.OnFitPageClick(System.Windows.Forms.ToolStripMenuItem)">
+            <summary>
+            Occurs when the Fit To Page item is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoomEx.OnFitWidthClick(System.Windows.Forms.ToolStripMenuItem)">
+            <summary>
+            Occurs when the Fit To Width item is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.PdfToolStripZoomEx.OnFitHeightClick(System.Windows.Forms.ToolStripMenuItem)">
+            <summary>
+            Occurs when the Fit To Height item is clicked
+            </summary>
+            <param name="item">The item that has been clicked</param>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.ToolBars.SearchBar.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.SearchBar.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Patagames.Pdf.Net.Controls.WinForms.ToolBars.SearchBar.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Patagames.Pdf.Net.Controls.WinForms.ViewModes">
+            <summary>
+            Specifies how the PdfViewer will display pages
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.ViewModes.Vertical">
+            <summary>
+            View pages continuously with scrolling enabled
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.ViewModes.Horizontal">
+            <summary>
+            View pages continuously with scrolling at horizontal dimension
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.ViewModes.TilesVertical">
+            <summary>
+            View pages side-by-side with continuous scrolling enabled
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.ViewModes.TilesHorizontal">
+            <summary>
+            View pages side-by-side with continuous scrolling at horizontal dimension
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.ViewModes.SinglePage">
+            <summary>
+            View one page at a time.
+            </summary>
+        </member>
+        <member name="F:Patagames.Pdf.Net.Controls.WinForms.ViewModes.TilesLine">
+            <summary>
+            View pages side-by-side
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,6 +1,0 @@
-2020-01-26 22:52:44.0247 ERROR - ==================== Method: WordSaveAs ====================
-2020-01-26 22:52:44.0337 ERROR -    위치: Microsoft.Office.Interop.Word.DocumentClass.SaveAs2(Object& FileName, Object& FileFormat, Object& LockComments, Object& Password, Object& AddToRecentFiles, Object& WritePassword, Object& ReadOnlyRecommended, Object& EmbedTrueTypeFonts, Object& SaveNativePictureFormat, Object& SaveFormsData, Object& SaveAsAOCELetter, Object& Encoding, Object& InsertLineBreaks, Object& AllowSubstitutions, Object& LineEnding, Object& AddBiDiMarks, Object& CompatibilityMode)
-   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean appvisible) 파일 D:\sources\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 119
-
-2020-01-26 22:52:44.0337 ERROR - 변환 실패: 명령을 정상적으로 종료할 수 없습니다.
-2020-01-26 22:52:44.0337 ERROR - ==================== End ====================

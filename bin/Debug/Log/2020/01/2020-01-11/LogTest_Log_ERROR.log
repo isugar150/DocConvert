@@ -1,7 +1,0 @@
-2020-01-11 14:52:54.2092 ERROR - ==================== Method: HwpSaveAs ====================
-2020-01-11 14:52:54.2481 ERROR -    위치: System.Runtime.InteropServices.Marshal.ReleaseComObject(Object o)
-   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 58
-
-2020-01-11 14:52:54.2720 ERROR - 변환 실패: 개체의 형식은 __ComObject이거나 __ComObject에서 파생되어야 합니다.
-매개 변수 이름: o
-2020-01-11 14:52:54.2849 ERROR - ==================== End ====================

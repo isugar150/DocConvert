@@ -1,5 +1,0 @@
-2020-01-03 16:19:07.3382  INFO - ==================== Start ====================
-2020-01-03 16:19:07.3722  INFO - Method: ExcelSaveAs, FilePath: C:\Users\Jm\Documents\Excel 시작.xlsx, outPath: C:\Users\Jm\Documents\Excel 시작.pdf, docPassword: 
-2020-01-03 16:19:07.3722  INFO - 파일 언락 성공!
-2020-01-03 16:19:25.1241  INFO - 변환 성공
-2020-01-03 16:19:25.2000  INFO - ==================== End ====================

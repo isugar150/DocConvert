@@ -36,3 +36,5 @@ D:\sources\DocConvert\DocConvert\obj\Debug\DocConvert_Core.csproj.CopyComplete
 D:\sources\DocConvert\DocConvert\obj\Debug\DocConvert_Core.dll
 D:\sources\DocConvert\DocConvert\obj\Debug\DocConvert_Core.pdb
 D:\sources\DocConvert\DocConvert\obj\Debug\DocConvert_Core.csprojAssemblyReference.cache
+D:\sources\DocConvert\bin\Debug\pdfium_x86\pdfium.dll
+D:\sources\DocConvert\bin\Debug\FilePathCheckerModuleExample.dll
