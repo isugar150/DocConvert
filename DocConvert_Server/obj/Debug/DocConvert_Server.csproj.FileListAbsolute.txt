@@ -1,0 +1,15 @@
+D:\sources\DocConvert\DocConvert_Server\bin\Debug\DocConvert_Server.exe.config
+D:\sources\DocConvert\DocConvert_Server\bin\Debug\DocConvert_Server.exe
+D:\sources\DocConvert\DocConvert_Server\bin\Debug\DocConvert_Server.pdb
+D:\sources\DocConvert\DocConvert_Server\bin\Debug\NLog.dll
+D:\sources\DocConvert\DocConvert_Server\bin\Debug\NLog.xml
+D:\sources\DocConvert\bin\Debug\DocConvert_Server.exe.config
+D:\sources\DocConvert\bin\Debug\DocConvert_Server.exe
+D:\sources\DocConvert\bin\Debug\DocConvert_Server.pdb
+D:\sources\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.Form1.resources
+D:\sources\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.Properties.Resources.resources
+D:\sources\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.csproj.GenerateResource.cache
+D:\sources\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.csproj.CopyComplete
+D:\sources\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.exe
+D:\sources\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.pdb
+D:\sources\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.csprojAssemblyReference.cache

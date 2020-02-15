@@ -37,6 +37,7 @@ namespace DocConvert_Util
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            checkBox1.Checked = true;
             #region JSON파일 파싱
             if (File.Exists(Application.StartupPath + @"\Settings.json"))
             {
@@ -166,7 +167,7 @@ namespace DocConvert_Util
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (radioButton1.Checked)
+            if (!checkBox1.Checked)
             {
                 #region Local 변환시
                 String[] FileNames = textBox1.Text.Split('|');
@@ -270,12 +271,6 @@ namespace DocConvert_Util
                     tb2_appendText("[상태]   모든 파일을 변환완료 하였습니다.");
                 else
                     tb2_appendText("[상태]   일부 파일 변환을 실패하였습니다.");
-                #endregion
-            }
-            else if (radioButton2.Checked)
-            {
-                #region Server 변환시
-
                 #endregion
             }
         }
@@ -436,6 +431,14 @@ namespace DocConvert_Util
                 tb2_appendText("[오류]   " + e1.Message);
             }
             #endregion
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+                textBox4.Enabled = true;
+            else
+                textBox4.Enabled = false;
         }
     }
 }
