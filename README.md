@@ -1,6 +1,13 @@
 # 소개
+# DocConverter Server
+**Socket**
+- 준비중
 
 # DocConverter Engien
+- 지원하는 프로그램(Word, Excel, PowerPoint, HWP)
+- PDF TO IMAGE변환 기능 지원
+
+
 **WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, bool pageCounting, bool appvisible)**  
 String FilePath: 소스 파일경로  
 String outPath: PDF로 내보낼 파일경로  
