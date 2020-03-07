@@ -1,4 +1,5 @@
 {
-  "pagingnum": true,
-  "appvisible": true
+  "pagingnum": false,
+  "appvisible": false,
+  "runafter": false
 }
