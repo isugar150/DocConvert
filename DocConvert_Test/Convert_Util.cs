@@ -25,6 +25,7 @@ namespace DocConvert_Util
 {
     public partial class Convert_Util : Form
     {
+        public ClientSocket socket = new ClientSocket();
         private JObject Setting = new JObject();
         private bool HWPREGDLL = false;
         private bool APPVISIBLE = false;
@@ -134,6 +135,8 @@ namespace DocConvert_Util
             }
             #endregion
             comboBox1.SelectedIndex = 0;
+            //디버깅 전용
+            textBox4.Text = "127.0.0.1:12000";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -273,10 +276,74 @@ namespace DocConvert_Util
                     tb2_appendText("[상태]   일부 파일 변환을 실패하였습니다.");
                 #endregion
             }
+            else
+            {
+                #region Server 변환시
+                if(ConnectServer(textBox4.Text.Split(':')[0], int.Parse(textBox4.Text.Split(':')[1])))
+                {
+                    SendData("테스트");
+                }
+                #endregion
+            }
         }
 
+        #region 서버 이벤트
+
+        private bool ConnectServer(string address, int port)
+        {
+            if (socket.conn(address, port))
+            {
+                tb2_appendText("서버접속 성공!");
+                return true;
+            }
+            else
+            {
+                tb2_appendText("서버접속 실패!");
+                return false;
+            }
+        }
+
+        public enum PACKETID : int
+        {
+            REQ_ECHO = 1,
+            REQ_LOGIN = 11,
+        }
+
+        async void SendData(string Message)
+        {
+            byte[] Body = Encoding.Unicode.GetBytes(Message);
+
+            List<byte> dataSource = new List<byte>();
+            dataSource.AddRange(BitConverter.GetBytes((Int32)PACKETID.REQ_ECHO));
+            dataSource.AddRange(BitConverter.GetBytes((Int16)0));
+            dataSource.AddRange(BitConverter.GetBytes((Int16)0));
+            dataSource.AddRange(BitConverter.GetBytes(Body.Length));
+            dataSource.AddRange(Body);
+
+            await Task.Run(() => socket.s_write(dataSource.ToArray()));
+
+            Tuple<int, byte[]> recvData = null;
+            await Task.Run(() => recvData = socket.s_read());
+
+            if (recvData != null && recvData.Item1 > 0)
+            {
+                // 패킷 뭉쳐 오는 것은 고려하지 않았음..^^;;;
+                var arySeg = new ArraySegment<byte>(recvData.Item2, 8, (recvData.Item1 - 8));
+                string msg = System.Text.Encoding.GetEncoding("utf-16").GetString(arySeg.ToArray());
+                tb2_appendText("서버에서 응답받은 메시지: " + msg);
+            }
+            else
+            {
+                tb2_appendText("서버와 접속이 끊어졌습니다.");
+            }
+            socket.close(); //연결 해제
+            tb2_appendText("서버와 연결을 해제하였습니다.");
+        }
+
+        #endregion
+
         #region 자잘한 이벤트
-        
+
         // 로그 폴더 실행
         private void button4_Click(object sender, EventArgs e)
         {
