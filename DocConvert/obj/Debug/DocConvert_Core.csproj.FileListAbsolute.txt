@@ -22,7 +22,6 @@ C:\Users\Jm\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert_Co
 C:\Users\Jm\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert_Core.csproj.CopyComplete
 C:\Users\Jm\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert_Core.dll
 C:\Users\Jm\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert_Core.pdb
-C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert_Core.csprojAssemblyReference.cache
 D:\sources\DocConvert\bin\Debug\NLog.config
 D:\sources\DocConvert\bin\Debug\FilePathCheckerModuleExample.dll
 D:\sources\DocConvert\bin\Debug\pdfium.dll
@@ -40,3 +39,4 @@ D:\sources\DocConvert\DocConvert\obj\Debug\DocConvert_Core.pdb
 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\bin\Debug\FilePathCheckerModuleExample.dll
 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\bin\Debug\pdfium.dll
 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert_Core.csproj.CoreCompileInputs.cache
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert_Core.csprojAssemblyReference.cache

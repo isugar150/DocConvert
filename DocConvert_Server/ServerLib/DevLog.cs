@@ -41,7 +41,7 @@ namespace DocConvert_Server
         {
             if (출력가능_로그레벨 <= logLevel)
             {
-                logMsgQueue.Enqueue(string.Format("{0}   Method: {1}   Message: {2}", DateTime.Now, methodName, msg));
+                logMsgQueue.Enqueue(string.Format("{0}   Method: {1}   Message: {2}", System.DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss.fff"), methodName, msg));
             }
         }
 

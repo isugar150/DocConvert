@@ -33,7 +33,7 @@ namespace DocConvert_Server
 
         void RegistHandler()
         {
-            HandlerMap.Add((int)PACKETID.REQ_ECHO, CommonHan.RequestEcho);
+            HandlerMap.Add((int)PACKETID.REQ_ECHO, CommonHan.RequestMsg);
 
             DevLog.Write(string.Format("핸들러 등록 완료"), LOG_LEVEL.INFO);
         }
@@ -42,11 +42,11 @@ namespace DocConvert_Server
         {
             m_Config = new ServerConfig
             {
-                Port = 12000,
+                Port = Properties.Settings.Default.serverPORT,
                 Ip = "Any",
-                MaxConnectionNumber = 100,
+                MaxConnectionNumber = Properties.Settings.Default.MaxConnectionNumber,
                 Mode = SocketMode.Tcp,
-                Name = "ConvertServerNet"
+                Name = Properties.Settings.Default.serverName
             };
         }
 
@@ -88,7 +88,8 @@ namespace DocConvert_Server
         void RequestReceived(NetworkSession session, EFBinaryRequestInfo reqInfo)
         {
             DevLog.Write(string.Format("세션 번호 {0} 받은 데이터 크기: {1}, ThreadId: {2}", session.SessionID, reqInfo.Body.Length, System.Threading.Thread.CurrentThread.ManagedThreadId), LOG_LEVEL.INFO);
-            
+           
+
             var PacketID = reqInfo.PacketID;
             var value1 = reqInfo.Value1;
             var value2 = reqInfo.Value2;

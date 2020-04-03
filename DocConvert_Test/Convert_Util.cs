@@ -20,6 +20,7 @@ using Newtonsoft.Json.Linq;
 using DocConvert_Core.HWPLib;
 using Microsoft.Win32;
 using System.Threading;
+using System.Net.Sockets;
 
 namespace DocConvert_Util
 {
@@ -170,6 +171,12 @@ namespace DocConvert_Util
 
         private void button3_Click(object sender, EventArgs e)
         {
+            // 유효성 검사
+            if(textBox1.Text.Equals("") || !new FileInfo(textBox1.Text).Exists) //파일이 없으면
+            {
+                tb2_appendText("파일이 존재하지 않습니다.");
+                return;
+            }
             if (!checkBox1.Checked)
             {
                 #region Local 변환시
@@ -279,9 +286,26 @@ namespace DocConvert_Util
             else
             {
                 #region Server 변환시
-                if(ConnectServer(textBox4.Text.Split(':')[0], int.Parse(textBox4.Text.Split(':')[1])))
+                string serverIP = textBox4.Text.Split(':')[0];
+                int serverPORT = int.Parse(textBox4.Text.Split(':')[1]);
+                // 아이피주소 유효성 검사
+                try
                 {
-                    SendData("테스트");
+                    IPAddress.Parse(serverIP);
+                }
+                catch (Exception) { tb2_appendText("유효한 아이피 주소를 입력하세요."); return; }
+                // 포트번호 유효성 검사
+                if(serverPORT < IPEndPoint.MinPort || serverPORT > IPEndPoint.MaxPort)
+                {
+                    tb2_appendText("유효한 포트번호를 입력하세요.");
+                    return;
+                }
+                if (ConnectServer(serverIP, serverPORT))
+                {
+                    JObject requestMsg = new JObject();
+                    requestMsg["KEY"] = "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2";
+                    requestMsg["FileName"] = new FileInfo(textBox1.Text).Name;
+                    SendData(requestMsg.ToString());
                 }
                 #endregion
             }
@@ -291,14 +315,15 @@ namespace DocConvert_Util
 
         private bool ConnectServer(string address, int port)
         {
-            if (socket.conn(address, port))
+            tb2_appendText("서버접속중. . .");
+            try
             {
+                socket.conn(address, port);
                 tb2_appendText("서버접속 성공!");
                 return true;
-            }
-            else
+            } catch(SocketException e1)
             {
-                tb2_appendText("서버접속 실패!");
+                tb2_appendText(e1.Message);
                 return false;
             }
         }
@@ -327,10 +352,9 @@ namespace DocConvert_Util
 
             if (recvData != null && recvData.Item1 > 0)
             {
-                // 패킷 뭉쳐 오는 것은 고려하지 않았음..^^;;;
                 var arySeg = new ArraySegment<byte>(recvData.Item2, 8, (recvData.Item1 - 8));
                 string msg = System.Text.Encoding.GetEncoding("utf-16").GetString(arySeg.ToArray());
-                tb2_appendText("서버에서 응답받은 메시지: " + msg);
+                tb2_appendText("서버에서 응답받은 메시지\r\n" + msg);
             }
             else
             {

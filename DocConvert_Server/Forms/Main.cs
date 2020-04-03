@@ -13,7 +13,6 @@ namespace DocConvert_Server
     public partial class Form1 : Form
     {
         System.Windows.Threading.DispatcherTimer workProcessTimer = new System.Windows.Threading.DispatcherTimer();
-        private static Logger logger = LogManager.GetLogger("DocConvert_Server_Log");
         public Form1()
         {
             InitializeComponent();
@@ -62,9 +61,11 @@ namespace DocConvert_Server
                 {
                     ++logWorkCount;
 
-                    if (listBoxLog.Items.Count > 100)
+                    toolStripStatusLabel1.Text = string.Format("LogCount: {0}/{1}", listBoxLog.Items.Count, Properties.Settings.Default.LogMaxCount);
+
+                    if (listBoxLog.Items.Count >= Properties.Settings.Default.LogMaxCount)
                     {
-                        listBoxLog.Items.Clear();
+                        listBoxLog.Items.RemoveAt(0);
                     }
 
                     listBoxLog.Items.Add(msg);
@@ -101,11 +102,6 @@ namespace DocConvert_Server
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
-        }
-
-        private void consoleAppend(string text)
-        {
-            listBoxLog.Items.Add(System.DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss.fff") + "   " + text + "\r\n");
         }
 
         private void listBoxLog_SelectedIndexChanged(object sender, EventArgs e)
