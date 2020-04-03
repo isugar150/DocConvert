@@ -35,9 +35,9 @@ namespace DocConvert_Server.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("12000")]
-        public int serverPORT {
+        public int socketPORT {
             get {
-                return ((int)(this["serverPORT"]));
+                return ((int)(this["socketPORT"]));
             }
         }
         
@@ -74,6 +74,24 @@ namespace DocConvert_Server.Properties {
         public string key {
             get {
                 return ((string)(this["key"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Data")]
+        public string DataPath {
+            get {
+                return ((string)(this["DataPath"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("12100")]
+        public int fileServerPORT {
+            get {
+                return ((int)(this["fileServerPORT"]));
             }
         }
     }

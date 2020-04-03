@@ -25,7 +25,7 @@ namespace DocConvert_Core.OfficeLib
         /// <param name="outPath">저장파일</param>
         /// <param name="docPassword">문서 비밀번호</param>
         /// <returns></returns>
-        public static ReturnValue WordSaveAs(String FilePath, String outPath, String docPassword, bool pageCounting, bool appvisible)
+        public static ReturnValue WordSaveAs(string FilePath, string outPath, string docPassword, bool pageCounting, bool appvisible)
         {
             ReturnValue returnValue = new ReturnValue();
             logger.Info("==================== Start ====================");

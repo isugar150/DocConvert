@@ -5,7 +5,7 @@
     <Setting Name="serverIP" Type="System.String" Scope="Application">
       <Value Profile="(Default)">127.0.0.1</Value>
     </Setting>
-    <Setting Name="serverPORT" Type="System.Int32" Scope="Application">
+    <Setting Name="socketPORT" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">12000</Value>
     </Setting>
     <Setting Name="serverName" Type="System.String" Scope="Application">
@@ -19,6 +19,12 @@
     </Setting>
     <Setting Name="key" Type="System.String" Scope="Application">
       <Value Profile="(Default)">B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2</Value>
+    </Setting>
+    <Setting Name="DataPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Data</Value>
+    </Setting>
+    <Setting Name="fileServerPORT" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">12100</Value>
     </Setting>
   </Settings>
 </SettingsFile>

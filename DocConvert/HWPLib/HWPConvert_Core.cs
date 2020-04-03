@@ -24,7 +24,7 @@ namespace DocConvert_Core.HWPLib
         /// <param name="FilePath">소스 경로</param>
         /// <param name="outPath">내보낼 경로</param>
         /// <returns></returns>
-        public static ReturnValue HwpSaveAs(String FilePath, String outPath, bool PageCounting)
+        public static ReturnValue HwpSaveAs(string FilePath, string outPath, bool PageCounting)
         {
             ReturnValue returnValue = new ReturnValue();
 

@@ -42,7 +42,7 @@ namespace DocConvert_Server
         {
             m_Config = new ServerConfig
             {
-                Port = Properties.Settings.Default.serverPORT,
+                Port = Properties.Settings.Default.socketPORT,
                 Ip = "Any",
                 MaxConnectionNumber = Properties.Settings.Default.MaxConnectionNumber,
                 Mode = SocketMode.Tcp,
@@ -77,17 +77,17 @@ namespace DocConvert_Server
 
         void OnConnected(NetworkSession session)
         {
-            DevLog.Write(string.Format("세션 번호 {0} 접속", session.SessionID), LOG_LEVEL.INFO);
+            DevLog.Write(string.Format("세션ID: {0} 접속", session.SessionID), LOG_LEVEL.INFO);
         }
 
         void OnClosed(NetworkSession session, CloseReason reason)
         {
-            DevLog.Write(string.Format("세션 번호 {0} 접속해제: {1}", session.SessionID, reason.ToString()), LOG_LEVEL.INFO);
+            DevLog.Write(string.Format("세션ID: {0} 접속해제: {1}", session.SessionID, reason.ToString()), LOG_LEVEL.INFO);
         }
 
         void RequestReceived(NetworkSession session, EFBinaryRequestInfo reqInfo)
         {
-            DevLog.Write(string.Format("세션 번호 {0} 받은 데이터 크기: {1}, ThreadId: {2}", session.SessionID, reqInfo.Body.Length, System.Threading.Thread.CurrentThread.ManagedThreadId), LOG_LEVEL.INFO);
+            DevLog.Write(string.Format("세션ID: {0} 받은 데이터 크기: {1}, ThreadId: {2}", session.SessionID, reqInfo.Body.Length, System.Threading.Thread.CurrentThread.ManagedThreadId), LOG_LEVEL.INFO);
            
 
             var PacketID = reqInfo.PacketID;
@@ -100,7 +100,7 @@ namespace DocConvert_Server
             }
             else
             {
-                DevLog.Write(string.Format("세션 번호 {0} 받은 데이터 크기: {1}", session.SessionID, reqInfo.Body.Length), LOG_LEVEL.INFO);
+                DevLog.Write(string.Format("세션ID: {0} 받은 데이터 크기: {1}", session.SessionID, reqInfo.Body.Length), LOG_LEVEL.INFO);
             }
         }
     }

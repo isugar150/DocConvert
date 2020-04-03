@@ -1,0 +1,124 @@
+2020-04-03 21:05:48.5110 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-03 21:05:48.5289 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 48
+
+2020-04-03 21:05:48.5359 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-03 21:05:48.5359 ERROR - ==================== End ====================
+2020-04-03 21:08:47.0996 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-03 21:08:47.0996 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 48
+
+2020-04-03 21:08:47.1096 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-03 21:08:47.1096 ERROR - ==================== End ====================
+2020-04-03 21:11:06.9647 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-03 21:11:06.9697 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 48
+
+2020-04-03 21:11:06.9697 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-03 21:11:06.9697 ERROR - ==================== End ====================
+2020-04-03 21:12:47.9766 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-03 21:12:47.9766 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 48
+
+2020-04-03 21:12:47.9766 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-03 21:12:47.9766 ERROR - ==================== End ====================
+2020-04-03 21:14:47.1674 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-03 21:14:47.1724 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 48
+
+2020-04-03 21:14:47.1724 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-03 21:14:47.1724 ERROR - ==================== End ====================
+2020-04-03 21:40:51.4995 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-03 21:40:51.4995 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 48
+
+2020-04-03 21:40:51.4995 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-03 21:40:51.4995 ERROR - ==================== End ====================
+2020-04-03 21:42:30.6098 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-03 21:42:30.6098 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 48
+
+2020-04-03 21:42:30.6098 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-03 21:42:30.6098 ERROR - ==================== End ====================
+2020-04-03 21:43:30.6427 ERROR - C:\Data\Documents\3C9BDA23B6E35658EDCA264B7F032B80\Word 시작.docx
+2020-04-03 21:44:00.0809 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-03 21:44:00.0809 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 87
+
+2020-04-03 21:44:00.0809 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-03 21:44:00.0809 ERROR - ==================== End ====================
+2020-04-03 21:44:25.3333 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-03 21:44:25.3333 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 87
+
+2020-04-03 21:44:25.3333 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-03 21:44:25.3333 ERROR - ==================== End ====================
+2020-04-03 21:45:27.8799 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-03 21:45:27.8799 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 87
+
+2020-04-03 21:45:27.8799 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-03 21:45:27.8799 ERROR - ==================== End ====================
+2020-04-03 21:47:40.3530 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-03 21:47:40.3530 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 87
+
+2020-04-03 21:47:40.3630 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-03 21:47:40.3630 ERROR - ==================== End ====================
+2020-04-03 21:50:05.2039 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-03 21:50:05.2039 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 87
+
+2020-04-03 21:50:05.2039 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-03 21:50:05.2039 ERROR - ==================== End ====================
+2020-04-03 21:52:26.6093 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-03 21:52:26.6093 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 87
+
+2020-04-03 21:52:26.6093 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-03 21:52:26.6093 ERROR - ==================== End ====================
+2020-04-03 21:52:50.5818 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-03 21:52:50.5818 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 87
+
+2020-04-03 21:52:50.5968 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-03 21:52:50.5968 ERROR - ==================== End ====================
+2020-04-03 21:56:05.8333 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-03 21:56:05.8333 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 87
+
+2020-04-03 21:56:05.8482 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-03 21:56:05.8482 ERROR - ==================== End ====================
+2020-04-03 21:57:42.4023 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-03 21:57:42.4023 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 87
+
+2020-04-03 21:57:42.4023 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-03 21:57:42.4023 ERROR - ==================== End ====================
+2020-04-03 22:00:36.8900 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-03 22:00:36.8900 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 87
+
+2020-04-03 22:00:36.8900 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-03 22:00:36.8900 ERROR - ==================== End ====================
+2020-04-03 22:04:23.1527 ERROR - C:\Data\workspace\B76510175D2D6634050430B11CF164A6\PowerPoint 시작.pptx
+2020-04-03 22:04:23.6741 ERROR - ==================== Method: PowerPointSaveAs ====================
+2020-04-03 22:04:23.6741 ERROR -    위치: Microsoft.Office.Interop.PowerPoint.Presentations.Open(String FileName, MsoTriState ReadOnly, MsoTriState Untitled, MsoTriState WithWindow)
+   위치: DocConvert_Core.OfficeLib.PowerPointConvert_Core.PowerPointSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\PowerPointConvert_Core.cs:줄 70
+
+2020-04-03 22:04:23.6741 ERROR - 변환 실패: 지정된 파일을 찾을 수 없습니다. (예외가 발생한 HRESULT: 0x80070002)
+2020-04-03 22:04:23.6741 ERROR - ==================== End ====================
+2020-04-03 22:04:43.7827 ERROR - C:\Data\workspace\74C5728223BB8AE604AC1056C0D7DC2A\Excel 시작1.xlsx
+2020-04-03 22:04:45.0485 ERROR - ==================== Method: ExcelSaveAs ====================
+2020-04-03 22:04:45.0485 ERROR -    위치: Microsoft.Office.Interop.Excel.Workbooks.Open(String Filename, Object UpdateLinks, Object ReadOnly, Object Format, Object Password, Object WriteResPassword, Object IgnoreReadOnlyRecommended, Object Origin, Object Delimiter, Object Editable, Object Notify, Object Converter, Object AddToMru, Object Local, Object CorruptLoad)
+   위치: DocConvert_Core.OfficeLib.ExcelConvert_Core.ExcelSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\ExcelConvert_Core.cs:줄 82
+
+2020-04-03 22:04:45.0485 ERROR - 변환 실패: 'C:\Data\workspace\74C5728223BB8AE604AC1056C0D7DC2A\Excel 시작1.xlsx'을(를) 찾을 수 없습니다. 파일의 이름이 변경되었거나 파일이 이동 또는 삭제되지 않았는지 확인하세요.
+2020-04-03 22:04:45.0485 ERROR - ==================== End ====================

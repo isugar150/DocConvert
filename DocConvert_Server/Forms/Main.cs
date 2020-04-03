@@ -7,12 +7,14 @@ using System.Threading;
 using System.Windows.Forms;
 
 using DocConvert_Server;
+using Timer = System.Windows.Forms.Timer;
 
 namespace DocConvert_Server
 {
     public partial class Form1 : Form
     {
         System.Windows.Threading.DispatcherTimer workProcessTimer = new System.Windows.Threading.DispatcherTimer();
+
         public Form1()
         {
             InitializeComponent();
@@ -30,7 +32,7 @@ namespace DocConvert_Server
 
             if (IsResult)
             {
-                DevLog.Write(string.Format("[서비스 시작]"), LOG_LEVEL.INFO);
+                DevLog.Write("[Socket Server Listening...]", LOG_LEVEL.INFO);
                 DevLog.Write(string.Format("[INFO] IP: {0}   포트: {1}   프로토콜: {2}   서버이름: {3}", client_IP, server.Config.Port, server.Config.Mode, server.Config.Name), LOG_LEVEL.INFO);
 
                 pictureBox1.Image = DocConvert_Server.Properties.Resources.success_icon;
@@ -46,7 +48,12 @@ namespace DocConvert_Server
             workProcessTimer.Interval = new TimeSpan(0, 0, 0, 0, 32);
             workProcessTimer.Start();
             #endregion
+            #region Create File Server
+
+            #endregion
         }
+
+        #region Socket Method
 
         private void OnProcessTimedEvent(object sender, EventArgs e)
         {
@@ -98,6 +105,12 @@ namespace DocConvert_Server
                 return ClientIP;
             }
         }
+
+        #endregion
+
+        #region File Method
+
+        #endregion
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {

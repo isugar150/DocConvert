@@ -305,6 +305,8 @@ namespace DocConvert_Util
                     JObject requestMsg = new JObject();
                     requestMsg["KEY"] = "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2";
                     requestMsg["FileName"] = new FileInfo(textBox1.Text).Name;
+                    requestMsg["ConvertIMG"] = comboBox1.SelectedIndex;
+                    requestMsg["DocPassword"] = textBox3.Text;
                     SendData(requestMsg.ToString());
                 }
                 #endregion

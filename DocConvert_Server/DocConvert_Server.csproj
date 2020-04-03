@@ -37,6 +37,11 @@
     <ApplicationIcon>DocConvert.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Interop.HWPCONTROLLib, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\DocConvert_Test\obj\Debug\Interop.HWPCONTROLLib.dll</HintPath>
+    </Reference>
     <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
@@ -123,11 +128,27 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DocConvert\DocConvert_Core.csproj">
+      <Project>{e66d151a-0a14-4ee5-97d8-dfc33b913ae0}</Project>
+      <Name>DocConvert_Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="DocConvert.ico" />
     <None Include="Resources\success_icon.png" />
     <None Include="Resources\error_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="HWPCONTROLLib">
+      <Guid>{86E6E883-3879-4514-A25B-81023981DA19}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
