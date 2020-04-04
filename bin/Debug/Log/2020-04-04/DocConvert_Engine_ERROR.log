@@ -22,3 +22,57 @@
 
 2020-04-04 13:47:33.4896 ERROR - 변환 실패: 명령을 정상적으로 종료할 수 없습니다.
 2020-04-04 13:47:33.4896 ERROR - ==================== End ====================
+2020-04-04 20:05:38.2901 ERROR - C:\Data\workspace\3C9BDA23B6E35658EDCA264B7F032B80\Word 시작.docx
+2020-04-04 20:05:43.3661 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-04 20:05:43.3871 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 87
+
+2020-04-04 20:05:43.4131 ERROR - 변환 실패: 파일을 찾을 수 없습니다. 파일이 이동 또는 삭제되었거나 이름이 변경되었는지 확인하세요. ("C:\Data\workspace\...\Word 시작.docx")
+2020-04-04 20:05:43.4131 ERROR - ==================== End ====================
+2020-04-04 20:06:29.7095 ERROR - C:\Data\workspace\B76510175D2D6634050430B11CF164A6\PowerPoint 시작.pptx
+2020-04-04 20:06:31.2121 ERROR - ==================== Method: PowerPointSaveAs ====================
+2020-04-04 20:06:31.2121 ERROR -    위치: Microsoft.Office.Interop.PowerPoint.Presentations.Open(String FileName, MsoTriState ReadOnly, MsoTriState Untitled, MsoTriState WithWindow)
+   위치: DocConvert_Core.OfficeLib.PowerPointConvert_Core.PowerPointSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert\OfficeLib\PowerPointConvert_Core.cs:줄 70
+
+2020-04-04 20:06:31.2121 ERROR - 변환 실패: 지정된 파일을 찾을 수 없습니다. (예외가 발생한 HRESULT: 0x80070002)
+2020-04-04 20:06:31.2121 ERROR - ==================== End ====================
+2020-04-04 20:06:47.9818 ERROR - C:\Data\workspace\3C9BDA23B6E35658EDCA264B7F032B80\Word 시작.docx
+2020-04-04 20:06:50.7363 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-04 20:06:50.7363 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 87
+
+2020-04-04 20:06:50.7363 ERROR - 변환 실패: 파일을 찾을 수 없습니다. 파일이 이동 또는 삭제되었거나 이름이 변경되었는지 확인하세요. ("C:\Data\workspace\...\Word 시작.docx")
+2020-04-04 20:06:50.7363 ERROR - ==================== End ====================
+2020-04-04 20:07:23.8265 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 20:07:40.7502 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 20:13:18.1559 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 20:25:36.5093 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 20:26:30.8385 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 20:29:33.7965 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 20:30:06.4732 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 20:30:50.8424 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 20:32:44.4721 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 20:33:37.3467 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 20:34:40.8435 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 20:36:10.2353 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 20:42:27.6346 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 20:44:23.2506 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 20:55:41.8996 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 20:58:29.8322 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 20:59:02.4521 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 21:00:34.9876 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 21:01:12.3228 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 21:04:09.4256 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 21:05:09.4628 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 21:05:21.1348 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 21:07:42.2913 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 21:08:06.5449 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 21:08:06.5619 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-04 21:08:06.5619 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 48
+
+2020-04-04 21:08:06.5818 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-04 21:08:06.5818 ERROR - ==================== End ====================
+2020-04-04 21:08:11.4184 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-04 21:09:22.0487 ERROR - 권한이 없는 작업을 수행하려고 했습니다.

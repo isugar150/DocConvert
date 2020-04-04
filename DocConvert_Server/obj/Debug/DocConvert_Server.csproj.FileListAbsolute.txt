@@ -13,6 +13,12 @@ D:\sources\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.csproj.CopyC
 D:\sources\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.exe
 D:\sources\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.pdb
 D:\sources\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.csprojAssemblyReference.cache
+C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\NLog.config
+C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\FilePathCheckerModuleExample.dll
+C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\pdfium.dll
+C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\DocConvert_Server.exe.config
+C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\DocConvert_Server.exe
+C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\DocConvert_Server.pdb
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.csprojAssemblyReference.cache
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert_Server\obj\Debug\Interop.HWPCONTROLLib.dll
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.csproj.ResolveComReference.cache
@@ -20,12 +26,6 @@ C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert_Server\obj\Debug\Doc
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.Properties.Resources.resources
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.csproj.GenerateResource.cache
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.csproj.CoreCompileInputs.cache
-C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\NLog.config
-C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\FilePathCheckerModuleExample.dll
-C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\pdfium.dll
-C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\DocConvert_Server.exe.config
-C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\DocConvert_Server.exe
-C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\DocConvert_Server.pdb
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.csproj.CopyComplete
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.exe
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.pdb

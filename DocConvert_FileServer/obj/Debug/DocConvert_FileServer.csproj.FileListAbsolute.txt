@@ -41,3 +41,4 @@ C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\pdfium.dll
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\DocConvert_FileServer.exe.config
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\DocConvert_FileServer.exe
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\DocConvert_FileServer.pdb
+C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert_FileServer\obj\Debug\DocConvert_FileServer.exe.config

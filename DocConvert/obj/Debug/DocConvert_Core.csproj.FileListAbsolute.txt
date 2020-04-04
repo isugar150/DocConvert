@@ -39,3 +39,4 @@ C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert_Core.csproj.CopyComplete
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert_Core.dll
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert_Core.pdb
+C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert_Core.csprojAssemblyReference.cache

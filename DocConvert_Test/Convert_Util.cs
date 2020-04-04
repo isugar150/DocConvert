@@ -21,6 +21,7 @@ using DocConvert_Core.HWPLib;
 using Microsoft.Win32;
 using System.Threading;
 using System.Net.Sockets;
+using FluentFTP;
 
 namespace DocConvert_Util
 {
@@ -47,7 +48,7 @@ namespace DocConvert_Util
                 #region 변환창 보이기 초기데이터
                 try
                 {
-                    if(bool.Parse(Setting["appvisible"].ToString()))
+                    if (bool.Parse(Setting["appvisible"].ToString()))
                     {
                         pictureBox4.Image = DocConvert_Util.Properties.Resources.switch_on;
                         APPVISIBLE = true;
@@ -117,7 +118,8 @@ namespace DocConvert_Util
             RegistryKey regKey = Registry.CurrentUser.CreateSubKey(@"Software\HNC\HwpCtrl\Modules", RegistryKeyPermissionCheck.ReadWriteSubTree);
             try
             {
-                if (File.Exists(regKey.GetValue("FilePathCheckerModuleExample").ToString())){
+                if (File.Exists(regKey.GetValue("FilePathCheckerModuleExample").ToString()))
+                {
                     pictureBox1.Image = DocConvert_Util.Properties.Resources.switch_on;
                     HWPREGDLL = true;
                     tb2_appendText("[정보]   HWP DLL 경로: " + regKey.GetValue("FilePathCheckerModuleExample").ToString());
@@ -127,7 +129,8 @@ namespace DocConvert_Util
                     tb2_appendText("[정보]   HWP DLL이 등록되어 있지 않습니다.");
                 }
             }
-            catch (Exception) {
+            catch (Exception)
+            {
                 tb2_appendText("[정보]   HWP DLL이 등록되어 있지 않습니다.");
             }
             finally
@@ -137,7 +140,9 @@ namespace DocConvert_Util
             #endregion
             comboBox1.SelectedIndex = 0;
             //디버깅 전용
-            textBox4.Text = "127.0.0.1:12000";
+            textBox4.Text = "127.0.0.1";
+            textBox5.Text = "12000";
+            textBox6.Text = "12100";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -151,12 +156,12 @@ namespace DocConvert_Util
                 "|All Files (*.*)|*.*";
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.RestoreDirectory = true;
-            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 textBox1.Text = "";
-                for(int i = 0; i < openFileDialog1.FileNames.Length; i++)
+                for (int i = 0; i < openFileDialog1.FileNames.Length; i++)
                 {
-                    if ((i+1) == openFileDialog1.FileNames.Length)
+                    if ((i + 1) == openFileDialog1.FileNames.Length)
                     {
                         textBox1.AppendText(openFileDialog1.FileNames[i]);
 
@@ -172,7 +177,7 @@ namespace DocConvert_Util
         private void button3_Click(object sender, EventArgs e)
         {
             // 유효성 검사
-            if(textBox1.Text.Equals("") || !new FileInfo(textBox1.Text).Exists) //파일이 없으면
+            if (textBox1.Text.Equals("") || !new FileInfo(textBox1.Text).Exists) //파일이 없으면
             {
                 tb2_appendText("파일이 존재하지 않습니다.");
                 return;
@@ -230,7 +235,8 @@ namespace DocConvert_Util
                     {
                         tb2_appendText("[상태]   지원포맷 아님. 파싱한 확장자: " + Path.GetExtension(FileNames[i]));
                     }
-                    if(status != null) {
+                    if (status != null)
+                    {
                         if (PAGINGNUM)
                             tb2_appendText("[정보]   페이지 수: " + Convert.ToString(status.PageCount));
 
@@ -286,8 +292,22 @@ namespace DocConvert_Util
             else
             {
                 #region Server 변환시
-                string serverIP = textBox4.Text.Split(':')[0];
-                int serverPORT = int.Parse(textBox4.Text.Split(':')[1]);
+                string serverIP = textBox4.Text;
+                int serverPORT = int.Parse(textBox5.Text);
+                int filePORT = int.Parse(textBox6.Text);
+                LogToConsole();
+                using (var ftpClient = new FtpClient())
+                {
+                    ftpClient.Host = serverIP;
+                    ftpClient.Port = filePORT;
+                    ftpClient.Credentials = new NetworkCredential("o0_0o", "890214hf!@");
+
+                    tb2_appendText(serverIP + ":" + filePORT + "에 연결을 시도합니다.");
+                    ftpClient.Connect();
+                    tb2_appendText(serverIP + ":" + filePORT + "에 연결하였습니다.");
+                    ftpClient.UploadFile(textBox1.Text, "tmp/" + Path.GetFileName(textBox1.Text), FtpRemoteExists.Overwrite, true);
+                    tb2_appendText("서버에 파일을 업로드하였습니다.");
+                }
                 // 아이피주소 유효성 검사
                 try
                 {
@@ -295,7 +315,7 @@ namespace DocConvert_Util
                 }
                 catch (Exception) { tb2_appendText("유효한 아이피 주소를 입력하세요."); return; }
                 // 포트번호 유효성 검사
-                if(serverPORT < IPEndPoint.MinPort || serverPORT > IPEndPoint.MaxPort)
+                if (serverPORT < IPEndPoint.MinPort || serverPORT > IPEndPoint.MaxPort)
                 {
                     tb2_appendText("유효한 포트번호를 입력하세요.");
                     return;
@@ -314,6 +334,10 @@ namespace DocConvert_Util
         }
 
         #region 서버 이벤트
+        private static void LogToConsole()
+        {
+            FtpTrace.AddListener(new TextWriterTraceListener("/Log/ftp.log"));
+        }
 
         private bool ConnectServer(string address, int port)
         {
@@ -323,7 +347,8 @@ namespace DocConvert_Util
                 socket.conn(address, port);
                 tb2_appendText("서버접속 성공!");
                 return true;
-            } catch(SocketException e1)
+            }
+            catch (SocketException e1)
             {
                 tb2_appendText(e1.Message);
                 return false;
@@ -357,6 +382,50 @@ namespace DocConvert_Util
                 var arySeg = new ArraySegment<byte>(recvData.Item2, 8, (recvData.Item1 - 8));
                 string msg = System.Text.Encoding.GetEncoding("utf-16").GetString(arySeg.ToArray());
                 tb2_appendText("서버에서 응답받은 메시지\r\n" + msg);
+                JObject responseData = JObject.Parse(msg);
+
+                string isSuccess = responseData["isSuccess"].ToString();
+                string url = null;
+                try
+                {
+                    url = responseData["URL"].ToString();
+                }
+                catch { }
+                string convertImgCnt = null;
+                try
+                {
+                    convertImgCnt = responseData["convertImgCnt"].ToString();
+                }
+                catch { }
+
+                string imgType = comboBox1.Text.Replace("<", "").Replace(">", "");
+
+                using (var ftpClient = new FtpClient())
+                {
+                    string serverIP = textBox4.Text;
+                    int filePORT = int.Parse(textBox6.Text);
+
+                    ftpClient.Host = serverIP;
+                    ftpClient.Port = filePORT;
+                    ftpClient.Credentials = new NetworkCredential("o0_0o", "890214hf!@");
+                    if (isSuccess.Equals("True"))
+                    {
+                        string outPath = Path.GetDirectoryName(textBox1.Text);
+                        string outFileName = Path.GetFileNameWithoutExtension(textBox1.Text);
+                        ftpClient.DownloadFile(outPath + @"\" + outFileName + ".pdf", url + "/" + outFileName + ".pdf", FtpLocalExists.Overwrite, FtpVerify.None);
+                        if(comboBox1.SelectedIndex != 0)
+                        {
+                            for(int i = 0; i<int.Parse(convertImgCnt); i++)
+                            {
+                                ftpClient.DownloadFile(outPath + @"\" + outFileName + @"\" + (i + 1) + "." + imgType, url + "/" + outFileName + "/" + (i + 1) + "." + imgType, FtpLocalExists.Overwrite, FtpVerify.None);
+                                tb2_appendText(outPath + @"\" + outFileName + @"\" + (i + 1) + "." + imgType + " 파일 다운로드 완료");
+                            }
+                        }
+                        tb2_appendText(outPath + @"\" + outFileName + ".pdf" + " 파일 다운로드 완료");
+                    }
+                    ftpClient.Disconnect();
+                    ftpClient.Dispose();
+                }
             }
             else
             {
@@ -373,7 +442,7 @@ namespace DocConvert_Util
         // 로그 폴더 실행
         private void button4_Click(object sender, EventArgs e)
         {
-            Process.Start(Application.StartupPath+@"\Log");
+            Process.Start(Application.StartupPath + @"\Log");
         }
 
         // IP입력창 키 이벤트
@@ -381,13 +450,13 @@ namespace DocConvert_Util
         {
             Console.WriteLine("KeyUp: {0}", e.KeyValue);
         }
-        
+
         // textBox2  문자열 추가
         private void tb2_appendText(string str)
         {
             textBox2.AppendText(System.DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss.fff") + "   " + str + "\r\n");
         }
-        
+
         // 한글 DLL 등록 버튼
         private void pictureBox1_Click(object sender, EventArgs e)
         {

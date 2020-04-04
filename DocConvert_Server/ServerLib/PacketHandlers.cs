@@ -67,12 +67,17 @@ namespace DocConvert_Server
                 string fileFullPath = createDirectory.FullName + @"\" + fileName;
                 string outPath = Path.GetDirectoryName(fileFullPath) + @"\" + Path.GetFileNameWithoutExtension(fileName) + ".pdf";
 
+                // 폴더가 있으면 삭제
+                if(createDirectory.Exists)
+                    createDirectory.Delete(true);
+
                 // 디렉토리 생성
                 if (!createDirectory.Exists)
                     createDirectory.Create();
+
                 // 파일 이동
-                //if (moveFile.Exists)
-                //   moveFile.MoveTo(fileFullPath);
+                if (moveFile.Exists)
+                   moveFile.MoveTo(fileFullPath);
 
                 // PDF로 변환
                 if (Path.GetExtension(fileFullPath).Equals(".docx") || Path.GetExtension(fileFullPath).Equals(".doc"))
@@ -136,7 +141,7 @@ namespace DocConvert_Server
                 }
 
 
-                responseMsg["URL"] = Properties.Settings.Default.serverIP + ":" + Properties.Settings.Default.fileServerPORT + "/" + documents + "/" + md5_filechecksum;
+                responseMsg["URL"] = "/" + documents + "/" + md5_filechecksum;
                 responseMsg["isSuccess"] = status.isSuccess;
                 if(PAGINGNUM)
                     responseMsg["pageNum"] = status.PageCount;

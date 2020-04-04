@@ -39,5 +39,13 @@ namespace DocConvert_Server
                 return Properties.Settings.Default.serverIP;
             }
         }
+
+        public static string getDataPath
+        {
+            get
+            {
+                return Properties.Settings.Default.DataPath;
+            }
+        }
     }
 }

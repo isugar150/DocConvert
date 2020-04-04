@@ -1,4 +1,7 @@
-﻿using System;
+﻿using FubarDev.FtpServer;
+using FubarDev.FtpServer.FileSystem.DotNet;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,7 +30,7 @@ namespace DocConvert_FileServer
             workProcessTimer.Tick += new EventHandler(OnProcessTimedEvent);
             workProcessTimer.Interval = new TimeSpan(0, 0, 0, 0, 32);
             workProcessTimer.Start();
-            DevLog.Write("테스트", LOG_LEVEL.INFO);
+
             new Thread(delegate ()
             {
                 while (!this.IsDisposed)
@@ -38,11 +41,58 @@ namespace DocConvert_FileServer
                         pictureBox1.Image = Properties.Resources.error_icon;
                     Thread.Sleep(1000);
                 }
+            }).Start(); 
+            new Thread(delegate ()
+            {
+                startServer();
             }).Start();
+        }
+        public async void startServer()
+        {
+            pictureBox2.Image = Properties.Resources.success_icon;
+            await startFileServer();
         }
 
         #region File Server Method
+        static async Task startFileServer()
+        {
+            // Setup dependency injection
+            var services = new ServiceCollection();
 
+            // use %TEMP%/TestFtpServer as root folder
+            services.Configure<DotNetFileSystemOptions>(opt => opt
+                .RootPath = DocConvert_Server.getSettings.getDataPath);
+
+            // Add FTP server services
+            // DotNetFileSystemProvider = Use the .NET file system functionality
+            // AnonymousMembershipProvider = allow only anonymous logins
+            services.AddFtpServer(builder => builder
+                .UseDotNetFileSystem() // Use the .NET file system functionality
+                .EnableAnonymousAuthentication()); // allow anonymous logins
+
+
+            // Configure the FTP server
+            services.Configure<FtpServerOptions>(opt => opt.ServerAddress = "*");
+            services.Configure<FtpServerOptions>(opt => opt.Port = DocConvert_Server.getSettings.getFileServerPORT);
+
+            // Build the service provider
+            using (var serviceProvider = services.BuildServiceProvider())
+            {
+                // Initialize the FTP server
+                var ftpServerHost = serviceProvider.GetRequiredService<IFtpServerHost>();
+
+                // Start the FTP server
+                await ftpServerHost.StartAsync();
+                DevLog.Write("[File Server Listening...]", LOG_LEVEL.INFO);
+                while (true)
+                {
+                    Thread.Sleep(3000000);
+                }
+
+                // Stop the FTP server
+                /*await ftpServerHost.StopAsync();*/
+            }
+        }
         #endregion
         #region Socket Server Method
         public static bool IsTcpPortAvailable(int tcpPort)
@@ -104,6 +154,12 @@ namespace DocConvert_FileServer
                     break;
                 }
             }
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.ExitThread();
+            Environment.Exit(0);
         }
     }
 }
