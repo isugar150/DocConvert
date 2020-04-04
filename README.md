@@ -1,7 +1,17 @@
 # 소개
 # DocConverter Server
 **Socket**
-- 준비중
+- [Client => Server]
+  "KEY": "ANY",
+  "FileName": "DOCUMENT.xlsx",
+  "ConvertIMG": 2,
+  "DocPassword": ""
+  
+ - [Server => Client]
+  "convertImgCnt": "92",
+  "URL": "/workspace/74C5728223BB8AE604AC1056C0D7DC2A",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다."
 
 # DocConverter Engien
 - 지원하는 프로그램(Word, Excel, PowerPoint, HWP)
