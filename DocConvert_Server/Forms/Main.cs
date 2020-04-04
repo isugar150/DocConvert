@@ -1,13 +1,11 @@
 ﻿using NLog;
 using System;
 using System.Net;
+using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-
-using DocConvert_Server;
-using Timer = System.Windows.Forms.Timer;
 
 namespace DocConvert_Server
 {
@@ -51,6 +49,10 @@ namespace DocConvert_Server
                     while (!this.IsDisposed)
                     {
                         toolStripStatusLabel2.Text = string.Format("        Session Connect Count: {0}/{1}", socketServer.SessionCount, Properties.Settings.Default.socketSessionCount);
+                        if (IsTcpPortAvailable(Properties.Settings.Default.fileServerPORT))
+                            pictureBox2.Image = Properties.Resources.success_icon;
+                        else
+                            pictureBox2.Image = Properties.Resources.error_icon;
                         Thread.Sleep(1000);
                     }
             }).Start();
@@ -65,7 +67,6 @@ namespace DocConvert_Server
 
         private void OnProcessTimedEvent(object sender, EventArgs e)
         {
-            // 너무 이 작업만 할 수 없으므로 일정 작업 이상을 하면 일단 패스한다.
             int logWorkCount = 0;
 
             while (true)
@@ -117,7 +118,22 @@ namespace DocConvert_Server
         #endregion
 
         #region File Method
+        public static bool IsTcpPortAvailable(int tcpPort)
+        {
+            var ipgp = IPGlobalProperties.GetIPGlobalProperties();
 
+            // Check LISTENING ports
+            IPEndPoint[] endpoints = ipgp.GetActiveTcpListeners();
+            foreach (var ep in endpoints)
+            {
+                if (ep.Port == tcpPort)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
         #endregion
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
