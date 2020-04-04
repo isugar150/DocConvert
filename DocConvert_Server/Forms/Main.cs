@@ -30,7 +30,7 @@ namespace DocConvert_Server
             if (IsResult)
             {
                 DevLog.Write("[Socket Server Listening...]", LOG_LEVEL.INFO);
-                DevLog.Write(string.Format("[INFO] IP: {0}   포트: {1}   프로토콜: {2}   서버이름: {3}", client_IP, socketServer.Config.Port, socketServer.Config.Mode, socketServer.Config.Name), LOG_LEVEL.INFO);
+                DevLog.Write(string.Format("[INFO] IP: {0}   포트: {1}   프로토콜: {2}   서버이름: {3}", Properties.Settings.Default.serverIP, socketServer.Config.Port, socketServer.Config.Mode, socketServer.Config.Name), LOG_LEVEL.INFO);
 
                 pictureBox1.Image = DocConvert_Server.Properties.Resources.success_icon;
             }
@@ -95,23 +95,6 @@ namespace DocConvert_Server
                 {
                     break;
                 }
-            }
-        }
-
-        private string client_IP
-        {
-            get
-            {
-                IPHostEntry host = Dns.GetHostEntry(Dns.GetHostName());
-                string ClientIP = string.Empty;
-                for (int i = 0; i < host.AddressList.Length; i++)
-                {
-                    if (host.AddressList[i].AddressFamily == AddressFamily.InterNetwork)
-                    {
-                        ClientIP = host.AddressList[i].ToString();
-                    }
-                }
-                return ClientIP;
             }
         }
 

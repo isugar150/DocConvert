@@ -14,6 +14,7 @@ using DocConvert_Core.HWPLib;
 
 using System.Security.Cryptography;
 using System.IO;
+using System.Threading;
 
 namespace DocConvert_Server
 {
@@ -68,11 +69,9 @@ namespace DocConvert_Server
                 string outPath = Path.GetDirectoryName(fileFullPath) + @"\" + Path.GetFileNameWithoutExtension(fileName) + ".pdf";
 
                 // 폴더가 있으면 삭제
-                if(createDirectory.Exists)
+                if (createDirectory.Exists)
                     createDirectory.Delete(true);
-
-                // 디렉토리 생성
-                if (!createDirectory.Exists)
+                   
                     createDirectory.Create();
 
                 // 파일 이동

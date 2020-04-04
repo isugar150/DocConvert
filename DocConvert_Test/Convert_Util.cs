@@ -22,6 +22,7 @@ using Microsoft.Win32;
 using System.Threading;
 using System.Net.Sockets;
 using FluentFTP;
+using System.Security.Authentication;
 
 namespace DocConvert_Util
 {
@@ -108,9 +109,19 @@ namespace DocConvert_Util
                     Setting["pagingnum"] = PAGINGNUM;
                 }
                 #endregion
+                #region FTP 계정 초기 데이터
+                textBox8.Text = Setting["ftpUser"].ToString();
+                textBox7.Text = Setting["ftpPwd"].ToString();
+                #endregion
             }
             else
             {
+                #region FTP 계정
+                Setting["ftpUser"] = "Anonymous";
+                Setting["ftpPwd"] = "";
+                textBox8.Text = Setting["ftpUser"].ToString();
+                textBox7.Text = Setting["ftpPwd"].ToString();
+                #endregion
                 tb2_appendText("[정보]   설정 파일이 존재하지 않습니다.");
             }
             #endregion
@@ -140,7 +151,7 @@ namespace DocConvert_Util
             #endregion
             comboBox1.SelectedIndex = 0;
             //디버깅 전용
-            textBox4.Text = "127.0.0.1";
+            textBox4.Text = "61.75.94.31";
             textBox5.Text = "12000";
             textBox6.Text = "12100";
         }
@@ -176,6 +187,8 @@ namespace DocConvert_Util
 
         private void button3_Click(object sender, EventArgs e)
         {
+            groupBox1.Enabled = false;
+            groupBox2.Enabled = false;
             // 유효성 검사
             if (textBox1.Text.Equals("") || !new FileInfo(textBox1.Text).Exists) //파일이 없으면
             {
@@ -288,6 +301,8 @@ namespace DocConvert_Util
                 else
                     tb2_appendText("[상태]   일부 파일 변환을 실패하였습니다.");
                 #endregion
+                groupBox1.Enabled = true;
+                groupBox2.Enabled = true;
             }
             else
             {
@@ -295,29 +310,45 @@ namespace DocConvert_Util
                 string serverIP = textBox4.Text;
                 int serverPORT = int.Parse(textBox5.Text);
                 int filePORT = int.Parse(textBox6.Text);
-                LogToConsole();
-                using (var ftpClient = new FtpClient())
+                string ftpUser = textBox8.Text;
+                string ftpPwd = textBox7.Text;
+                try
                 {
-                    ftpClient.Host = serverIP;
-                    ftpClient.Port = filePORT;
-                    ftpClient.Credentials = new NetworkCredential("o0_0o", "890214hf!@");
+                    using (var ftpClient = new FtpClient())
+                    {
+                        ftpClient.Host = serverIP;
+                        ftpClient.Port = filePORT;
+                        ftpClient.Credentials = new NetworkCredential(ftpUser, ftpPwd);
 
-                    tb2_appendText(serverIP + ":" + filePORT + "에 연결을 시도합니다.");
-                    ftpClient.Connect();
-                    tb2_appendText(serverIP + ":" + filePORT + "에 연결하였습니다.");
-                    ftpClient.UploadFile(textBox1.Text, "tmp/" + Path.GetFileName(textBox1.Text), FtpRemoteExists.Overwrite, true);
-                    tb2_appendText("서버에 파일을 업로드하였습니다.");
+                        tb2_appendText(serverIP + ":" + filePORT + "에 연결을 시도합니다.");
+                        ftpClient.Connect();
+                        Setting["ftpUser"] = textBox8.Text;
+                        Setting["ftpPwd"] = textBox7.Text;
+                        File.WriteAllText(Application.StartupPath + @"\Settings.json", Setting.ToString());
+                        tb2_appendText(serverIP + ":" + filePORT + "에 연결하였습니다.");
+
+                        ftpClient.UploadFile(textBox1.Text, "tmp/" + Path.GetFileName(textBox1.Text), FtpRemoteExists.Overwrite, true);
+                        tb2_appendText("서버에 파일을 업로드하였습니다.");
+                    }
+                } catch(Exception e1)
+                {
+                    tb2_appendText(e1.Message);
+                    groupBox1.Enabled = true;
+                    groupBox2.Enabled = true;
+                    return;
                 }
                 // 아이피주소 유효성 검사
                 try
                 {
                     IPAddress.Parse(serverIP);
                 }
-                catch (Exception) { tb2_appendText("유효한 아이피 주소를 입력하세요."); return; }
+                catch (Exception) { tb2_appendText("유효한 아이피 주소를 입력하세요."); groupBox1.Enabled = true; groupBox2.Enabled = true; return; }
                 // 포트번호 유효성 검사
                 if (serverPORT < IPEndPoint.MinPort || serverPORT > IPEndPoint.MaxPort)
                 {
                     tb2_appendText("유효한 포트번호를 입력하세요.");
+                    groupBox1.Enabled = true;
+                    groupBox2.Enabled = true;
                     return;
                 }
                 if (ConnectServer(serverIP, serverPORT))
@@ -332,12 +363,7 @@ namespace DocConvert_Util
                 #endregion
             }
         }
-
-        #region 서버 이벤트
-        private static void LogToConsole()
-        {
-            FtpTrace.AddListener(new TextWriterTraceListener("/Log/ftp.log"));
-        }
+        #region Socket Server Method
 
         private bool ConnectServer(string address, int port)
         {
@@ -404,10 +430,12 @@ namespace DocConvert_Util
                 {
                     string serverIP = textBox4.Text;
                     int filePORT = int.Parse(textBox6.Text);
+                    string ftpUser = textBox8.Text;
+                    string ftpPwd = textBox7.Text;
 
                     ftpClient.Host = serverIP;
                     ftpClient.Port = filePORT;
-                    ftpClient.Credentials = new NetworkCredential("o0_0o", "890214hf!@");
+                    ftpClient.Credentials = new NetworkCredential(ftpUser, ftpPwd);
                     if (isSuccess.Equals("True"))
                     {
                         string outPath = Path.GetDirectoryName(textBox1.Text);
@@ -433,6 +461,8 @@ namespace DocConvert_Util
             }
             socket.close(); //연결 해제
             tb2_appendText("서버와 연결을 해제하였습니다.");
+            groupBox1.Enabled = true;
+            groupBox2.Enabled = true;
         }
 
         #endregion

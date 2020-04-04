@@ -1,5 +1,7 @@
 {
-  "pagingnum": false,
+  "ftpUser": "user1",
+  "ftpPwd": "890214hf!@",
   "appvisible": true,
-  "runafter": false
+  "runafter": false,
+  "pagingnum": false
 }

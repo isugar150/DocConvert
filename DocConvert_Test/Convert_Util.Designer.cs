@@ -67,6 +67,10 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -88,6 +92,10 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.textBox8);
+            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.textBox5);
@@ -133,7 +141,7 @@
             // 
             this.textBox5.Location = new System.Drawing.Point(97, 55);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(77, 23);
+            this.textBox5.Size = new System.Drawing.Size(94, 23);
             this.textBox5.TabIndex = 18;
             // 
             // label2
@@ -165,7 +173,7 @@
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(9, 124);
+            this.label7.Location = new System.Drawing.Point(9, 153);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 15);
             this.label7.TabIndex = 14;
@@ -181,14 +189,14 @@
             "<jpg>",
             "<png>",
             "<bmp>"});
-            this.comboBox1.Location = new System.Drawing.Point(97, 121);
+            this.comboBox1.Location = new System.Drawing.Point(97, 150);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(77, 23);
             this.comboBox1.TabIndex = 13;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(252, 121);
+            this.textBox3.Location = new System.Drawing.Point(252, 150);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(113, 23);
@@ -197,7 +205,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(180, 125);
+            this.label4.Location = new System.Drawing.Point(180, 154);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 15);
             this.label4.TabIndex = 8;
@@ -230,7 +238,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(7, 91);
+            this.label1.Location = new System.Drawing.Point(7, 120);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 15);
             this.label1.TabIndex = 2;
@@ -239,7 +247,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(290, 83);
+            this.button1.Location = new System.Drawing.Point(290, 112);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 29);
@@ -250,7 +258,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(97, 85);
+            this.textBox1.Location = new System.Drawing.Point(97, 114);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(184, 23);
@@ -494,6 +502,39 @@
             this.textBox2.Size = new System.Drawing.Size(610, 193);
             this.textBox2.TabIndex = 0;
             // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(256, 84);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(106, 23);
+            this.textBox7.TabIndex = 24;
+            this.textBox7.UseSystemPasswordChar = true;
+            // 
+            // label10
+            // 
+            this.label10.Location = new System.Drawing.Point(180, 87);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(70, 15);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "FTP PWD:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(97, 84);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(77, 23);
+            this.textBox8.TabIndex = 22;
+            // 
+            // label11
+            // 
+            this.label11.Location = new System.Drawing.Point(9, 88);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(79, 15);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "FTP USER:";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // Convert_Util
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -570,6 +611,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label11;
     }
 }
 
