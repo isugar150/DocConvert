@@ -189,6 +189,12 @@ namespace DocConvert_Core.OfficeLib
                 excel.Quit();
                 Marshal.ReleaseComObject(excel);
                 excel = null;
+                excel = new Application { };
+                excel.Quit();
+                Marshal.ReleaseComObject(excel);
+                excel = null;
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
                 #endregion
                 logger.Info("==================== End ====================");
             }

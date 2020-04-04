@@ -29,3 +29,5 @@ C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\bin\Debug\FilePathCheckerModule
 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\bin\Debug\pdfium.dll
 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert_Server\obj\Debug\Interop.HWPCONTROLLib.dll
 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.csproj.ResolveComReference.cache
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\bin\Debug\WebServer\Data.zip
+C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\bin\Debug\WebServer\node-v12.16.1-x64.msi

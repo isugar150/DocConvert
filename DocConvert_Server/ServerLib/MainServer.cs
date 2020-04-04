@@ -44,7 +44,7 @@ namespace DocConvert_Server
             {
                 Port = Properties.Settings.Default.socketPORT,
                 Ip = "Any",
-                MaxConnectionNumber = Properties.Settings.Default.MaxConnectionNumber,
+                MaxConnectionNumber = Properties.Settings.Default.socketSessionCount,
                 Mode = SocketMode.Tcp,
                 Name = Properties.Settings.Default.serverName
             };

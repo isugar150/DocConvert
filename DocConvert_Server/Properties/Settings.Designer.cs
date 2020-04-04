@@ -53,9 +53,9 @@ namespace DocConvert_Server.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("100")]
-        public int MaxConnectionNumber {
+        public int socketSessionCount {
             get {
-                return ((int)(this["MaxConnectionNumber"]));
+                return ((int)(this["socketSessionCount"]));
             }
         }
         

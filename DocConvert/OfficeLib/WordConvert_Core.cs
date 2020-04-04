@@ -174,6 +174,8 @@ namespace DocConvert_Core.OfficeLib
                 word.Quit();
                 Marshal.ReleaseComObject(word);
                 word = null;
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
                 #endregion
                 logger.Info("==================== End ====================");
             }

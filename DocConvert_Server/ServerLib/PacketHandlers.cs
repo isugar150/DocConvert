@@ -56,13 +56,13 @@ namespace DocConvert_Server
                 string docPassword = null; // 문서 비밀번호
                 string dataPath = Properties.Settings.Default.DataPath; // 파일 출력경로
 
-                string documents = @"\workspace\";
-                string tmpPath = @"\tmp\";
+                string documents = @"workspace";
+                string tmpPath = @"tmp";
 
-                string md5_filechecksum = MD5_CheckSUM(dataPath + tmpPath + fileName).ToString(); // 파일 체크섬 추출
+                string md5_filechecksum = MD5_CheckSUM(dataPath + @"\" + tmpPath + @"\" + fileName).ToString(); // 파일 체크섬 추출
 
-                DirectoryInfo createDirectory = new DirectoryInfo(dataPath + documents + md5_filechecksum);
-                FileInfo moveFile = new FileInfo(dataPath + tmpPath + fileName);
+                DirectoryInfo createDirectory = new DirectoryInfo(dataPath + @"\" + documents + @"\" + md5_filechecksum);
+                FileInfo moveFile = new FileInfo(dataPath + @"\" + tmpPath + @"\" + fileName);
 
                 string fileFullPath = createDirectory.FullName + @"\" + fileName;
                 string outPath = Path.GetDirectoryName(fileFullPath) + @"\" + Path.GetFileNameWithoutExtension(fileName) + ".pdf";
@@ -136,7 +136,7 @@ namespace DocConvert_Server
                 }
 
 
-                responseMsg["URL"] = Properties.Settings.Default.serverIP + "/";
+                responseMsg["URL"] = Properties.Settings.Default.serverIP + ":" + Properties.Settings.Default.fileServerPORT + "/" + documents + "/" + md5_filechecksum;
                 responseMsg["isSuccess"] = status.isSuccess;
                 if(PAGINGNUM)
                     responseMsg["pageNum"] = status.PageCount;

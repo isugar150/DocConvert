@@ -1,0 +1,24 @@
+2020-04-04 13:12:49.3969 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-04 13:12:49.3969 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 87
+
+2020-04-04 13:12:49.4099 ERROR - 변환 실패: 명령을 정상적으로 종료할 수 없습니다.
+2020-04-04 13:12:49.4099 ERROR - ==================== End ====================
+2020-04-04 13:40:51.9041 ERROR - ==================== Method: ExcelSaveAs ====================
+2020-04-04 13:40:51.9101 ERROR -    위치: Microsoft.Office.Interop.Excel._Workbook.ExportAsFixedFormat(XlFixedFormatType Type, Object Filename, Object Quality, Object IncludeDocProperties, Object IgnorePrintAreas, Object From, Object To, Object OpenAfterPublish, Object FixedFormatExtClassPtr)
+   위치: DocConvert_Core.OfficeLib.ExcelConvert_Core.ExcelSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\ExcelConvert_Core.cs:줄 150
+
+2020-04-04 13:40:51.9101 ERROR - 변환 실패: 문서가 저장되지 않았습니다. 문서가 열려 있거나 문서를 저장할 때 오류가 발생했습니다.
+2020-04-04 13:40:51.9210 ERROR - ==================== End ====================
+2020-04-04 13:45:02.2908 ERROR - ==================== Method: ExcelSaveAs ====================
+2020-04-04 13:45:02.2908 ERROR -    위치: Microsoft.Office.Interop.Excel._Workbook.Activate()
+   위치: DocConvert_Core.OfficeLib.ExcelConvert_Core.ExcelSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\ExcelConvert_Core.cs:줄 100
+
+2020-04-04 13:45:02.3028 ERROR - 변환 실패: 예외가 발생한 HRESULT: 0x800AC472
+2020-04-04 13:45:02.3028 ERROR - ==================== End ====================
+2020-04-04 13:47:33.4767 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-04 13:47:33.4767 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 87
+
+2020-04-04 13:47:33.4896 ERROR - 변환 실패: 명령을 정상적으로 종료할 수 없습니다.
+2020-04-04 13:47:33.4896 ERROR - ==================== End ====================
