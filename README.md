@@ -1,4 +1,8 @@
 # 소개
+- 지원하는 확장자: docx, doc, xlsx, xls, pptx, ppt, hwp, pdf, txt, html  
+해당 문서파일을 PDF또는 이미지로 변환합니다.  
+
+사용된 라이브러리: SuperSocket, pdfium, NLOG, OfficeAPI, HWP API, log4j, FluentFTP    
 # DocConverter Server
 **Socket**
 - [Client => Server]  
