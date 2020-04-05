@@ -152,7 +152,7 @@ namespace DocConvert_Util
             #endregion
             comboBox1.SelectedIndex = 0;
             //디버깅 전용
-            textBox4.Text = "192.168.0.111";
+            textBox4.Text = "127.0.0.1";
             textBox5.Text = "12000";
             textBox6.Text = "12100";
         }
@@ -160,8 +160,8 @@ namespace DocConvert_Util
         private void button1_Click(object sender, EventArgs e)
         {
             openFileDialog1.FileName = "";
-            openFileDialog1.Filter = "지원하는 형식 (*.docx;*.doc;*.hwp;*.xlsx;*.xls;*.pptx;*.ppt;*.pdf)|*.docx;*.doc;*.hwp;*.xlsx;*.xls;*.pptx;*.ppt;*.ppt;*.pdf" +
-                "|Word 형식 (*.docx;*.doc;*.hwp;)|*.docx;*.doc;*.hwp;" +
+            openFileDialog1.Filter = "지원하는 형식 (*.docx;*.doc;*.hwp;*.xlsx;*.xls;*.pptx;*.ppt;*.pdf;*.txt;*.html;)|*.docx;*.doc;*.hwp;*.xlsx;*.xls;*.pptx;*.ppt;*.ppt;*.pdf;*.txt;*.html;" +
+                "|Word 형식 (*.docx;*.doc;*.hwp;*.txt;*.html;)|*.docx;*.doc;*.hwp;*.txt;*.html;" +
                 "|Cell 형식 (*.xlsx;*.xls;)|*.xlsx;*.xls;" +
                 "|PPT 형식 (*.pptx;*.ppt;)|*.pptx;*.ppt;" +
                 "|PDF 형식 (*.pdf)|*.pdf" +
@@ -224,7 +224,7 @@ namespace DocConvert_Util
                     tb2_appendText("[정보]   출력 경로: " + outPath);
                     if (!textBox3.Text.Equals(""))
                         passwd = textBox3.Text;
-                    if (Path.GetExtension(FileNames[i]).Equals(".docx") || Path.GetExtension(FileNames[i]).Equals(".doc"))
+                    if (Path.GetExtension(FileNames[i]).Equals(".docx") || Path.GetExtension(FileNames[i]).Equals(".doc") || Path.GetExtension(FileNames[i]).Equals(".txt") || Path.GetExtension(FileNames[i]).Equals(".html"))
                     {
                         status = WordConvert_Core.WordSaveAs(FileNames[i], outPath, passwd, PAGINGNUM, APPVISIBLE);
                     }
@@ -307,7 +307,7 @@ namespace DocConvert_Util
                 #endregion
                 groupBox1.Enabled = true;
                 groupBox2.Enabled = true;
-                TimeSpan curTime = timeTaken - DateTime.Now;
+                TimeSpan curTime = DateTime.Now - timeTaken;
                 tb2_appendText(string.Format("작업 소요시간: {0}", curTime.ToString()));
             }
             else
@@ -383,6 +383,8 @@ namespace DocConvert_Util
             catch (SocketException e1)
             {
                 tb2_appendText(e1.Message);
+                groupBox1.Enabled = true;
+                groupBox2.Enabled = true;
                 return false;
             }
         }
@@ -469,7 +471,7 @@ namespace DocConvert_Util
             tb2_appendText("서버와 연결을 해제하였습니다.");
             groupBox1.Enabled = true;
             groupBox2.Enabled = true;
-            TimeSpan curTime = timeTaken - DateTime.Now;
+            TimeSpan curTime = DateTime.Now - timeTaken;
             tb2_appendText(string.Format("작업 소요시간: {0}", curTime.ToString()));
         }
 

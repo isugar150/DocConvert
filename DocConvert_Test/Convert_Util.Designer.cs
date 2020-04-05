@@ -31,11 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Convert_Util));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -67,10 +70,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.textBox4 = new IPAddressControlLib.IPAddressControl();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -92,6 +92,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.textBox8);
@@ -100,7 +101,6 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.comboBox1);
@@ -121,18 +121,51 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Convert to PDF";
             // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(256, 84);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(106, 23);
+            this.textBox7.TabIndex = 24;
+            this.textBox7.UseSystemPasswordChar = true;
+            // 
+            // label10
+            // 
+            this.label10.Location = new System.Drawing.Point(180, 87);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(70, 15);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "FTP PWD:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(97, 84);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(77, 23);
+            this.textBox8.TabIndex = 22;
+            // 
+            // label11
+            // 
+            this.label11.Location = new System.Drawing.Point(9, 88);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(79, 15);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "FTP USER:";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(285, 55);
+            this.textBox6.Location = new System.Drawing.Point(256, 56);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(77, 23);
             this.textBox6.TabIndex = 20;
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(197, 59);
+            this.label9.Location = new System.Drawing.Point(193, 60);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(79, 15);
+            this.label9.Size = new System.Drawing.Size(54, 15);
             this.label9.TabIndex = 19;
             this.label9.Text = "File Port:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -141,7 +174,7 @@
             // 
             this.textBox5.Location = new System.Drawing.Point(97, 55);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(94, 23);
+            this.textBox5.Size = new System.Drawing.Size(77, 23);
             this.textBox5.TabIndex = 18;
             // 
             // label2
@@ -152,13 +185,6 @@
             this.label2.TabIndex = 17;
             this.label2.Text = "Socket Port:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(97, 26);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(265, 23);
-            this.textBox4.TabIndex = 16;
             // 
             // checkBox1
             // 
@@ -502,38 +528,20 @@
             this.textBox2.Size = new System.Drawing.Size(610, 193);
             this.textBox2.TabIndex = 0;
             // 
-            // textBox7
+            // textBox4
             // 
-            this.textBox7.Location = new System.Drawing.Point(256, 84);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(106, 23);
-            this.textBox7.TabIndex = 24;
-            this.textBox7.UseSystemPasswordChar = true;
-            // 
-            // label10
-            // 
-            this.label10.Location = new System.Drawing.Point(180, 87);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 15);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "FTP PWD:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(97, 84);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(77, 23);
-            this.textBox8.TabIndex = 22;
-            // 
-            // label11
-            // 
-            this.label11.Location = new System.Drawing.Point(9, 88);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(79, 15);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "FTP USER:";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.textBox4.AllowInternalTab = false;
+            this.textBox4.AutoHeight = true;
+            this.textBox4.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.textBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox4.Location = new System.Drawing.Point(97, 28);
+            this.textBox4.MinimumSize = new System.Drawing.Size(99, 23);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = false;
+            this.textBox4.Size = new System.Drawing.Size(99, 23);
+            this.textBox4.TabIndex = 25;
+            this.textBox4.Text = "...";
             // 
             // Convert_Util
             // 
@@ -606,7 +614,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox6;
@@ -615,6 +622,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label11;
+        private IPAddressControlLib.IPAddressControl textBox4;
     }
 }
 

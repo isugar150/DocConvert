@@ -133,3 +133,134 @@
 2020-04-05 11:28:59.5142 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
 2020-04-05 12:28:45.2469 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
 2020-04-05 12:33:02.3490 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 14:13:42.6043 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 14:16:52.8075 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 14:21:14.1046 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 14:21:32.3155 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 14:23:37.0404 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 14:35:42.2818 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-05 14:35:42.2987 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 92
+
+2020-04-05 14:35:42.3057 ERROR - 변환 실패: 명령을 정상적으로 종료할 수 없습니다.
+2020-04-05 14:35:42.3057 ERROR - ==================== End ====================
+2020-04-05 14:36:25.5259 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-05 14:36:25.5259 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 92
+
+2020-04-05 14:36:25.5259 ERROR - 변환 실패: 명령을 정상적으로 종료할 수 없습니다.
+2020-04-05 14:36:25.5259 ERROR - ==================== End ====================
+2020-04-05 14:37:02.1667 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-05 14:37:02.1667 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 92
+
+2020-04-05 14:37:02.1667 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-05 14:37:02.1667 ERROR - ==================== End ====================
+2020-04-05 14:37:30.2498 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-05 14:37:30.2498 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 92
+
+2020-04-05 14:37:30.2638 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-05 14:37:30.2638 ERROR - ==================== End ====================
+2020-04-05 14:38:40.7754 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-05 14:38:40.7754 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 92
+
+2020-04-05 14:38:40.7754 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-05 14:38:40.7754 ERROR - ==================== End ====================
+2020-04-05 14:39:05.2520 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-05 14:39:05.2520 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 92
+
+2020-04-05 14:39:05.2640 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-05 14:39:05.2640 ERROR - ==================== End ====================
+2020-04-05 14:40:15.0282 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-05 14:40:15.0282 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 92
+
+2020-04-05 14:40:15.0412 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-05 14:40:15.0412 ERROR - ==================== End ====================
+2020-04-05 14:40:20.8716 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-05 14:40:20.8716 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 92
+
+2020-04-05 14:40:20.8716 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-05 14:40:20.8716 ERROR - ==================== End ====================
+2020-04-05 14:40:41.8567 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-05 14:40:41.8567 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 92
+
+2020-04-05 14:40:41.8567 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-05 14:40:41.8567 ERROR - ==================== End ====================
+2020-04-05 14:43:49.2982 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-05 14:43:49.2982 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 92
+
+2020-04-05 14:43:49.3122 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-05 14:43:49.3122 ERROR - ==================== End ====================
+2020-04-05 14:44:19.8547 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-05 14:44:19.8547 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 92
+
+2020-04-05 14:44:19.8547 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-05 14:44:19.8547 ERROR - ==================== End ====================
+2020-04-05 14:44:23.7357 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-05 14:44:23.7357 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 92
+
+2020-04-05 14:44:23.7357 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-05 14:44:23.7357 ERROR - ==================== End ====================
+2020-04-05 14:46:57.6628 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-05 14:46:57.6687 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 96
+
+2020-04-05 14:46:57.6687 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-05 14:46:57.6687 ERROR - ==================== End ====================
+2020-04-05 14:50:31.0102 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-05 14:50:31.2952 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 92
+
+2020-04-05 14:50:32.8100 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-05 14:50:34.9017 ERROR - ==================== End ====================
+2020-04-05 14:54:18.3372 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-05 14:54:18.3372 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 90
+
+2020-04-05 14:54:18.3372 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-05 14:54:18.3372 ERROR - ==================== End ====================
+2020-04-05 14:57:31.8324 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-05 14:57:31.8373 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 90
+
+2020-04-05 14:57:31.8373 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-05 14:57:31.8373 ERROR - ==================== End ====================
+2020-04-05 15:01:22.0920 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-05 15:01:22.0920 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 90
+
+2020-04-05 15:01:22.1030 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-05 15:01:22.1030 ERROR - ==================== End ====================
+2020-04-05 15:04:14.3920 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-05 15:04:14.3920 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 90
+
+2020-04-05 15:04:14.4040 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-05 15:04:14.4040 ERROR - ==================== End ====================
+2020-04-05 15:08:17.1160 ERROR - ==================== Method: WordSaveAs ====================
+2020-04-05 15:08:17.1210 ERROR -    위치: Microsoft.Office.Interop.Word.Documents.Open(Object& FileName, Object& ConfirmConversions, Object& ReadOnly, Object& AddToRecentFiles, Object& PasswordDocument, Object& PasswordTemplate, Object& Revert, Object& WritePasswordDocument, Object& WritePasswordTemplate, Object& Format, Object& Encoding, Object& Visible, Object& OpenAndRepair, Object& DocumentDirection, Object& NoEncodingDialog, Object& XMLTransform)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\WordConvert_Core.cs:줄 90
+
+2020-04-05 15:08:17.1210 ERROR - 변환 실패: 형식이 일치하지 않습니다. (예외가 발생한 HRESULT: 0x80020005 (DISP_E_TYPEMISMATCH))
+2020-04-05 15:08:17.1210 ERROR - ==================== End ====================
+2020-04-05 15:13:55.0923 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 15:15:03.4706 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 15:15:59.9080 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 15:25:47.0613 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 15:25:58.1397 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 15:26:42.2355 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 15:26:59.7291 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 15:27:12.1810 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 15:27:37.0340 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 15:28:33.8359 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 15:28:52.8228 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 15:29:27.9233 ERROR - 권한이 없는 작업을 수행하려고 했습니다.

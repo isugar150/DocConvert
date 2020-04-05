@@ -35,6 +35,7 @@ namespace DocConvert_Server
         {
             DevLog.Write(string.Format("\r\n[Client => Server]\r\n{0}\r\n", Encoding.Unicode.GetString(requestInfo.Body)), LOG_LEVEL.INFO); // 클라이언트가 서버로 보낸 메시지
             JObject responseMsg = new JObject();
+            DateTime timeTaken = DateTime.Now;
             try
             {
                 JObject requestMsg = JObject.Parse(Encoding.Unicode.GetString(requestInfo.Body)); // 요청받은 JSON 파싱
@@ -77,7 +78,8 @@ namespace DocConvert_Server
                    moveFile.MoveTo(fileFullPath);
 
                 // PDF로 변환
-                if (Path.GetExtension(fileFullPath).Equals(".docx") || Path.GetExtension(fileFullPath).Equals(".doc"))
+
+                if (Path.GetExtension(fileFullPath).Equals(".docx") || Path.GetExtension(fileFullPath).Equals(".doc") || Path.GetExtension(fileFullPath).Equals(".txt") || Path.GetExtension(fileFullPath).Equals(".html"))
                 {
                     status = WordConvert_Core.WordSaveAs(fileFullPath, outPath, docPassword, PAGINGNUM, APPVISIBLE);
                 }
@@ -158,7 +160,11 @@ namespace DocConvert_Server
                 responseMsg["msg"] = e1.Message;
             }
 
+
             DevLog.Write(string.Format("\r\n[Server => Client]\r\n{0}\r\n", responseMsg.ToString()), LOG_LEVEL.INFO); // 클라이언트가 서버로 보낸 메시지
+
+            TimeSpan curTime = DateTime.Now - timeTaken;
+            DevLog.Write(string.Format("작업 소요시간: {0}", curTime.ToString()), LOG_LEVEL.DEBUG);
 
             List<byte> dataSource = new List<byte>();
             dataSource.AddRange(BitConverter.GetBytes((int)PACKETID.REQ_ECHO));

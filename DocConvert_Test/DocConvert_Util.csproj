@@ -55,6 +55,9 @@
     <Reference Include="FluentFTP, Version=32.3.1.0, Culture=neutral, PublicKeyToken=f4af092b1d8df44f, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentFTP.32.3.1\lib\net45\FluentFTP.dll</HintPath>
     </Reference>
+    <Reference Include="IPAddressControlLib">
+      <HintPath>..\..\..\..\..\Desktop\TestIPAddressControl\bin\Release\IPAddressControlLib.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>

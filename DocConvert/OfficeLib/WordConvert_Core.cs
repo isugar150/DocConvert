@@ -12,6 +12,7 @@ using Microsoft.Office.Interop.Word;
 using NLog;
 using Word = Microsoft.Office.Interop.Word;
 using Microsoft.Office.Core;
+using System.IO;
 
 namespace DocConvert_Core.OfficeLib
 {
@@ -76,6 +77,10 @@ namespace DocConvert_Core.OfficeLib
                 object WritePasswordDocument = Type.Missing;
                 object WritePasswordTemplate = Type.Missing;
                 object Format = Type.Missing;
+                if (Path.GetExtension(FilePath).Equals(".txt"))
+                    Format = WdOpenFormat.wdOpenFormatEncodedText;
+                else if (Path.GetExtension(FilePath).Equals(".html"))
+                    Format = WdOpenFormat.wdOpenFormatWebPages;
                 object Encoding = Type.Missing;
                 object Visible = false;
                 object OpenAndRepair = Type.Missing;
@@ -86,7 +91,9 @@ namespace DocConvert_Core.OfficeLib
                 #region 문서 열기
                 _Document doc = word.Documents.Open(
                     FilePath,
+                    ConfirmConversions,
                     ReadOnly,
+                    AddToRecentFiles,
                     PasswordDocument,
                     PasswordTemplate,
                     Revert,
