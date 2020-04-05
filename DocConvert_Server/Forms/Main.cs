@@ -95,7 +95,7 @@ namespace DocConvert_Server
 
         #region WebSocket Method
         //웹 소켓으로 접속하는 클라이언트를 받아들입니다.
-        static async Task AcceptWebSocketClientsAsync(WebSocketListener server, CancellationToken token)
+        async Task AcceptWebSocketClientsAsync(WebSocketListener server, CancellationToken token)
         {
             while (!token.IsCancellationRequested)
             {
@@ -113,12 +113,13 @@ namespace DocConvert_Server
                 catch (Exception aex)
                 {
                     DevLog.Write("[WebSocket] Error Accepting clients: " + aex.GetBaseException().Message);
+                    pictureBox3.Image = Properties.Resources.error_icon;
                 }
             }
             DevLog.Write("[WebSocket] Server Stop accepting clients");
         }
 
-        static async Task HandleConnectionAsync(WebSocket ws, CancellationToken cancellation)
+        async Task HandleConnectionAsync(WebSocket ws, CancellationToken cancellation)
         {
             try
             {
@@ -147,9 +148,11 @@ namespace DocConvert_Server
 
                             ws.Close();
 
+                            DevLog.Write("[WebSocket]서버와 연결이 해제되었습니다.", LOG_LEVEL.INFO);
                         } catch(Exception e1)
                         {
                             responseMsg["Msg"] = e1.Message;
+                            pictureBox3.Image = Properties.Resources.error_icon;
                         }
                     }
                 }
@@ -157,6 +160,7 @@ namespace DocConvert_Server
             catch (Exception aex)
             {
                 DevLog.Write("[WebSocket] Error Handling connection: " + aex.GetBaseException().Message);
+                pictureBox3.Image = Properties.Resources.error_icon;
                 try { ws.Close(); }
                 catch { }
             }

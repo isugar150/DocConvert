@@ -61,7 +61,7 @@ namespace DocConvert_Server.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
         public int LogMaxCount {
             get {
                 return ((int)(this["LogMaxCount"]));
