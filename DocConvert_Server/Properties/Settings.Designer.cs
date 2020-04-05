@@ -61,7 +61,7 @@ namespace DocConvert_Server.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("300")]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
         public int LogMaxCount {
             get {
                 return ((int)(this["LogMaxCount"]));
@@ -101,6 +101,24 @@ namespace DocConvert_Server.Properties {
         public bool ConvertVisible {
             get {
                 return ((bool)(this["ConvertVisible"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("12005")]
+        public int webSocketPORT {
+            get {
+                return ((int)(this["webSocketPORT"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool FollowTail {
+            get {
+                return ((bool)(this["FollowTail"]));
             }
         }
     }

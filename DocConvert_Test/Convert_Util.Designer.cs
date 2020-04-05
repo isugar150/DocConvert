@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Convert_Util));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -70,7 +71,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new IPAddressControlLib.IPAddressControl();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -120,6 +120,13 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Convert to PDF";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(97, 28);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(104, 23);
+            this.textBox4.TabIndex = 25;
             // 
             // textBox7
             // 
@@ -528,21 +535,6 @@
             this.textBox2.Size = new System.Drawing.Size(610, 193);
             this.textBox2.TabIndex = 0;
             // 
-            // textBox4
-            // 
-            this.textBox4.AllowInternalTab = false;
-            this.textBox4.AutoHeight = true;
-            this.textBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.textBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox4.Location = new System.Drawing.Point(97, 28);
-            this.textBox4.MinimumSize = new System.Drawing.Size(99, 23);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = false;
-            this.textBox4.Size = new System.Drawing.Size(99, 23);
-            this.textBox4.TabIndex = 25;
-            this.textBox4.Text = "...";
-            // 
             // Convert_Util
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -622,7 +614,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label11;
-        private IPAddressControlLib.IPAddressControl textBox4;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
 
