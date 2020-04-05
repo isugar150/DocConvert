@@ -107,14 +107,12 @@ namespace DocConvert_Server
                         pdfreturnValue.Message = "PDF파일은 변환할 필요가 없습니다.";
                         pdfreturnValue.PageCount = ConvertImg.pdfPageCount(fileFullPath);
                         status = pdfreturnValue;
-                        return;
                     }
                 }
                 else
                 {
                     responseMsg["msg"] = "[상태]   지원포맷 아님. 파싱한 확장자: " + Path.GetExtension(fileFullPath);
                     responseMsg["isSuccess"] = false;
-                    return;
                 }
 
                 if (!convertIMG.Equals("0"))
@@ -145,12 +143,14 @@ namespace DocConvert_Server
                     }
                 }
 
-
-                responseMsg["URL"] = "/" + documents + "/" + md5_filechecksum;
-                responseMsg["isSuccess"] = status.isSuccess;
-                if(PAGINGNUM)
-                    responseMsg["pageNum"] = status.PageCount;
-                responseMsg["msg"] = status.Message;
+                if (status.isSuccess)
+                {
+                    responseMsg["URL"] = "/" + documents + "/" + md5_filechecksum;
+                    responseMsg["isSuccess"] = status.isSuccess;
+                    if (PAGINGNUM)
+                        responseMsg["pageNum"] = status.PageCount;
+                    responseMsg["msg"] = status.Message;
+                }
 
             } catch(Exception e1)
             {

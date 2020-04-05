@@ -34,6 +34,7 @@ namespace DocConvert_Util
         private bool APPVISIBLE = false;
         private bool RUNAFTER = false;
         private bool PAGINGNUM = false;
+        private DateTime timeTaken;
         public Convert_Util()
         {
             InitializeComponent();
@@ -187,6 +188,7 @@ namespace DocConvert_Util
 
         private void button3_Click(object sender, EventArgs e)
         {
+            timeTaken = DateTime.Now;
             groupBox1.Enabled = false;
             groupBox2.Enabled = false;
             // 유효성 검사
@@ -305,6 +307,8 @@ namespace DocConvert_Util
                 #endregion
                 groupBox1.Enabled = true;
                 groupBox2.Enabled = true;
+                TimeSpan curTime = timeTaken - DateTime.Now;
+                tb2_appendText(string.Format("작업 소요시간: {0}", curTime.ToString()));
             }
             else
             {
@@ -465,6 +469,8 @@ namespace DocConvert_Util
             tb2_appendText("서버와 연결을 해제하였습니다.");
             groupBox1.Enabled = true;
             groupBox2.Enabled = true;
+            TimeSpan curTime = timeTaken - DateTime.Now;
+            tb2_appendText(string.Format("작업 소요시간: {0}", curTime.ToString()));
         }
 
         #endregion
