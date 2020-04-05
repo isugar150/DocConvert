@@ -94,5 +94,14 @@ namespace DocConvert_Server.Properties {
                 return ((int)(this["fileServerPORT"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ConvertVisible {
+            get {
+                return ((bool)(this["ConvertVisible"]));
+            }
+        }
     }
 }

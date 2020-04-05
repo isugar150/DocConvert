@@ -12,6 +12,7 @@ using DocConvert_Core.interfaces;
 using DocConvert_Core.FileLib;
 using Microsoft.Win32;
 using NLog;
+using System.Threading;
 
 namespace DocConvert_Core.HWPLib
 {
@@ -24,6 +25,7 @@ namespace DocConvert_Core.HWPLib
         /// <param name="FilePath">소스 경로</param>
         /// <param name="outPath">내보낼 경로</param>
         /// <returns></returns>
+        [STAThread]
         public static ReturnValue HwpSaveAs(string FilePath, string outPath, bool PageCounting)
         {
             ReturnValue returnValue = new ReturnValue();
@@ -45,8 +47,8 @@ namespace DocConvert_Core.HWPLib
             AxHWPCONTROLLib.AxHwpCtrl axHwpCtrl = null;
             try
             {
-                 axHwpCtrl = new AxHWPCONTROLLib.AxHwpCtrl();
-                
+                axHwpCtrl = new AxHWPCONTROLLib.AxHwpCtrl();
+
                 axHwpCtrl.CreateControl();
                 
                 axHwpCtrl.RegisterModule("FilePathCheckDLL", "FilePathCheckerModuleExample");

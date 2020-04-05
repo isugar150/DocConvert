@@ -26,5 +26,8 @@
     <Setting Name="fileServerPORT" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">12100</Value>
     </Setting>
+    <Setting Name="ConvertVisible" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

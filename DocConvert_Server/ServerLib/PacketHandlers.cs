@@ -28,14 +28,13 @@ namespace DocConvert_Server
     {
         REQ_ECHO = 1,
     }
-
     public class CommonHandler
     {
+        ReturnValue status = new ReturnValue();
         public void RequestMsg(NetworkSession session, EFBinaryRequestInfo requestInfo)
         {
             DevLog.Write(string.Format("\r\n[Client => Server]\r\n{0}\r\n", Encoding.Unicode.GetString(requestInfo.Body)), LOG_LEVEL.INFO); // 클라이언트가 서버로 보낸 메시지
             JObject responseMsg = new JObject();
-
             try
             {
                 JObject requestMsg = JObject.Parse(Encoding.Unicode.GetString(requestInfo.Body)); // 요청받은 JSON 파싱
@@ -48,9 +47,8 @@ namespace DocConvert_Server
                     return;
                 }
 
-                ReturnValue status = null;
                 bool PAGINGNUM = false;
-                bool APPVISIBLE = true;
+                bool APPVISIBLE = Properties.Settings.Default.ConvertVisible;
                 string fileName = requestMsg["FileName"].ToString(); // 파일 이름
                 string convertIMG = requestMsg["ConvertIMG"].ToString(); // 0: NONE  1:JPEG  2:PNG  3:BMP
                 //string docPassword = requestMsg["DocPassword"].ToString(); // 문서 비밀번호
@@ -93,15 +91,24 @@ namespace DocConvert_Server
                 }
                 else if (Path.GetExtension(fileFullPath).Equals(".hwp"))
                 {
-                    status = HWPConvert_Core.HwpSaveAs(fileFullPath, outPath, PAGINGNUM);
+                    Thread HWPConvert = new Thread(() => {
+                        status = HWPConvert_Core.HwpSaveAs(fileFullPath, outPath, PAGINGNUM);
+                    });
+                    HWPConvert.SetApartmentState(ApartmentState.STA);
+                    HWPConvert.Start();
+                    HWPConvert.Join();
                 }
                 else if (Path.GetExtension(fileFullPath).Equals(".pdf"))
                 {
-                    ReturnValue pdfreturnValue = new ReturnValue();
-                    pdfreturnValue.isSuccess = true;
-                    pdfreturnValue.Message = "PDF파일은 변환할 필요가 없습니다.";
-                    pdfreturnValue.PageCount = ConvertImg.pdfPageCount(fileFullPath);
-                    status = pdfreturnValue;
+                    if (convertIMG.Equals("0"))
+                    {
+                        ReturnValue pdfreturnValue = new ReturnValue();
+                        pdfreturnValue.isSuccess = true;
+                        pdfreturnValue.Message = "PDF파일은 변환할 필요가 없습니다.";
+                        pdfreturnValue.PageCount = ConvertImg.pdfPageCount(fileFullPath);
+                        status = pdfreturnValue;
+                        return;
+                    }
                 }
                 else
                 {
@@ -113,25 +120,24 @@ namespace DocConvert_Server
                 if (!convertIMG.Equals("0"))
                 {
                     // 이미지로 변환
-                    ReturnValue pdfToImgReturn = null;
                     String imageOutput = Path.GetDirectoryName(outPath) + "\\" + Path.GetFileNameWithoutExtension(outPath) + "\\";
                     if (!new DirectoryInfo(imageOutput).Exists)
                         new DirectoryInfo(imageOutput).Create();
                     if (convertIMG.Equals("1"))
                     {
-                        pdfToImgReturn = ConvertImg.PDFtoJpeg(outPath, imageOutput);
+                        status = ConvertImg.PDFtoJpeg(outPath, imageOutput);
                     }
                     else if (convertIMG.Equals("2"))
                     {
-                        pdfToImgReturn = ConvertImg.PDFtoPng(outPath, imageOutput);
+                        status = ConvertImg.PDFtoPng(outPath, imageOutput);
                     }
                     else if (convertIMG.Equals("3"))
                     {
-                        pdfToImgReturn = ConvertImg.PDFtoBmp(outPath, imageOutput);
+                        status = ConvertImg.PDFtoBmp(outPath, imageOutput);
                     }
-                    if (pdfToImgReturn.isSuccess)
+                    if (status.isSuccess)
                     {
-                        responseMsg["convertImgCnt"] = string.Format("{0}", pdfToImgReturn.PageCount);
+                        responseMsg["convertImgCnt"] = string.Format("{0}", status.PageCount);
                     }
                     else
                     {

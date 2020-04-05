@@ -151,7 +151,7 @@ namespace DocConvert_Util
             #endregion
             comboBox1.SelectedIndex = 0;
             //디버깅 전용
-            textBox4.Text = "61.75.94.31";
+            textBox4.Text = "192.168.0.111";
             textBox5.Text = "12000";
             textBox6.Text = "12100";
         }
@@ -193,6 +193,8 @@ namespace DocConvert_Util
             if (textBox1.Text.Equals("") || !new FileInfo(textBox1.Text).Exists) //파일이 없으면
             {
                 tb2_appendText("파일이 존재하지 않습니다.");
+                groupBox1.Enabled = true;
+                groupBox2.Enabled = true;
                 return;
             }
             if (!checkBox1.Checked)

@@ -1,0 +1,133 @@
+2020-04-05 09:45:17.4837 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 09:45:33.9515 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 09:45:58.8395 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 09:45:58.8635 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-05 09:45:58.8734 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 48
+
+2020-04-05 09:45:58.8734 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-05 09:45:58.8734 ERROR - ==================== End ====================
+2020-04-05 10:14:02.6033 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 10:14:11.0035 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-05 10:14:11.0114 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 48
+
+2020-04-05 10:14:11.0114 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-05 10:14:11.0114 ERROR - ==================== End ====================
+2020-04-05 10:18:37.9295 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 10:19:01.2130 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-05 10:19:01.2130 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 48
+
+2020-04-05 10:19:01.2330 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-05 10:19:01.2330 ERROR - ==================== End ====================
+2020-04-05 10:23:49.7843 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 10:24:05.0001 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-05 10:24:05.0001 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 48
+
+2020-04-05 10:24:05.0130 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-05 10:24:05.0130 ERROR - ==================== End ====================
+2020-04-05 10:24:29.7581 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 10:27:28.4219 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 10:27:28.4419 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-05 10:27:28.4468 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 49
+
+2020-04-05 10:27:28.4468 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-05 10:27:28.4468 ERROR - ==================== End ====================
+2020-04-05 10:27:37.6540 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 10:27:48.8400 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-05 10:27:50.1487 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 49
+
+2020-04-05 10:27:50.6194 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-05 10:27:53.2572 ERROR - ==================== End ====================
+2020-04-05 10:28:39.6677 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 10:28:43.5440 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-05 10:28:43.5440 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 49
+
+2020-04-05 10:28:43.5600 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-05 10:28:43.5600 ERROR - ==================== End ====================
+2020-04-05 10:31:28.4394 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 10:32:02.1854 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-05 10:32:02.1854 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 48
+
+2020-04-05 10:32:02.1974 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-05 10:32:02.1974 ERROR - ==================== End ====================
+2020-04-05 10:37:01.4740 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 10:37:01.4940 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-05 10:37:01.4940 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 50
+
+2020-04-05 10:37:01.4940 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-05 10:37:01.4940 ERROR - ==================== End ====================
+2020-04-05 10:37:04.1457 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 10:37:04.1557 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-05 10:37:04.1557 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 50
+
+2020-04-05 10:37:04.1557 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-05 10:37:04.1557 ERROR - ==================== End ====================
+2020-04-05 10:37:04.8654 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 10:37:04.8757 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-05 10:37:04.8757 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 50
+
+2020-04-05 10:37:04.8757 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-05 10:37:04.8757 ERROR - ==================== End ====================
+2020-04-05 10:38:59.7922 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 10:38:59.8112 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-05 10:38:59.8112 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 51
+
+2020-04-05 10:38:59.8241 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-05 10:38:59.8241 ERROR - ==================== End ====================
+2020-04-05 10:39:01.1591 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 10:39:01.1701 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-05 10:39:01.1701 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 51
+
+2020-04-05 10:39:01.1701 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-05 10:39:01.1701 ERROR - ==================== End ====================
+2020-04-05 10:39:50.5115 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 10:39:50.5115 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-05 10:39:50.5115 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 51
+
+2020-04-05 10:39:50.5115 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-05 10:39:50.5115 ERROR - ==================== End ====================
+2020-04-05 10:39:57.7681 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 10:39:59.5242 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-05 10:39:59.5252 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 51
+
+2020-04-05 10:39:59.5252 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-05 10:39:59.5252 ERROR - ==================== End ====================
+2020-04-05 10:40:07.3377 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 10:40:16.7329 ERROR - ==================== Method: HwpSaveAs ====================
+2020-04-05 10:40:16.7329 ERROR -    위치: System.Windows.Forms.AxHost..ctor(String clsid, Int32 flags)
+   위치: AxHWPCONTROLLib.AxHwpCtrl..ctor()
+   위치: DocConvert_Core.HWPLib.HWPConvert_Core.HwpSaveAs(String FilePath, String outPath, Boolean PageCounting) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\HWPLib\HWPConvert_Core.cs:줄 51
+
+2020-04-05 10:40:16.7329 ERROR - 변환 실패: 현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 'bd9c32de-3155-4691-8972-097d53b10052'을(를) 인스턴스화할 수 없습니다.
+2020-04-05 10:40:16.7329 ERROR - ==================== End ====================
+2020-04-05 11:28:23.3707 ERROR - 권한이 없는 작업을 수행하려고 했습니다.
+2020-04-05 11:28:59.5142 ERROR - 권한이 없는 작업을 수행하려고 했습니다.

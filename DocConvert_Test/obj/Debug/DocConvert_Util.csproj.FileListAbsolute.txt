@@ -35,9 +35,6 @@ C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\DocConvert_Util.exe.c
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\DocConvert_Util.exe
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\DocConvert_Util.pdb
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert_Test\obj\Debug\DocConvert_Util.csprojAssemblyReference.cache
-C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert_Test\obj\Debug\Interop.HWPCONTROLLib.dll
-C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert_Test\obj\Debug\AxInterop.HWPCONTROLLib.dll
-C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert_Test\obj\Debug\DocConvert_Util.csproj.ResolveComReference.cache
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert_Test\obj\Debug\DocConvert_Util.Convert_Util.resources
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert_Test\obj\Debug\DocConvert_Util.Properties.Resources.resources
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert_Test\obj\Debug\DocConvert_Util.csproj.GenerateResource.cache
