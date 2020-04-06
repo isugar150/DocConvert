@@ -8,26 +8,19 @@
   <input>
     <loadpaths />
     <asmlist>
-      <inputassembly refid="f1881715-29bb-4be0-9b64-2524763b12d8">
+      <inputassembly refid="302ba688-9c7a-4960-baaf-b6eb2e1b4705">
         <option>honoroas</option>
         <option>stripoa</option>
         <option>library</option>
         <option>transformxaml</option>
-        <file dir="C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Release" name="DocConvert_Core.dll" />
+        <file dir="C:\Users\JMKIM\Desktop\DocConvert\bin\Release" name="DocConvert_Core.dll" />
       </inputassembly>
-      <inputassembly refid="9bda4c67-6d97-4473-ba60-bf3e3aa081ca">
+      <inputassembly refid="04b16d5c-1835-4cf0-a864-33c7dfc88a81">
         <option>honoroas</option>
         <option>stripoa</option>
         <option>library</option>
         <option>transformxaml</option>
-        <file dir="C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Release" name="DocConvert_Server.exe" />
-      </inputassembly>
-      <inputassembly refid="2676b8ec-af61-42b0-ac98-e615a157dac1">
-        <option>honoroas</option>
-        <option>stripoa</option>
-        <option>library</option>
-        <option>transformxaml</option>
-        <file dir="C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Release" name="DocConvert_Util.exe" />
+        <file dir="C:\Users\JMKIM\Desktop\DocConvert\bin\Release" name="DocConvert_Util.exe" />
       </inputassembly>
     </asmlist>
   </input>

@@ -78,10 +78,10 @@ namespace DocConvert_Server
                 var endpoint = new IPEndPoint(IPAddress.Parse(Properties.Settings.Default.serverIP), Properties.Settings.Default.webSocketPORT);
                 var options = new WebSocketListenerOptions()
                 {
-                    WebSocketReceiveTimeout = new TimeSpan(0, 3, 0),
-                    WebSocketSendTimeout = new TimeSpan(0, 3, 0),
-                    NegotiationTimeout = new TimeSpan(0, 3, 0),
-                    PingTimeout = new TimeSpan(0, 3, 0),
+                    WebSocketReceiveTimeout = new TimeSpan(0, 1, 0),
+                    WebSocketSendTimeout = new TimeSpan(0, 1, 0),
+                    NegotiationTimeout = new TimeSpan(0, 1, 0),
+                    PingTimeout = new TimeSpan(0, 1, 0),
                     PingMode = PingModes.LatencyControl
                 };
                 WebSocketListener server = new WebSocketListener(endpoint, options);
@@ -157,6 +157,9 @@ namespace DocConvert_Server
                             responseMsg = new Document_Convert().document_Convert(requestInfo);
 
                             DevLog.Write(string.Format("\r\n[WebSocket][Server => Client]\r\n{0}\r\n", responseMsg));
+
+                            TimeSpan curTime = DateTime.Now - timeTaken;
+                            DevLog.Write(string.Format("[Socket] 작업 소요시간: {0}", curTime.ToString()), LOG_LEVEL.DEBUG);
 
                             ws.WriteString(responseMsg.ToString());
 
