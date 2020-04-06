@@ -15,7 +15,7 @@
       <Value Profile="(Default)">10</Value>
     </Setting>
     <Setting Name="LogMaxCount" Type="System.Int32" Scope="Application">
-      <Value Profile="(Default)">10</Value>
+      <Value Profile="(Default)">1000</Value>
     </Setting>
     <Setting Name="key" Type="System.String" Scope="Application">
       <Value Profile="(Default)">B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2</Value>

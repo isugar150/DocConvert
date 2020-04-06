@@ -5,6 +5,7 @@ using System.IO;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
+using System.ServiceModel.Channels;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -55,6 +56,12 @@ namespace DocConvert_Server
                     while (!this.IsDisposed)
                     {
                         toolStripStatusLabel2.Text = string.Format("        Socket Session Count: {0}/{1}", socketServer.SessionCount, Properties.Settings.Default.socketSessionCount);
+
+                        if (IsTcpPortAvailable(Properties.Settings.Default.webSocketPORT))
+                            pictureBox3.Image = Properties.Resources.success_icon;
+                        else
+                            pictureBox3.Image = Properties.Resources.error_icon;
+
                         if (IsTcpPortAvailable(Properties.Settings.Default.fileServerPORT))
                             pictureBox2.Image = Properties.Resources.success_icon;
                         else
@@ -69,7 +76,15 @@ namespace DocConvert_Server
                 CancellationTokenSource cancellation = new CancellationTokenSource();
                 //var endpoint = new IPEndPoint(IPAddress.Any, 1818);
                 var endpoint = new IPEndPoint(IPAddress.Parse(Properties.Settings.Default.serverIP), Properties.Settings.Default.webSocketPORT);
-                WebSocketListener server = new WebSocketListener(endpoint);
+                var options = new WebSocketListenerOptions()
+                {
+                    WebSocketReceiveTimeout = new TimeSpan(0, 3, 0),
+                    WebSocketSendTimeout = new TimeSpan(0, 3, 0),
+                    NegotiationTimeout = new TimeSpan(0, 3, 0),
+                    PingTimeout = new TimeSpan(0, 3, 0),
+                    PingMode = PingModes.LatencyControl
+                };
+                WebSocketListener server = new WebSocketListener(endpoint, options);
                 var rfc6455 = new vtortola.WebSockets.Rfc6455.WebSocketFactoryRfc6455(server);
                 server.Standards.RegisterStandard(rfc6455);
                 server.Start();
@@ -113,7 +128,6 @@ namespace DocConvert_Server
                 catch (Exception aex)
                 {
                     DevLog.Write("[WebSocket] Error Accepting clients: " + aex.GetBaseException().Message);
-                    pictureBox3.Image = Properties.Resources.error_icon;
                 }
             }
             DevLog.Write("[WebSocket] Server Stop accepting clients");
@@ -140,7 +154,7 @@ namespace DocConvert_Server
                             DevLog.Write(string.Format("\r\n[WebSocket][Client => Server]\r\n{0}\r\n", requestMsg));
 
                             // 문서변환 메소드
-                            //JObject responseMsg = new Document_Convert().document_Convert(requestInfo);
+                            responseMsg = new Document_Convert().document_Convert(requestInfo);
 
                             DevLog.Write(string.Format("\r\n[WebSocket][Server => Client]\r\n{0}\r\n", responseMsg));
 
@@ -152,7 +166,6 @@ namespace DocConvert_Server
                         } catch(Exception e1)
                         {
                             responseMsg["Msg"] = e1.Message;
-                            pictureBox3.Image = Properties.Resources.error_icon;
                         }
                     }
                 }
@@ -160,7 +173,6 @@ namespace DocConvert_Server
             catch (Exception aex)
             {
                 DevLog.Write("[WebSocket] Error Handling connection: " + aex.GetBaseException().Message);
-                pictureBox3.Image = Properties.Resources.error_icon;
                 try { ws.Close(); }
                 catch { }
             }

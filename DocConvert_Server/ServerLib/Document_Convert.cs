@@ -16,14 +16,14 @@ namespace DocConvert_Server
 {
     class Document_Convert
     {
-        public JObject document_Convert(EFBinaryRequestInfo requestInfo)
+        public JObject document_Convert(string requestInfo)
         {
             ReturnValue status = new ReturnValue();
 
             JObject responseMsg = new JObject();
             try
             {
-                JObject requestMsg = JObject.Parse(Encoding.Unicode.GetString(requestInfo.Body)); // 요청받은 JSON 파싱
+                JObject requestMsg = JObject.Parse(requestInfo); // 요청받은 JSON 파싱
 
                 if (!requestMsg["KEY"].ToString().Equals(Properties.Settings.Default.key))
                 {

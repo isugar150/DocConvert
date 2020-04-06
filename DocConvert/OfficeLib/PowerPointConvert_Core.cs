@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using DocConvert_Core.interfaces;
 using DocConvert_Core.FileLib;
 using Microsoft.Office.Interop.PowerPoint;
-using NetOffice.OfficeApi.Enums;
 using NLog;
 using PowerPoint = Microsoft.Office.Interop.PowerPoint;
 using MsoTriState = Microsoft.Office.Core.MsoTriState;

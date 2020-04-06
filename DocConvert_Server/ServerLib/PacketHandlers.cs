@@ -37,7 +37,7 @@ namespace DocConvert_Server
             DateTime timeTaken = DateTime.Now;
 
             // 문서변환 메소드
-            JObject responseMsg = new Document_Convert().document_Convert(requestInfo);
+            JObject responseMsg = new Document_Convert().document_Convert(Encoding.Unicode.GetString(requestInfo.Body));
 
             DevLog.Write(string.Format("\r\n[Socket][Server => Client]\r\n{0}\r\n", responseMsg.ToString()), LOG_LEVEL.INFO); // 클라이언트가 서버로 보낸 메시지
 

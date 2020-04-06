@@ -1,0 +1,178 @@
+2020-04-06 10:40:55.9258  INFO - ==================== Start ====================
+2020-04-06 10:40:55.9587  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\DD6CB72289883BE117CE80EDD79F1B1B\2020년 03월 교통비정산서.xls, outPath: C:\Data\workspace\DD6CB72289883BE117CE80EDD79F1B1B\2020년 03월 교통비정산서.pdf, docPassword: 
+2020-04-06 10:40:55.9587  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 10:40:55.9717  INFO - 변환중 오류발생 자세한 내용은 오류로그 참고
+2020-04-06 10:49:00.7184  INFO - ==================== Start ====================
+2020-04-06 10:49:00.7533  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\DD6CB72289883BE117CE80EDD79F1B1B\2020년 03월 교통비정산서.xls, outPath: C:\Data\workspace\DD6CB72289883BE117CE80EDD79F1B1B\2020년 03월 교통비정산서.pdf, docPassword: 
+2020-04-06 10:49:00.7673  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 10:49:08.0732  INFO - 변환 성공
+2020-04-06 10:49:08.9387  INFO - ==================== End ====================
+2020-04-06 10:49:09.2915  INFO - 이미지 변환 성공!
+2020-04-06 10:49:09.2985  INFO - Source image: C:\Data\workspace\DD6CB72289883BE117CE80EDD79F1B1B\2020년 03월 교통비정산서.pdf
+2020-04-06 10:49:09.2985  INFO - outFiles: C:\Data\workspace\DD6CB72289883BE117CE80EDD79F1B1B\2020년 03월 교통비정산서\1.jpg
+2020-04-06 10:49:09.4184  INFO - 이미지 변환 성공!
+2020-04-06 10:49:09.4254  INFO - Source image: C:\Data\workspace\DD6CB72289883BE117CE80EDD79F1B1B\2020년 03월 교통비정산서.pdf
+2020-04-06 10:49:09.4254  INFO - outFiles: C:\Data\workspace\DD6CB72289883BE117CE80EDD79F1B1B\2020년 03월 교통비정산서\2.jpg
+2020-04-06 10:49:09.5303  INFO - 이미지 변환 성공!
+2020-04-06 10:49:09.5353  INFO - Source image: C:\Data\workspace\DD6CB72289883BE117CE80EDD79F1B1B\2020년 03월 교통비정산서.pdf
+2020-04-06 10:49:09.5353  INFO - outFiles: C:\Data\workspace\DD6CB72289883BE117CE80EDD79F1B1B\2020년 03월 교통비정산서\3.jpg
+2020-04-06 10:49:09.6623  INFO - 이미지 변환 성공!
+2020-04-06 10:49:09.6623  INFO - Source image: C:\Data\workspace\DD6CB72289883BE117CE80EDD79F1B1B\2020년 03월 교통비정산서.pdf
+2020-04-06 10:49:09.6742  INFO - outFiles: C:\Data\workspace\DD6CB72289883BE117CE80EDD79F1B1B\2020년 03월 교통비정산서\4.jpg
+2020-04-06 11:17:28.5954  INFO - ==================== Start ====================
+2020-04-06 11:17:28.6334  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.xlsx, outPath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.pdf, docPassword: 
+2020-04-06 11:17:28.6614  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:17:47.7980  INFO - 변환 성공
+2020-04-06 11:17:48.9033  INFO - ==================== End ====================
+2020-04-06 11:20:43.9080  INFO - ==================== Start ====================
+2020-04-06 11:20:43.9340  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.xlsx, outPath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.pdf, docPassword: 
+2020-04-06 11:20:43.9640  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:21:06.3811  INFO - 변환 성공
+2020-04-06 11:21:07.5404  INFO - ==================== End ====================
+2020-04-06 11:22:09.0655  INFO - ==================== Start ====================
+2020-04-06 11:22:09.0655  INFO - Method: WordSaveAs, FilePath: C:\Data\workspace\623E240D8979099742001E96E711F663\word.docx, outPath: C:\Data\workspace\623E240D8979099742001E96E711F663\word.pdf, docPassword: 
+2020-04-06 11:22:09.1135  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:22:14.6636  INFO - 변환 성공
+2020-04-06 11:22:14.9365  INFO - ==================== End ====================
+2020-04-06 11:22:38.6197  INFO - ==================== Start ====================
+2020-04-06 11:22:38.6317  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.xlsx, outPath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.pdf, docPassword: 
+2020-04-06 11:22:38.6706  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:22:59.8345  INFO - 변환 성공
+2020-04-06 11:23:00.9639  INFO - ==================== End ====================
+2020-04-06 11:24:17.8688  INFO - ==================== Start ====================
+2020-04-06 11:24:17.8907  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.xlsx, outPath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.pdf, docPassword: 
+2020-04-06 11:24:17.9347  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:24:41.1587  INFO - 변환 성공
+2020-04-06 11:24:42.0999  INFO - ==================== End ====================
+2020-04-06 11:31:47.9159  INFO - ==================== Start ====================
+2020-04-06 11:31:47.9259  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.xlsx, outPath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.pdf, docPassword: 
+2020-04-06 11:31:47.9819  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:32:08.3044  INFO - 변환 성공
+2020-04-06 11:32:09.3058  INFO - ==================== End ====================
+2020-04-06 11:32:11.5675  INFO - ==================== Start ====================
+2020-04-06 11:32:11.5865  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.xlsx, outPath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.pdf, docPassword: 
+2020-04-06 11:32:11.6435  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:32:33.2927  INFO - 변환 성공
+2020-04-06 11:32:34.3113  INFO - ==================== End ====================
+2020-04-06 11:33:46.5993  INFO - ==================== Start ====================
+2020-04-06 11:33:46.6113  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.xlsx, outPath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.pdf, docPassword: 
+2020-04-06 11:33:46.6663  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:34:05.8354  INFO - 변환 성공
+2020-04-06 11:34:06.8029  INFO - ==================== End ====================
+2020-04-06 11:36:19.0348  INFO - ==================== Start ====================
+2020-04-06 11:36:19.1038  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.xlsx, outPath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.pdf, docPassword: 
+2020-04-06 11:36:19.1557  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:36:36.4844  INFO - 변환중 오류발생 자세한 내용은 오류로그 참고
+2020-04-06 11:36:37.7585  INFO - ==================== End ====================
+2020-04-06 11:36:42.1796  INFO - ==================== Start ====================
+2020-04-06 11:36:42.1946  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.xlsx, outPath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.pdf, docPassword: 
+2020-04-06 11:36:42.2675  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:37:05.6960  INFO - 변환 성공
+2020-04-06 11:37:06.6565  INFO - ==================== End ====================
+2020-04-06 11:38:39.1573  INFO - ==================== Start ====================
+2020-04-06 11:38:39.1573  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.xlsx, outPath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.pdf, docPassword: 
+2020-04-06 11:38:39.2073  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:39:00.8927  INFO - 변환 성공
+2020-04-06 11:39:01.7932  INFO - ==================== End ====================
+2020-04-06 11:39:55.8702  INFO - ==================== Start ====================
+2020-04-06 11:39:55.8842  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.xlsx, outPath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.pdf, docPassword: 
+2020-04-06 11:39:56.0051  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:40:07.4595  INFO - 변환중 오류발생 자세한 내용은 오류로그 참고
+2020-04-06 11:40:08.6128  INFO - ==================== End ====================
+2020-04-06 11:40:13.6017  INFO - ==================== Start ====================
+2020-04-06 11:40:13.6197  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.xlsx, outPath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.pdf, docPassword: 
+2020-04-06 11:40:13.6507  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:40:31.9925  INFO - 변환 성공
+2020-04-06 11:40:32.8440  INFO - ==================== End ====================
+2020-04-06 11:41:14.8085  INFO - ==================== Start ====================
+2020-04-06 11:41:14.8175  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.xlsx, outPath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.pdf, docPassword: 
+2020-04-06 11:41:14.8505  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:41:33.4503  INFO - 변환 성공
+2020-04-06 11:41:34.3568  INFO - ==================== End ====================
+2020-04-06 11:42:08.2664  INFO - ==================== Start ====================
+2020-04-06 11:42:08.2664  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.xlsx, outPath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.pdf, docPassword: 
+2020-04-06 11:42:08.3014  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:42:26.6500  INFO - 변환 성공
+2020-04-06 11:42:27.4925  INFO - ==================== End ====================
+2020-04-06 11:45:27.5655  INFO - ==================== Start ====================
+2020-04-06 11:45:27.5815  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.xlsx, outPath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.pdf, docPassword: 
+2020-04-06 11:45:27.6145  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:45:46.9878  INFO - 변환 성공
+2020-04-06 11:45:47.9093  INFO - ==================== End ====================
+2020-04-06 11:48:54.3089  INFO - ==================== Start ====================
+2020-04-06 11:48:54.3338  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.xlsx, outPath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.pdf, docPassword: 
+2020-04-06 11:48:54.4438  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:49:05.5875  INFO - 변환중 오류발생 자세한 내용은 오류로그 참고
+2020-04-06 11:49:06.9537  INFO - ==================== End ====================
+2020-04-06 11:49:14.6467  INFO - ==================== Start ====================
+2020-04-06 11:49:14.6467  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.xlsx, outPath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.pdf, docPassword: 
+2020-04-06 11:49:14.6897  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:49:32.8975  INFO - 변환 성공
+2020-04-06 11:49:33.7490  INFO - ==================== End ====================
+2020-04-06 11:49:56.8172  INFO - ==================== Start ====================
+2020-04-06 11:49:56.8302  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.xlsx, outPath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.pdf, docPassword: 
+2020-04-06 11:49:56.8842  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:52:13.6189  INFO - ==================== Start ====================
+2020-04-06 11:52:13.6529  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.xlsx, outPath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.pdf, docPassword: 
+2020-04-06 11:52:13.7198  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:52:32.3683  INFO - 변환 성공
+2020-04-06 11:52:33.2738  INFO - ==================== End ====================
+2020-04-06 11:52:47.8667  INFO - ==================== Start ====================
+2020-04-06 11:52:47.8837  INFO - Method: WordSaveAs, FilePath: C:\Data\workspace\623E240D8979099742001E96E711F663\word.docx, outPath: C:\Data\workspace\623E240D8979099742001E96E711F663\word.pdf, docPassword: 
+2020-04-06 11:52:47.9197  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:52:53.0011  INFO - 변환 성공
+2020-04-06 11:52:53.2649  INFO - ==================== End ====================
+2020-04-06 11:55:53.6153  INFO - ==================== Start ====================
+2020-04-06 11:55:53.6153  INFO - Method: WordSaveAs, FilePath: C:\Data\workspace\623E240D8979099742001E96E711F663\word.docx, outPath: C:\Data\workspace\623E240D8979099742001E96E711F663\word.pdf, docPassword: 
+2020-04-06 11:55:53.6623  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:55:58.6504  INFO - 변환 성공
+2020-04-06 11:55:58.8313  INFO - ==================== End ====================
+2020-04-06 11:57:00.4239  INFO - ==================== Start ====================
+2020-04-06 11:57:00.4239  INFO - Method: WordSaveAs, FilePath: C:\Data\workspace\623E240D8979099742001E96E711F663\word.docx, outPath: C:\Data\workspace\623E240D8979099742001E96E711F663\word.pdf, docPassword: 
+2020-04-06 11:57:00.4639  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:57:05.3850  INFO - 변환 성공
+2020-04-06 11:57:05.5729  INFO - ==================== End ====================
+2020-04-06 11:58:31.8057  INFO - ==================== Start ====================
+2020-04-06 11:58:31.8456  INFO - Method: WordSaveAs, FilePath: C:\Data\workspace\623E240D8979099742001E96E711F663\word.docx, outPath: C:\Data\workspace\623E240D8979099742001E96E711F663\word.pdf, docPassword: 
+2020-04-06 11:58:31.9336  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:58:36.9968  INFO - 변환 성공
+2020-04-06 11:58:37.1747  INFO - ==================== End ====================
+2020-04-06 11:59:19.0594  INFO - ==================== Start ====================
+2020-04-06 11:59:19.0694  INFO - Method: PowerPointSaveAs, FilePath: C:\Data\workspace\4980C2E6E908BEB83479B0077F4DACB3\powerpoint.pptx, outPath: C:\Data\workspace\4980C2E6E908BEB83479B0077F4DACB3\powerpoint.pdf, docPassword: 
+2020-04-06 11:59:19.1253  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:59:24.0274  INFO - 변환 성공
+2020-04-06 11:59:24.1523  INFO - ==================== End ====================
+2020-04-06 11:59:43.0045  INFO - ==================== Start ====================
+2020-04-06 11:59:43.0045  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.xlsx, outPath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.pdf, docPassword: 
+2020-04-06 11:59:43.0494  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 11:59:55.3687  INFO - 변환중 오류발생 자세한 내용은 오류로그 참고
+2020-04-06 11:59:56.6513  INFO - ==================== End ====================
+2020-04-06 12:00:26.4507  INFO - ==================== Start ====================
+2020-04-06 12:00:26.4747  INFO - Method: PowerPointSaveAs, FilePath: C:\Data\workspace\4980C2E6E908BEB83479B0077F4DACB3\powerpoint.pptx, outPath: C:\Data\workspace\4980C2E6E908BEB83479B0077F4DACB3\powerpoint.pdf, docPassword: 
+2020-04-06 12:00:26.5107  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 12:00:31.1411  INFO - 변환 성공
+2020-04-06 12:00:31.3554  INFO - ==================== End ====================
+2020-04-06 12:10:34.7248  INFO - ==================== Start ====================
+2020-04-06 12:10:34.7687  INFO - Method: PowerPointSaveAs, FilePath: C:\Data\workspace\4980C2E6E908BEB83479B0077F4DACB3\powerpoint.pptx, outPath: C:\Data\workspace\4980C2E6E908BEB83479B0077F4DACB3\powerpoint.pdf, docPassword: 
+2020-04-06 12:10:34.8327  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 12:10:39.5775  INFO - 변환 성공
+2020-04-06 12:10:39.6584  INFO - ==================== End ====================
+2020-04-06 12:16:00.7552  INFO - ==================== Start ====================
+2020-04-06 12:16:00.8062  INFO - Method: PowerPointSaveAs, FilePath: C:\Data\workspace\4980C2E6E908BEB83479B0077F4DACB3\powerpoint.pptx, outPath: C:\Data\workspace\4980C2E6E908BEB83479B0077F4DACB3\powerpoint.pdf, docPassword: 
+2020-04-06 12:16:00.8681  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 12:16:10.2999  INFO - 변환중 오류발생 자세한 내용은 오류로그 참고
+2020-04-06 12:16:39.7054  INFO - ==================== Start ====================
+2020-04-06 12:16:39.7374  INFO - Method: PowerPointSaveAs, FilePath: C:\Data\workspace\4980C2E6E908BEB83479B0077F4DACB3\powerpoint.pptx, outPath: C:\Data\workspace\4980C2E6E908BEB83479B0077F4DACB3\powerpoint.pdf, docPassword: 
+2020-04-06 12:16:39.8193  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 12:16:45.2002  INFO - 변환 성공
+2020-04-06 12:16:45.3092  INFO - ==================== End ====================
+2020-04-06 12:17:00.9477  INFO - ==================== Start ====================
+2020-04-06 12:17:00.9807  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.xlsx, outPath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.pdf, docPassword: 
+2020-04-06 12:17:01.0246  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 12:17:19.8158  INFO - 변환 성공
+2020-04-06 12:17:20.8868  INFO - ==================== End ====================
+2020-04-06 12:20:30.6613  INFO - ==================== Start ====================
+2020-04-06 12:20:30.7183  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.xlsx, outPath: C:\Data\workspace\E2DDB1F4A236D30F6E63319BEC7F35AC\Excel.pdf, docPassword: 
+2020-04-06 12:20:30.8144  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-06 12:20:49.3669  INFO - 변환 성공
+2020-04-06 12:20:50.3484  INFO - ==================== End ====================
