@@ -1,4 +1,4 @@
-package docconvert;
+package DocConvert_API;
 
 import org.java_websocket.client.WebSocketClient;
 import org.java_websocket.handshake.ServerHandshake;
@@ -7,7 +7,6 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URI;
 
@@ -26,7 +25,7 @@ public class DocConvert {
      */
     public String DocConvert_Start(String filePath, String outPath, String fileName, int toImg) throws Exception {
         // 환경설정 읽기
-        docconvert.getProperties properties = new docconvert.getProperties();
+        getProperties properties = new getProperties();
         properties.readProperties();
 
         String host = properties.getServerIP(); // 호스트
@@ -41,7 +40,7 @@ public class DocConvert {
         String downloadPDFName = fileName.replace(sourceFileExten, ".pdf");
 
         // FTP변수 초기화
-        docconvert.FTPManager ftpManager = new docconvert.FTPManager();
+        FTPManager ftpManager = new FTPManager();
         ftpManager.Connect(host, ftpPort, ftpUser, ftpPass);
 
         // 변환할 파일 업 로드
@@ -98,6 +97,7 @@ public class DocConvert {
                             ftpManager.downloadFile(responseData.get("URL").toString() + "/" + downloadIMGDir + "/" + (i + 1) + imgExtension, filePath + File.separator + File.separator + downloadIMGDir + File.separator + (i + 1) + imgExtension);
                         }
                     }
+                    ftpManager.disConnect();
                 } catch (ParseException | IOException e) {
                     e.printStackTrace();
                 }
