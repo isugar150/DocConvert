@@ -5,7 +5,7 @@
 ![dcLogic](https://user-images.githubusercontent.com/13088077/78665631-16137400-7911-11ea-8843-5320c42fa519.png)   
 
 
-사용된 C#라이브러리: SuperSocket, pdfium, NLOG, OfficeAPI, HWP API, log4j, FluentFTP    
+사용된 C#라이브러리: SuperSocket, vtortola.WebSockets, pdfium, NLOG, OfficeAPI, HWP API, log4j, FluentFTP    
 사용된 Java라이브러리: commons-net-3.6.jar, Java-WebSocket-1.4.1.jar, json-simple-1.1.1.jar, slf4j-api-1.7.25.jar
 # 스크린샷
 
