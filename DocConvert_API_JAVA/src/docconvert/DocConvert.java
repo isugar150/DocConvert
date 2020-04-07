@@ -13,6 +13,7 @@ import java.net.URI;
 
 public class DocConvert {
     private JSONObject responseData = null;
+    private String returnValue = null;
 
     /**
      * 각종 문서를 PDF 또는 이미지로 변환합니다.
@@ -23,7 +24,7 @@ public class DocConvert {
      * @param toImg    이미지 변환 (0:안함) (1:JPG) (2:PNG) (3:BMP)
      * @throws Exception
      */
-    public DocConvert(String filePath, String outPath, String fileName, int toImg) throws Exception {
+    public String DocConvert_Start(String filePath, String outPath, String fileName, int toImg) throws Exception {
         // 환경설정 읽기
         docconvert.getProperties properties = new docconvert.getProperties();
         properties.readProperties();
@@ -44,7 +45,12 @@ public class DocConvert {
         ftpManager.Connect(host, ftpPort, ftpUser, ftpPass);
 
         // 변환할 파일 업 로드
-        ftpManager.uploadFile(filePath, fileName, "/tmp/");
+        try{
+            ftpManager.uploadFile(filePath, fileName, "/tmp/");
+        } catch(Exception e){
+            e.printStackTrace();
+            return returnValue;
+        }
 
         // 웹소켓 기능
         // 서버 전송전 데이터
@@ -96,6 +102,7 @@ public class DocConvert {
                     e.printStackTrace();
                 }
                 ftpManager.disConnect();
+                returnValue = responseData.toJSONString();
             }
 
             @Override
@@ -114,5 +121,8 @@ public class DocConvert {
         };
 
         webSocketClient.connect();
+        while(!webSocketClient.isClosed())
+            Thread.sleep(300);
+        return returnValue;
     }
 }
