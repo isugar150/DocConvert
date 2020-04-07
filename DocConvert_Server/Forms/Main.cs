@@ -16,9 +16,8 @@ namespace DocConvert_Server
 {
     public partial class Form1 : Form
     {
-        System.Windows.Threading.DispatcherTimer workProcessTimer = new System.Windows.Threading.DispatcherTimer();
-        MainServer socketServer = new MainServer();
-
+        private System.Windows.Threading.DispatcherTimer workProcessTimer = new System.Windows.Threading.DispatcherTimer();
+        private MainServer socketServer = new MainServer();
         public Form1()
         {
             InitializeComponent();
@@ -78,10 +77,10 @@ namespace DocConvert_Server
                 var endpoint = new IPEndPoint(IPAddress.Parse(Properties.Settings.Default.serverIP), Properties.Settings.Default.webSocketPORT);
                 var options = new WebSocketListenerOptions()
                 {
-                    WebSocketReceiveTimeout = new TimeSpan(0, 1, 0),
-                    WebSocketSendTimeout = new TimeSpan(0, 1, 0),
-                    NegotiationTimeout = new TimeSpan(0, 1, 0),
-                    PingTimeout = new TimeSpan(0, 1, 0),
+                    WebSocketReceiveTimeout = new TimeSpan(0, 3, 0),
+                    WebSocketSendTimeout = new TimeSpan(0, 0, 5), // 클라이언트가 연결을 끊었을때 타임아웃
+                    NegotiationTimeout = new TimeSpan(0, 3, 0),
+                    PingTimeout = new TimeSpan(0, 3, 0),
                     PingMode = PingModes.LatencyControl
                 };
                 WebSocketListener server = new WebSocketListener(endpoint, options);
@@ -116,7 +115,6 @@ namespace DocConvert_Server
             {
                 try
                 {
-                    //클라이언트가 들어왔을까요?
                     var ws = await server.AcceptWebSocketAsync(token).ConfigureAwait(false);
 
                     DevLog.Write("[WebSocket] 클라이언트로 부터 연결요청이 들어옴: " + ws.RemoteEndpoint);
@@ -137,13 +135,12 @@ namespace DocConvert_Server
         {
             try
             {
-                //연결이 끊기지 않았고, 캔슬이 들어오지 않는 한 루프를 돕니다.
+                //연결이 끊기지 않았고, 캔슬이 들어오지 않는 한 루프를 돔.
                 while (ws.IsConnected && !cancellation.IsCancellationRequested)
                 {
-                    //클라이언트로부터 메시지가 왔는지 비동기로 읽어요.
+                    //클라이언트로부터 메시지가 왔는지 비동기읽음
                     string requestInfo = await ws.ReadStringAsync(cancellation).ConfigureAwait(false);
 
-                    //읽은 메시지가 null 이 아니면, 뭔가를 처리 합니다. 이 코드는 그냥 ack 라고 에코를 보내도록 만들었습니다.
                     if (requestInfo != null)
                     {
                         JObject responseMsg = new JObject();
