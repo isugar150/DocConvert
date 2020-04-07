@@ -1,20 +1,23 @@
 # 소개
 * Socket 또는 WebSocket으로 통신하여 오피스파일(docx, doc, xlsx, xls, pptx, ppt), 한글파일(hwp), 기타 파일(pdf, txt, html)등 여러 파일을 PDF로 변환하거나 이미지 파일(jpg, png, bmp)로 변환합니다.
 * 기본포트: Socket: 12000, webSocket: 12005, FTPServer: 12100  
-* 이미지 변환 ENUM: (0: 변환안함), (1: JPG), (2: PNG), (3: BMP)
+* 이미지 변환 ENUM: (0: 변환안함), (1: JPG), (2: PNG), (3: BMP)  
+![dcLogic](https://user-images.githubusercontent.com/13088077/78665234-748c2280-7910-11ea-84e9-20ad0f9d74d4.png)  
 
 
 사용된 C#라이브러리: SuperSocket, pdfium, NLOG, OfficeAPI, HWP API, log4j, FluentFTP    
-사용된 Java라이브러리: <준비중>  
+사용된 Java라이브러리: commons-net-3.6.jar, Java-WebSocket-1.4.1.jar, json-simple-1.1.1.jar, slf4j-api-1.7.25.jar
 # 스크린샷
 
 ![dcs_main](https://user-images.githubusercontent.com/13088077/78530590-e7b56c00-781e-11ea-81e2-e0b174e1773e.png)  
 <DocConvert 서버 메인화면>    
-![dcs_setting](https://user-images.githubusercontent.com/13088077/78530594-e8e69900-781e-11ea-8777-b01f52398437.png)  
+<img width="487" alt="dcu_main" src="https://user-images.githubusercontent.com/13088077/78663785-b49dd600-790d-11ea-8f60-ef3e9048062b.png">  
 <DocConvert 유틸 메인화면>    
+<img width="1136" alt="dcjavaapi" src="https://user-images.githubusercontent.com/13088077/78663993-16f6d680-790e-11ea-8afd-0d31d5ec9943.png">  
+<JAVA API를 사용하여 변환시>  
 
 # DocConverter Server
-**Socket**
+**Socket & WebSocket**
 - [Client => Server]  
   "KEY": "ANY",  
   "FileName": "DOCUMENT.xlsx",  
@@ -28,10 +31,6 @@
   "msg": "변환에 성공하였습니다."  
   
 # DocConverter Engien
-- 지원하는 프로그램(Word, Excel, PowerPoint, HWP)
-- PDF TO IMAGE변환 기능 지원
-
-
 **WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, bool pageCounting, bool appvisible)**  
 String FilePath: 소스 파일경로  
 String outPath: PDF로 내보낼 파일경로  
