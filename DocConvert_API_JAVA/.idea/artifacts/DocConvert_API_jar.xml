@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DocConvert_API:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DocConvert_API_jar</output-path>
+    <root id="archive" name="DocConvert_API.jar">
+      <element id="module-output" name="DocConvert_API" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/Java-WebSocket-1.4.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/json-simple-1.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/slf4j-api-1.7.25.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-net-3.6.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

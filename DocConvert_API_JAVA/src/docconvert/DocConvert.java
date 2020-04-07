@@ -1,6 +1,5 @@
 package docconvert;
 
-import me.saro.commons.ftp.FTP;
 import org.java_websocket.client.WebSocketClient;
 import org.java_websocket.handshake.ServerHandshake;
 import org.json.simple.JSONObject;
@@ -12,105 +11,108 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URI;
 
-public class DocConvert{
-    private String host = "127.0.0.1"; // 호스트
-    private int port = 12100; // 포트 : 기본포트(FTP 21, FTPS 990, SFTP 22)
-    private String user = "user1"; // 유저이름
-    private String pass = "1234"; // 암호
+public class DocConvert {
     private JSONObject responseData = null;
+
+    /**
+     * 각종 문서를 PDF 또는 이미지로 변환합니다.
+     *
+     * @param filePath 파일의 경로(파일명 빼고)
+     * @param outPath  내보낼 경로
+     * @param fileName 문서파일의 이름
+     * @param toImg    이미지 변환 (0:안함) (1:JPG) (2:PNG) (3:BMP)
+     * @throws Exception
+     */
     public DocConvert(String filePath, String outPath, String fileName, int toImg) throws Exception {
-        //초기 데이터 입력
-        String sourceFileExten = fileName.substring(fileName.lastIndexOf( "." ), fileName.length());
+        // 환경설정 읽기
+        docconvert.getProperties properties = new docconvert.getProperties();
+        properties.readProperties();
+
+        String host = properties.getServerIP(); // 호스트
+        int webSocketPort = properties.getServerPORT();
+        int ftpPort = properties.getFtpPORT();
+        String ftpUser = properties.getFtpUSER(); // 유저이름
+        String ftpPass = properties.getFtpPASS(); // 암호
+
+        // 변수 데이터 초기화
+        String sourceFileExten = fileName.substring(fileName.lastIndexOf("."), fileName.length());
         String downloadIMGDir = fileName.replace(sourceFileExten, "");
         String downloadPDFName = fileName.replace(sourceFileExten, ".pdf");
 
-        // 기본 디렉토리 생성
-        new File(filePath).mkdirs();
+        // FTP변수 초기화
+        docconvert.FTPManager ftpManager = new docconvert.FTPManager();
+        ftpManager.Connect(host, ftpPort, ftpUser, ftpPass);
 
-        // 기본 전송 파일 생성
-        try (FileOutputStream fos = new FileOutputStream(filePath + fileName)) {
-            fos.write("the test file".getBytes());
-        }
+        // 변환할 파일 업 로드
+        ftpManager.uploadFile(filePath, fileName, "/tmp/");
 
-        // FTP.openFTP : FTP
-        // FTP.openFTPS : FTPS
-        // FTP.openSFTP : SFTP
-        try (FTP ftp = FTP.openFTP(host, port, user, pass)) {
+        // 웹소켓 기능
+        // 서버 전송전 데이터
+        JSONObject requestMsg = new JSONObject();
+        requestMsg.put("KEY", "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2");
+        requestMsg.put("FileName", fileName);
+        requestMsg.put("ConvertIMG", toImg);
+        requestMsg.put("DocPassword", "");
 
-            System.out.println("==================================");
-            System.out.println("## 현재위치");
-            System.out.println(ftp.path());
-            System.out.println("## 디렉토리 목록");
-            ftp.listDirectories().forEach(e -> System.out.println(e));
-            System.out.println("## 파일 목록");
-            ftp.listFiles().forEach(e -> System.out.println(e));
-            System.out.println("==================================");
+        // 웹 소켓으로 서버에게 데이터 전송
+        System.out.println("ws://" + host + ":" + webSocketPort + "에 연결을 시도합니다.");
+        WebSocketClient webSocketClient = new WebSocketClient(new URI("ws://" + host + ":" + webSocketPort)) {
 
-            // tmp 경로로 이동
-            ftp.path("/tmp/");
+            @Override
+            public void onOpen(ServerHandshake serverHandshake) {
+                System.out.println("[Client ==> Server]\r\n" + requestMsg.toJSONString());
+                this.send(requestMsg.toJSONString());
+            }
 
-            // 파일전송
-            ftp.send(fileName, new File(filePath + fileName));
-            /*ftp.send(fileName, new File(filePath + fileName));*/
-
-            // 웹소켓 기능
-            // 서버 전송전 데이터
-            JSONObject requestMsg = new JSONObject();
-            requestMsg.put("KEY", "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2");
-            requestMsg.put("FileName", fileName);
-            requestMsg.put("ConvertIMG", toImg);
-            requestMsg.put("DocPassword", "");
-
-            // 웹 소켓으로 서버에게 데이터 전송
-            WebSocketClient webSocketClient = new WebSocketClient(new URI("ws://10.1.3.167:12005")) {
-
-                @Override
-                public void onOpen(ServerHandshake serverHandshake) {
-                    System.out.println("[Client ==> Server]\r\n" + requestMsg.toJSONString());
-                    this.send(requestMsg.toJSONString());
-                }
-
-                @Override
-                public void onMessage(String message) {
-                    this.close();
-                    try {
-                        responseData = (JSONObject)new JSONParser().parse(message);
-                    } catch (ParseException e) {
-                        e.printStackTrace();
-                    }
+            @Override
+            public void onMessage(String message) {
+                this.close();
+                try {
+                    responseData = (JSONObject) new JSONParser().parse(message);
 
                     System.out.println("[DocConvert] 소켓 연결됨.");
 
                     System.out.println("[Server ==> Client]\r\n" + responseData.toJSONString());
 
-                    // 다운로드
-                    try {
-                        ftp.path(responseData.get("URL").toString());
-                        ftp.recv(downloadPDFName, new File(filePath + downloadPDFName));
-                        ftp.path(responseData.get("URL").toString() + "/" + downloadIMGDir);
-                        ftp.recv("tmp", new File(filePath + fileName)); // is not file, return false; not recv
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                    System.out.println("remoteFile: " + responseData.get("URL").toString() + "/" + downloadPDFName);
+                    System.out.println("localFile: " + filePath + File.separator + downloadPDFName);
+                    // PDF 다운로드
+                    ftpManager.downloadFile(responseData.get("URL").toString() + "/" + downloadPDFName, filePath + File.separator + downloadPDFName);
+                    if(toImg != 0){
+                        String imgExtension = null;
+                        if(Integer.parseInt(requestMsg.get("ConvertIMG").toString()) == 1)
+                            imgExtension = ".jpg";
+                        else if(Integer.parseInt(requestMsg.get("ConvertIMG").toString()) == 2)
+                            imgExtension = ".png";
+                        else if(Integer.parseInt(requestMsg.get("ConvertIMG").toString()) == 3)
+                            imgExtension = ".bmp";
+
+                        new File(filePath + File.separator + downloadIMGDir).mkdirs();
+                        for(int i = 0; i < Integer.parseInt(responseData.get("convertImgCnt").toString()); i++){
+                            ftpManager.downloadFile(responseData.get("URL").toString() + "/" + downloadIMGDir + "/" + (i + 1) + imgExtension, filePath + File.separator + File.separator + downloadIMGDir + File.separator + (i + 1) + imgExtension);
+                        }
                     }
-                    ftp.close();
+                } catch (ParseException | IOException e) {
+                    e.printStackTrace();
                 }
+                ftpManager.disConnect();
+            }
 
-                @Override
-                public void onClose(int code, String reason, boolean remote) {
-                    System.out.println(String.format("[DocConvert] code: %s, reason: %s, remote: %s", code, reason, remote));
-                    // 서버 연결 종료 후 동작 정의
-                }
+            @Override
+            public void onClose(int code, String reason, boolean remote) {
+                // 서버 연결 종료 후 동작 정의
+                System.out.println(String.format("[DocConvert] code: %s, reason: %s, remote: %s", code, reason, remote));
+                ftpManager.disConnect();
+            }
 
-                @Override
-                public void onError(Exception ex) {
-                    // 예외 발생시 동작 정의
-                    System.out.println("[DocConvert][Error] " + ex.getLocalizedMessage());
-                }
-            };
-            // 앞서 정의한 WebSocket 서버에 연결한다.
-            webSocketClient.connect();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+            @Override
+            public void onError(Exception ex) {
+                // 예외 발생시 동작 정의
+                ftpManager.disConnect();
+                ex.printStackTrace();
+            }
+        };
+
+        webSocketClient.connect();
     }
 }
