@@ -58,7 +58,6 @@ C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert
 C:\Users\JMKIM\Desktop\source\DocConvert\bin\Debug\NLog.config
 C:\Users\JMKIM\Desktop\source\DocConvert\bin\Debug\FilePathCheckerModuleExample.dll
 C:\Users\JMKIM\Desktop\source\DocConvert\bin\Debug\pdfium.dll
-C:\Users\JMKIM\Desktop\source\DocConvert\bin\Debug\DocConvert_Core.dll.config
 C:\Users\JMKIM\Desktop\source\DocConvert\bin\Debug\DocConvert_Core.dll
 C:\Users\JMKIM\Desktop\source\DocConvert\bin\Debug\DocConvert_Core.pdb
 C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert\obj\Debug\Interop.HWPCONTROLLib.dll

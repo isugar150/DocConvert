@@ -49,8 +49,8 @@ C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert_Server\obj\Debug\DocConvert_
 C:\Users\JMKIM\Desktop\source\DocConvert\bin\Debug\NLog.config
 C:\Users\JMKIM\Desktop\source\DocConvert\bin\Debug\FilePathCheckerModuleExample.dll
 C:\Users\JMKIM\Desktop\source\DocConvert\bin\Debug\pdfium.dll
-C:\Users\JMKIM\Desktop\source\DocConvert\bin\Debug\DocConvert_Server.exe.config
 C:\Users\JMKIM\Desktop\source\DocConvert\bin\Debug\DocConvert_Server.exe
 C:\Users\JMKIM\Desktop\source\DocConvert\bin\Debug\DocConvert_Server.pdb
 C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.csproj.CopyComplete
 C:\Users\JMKIM\Desktop\source\DocConvert\bin\Debug\Install\FileZilla_Server-0_9_60_2.exe
+C:\Users\JMKIM\Desktop\source\DocConvert\bin\Debug\DocConvert_Server.exe.config
