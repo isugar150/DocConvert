@@ -12,6 +12,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using vtortola.WebSockets;
 
+using DocConvert_Server.License;
+
+
 namespace DocConvert_Server
 {
     public partial class Form1 : Form
@@ -26,6 +29,12 @@ namespace DocConvert_Server
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            if (Properties.Settings.Default.LicenseKEY.Equals(""))
+            {
+                MessageBox.Show("해당 소프트웨어를 사용하려면 라이센스키를 발급받아야합니다.\r\nHWID: " + new LicenseInfo().getHWID(), "라이센스키 발급 필요", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Application.Exit();
+                return;
+            }
             checkBox1.Checked = Properties.Settings.Default.FollowTail;
             #region Create SocketServer
             socketServer.InitConfig();
