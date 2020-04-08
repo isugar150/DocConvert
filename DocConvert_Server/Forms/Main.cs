@@ -21,6 +21,7 @@ namespace DocConvert_Server
     {
         private System.Windows.Threading.DispatcherTimer workProcessTimer = new System.Windows.Threading.DispatcherTimer();
         private MainServer socketServer = new MainServer();
+        private int wsSessionCount = 0;
         public Form1()
         {
             InitializeComponent();
@@ -63,9 +64,10 @@ namespace DocConvert_Server
             {
                     while (!this.IsDisposed)
                     {
-                        toolStripStatusLabel2.Text = string.Format("        Socket Session Count: {0}/{1}", socketServer.SessionCount, Properties.Settings.Default.socketSessionCount);
+                        toolStripStatusLabel2.Text = string.Format("Socket Session Count: {0}/{1}", socketServer.SessionCount, Properties.Settings.Default.socketSessionCount);
+                        toolStripStatusLabel3.Text = string.Format("Web Socket Session Count: {0}/{1}", wsSessionCount, "1");
 
-                        if (IsTcpPortAvailable(Properties.Settings.Default.webSocketPORT))
+                    if (IsTcpPortAvailable(Properties.Settings.Default.webSocketPORT))
                             pictureBox3.Image = Properties.Resources.success_icon;
                         else
                             pictureBox3.Image = Properties.Resources.error_icon;
@@ -147,6 +149,7 @@ namespace DocConvert_Server
                 //연결이 끊기지 않았고, 캔슬이 들어오지 않는 한 루프를 돔.
                 while (ws.IsConnected && !cancellation.IsCancellationRequested)
                 {
+                    ++wsSessionCount;
                     //클라이언트로부터 메시지가 왔는지 비동기읽음
                     string requestInfo = await ws.ReadStringAsync(cancellation).ConfigureAwait(false);
 
@@ -177,6 +180,7 @@ namespace DocConvert_Server
                             responseMsg["Msg"] = e1.Message;
                         }
                     }
+                    --wsSessionCount;
                 }
             }
             catch (Exception aex)
@@ -207,8 +211,6 @@ namespace DocConvert_Server
                 {
                     ++logWorkCount;
 
-                    toolStripStatusLabel1.Text = string.Format("LogCount: {0}/{1}", listBoxLog.Items.Count, Properties.Settings.Default.LogMaxCount);
-
                     if (listBoxLog.Items.Count >= Properties.Settings.Default.LogMaxCount)
                     {
                         listBoxLog.Items.RemoveAt(0);
@@ -221,6 +223,8 @@ namespace DocConvert_Server
                         listBoxLog.SelectedIndex = listBoxLog.Items.Count - 1;
                         textBox1.AppendText(msg + "\r\n");
                     }
+
+                    toolStripStatusLabel1.Text = string.Format("LogCount: {0}/{1}", listBoxLog.Items.Count, Properties.Settings.Default.LogMaxCount);
                 }
                 else
                 {

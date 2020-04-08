@@ -9,7 +9,7 @@
       <Value Profile="(Default)">ConvertServer</Value>
     </Setting>
     <Setting Name="socketSessionCount" Type="System.Int32" Scope="Application">
-      <Value Profile="(Default)">10</Value>
+      <Value Profile="(Default)">1</Value>
     </Setting>
     <Setting Name="LogMaxCount" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">1000</Value>
