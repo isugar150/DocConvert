@@ -4,7 +4,7 @@
 * 이미지 변환 ENUM: (0: 변환안함), (1: JPG), (2: PNG), (3: BMP)  
 
 [![Video Label](http://www.namejm.org/resources/img/20200408_DEMO_000.jpg)](https://youtu.be/AfrIzDilIZo)  
-**<↑데모 동영상>**
+**<데모 동영상>**
 
 ![dcLogic](https://user-images.githubusercontent.com/13088077/78665631-16137400-7911-11ea-8843-5320c42fa519.png)   
 
