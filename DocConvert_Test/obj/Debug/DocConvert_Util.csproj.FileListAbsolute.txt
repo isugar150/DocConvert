@@ -31,7 +31,6 @@ D:\sources\DocConvert\DocConvert_Test\obj\Debug\DocConvert_Util.pdb
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\NLog.config
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\FilePathCheckerModuleExample.dll
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\pdfium.dll
-C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\DocConvert_Util.exe.config
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\DocConvert_Util.exe
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Debug\DocConvert_Util.pdb
 C:\Users\o0_0o\source\repos\isugar150\DocConvert\DocConvert_Test\obj\Debug\DocConvert_Util.csprojAssemblyReference.cache

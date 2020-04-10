@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Management;
@@ -32,22 +33,11 @@ namespace DocConvert_Server.License
         /// </summary>
         /// <param name="encryptText">암호화된 문자열</param>
         /// <param name="key">복호화할 키 값</param>
-        /// <returns>Unicode 인코딩으로 복호화한 문자열</returns>
+        /// <returns>지정된 인코딩으로 복호화한 문자열</returns>
         public static string decryptAES256(string encryptText, string key)
         {
-            return decryptAES256(encryptText, key, Encoding.Unicode);
-        }
-
-        /// <summary>
-        /// AES256 복호화
-        /// </summary>
-        /// <param name="encryptText">암호화된 문자열</param>
-        /// <param name="key">복호화할 키 값</param>
-        /// <param name="encoding">System.Text.Encoding</param>
-        /// <returns>지정된 인코딩으로 복호화한 문자열</returns>
-        public static string decryptAES256(string encryptText, string key, Encoding encoding)
-        {
-            string Key = Base64Decoding(key);
+            //key = Base64Decoding(key);
+            Debug.WriteLine(key);
             MemoryStream ms = null;
             CryptoStream cs = null;
             try
@@ -55,8 +45,8 @@ namespace DocConvert_Server.License
                 RijndaelManaged aes = new RijndaelManaged();
 
                 byte[] encryptData = Convert.FromBase64String(encryptText);
-                byte[] salt = Encoding.ASCII.GetBytes(Key.Length.ToString());
-                PasswordDeriveBytes secretKey = new PasswordDeriveBytes(Key, salt);
+                byte[] salt = Encoding.ASCII.GetBytes(key.Length.ToString());
+                PasswordDeriveBytes secretKey = new PasswordDeriveBytes(key, salt);
 
                 ICryptoTransform decryptor = aes.CreateDecryptor(secretKey.GetBytes(32), secretKey.GetBytes(16));
                 ms = new MemoryStream(encryptData);
@@ -64,7 +54,7 @@ namespace DocConvert_Server.License
                 byte[] result = new byte[encryptData.Length];
                 int decryptedCount = cs.Read(result, 0, result.Length);
 
-                return encoding.GetString(result, 0, decryptedCount);
+                return Encoding.Unicode.GetString(result, 0, decryptedCount);
             }
             catch (Exception e)
             {

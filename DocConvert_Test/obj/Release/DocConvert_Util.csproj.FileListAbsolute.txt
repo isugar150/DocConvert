@@ -13,7 +13,6 @@ C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert_Test\bin\Release\Doc
 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert_Test\bin\Release\Newtonsoft.Json.xml
 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert_Test\bin\Release\NLog.xml
 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\bin\Release\NLog.config
-C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\bin\Release\DocConvert_Util.exe.config
 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\bin\Release\DocConvert_Util.exe
 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\bin\Release\DocConvert_Util.pdb
 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert_Test\obj\Release\DocConvert_Util.csprojAssemblyReference.cache

@@ -12,7 +12,7 @@ namespace DocConvert_Server.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.4.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.5.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -124,9 +124,7 @@ namespace DocConvert_Server.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("+SyMOZEmJxHN1vejVuKmc4LBray1/FtX2pYFTMZQe/5W4sblUisFJfKviWRamL0cnM9SMaDijVsMwJua5" +
-            "pC64M4EU60wbomTb7E/Vg4CwsPELGymrrQGjDZJ28ODAjRNZA9HXAql7cD2pE/KUsRBX8vaDwJybJYlo" +
-            "FYSgcWmKb8+unIX41KGlA5z78dN0XGH")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string LicenseKEY {
             get {
                 return ((string)(this["LicenseKEY"]));

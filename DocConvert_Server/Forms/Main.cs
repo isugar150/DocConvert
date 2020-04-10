@@ -32,13 +32,15 @@ namespace DocConvert_Server
         {
             try
             {
-                JObject checkLicense = JObject.Parse(LicenseInfo.decryptAES256(Properties.Settings.Default.LicenseKEY, "NGE2ZDUzNDM2ZjZkNTA0MTZlNTk1MDcyNGY2NDU1NjM3NDRiNjU1OTc0NDU3MzU0"));
-                if (!checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID())) { MessageBox.Show("라이센스키를 확인하고 다시시도하세요.\r\n하드웨어 아이디를 확인하세요.\r\n" + "HWID: " + new LicenseInfo().getHWID(), "라이센스 오류", MessageBoxButtons.OK, MessageBoxIcon.Error); Application.Exit(); }
-                if(DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now) { MessageBox.Show("라이센스키를 확인하고 다시시도하세요.\r\n만료날짜가 지났습니다.\r\n" + "HWID: " + new LicenseInfo().getHWID(), "라이센스 오류", MessageBoxButtons.OK, MessageBoxIcon.Error); Application.Exit(); }
-
-                DevLog.Write(string.Format("라이선스 만료날짜: {0}", checkLicense["EndDate"].ToString()));
+                Debug.WriteLine(Properties.Settings.Default.LicenseKEY);
+                string licenseInfo = LicenseInfo.decryptAES256(Properties.Settings.Default.LicenseKEY, "JmDoCOnVerTerServErJmCoRp");
+                JObject checkLicense = JObject.Parse(licenseInfo);
+                if (!checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID())) { new MessageDialog("라이센스 오류", "라이센스 확인 후 다시시도하세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); Application.Exit(); }
+                if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now) { new MessageDialog("라이센스 오류", "라이센스 확인 후 다시시도하세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); Application.Exit(); }
+                
+                DevLog.Write(string.Format("라이센스 만료날짜: {0}", checkLicense["EndDate"].ToString()));
             }
-            catch (Exception) { MessageBox.Show("라이센스키를 확인하고 다시시도하세요.\r\n" + "HWID: " + new LicenseInfo().getHWID(), "라이센스 오류", MessageBoxButtons.OK, MessageBoxIcon.Error); Application.Exit(); }
+            catch (Exception) { new MessageDialog("라이센스 오류", "라이센스 확인 후 다시시도하세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); Application.Exit(); }
             checkBox1.Checked = Properties.Settings.Default.FollowTail;
             #region Create SocketServer
             socketServer.InitConfig();

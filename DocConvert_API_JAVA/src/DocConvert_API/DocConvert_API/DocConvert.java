@@ -23,7 +23,7 @@ public class DocConvert {
      * @param toImg    이미지 변환 (0:안함) (1:JPG) (2:PNG) (3:BMP)
      * @throws Exception
      */
-    public String DocConvert_Start(String filePath, String outPath, String fileName, int toImg) throws Exception {
+    public String DocConvert_Start(final String filePath, String outPath, String fileName, final int toImg) throws Exception {
         // 환경설정 읽기
         getProperties properties = new getProperties();
         properties.readProperties();
@@ -36,11 +36,11 @@ public class DocConvert {
 
         // 변수 데이터 초기화
         String sourceFileExten = fileName.substring(fileName.lastIndexOf("."), fileName.length());
-        String downloadIMGDir = fileName.replace(sourceFileExten, "");
-        String downloadPDFName = fileName.replace(sourceFileExten, ".pdf");
+        final String downloadIMGDir = fileName.replace(sourceFileExten, "");
+        final String downloadPDFName = fileName.replace(sourceFileExten, ".pdf");
 
         // FTP변수 초기화
-        FTPManager ftpManager = new FTPManager();
+        final FTPManager ftpManager = new FTPManager();
         ftpManager.Connect(host, ftpPort, ftpUser, ftpPass);
 
         // 변환할 파일 업 로드
@@ -53,7 +53,7 @@ public class DocConvert {
 
         // 웹소켓 기능
         // 서버 전송전 데이터
-        JSONObject requestMsg = new JSONObject();
+        final JSONObject requestMsg = new JSONObject();
         requestMsg.put("KEY", "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2");
         requestMsg.put("FileName", fileName);
         requestMsg.put("ConvertIMG", toImg);
