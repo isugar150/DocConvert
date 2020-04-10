@@ -124,7 +124,9 @@ namespace DocConvert_Server.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("라이센스키 업데이트해야함")]
+        [global::System.Configuration.DefaultSettingValueAttribute("+SyMOZEmJxHN1vejVuKmc4LBray1/FtX2pYFTMZQe/5W4sblUisFJfKviWRamL0cnM9SMaDijVsMwJua5" +
+            "pC64M4EU60wbomTb7E/Vg4CwsPELGymrrQGjDZJ28ODAjRNZA9HXAql7cD2pE/KUsRBX8vaDwJybJYlo" +
+            "FYSgcWmKb8+unIX41KGlA5z78dN0XGH")]
         public string LicenseKEY {
             get {
                 return ((string)(this["LicenseKEY"]));

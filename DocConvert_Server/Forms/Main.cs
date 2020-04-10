@@ -30,12 +30,15 @@ namespace DocConvert_Server
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.LicenseKEY.Equals(""))
+            try
             {
-                MessageBox.Show("해당 소프트웨어를 사용하려면 라이센스키를 발급받아야합니다.\r\nHWID: " + new LicenseInfo().getHWID(), "라이센스키 발급 필요", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Application.Exit();
-                return;
+                JObject checkLicense = JObject.Parse(LicenseInfo.decryptAES256(Properties.Settings.Default.LicenseKEY, "NGE2ZDUzNDM2ZjZkNTA0MTZlNTk1MDcyNGY2NDU1NjM3NDRiNjU1OTc0NDU3MzU0"));
+                if (!checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID())) { MessageBox.Show("라이센스키를 확인하고 다시시도하세요.\r\n하드웨어 아이디를 확인하세요.\r\n" + "HWID: " + new LicenseInfo().getHWID(), "라이센스 오류", MessageBoxButtons.OK, MessageBoxIcon.Error); Application.Exit(); }
+                if(DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now) { MessageBox.Show("라이센스키를 확인하고 다시시도하세요.\r\n만료날짜가 지났습니다.\r\n" + "HWID: " + new LicenseInfo().getHWID(), "라이센스 오류", MessageBoxButtons.OK, MessageBoxIcon.Error); Application.Exit(); }
+
+                DevLog.Write(string.Format("라이선스 만료날짜: {0}", checkLicense["EndDate"].ToString()));
             }
+            catch (Exception) { MessageBox.Show("라이센스키를 확인하고 다시시도하세요.\r\n" + "HWID: " + new LicenseInfo().getHWID(), "라이센스 오류", MessageBoxButtons.OK, MessageBoxIcon.Error); Application.Exit(); }
             checkBox1.Checked = Properties.Settings.Default.FollowTail;
             #region Create SocketServer
             socketServer.InitConfig();

@@ -36,7 +36,7 @@
       <Value Profile="(Default)">127.0.0.1</Value>
     </Setting>
     <Setting Name="LicenseKEY" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">라이센스키 업데이트해야함</Value>
+      <Value Profile="(Default)">+SyMOZEmJxHN1vejVuKmc4LBray1/FtX2pYFTMZQe/5W4sblUisFJfKviWRamL0cnM9SMaDijVsMwJua5pC64M4EU60wbomTb7E/Vg4CwsPELGymrrQGjDZJ28ODAjRNZA9HXAql7cD2pE/KUsRBX8vaDwJybJYloFYSgcWmKb8+unIX41KGlA5z78dN0XGH</Value>
     </Setting>
   </Settings>
 </SettingsFile>
