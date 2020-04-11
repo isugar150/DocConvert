@@ -7,7 +7,6 @@ import org.apache.commons.net.ftp.FTPFile;
 import org.apache.commons.net.ftp.FTPReply;
 
 import java.io.*;
-import java.util.List;
 
 // 리눅스에서 사용할때 vsftpd 설치해야함.
 public class FTPManager {
@@ -37,7 +36,10 @@ public class FTPManager {
         }
         ftpClient.login(ftpUser, ftpPassword);//로그인
         ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
+        ftpClient.setFileTransferMode(FTP.BINARY_FILE_TYPE);
+        ftpClient.setControlEncoding("UTF-8");
         ftpClient.enterLocalPassiveMode();
+        ftpClient.setControlKeepAliveTimeout((1000*60)*5);
         System.out.println(serverIP + ":" + serverPORT + " 해당 FTP서버에 접속하였습니다.");
     }
 
@@ -56,13 +58,27 @@ public class FTPManager {
         }
     }
 
+    /**
+     * FTP 서버로부터 파일을 다운로드합니다
+     * @param remoteFile 원격지 서버로 부터의 파일 경로
+     * @param localFile  다운로드 받을 파일의 경로
+     * @throws IOException
+     */
     public void downloadFile(String remoteFile, String localFile) throws IOException {
-        ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
-        ftpClient.setFileTransferMode(FTP.BINARY_FILE_TYPE);
-
         FileOutputStream fos = new FileOutputStream(localFile);
         ftpClient.retrieveFile(remoteFile, fos);
         System.out.println("파일을 다운로드 하였습니다. " + localFile);
+    }
+
+    /**
+     * FTP 서버에 업로드한 파일을 삭제합니다
+     * @param remoteFile 원격지 서버로 부터의 파일 경로
+     * @throws IOException
+     */
+    public void deleteFile(String remoteFile) throws IOException {
+        ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
+        ftpClient.setFileTransferMode(FTP.BINARY_FILE_TYPE);
+        ftpClient.deleteFile(remoteFile);
     }
 
     /**

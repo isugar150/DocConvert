@@ -10,6 +10,8 @@ public class Test01 {
         File fileAbsolutePath = new File(scan.nextLine());
         System.out.print("이미지 변환 (0:안함) (1:JPG) (2:PNG) (3:BMP): ");
         String toImg = scan.nextLine();
+        if(toImg.equals(""))
+            toImg = "0";
         String isSuccess = new DocConvert().DocConvert_Start(fileAbsolutePath.getParent(), fileAbsolutePath.getParent(), fileAbsolutePath.getName(), Integer.parseInt(toImg));
         System.out.println(isSuccess);
     }

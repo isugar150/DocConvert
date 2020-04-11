@@ -152,7 +152,7 @@ namespace DocConvert_Util
             #endregion
             comboBox1.SelectedIndex = 0;
             //디버깅 전용
-            textBox4.Text = "127.0.0.1";
+            textBox4.Text = "61.75.94.31";
             textBox5.Text = "12000";
             textBox6.Text = "12100";
         }
@@ -331,7 +331,7 @@ namespace DocConvert_Util
                         Setting["ftpUser"] = textBox8.Text;
                         Setting["ftpPwd"] = textBox7.Text;
                         File.WriteAllText(Application.StartupPath + @"\Settings.json", Setting.ToString());
-                        tb2_appendText(serverIP + ":" + filePORT + "에 연결하였습니다.");
+                        tb2_appendText("FTP서버 " + serverIP + ":" + filePORT + "에 연결하였습니다.");
 
                         ftpClient.UploadFile(textBox1.Text, "tmp/" + Path.GetFileName(textBox1.Text), FtpRemoteExists.Overwrite, true);
                         tb2_appendText("서버에 파일을 업로드하였습니다.");
@@ -377,7 +377,7 @@ namespace DocConvert_Util
             try
             {
                 socket.conn(address, port);
-                tb2_appendText("서버접속 성공!");
+                tb2_appendText("변환을 시도합니다. . .");
                 return true;
             }
             catch (SocketException e1)

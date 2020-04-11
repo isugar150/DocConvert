@@ -10,6 +10,8 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 
+import javax.net.*;
+
 public class DocConvert {
     private JSONObject responseData = null;
     private String returnValue = null;
@@ -17,13 +19,17 @@ public class DocConvert {
     /**
      * 각종 문서를 PDF 또는 이미지로 변환합니다.
      *
-     * @param filePath 파일의 경로(파일명 빼고)
-     * @param outPath  내보낼 경로
-     * @param fileName 문서파일의 이름
-     * @param toImg    이미지 변환 (0:안함) (1:JPG) (2:PNG) (3:BMP)
+     * @param filePath  파일의 경로(파일명 빼고)
+     * @param outPath   내보낼 경로
+     * @param fileName  문서파일의 이름
+     * @param toImg     이미지 변환 (0:안함) (1:JPG) (2:PNG) (3:BMP)
      * @throws Exception
      */
     public String DocConvert_Start(final String filePath, String outPath, String fileName, final int toImg) throws Exception {
+        // 파라미터 유효성 확인
+        if(!new File(filePath).exists())
+            throw new IOException();
+
         // 환경설정 읽기
         getProperties properties = new getProperties();
         properties.readProperties();
@@ -71,7 +77,6 @@ public class DocConvert {
 
             @Override
             public void onMessage(String message) {
-                this.close();
                 try {
                     responseData = (JSONObject) new JSONParser().parse(message);
 
@@ -97,7 +102,6 @@ public class DocConvert {
                             ftpManager.downloadFile(responseData.get("URL").toString() + "/" + downloadIMGDir + "/" + (i + 1) + imgExtension, filePath + File.separator + File.separator + downloadIMGDir + File.separator + (i + 1) + imgExtension);
                         }
                     }
-                    ftpManager.disConnect();
                 } catch (ParseException | IOException e) {
                     e.printStackTrace();
                 }
