@@ -40,6 +40,8 @@ public class DocConvert {
         String ftpUser = properties.getFtpUSER(); // 유저이름
         String ftpPass = properties.getFtpPASS(); // 암호
 
+        final long start = System.currentTimeMillis(); //코드 실행 전에 시간 받아오기
+
         // 변수 데이터 초기화
         String sourceFileExten = fileName.substring(fileName.lastIndexOf("."), fileName.length());
         final String downloadIMGDir = fileName.replace(sourceFileExten, "");
@@ -108,6 +110,8 @@ public class DocConvert {
                 }
                 ftpManager.disConnect();
                 returnValue = responseData.toJSONString();
+                long end = System.currentTimeMillis(); //프로그램이 끝나는 시점 계산
+                System.out.println( "실행 시간 : " + ( end - start )/1000.0 +"초"); //실행 시간 계산 및 출력
             }
 
             @Override
