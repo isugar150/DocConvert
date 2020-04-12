@@ -20,6 +20,10 @@ namespace DocConvert_Core.imageLib
         // 참고문서: https://github.com/pvginkel/PdfiumViewer
         public static ReturnValue PDFtoJpeg(string SourcePDF, string outPath)
         {
+            return PDFtoJpeg(SourcePDF, outPath, PdfRenderFlags.ForPrinting);
+        }
+        public static ReturnValue PDFtoJpeg(string SourcePDF, string outPath, PdfRenderFlags quality)
+        {
             ReturnValue returnValue = new ReturnValue();
             try
             {
@@ -30,7 +34,7 @@ namespace DocConvert_Core.imageLib
                     {
                         var dpi = 300;
 
-                        using (var image = document.Render(i, dpi, dpi, PdfRenderFlags.CorrectFromDpi))
+                        using (var image = document.Render(i, dpi, dpi, quality))
                         {
                             var encoder = ImageCodecInfo.GetImageEncoders()
                                 .First(c => c.FormatID == ImageFormat.Jpeg.Guid);
@@ -65,6 +69,10 @@ namespace DocConvert_Core.imageLib
         // 참고문서: https://github.com/pvginkel/PdfiumViewer
         public static ReturnValue PDFtoBmp(string SourcePDF, string outPath)
         {
+            return PDFtoBmp(SourcePDF, outPath, PdfRenderFlags.ForPrinting);
+        }
+        public static ReturnValue PDFtoBmp(string SourcePDF, string outPath, PdfRenderFlags quality)
+        {
             ReturnValue returnValue = new ReturnValue();
             try
             {
@@ -76,7 +84,7 @@ namespace DocConvert_Core.imageLib
                         Debug.WriteLine(outPath + (i + 1) + ".bmp");
                         var dpi = 300;
 
-                        using (var image = document.Render(i, dpi, dpi, PdfRenderFlags.CorrectFromDpi))
+                        using (var image = document.Render(i, dpi, dpi, quality))
                         {
                             var encoder = ImageCodecInfo.GetImageEncoders()
                                 .First(c => c.FormatID == ImageFormat.Bmp.Guid);
@@ -111,6 +119,10 @@ namespace DocConvert_Core.imageLib
         // 참고문서: https://github.com/pvginkel/PdfiumViewer
         public static ReturnValue PDFtoPng(string SourcePDF, string outPath)
         {
+            return PDFtoPng(SourcePDF, outPath, PdfRenderFlags.ForPrinting);
+        }
+        public static ReturnValue PDFtoPng(string SourcePDF, string outPath, PdfRenderFlags quality)
+        {
             ReturnValue returnValue = new ReturnValue();
             try
             {
@@ -122,7 +134,7 @@ namespace DocConvert_Core.imageLib
                         Debug.WriteLine(outPath + (i + 1) + ".png");
                         var dpi = 300;
 
-                        using (var image = document.Render(i, dpi, dpi, PdfRenderFlags.CorrectFromDpi))
+                        using (var image = document.Render(i, dpi, dpi, quality))
                         {
                             var encoder = ImageCodecInfo.GetImageEncoders()
                                 .First(c => c.FormatID == ImageFormat.Png.Guid);

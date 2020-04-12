@@ -1,0 +1,72 @@
+2020-04-12 17:58:45.3263 ERROR - ==================== Method: ExcelSaveAs ====================
+2020-04-12 17:58:45.3263 ERROR -    위치: Microsoft.Office.Interop.Excel._Workbook.ExportAsFixedFormat(XlFixedFormatType Type, Object Filename, Object Quality, Object IncludeDocProperties, Object IgnorePrintAreas, Object From, Object To, Object OpenAfterPublish, Object FixedFormatExtClassPtr)
+   위치: DocConvert_Core.OfficeLib.ExcelConvert_Core.ExcelSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\ExcelConvert_Core.cs:줄 150
+
+2020-04-12 17:58:45.3452 ERROR - 변환 실패: 인쇄할 내용을 찾을 수 없습니다.
+2020-04-12 17:58:45.3452 ERROR - ==================== End ====================
+2020-04-12 18:00:39.0607 ERROR - ==================== Method: ExcelSaveAs ====================
+2020-04-12 18:00:39.0607 ERROR -    위치: Microsoft.Office.Interop.Excel._Workbook.ExportAsFixedFormat(XlFixedFormatType Type, Object Filename, Object Quality, Object IncludeDocProperties, Object IgnorePrintAreas, Object From, Object To, Object OpenAfterPublish, Object FixedFormatExtClassPtr)
+   위치: DocConvert_Core.OfficeLib.ExcelConvert_Core.ExcelSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\ExcelConvert_Core.cs:줄 150
+
+2020-04-12 18:00:39.0607 ERROR - 변환 실패: 인쇄할 내용을 찾을 수 없습니다.
+2020-04-12 18:00:39.0607 ERROR - ==================== End ====================
+2020-04-12 18:01:40.6830 ERROR - ==================== Method: ExcelSaveAs ====================
+2020-04-12 18:01:41.2389 ERROR -    위치: Microsoft.Office.Interop.Excel._Workbook.ExportAsFixedFormat(XlFixedFormatType Type, Object Filename, Object Quality, Object IncludeDocProperties, Object IgnorePrintAreas, Object From, Object To, Object OpenAfterPublish, Object FixedFormatExtClassPtr)
+   위치: DocConvert_Core.OfficeLib.ExcelConvert_Core.ExcelSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\ExcelConvert_Core.cs:줄 150
+
+2020-04-12 18:01:41.6567 ERROR - 변환 실패: 예외가 발생한 HRESULT: 0x800A03EC
+2020-04-12 18:01:42.0178 ERROR - ==================== End ====================
+2020-04-12 18:03:23.6151 ERROR - ==================== Method: ExcelSaveAs ====================
+2020-04-12 18:03:23.6151 ERROR -    위치: Microsoft.Office.Interop.Excel._Workbook.ExportAsFixedFormat(XlFixedFormatType Type, Object Filename, Object Quality, Object IncludeDocProperties, Object IgnorePrintAreas, Object From, Object To, Object OpenAfterPublish, Object FixedFormatExtClassPtr)
+   위치: DocConvert_Core.OfficeLib.ExcelConvert_Core.ExcelSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\ExcelConvert_Core.cs:줄 150
+
+2020-04-12 18:03:23.6280 ERROR - 변환 실패: 인쇄할 내용을 찾을 수 없습니다.
+2020-04-12 18:03:23.6280 ERROR - ==================== End ====================
+2020-04-12 18:05:57.4839 ERROR - ==================== Method: ExcelSaveAs ====================
+2020-04-12 18:05:57.4839 ERROR -    위치: Microsoft.Office.Interop.Excel._Workbook.ExportAsFixedFormat(XlFixedFormatType Type, Object Filename, Object Quality, Object IncludeDocProperties, Object IgnorePrintAreas, Object From, Object To, Object OpenAfterPublish, Object FixedFormatExtClassPtr)
+   위치: DocConvert_Core.OfficeLib.ExcelConvert_Core.ExcelSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\ExcelConvert_Core.cs:줄 150
+
+2020-04-12 18:05:57.4839 ERROR - 변환 실패: 인쇄할 내용을 찾을 수 없습니다.
+2020-04-12 18:05:57.4839 ERROR - ==================== End ====================
+2020-04-12 18:06:35.4719 ERROR - ==================== Method: ExcelSaveAs ====================
+2020-04-12 18:06:35.4719 ERROR -    위치: Microsoft.Office.Interop.Excel._Workbook.ExportAsFixedFormat(XlFixedFormatType Type, Object Filename, Object Quality, Object IncludeDocProperties, Object IgnorePrintAreas, Object From, Object To, Object OpenAfterPublish, Object FixedFormatExtClassPtr)
+   위치: DocConvert_Core.OfficeLib.ExcelConvert_Core.ExcelSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\ExcelConvert_Core.cs:줄 150
+
+2020-04-12 18:06:35.4859 ERROR - 변환 실패: 인쇄할 내용을 찾을 수 없습니다.
+2020-04-12 18:06:35.4859 ERROR - ==================== End ====================
+2020-04-12 18:08:53.9337 ERROR - ==================== Method: ExcelSaveAs ====================
+2020-04-12 18:08:53.9407 ERROR -    위치: Microsoft.Office.Interop.Excel._Workbook.ExportAsFixedFormat(XlFixedFormatType Type, Object Filename, Object Quality, Object IncludeDocProperties, Object IgnorePrintAreas, Object From, Object To, Object OpenAfterPublish, Object FixedFormatExtClassPtr)
+   위치: DocConvert_Core.OfficeLib.ExcelConvert_Core.ExcelSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\ExcelConvert_Core.cs:줄 150
+
+2020-04-12 18:08:53.9407 ERROR - 변환 실패: 인쇄할 내용을 찾을 수 없습니다.
+2020-04-12 18:08:53.9407 ERROR - ==================== End ====================
+2020-04-12 18:11:02.7989 ERROR - ==================== Method: ExcelSaveAs ====================
+2020-04-12 18:11:02.7989 ERROR -    위치: Microsoft.Office.Interop.Excel.Workbooks.Open(String Filename, Object UpdateLinks, Object ReadOnly, Object Format, Object Password, Object WriteResPassword, Object IgnoreReadOnlyRecommended, Object Origin, Object Delimiter, Object Editable, Object Notify, Object Converter, Object AddToMru, Object Local, Object CorruptLoad)
+   위치: DocConvert_Core.OfficeLib.ExcelConvert_Core.ExcelSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\ExcelConvert_Core.cs:줄 82
+
+2020-04-12 18:11:02.8129 ERROR - 변환 실패: 예외가 발생한 HRESULT: 0x800A03EC
+2020-04-12 18:11:02.8129 ERROR - ==================== End ====================
+2020-04-12 18:11:11.9066 ERROR - ==================== Method: ExcelSaveAs ====================
+2020-04-12 18:11:11.9066 ERROR -    위치: Microsoft.Office.Interop.Excel._Workbook.ExportAsFixedFormat(XlFixedFormatType Type, Object Filename, Object Quality, Object IncludeDocProperties, Object IgnorePrintAreas, Object From, Object To, Object OpenAfterPublish, Object FixedFormatExtClassPtr)
+   위치: DocConvert_Core.OfficeLib.ExcelConvert_Core.ExcelSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\ExcelConvert_Core.cs:줄 150
+
+2020-04-12 18:11:11.9066 ERROR - 변환 실패: 인쇄할 내용을 찾을 수 없습니다.
+2020-04-12 18:11:11.9066 ERROR - ==================== End ====================
+2020-04-12 18:12:38.0711 ERROR - ==================== Method: ExcelSaveAs ====================
+2020-04-12 18:12:38.0761 ERROR -    위치: Microsoft.Office.Interop.Excel._Workbook.ExportAsFixedFormat(XlFixedFormatType Type, Object Filename, Object Quality, Object IncludeDocProperties, Object IgnorePrintAreas, Object From, Object To, Object OpenAfterPublish, Object FixedFormatExtClassPtr)
+   위치: DocConvert_Core.OfficeLib.ExcelConvert_Core.ExcelSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\ExcelConvert_Core.cs:줄 150
+
+2020-04-12 18:12:38.0761 ERROR - 변환 실패: 인쇄할 내용을 찾을 수 없습니다.
+2020-04-12 18:12:38.0761 ERROR - ==================== End ====================
+2020-04-12 18:14:39.6265 ERROR - ==================== Method: ExcelSaveAs ====================
+2020-04-12 18:14:39.6265 ERROR -    위치: Microsoft.Office.Interop.Excel._Workbook.ExportAsFixedFormat(XlFixedFormatType Type, Object Filename, Object Quality, Object IncludeDocProperties, Object IgnorePrintAreas, Object From, Object To, Object OpenAfterPublish, Object FixedFormatExtClassPtr)
+   위치: DocConvert_Core.OfficeLib.ExcelConvert_Core.ExcelSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\ExcelConvert_Core.cs:줄 150
+
+2020-04-12 18:14:39.6265 ERROR - 변환 실패: 인쇄할 내용을 찾을 수 없습니다.
+2020-04-12 18:14:39.6265 ERROR - ==================== End ====================
+2020-04-12 18:18:07.6637 ERROR - ==================== Method: ExcelSaveAs ====================
+2020-04-12 18:18:07.6707 ERROR -    위치: Microsoft.Office.Interop.Excel._Workbook.ExportAsFixedFormat(XlFixedFormatType Type, Object Filename, Object Quality, Object IncludeDocProperties, Object IgnorePrintAreas, Object From, Object To, Object OpenAfterPublish, Object FixedFormatExtClassPtr)
+   위치: DocConvert_Core.OfficeLib.ExcelConvert_Core.ExcelSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\OfficeLib\ExcelConvert_Core.cs:줄 153
+
+2020-04-12 18:18:07.6707 ERROR - 변환 실패: 인쇄할 내용을 찾을 수 없습니다.
+2020-04-12 18:18:07.6707 ERROR - ==================== End ====================

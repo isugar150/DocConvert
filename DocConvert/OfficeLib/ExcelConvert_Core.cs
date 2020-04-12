@@ -60,6 +60,11 @@ namespace DocConvert_Core.OfficeLib
                     };
                 }
 
+                // 액셀 메크로 비활성화
+                excel.AutomationSecurity = Microsoft.Office.Core.MsoAutomationSecurity.msoAutomationSecurityForceDisable;
+                // 변환중 화면 업데이트 해제
+                excel.ScreenUpdating = false;
+
                 #region 열기 옵션 https://docs.microsoft.com/en-us/dotnet/api/microsoft.office.interop.excel.workbooks.open?view=excel-pia
                 object UpdateLinks = false;
                 object ReadOnly = true;
@@ -75,8 +80,8 @@ namespace DocConvert_Core.OfficeLib
                 object Notify = false;
                 object Converter = Type.Missing;
                 object AddToMru = false;
-                object Local = false;
-                object CorruptLoad = Type.Missing;
+                object Local = true;
+                object CorruptLoad = false;
                 #endregion
                 #region 문서 열기
                 _Workbook doc = excel.Workbooks.Open(
@@ -138,7 +143,7 @@ namespace DocConvert_Core.OfficeLib
                 #endregion
                 #region 저장 옵션 https://docs.microsoft.com/ko-kr/dotnet/api/microsoft.office.tools.excel.workbook.exportasfixedformat?view=vsto-2017
                 XlFixedFormatType FileFormat = XlFixedFormatType.xlTypePDF;
-                XlFixedFormatQuality Quality = XlFixedFormatQuality.xlQualityMinimum;
+                XlFixedFormatQuality Quality = XlFixedFormatQuality.xlQualityStandard;
                 object IncludeDocProperties = Type.Missing;
                 object IgnorePrintAreas = false;
                 object From = Type.Missing;

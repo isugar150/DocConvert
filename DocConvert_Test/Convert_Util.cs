@@ -23,6 +23,8 @@ using System.Threading;
 using System.Net.Sockets;
 using FluentFTP;
 using System.Security.Authentication;
+using static DocConvert_Core.imageLib.ConvertImg;
+using PdfiumViewer;
 
 namespace DocConvert_Util
 {
@@ -35,6 +37,7 @@ namespace DocConvert_Util
         private bool RUNAFTER = false;
         private bool PAGINGNUM = false;
         private DateTime timeTaken;
+        private PdfRenderFlags quality = PdfRenderFlags.ForPrinting;
         public Convert_Util()
         {
             InitializeComponent();
@@ -273,15 +276,15 @@ namespace DocConvert_Util
                             new DirectoryInfo(imageOutput).Create();
                         if (comboBox1.SelectedIndex == 1)
                         {
-                            pdfToImgReturn = ConvertImg.PDFtoJpeg(outPath, imageOutput);
+                            pdfToImgReturn = ConvertImg.PDFtoJpeg(outPath, imageOutput, quality);
                         }
                         else if (comboBox1.SelectedIndex == 2)
                         {
-                            pdfToImgReturn = ConvertImg.PDFtoPng(outPath, imageOutput);
+                            pdfToImgReturn = ConvertImg.PDFtoPng(outPath, imageOutput, quality);
                         }
                         else if (comboBox1.SelectedIndex == 3)
                         {
-                            pdfToImgReturn = ConvertImg.PDFtoBmp(outPath, imageOutput);
+                            pdfToImgReturn = ConvertImg.PDFtoBmp(outPath, imageOutput, quality);
                         }
                         if (pdfToImgReturn.isSuccess)
                         {
@@ -638,9 +641,21 @@ namespace DocConvert_Util
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
+            {
                 textBox4.Enabled = true;
+                textBox5.Enabled = true;
+                textBox6.Enabled = true;
+                textBox7.Enabled = true;
+                textBox8.Enabled = true;
+            }
             else
+            {
                 textBox4.Enabled = false;
+                textBox5.Enabled = false;
+                textBox6.Enabled = false;
+                textBox7.Enabled = false;
+                textBox8.Enabled = false;
+            }
         }
     }
 }

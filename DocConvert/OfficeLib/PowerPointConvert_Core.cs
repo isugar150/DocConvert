@@ -48,7 +48,9 @@ namespace DocConvert_Core.OfficeLib
             {
                 Presentations multiPresentations = powerpoint.Presentations;
                 #region 앱 옵션
-                powerpoint.AutomationSecurity = Microsoft.Office.Core.MsoAutomationSecurity.msoAutomationSecurityForceDisable; // 매크로 실행 안되게
+                // 파워포인트 매크로 실행 비활성화
+                powerpoint.AutomationSecurity = Microsoft.Office.Core.MsoAutomationSecurity.msoAutomationSecurityForceDisable;
+                // 파워포인트 알림 비활성화
                 powerpoint.DisplayAlerts = PowerPoint.PpAlertLevel.ppAlertsNone;
                 #endregion
 
