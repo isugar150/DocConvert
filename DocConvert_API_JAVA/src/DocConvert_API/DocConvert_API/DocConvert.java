@@ -31,7 +31,7 @@ public class DocConvert {
             throw new IOException();
 
         // 환경설정 읽기
-        getProperties properties = new getProperties();
+        final getProperties properties = new getProperties();
         properties.readProperties();
 
         String host = properties.getServerIP(); // 호스트
@@ -87,7 +87,8 @@ public class DocConvert {
                     System.out.println("remoteFile: " + responseData.get("URL").toString() + "/" + downloadPDFName);
                     System.out.println("localFile: " + filePath + File.separator + downloadPDFName);
                     // PDF 다운로드
-                    ftpManager.downloadFile(responseData.get("URL").toString() + "/" + downloadPDFName, filePath + File.separator + downloadPDFName);
+                    if(properties.getOnlyImgDownload() || toImg == 0)
+                        ftpManager.downloadFile(responseData.get("URL").toString() + "/" + downloadPDFName, filePath + File.separator + downloadPDFName);
                     if(toImg != 0){
                         String imgExtension = null;
                         if(Integer.parseInt(requestMsg.get("ConvertIMG").toString()) == 1)
