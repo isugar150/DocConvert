@@ -1,0 +1,14 @@
+C:\Users\o0_0o\source\repos\isugar150\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Debug\DCLicenseGenerator.exe.config
+C:\Users\o0_0o\source\repos\isugar150\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Debug\DCLicenseGenerator.exe
+C:\Users\o0_0o\source\repos\isugar150\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Debug\DCLicenseGenerator.pdb
+C:\Users\o0_0o\source\repos\isugar150\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Debug\Newtonsoft.Json.dll
+C:\Users\o0_0o\source\repos\isugar150\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Debug\Newtonsoft.Json.xml
+C:\Users\o0_0o\source\repos\isugar150\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.csprojAssemblyReference.cache
+C:\Users\o0_0o\source\repos\isugar150\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.Properties.Resources.resources
+C:\Users\o0_0o\source\repos\isugar150\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.csproj.GenerateResource.cache
+C:\Users\o0_0o\source\repos\isugar150\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.csproj.CoreCompileInputs.cache
+C:\Users\o0_0o\source\repos\isugar150\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.csproj.CopyComplete
+C:\Users\o0_0o\source\repos\isugar150\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.exe
+C:\Users\o0_0o\source\repos\isugar150\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.pdb
+C:\Users\o0_0o\source\repos\isugar150\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.Main.resources
+C:\Users\o0_0o\source\repos\isugar150\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.MessageDialog.resources

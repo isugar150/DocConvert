@@ -42,6 +42,7 @@ namespace DocConvert_Server
                 DevLog.Write(string.Format("라이센스 만료날짜: {0}", checkLicense["EndDate"].ToString()));
             }
             catch (Exception) { new MessageDialog("라이센스 오류", "라이센스 확인 후 다시시도하세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); Application.Exit(); }
+            DevLog.Write("나의 하드웨어 ID: " + new LicenseInfo().getHWID());
             #endregion
             checkBox1.Checked = Properties.Settings.Default.FollowTail;
             #region Create SocketServer
