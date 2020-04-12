@@ -26,6 +26,7 @@ public class FTPManager {
      * @throws IOException
      */
     public void Connect(String serverIP, int serverPORT, String ftpUser, String ftpPassword) throws IOException {
+        ftpClient.setControlEncoding("UTF-8");
         ftpClient.addProtocolCommandListener(new PrintCommandListener(new PrintWriter(System.out)));
         int reply;
         ftpClient.connect(serverIP, serverPORT);//호스트 연결
@@ -37,7 +38,6 @@ public class FTPManager {
         ftpClient.login(ftpUser, ftpPassword);//로그인
         ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
         ftpClient.setFileTransferMode(FTP.BINARY_FILE_TYPE);
-        ftpClient.setControlEncoding("UTF-8");
         ftpClient.enterLocalPassiveMode();
         ftpClient.setControlKeepAliveTimeout((1000*60)*5);
         System.out.println(serverIP + ":" + serverPORT + " 해당 FTP서버에 접속하였습니다.");
