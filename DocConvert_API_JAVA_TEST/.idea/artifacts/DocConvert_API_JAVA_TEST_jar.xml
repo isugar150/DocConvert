@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DocConvert_API_JAVA_TEST:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DocConvert_API_JAVA_TEST_jar</output-path>
+    <root id="archive" name="DocConvert_API_JAVA_TEST.jar">
+      <element id="module-output" name="DocConvert_API_JAVA_TEST" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../DocConvert_API_JAVA/out/artifacts/DocConvert_API_jar/DocConvert_API.jar" path-in-jar="/" />
+      <element id="library" level="project" name="DocConvert_API" />
+    </root>
+  </artifact>
+</component>
