@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DocConvert_API.iml" filepath="$PROJECT_DIR$/DocConvert_API.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../DocConvert_API_JAVA_TEST/DocConvert_API_JAVA_TEST.iml" filepath="$PROJECT_DIR$/../DocConvert_API_JAVA_TEST/DocConvert_API_JAVA_TEST.iml" />
     </modules>
   </component>
 </project>

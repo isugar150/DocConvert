@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="DocConvert_API">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../DocConvert_API_JAVA/out/artifacts/DocConvert_API_jar/DocConvert_API.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

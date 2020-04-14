@@ -38,9 +38,12 @@ public class getProperties {
         }
         URL url = cl.getResource("setting.properties");
 
-        System.out.println(url.getPath());
-        //클래스 패스를 통해 info.property 있는 위치를 찾기
-        File propFile = new File(url.getPath());
+        File propFile = null;
+        if(new File("./setting.properties").exists()){
+            propFile = new File("./setting.properties");
+        } else{
+            propFile = new File(url.getPath());
+        }
         FileInputStream is;
 
         try {
