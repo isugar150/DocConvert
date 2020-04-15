@@ -159,9 +159,9 @@ namespace DocConvert_Server
                     if (ws != null)
                         await Task.Run(() => HandleConnectionAsync(ws, token));
                 }
-                catch (Exception aex)
+                catch (Exception)
                 {
-                    DevLog.Write("[WebSocket] Error Accepting clients: " + aex.GetBaseException().Message, LOG_LEVEL.ERROR);
+                    /*DevLog.Write("[WebSocket] Error Accepting clients: " + aex.GetBaseException().Message, LOG_LEVEL.ERROR);*/
                 }
             }
             DevLog.Write("[WebSocket] Server Stop accepting clients", LOG_LEVEL.ERROR);

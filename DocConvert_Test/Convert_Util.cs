@@ -365,11 +365,11 @@ namespace DocConvert_Util
                     if (ConnectServer(serverIP, serverPORT))
                     {
                         JObject requestMsg = new JObject();
-                            requestMsg["KEY"] = "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2";
-                            requestMsg["Method"] = "DocConvert";
-                            requestMsg["FileName"] = new FileInfo(textBox1.Text).Name;
-                            requestMsg["ConvertIMG"] = comboBox1.SelectedIndex;
-                        
+                        requestMsg["KEY"] = "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2";
+                        requestMsg["Method"] = "DocConvert";
+                        requestMsg["FileName"] = new FileInfo(textBox1.Text).Name;
+                        requestMsg["ConvertIMG"] = comboBox1.SelectedIndex;
+
                         SendData(requestMsg.ToString());
                     }
                     #endregion
@@ -493,7 +493,25 @@ namespace DocConvert_Util
                 }
                 else if (responseData["Method"].ToString().Equals("WebCapture"))
                 {
-
+                    #region WebCapture
+                    using (var ftpClient = new FtpClient())
+                    {
+                        string serverIP = textBox4.Text;
+                        int filePORT = int.Parse(textBox6.Text);
+                        string ftpUser = textBox8.Text;
+                        string ftpPwd = textBox7.Text;
+                        ftpClient.Host = serverIP;
+                        ftpClient.Port = filePORT;
+                        ftpClient.Credentials = new NetworkCredential(ftpUser, ftpPwd);
+                        if (isSuccess.Equals("True"))
+                        {
+                            ftpClient.DownloadFile(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + @"\" + new FileInfo(url).Name, url, FtpLocalExists.Overwrite, FtpVerify.None);
+                            tb2_appendText("이미지를 바탕화면에 저장하였습니다.");
+                        }
+                        ftpClient.Disconnect();
+                        ftpClient.Dispose();
+                    }
+                    #endregion
                 }
             }
             else
@@ -700,12 +718,13 @@ namespace DocConvert_Util
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboBox2.SelectedIndex == 0)
+            if (comboBox2.SelectedIndex == 0)
             {
                 panel6.Location = new Point(0, 78);
                 panel6.Visible = true;
                 panel7.Visible = false;
-            } else if(comboBox2.SelectedIndex == 1)
+            }
+            else if (comboBox2.SelectedIndex == 1)
             {
                 panel7.Location = new Point(0, 109);
                 panel7.Visible = true;

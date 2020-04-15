@@ -149,18 +149,28 @@ namespace DocConvert_Server
                 } 
                 else if (requestMsg["Method"].ToString().Equals("WebCapture"))
                 {
-                    string dataPath = Properties.Settings.Default.DataPath; // 파일 출력경로
+                    string guidPath = Guid.NewGuid().ToString() + "_" + DateTime.Now.ToString("yyyy-MM-dd");
+                    string dataPath =  @"\workspace\" + guidPath; // 파일 출력경로
                     #region WebCapture
-                    Thread HWPConvert = new Thread(() => {
-                        status = WebCapture_Core.WebCapture(requestMsg["URL"].ToString(), dataPath, ImageFormat.Png);
+                    Thread WebCapture = new Thread(() => {
+                        status = WebCapture_Core.WebCapture(requestMsg["URL"].ToString(), Properties.Settings.Default.DataPath + dataPath);
                     });
-                    HWPConvert.SetApartmentState(ApartmentState.STA);
-                    HWPConvert.Start();
-                    HWPConvert.Join();
-                    responseMsg["URL"] = dataPath;
-                    responseMsg["isSuccess"] = status.isSuccess;
-                    responseMsg["msg"] = status.Message;
-                    responseMsg["convertImgCnt"] = status.PageCount;
+                    WebCapture.SetApartmentState(ApartmentState.STA);
+                    WebCapture.Start();
+                    WebCapture.Join();
+                    if (status.isSuccess)
+                    {
+                        responseMsg["URL"] = "/" + "workspace" + "/" + guidPath + "/" + new Uri(requestMsg["URL"].ToString()).Authority + ".png";
+                        responseMsg["isSuccess"] = status.isSuccess;
+                        responseMsg["msg"] = status.Message;
+                        responseMsg["convertImgCnt"] = status.PageCount;
+                    }
+                    else
+                    {
+                        responseMsg["isSuccess"] = status.isSuccess;
+                        responseMsg["msg"] = status.Message;
+                        responseMsg["convertImgCnt"] = status.PageCount;
+                    }
                     responseMsg["Method"] = "WebCapture";
                     #endregion
                 }

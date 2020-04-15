@@ -63,6 +63,7 @@ public class DocConvert {
         // 서버 전송전 데이터
         final JSONObject requestMsg = new JSONObject();
         requestMsg.put("KEY", "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2");
+        requestMsg.put("Method", "DocConvert");
         requestMsg.put("FileName", fileName);
         requestMsg.put("ConvertIMG", toImg);
         requestMsg.put("DocPassword", "");

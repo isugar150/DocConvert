@@ -81,3 +81,5 @@ C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Test\obj\Release\DocConver
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Test\obj\Release\DocConvert_Util.csproj.CopyComplete
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Test\obj\Release\DocConvert_Util.exe
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Test\obj\Release\DocConvert_Util.pdb
+C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\phantomjs.exe
+C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\rasterize.js

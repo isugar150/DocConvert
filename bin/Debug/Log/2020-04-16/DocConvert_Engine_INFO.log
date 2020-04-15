@@ -1,0 +1,97 @@
+2020-04-16 00:46:27.1836  INFO - ==================== Start ====================
+2020-04-16 00:46:27.1836  INFO - Method: WordSaveAs, FilePath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.docx, outPath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf, docPassword: 
+2020-04-16 00:46:27.1836  INFO - 파일 언락 성공!
+2020-04-16 00:46:34.1979  INFO - 변환 성공
+2020-04-16 00:46:34.3964  INFO - ==================== End ====================
+2020-04-16 00:46:45.8829  INFO - ==================== Start ====================
+2020-04-16 00:46:45.8829  INFO - Method: WordSaveAs, FilePath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.docx, outPath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf, docPassword: 
+2020-04-16 00:46:45.8829  INFO - 파일 언락 성공!
+2020-04-16 00:46:51.6209  INFO - 변환 성공
+2020-04-16 00:46:51.7935  INFO - ==================== End ====================
+2020-04-16 00:46:52.0937  INFO - 이미지 변환 성공!
+2020-04-16 00:46:52.0937  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:46:52.0937  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\1.jpg
+2020-04-16 00:46:52.1286  INFO - 이미지 변환 성공!
+2020-04-16 00:46:52.1286  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:46:52.1286  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\2.jpg
+2020-04-16 00:46:52.1715  INFO - 이미지 변환 성공!
+2020-04-16 00:46:52.1715  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:46:52.1715  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\3.jpg
+2020-04-16 00:46:52.1964  INFO - 이미지 변환 성공!
+2020-04-16 00:46:52.1964  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:46:52.1964  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\4.jpg
+2020-04-16 00:46:52.2184  INFO - 이미지 변환 성공!
+2020-04-16 00:46:52.2184  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:46:52.2184  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\5.jpg
+2020-04-16 00:46:52.2393  INFO - 이미지 변환 성공!
+2020-04-16 00:46:52.2393  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:46:52.2413  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\6.jpg
+2020-04-16 00:46:52.2633  INFO - 이미지 변환 성공!
+2020-04-16 00:46:52.2633  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:46:52.2633  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\7.jpg
+2020-04-16 00:46:52.2921  INFO - 이미지 변환 성공!
+2020-04-16 00:46:52.2921  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:46:52.2921  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\8.jpg
+2020-04-16 00:47:22.2807  INFO - ==================== Start ====================
+2020-04-16 00:47:22.2807  INFO - Method: WordSaveAs, FilePath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.docx, outPath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf, docPassword: 
+2020-04-16 00:47:22.2807  INFO - 파일 언락 성공!
+2020-04-16 00:47:28.2362  INFO - 변환 성공
+2020-04-16 00:47:28.4026  INFO - ==================== End ====================
+2020-04-16 00:47:28.7269  INFO - 이미지 변환 성공!
+2020-04-16 00:47:28.7269  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:47:28.7269  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\1.jpg
+2020-04-16 00:47:28.7648  INFO - 이미지 변환 성공!
+2020-04-16 00:47:28.7648  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:47:28.7648  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\2.jpg
+2020-04-16 00:47:28.7928  INFO - 이미지 변환 성공!
+2020-04-16 00:47:28.7928  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:47:28.7928  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\3.jpg
+2020-04-16 00:47:28.8097  INFO - 이미지 변환 성공!
+2020-04-16 00:47:28.8097  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:47:28.8097  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\4.jpg
+2020-04-16 00:47:28.8302  INFO - 이미지 변환 성공!
+2020-04-16 00:47:28.8302  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:47:28.8302  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\5.jpg
+2020-04-16 00:47:28.8496  INFO - 이미지 변환 성공!
+2020-04-16 00:47:28.8496  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:47:28.8507  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\6.jpg
+2020-04-16 00:47:28.8736  INFO - 이미지 변환 성공!
+2020-04-16 00:47:28.8736  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:47:28.8736  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\7.jpg
+2020-04-16 00:47:28.9025  INFO - 이미지 변환 성공!
+2020-04-16 00:47:28.9025  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:47:28.9025  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\8.jpg
+2020-04-16 00:49:13.9865  INFO - ==================== Start ====================
+2020-04-16 00:49:13.9865  INFO - Method: WordSaveAs, FilePath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.docx, outPath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf, docPassword: 
+2020-04-16 00:49:13.9918  INFO - 파일 언락 성공!
+2020-04-16 00:49:20.0587  INFO - 변환 성공
+2020-04-16 00:49:20.2372  INFO - ==================== End ====================
+2020-04-16 00:49:20.5494  INFO - 이미지 변환 성공!
+2020-04-16 00:49:20.5494  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:49:20.5494  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\1.jpg
+2020-04-16 00:49:20.5844  INFO - 이미지 변환 성공!
+2020-04-16 00:49:20.5853  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:49:20.5853  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\2.jpg
+2020-04-16 00:49:20.6253  INFO - 이미지 변환 성공!
+2020-04-16 00:49:20.6253  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:49:20.6253  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\3.jpg
+2020-04-16 00:49:20.6512  INFO - 이미지 변환 성공!
+2020-04-16 00:49:20.6512  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:49:20.6512  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\4.jpg
+2020-04-16 00:49:20.6721  INFO - 이미지 변환 성공!
+2020-04-16 00:49:20.6721  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:49:20.6721  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\5.jpg
+2020-04-16 00:49:20.6931  INFO - 이미지 변환 성공!
+2020-04-16 00:49:20.6931  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:49:20.6931  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\6.jpg
+2020-04-16 00:49:20.7160  INFO - 이미지 변환 성공!
+2020-04-16 00:49:20.7160  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:49:20.7160  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\7.jpg
+2020-04-16 00:49:20.7449  INFO - 이미지 변환 성공!
+2020-04-16 00:49:20.7449  INFO - Source image: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf
+2020-04-16 00:49:20.7449  INFO - outFiles: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\8.jpg
+2020-04-16 00:50:56.2120  INFO - ==================== Start ====================
+2020-04-16 00:50:56.2120  INFO - Method: WordSaveAs, FilePath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.docx, outPath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf, docPassword: 
+2020-04-16 00:50:56.2120  INFO - 파일 언락 성공!
+2020-04-16 00:51:02.1271  INFO - 변환 성공
+2020-04-16 00:51:02.3076  INFO - ==================== End ====================

@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: Test01
+Main-Class: DocumentConvert
 Class-Path: setting.properties
