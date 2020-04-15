@@ -1,0 +1,5 @@
+2020-04-15 16:31:31.5036  INFO - ==================== Start ====================
+2020-04-15 16:31:31.5036  INFO - Method: WordSaveAs, FilePath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.docx, outPath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf, docPassword: 
+2020-04-15 16:31:31.5415  INFO - 파일 언락 실패! 자세한내용 로그 참고
+2020-04-15 16:31:37.3916  INFO - 변환 성공
+2020-04-15 16:31:37.5701  INFO - ==================== End ====================

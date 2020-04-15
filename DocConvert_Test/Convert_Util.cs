@@ -154,8 +154,9 @@ namespace DocConvert_Util
             }
             #endregion
             comboBox1.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 0;
             //디버깅 전용
-            textBox4.Text = "61.75.94.31";
+            textBox4.Text = "127.0.0.1";
             textBox5.Text = "12000";
             textBox6.Text = "12100";
         }
@@ -191,168 +192,191 @@ namespace DocConvert_Util
 
         private void button3_Click(object sender, EventArgs e)
         {
+            string serverIP = textBox4.Text;
+            int serverPORT = int.Parse(textBox5.Text);
+            int filePORT = int.Parse(textBox6.Text);
+            string ftpUser = textBox8.Text;
+            string ftpPwd = textBox7.Text;
             timeTaken = DateTime.Now;
             groupBox1.Enabled = false;
             groupBox2.Enabled = false;
-            // 유효성 검사
-            if (textBox1.Text.Equals("") || !new FileInfo(textBox1.Text).Exists) //파일이 없으면
+            if (comboBox2.SelectedIndex == 0)
             {
-                tb2_appendText("파일이 존재하지 않습니다.");
-                groupBox1.Enabled = true;
-                groupBox2.Enabled = true;
-                return;
-            }
-            if (!checkBox1.Checked)
-            {
-                #region Local 변환시
-                String[] FileNames = textBox1.Text.Split('|');
-                String outPath = null;
-                short SuccessCount = 0;
-                for (int i = 0; i < FileNames.Length; i++)
+                // 유효성 검사
+                if (textBox1.Text.Equals("") || !new FileInfo(textBox1.Text).Exists) //파일이 없으면
                 {
-                    if (!File.Exists(FileNames[i]))
-                    {
-                        tb2_appendText(FileNames[i] + "해당 경로에 파일이 존재하지 않습니다.");
-                    }
-                    if (Path.GetExtension(FileNames[i]).Equals(".hwp") && textBox3.Text.Length > 0)
-                    {
-                        tb2_appendText("비밀번호 해제후 다시시도해주세요.");
-                        return;
-                    }
-                    ReturnValue status = null;
-                    string passwd = null;
-                    outPath = Path.GetDirectoryName(FileNames[i]) + @"\" + Path.GetFileNameWithoutExtension(FileNames[i]) + ".pdf";
-                    tb2_appendText("[상태]   변환 요청 (" + (i + 1) + "/" + FileNames.Length + ")");
-                    tb2_appendText("[정보]   소스 경로: " + FileNames[i]);
-                    tb2_appendText("[정보]   출력 경로: " + outPath);
-                    if (!textBox3.Text.Equals(""))
-                        passwd = textBox3.Text;
-                    if (Path.GetExtension(FileNames[i]).Equals(".docx") || Path.GetExtension(FileNames[i]).Equals(".doc") || Path.GetExtension(FileNames[i]).Equals(".txt") || Path.GetExtension(FileNames[i]).Equals(".html"))
-                    {
-                        status = WordConvert_Core.WordSaveAs(FileNames[i], outPath, passwd, PAGINGNUM, APPVISIBLE);
-                    }
-                    else if (Path.GetExtension(FileNames[i]).Equals(".xlsx") || Path.GetExtension(FileNames[i]).Equals(".xls"))
-                    {
-                        status = ExcelConvert_Core.ExcelSaveAs(FileNames[i], outPath, passwd, PAGINGNUM, APPVISIBLE);
-                    }
-                    else if (Path.GetExtension(FileNames[i]).Equals(".pptx") || Path.GetExtension(FileNames[i]).Equals(".ppt"))
-                    {
-                        status = PowerPointConvert_Core.PowerPointSaveAs(FileNames[i], outPath, passwd, PAGINGNUM, APPVISIBLE);
-                    }
-                    else if (Path.GetExtension(FileNames[i]).Equals(".hwp"))
-                    {
-                        status = HWPConvert_Core.HwpSaveAs(FileNames[i], outPath, PAGINGNUM);
-                    }
-                    else if (Path.GetExtension(FileNames[i]).Equals(".pdf"))
-                    {
-                        ReturnValue pdfreturnValue = new ReturnValue();
-                        pdfreturnValue.isSuccess = true;
-                        pdfreturnValue.Message = "PDF파일은 변환할 필요가 없습니다.";
-                        pdfreturnValue.PageCount = ConvertImg.pdfPageCount(FileNames[i]);
-                        status = pdfreturnValue;
-                    }
-                    else
-                    {
-                        tb2_appendText("[상태]   지원포맷 아님. 파싱한 확장자: " + Path.GetExtension(FileNames[i]));
-                    }
-                    if (status != null)
-                    {
-                        if (PAGINGNUM)
-                            tb2_appendText("[정보]   페이지 수: " + Convert.ToString(status.PageCount));
-
-                        if (status.isSuccess)
-                            tb2_appendText("[상태]   " + status.Message);
-                        else
-                            tb2_appendText("[오류]   " + status.Message);
-                        if (status.isSuccess)
-                            SuccessCount += 1;
-                    }
-                    // PDF To Image
-                    if (comboBox1.SelectedIndex != 0)
-                    {
-                        ReturnValue pdfToImgReturn = null;
-                        String imageOutput = Path.GetDirectoryName(outPath) + "\\" + Path.GetFileNameWithoutExtension(outPath) + "\\";
-                        if (!new DirectoryInfo(imageOutput).Exists)
-                            new DirectoryInfo(imageOutput).Create();
-                        if (comboBox1.SelectedIndex == 1)
-                        {
-                            pdfToImgReturn = ConvertImg.PDFtoJpeg(outPath, imageOutput, quality);
-                        }
-                        else if (comboBox1.SelectedIndex == 2)
-                        {
-                            pdfToImgReturn = ConvertImg.PDFtoPng(outPath, imageOutput, quality);
-                        }
-                        else if (comboBox1.SelectedIndex == 3)
-                        {
-                            pdfToImgReturn = ConvertImg.PDFtoBmp(outPath, imageOutput, quality);
-                        }
-                        if (pdfToImgReturn.isSuccess)
-                        {
-                            tb2_appendText("[상태]   " + pdfToImgReturn.Message);
-                            tb2_appendText("[상태]   이미지로 내보낸 페이지수: " + pdfToImgReturn.PageCount);
-                        }
-                        else
-                        {
-                            tb2_appendText("[오류]   " + pdfToImgReturn.Message);
-                        }
-                    }
-                    #region 변환 후 실행
-                    if (RUNAFTER && status.isSuccess)
-                    {
-                        Process.Start(Path.GetDirectoryName(FileNames[i]) + @"\" + Path.GetFileNameWithoutExtension(FileNames[i]) + ".pdf");
-                    }
-                    #endregion
-                }
-                if (FileNames.Length == SuccessCount)
-                    tb2_appendText("[상태]   모든 파일을 변환완료 하였습니다.");
-                else
-                    tb2_appendText("[상태]   일부 파일 변환을 실패하였습니다.");
-                #endregion
-                groupBox1.Enabled = true;
-                groupBox2.Enabled = true;
-                TimeSpan curTime = DateTime.Now - timeTaken;
-                tb2_appendText(string.Format("작업 소요시간: {0}", curTime.ToString()));
-            }
-            else
-            {
-                #region Server 변환시
-                string serverIP = textBox4.Text;
-                int serverPORT = int.Parse(textBox5.Text);
-                int filePORT = int.Parse(textBox6.Text);
-                string ftpUser = textBox8.Text;
-                string ftpPwd = textBox7.Text;
-                try
-                {
-                    using (var ftpClient = new FtpClient())
-                    {
-                        ftpClient.Host = serverIP;
-                        ftpClient.Port = filePORT;
-                        ftpClient.Credentials = new NetworkCredential(ftpUser, ftpPwd);
-
-                        tb2_appendText(serverIP + ":" + filePORT + "에 연결을 시도합니다.");
-                        ftpClient.Connect();
-                        Setting["ftpUser"] = textBox8.Text;
-                        Setting["ftpPwd"] = textBox7.Text;
-                        File.WriteAllText(Application.StartupPath + @"\Settings.json", Setting.ToString());
-                        tb2_appendText("FTP서버 " + serverIP + ":" + filePORT + "에 연결하였습니다.");
-
-                        ftpClient.UploadFile(textBox1.Text, "tmp/" + Path.GetFileName(textBox1.Text), FtpRemoteExists.Overwrite, true);
-                        tb2_appendText("서버에 파일을 업로드하였습니다.");
-                    }
-                } catch(Exception e1)
-                {
-                    tb2_appendText(e1.Message);
+                    tb2_appendText("파일이 존재하지 않습니다.");
                     groupBox1.Enabled = true;
                     groupBox2.Enabled = true;
                     return;
                 }
-                // 아이피주소 유효성 검사
-                try
+                if (!checkBox1.Checked)
                 {
-                    IPAddress.Parse(serverIP);
+                    #region Local 변환시
+                    String[] FileNames = textBox1.Text.Split('|');
+                    String outPath = null;
+                    short SuccessCount = 0;
+                    for (int i = 0; i < FileNames.Length; i++)
+                    {
+                        if (!File.Exists(FileNames[i]))
+                        {
+                            tb2_appendText(FileNames[i] + "해당 경로에 파일이 존재하지 않습니다.");
+                        }
+                        if (Path.GetExtension(FileNames[i]).Equals(".hwp"))
+                        {
+                            tb2_appendText("비밀번호 해제후 다시시도해주세요.");
+                            return;
+                        }
+                        ReturnValue status = null;
+                        string passwd = null;
+                        outPath = Path.GetDirectoryName(FileNames[i]) + @"\" + Path.GetFileNameWithoutExtension(FileNames[i]) + ".pdf";
+                        tb2_appendText("[상태]   변환 요청 (" + (i + 1) + "/" + FileNames.Length + ")");
+                        tb2_appendText("[정보]   소스 경로: " + FileNames[i]);
+                        tb2_appendText("[정보]   출력 경로: " + outPath);
+                        if (Path.GetExtension(FileNames[i]).Equals(".docx") || Path.GetExtension(FileNames[i]).Equals(".doc") || Path.GetExtension(FileNames[i]).Equals(".txt") || Path.GetExtension(FileNames[i]).Equals(".html"))
+                        {
+                            status = WordConvert_Core.WordSaveAs(FileNames[i], outPath, passwd, PAGINGNUM, APPVISIBLE);
+                        }
+                        else if (Path.GetExtension(FileNames[i]).Equals(".xlsx") || Path.GetExtension(FileNames[i]).Equals(".xls"))
+                        {
+                            status = ExcelConvert_Core.ExcelSaveAs(FileNames[i], outPath, passwd, PAGINGNUM, APPVISIBLE);
+                        }
+                        else if (Path.GetExtension(FileNames[i]).Equals(".pptx") || Path.GetExtension(FileNames[i]).Equals(".ppt"))
+                        {
+                            status = PowerPointConvert_Core.PowerPointSaveAs(FileNames[i], outPath, passwd, PAGINGNUM, APPVISIBLE);
+                        }
+                        else if (Path.GetExtension(FileNames[i]).Equals(".hwp"))
+                        {
+                            status = HWPConvert_Core.HwpSaveAs(FileNames[i], outPath, PAGINGNUM);
+                        }
+                        else if (Path.GetExtension(FileNames[i]).Equals(".pdf"))
+                        {
+                            ReturnValue pdfreturnValue = new ReturnValue();
+                            pdfreturnValue.isSuccess = true;
+                            pdfreturnValue.Message = "PDF파일은 변환할 필요가 없습니다.";
+                            pdfreturnValue.PageCount = ConvertImg.pdfPageCount(FileNames[i]);
+                            status = pdfreturnValue;
+                        }
+                        else
+                        {
+                            tb2_appendText("[상태]   지원포맷 아님. 파싱한 확장자: " + Path.GetExtension(FileNames[i]));
+                        }
+                        if (status != null)
+                        {
+                            if (PAGINGNUM)
+                                tb2_appendText("[정보]   페이지 수: " + Convert.ToString(status.PageCount));
+
+                            if (status.isSuccess)
+                                tb2_appendText("[상태]   " + status.Message);
+                            else
+                                tb2_appendText("[오류]   " + status.Message);
+                            if (status.isSuccess)
+                                SuccessCount += 1;
+                        }
+                        // PDF To Image
+                        if (comboBox1.SelectedIndex != 0)
+                        {
+                            ReturnValue pdfToImgReturn = null;
+                            String imageOutput = Path.GetDirectoryName(outPath) + "\\" + Path.GetFileNameWithoutExtension(outPath) + "\\";
+                            if (!new DirectoryInfo(imageOutput).Exists)
+                                new DirectoryInfo(imageOutput).Create();
+                            if (comboBox1.SelectedIndex == 1)
+                            {
+                                pdfToImgReturn = ConvertImg.PDFtoJpeg(outPath, imageOutput, quality);
+                            }
+                            else if (comboBox1.SelectedIndex == 2)
+                            {
+                                pdfToImgReturn = ConvertImg.PDFtoPng(outPath, imageOutput, quality);
+                            }
+                            else if (comboBox1.SelectedIndex == 3)
+                            {
+                                pdfToImgReturn = ConvertImg.PDFtoBmp(outPath, imageOutput, quality);
+                            }
+                            if (pdfToImgReturn.isSuccess)
+                            {
+                                tb2_appendText("[상태]   " + pdfToImgReturn.Message);
+                                tb2_appendText("[상태]   이미지로 내보낸 페이지수: " + pdfToImgReturn.PageCount);
+                            }
+                            else
+                            {
+                                tb2_appendText("[오류]   " + pdfToImgReturn.Message);
+                            }
+                        }
+                        #region 변환 후 실행
+                        if (RUNAFTER && status.isSuccess)
+                        {
+                            Process.Start(Path.GetDirectoryName(FileNames[i]) + @"\" + Path.GetFileNameWithoutExtension(FileNames[i]) + ".pdf");
+                        }
+                        #endregion
+                    }
+                    if (FileNames.Length == SuccessCount)
+                        tb2_appendText("[상태]   모든 파일을 변환완료 하였습니다.");
+                    else
+                        tb2_appendText("[상태]   일부 파일 변환을 실패하였습니다.");
+                    #endregion
+                    groupBox1.Enabled = true;
+                    groupBox2.Enabled = true;
+                    TimeSpan curTime = DateTime.Now - timeTaken;
+                    tb2_appendText(string.Format("작업 소요시간: {0}", curTime.ToString()));
                 }
-                catch (Exception) { tb2_appendText("유효한 아이피 주소를 입력하세요."); groupBox1.Enabled = true; groupBox2.Enabled = true; return; }
-                // 포트번호 유효성 검사
+                else
+                {
+                    #region Server 변환시
+                    try
+                    {
+                        using (var ftpClient = new FtpClient())
+                        {
+                            ftpClient.Host = serverIP;
+                            ftpClient.Port = filePORT;
+                            ftpClient.Credentials = new NetworkCredential(ftpUser, ftpPwd);
+
+                            tb2_appendText(serverIP + ":" + filePORT + "에 연결을 시도합니다.");
+                            ftpClient.Connect();
+                            Setting["ftpUser"] = textBox8.Text;
+                            Setting["ftpPwd"] = textBox7.Text;
+                            File.WriteAllText(Application.StartupPath + @"\Settings.json", Setting.ToString());
+                            tb2_appendText("FTP서버 " + serverIP + ":" + filePORT + "에 연결하였습니다.");
+
+                            ftpClient.UploadFile(textBox1.Text, "tmp/" + Path.GetFileName(textBox1.Text), FtpRemoteExists.Overwrite, true);
+                            tb2_appendText("서버에 파일을 업로드하였습니다.");
+                        }
+                    }
+                    catch (Exception e1)
+                    {
+                        tb2_appendText(e1.Message);
+                        groupBox1.Enabled = true;
+                        groupBox2.Enabled = true;
+                        return;
+                    }
+                    // 아이피주소 유효성 검사
+                    try
+                    {
+                        IPAddress.Parse(serverIP);
+                    }
+                    catch (Exception) { tb2_appendText("유효한 아이피 주소를 입력하세요."); groupBox1.Enabled = true; groupBox2.Enabled = true; return; }
+                    // 포트번호 유효성 검사
+                    if (serverPORT < IPEndPoint.MinPort || serverPORT > IPEndPoint.MaxPort)
+                    {
+                        tb2_appendText("유효한 포트번호를 입력하세요.");
+                        groupBox1.Enabled = true;
+                        groupBox2.Enabled = true;
+                        return;
+                    }
+                    if (ConnectServer(serverIP, serverPORT))
+                    {
+                        JObject requestMsg = new JObject();
+                            requestMsg["KEY"] = "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2";
+                            requestMsg["Method"] = "DocConvert";
+                            requestMsg["FileName"] = new FileInfo(textBox1.Text).Name;
+                            requestMsg["ConvertIMG"] = comboBox1.SelectedIndex;
+                        
+                        SendData(requestMsg.ToString());
+                    }
+                    #endregion
+                }
+            }
+            else if (comboBox2.SelectedIndex == 1)
+            {
                 if (serverPORT < IPEndPoint.MinPort || serverPORT > IPEndPoint.MaxPort)
                 {
                     tb2_appendText("유효한 포트번호를 입력하세요.");
@@ -364,12 +388,10 @@ namespace DocConvert_Util
                 {
                     JObject requestMsg = new JObject();
                     requestMsg["KEY"] = "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2";
-                    requestMsg["FileName"] = new FileInfo(textBox1.Text).Name;
-                    requestMsg["ConvertIMG"] = comboBox1.SelectedIndex;
-                    requestMsg["DocPassword"] = textBox3.Text;
+                    requestMsg["Method"] = "WebCapture";
+                    requestMsg["URL"] = textBox9.Text;
                     SendData(requestMsg.ToString());
                 }
-                #endregion
             }
         }
         #region Socket Server Method
@@ -380,7 +402,7 @@ namespace DocConvert_Util
             try
             {
                 socket.conn(address, port);
-                tb2_appendText("변환을 시도합니다. . .");
+                tb2_appendText("서버에 요청하였습니다. . .");
                 return true;
             }
             catch (SocketException e1)
@@ -434,36 +456,44 @@ namespace DocConvert_Util
                     convertImgCnt = responseData["convertImgCnt"].ToString();
                 }
                 catch { }
-
-                string imgType = comboBox1.Text.Replace("<", "").Replace(">", "");
-
-                using (var ftpClient = new FtpClient())
+                if (responseData["Method"].ToString().Equals("DocConvert"))
                 {
-                    string serverIP = textBox4.Text;
-                    int filePORT = int.Parse(textBox6.Text);
-                    string ftpUser = textBox8.Text;
-                    string ftpPwd = textBox7.Text;
+                    #region DocConvert
+                    string imgType = comboBox1.Text.Replace("<", "").Replace(">", "");
 
-                    ftpClient.Host = serverIP;
-                    ftpClient.Port = filePORT;
-                    ftpClient.Credentials = new NetworkCredential(ftpUser, ftpPwd);
-                    if (isSuccess.Equals("True"))
+                    using (var ftpClient = new FtpClient())
                     {
-                        string outPath = Path.GetDirectoryName(textBox1.Text);
-                        string outFileName = Path.GetFileNameWithoutExtension(textBox1.Text);
-                        ftpClient.DownloadFile(outPath + @"\" + outFileName + ".pdf", url + "/" + outFileName + ".pdf", FtpLocalExists.Overwrite, FtpVerify.None);
-                        if(comboBox1.SelectedIndex != 0)
+                        string serverIP = textBox4.Text;
+                        int filePORT = int.Parse(textBox6.Text);
+                        string ftpUser = textBox8.Text;
+                        string ftpPwd = textBox7.Text;
+
+                        ftpClient.Host = serverIP;
+                        ftpClient.Port = filePORT;
+                        ftpClient.Credentials = new NetworkCredential(ftpUser, ftpPwd);
+                        if (isSuccess.Equals("True"))
                         {
-                            for(int i = 0; i<int.Parse(convertImgCnt); i++)
+                            string outPath = Path.GetDirectoryName(textBox1.Text);
+                            string outFileName = Path.GetFileNameWithoutExtension(textBox1.Text);
+                            ftpClient.DownloadFile(outPath + @"\" + outFileName + ".pdf", url + "/" + outFileName + ".pdf", FtpLocalExists.Overwrite, FtpVerify.None);
+                            if (comboBox1.SelectedIndex != 0)
                             {
-                                ftpClient.DownloadFile(outPath + @"\" + outFileName + @"\" + (i + 1) + "." + imgType, url + "/" + outFileName + "/" + (i + 1) + "." + imgType, FtpLocalExists.Overwrite, FtpVerify.None);
-                                tb2_appendText(outPath + @"\" + outFileName + @"\" + (i + 1) + "." + imgType + " 파일 다운로드 완료");
+                                for (int i = 0; i < int.Parse(convertImgCnt); i++)
+                                {
+                                    ftpClient.DownloadFile(outPath + @"\" + outFileName + @"\" + (i + 1) + "." + imgType, url + "/" + outFileName + "/" + (i + 1) + "." + imgType, FtpLocalExists.Overwrite, FtpVerify.None);
+                                    tb2_appendText(outPath + @"\" + outFileName + @"\" + (i + 1) + "." + imgType + " 파일 다운로드 완료");
+                                }
                             }
+                            tb2_appendText(outPath + @"\" + outFileName + ".pdf" + " 파일 다운로드 완료");
                         }
-                        tb2_appendText(outPath + @"\" + outFileName + ".pdf" + " 파일 다운로드 완료");
+                        ftpClient.Disconnect();
+                        ftpClient.Dispose();
                     }
-                    ftpClient.Disconnect();
-                    ftpClient.Dispose();
+                    #endregion
+                }
+                else if (responseData["Method"].ToString().Equals("WebCapture"))
+                {
+
                 }
             }
             else
@@ -647,6 +677,11 @@ namespace DocConvert_Util
                 textBox6.Enabled = true;
                 textBox7.Enabled = true;
                 textBox8.Enabled = true;
+                panel1.Enabled = false;
+                panel2.Enabled = false;
+                panel3.Enabled = false;
+                panel4.Enabled = false;
+                panel5.Enabled = true;
             }
             else
             {
@@ -655,6 +690,26 @@ namespace DocConvert_Util
                 textBox6.Enabled = false;
                 textBox7.Enabled = false;
                 textBox8.Enabled = false;
+                panel1.Enabled = true;
+                panel2.Enabled = true;
+                panel3.Enabled = true;
+                panel4.Enabled = true;
+                panel5.Enabled = false;
+            }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBox2.SelectedIndex == 0)
+            {
+                panel6.Location = new Point(0, 78);
+                panel6.Visible = true;
+                panel7.Visible = false;
+            } else if(comboBox2.SelectedIndex == 1)
+            {
+                panel7.Location = new Point(0, 109);
+                panel7.Visible = true;
+                panel6.Visible = false;
             }
         }
     }

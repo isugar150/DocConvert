@@ -119,6 +119,7 @@
     <Compile Include="ServerLib\MainServer.cs" />
     <Compile Include="ServerLib\PacketHandlers.cs" />
     <Compile Include="ServerLib\ReceiveFilter.cs" />
+    <Compile Include="Settings.cs" />
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>

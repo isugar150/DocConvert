@@ -18,3 +18,1392 @@
 2020-04-15 12:42:18.5617  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
 2020-04-15 12:42:18.6774  INFO - [Web Socket Server Listening...]
 2020-04-15 12:42:18.6774  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 14:12:08.8821  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 14:12:08.9160  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 14:12:09.0177  INFO - [Socket]핸들러 등록 완료
+2020-04-15 14:12:09.0177  INFO - [Socket]서버 생성 성공
+2020-04-15 14:12:09.0467  INFO - [Socket Server Listening...]
+2020-04-15 14:12:09.0467  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 14:12:09.1534  INFO - [Web Socket Server Listening...]
+2020-04-15 14:12:09.1534  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 14:13:43.8471  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 14:13:43.8791  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 14:13:43.9758  INFO - [Socket]핸들러 등록 완료
+2020-04-15 14:13:43.9758  INFO - [Socket]서버 생성 성공
+2020-04-15 14:13:44.0077  INFO - [Socket Server Listening...]
+2020-04-15 14:13:44.0077  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 14:13:44.1174  INFO - [Web Socket Server Listening...]
+2020-04-15 14:13:44.1174  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 14:14:03.8629  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 14:14:03.9107  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 14:14:03.9895  INFO - [Socket]핸들러 등록 완료
+2020-04-15 14:14:03.9895  INFO - [Socket]서버 생성 성공
+2020-04-15 14:14:04.0324  INFO - [Socket Server Listening...]
+2020-04-15 14:14:04.0324  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 14:14:04.1301  INFO - [Web Socket Server Listening...]
+2020-04-15 14:14:04.1301  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 14:14:21.8821  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 14:14:21.9230  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 14:14:22.0217  INFO - [Socket]핸들러 등록 완료
+2020-04-15 14:14:22.0227  INFO - [Socket]서버 생성 성공
+2020-04-15 14:14:22.0626  INFO - [Socket Server Listening...]
+2020-04-15 14:14:22.0626  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 14:14:22.1992  INFO - [Web Socket Server Listening...]
+2020-04-15 14:14:22.1992  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 14:15:22.5183  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 14:15:22.5501  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 14:15:22.6519  INFO - [Socket]핸들러 등록 완료
+2020-04-15 14:15:22.6519  INFO - [Socket]서버 생성 성공
+2020-04-15 14:15:22.6868  INFO - [Socket Server Listening...]
+2020-04-15 14:15:22.6868  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 14:15:22.8084  INFO - [Web Socket Server Listening...]
+2020-04-15 14:15:22.8084  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 14:42:53.8050  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 14:42:53.8419  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 14:42:53.9376  INFO - [Socket]핸들러 등록 완료
+2020-04-15 14:42:53.9376  INFO - [Socket]서버 생성 성공
+2020-04-15 14:42:53.9775  INFO - [Socket Server Listening...]
+2020-04-15 14:42:53.9775  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 14:42:54.0942  INFO - [Web Socket Server Listening...]
+2020-04-15 14:42:54.0942  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 14:50:41.2253  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 14:50:41.2662  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 14:50:41.3599  INFO - [Socket]핸들러 등록 완료
+2020-04-15 14:50:41.3599  INFO - [Socket]서버 생성 성공
+2020-04-15 14:50:41.3988  INFO - [Socket Server Listening...]
+2020-04-15 14:50:41.3988  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 14:50:41.5215  INFO - [Web Socket Server Listening...]
+2020-04-15 14:50:41.5215  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 15:02:08.8464  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 15:02:08.8773  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 15:02:08.9641  INFO - [Socket]핸들러 등록 완료
+2020-04-15 15:02:08.9641  INFO - [Socket]서버 생성 성공
+2020-04-15 15:02:08.9940  INFO - [Socket Server Listening...]
+2020-04-15 15:02:08.9940  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 15:02:09.0948  INFO - [Web Socket Server Listening...]
+2020-04-15 15:02:09.0948  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 15:04:02.2870  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 15:04:02.3119  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 15:04:02.3558  INFO - [Socket]핸들러 등록 완료
+2020-04-15 15:04:02.3558  INFO - [Socket]서버 생성 성공
+2020-04-15 15:04:02.3788  INFO - [Socket Server Listening...]
+2020-04-15 15:04:02.3788  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 15:04:02.4296  INFO - [Web Socket Server Listening...]
+2020-04-15 15:04:02.4296  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 15:12:49.9115  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 15:12:49.9354  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 15:12:49.9723  INFO - [Socket]핸들러 등록 완료
+2020-04-15 15:12:49.9723  INFO - [Socket]서버 생성 성공
+2020-04-15 15:13:01.3549  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 15:13:01.3799  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 15:13:01.4168  INFO - [Socket]핸들러 등록 완료
+2020-04-15 15:13:01.4168  INFO - [Socket]서버 생성 성공
+2020-04-15 15:13:01.4347  INFO - [Socket Server Listening...]
+2020-04-15 15:13:01.4347  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 15:13:01.4736  INFO - [Web Socket Server Listening...]
+2020-04-15 15:13:01.4736  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 15:13:46.7578  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 15:13:46.7847  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 15:13:46.8236  INFO - [Socket]핸들러 등록 완료
+2020-04-15 15:13:46.8236  INFO - [Socket]서버 생성 성공
+2020-04-15 15:13:46.8455  INFO - [Socket Server Listening...]
+2020-04-15 15:13:46.8455  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 15:13:46.8924  INFO - [Web Socket Server Listening...]
+2020-04-15 15:13:46.8924  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 15:16:14.1447  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 15:16:14.1626  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 15:16:14.1976  INFO - [Socket]핸들러 등록 완료
+2020-04-15 15:16:14.1976  INFO - [Socket]서버 생성 성공
+2020-04-15 15:28:40.5085  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 15:28:40.5345  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 15:28:40.5734  INFO - [Socket]핸들러 등록 완료
+2020-04-15 15:28:40.5734  INFO - [Socket]서버 생성 성공
+2020-04-15 15:28:40.5923  INFO - [Socket Server Listening...]
+2020-04-15 15:28:40.5923  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 15:28:40.6322  INFO - [Web Socket Server Listening...]
+2020-04-15 15:28:40.6322  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 15:29:54.6833  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 15:29:54.7082  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 15:29:54.7471  INFO - [Socket]핸들러 등록 완료
+2020-04-15 15:29:54.7471  INFO - [Socket]서버 생성 성공
+2020-04-15 15:29:54.7680  INFO - [Socket Server Listening...]
+2020-04-15 15:29:54.7680  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 15:29:54.8149  INFO - [Web Socket Server Listening...]
+2020-04-15 15:29:54.8149  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 15:30:05.6194  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-15 15:30:05.6743  INFO - 
+[Socket][Server => Client]
+{
+  "isSuccess": false,
+  "msg": "개체 참조가 개체의 인스턴스로 설정되지 않았습니다."
+}
+
+2020-04-15 15:30:05.6743  INFO - [Socket] 작업 소요시간: 00:00:00.0538872
+2020-04-15 15:30:05.6923  INFO - [Socket]세션ID: 7fdb9857-dee5-4e62-ac54-d65964b97c3d 접속해제: ClientClosing
+2020-04-15 15:31:38.8172  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 15:31:38.8442  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 15:31:38.9339  INFO - [Socket]핸들러 등록 완료
+2020-04-15 15:31:38.9339  INFO - [Socket]서버 생성 성공
+2020-04-15 15:31:38.9668  INFO - [Socket Server Listening...]
+2020-04-15 15:31:38.9668  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 15:31:39.0755  INFO - [Web Socket Server Listening...]
+2020-04-15 15:31:39.0755  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 15:32:10.6638  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-15 15:32:38.1404  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 15:32:38.1723  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 15:32:38.2630  INFO - [Socket]핸들러 등록 완료
+2020-04-15 15:32:38.2630  INFO - [Socket]서버 생성 성공
+2020-04-15 15:32:38.2939  INFO - [Socket Server Listening...]
+2020-04-15 15:32:38.2939  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 15:32:38.4106  INFO - [Web Socket Server Listening...]
+2020-04-15 15:32:38.4106  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 15:32:39.2474  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-15 15:32:45.2638  INFO - 
+[Socket][Server => Client]
+{
+  "isSuccess": false,
+  "msg": "현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 '8856f961-340a-11d0-a96b-00c04fd705a2'을(를) 인스턴스화할 수 없습니다."
+}
+
+2020-04-15 15:32:45.2638  INFO - [Socket] 작업 소요시간: 00:00:06.0133781
+2020-04-15 15:32:45.2827  INFO - [Socket]세션ID: 0cfb2c7c-d24f-49f2-ba66-124b62723499 접속해제: ClientClosing
+2020-04-15 15:32:53.1550  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-15 15:32:53.1719  INFO - 
+[Socket][Server => Client]
+{
+  "isSuccess": false,
+  "msg": "현재 스레드가 단일 스레드 아파트에 없으므로 ActiveX 컨트롤 '8856f961-340a-11d0-a96b-00c04fd705a2'을(를) 인스턴스화할 수 없습니다."
+}
+
+2020-04-15 15:32:53.1719  INFO - [Socket] 작업 소요시간: 00:00:00.0119773
+2020-04-15 15:32:53.1789  INFO - [Socket]세션ID: c3cc4f71-2e2d-4031-a90c-8e547c4533ef 접속해제: ClientClosing
+2020-04-15 15:41:33.6695  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 15:41:33.6944  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 15:41:33.7383  INFO - [Socket]핸들러 등록 완료
+2020-04-15 15:41:33.7383  INFO - [Socket]서버 생성 성공
+2020-04-15 15:41:33.7602  INFO - [Socket Server Listening...]
+2020-04-15 15:41:33.7602  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 15:41:33.8081  INFO - [Web Socket Server Listening...]
+2020-04-15 15:41:33.8081  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 15:42:00.6046  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 15:42:00.6306  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 15:42:00.6804  INFO - [Socket]핸들러 등록 완료
+2020-04-15 15:42:00.6804  INFO - [Socket]서버 생성 성공
+2020-04-15 15:42:00.7054  INFO - [Socket Server Listening...]
+2020-04-15 15:42:00.7054  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 15:42:00.7572  INFO - [Web Socket Server Listening...]
+2020-04-15 15:42:00.7572  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 15:44:21.7189  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 15:44:21.7429  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 15:44:21.7877  INFO - [Socket]핸들러 등록 완료
+2020-04-15 15:44:21.7877  INFO - [Socket]서버 생성 성공
+2020-04-15 15:44:21.8107  INFO - [Socket Server Listening...]
+2020-04-15 15:44:21.8107  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 15:44:21.8546  INFO - [Web Socket Server Listening...]
+2020-04-15 15:44:21.8546  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 15:44:51.4849  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 15:44:51.5068  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 15:44:51.5676  INFO - [Socket]핸들러 등록 완료
+2020-04-15 15:44:51.5676  INFO - [Socket]서버 생성 성공
+2020-04-15 15:44:51.5995  INFO - [Socket Server Listening...]
+2020-04-15 15:44:51.6005  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 15:44:51.6424  INFO - [Web Socket Server Listening...]
+2020-04-15 15:44:51.6424  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 15:45:17.9350  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-15 15:45:17.9809  INFO - 
+[Socket][Server => Client]
+{
+  "isSuccess": false,
+  "msg": "개체 참조가 개체의 인스턴스로 설정되지 않았습니다."
+}
+
+2020-04-15 15:45:17.9809  INFO - [Socket] 작업 소요시간: 00:00:00.0438787
+2020-04-15 15:45:17.9809  INFO - [Socket]세션ID: 230cd024-50c1-4d4c-9199-98217ba46d28 접속해제: ClientClosing
+2020-04-15 15:45:35.0459  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-15 15:45:35.0459  INFO - 
+[Socket][Server => Client]
+{
+  "isSuccess": false,
+  "msg": "개체 참조가 개체의 인스턴스로 설정되지 않았습니다."
+}
+
+2020-04-15 15:45:35.0459  INFO - [Socket] 작업 소요시간: 00:00:00
+2020-04-15 15:45:35.0628  INFO - [Socket]세션ID: a8d39d76-a656-4985-bb8b-e7aa5bcd5944 접속해제: ClientClosing
+2020-04-15 15:45:56.0092  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 15:45:56.0391  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 15:45:56.1239  INFO - [Socket]핸들러 등록 완료
+2020-04-15 15:45:56.1239  INFO - [Socket]서버 생성 성공
+2020-04-15 15:45:56.1548  INFO - [Socket Server Listening...]
+2020-04-15 15:45:56.1548  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 15:45:56.2535  INFO - [Web Socket Server Listening...]
+2020-04-15 15:45:56.2535  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 15:46:35.4554  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-15 15:47:58.9073  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 15:47:58.9392  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 15:47:59.0120  INFO - [Socket]핸들러 등록 완료
+2020-04-15 15:47:59.0120  INFO - [Socket]서버 생성 성공
+2020-04-15 15:47:59.0479  INFO - [Socket Server Listening...]
+2020-04-15 15:47:59.0479  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 15:47:59.1427  INFO - [Web Socket Server Listening...]
+2020-04-15 15:47:59.1427  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 15:48:11.1476  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-15 15:48:35.0670  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 15:48:35.0999  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 15:48:35.1897  INFO - [Socket]핸들러 등록 완료
+2020-04-15 15:48:35.1897  INFO - [Socket]서버 생성 성공
+2020-04-15 15:48:35.2466  INFO - [Socket Server Listening...]
+2020-04-15 15:48:35.2466  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 15:48:35.3782  INFO - [Web Socket Server Listening...]
+2020-04-15 15:48:35.3782  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 15:48:38.3828  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-15 15:48:48.9755  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "",
+  "isSuccess": true,
+  "msg": "테스트"
+}
+
+2020-04-15 15:48:48.9755  INFO - [Socket] 작업 소요시간: 00:00:10.5917083
+2020-04-15 15:49:00.3301  INFO - [Socket]세션ID: f7e0902e-7b91-4bb0-bc12-c2f090f0fce5 접속해제: SocketError
+2020-04-15 15:55:08.5070  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 15:55:08.5389  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 15:55:08.6267  INFO - [Socket]핸들러 등록 완료
+2020-04-15 15:55:08.6267  INFO - [Socket]서버 생성 성공
+2020-04-15 15:55:08.6646  INFO - [Socket Server Listening...]
+2020-04-15 15:55:08.6646  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 15:55:08.7603  INFO - [Web Socket Server Listening...]
+2020-04-15 15:55:08.7603  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 15:55:25.7058  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-15 15:55:31.4100  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "",
+  "isSuccess": true,
+  "msg": "테스트",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 15:55:31.4149  INFO - [Socket] 작업 소요시간: 00:00:05.7021576
+2020-04-15 15:55:39.3021  INFO - [Socket]세션ID: 3470d474-ad4d-4631-a142-43e2f98a49f8 접속해제: SocketError
+2020-04-15 15:55:53.0327  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 15:55:53.0546  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 15:55:53.1024  INFO - [Socket]핸들러 등록 완료
+2020-04-15 15:55:53.1024  INFO - [Socket]서버 생성 성공
+2020-04-15 15:55:53.1254  INFO - [Socket Server Listening...]
+2020-04-15 15:55:53.1254  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 15:55:53.1693  INFO - [Web Socket Server Listening...]
+2020-04-15 15:55:53.1693  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 15:56:18.0302  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 15:56:18.0631  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 15:56:18.1329  INFO - [Socket]핸들러 등록 완료
+2020-04-15 15:56:18.1329  INFO - [Socket]서버 생성 성공
+2020-04-15 15:56:18.1618  INFO - [Socket Server Listening...]
+2020-04-15 15:56:18.1618  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 15:56:18.2346  INFO - [Web Socket Server Listening...]
+2020-04-15 15:56:18.2346  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 15:57:46.6666  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 15:57:46.6916  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 15:57:46.7434  INFO - [Socket]핸들러 등록 완료
+2020-04-15 15:57:46.7434  INFO - [Socket]서버 생성 성공
+2020-04-15 15:57:46.7694  INFO - [Socket Server Listening...]
+2020-04-15 15:57:46.7694  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 15:57:46.8242  INFO - [Web Socket Server Listening...]
+2020-04-15 15:57:46.8242  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 15:57:49.9871  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-15 15:57:50.1078  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "",
+  "isSuccess": true,
+  "msg": "테스트",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 15:57:50.1078  INFO - [Socket] 작업 소요시간: 00:00:00.1206789
+2020-04-15 15:58:04.8401  INFO - [Socket]세션ID: 19cd9385-93d8-438f-9138-b3197cdee932 접속해제: ClientClosing
+2020-04-15 15:58:31.9143  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-15 15:58:31.9373  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "",
+  "isSuccess": true,
+  "msg": "테스트",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 15:58:31.9373  INFO - [Socket] 작업 소요시간: 00:00:00.0229401
+2020-04-15 15:58:31.9483  INFO - [Socket]세션ID: 85ad7166-7a6f-4f95-b991-5ec2af0f6514 접속해제: ClientClosing
+2020-04-15 16:16:46.8630  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 16:16:46.8839  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 16:16:46.9238  INFO - [Socket]핸들러 등록 완료
+2020-04-15 16:16:46.9238  INFO - [Socket]서버 생성 성공
+2020-04-15 16:16:46.9468  INFO - [Socket Server Listening...]
+2020-04-15 16:16:46.9468  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 16:16:46.9927  INFO - [Web Socket Server Listening...]
+2020-04-15 16:16:46.9927  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 16:16:59.2538  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "http://www.naver.com"
+}
+
+2020-04-15 16:16:59.3705  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "",
+  "isSuccess": true,
+  "msg": "테스트",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 16:16:59.3705  INFO - [Socket] 작업 소요시간: 00:00:00.1146846
+2020-04-15 16:16:59.3845  INFO - [Socket]세션ID: 5628cd3e-0c9c-4395-8b69-b17bb8b969df 접속해제: ClientClosing
+2020-04-15 16:22:43.1938  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 16:22:43.2207  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 16:22:43.2726  INFO - [Socket]핸들러 등록 완료
+2020-04-15 16:22:43.2726  INFO - [Socket]서버 생성 성공
+2020-04-15 16:22:43.2965  INFO - [Socket Server Listening...]
+2020-04-15 16:22:43.2965  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 16:22:43.3444  INFO - [Web Socket Server Listening...]
+2020-04-15 16:22:43.3444  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 16:23:04.4939  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-15 16:23:04.6115  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": false,
+  "msg": "삭제된 개체에 액세스할 수 없습니다.\r\n개체 이름: 'WebBrowser'",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 16:23:04.6115  INFO - [Socket] 작업 소요시간: 00:00:00.1156903
+2020-04-15 16:23:04.6275  INFO - [Socket]세션ID: 28dc2a33-dc4f-42b7-bd9a-efa7e07f963a 접속해제: ClientClosing
+2020-04-15 16:23:49.9286  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 16:23:49.9475  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 16:23:49.9983  INFO - [Socket]핸들러 등록 완료
+2020-04-15 16:23:49.9983  INFO - [Socket]서버 생성 성공
+2020-04-15 16:23:50.0203  INFO - [Socket Server Listening...]
+2020-04-15 16:23:50.0203  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 16:23:50.0741  INFO - [Web Socket Server Listening...]
+2020-04-15 16:23:50.0741  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 16:25:04.7670  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 16:25:04.8089  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 16:25:04.8977  INFO - [Socket]핸들러 등록 완료
+2020-04-15 16:25:04.8977  INFO - [Socket]서버 생성 성공
+2020-04-15 16:25:04.9386  INFO - [Socket Server Listening...]
+2020-04-15 16:25:04.9386  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 16:25:05.0652  INFO - [Web Socket Server Listening...]
+2020-04-15 16:25:05.0652  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 16:31:31.4786  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Word 시작.docx",
+  "ConvertIMG": 0
+}
+
+2020-04-15 16:31:37.6120  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/FC88A00681BEA2BA4BCA029AEC82643A",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-15 16:31:37.6120  INFO - [Socket] 작업 소요시간: 00:00:06.1333519
+2020-04-15 16:31:37.7057  INFO - [Socket]세션ID: 2577c038-ed38-4837-b21b-ab17521ec5e6 접속해제: ClientClosing
+2020-04-15 16:46:24.1548  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 16:46:24.1767  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 16:46:24.2276  INFO - [Socket]핸들러 등록 완료
+2020-04-15 16:46:24.2276  INFO - [Socket]서버 생성 성공
+2020-04-15 16:46:24.2505  INFO - [Socket Server Listening...]
+2020-04-15 16:46:24.2505  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 16:46:24.3024  INFO - [Web Socket Server Listening...]
+2020-04-15 16:46:24.3024  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 16:46:32.2394  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-15 16:46:32.3611  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": false,
+  "msg": "삭제된 개체에 액세스할 수 없습니다.\r\n개체 이름: 'WebBrowser'",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 16:46:32.3611  INFO - [Socket] 작업 소요시간: 00:00:00.1197145
+2020-04-15 16:46:32.3760  INFO - [Socket]세션ID: 756e1de9-1461-4cb9-8e24-a48fcb7953cc 접속해제: ClientClosing
+2020-04-15 16:47:05.2924  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 16:47:05.3274  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 16:47:05.3832  INFO - [Socket]핸들러 등록 완료
+2020-04-15 16:47:05.3832  INFO - [Socket]서버 생성 성공
+2020-04-15 16:47:05.4081  INFO - [Socket Server Listening...]
+2020-04-15 16:47:05.4081  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 16:47:05.4650  INFO - [Web Socket Server Listening...]
+2020-04-15 16:47:05.4650  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 16:47:14.3738  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-15 16:47:14.4835  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": false,
+  "msg": "개체 참조가 개체의 인스턴스로 설정되지 않았습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 16:47:14.4835  INFO - [Socket] 작업 소요시간: 00:00:00.1077516
+2020-04-15 16:47:14.5025  INFO - [Socket]세션ID: 33fbe1ad-b4e3-4912-b6a8-2cbc504d2480 접속해제: ClientClosing
+2020-04-15 16:47:26.8184  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 16:47:26.8613  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 16:47:26.9720  INFO - [Socket]핸들러 등록 완료
+2020-04-15 16:47:26.9720  INFO - [Socket]서버 생성 성공
+2020-04-15 16:47:27.0308  INFO - [Socket Server Listening...]
+2020-04-15 16:47:27.0308  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 16:47:27.1316  INFO - [Web Socket Server Listening...]
+2020-04-15 16:47:27.1316  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 16:47:32.2669  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-15 16:57:52.3867  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 16:57:52.4196  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 16:57:52.5103  INFO - [Socket]핸들러 등록 완료
+2020-04-15 16:57:52.5103  INFO - [Socket]서버 생성 성공
+2020-04-15 16:57:52.5612  INFO - [Socket Server Listening...]
+2020-04-15 16:57:52.5612  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 16:57:52.6749  INFO - [Web Socket Server Listening...]
+2020-04-15 16:57:52.6749  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 16:58:02.3833  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-15 16:58:02.5319  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 16:58:02.5319  INFO - [Socket] 작업 소요시간: 00:00:00.1466082
+2020-04-15 16:58:02.5509  INFO - [Socket]세션ID: 4dce2fee-76bd-44d9-85e7-4e8021e9cfc5 접속해제: ClientClosing
+2020-04-15 17:25:36.9310  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 17:25:36.9649  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 17:25:37.0976  INFO - [Socket]핸들러 등록 완료
+2020-04-15 17:25:37.0976  INFO - [Socket]서버 생성 성공
+2020-04-15 17:25:37.1285  INFO - [Socket Server Listening...]
+2020-04-15 17:25:37.1285  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 17:25:37.2332  INFO - [Web Socket Server Listening...]
+2020-04-15 17:25:37.2332  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 17:25:42.9918  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-15 17:25:43.1384  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 17:25:43.1384  INFO - [Socket] 작업 소요시간: 00:00:00.1446520
+2020-04-15 17:25:43.1594  INFO - [Socket]세션ID: 19a47432-dc39-4833-9c5d-a849ae166572 접속해제: ClientClosing
+2020-04-15 21:09:00.4506  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 21:09:00.5314  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 21:09:00.6650  INFO - [Socket]핸들러 등록 완료
+2020-04-15 21:09:00.6650  INFO - [Socket]서버 생성 성공
+2020-04-15 21:09:00.7179  INFO - [Socket Server Listening...]
+2020-04-15 21:09:00.7179  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 21:09:00.8256  INFO - [Web Socket Server Listening...]
+2020-04-15 21:09:00.8256  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 21:09:30.5753  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com"
+}
+
+2020-04-15 21:09:30.8980  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 21:09:30.8980  INFO - [Socket] 작업 소요시간: 00:00:00.3217531
+2020-04-15 21:09:30.9229  INFO - [Socket]세션ID: 132b9d79-4341-4f25-ae48-a3e57f9b1bac 접속해제: ClientClosing
+2020-04-15 21:11:54.4057  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 21:11:54.4284  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 21:11:54.4686  INFO - [Socket]핸들러 등록 완료
+2020-04-15 21:11:54.4686  INFO - [Socket]서버 생성 성공
+2020-04-15 21:11:54.5019  INFO - [Socket Server Listening...]
+2020-04-15 21:11:54.5019  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 21:11:54.5544  INFO - [Web Socket Server Listening...]
+2020-04-15 21:11:54.5544  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 21:12:08.0036  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com"
+}
+
+2020-04-15 21:12:08.9647  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": false,
+  "msg": "매개 변수가 잘못되었습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 21:12:08.9647  INFO - [Socket] 작업 소요시간: 00:00:00.9600973
+2020-04-15 21:12:09.0016  INFO - [Socket]세션ID: 6199d7ae-973b-461e-a672-07cecb87719e 접속해제: ClientClosing
+2020-04-15 21:13:28.7417  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 21:13:28.7666  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 21:13:28.8105  INFO - [Socket]핸들러 등록 완료
+2020-04-15 21:13:28.8105  INFO - [Socket]서버 생성 성공
+2020-04-15 21:13:28.8444  INFO - [Socket Server Listening...]
+2020-04-15 21:13:28.8444  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 21:13:28.8924  INFO - [Web Socket Server Listening...]
+2020-04-15 21:13:28.8924  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 21:13:40.1565  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com"
+}
+
+2020-04-15 21:13:41.1430  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": false,
+  "msg": "매개 변수가 잘못되었습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 21:13:41.1430  INFO - [Socket] 작업 소요시간: 00:00:00.9846220
+2020-04-15 21:13:41.1690  INFO - [Socket]세션ID: ffb3893e-c2aa-4eee-a639-9d07c648e7b2 접속해제: ClientClosing
+2020-04-15 21:14:11.2933  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com"
+}
+
+2020-04-15 21:14:11.5965  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": false,
+  "msg": "매개 변수가 잘못되었습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 21:14:11.5965  INFO - [Socket] 작업 소요시간: 00:00:00.3001371
+2020-04-15 21:14:11.6143  INFO - [Socket]세션ID: a2caa02c-0c49-4c01-96d8-3fe59b3fe2a3 접속해제: ClientClosing
+2020-04-15 21:14:18.9239  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 21:14:18.9616  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 21:14:19.0584  INFO - [Socket]핸들러 등록 완료
+2020-04-15 21:14:19.0584  INFO - [Socket]서버 생성 성공
+2020-04-15 21:14:19.0983  INFO - [Socket Server Listening...]
+2020-04-15 21:14:19.0983  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 21:14:19.1950  INFO - [Web Socket Server Listening...]
+2020-04-15 21:14:19.1950  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 21:14:26.2132  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com"
+}
+
+2020-04-15 21:24:49.6066  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 21:24:49.6306  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 21:24:49.6725  INFO - [Socket]핸들러 등록 완료
+2020-04-15 21:24:49.6725  INFO - [Socket]서버 생성 성공
+2020-04-15 21:24:49.7097  INFO - [Socket Server Listening...]
+2020-04-15 21:24:49.7103  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 21:24:49.7742  INFO - [Web Socket Server Listening...]
+2020-04-15 21:24:49.7742  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 21:25:11.1623  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 21:25:11.1872  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 21:25:11.2380  INFO - [Socket]핸들러 등록 완료
+2020-04-15 21:25:11.2380  INFO - [Socket]서버 생성 성공
+2020-04-15 21:25:11.2636  INFO - [Socket Server Listening...]
+2020-04-15 21:25:11.2636  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 21:25:11.3103  INFO - [Web Socket Server Listening...]
+2020-04-15 21:25:11.3103  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 21:25:19.2437  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com"
+}
+
+2020-04-15 21:25:19.4821  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 21:25:19.4821  INFO - [Socket] 작업 소요시간: 00:00:00.2372613
+2020-04-15 21:25:19.5071  INFO - [Socket]세션ID: 49e0cf3a-7097-40ac-b1e6-8353b30118db 접속해제: ClientClosing
+2020-04-15 21:25:39.0561  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com"
+}
+
+2020-04-15 21:25:39.0879  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 21:25:39.0879  INFO - [Socket] 작업 소요시간: 00:00:00.0289250
+2020-04-15 21:25:39.1010  INFO - [Socket]세션ID: 9747a99f-dea5-4d1b-bbed-5bbb1c78d920 접속해제: ClientClosing
+2020-04-15 21:26:34.4026  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 21:26:34.4305  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 21:26:34.4784  INFO - [Socket]핸들러 등록 완료
+2020-04-15 21:26:34.4784  INFO - [Socket]서버 생성 성공
+2020-04-15 21:26:34.5067  INFO - [Socket Server Listening...]
+2020-04-15 21:26:34.5067  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 21:26:34.5575  INFO - [Web Socket Server Listening...]
+2020-04-15 21:26:34.5575  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 21:26:52.0748  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 21:26:52.0978  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 21:26:52.1427  INFO - [Socket]핸들러 등록 완료
+2020-04-15 21:26:52.1427  INFO - [Socket]서버 생성 성공
+2020-04-15 21:26:52.1786  INFO - [Socket Server Listening...]
+2020-04-15 21:26:52.1786  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 21:26:52.2297  INFO - [Web Socket Server Listening...]
+2020-04-15 21:26:52.2297  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 21:26:57.7998  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com"
+}
+
+2020-04-15 21:26:58.0412  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 21:26:58.0412  INFO - [Socket] 작업 소요시간: 00:00:00.2393653
+2020-04-15 21:26:58.0701  INFO - [Socket]세션ID: 52b0c652-e487-4da8-aad7-937d49acf2fa 접속해제: ClientClosing
+2020-04-15 21:30:42.7722  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 21:30:42.7943  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 21:30:42.8360  INFO - [Socket]핸들러 등록 완료
+2020-04-15 21:30:42.8360  INFO - [Socket]서버 생성 성공
+2020-04-15 21:30:42.8751  INFO - [Socket Server Listening...]
+2020-04-15 21:30:42.8751  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 21:30:42.9407  INFO - [Web Socket Server Listening...]
+2020-04-15 21:30:42.9407  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 21:30:52.2671  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com"
+}
+
+2020-04-15 21:30:52.4876  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": false,
+  "msg": "개체 참조가 개체의 인스턴스로 설정되지 않았습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 21:30:52.4876  INFO - [Socket] 작업 소요시간: 00:00:00.2197929
+2020-04-15 21:30:52.5214  INFO - [Socket]세션ID: a0be3ead-c4d1-4112-9245-039b24c13f99 접속해제: ClientClosing
+2020-04-15 21:36:03.9342  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 21:36:03.9595  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 21:36:04.0001  INFO - [Socket]핸들러 등록 완료
+2020-04-15 21:36:04.0001  INFO - [Socket]서버 생성 성공
+2020-04-15 21:36:04.0410  INFO - [Socket Server Listening...]
+2020-04-15 21:36:04.0410  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 21:36:04.0868  INFO - [Web Socket Server Listening...]
+2020-04-15 21:36:04.0868  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 21:36:15.1095  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com"
+}
+
+2020-04-15 21:37:15.6694  INFO - [Socket]세션ID: 8d3beeef-5350-4a9b-982b-1e18152de816 접속해제: ServerShutdown
+2020-04-15 21:41:48.1319  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 21:41:48.1997  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 21:41:48.3473  INFO - [Socket]핸들러 등록 완료
+2020-04-15 21:41:48.3473  INFO - [Socket]서버 생성 성공
+2020-04-15 21:41:48.4002  INFO - [Socket Server Listening...]
+2020-04-15 21:41:48.4002  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 21:41:48.5737  INFO - [Web Socket Server Listening...]
+2020-04-15 21:41:48.5737  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 21:41:56.9603  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com"
+}
+
+2020-04-15 21:46:02.5671  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 21:46:02.5892  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 21:46:02.6300  INFO - [Socket]핸들러 등록 완료
+2020-04-15 21:46:02.6300  INFO - [Socket]서버 생성 성공
+2020-04-15 21:46:02.6528  INFO - [Socket Server Listening...]
+2020-04-15 21:46:02.6528  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 21:46:02.6938  INFO - [Web Socket Server Listening...]
+2020-04-15 21:46:02.6938  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 21:46:33.1491  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 21:46:33.1760  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 21:46:33.2398  INFO - [Socket]핸들러 등록 완료
+2020-04-15 21:46:33.2398  INFO - [Socket]서버 생성 성공
+2020-04-15 21:46:33.2664  INFO - [Socket Server Listening...]
+2020-04-15 21:46:33.2664  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 21:46:33.3196  INFO - [Web Socket Server Listening...]
+2020-04-15 21:46:33.3196  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 21:46:40.5537  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com"
+}
+
+2020-04-15 21:46:50.8591  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 21:46:50.8591  INFO - [Socket] 작업 소요시간: 00:00:10.3063933
+2020-04-15 21:46:50.8890  INFO - [Socket]세션ID: 97be5a8d-5819-4ebd-bfc5-7a5922fee02b 접속해제: ClientClosing
+2020-04-15 21:48:26.1383  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 21:48:26.1662  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 21:48:26.2141  INFO - [Socket]핸들러 등록 완료
+2020-04-15 21:48:26.2141  INFO - [Socket]서버 생성 성공
+2020-04-15 21:48:26.2492  INFO - [Socket Server Listening...]
+2020-04-15 21:48:26.2492  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 21:48:26.3198  INFO - [Web Socket Server Listening...]
+2020-04-15 21:48:26.3198  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 21:48:32.4762  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com"
+}
+
+2020-04-15 21:48:47.7509  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 21:48:47.7509  INFO - [Socket] 작업 소요시간: 00:00:15.2727030
+2020-04-15 21:48:47.7888  INFO - [Socket]세션ID: 4fb49e86-4b8e-479e-b46a-31066dcd134f 접속해제: ClientClosing
+2020-04-15 21:49:08.1530  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 21:49:08.1839  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 21:49:08.2388  INFO - [Socket]핸들러 등록 완료
+2020-04-15 21:49:08.2388  INFO - [Socket]서버 생성 성공
+2020-04-15 21:49:08.2678  INFO - [Socket Server Listening...]
+2020-04-15 21:49:08.2678  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 21:49:08.3285  INFO - [Web Socket Server Listening...]
+2020-04-15 21:49:08.3285  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 21:49:12.0042  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com"
+}
+
+2020-04-15 21:49:14.8268  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 21:49:14.8268  INFO - [Socket] 작업 소요시간: 00:00:02.8196133
+2020-04-15 21:49:14.8476  INFO - [Socket]세션ID: d489702e-bb25-4b84-97bc-1144b80b8ed8 접속해제: ClientClosing
+2020-04-15 21:50:22.1408  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 21:50:22.1677  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 21:50:22.2255  INFO - [Socket]핸들러 등록 완료
+2020-04-15 21:50:22.2255  INFO - [Socket]서버 생성 성공
+2020-04-15 21:50:22.2505  INFO - [Socket Server Listening...]
+2020-04-15 21:50:22.2505  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 21:50:22.2993  INFO - [Web Socket Server Listening...]
+2020-04-15 21:50:22.2993  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 21:50:28.7447  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com"
+}
+
+2020-04-15 21:50:33.6354  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 21:50:33.6354  INFO - [Socket] 작업 소요시간: 00:00:04.8887671
+2020-04-15 21:50:33.6644  INFO - [Socket]세션ID: d1f619c5-26cf-4e57-ab52-5d3b1d644362 접속해제: ClientClosing
+2020-04-15 21:51:25.3700  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 21:51:25.3960  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 21:51:25.4419  INFO - [Socket]핸들러 등록 완료
+2020-04-15 21:51:25.4419  INFO - [Socket]서버 생성 성공
+2020-04-15 21:51:25.4638  INFO - [Socket Server Listening...]
+2020-04-15 21:51:25.4638  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 21:51:25.5118  INFO - [Web Socket Server Listening...]
+2020-04-15 21:51:25.5118  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 21:51:32.1966  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com"
+}
+
+2020-04-15 21:51:36.3840  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 21:51:36.3840  INFO - [Socket] 작업 소요시간: 00:00:04.1864028
+2020-04-15 21:51:36.4150  INFO - [Socket]세션ID: 7053ed1c-81ec-436f-b2fb-b514bb9b6fff 접속해제: ClientClosing
+2020-04-15 21:52:44.7546  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 21:52:44.7846  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 21:52:44.8466  INFO - [Socket]핸들러 등록 완료
+2020-04-15 21:52:44.8466  INFO - [Socket]서버 생성 성공
+2020-04-15 21:52:44.8743  INFO - [Socket Server Listening...]
+2020-04-15 21:52:44.8743  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 21:52:44.9173  INFO - [Web Socket Server Listening...]
+2020-04-15 21:52:44.9173  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 21:52:54.2469  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.google.com"
+}
+
+2020-04-15 21:52:55.7424  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 21:52:55.7424  INFO - [Socket] 작업 소요시간: 00:00:01.4944903
+2020-04-15 21:52:55.7653  INFO - [Socket]세션ID: 218fd3b5-3409-4974-b602-a1976629126c 접속해제: ClientClosing
+2020-04-15 21:54:58.7855  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 21:54:58.8324  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 21:54:58.9062  INFO - [Socket]핸들러 등록 완료
+2020-04-15 21:54:58.9062  INFO - [Socket]서버 생성 성공
+2020-04-15 21:54:58.9441  INFO - [Socket Server Listening...]
+2020-04-15 21:54:58.9441  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 21:54:58.9981  INFO - [Web Socket Server Listening...]
+2020-04-15 21:54:58.9981  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 21:55:09.7659  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.google.com"
+}
+
+2020-04-15 21:55:11.0365  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 21:55:11.0365  INFO - [Socket] 작업 소요시간: 00:00:01.2695773
+2020-04-15 21:55:11.0614  INFO - [Socket]세션ID: bce90ee3-465c-4528-9462-8f953470ab54 접속해제: ClientClosing
+2020-04-15 21:58:02.4354  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 21:58:02.4675  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 21:58:02.5301  INFO - [Socket]핸들러 등록 완료
+2020-04-15 21:58:02.5301  INFO - [Socket]서버 생성 성공
+2020-04-15 21:58:02.5551  INFO - [Socket Server Listening...]
+2020-04-15 21:58:02.5551  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 21:58:02.6209  INFO - [Web Socket Server Listening...]
+2020-04-15 21:58:02.6209  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 21:58:09.2119  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.google.com"
+}
+
+2020-04-15 21:58:10.6741  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 21:58:10.6741  INFO - [Socket] 작업 소요시간: 00:00:01.4604729
+2020-04-15 21:58:10.6956  INFO - [Socket]세션ID: a65a74a9-4cc7-481c-b03a-2332f8360a85 접속해제: ClientClosing
+2020-04-15 21:58:23.6369  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://icodebroker.tistory.com/1512"
+}
+
+2020-04-15 21:58:34.7610  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 21:58:34.7610  INFO - [Socket] 작업 소요시간: 00:00:11.1178079
+2020-04-15 21:58:34.7610  INFO - [Socket]세션ID: 57c91f47-9767-4fa9-a484-6bb67da5661a 접속해제: ClientClosing
+2020-04-15 21:58:55.6369  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.google.co.kr/?gfe_rd=cr&ei=nVipVLjjKYfH8geIjYCYBA"
+}
+
+2020-04-15 21:58:56.7683  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 21:58:56.7683  INFO - [Socket] 작업 소요시간: 00:00:01.1234900
+2020-04-15 21:58:56.7774  INFO - [Socket]세션ID: 9cba3642-7499-42be-ae5c-a8e30f5b4a49 접속해제: ClientClosing
+2020-04-15 21:59:09.6690  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.google.co.kr/"
+}
+
+2020-04-15 21:59:10.3574  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 21:59:10.3574  INFO - [Socket] 작업 소요시간: 00:00:00.6873481
+2020-04-15 21:59:10.3667  INFO - [Socket]세션ID: 42d80a75-dca6-4a66-a95f-791c0e17bef3 접속해제: ClientClosing
+2020-04-15 21:59:21.8709  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-15 21:59:28.0192  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 21:59:28.0192  INFO - [Socket] 작업 소요시간: 00:00:06.1440235
+2020-04-15 21:59:28.0299  INFO - [Socket]세션ID: fa9e131b-d65d-428f-8ebf-5d04c6853089 접속해제: ClientClosing
+2020-04-15 22:24:31.1152  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 22:24:31.1411  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 22:24:31.1900  INFO - [Socket]핸들러 등록 완료
+2020-04-15 22:24:31.1900  INFO - [Socket]서버 생성 성공
+2020-04-15 22:24:31.2163  INFO - [Socket Server Listening...]
+2020-04-15 22:24:31.2163  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 22:24:31.2648  INFO - [Web Socket Server Listening...]
+2020-04-15 22:24:31.2648  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 22:24:41.8945  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://stackoverrun.com/ko/q/7301133"
+}
+
+2020-04-15 22:24:42.1320  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": false,
+  "msg": "삭제된 개체에 액세스할 수 없습니다.\r\n개체 이름: 'WebBrowser'",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 22:24:42.1320  INFO - [Socket] 작업 소요시간: 00:00:00.2369637
+2020-04-15 22:24:42.1691  INFO - [Socket]세션ID: ac1c726c-851f-4204-9c60-79e121b2ef20 접속해제: ClientClosing
+2020-04-15 22:25:03.7665  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 22:25:03.7946  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 22:25:03.8343  INFO - [Socket]핸들러 등록 완료
+2020-04-15 22:25:03.8343  INFO - [Socket]서버 생성 성공
+2020-04-15 22:25:03.8705  INFO - [Socket Server Listening...]
+2020-04-15 22:25:03.8705  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 22:25:03.9400  INFO - [Web Socket Server Listening...]
+2020-04-15 22:25:03.9400  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 22:25:09.8777  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://stackoverrun.com/ko/q/7301133"
+}
+
+2020-04-15 22:25:13.7849  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": false,
+  "msg": "삭제된 개체에 액세스할 수 없습니다.\r\n개체 이름: 'WebBrowser'",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 22:25:13.7849  INFO - [Socket] 작업 소요시간: 00:00:03.9061798
+2020-04-15 22:25:13.8108  INFO - [Socket]세션ID: b2dc1caf-1344-44f3-8ab4-cbc214e30cdf 접속해제: ClientClosing
+2020-04-15 22:26:55.6022  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 22:26:55.6341  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 22:26:55.6940  INFO - [Socket]핸들러 등록 완료
+2020-04-15 22:26:55.6944  INFO - [Socket]서버 생성 성공
+2020-04-15 22:26:55.7250  INFO - [Socket Server Listening...]
+2020-04-15 22:26:55.7259  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 22:26:55.7907  INFO - [Web Socket Server Listening...]
+2020-04-15 22:26:55.7907  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 22:27:02.1016  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://stackoverrun.com/ko/q/7301133"
+}
+
+2020-04-15 22:27:04.2890  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 22:27:04.2890  INFO - [Socket] 작업 소요시간: 00:00:02.1877072
+2020-04-15 22:27:04.3108  INFO - [Socket]세션ID: 6ddd3cac-9421-4a23-a28e-c37821e6eab9 접속해제: ClientClosing
+2020-04-15 22:35:04.6923  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 22:35:04.7202  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 22:35:04.7721  INFO - [Socket]핸들러 등록 완료
+2020-04-15 22:35:04.7721  INFO - [Socket]서버 생성 성공
+2020-04-15 22:35:04.7997  INFO - [Socket Server Listening...]
+2020-04-15 22:35:04.7997  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 22:35:04.8538  INFO - [Web Socket Server Listening...]
+2020-04-15 22:35:04.8538  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 22:35:18.7649  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.google.co.kr/?gfe_rd=cr&ei=nVipVLjjKYfH8geIjYCYBA"
+}
+
+2020-04-15 22:35:20.0219  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 22:35:20.0229  INFO - [Socket] 작업 소요시간: 00:00:01.2560229
+2020-04-15 22:35:20.0488  INFO - [Socket]세션ID: 71a420c9-9370-4fb3-aa6f-7395b0313b0c 접속해제: ClientClosing
+2020-04-15 22:35:39.9792  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://cpu.userbenchmark.com/"
+}
+
+2020-04-15 22:35:50.8036  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 22:35:50.8036  INFO - [Socket] 작업 소요시간: 00:00:10.8223868
+2020-04-15 22:35:50.8205  INFO - [Socket]세션ID: cc3de7f8-8a5b-4044-9e88-c88b054f4ae3 접속해제: ClientClosing
+2020-04-15 22:36:09.4514  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://github.com/"
+}
+
+2020-04-15 22:39:56.0612  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 22:39:56.0821  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 22:39:56.1210  INFO - [Socket]핸들러 등록 완료
+2020-04-15 22:39:56.1210  INFO - [Socket]서버 생성 성공
+2020-04-15 22:39:56.1465  INFO - [Socket Server Listening...]
+2020-04-15 22:39:56.1465  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 22:39:56.1898  INFO - [Web Socket Server Listening...]
+2020-04-15 22:39:56.1898  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 22:40:05.5750  INFO - [Socket]세션ID: 9a7e2d47-23ba-426e-9344-513d13b1271a 접속해제: ProtocolError
+2020-04-15 22:40:09.6439  INFO - [Socket]세션ID: c3855443-cc76-418f-a917-840d17972244 접속해제: ProtocolError
+2020-04-15 22:40:12.6490  INFO - [Socket]세션ID: 08e978f5-b4fc-4a37-a694-c3faa52d78f2 접속해제: ProtocolError
+2020-04-15 22:40:18.4527  INFO - [Socket]세션ID: a0c8bb29-5e32-4c4c-a403-98b096b3d94c 접속해제: ProtocolError
+2020-04-15 22:40:29.5573  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-15 22:40:29.6112  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-15 22:40:29.6949  INFO - [Socket]핸들러 등록 완료
+2020-04-15 22:40:29.6949  INFO - [Socket]서버 생성 성공
+2020-04-15 22:40:29.7318  INFO - [Socket Server Listening...]
+2020-04-15 22:40:29.7318  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-15 22:40:29.7947  INFO - [Web Socket Server Listening...]
+2020-04-15 22:40:29.7947  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-15 22:40:34.0821  INFO - [Socket]세션ID: cd7e4b92-ccf1-420c-a2fa-252a5f70dad3 접속해제: ProtocolError
+2020-04-15 22:40:40.2648  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://cpu.userbenchmark.com/"
+}
+
+2020-04-15 22:40:45.9967  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "C:\\Data",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-15 22:40:45.9967  INFO - [Socket] 작업 소요시간: 00:00:05.7293367
+2020-04-15 22:40:46.0312  INFO - [Socket]세션ID: 68b7d80d-4ac5-4ba8-b998-9ff86e0c08ee 접속해제: ClientClosing
