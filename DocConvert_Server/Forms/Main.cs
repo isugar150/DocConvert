@@ -13,7 +13,7 @@ using System.Windows.Forms;
 using vtortola.WebSockets;
 
 using DocConvert_Server.License;
-
+using NLog;
 
 namespace DocConvert_Server
 {
@@ -22,6 +22,8 @@ namespace DocConvert_Server
         private System.Windows.Threading.DispatcherTimer workProcessTimer = new System.Windows.Threading.DispatcherTimer();
         private MainServer socketServer = new MainServer();
         private int wsSessionCount = 0;
+        WebSocketListener webSocketServer = null;
+        JObject checkLicense;
         public Form1()
         {
             InitializeComponent();
@@ -30,25 +32,34 @@ namespace DocConvert_Server
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.Text += " - " + Properties.Settings.Default.serverName;
+            textBox1.Text = ("┏━━━┓╋╋╋╋╋┏━━━┓╋╋╋╋╋╋╋╋╋╋╋╋╋┏┓╋┏━━━┓\r\n" +
+                             "┗┓┏┓┃╋╋╋╋╋┃┏━┓┃╋╋╋╋╋╋╋╋╋╋╋╋┏┛┗┓┃┏━┓┃\r\n" +
+                             "╋┃┃┃┣━━┳━━┫┃╋┗╋━━┳━┓┏┓┏┳━━┳┻┓┏┛┃┗━━┳━━┳━┳┓┏┳━━┳━┓\r\n" +
+                             "╋┃┃┃┃┏┓┃┏━┫┃╋┏┫┏┓┃┏┓┫┗┛┃┃━┫┏┫┃╋┗━━┓┃┃━┫┏┫┗┛┃┃━┫┏┛\r\n" +
+                             "┏┛┗┛┃┗┛┃┗━┫┗━┛┃┗┛┃┃┃┣┓┏┫┃━┫┃┃┗┓┃┗━┛┃┃━┫┃┗┓┏┫┃━┫┃\r\n" +
+                             "┗━━━┻━━┻━━┻━━━┻━━┻┛┗┛┗┛┗━━┻┛┗━┛┗━━━┻━━┻┛╋┗┛┗━━┻┛\r\n");
             #region checkLicense
             try
             {
                 Debug.WriteLine(Properties.Settings.Default.LicenseKEY);
                 string licenseInfo = LicenseInfo.decryptAES256(Properties.Settings.Default.LicenseKEY, "JmDoCOnVerTerServErJmCoRp");
-                JObject checkLicense = JObject.Parse(licenseInfo);
-                if (!checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID())) { new MessageDialog("라이센스 오류", "라이센스 확인 후 다시시도하세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); Application.Exit(); }
-                if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now) { new MessageDialog("라이센스 오류", "라이센스 확인 후 다시시도하세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); Application.Exit(); }
-                
-                DevLog.Write(string.Format("라이센스 만료날짜: {0}", checkLicense["EndDate"].ToString()));
+                checkLicense = JObject.Parse(licenseInfo);
+                if (!checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID())) { new MessageDialog("라이센스 오류", "라이센스 확인 후 다시시도하세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); Application.Exit(); return; }
+                if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now) { new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되었습니다. 갱신후 다시시도해주세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); Application.Exit(); return; }
+
+                DevLog.Write("나의 하드웨어 ID: " + new LicenseInfo().getHWID(), LOG_LEVEL.INFO);
+                DevLog.Write(string.Format("라이센스 만료날짜: {0}", checkLicense["EndDate"].ToString()), LOG_LEVEL.INFO);
             }
-            catch (Exception) { new MessageDialog("라이센스 오류", "라이센스 확인 후 다시시도하세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); Application.Exit(); }
-            DevLog.Write("나의 하드웨어 ID: " + new LicenseInfo().getHWID());
+            catch (Exception) { new MessageDialog("라이센스 오류", "라이센스키 파싱오류.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); Application.Exit(); return; }
             #endregion
             checkBox1.Checked = Properties.Settings.Default.FollowTail;
             #region Create SocketServer
             socketServer.InitConfig();
             socketServer.CreateServer();
-            var IsResult = socketServer.Start();
+            bool IsResult = false;
+            if (checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID()))
+                IsResult = socketServer.Start();
 
             if (IsResult)
             {
@@ -70,22 +81,26 @@ namespace DocConvert_Server
             workProcessTimer.Start();
             new Thread(delegate ()
             {
-                    while (!this.IsDisposed)
-                    {
-                        toolStripStatusLabel2.Text = string.Format("Socket Session Count: {0}/{1}", socketServer.SessionCount, Properties.Settings.Default.socketSessionCount);
-                        toolStripStatusLabel3.Text = string.Format("Web Socket Session Count: {0}/{1}", wsSessionCount, "1");
+                while (!this.IsDisposed)
+                {
+                    toolStripStatusLabel2.Text = string.Format("Socket Session Count: {0}/{1}", socketServer.SessionCount, Properties.Settings.Default.socketSessionCount);
+                    toolStripStatusLabel3.Text = string.Format("Web Socket Session Count: {0}/{1}", wsSessionCount, "1");
 
                     if (IsTcpPortAvailable(Properties.Settings.Default.webSocketPORT))
-                            pictureBox3.Image = Properties.Resources.success_icon;
-                        else
-                            pictureBox3.Image = Properties.Resources.error_icon;
-
-                        if (IsTcpPortAvailable(Properties.Settings.Default.fileServerPORT))
-                            pictureBox2.Image = Properties.Resources.success_icon;
-                        else
-                            pictureBox2.Image = Properties.Resources.error_icon;
-                        Thread.Sleep(1000);
+                        pictureBox3.Image = Properties.Resources.success_icon;
+                    else
+                    {
+                        pictureBox3.Image = Properties.Resources.error_icon;
                     }
+
+                    if (IsTcpPortAvailable(Properties.Settings.Default.fileServerPORT))
+                        pictureBox2.Image = Properties.Resources.success_icon;
+                    else
+                    {
+                        pictureBox2.Image = Properties.Resources.error_icon;
+                    }
+                    Thread.Sleep(1000);
+                }
             }).Start();
             #endregion
             #region Create WebSocketServer
@@ -102,19 +117,21 @@ namespace DocConvert_Server
                     PingTimeout = new TimeSpan(0, 3, 0),
                     PingMode = PingModes.LatencyControl
                 };
-                WebSocketListener server = new WebSocketListener(endpoint, options);
-                var rfc6455 = new vtortola.WebSockets.Rfc6455.WebSocketFactoryRfc6455(server);
-                server.Standards.RegisterStandard(rfc6455);
-                server.Start();
+                webSocketServer = new WebSocketListener(endpoint, options);
+                var rfc6455 = new vtortola.WebSockets.Rfc6455.WebSocketFactoryRfc6455(webSocketServer);
+                webSocketServer.Standards.RegisterStandard(rfc6455);
+                if (checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID()))
+                    webSocketServer.Start();
 
                 DevLog.Write("[Web Socket Server Listening...]", LOG_LEVEL.INFO);
                 DevLog.Write(string.Format("[Web Socket][INFO] IP: {0}   포트: {1}", endpoint.Address, endpoint.Port), LOG_LEVEL.INFO);
 
-                var task = Task.Run(() => AcceptWebSocketClientsAsync(server, cancellation.Token));
+                var task = Task.Run(() => AcceptWebSocketClientsAsync(webSocketServer, cancellation.Token));
                 pictureBox3.Image = Properties.Resources.success_icon;
-            } catch (Exception e1)
+            }
+            catch (Exception e1)
             {
-                DevLog.Write("[WebSocketServer][Error] " + e1.Message);
+                DevLog.Write("[WebSocketServer][Error] " + e1.Message, LOG_LEVEL.ERROR);
                 pictureBox3.Image = Properties.Resources.error_icon;
             }
 
@@ -136,7 +153,7 @@ namespace DocConvert_Server
                 {
                     var ws = await server.AcceptWebSocketAsync(token).ConfigureAwait(false);
 
-                    DevLog.Write("[WebSocket] 클라이언트로 부터 연결요청이 들어옴: " + ws.RemoteEndpoint);
+                    DevLog.Write("[WebSocket] 클라이언트로 부터 연결요청이 들어옴: " + ws.RemoteEndpoint, LOG_LEVEL.INFO);
 
                     //소켓이 null 이 아니면, 핸들러를 스타트 합니다.(또 다른 친구가 들어올 수도 있으니 비동기로...)
                     if (ws != null)
@@ -144,10 +161,10 @@ namespace DocConvert_Server
                 }
                 catch (Exception aex)
                 {
-                    DevLog.Write("[WebSocket] Error Accepting clients: " + aex.GetBaseException().Message);
+                    DevLog.Write("[WebSocket] Error Accepting clients: " + aex.GetBaseException().Message, LOG_LEVEL.ERROR);
                 }
             }
-            DevLog.Write("[WebSocket] Server Stop accepting clients");
+            DevLog.Write("[WebSocket] Server Stop accepting clients", LOG_LEVEL.ERROR);
         }
 
         async Task HandleConnectionAsync(WebSocket ws, CancellationToken cancellation)
@@ -168,12 +185,12 @@ namespace DocConvert_Server
                         {
                             DateTime timeTaken = DateTime.Now;
                             JObject requestMsg = JObject.Parse(requestInfo);
-                            DevLog.Write(string.Format("\r\n[WebSocket][Client => Server]\r\n{0}\r\n", requestMsg));
+                            DevLog.Write(string.Format("\r\n[WebSocket][Client => Server]\r\n{0}\r\n", requestMsg), LOG_LEVEL.INFO);
 
                             // 문서변환 메소드
                             responseMsg = new Document_Convert().document_Convert(requestInfo);
 
-                            DevLog.Write(string.Format("\r\n[WebSocket][Server => Client]\r\n{0}\r\n", responseMsg));
+                            DevLog.Write(string.Format("\r\n[WebSocket][Server => Client]\r\n{0}\r\n", responseMsg), LOG_LEVEL.INFO);
 
                             TimeSpan curTime = DateTime.Now - timeTaken;
                             DevLog.Write(string.Format("[Socket] 작업 소요시간: {0}", curTime.ToString()), LOG_LEVEL.DEBUG);
@@ -183,7 +200,8 @@ namespace DocConvert_Server
                             ws.Close();
 
                             DevLog.Write("[WebSocket]서버와 연결이 해제되었습니다.", LOG_LEVEL.INFO);
-                        } catch(Exception e1)
+                        }
+                        catch (Exception e1)
                         {
                             responseMsg["Msg"] = e1.Message;
                         }
@@ -193,7 +211,7 @@ namespace DocConvert_Server
             }
             catch (Exception aex)
             {
-                DevLog.Write("[WebSocket] Error Handling connection: " + aex.GetBaseException().Message);
+                DevLog.Write("[WebSocket] Error Handling connection: " + aex.GetBaseException().Message, LOG_LEVEL.ERROR);
                 try { ws.Close(); }
                 catch { }
             }
@@ -286,7 +304,16 @@ namespace DocConvert_Server
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            socketServer.Dispose();
+            try
+            {
+                socketServer.Dispose();
+            }
+            catch (Exception) { }
+            try
+            {
+                webSocketServer.Dispose();
+            }
+            catch (Exception) { }
             Application.Exit();
         }
     }

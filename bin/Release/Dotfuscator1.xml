@@ -8,26 +8,26 @@
   <input>
     <loadpaths />
     <asmlist>
-      <inputassembly refid="1d7e6836-d8d4-4db7-931d-befae15dd8da">
+      <inputassembly refid="29b55035-e02c-48db-8547-151cc3f6f577">
         <option>honoroas</option>
         <option>stripoa</option>
         <option>library</option>
         <option>transformxaml</option>
-        <file dir="C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Release" name="DocConvert_Core.dll" />
+        <file dir="C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release" name="DocConvert_Core.dll" />
       </inputassembly>
-      <inputassembly refid="7d800bcc-157e-47c5-bcd2-18113290759d">
+      <inputassembly refid="036370ff-6e4b-4fd9-9770-e2526f37ec39">
         <option>honoroas</option>
         <option>stripoa</option>
         <option>library</option>
         <option>transformxaml</option>
-        <file dir="C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Release" name="DocConvert_Server.exe" />
+        <file dir="C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release" name="DocConvert_Server.exe" />
       </inputassembly>
-      <inputassembly refid="d2f30c6c-f86e-4e44-a80c-b82692cde9ac">
+      <inputassembly refid="cfc4f140-6e6d-4388-9438-34b05881ba2b">
         <option>honoroas</option>
         <option>stripoa</option>
         <option>library</option>
         <option>transformxaml</option>
-        <file dir="C:\Users\o0_0o\source\repos\isugar150\DocConvert\bin\Release" name="DocConvert_Util.exe" />
+        <file dir="C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release" name="DocConvert_Util.exe" />
       </inputassembly>
     </asmlist>
   </input>

@@ -100,7 +100,7 @@ namespace DocConvert_Server
             }
             else
             {
-                DevLog.Write(string.Format("[Socket]세션ID: {0} 받은 데이터 크기: {1}", session.SessionID, reqInfo.Body.Length), LOG_LEVEL.INFO);
+                DevLog.Write(string.Format("[Socket]세션ID: {0} 받은 데이터 크기: {1}", session.SessionID, reqInfo.Body.Length, LOG_LEVEL.INFO), LOG_LEVEL.INFO);
             }
         }
     }

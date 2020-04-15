@@ -34,7 +34,8 @@ namespace DocConvert_Core.OfficeLib
             {
                 LockFile.UnLock_File(FilePath);
                 logger.Info("파일 언락 성공!");
-            } catch(Exception e1)
+            }
+            catch (Exception e1)
             {
                 logger.Info("파일 언락 실패! 자세한내용 로그 참고");
                 logger.Error(e1.Message);

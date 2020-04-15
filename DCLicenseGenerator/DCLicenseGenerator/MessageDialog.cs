@@ -24,5 +24,10 @@ namespace DCLicenseGenerator
         {
 
         }
+
+        private void MessageDialog_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
