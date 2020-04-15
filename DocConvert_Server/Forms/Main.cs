@@ -193,7 +193,7 @@ namespace DocConvert_Server
                             DevLog.Write(string.Format("\r\n[WebSocket][Server => Client]\r\n{0}\r\n", responseMsg), LOG_LEVEL.INFO);
 
                             TimeSpan curTime = DateTime.Now - timeTaken;
-                            DevLog.Write(string.Format("[Socket] 작업 소요시간: {0}", curTime.ToString()), LOG_LEVEL.DEBUG);
+                            DevLog.Write(string.Format("[Socket] 작업 소요시간: {0}", curTime.ToString()), LOG_LEVEL.INFO);
 
                             ws.WriteString(responseMsg.ToString());
 

@@ -42,7 +42,7 @@ namespace DocConvert_Server
             DevLog.Write(string.Format("\r\n[Socket][Server => Client]\r\n{0}\r\n", responseMsg.ToString()), LOG_LEVEL.INFO); // 클라이언트가 서버로 보낸 메시지
 
             TimeSpan curTime = DateTime.Now - timeTaken;
-            DevLog.Write(string.Format("[Socket] 작업 소요시간: {0}", curTime.ToString()), LOG_LEVEL.DEBUG);
+            DevLog.Write(string.Format("[Socket] 작업 소요시간: {0}", curTime.ToString()), LOG_LEVEL.INFO);
 
             List<byte> dataSource = new List<byte>();
             dataSource.AddRange(BitConverter.GetBytes((int)PACKETID.REQ_ECHO));

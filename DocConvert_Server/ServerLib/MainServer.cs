@@ -77,7 +77,7 @@ namespace DocConvert_Server
 
         void OnConnected(NetworkSession session)
         {
-            DevLog.Write(string.Format("[Socket]세션ID: {0} 접속", session.SessionID), LOG_LEVEL.INFO);
+            DevLog.Write(string.Format("[Socket]세션ID: {0} 접속", session.SessionID), LOG_LEVEL.DEBUG);
         }
 
         void OnClosed(NetworkSession session, CloseReason reason)
@@ -87,7 +87,7 @@ namespace DocConvert_Server
 
         void RequestReceived(NetworkSession session, EFBinaryRequestInfo reqInfo)
         {
-            DevLog.Write(string.Format("[Socket]세션ID: {0} 받은 데이터 크기: {1}, ThreadId: {2}", session.SessionID, reqInfo.Body.Length, System.Threading.Thread.CurrentThread.ManagedThreadId), LOG_LEVEL.INFO);
+            DevLog.Write(string.Format("[Socket]세션ID: {0} 받은 데이터 크기: {1}, ThreadId: {2}", session.SessionID, reqInfo.Body.Length, System.Threading.Thread.CurrentThread.ManagedThreadId), LOG_LEVEL.DEBUG);
            
 
             var PacketID = reqInfo.PacketID;
@@ -100,7 +100,7 @@ namespace DocConvert_Server
             }
             else
             {
-                DevLog.Write(string.Format("[Socket]세션ID: {0} 받은 데이터 크기: {1}", session.SessionID, reqInfo.Body.Length, LOG_LEVEL.INFO), LOG_LEVEL.INFO);
+                DevLog.Write(string.Format("[Socket]세션ID: {0} 받은 데이터 크기: {1}", session.SessionID, reqInfo.Body.Length), LOG_LEVEL.DEBUG);
             }
         }
     }
