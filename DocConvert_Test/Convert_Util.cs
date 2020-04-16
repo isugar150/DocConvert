@@ -114,6 +114,7 @@ namespace DocConvert_Util
                 }
                 #endregion
                 #region FTP 계정 초기 데이터
+                textBox4.Text = Setting["serverIP"].ToString();
                 textBox8.Text = Setting["ftpUser"].ToString();
                 textBox7.Text = Setting["ftpPwd"].ToString();
                 #endregion
@@ -121,8 +122,10 @@ namespace DocConvert_Util
             else
             {
                 #region FTP 계정
+                Setting["serverIP"] = "127.0.0.1";
                 Setting["ftpUser"] = "Anonymous";
                 Setting["ftpPwd"] = "";
+                textBox4.Text = Setting["serverIP"].ToString();
                 textBox8.Text = Setting["ftpUser"].ToString();
                 textBox7.Text = Setting["ftpPwd"].ToString();
                 #endregion
@@ -332,6 +335,7 @@ namespace DocConvert_Util
 
                             tb2_appendText(serverIP + ":" + filePORT + "에 연결을 시도합니다.");
                             ftpClient.Connect();
+                            Setting["serverIP"] = textBox4.Text;
                             Setting["ftpUser"] = textBox8.Text;
                             Setting["ftpPwd"] = textBox7.Text;
                             File.WriteAllText(Application.StartupPath + @"\Settings.json", Setting.ToString());
