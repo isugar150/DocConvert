@@ -115,7 +115,7 @@ namespace DocConvert_Server.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("127.0.0.1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("192.168.0.101")]
         public string serverIP {
             get {
                 return ((string)(this["serverIP"]));
@@ -124,7 +124,9 @@ namespace DocConvert_Server.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("7kOQCsa87IIeLnU6hQyxTOzuV0Khg5cBBY5B5p75qAuzJlFKnC8zxpcXxyfsFTOLKn7hnUE4RuBi6VJV9" +
+            "4/UlYAQT6is46zbBIsDiqck9In2erCV0LpIT6KQjpdK/hC2xBCTUkidxFT+Np6OIN6vi5/35ZDrW9X2h" +
+            "Dmj0SU/WgU=")]
         public string LicenseKEY {
             get {
                 return ((string)(this["LicenseKEY"]));

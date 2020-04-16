@@ -838,3 +838,191 @@
 
 2020-04-16 01:06:09.7002  INFO - [Socket] 작업 소요시간: 00:00:07.4369732
 2020-04-16 01:06:09.7960  INFO - [Socket]세션ID: afab4692-d009-455c-9398-a466341617bb 접속해제: ClientClosing
+2020-04-16 17:27:20.1093  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-16 17:27:20.1492  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-16 17:27:20.2409  INFO - [Socket]핸들러 등록 완료
+2020-04-16 17:27:20.2409  INFO - [Socket]서버 생성 성공
+2020-04-16 17:27:20.2678  INFO - [Socket Server Listening...]
+2020-04-16 17:27:20.2678  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-16 17:27:20.3965  INFO - [Web Socket Server Listening...]
+2020-04-16 17:27:20.3965  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-16 17:27:32.6383  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-16 17:27:38.1533  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/2B699FCE2A5094957B24445F97FCE8CC",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-16 17:27:38.1533  INFO - [Socket] 작업 소요시간: 00:00:05.5130388
+2020-04-16 17:27:38.2122  INFO - [Socket]세션ID: 738d2928-b439-4bf9-b87c-d023d0144db0 접속해제: ClientClosing
+2020-04-16 17:27:38.9566  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-16 17:27:41.2774  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/2B699FCE2A5094957B24445F97FCE8CC",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-16 17:27:41.2774  INFO - [Socket] 작업 소요시간: 00:00:02.3168004
+2020-04-16 17:27:41.3163  INFO - [Socket]세션ID: 5ee9f72a-45a6-448b-9d92-2b4314a94d0a 접속해제: ClientClosing
+2020-04-16 17:27:42.3536  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-16 17:27:44.9232  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/2B699FCE2A5094957B24445F97FCE8CC",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-16 17:27:44.9232  INFO - [Socket] 작업 소요시간: 00:00:02.5686715
+2020-04-16 17:27:44.9701  INFO - [Socket]세션ID: ac1c43f4-6323-48aa-b395-14ffb903d460 접속해제: ClientClosing
+2020-04-16 17:27:47.0132  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-16 17:27:49.3236  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/2B699FCE2A5094957B24445F97FCE8CC",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-16 17:27:49.3236  INFO - [Socket] 작업 소요시간: 00:00:02.3064535
+2020-04-16 17:27:49.3705  INFO - [Socket]세션ID: dcfcb338-164a-4a11-96cf-b001fcff4cea 접속해제: ClientClosing
+2020-04-16 17:27:57.6058  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com"
+}
+
+2020-04-16 17:28:05.9017  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/34759005-8888-4b9f-9abc-e4e3910db994_2020-04-16/www.naver.com.png",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 1,
+  "Method": "WebCapture"
+}
+
+2020-04-16 17:28:05.9017  INFO - [Socket] 작업 소요시간: 00:00:08.2928836
+2020-04-16 17:28:05.9555  INFO - [Socket]세션ID: 3297fa46-7aa6-4112-98a6-717c62adebf5 접속해제: ClientClosing
+2020-04-16 17:28:06.5110  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com"
+}
+
+2020-04-16 17:28:13.7379  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/d035c75c-c9bc-45e4-a859-a6a38ceefadc_2020-04-16/www.naver.com.png",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 1,
+  "Method": "WebCapture"
+}
+
+2020-04-16 17:28:13.7379  INFO - [Socket] 작업 소요시간: 00:00:07.2229311
+2020-04-16 17:28:13.7798  INFO - [Socket]세션ID: 4f3f4ff2-fa05-4a3f-bf2a-e18cd52ed0bf 접속해제: ClientClosing
+2020-04-16 17:28:15.1262  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-16 17:28:17.7492  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/2B699FCE2A5094957B24445F97FCE8CC",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-16 17:28:17.7492  INFO - [Socket] 작업 소요시간: 00:00:02.6199930
+2020-04-16 17:28:17.7991  INFO - [Socket]세션ID: 6f1318ad-ad28-4093-891d-cbca771ddaba 접속해제: ClientClosing
+2020-04-16 17:28:18.4292  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-16 17:28:20.9973  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/2B699FCE2A5094957B24445F97FCE8CC",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-16 17:28:21.0073  INFO - [Socket] 작업 소요시간: 00:00:02.5780170
+2020-04-16 17:28:21.0571  INFO - [Socket]세션ID: 8f412161-3ac4-4c9d-aac4-6e92da458523 접속해제: ClientClosing
+2020-04-16 19:43:57.1357  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-16 19:43:57.1735  INFO - 라이센스 만료날짜: 2020-04-30
+2020-04-16 19:43:57.2705  INFO - [Socket]핸들러 등록 완료
+2020-04-16 19:43:57.2705  INFO - [Socket]서버 생성 성공
+2020-04-16 19:43:57.3040  INFO - [Socket Server Listening...]
+2020-04-16 19:43:57.3040  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-16 19:43:57.4102  INFO - [Web Socket Server Listening...]
+2020-04-16 19:43:57.4102  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-16 19:46:08.4764  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-16 19:46:08.5162  INFO - 라이센스 만료날짜: 2021-03-10
+2020-04-16 19:46:08.6130  INFO - [Socket]핸들러 등록 완료
+2020-04-16 19:46:08.6138  INFO - [Socket]서버 생성 성공
+2020-04-16 19:46:38.6732  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-16 19:46:38.7068  INFO - 라이센스 만료날짜: 2021-03-10
+2020-04-16 19:46:38.7725  INFO - [Socket]핸들러 등록 완료
+2020-04-16 19:46:38.7725  INFO - [Socket]서버 생성 성공
+2020-04-16 19:46:38.8092  INFO - [Socket Server Listening...]
+2020-04-16 19:46:38.8092  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-16 19:46:38.9519  INFO - [Web Socket Server Listening...]
+2020-04-16 19:46:38.9519  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005

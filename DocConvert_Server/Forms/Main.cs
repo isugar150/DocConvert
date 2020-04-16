@@ -14,6 +14,7 @@ using vtortola.WebSockets;
 
 using DocConvert_Server.License;
 using NLog;
+using System.Reflection;
 
 namespace DocConvert_Server
 {
@@ -24,6 +25,8 @@ namespace DocConvert_Server
         private int wsSessionCount = 0;
         WebSocketListener webSocketServer = null;
         JObject checkLicense;
+
+        private static Logger logger = LogManager.GetLogger("DocConvert_Server_Log");
         public Form1()
         {
             InitializeComponent();
@@ -131,6 +134,11 @@ namespace DocConvert_Server
             }
             catch (Exception e1)
             {
+                logger.Info("변환중 오류발생 자세한 내용은 오류로그 참고");
+                logger.Error("==================== Method: " + MethodBase.GetCurrentMethod().Name + " ====================");
+                logger.Error(new StackTrace(e1, true));
+                logger.Error("변환 실패: " + e1.Message);
+                logger.Error("==================== End ====================");
                 DevLog.Write("[WebSocketServer][Error] " + e1.Message, LOG_LEVEL.ERROR);
                 pictureBox3.Image = Properties.Resources.error_icon;
             }
@@ -209,9 +217,14 @@ namespace DocConvert_Server
                     --wsSessionCount;
                 }
             }
-            catch (Exception aex)
+            catch (Exception e1)
             {
-                DevLog.Write("[WebSocket] Error Handling connection: " + aex.GetBaseException().Message, LOG_LEVEL.ERROR);
+                logger.Info("변환중 오류발생 자세한 내용은 오류로그 참고");
+                logger.Error("==================== Method: " + MethodBase.GetCurrentMethod().Name + " ====================");
+                logger.Error(new StackTrace(e1, true));
+                logger.Error("변환 실패: " + e1.Message);
+                logger.Error("==================== End ====================");
+                DevLog.Write("[WebSocket] Error Handling connection: " + e1.GetBaseException().Message, LOG_LEVEL.ERROR);
                 try { ws.Close(); }
                 catch { }
             }

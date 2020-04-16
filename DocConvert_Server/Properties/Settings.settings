@@ -33,10 +33,10 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="serverIP" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">127.0.0.1</Value>
+      <Value Profile="(Default)">192.168.0.101</Value>
     </Setting>
     <Setting Name="LicenseKEY" Type="System.String" Scope="Application">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">7kOQCsa87IIeLnU6hQyxTOzuV0Khg5cBBY5B5p75qAuzJlFKnC8zxpcXxyfsFTOLKn7hnUE4RuBi6VJV94/UlYAQT6is46zbBIsDiqck9In2erCV0LpIT6KQjpdK/hC2xBCTUkidxFT+Np6OIN6vi5/35ZDrW9X2hDmj0SU/WgU=</Value>
     </Setting>
   </Settings>
 </SettingsFile>

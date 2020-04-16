@@ -1,5 +1,6 @@
 ﻿using DocConvert_Core.imageLib;
 using DocConvert_Core.interfaces;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,6 +8,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -17,6 +19,7 @@ namespace DocConvert_Core.WebCaptureLib
 {
     public class WebCapture_Core
     {
+        private static Logger logger = LogManager.GetLogger("DocConvert_Engine_Log");
         /// <summary>
         /// 참고 API https://phantomjs.org/
         /// </summary>
@@ -70,6 +73,11 @@ namespace DocConvert_Core.WebCaptureLib
                 returnValue.isSuccess = false;
                 returnValue.Message = e1.Message;
                 returnValue.PageCount = 0;
+                logger.Info("변환중 오류발생 자세한 내용은 오류로그 참고");
+                logger.Error("==================== Method: " + MethodBase.GetCurrentMethod().Name + "====================");
+                logger.Error(new StackTrace(e1, true));
+                logger.Error("변환 실패: " + e1.Message);
+                logger.Error("==================== End ====================");
             }
 
             return returnValue;

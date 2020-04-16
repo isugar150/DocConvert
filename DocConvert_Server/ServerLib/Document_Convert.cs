@@ -4,11 +4,14 @@ using DocConvert_Core.interfaces;
 using DocConvert_Core.OfficeLib;
 using DocConvert_Core.WebCaptureLib;
 using Newtonsoft.Json.Linq;
+using NLog;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Security.Cryptography;
 using System.Security.Policy;
 using System.Text;
@@ -20,10 +23,10 @@ namespace DocConvert_Server
 {
     class Document_Convert
     {
+        private static Logger logger = LogManager.GetLogger("DocConvert_Server_Log");
         public JObject document_Convert(string requestInfo)
         {
             ReturnValue status = new ReturnValue();
-
             JObject responseMsg = new JObject();
             try
             {
@@ -84,7 +87,8 @@ namespace DocConvert_Server
                     }
                     else if (Path.GetExtension(fileFullPath).Equals(".hwp"))
                     {
-                        Thread HWPConvert = new Thread(() => {
+                        Thread HWPConvert = new Thread(() =>
+                        {
                             status = HWPConvert_Core.HwpSaveAs(fileFullPath, outPath, PAGINGNUM);
                         });
                         HWPConvert.SetApartmentState(ApartmentState.STA);
@@ -146,13 +150,14 @@ namespace DocConvert_Server
                     }
                     responseMsg["Method"] = "DocConvert";
                     #endregion
-                } 
+                }
                 else if (requestMsg["Method"].ToString().Equals("WebCapture"))
                 {
                     string guidPath = Guid.NewGuid().ToString() + "_" + DateTime.Now.ToString("yyyy-MM-dd");
-                    string dataPath =  @"\workspace\" + guidPath; // 파일 출력경로
+                    string dataPath = @"\workspace\" + guidPath; // 파일 출력경로
                     #region WebCapture
-                    Thread WebCapture = new Thread(() => {
+                    Thread WebCapture = new Thread(() =>
+                    {
                         status = WebCapture_Core.WebCapture(requestMsg["URL"].ToString(), Properties.Settings.Default.DataPath + dataPath);
                     });
                     WebCapture.SetApartmentState(ApartmentState.STA);
@@ -183,6 +188,11 @@ namespace DocConvert_Server
             }
             catch (Exception e1)
             {
+                logger.Info("변환중 오류발생 자세한 내용은 오류로그 참고");
+                logger.Error("==================== Method: " + MethodBase.GetCurrentMethod().Name + " ====================");
+                logger.Error(new StackTrace(e1, true));
+                logger.Error("변환 실패: " + e1.Message);
+                logger.Error("==================== End ====================");
                 responseMsg["isSuccess"] = false;
                 responseMsg["msg"] = e1.Message;
             }
