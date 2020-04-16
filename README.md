@@ -23,9 +23,9 @@
 > 사용된 Java라이브러리: commons-net-3.6.jar, Java-WebSocket-1.4.1.jar, json-simple-1.1.1.jar, slf4j-api-1.7.25.jar  
 ### 스크린샷
 
-![dcs_main](https://user-images.githubusercontent.com/13088077/78530590-e7b56c00-781e-11ea-81e2-e0b174e1773e.png)  
+![image](https://user-images.githubusercontent.com/13088077/79458255-849cb400-802c-11ea-8e8c-e52b4be87c6d.png)
 <DocConvert 서버 메인화면>    
-<img width="487" alt="dcu_main" src="https://user-images.githubusercontent.com/13088077/78663785-b49dd600-790d-11ea-8f60-ef3e9048062b.png">  
+![image](https://user-images.githubusercontent.com/13088077/79458309-967e5700-802c-11ea-9f36-1bbb30e1bdfb.png) 
 <DocConvert 유틸 메인화면>    
 <img width="1136" alt="dcjavaapi" src="https://user-images.githubusercontent.com/13088077/78663993-16f6d680-790e-11ea-8afd-0d31d5ec9943.png">  
 <JAVA API를 사용하여 변환시>  
