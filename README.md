@@ -30,7 +30,7 @@
 <JAVA API를 사용하여 변환시>  
 
 ### DocConverter Server
-**Socket & WebSocket**
+**Socket & WebSocket**  
 `문서 변환시`
 ```
 - [Client => Server]  
