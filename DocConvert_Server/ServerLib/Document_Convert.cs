@@ -165,7 +165,7 @@ namespace DocConvert_Server
                     WebCapture.Join();
                     if (status.isSuccess)
                     {
-                        responseMsg["URL"] = "/" + "workspace" + "/" + guidPath + "/" + new Uri(requestMsg["URL"].ToString()).Authority + ".png";
+                        responseMsg["URL"] = "/" + "workspace" + "/" + guidPath + "/" + "0.png";
                         responseMsg["isSuccess"] = status.isSuccess;
                         responseMsg["msg"] = status.Message;
                         responseMsg["convertImgCnt"] = status.PageCount;

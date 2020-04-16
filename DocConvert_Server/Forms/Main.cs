@@ -56,6 +56,10 @@ namespace DocConvert_Server
             }
             catch (Exception) { new MessageDialog("라이센스 오류", "라이센스키 파싱오류.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); Application.Exit(); return; }
             #endregion
+            toolStripStatusLabel4.Text = "IP Address: " + Properties.Settings.Default.serverIP;
+            toolStripStatusLabel5.Text = "Socket Port: : " + Properties.Settings.Default.socketPORT.ToString();
+            toolStripStatusLabel6.Text = "WebSocket Port: " + Properties.Settings.Default.webSocketPORT.ToString();
+            toolStripStatusLabel7.Text = "File Server Port: " + Properties.Settings.Default.fileServerPORT.ToString();
             checkBox1.Checked = Properties.Settings.Default.FollowTail;
             #region Create SocketServer
             socketServer.InitConfig();

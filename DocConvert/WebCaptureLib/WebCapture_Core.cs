@@ -35,7 +35,7 @@ namespace DocConvert_Core.WebCaptureLib
                 string phantomJSPath = Application.StartupPath + @"\phantomjs.exe";
                 string optionJS = Application.StartupPath + @"\rasterize.js";
 
-                string arguments = string.Format("{0} {1} {2}", "\"" + optionJS + "\"", "\"" + Url + "\"", "\"" + outPath + @"\" + new Uri(Url).Authority + ".png" + "\"");
+                string arguments = string.Format("{0} {1} {2}", "\"" + optionJS + "\"", "\"" + Url + "\"", "\"" + outPath + @"\" + "0.png" + "\"");
 
                 Process process = new Process();
                 ProcessStartInfo processStartInfo = new ProcessStartInfo();
@@ -55,7 +55,7 @@ namespace DocConvert_Core.WebCaptureLib
                 }
                 process.Dispose();
 
-                if(new FileInfo(outPath + @"\" + new Uri(Url).Authority + ".png").Exists)
+                if(new FileInfo(outPath + @"\" + "0.png").Exists)
                 {
                     returnValue.isSuccess = true;
                     returnValue.Message = "WebCapture에 성공하였습니다.";
