@@ -113,14 +113,7 @@ namespace DocConvert_Core.OfficeLib
             }
             catch (Exception e1)
             {
-                logger.Info("변환중 오류발생 자세한 내용은 오류로그 참고");
-                logger.Error("==================== Method: " + MethodBase.GetCurrentMethod().Name + " ====================");
-                logger.Error(new StackTrace(e1, true));
-                logger.Error("변환 실패: " + e1.Message);
-                logger.Error("==================== End ====================");
-                returnValue.isSuccess = false;
-                returnValue.Message = e1.Message;
-                return returnValue;
+                throw e1;
             }
             finally
             {

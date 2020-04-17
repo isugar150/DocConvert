@@ -15,6 +15,7 @@ using vtortola.WebSockets;
 using DocConvert_Server.License;
 using NLog;
 using System.Reflection;
+using DocConvert_Server.Forms;
 
 namespace DocConvert_Server
 {
@@ -25,6 +26,9 @@ namespace DocConvert_Server
         private int wsSessionCount = 0;
         WebSocketListener webSocketServer = null;
         JObject checkLicense;
+        public int totalCnt = 0;
+        public int successCnt = 0;
+        public int errorCnt = 0;
 
         private static Logger logger = LogManager.GetLogger("DocConvert_Server_Log");
         public Form1()
@@ -82,7 +86,7 @@ namespace DocConvert_Server
                 return;
             }
             #endregion
-            #region LogManger
+            #region Thread
             workProcessTimer.Tick += new EventHandler(OnProcessTimedEvent);
             workProcessTimer.Interval = new TimeSpan(0, 0, 0, 0, 32);
             workProcessTimer.Start();
@@ -96,16 +100,12 @@ namespace DocConvert_Server
                     if (IsTcpPortAvailable(Properties.Settings.Default.webSocketPORT))
                         pictureBox3.Image = Properties.Resources.success_icon;
                     else
-                    {
                         pictureBox3.Image = Properties.Resources.error_icon;
-                    }
 
                     if (IsTcpPortAvailable(Properties.Settings.Default.fileServerPORT))
                         pictureBox2.Image = Properties.Resources.success_icon;
                     else
-                    {
                         pictureBox2.Image = Properties.Resources.error_icon;
-                    }
                     Thread.Sleep(1000);
                 }
             }).Start();
@@ -187,6 +187,7 @@ namespace DocConvert_Server
                 while (ws.IsConnected && !cancellation.IsCancellationRequested)
                 {
                     ++wsSessionCount;
+                    ++totalCnt;
                     //클라이언트로부터 메시지가 왔는지 비동기읽음
                     string requestInfo = await ws.ReadStringAsync(cancellation).ConfigureAwait(false);
 
@@ -212,9 +213,11 @@ namespace DocConvert_Server
                             ws.Close();
 
                             DevLog.Write("[WebSocket]서버와 연결이 해제되었습니다.", LOG_LEVEL.INFO);
+                            ++successCnt;
                         }
                         catch (Exception e1)
                         {
+                            ++errorCnt;
                             responseMsg["Msg"] = e1.Message;
                         }
                     }
@@ -321,17 +324,73 @@ namespace DocConvert_Server
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            try
+            e.Cancel = true;
+            this.Visible = false;
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var dialog = new AboutForm())
             {
-                socketServer.Dispose();
+                dialog.ShowDialog(this);
             }
-            catch (Exception) { }
-            try
+        }
+
+        private void program_Exit()
+        {
+            if (MessageBox.Show(this, "DocConvert 서버를 종료하시겠습니까?", "경고", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
-                webSocketServer.Dispose();
+                try
+                {
+                    socketServer.Dispose();
+                }
+                catch (Exception) { }
+                try
+                {
+                    webSocketServer.Dispose();
+                }
+                catch (Exception) { }
+                Application.ExitThread();
+                Environment.Exit(0);
             }
-            catch (Exception) { }
-            Application.Exit();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+             program_Exit();
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            program_Exit();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            using (var dialog = new AboutForm())
+            {
+                dialog.ShowDialog(this);
+            }
+        }
+
+        private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Left)
+            {
+                if (this.Visible)
+                    this.Visible = false;
+                else
+                {
+                    this.Visible = true;
+                    this.Activate();
+                }
+            }
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Visible = true;
+            this.Activate();
         }
     }
 }

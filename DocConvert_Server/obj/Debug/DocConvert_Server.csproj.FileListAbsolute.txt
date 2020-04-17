@@ -74,3 +74,4 @@ C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Server\obj\Debug\DocConver
 C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\phantomjs.exe
 C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\rasterize.js
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.csprojAssemblyReference.cache
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.Forms.AboutForm.resources

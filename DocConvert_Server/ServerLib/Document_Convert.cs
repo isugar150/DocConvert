@@ -28,9 +28,10 @@ namespace DocConvert_Server
         {
             ReturnValue status = new ReturnValue();
             JObject responseMsg = new JObject();
+            JObject requestMsg = new JObject();
             try
             {
-                JObject requestMsg = JObject.Parse(requestInfo); // 요청받은 JSON 파싱
+                requestMsg = JObject.Parse(requestInfo); // 요청받은 JSON 파싱
 
                 if (!requestMsg["KEY"].ToString().Equals(Properties.Settings.Default.key))
                 {
@@ -148,7 +149,6 @@ namespace DocConvert_Server
                             responseMsg["pageNum"] = status.PageCount;
                         responseMsg["msg"] = status.Message;
                     }
-                    responseMsg["Method"] = "DocConvert";
                     #endregion
                 }
                 else if (requestMsg["Method"].ToString().Equals("WebCapture"))
@@ -176,7 +176,6 @@ namespace DocConvert_Server
                         responseMsg["msg"] = status.Message;
                         responseMsg["convertImgCnt"] = status.PageCount;
                     }
-                    responseMsg["Method"] = "WebCapture";
                     #endregion
                 }
                 else
@@ -185,6 +184,7 @@ namespace DocConvert_Server
                     responseMsg["isSuccess"] = false;
                     responseMsg["msg"] = "메소드가 유효하지 않습니다.";
                 }
+                responseMsg["Method"] = requestMsg["Method"];
             }
             catch (Exception e1)
             {
@@ -195,6 +195,7 @@ namespace DocConvert_Server
                 logger.Error("==================== End ====================");
                 responseMsg["isSuccess"] = false;
                 responseMsg["msg"] = e1.Message;
+                responseMsg["Method"] = requestMsg["Method"];
             }
 
             return responseMsg;

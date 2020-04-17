@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using DocConvert_Core.interfaces;
 using System.Diagnostics;
 using NLog;
+using System.Reflection;
 
 namespace DocConvert_Core.imageLib
 {
@@ -27,9 +28,12 @@ namespace DocConvert_Core.imageLib
             ReturnValue returnValue = new ReturnValue();
             try
             {
+                logger.Info("==================== Start ====================");
+                logger.Info("Method: " + MethodBase.GetCurrentMethod().Name + ", FilePath: " + SourcePDF + ", outPath: " + outPath);
                 using (var document = PdfDocument.Load(SourcePDF))
                 {
                     var pageCount = document.PageCount;
+                    int totalCnt = 0;
                     for (int i = 0; i < pageCount; i++)
                     {
                         var dpi = 300;
@@ -43,25 +47,33 @@ namespace DocConvert_Core.imageLib
                                 System.Drawing.Imaging.Encoder.Quality, 100L);
 
                             image.Save(outPath + (i + 1) + ".jpg", encoder, encParams);
-
-                            returnValue.PageCount = pageCount;
-                            returnValue.isSuccess = true;
-                            returnValue.Message = "이미지 변환에 성공하였습니다.";
-                            logger.Info("이미지 변환 성공!");
-                            logger.Info("Source image: "+ SourcePDF);
-                            logger.Info("outFiles: " + outPath + (i + 1) + ".jpg");
+                            ++totalCnt;
                         }
+                    }
+                    if(pageCount == totalCnt)
+                    {
+                        returnValue.PageCount = pageCount;
+                        returnValue.isSuccess = true;
+                        returnValue.Message = "이미지 변환에 성공하였습니다.";
+                        logger.Info("이미지 변환 성공!");
+                    }
+                    else
+                    {
+                        returnValue.PageCount = pageCount;
+                        returnValue.isSuccess = false;
+                        returnValue.Message = "이미지 변환에 실패하였습니다.";
+                        logger.Error("이미지 변환 실패!");
+                        new IOException("이미지 변환에 실패하였습니다.");
                     }
                 }
             }
             catch (Exception e1)
             {
-                returnValue.PageCount = -1;
-                returnValue.isSuccess = false;
-                returnValue.Message = e1.Message;
-                logger.Info("이미지 변환 실패!");
-                logger.Info("Source image: " + SourcePDF);
-                logger.Info(e1.Message);
+                throw e1;
+            }
+            finally
+            {
+                logger.Info("==================== End ====================");
             }
             return returnValue;
         }
@@ -76,9 +88,12 @@ namespace DocConvert_Core.imageLib
             ReturnValue returnValue = new ReturnValue();
             try
             {
+                logger.Info("==================== Start ====================");
+                logger.Info("Method: " + MethodBase.GetCurrentMethod().Name + ", FilePath: " + SourcePDF + ", outPath: " + outPath);
                 using (var document = PdfDocument.Load(SourcePDF))
                 {
                     var pageCount = document.PageCount;
+                    int totalCnt = 0;
                     for (int i = 0; i < pageCount; i++)
                     {
                         Debug.WriteLine(outPath + (i + 1) + ".bmp");
@@ -93,25 +108,33 @@ namespace DocConvert_Core.imageLib
                                 System.Drawing.Imaging.Encoder.Quality, 100L);
 
                             image.Save(outPath + (i + 1) + ".bmp", encoder, encParams);
-
-                            returnValue.PageCount = pageCount;
-                            returnValue.isSuccess = true;
-                            returnValue.Message = "이미지 변환에 성공하였습니다.";
-                            logger.Info("이미지 변환 성공!");
-                            logger.Info("Source image: " + SourcePDF);
-                            logger.Info("outFiles: " + outPath + (i + 1) + ".bmp");
+                            ++totalCnt;
                         }
+                    }
+                    if (pageCount == totalCnt)
+                    {
+                        returnValue.PageCount = pageCount;
+                        returnValue.isSuccess = true;
+                        returnValue.Message = "이미지 변환에 성공하였습니다.";
+                        logger.Info("이미지 변환 성공!");
+                    }
+                    else
+                    {
+                        returnValue.PageCount = pageCount;
+                        returnValue.isSuccess = false;
+                        returnValue.Message = "이미지 변환에 실패하였습니다.";
+                        logger.Error("이미지 변환 실패!");
+                        new IOException("이미지 변환에 실패하였습니다.");
                     }
                 }
             }
             catch (Exception e1)
             {
-                returnValue.PageCount = -1;
-                returnValue.isSuccess = false;
-                returnValue.Message = e1.Message;
-                logger.Info("이미지 변환 실패!");
-                logger.Info("Source image: " + SourcePDF);
-                logger.Info(e1.Message);
+                throw e1;
+            }
+            finally
+            {
+                logger.Info("==================== End ====================");
             }
             return returnValue;
         }
@@ -126,9 +149,12 @@ namespace DocConvert_Core.imageLib
             ReturnValue returnValue = new ReturnValue();
             try
             {
+                logger.Info("==================== Start ====================");
+                logger.Info("Method: " + MethodBase.GetCurrentMethod().Name + ", FilePath: " + SourcePDF + ", outPath: " + outPath);
                 using (var document = PdfDocument.Load(SourcePDF))
                 {
                     var pageCount = document.PageCount;
+                    int totalCnt = 0;
                     for (int i = 0; i < pageCount; i++)
                     {
                         Debug.WriteLine(outPath + (i + 1) + ".png");
@@ -143,25 +169,33 @@ namespace DocConvert_Core.imageLib
                                 System.Drawing.Imaging.Encoder.Quality, 100L);
 
                             image.Save(outPath + (i + 1) + ".png", encoder, encParams);
-
-                            returnValue.PageCount = pageCount;
-                            returnValue.isSuccess = true;
-                            returnValue.Message = "이미지 변환에 성공하였습니다.";
-                            logger.Info("이미지 변환 성공!");
-                            logger.Info("Source image: " + SourcePDF);
-                            logger.Info("outFiles: " + outPath + (i + 1) + ".png");
+                            ++totalCnt;
                         }
+                    }
+                    if (pageCount == totalCnt)
+                    {
+                        returnValue.PageCount = pageCount;
+                        returnValue.isSuccess = true;
+                        returnValue.Message = "이미지 변환에 성공하였습니다.";
+                        logger.Info("이미지 변환 성공!");
+                    }
+                    else
+                    {
+                        returnValue.PageCount = pageCount;
+                        returnValue.isSuccess = false;
+                        returnValue.Message = "이미지 변환에 실패하였습니다.";
+                        logger.Error("이미지 변환 실패!");
+                        new IOException("이미지 변환에 실패하였습니다.");
                     }
                 }
             }
             catch (Exception e1)
             {
-                returnValue.PageCount = -1;
-                returnValue.isSuccess = false;
-                returnValue.Message = e1.Message;
-                logger.Info("이미지 변환 실패!");
-                logger.Info("Source image: " + SourcePDF);
-                logger.Info(e1.Message);
+                throw e1;
+            }
+            finally
+            {
+                logger.Info("==================== End ====================");
             }
             return returnValue;
         }
