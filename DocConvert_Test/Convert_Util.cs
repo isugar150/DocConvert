@@ -225,11 +225,6 @@ namespace DocConvert_Util
                         {
                             tb2_appendText(FileNames[i] + "해당 경로에 파일이 존재하지 않습니다.");
                         }
-                        if (Path.GetExtension(FileNames[i]).Equals(".hwp"))
-                        {
-                            tb2_appendText("비밀번호 해제후 다시시도해주세요.");
-                            return;
-                        }
                         ReturnValue status = null;
                         string passwd = null;
                         outPath = Path.GetDirectoryName(FileNames[i]) + @"\" + Path.GetFileNameWithoutExtension(FileNames[i]) + ".pdf";
