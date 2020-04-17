@@ -9,6 +9,7 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/slf4j-api-1.7.25.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-net-3.6.jar" path-in-jar="/" />
       <element id="library" level="project" name="Java-WebSocket-1.4.1" />
+      <element id="artifact" artifact-name="DocConvert_API:jar" />
     </root>
   </artifact>
 </component>
