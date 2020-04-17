@@ -2,8 +2,8 @@
 * Socket 또는 WebSocket으로 통신하여 오피스파일(docx, doc, xlsx, xls, pptx, ppt), 한글파일(hwp), 기타 파일(pdf, txt, html)등 여러 파일을 PDF로 변환하거나 이미지 파일(jpg, png, bmp)로 변환합니다.
 * 기본포트: Socket: 12000, webSocket: 12005, FTPServer: 12100  
 * 이미지 변환 ENUM: (0: 변환안함), (1: JPG), (2: PNG), (3: BMP)  
-* 권장 오피스 버전: 2016 이상
-* 권장 한글 버전: 2018 이상
+* 권장 오피스 버전: 2010 이상
+* 권장 한글 버전: 2010 이상 - 마이너 업데이트 필수
 * 권장 운영체제: Windows 10이상, Windows Server 2016이상
 
 ### 설치 가이드
