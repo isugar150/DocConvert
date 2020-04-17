@@ -125,11 +125,20 @@ namespace DocConvert_Server.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("7kOQCsa87IIeLnU6hQyxTOzuV0Khg5cBBY5B5p75qAuzJlFKnC8zxpcXxyfsFTOLKn7hnUE4RuBi6VJV9" +
-            "4/UlYAQT6is46zbBIsDiqck9In2erCV0LpIT6KQjpdK/hC2xBCTUkidxFT+Np6OIN6vi5/35ZDrW9X2h" +
-            "Dmj0SU/WgU=")]
+            "4/UlYAQT6is46zbBIsDiqck9In2erCV0LpIT6KQjpdK/hC2m1o4SQnIQkLTcQ735Vi5tWWgzADqL4q6H" +
+            "WOoiByIm0s=")]
         public string LicenseKEY {
             get {
                 return ((string)(this["LicenseKEY"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AppVisible {
+            get {
+                return ((bool)(this["AppVisible"]));
             }
         }
     }

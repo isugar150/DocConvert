@@ -1,0 +1,16 @@
+2020-04-17 23:39:51.3542  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-17 23:39:51.3822  INFO - 라이센스 만료날짜: 2021-03-10
+2020-04-17 23:39:51.4839  INFO - [Socket]핸들러 등록 완료
+2020-04-17 23:39:51.4839  INFO - [Socket]서버 생성 성공
+2020-04-17 23:39:51.5118  INFO - [Socket Server Listening...]
+2020-04-17 23:39:51.5118  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-17 23:39:51.6056  INFO - [Web Socket Server Listening...]
+2020-04-17 23:39:51.6056  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-17 23:41:26.3045  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-17 23:41:26.3201  INFO - 라이센스 만료날짜: 2021-03-10
+2020-04-17 23:41:26.3670  INFO - [Socket]핸들러 등록 완료
+2020-04-17 23:41:26.3670  INFO - [Socket]서버 생성 성공
+2020-04-17 23:41:26.3826  INFO - [Socket Server Listening...]
+2020-04-17 23:41:26.3826  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-17 23:41:26.4294  INFO - [Web Socket Server Listening...]
+2020-04-17 23:41:26.4294  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005

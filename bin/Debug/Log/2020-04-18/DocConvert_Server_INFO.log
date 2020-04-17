@@ -1,0 +1,8 @@
+2020-04-18 00:03:31.1601  INFO - 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 00:03:31.2226  INFO - 라이센스 만료날짜: 2021-10-20
+2020-04-18 00:03:31.3319  INFO - [Socket]핸들러 등록 완료
+2020-04-18 00:03:31.3319  INFO - [Socket]서버 생성 성공
+2020-04-18 00:03:31.3788  INFO - [Socket Server Listening...]
+2020-04-18 00:03:31.3788  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 00:03:31.5038  INFO - [Web Socket Server Listening...]
+2020-04-18 00:03:31.5038  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005

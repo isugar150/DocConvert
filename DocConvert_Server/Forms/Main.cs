@@ -52,19 +52,23 @@ namespace DocConvert_Server
                 Debug.WriteLine(Properties.Settings.Default.LicenseKEY);
                 string licenseInfo = LicenseInfo.decryptAES256(Properties.Settings.Default.LicenseKEY, "JmDoCOnVerTerServErJmCoRp");
                 checkLicense = JObject.Parse(licenseInfo);
-                if (!checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID())) { new MessageDialog("라이센스 오류", "라이센스 확인 후 다시시도하세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); Application.Exit(); return; }
-                if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now) { new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되었습니다. 갱신후 다시시도해주세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); Application.Exit(); return; }
+                if (!checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID())) { new MessageDialog("라이센스 오류", "라이센스 확인 후 다시시도하세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
+                if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now) { new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되었습니다. 갱신후 다시시도해주세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
 
                 DevLog.Write("나의 하드웨어 ID: " + new LicenseInfo().getHWID(), LOG_LEVEL.INFO);
                 DevLog.Write(string.Format("라이센스 만료날짜: {0}", checkLicense["EndDate"].ToString()), LOG_LEVEL.INFO);
             }
-            catch (Exception) { new MessageDialog("라이센스 오류", "라이센스키 파싱오류.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); Application.Exit(); return; }
+            catch (Exception) { new MessageDialog("라이센스 오류", "라이센스키 파싱오류.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
             #endregion
             toolStripStatusLabel4.Text = "IP Address: " + Properties.Settings.Default.serverIP;
             toolStripStatusLabel5.Text = "Socket Port: : " + Properties.Settings.Default.socketPORT.ToString();
             toolStripStatusLabel6.Text = "WebSocket Port: " + Properties.Settings.Default.webSocketPORT.ToString();
             toolStripStatusLabel7.Text = "File Server Port: " + Properties.Settings.Default.fileServerPORT.ToString();
             checkBox1.Checked = Properties.Settings.Default.FollowTail;
+            if (Properties.Settings.Default.AppVisible)
+                this.Visible = true;
+            else
+                this.Visible = false;
             #region Create SocketServer
             socketServer.InitConfig();
             socketServer.CreateServer();
@@ -106,6 +110,7 @@ namespace DocConvert_Server
                         pictureBox2.Image = Properties.Resources.success_icon;
                     else
                         pictureBox2.Image = Properties.Resources.error_icon;
+
                     Thread.Sleep(1000);
                 }
             }).Start();
@@ -336,9 +341,27 @@ namespace DocConvert_Server
             }
         }
 
-        private void program_Exit()
+        private void program_Exit(bool forceExit)
         {
-            if (MessageBox.Show(this, "DocConvert 서버를 종료하시겠습니까?", "경고", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            if (!forceExit)
+            {
+                if (MessageBox.Show(this, "DocConvert 서버를 종료하시겠습니까?", "경고", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                {
+                    try
+                    {
+                        socketServer.Dispose();
+                    }
+                    catch (Exception) { }
+                    try
+                    {
+                        webSocketServer.Dispose();
+                    }
+                    catch (Exception) { }
+                    Application.ExitThread();
+                    Environment.Exit(0);
+                }
+            }
+            else
             {
                 try
                 {
@@ -357,12 +380,12 @@ namespace DocConvert_Server
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-             program_Exit();
+            program_Exit(false);
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            program_Exit();
+            program_Exit(false);
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
@@ -375,7 +398,7 @@ namespace DocConvert_Server
 
         private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
         {
-            if(e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left)
             {
                 if (this.Visible)
                     this.Visible = false;
