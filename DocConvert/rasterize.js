@@ -41,9 +41,12 @@ if (system.args.length < 3 || system.args.length > 5) {
             phantom.exit(1);
         } else {
             window.setTimeout(function () {
+				page.evaluate(function() {
+					document.body.bgColor = 'white'; //배경색 화이트
+				});
                 page.render(output);
                 phantom.exit();
-            }, 200);
+            }, 1500);
         }
     });
 }
