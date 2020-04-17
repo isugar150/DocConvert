@@ -50,7 +50,7 @@
 ```
 - [Client => Server]  
   [Socket][Client => Server]
-  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "KEY": "Any",
   "Method": "WebCapture",
   "URL": "http://www.naver.com"
     
