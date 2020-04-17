@@ -12,7 +12,7 @@ if (system.args.length < 3 || system.args.length > 5) {
 } else {
     address = system.args[1];
     output = system.args[2];
-    page.viewportSize = { width: 600, height: 600 };
+    page.viewportSize = { width: 1280, height: 720 };
     if (system.args.length > 3 && system.args[2].substr(-4) === ".pdf") {
         size = system.args[3].split('*');
         page.paperSize = size.length === 2 ? { width: size[0], height: size[1], margin: '0px' }
@@ -41,9 +41,12 @@ if (system.args.length < 3 || system.args.length > 5) {
             phantom.exit(1);
         } else {
             window.setTimeout(function () {
+				page.evaluate(function() {
+					document.body.bgColor = 'white'; //배경색 화이트
+				});
                 page.render(output);
                 phantom.exit();
-            }, 200);
+            }, 1500);
         }
     });
 }
