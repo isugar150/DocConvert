@@ -3,7 +3,7 @@
 * 기본포트: Socket: 12000, webSocket: 12005, FTPServer: 12100  
 * 이미지 변환 ENUM: (0: 변환안함), (1: JPG), (2: PNG), (3: BMP)  
 * 권장 오피스 버전: 2010 이상
-* 권장 한글 버전: 2010 이상 - 마이너 업데이트 필수
+* 권장 한글 버전: 2010 이상 - 마이너 업데이트 필수 (https://www.hancom.com/cs_center/csDownload.do)
 * 권장 운영체제: Windows 10이상, Windows Server 2016이상
 
 ### 설치 가이드
