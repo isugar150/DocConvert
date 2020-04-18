@@ -89,7 +89,7 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "";
-            this.columnHeader1.Width = 10;
+            this.columnHeader1.Width = 13;
             // 
             // columnHeader2
             // 
@@ -159,7 +159,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(12, 530);
+            this.button1.Location = new System.Drawing.Point(12, 556);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(165, 40);
             this.button1.TabIndex = 7;
@@ -171,7 +171,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 582);
+            this.ClientSize = new System.Drawing.Size(870, 605);
             this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);

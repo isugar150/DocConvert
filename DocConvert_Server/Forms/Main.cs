@@ -39,7 +39,7 @@ namespace DocConvert_Server
 
             if(args.Length == 0)
             {
-                DevLog.Write("DocConvert Server를 수동으로 실행하였습니다.", LOG_LEVEL.INFO);
+                DevLog.Write("[INFO] DocConvert Server를 수동으로 실행하였습니다.", LOG_LEVEL.INFO);
             }
             else
             {
@@ -48,7 +48,7 @@ namespace DocConvert_Server
                 {
                     arg += string.Format("   [{0}]: {1}", i, args[i].ToString());
                 }
-                DevLog.Write("아규먼트: " + arg, LOG_LEVEL.INFO);
+                DevLog.Write("[INFO] 아규먼트: " + arg, LOG_LEVEL.INFO);
             }
         }
 
@@ -70,8 +70,8 @@ namespace DocConvert_Server
                 if (!checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID())) { new MessageDialog("라이센스 오류", "라이센스 확인 후 다시시도하세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
                 if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now) { new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되었습니다. 갱신후 다시시도해주세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
 
-                DevLog.Write("나의 하드웨어 ID: " + new LicenseInfo().getHWID(), LOG_LEVEL.INFO);
-                DevLog.Write(string.Format("라이센스 만료날짜: {0}", checkLicense["EndDate"].ToString()), LOG_LEVEL.INFO);
+                DevLog.Write("[INFO] 나의 하드웨어 ID: " + new LicenseInfo().getHWID(), LOG_LEVEL.INFO);
+                DevLog.Write(string.Format("[INFO] 라이센스 만료날짜: {0}", checkLicense["EndDate"].ToString()), LOG_LEVEL.INFO);
             }
             catch (Exception) { new MessageDialog("라이센스 오류", "라이센스키 파싱오류.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
             #endregion
@@ -84,7 +84,7 @@ namespace DocConvert_Server
             if (File.Exists(Application.StartupPath + @"\FilePathCheckerModuleExample.dll"))
             {
                 RegistryKey regKey = Registry.CurrentUser.CreateSubKey(@"Software\HNC\HwpCtrl\Modules", RegistryKeyPermissionCheck.ReadWriteSubTree);
-                DevLog.Write("한글 DLL을 레지스트리에 등록하였습니다.", LOG_LEVEL.INFO);
+                DevLog.Write("[INFO] 한글 DLL을 레지스트리에 등록하였습니다.", LOG_LEVEL.INFO);
             }
             #endregion
             if (Properties.Settings.Default.AppVisible)        
@@ -107,7 +107,7 @@ namespace DocConvert_Server
             }
             else
             {
-                DevLog.Write(string.Format("[Socket][ERROR] 서버 네트워크 시작 실패"), LOG_LEVEL.ERROR);
+                DevLog.Write(string.Format("[Socket][ERROR] 서버 네트워크 시작 실패, 설정한 IP주소가 일치하지거나 바인딩한 포트가 이미 사용중일경우 발생하는 오류."), LOG_LEVEL.ERROR);
                 pictureBox1.Image = DocConvert_Server.Properties.Resources.error_icon;
                 return;
             }
@@ -232,7 +232,7 @@ namespace DocConvert_Server
                             DevLog.Write(string.Format("\r\n[WebSocket][Server => Client]\r\n{0}\r\n", responseMsg), LOG_LEVEL.INFO);
 
                             TimeSpan curTime = DateTime.Now - timeTaken;
-                            DevLog.Write(string.Format("[Socket] 작업 소요시간: {0}", curTime.ToString()), LOG_LEVEL.INFO);
+                            DevLog.Write(string.Format("[WebSocket] 작업 소요시간: {0}", curTime.ToString()), LOG_LEVEL.INFO);
 
                             ws.WriteString(responseMsg.ToString());
 

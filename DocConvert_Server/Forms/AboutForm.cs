@@ -38,6 +38,9 @@ namespace DocConvert_Server.Forms
             ListView.SelectedListViewItemCollection itemColl = listView1.SelectedItems;
             foreach(ListViewItem item in itemColl)
             {
+                for(int i = 0; i<listView1.Items.Count; i++)
+                    listView1.Items[i].SubItems[0].Text = "";
+                listView1.Items[item.Index].SubItems[0].Text = "*";
                 textBox1.Text = getLicenseInfo(listView1.Items[item.Index].SubItems[1].Text);
             }
             

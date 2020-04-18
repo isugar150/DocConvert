@@ -1,9 +1,0 @@
-2020-04-17 23:36:30.8375  INFO - ==================== Start ====================
-2020-04-17 23:36:30.8531  INFO - Method: PowerPointSaveAs, FilePath: C:\Users\o0_0o\Documents\Document\PowerPoint 시작.pptx, outPath: C:\Users\o0_0o\Documents\Document\PowerPoint 시작.pdf, docPassword: 
-2020-04-17 23:36:30.8688  INFO - 파일 언락 성공!
-2020-04-17 23:36:33.9571  INFO - 변환 성공
-2020-04-17 23:36:34.0352  INFO - ==================== End ====================
-2020-04-17 23:36:34.0352  INFO - ==================== Start ====================
-2020-04-17 23:36:34.0352  INFO - Method: PDFtoJpeg, FilePath: C:\Users\o0_0o\Documents\Document\PowerPoint 시작.pdf, outPath: C:\Users\o0_0o\Documents\Document\PowerPoint 시작\
-2020-04-17 23:36:34.4727  INFO - 이미지 변환 성공!
-2020-04-17 23:36:34.4727  INFO - ==================== End ====================
