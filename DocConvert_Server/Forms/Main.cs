@@ -114,7 +114,7 @@ namespace DocConvert_Server
 
             if (IsResult)
             {
-                DevLog.Write("[Socket Server Listening...]", LOG_LEVEL.INFO);
+                DevLog.Write("[Socket] Server Listening...", LOG_LEVEL.INFO);
                 DevLog.Write(string.Format("[Socket][INFO] IP: {0}   포트: {1}   프로토콜: {2}   서버이름: {3}", Properties.Settings.Default.serverIP, socketServer.Config.Port, socketServer.Config.Mode, socketServer.Config.Name), LOG_LEVEL.INFO);
 
                 pictureBox1.Image = DocConvert_Server.Properties.Resources.success_icon;
@@ -170,7 +170,7 @@ namespace DocConvert_Server
                 if (checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID()))
                     webSocketServer.Start();
 
-                DevLog.Write("[Web Socket Server Listening...]", LOG_LEVEL.INFO);
+                DevLog.Write("[Web Socket] Server Listening...", LOG_LEVEL.INFO);
                 DevLog.Write(string.Format("[Web Socket][INFO] IP: {0}   포트: {1}", endpoint.Address, endpoint.Port), LOG_LEVEL.INFO);
 
                 var task = Task.Run(() => AcceptWebSocketClientsAsync(webSocketServer, cancellation.Token));
@@ -442,6 +442,8 @@ namespace DocConvert_Server
                 else
                 {
                     this.Visible = true;
+                    if (this.WindowState == FormWindowState.Minimized)
+                        this.WindowState = FormWindowState.Normal;
                     this.Activate();
                 }
             }

@@ -35,7 +35,7 @@ namespace DocConvert_Server
         {
             HandlerMap.Add((int)PACKETID.REQ_ECHO, CommonHan.RequestMsg);
 
-            DevLog.Write(string.Format("[Socket]핸들러 등록 완료"), LOG_LEVEL.INFO);
+            DevLog.Write(string.Format("[Socket] 핸들러 등록 완료"), LOG_LEVEL.INFO);
         }
 
         public void InitConfig()
@@ -62,7 +62,7 @@ namespace DocConvert_Server
 
             RegistHandler();
 
-            DevLog.Write(string.Format("[Socket]서버 생성 성공"), LOG_LEVEL.INFO);
+            DevLog.Write(string.Format("[Socket] 서버 생성 성공"), LOG_LEVEL.INFO);
         }
 
         public bool IsRunning(ServerState eCurState)
@@ -77,17 +77,17 @@ namespace DocConvert_Server
 
         void OnConnected(NetworkSession session)
         {
-            DevLog.Write(string.Format("[Socket]세션ID: {0} 접속", session.SessionID), LOG_LEVEL.DEBUG);
+            DevLog.Write(string.Format("[Socket] 세션ID: {0} 접속", session.SessionID), LOG_LEVEL.DEBUG);
         }
 
         void OnClosed(NetworkSession session, CloseReason reason)
         {
-            DevLog.Write(string.Format("[Socket]세션ID: {0} 접속해제: {1}", session.SessionID, reason.ToString()), LOG_LEVEL.INFO);
+            DevLog.Write(string.Format("[Socket] 세션ID: {0} 접속해제: {1}", session.SessionID, reason.ToString()), LOG_LEVEL.INFO);
         }
 
         void RequestReceived(NetworkSession session, EFBinaryRequestInfo reqInfo)
         {
-            DevLog.Write(string.Format("[Socket]세션ID: {0} 받은 데이터 크기: {1}, ThreadId: {2}", session.SessionID, reqInfo.Body.Length, System.Threading.Thread.CurrentThread.ManagedThreadId), LOG_LEVEL.DEBUG);
+            DevLog.Write(string.Format("[Socket] 세션ID: {0} 받은 데이터 크기: {1}, ThreadId: {2}", session.SessionID, reqInfo.Body.Length, System.Threading.Thread.CurrentThread.ManagedThreadId), LOG_LEVEL.DEBUG);
            
 
             var PacketID = reqInfo.PacketID;
