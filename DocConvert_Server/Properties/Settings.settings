@@ -9,7 +9,7 @@
       <Value Profile="(Default)">ConvertServer</Value>
     </Setting>
     <Setting Name="socketSessionCount" Type="System.Int32" Scope="Application">
-      <Value Profile="(Default)">1</Value>
+      <Value Profile="(Default)">100</Value>
     </Setting>
     <Setting Name="LogMaxCount" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">1000</Value>
@@ -32,9 +32,6 @@
     <Setting Name="FollowTail" Type="System.Boolean" Scope="Application">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="serverIP" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">192.168.0.101</Value>
-    </Setting>
     <Setting Name="LicenseKEY" Type="System.String" Scope="Application">
       <Value Profile="(Default)">7kOQCsa87IIeLnU6hQyxTOzuV0Khg5cBBY5B5p75qAuzJlFKnC8zxpcXxyfsFTOLKn7hnUE4RuBi6VJV94/UlYAQT6is46zbBIsDiqck9In2erCV0LpIT6KQjpdK/hC2m1o4SQnIQkLTcQ735Vi5tWWgzADqL4q6HWOoiByIm0s=</Value>
     </Setting>
@@ -46,6 +43,9 @@
     </Setting>
     <Setting Name="DeletionCycle" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="serverIP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">127.0.0.1</Value>
     </Setting>
   </Settings>
 </SettingsFile>

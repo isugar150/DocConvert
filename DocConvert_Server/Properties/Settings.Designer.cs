@@ -43,7 +43,7 @@ namespace DocConvert_Server.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
         public int socketSessionCount {
             get {
                 return ((int)(this["socketSessionCount"]));
@@ -115,15 +115,6 @@ namespace DocConvert_Server.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("192.168.0.101")]
-        public string serverIP {
-            get {
-                return ((string)(this["serverIP"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("7kOQCsa87IIeLnU6hQyxTOzuV0Khg5cBBY5B5p75qAuzJlFKnC8zxpcXxyfsFTOLKn7hnUE4RuBi6VJV9" +
             "4/UlYAQT6is46zbBIsDiqck9In2erCV0LpIT6KQjpdK/hC2m1o4SQnIQkLTcQ735Vi5tWWgzADqL4q6H" +
             "WOoiByIm0s=")]
@@ -157,6 +148,15 @@ namespace DocConvert_Server.Properties {
         public int DeletionCycle {
             get {
                 return ((int)(this["DeletionCycle"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("127.0.0.1")]
+        public string serverIP {
+            get {
+                return ((string)(this["serverIP"]));
             }
         }
     }
