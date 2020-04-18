@@ -49,6 +49,11 @@ namespace DocConvert_Core.HWPLib
             {
                 axHwpCtrl = new AxHWPCONTROLLib.AxHwpCtrl();
 
+                while (axHwpCtrl.InvokeRequired)
+                {
+                    Thread.Sleep(300);
+                }
+
                 axHwpCtrl.CreateControl();
                 
                 axHwpCtrl.RegisterModule("FilePathCheckDLL", "FilePathCheckerModuleExample");
@@ -91,7 +96,16 @@ namespace DocConvert_Core.HWPLib
 
             catch (Exception e1)
             {
-                throw e1;
+                try
+                {
+                    throw e1;
+                }
+                catch (Exception)
+                {
+                    returnValue.isSuccess = false;
+                    returnValue.Message = "문서 변환에 실패하였습니다. (변환중 다른요청이 들어왔습니다.)";
+                    return returnValue;
+                }
             }
 
             finally

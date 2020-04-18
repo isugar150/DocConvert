@@ -21,7 +21,7 @@ using System.Windows.Forms;
 
 namespace DocConvert_Server
 {
-    class Document_Convert
+    public class Document_Convert
     {
         private static Logger logger = LogManager.GetLogger("DocConvert_Server_Log");
         public JObject document_Convert(string requestInfo)
@@ -88,6 +88,11 @@ namespace DocConvert_Server
                     }
                     else if (Path.GetExtension(fileFullPath).Equals(".hwp"))
                     {
+                        while (Form1.isHwpConverting)
+                        {
+                            Thread.Sleep(300);
+                        }
+                        Form1.isHwpConverting = true;
                         Thread HWPConvert = new Thread(() =>
                         {
                             status = HWPConvert_Core.HwpSaveAs(fileFullPath, outPath, PAGINGNUM);
@@ -95,6 +100,8 @@ namespace DocConvert_Server
                         HWPConvert.SetApartmentState(ApartmentState.STA);
                         HWPConvert.Start();
                         HWPConvert.Join();
+
+                        Form1.isHwpConverting = false;
                     }
                     else if (Path.GetExtension(fileFullPath).Equals(".pdf"))
                     {
@@ -184,6 +191,7 @@ namespace DocConvert_Server
                     responseMsg["isSuccess"] = false;
                     responseMsg["msg"] = "메소드가 유효하지 않습니다.";
                 }
+
                 responseMsg["Method"] = requestMsg["Method"];
             }
             catch (Exception e1)

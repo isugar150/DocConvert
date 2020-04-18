@@ -296,3 +296,1465 @@
 2020-04-18 16:47:02.6379  INFO - [Web Socket Server Listening...]
 2020-04-18 16:47:02.6379  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
 2020-04-18 16:48:00.0119  INFO - [Scheduler] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 18:56:56.1385  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 18:56:56.4040  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 18:56:56.4040  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 18:56:56.4040  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 18:56:56.5446  INFO - [Socket]핸들러 등록 완료
+2020-04-18 18:56:56.5446  INFO - [Socket]서버 생성 성공
+2020-04-18 18:59:45.5532  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 18:59:45.7719  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 18:59:45.7719  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 18:59:45.7719  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 18:59:45.8812  INFO - [Socket]핸들러 등록 완료
+2020-04-18 18:59:45.8812  INFO - [Socket]서버 생성 성공
+2020-04-18 18:59:45.9281  INFO - [Socket Server Listening...]
+2020-04-18 18:59:45.9281  INFO - [Socket][INFO] IP: 172.20.10.3   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 18:59:46.0375  INFO - [Web Socket Server Listening...]
+2020-04-18 18:59:46.0375  INFO - [Web Socket][INFO] IP: 172.20.10.3   포트: 12005
+2020-04-18 18:59:59.9949  INFO - [Scheduler] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 19:00:00.0149  INFO - [Scheduler] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 19:00:43.9312  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 19:00:44.2905  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 19:00:44.2905  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 19:00:44.2905  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 19:00:44.3686  INFO - [Socket]핸들러 등록 완료
+2020-04-18 19:00:44.3842  INFO - [Socket]서버 생성 성공
+2020-04-18 19:00:44.4154  INFO - [Socket Server Listening...]
+2020-04-18 19:00:44.4154  INFO - [Socket][INFO] IP: 172.20.10.3   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 19:00:44.5092  INFO - [Web Socket Server Listening...]
+2020-04-18 19:00:44.5092  INFO - [Web Socket][INFO] IP: 172.20.10.3   포트: 12005
+2020-04-18 19:01:16.0277  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 19:01:16.3089  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 19:01:16.3089  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 19:01:16.3089  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 19:01:16.4183  INFO - [Socket]핸들러 등록 완료
+2020-04-18 19:01:16.4183  INFO - [Socket]서버 생성 성공
+2020-04-18 19:01:16.4651  INFO - [Socket Server Listening...]
+2020-04-18 19:01:16.4651  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 19:01:16.5745  INFO - [Web Socket Server Listening...]
+2020-04-18 19:01:16.5745  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 19:01:25.3579  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Word 시작.docx",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:01:32.3407  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "8",
+  "URL": "/workspace/FC88A00681BEA2BA4BCA029AEC82643A",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 19:01:32.3407  INFO - [Socket] 작업 소요시간: 00:00:06.9827694
+2020-04-18 19:01:32.5125  INFO - [Socket]세션ID: cfaa1cab-d50a-4409-a268-d6f896f440a6 접속해제: ClientClosing
+2020-04-18 19:02:40.1890  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Word 시작.docx",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:02:44.5629  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "8",
+  "URL": "/workspace/FC88A00681BEA2BA4BCA029AEC82643A",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 19:02:44.5629  INFO - [Socket] 작업 소요시간: 00:00:04.3739688
+2020-04-18 19:02:44.7192  INFO - [Socket]세션ID: 7f5ff155-da42-4c92-a3e8-be12fb06d1a2 접속해제: ClientClosing
+2020-04-18 19:05:05.9408  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 19:05:06.3001  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 19:05:06.3001  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 19:05:06.3001  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 19:05:06.3938  INFO - [Socket]핸들러 등록 완료
+2020-04-18 19:05:06.3938  INFO - [Socket]서버 생성 성공
+2020-04-18 19:05:06.4407  INFO - [Socket Server Listening...]
+2020-04-18 19:05:06.4407  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 19:05:06.5501  INFO - [Web Socket Server Listening...]
+2020-04-18 19:05:06.5501  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 19:05:59.6906  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:1327
+2020-04-18 19:05:59.7530  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작.xlsx",
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:06:03.4067  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Word 시작.docx",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:06:08.4680  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "8",
+  "URL": "/workspace/FC88A00681BEA2BA4BCA029AEC82643A",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 19:06:08.4680  INFO - [Socket] 작업 소요시간: 00:00:05.0613091
+2020-04-18 19:06:08.6242  INFO - [Socket]세션ID: 20ba492d-4d66-4cde-89ab-a6769dd3153e 접속해제: ClientClosing
+2020-04-18 19:06:16.1068  INFO - 
+[WebSocket][Server => Client]
+{
+  "convertImgCnt": "92",
+  "URL": "/workspace/8DF91B0995A750BFE6B8873646995F7B",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 19:06:16.1068  INFO - [WebSocket] 작업 소요시간: 00:00:16.3850127
+2020-04-18 19:06:16.1068  INFO - [WebSocket]서버와 연결이 해제되었습니다.
+2020-04-18 19:07:48.7747  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:1520
+2020-04-18 19:07:48.7903  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작.xlsx",
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:08:03.7071  INFO - 
+[WebSocket][Server => Client]
+{
+  "convertImgCnt": "92",
+  "URL": "/workspace/8DF91B0995A750BFE6B8873646995F7B",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 19:08:03.7071  INFO - [WebSocket] 작업 소요시간: 00:00:14.9168200
+2020-04-18 19:08:03.7071  INFO - [WebSocket]서버와 연결이 해제되었습니다.
+2020-04-18 19:08:28.3549  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:08:28.9641  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:1632
+2020-04-18 19:08:28.9798  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "ConvertIMG": 1
+}
+
+2020-04-18 19:25:51.9219  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 19:25:52.1874  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 19:25:52.1874  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 19:25:52.1874  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 19:25:52.2968  INFO - [Socket]핸들러 등록 완료
+2020-04-18 19:25:52.2968  INFO - [Socket]서버 생성 성공
+2020-04-18 19:25:52.3593  INFO - [Socket Server Listening...]
+2020-04-18 19:25:52.3593  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 19:25:52.4842  INFO - [Web Socket Server Listening...]
+2020-04-18 19:25:52.4842  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 19:26:26.2848  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:26:26.7378  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:1732
+2020-04-18 19:26:26.8003  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:26:41.8104  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 19:26:42.0135  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 19:26:42.0135  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 19:26:42.0135  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 19:26:42.1072  INFO - [Socket]핸들러 등록 완료
+2020-04-18 19:26:42.1072  INFO - [Socket]서버 생성 성공
+2020-04-18 19:26:42.1385  INFO - [Socket Server Listening...]
+2020-04-18 19:26:42.1385  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 19:26:42.2322  INFO - [Web Socket Server Listening...]
+2020-04-18 19:26:42.2322  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 19:26:44.5129  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:26:47.8871  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "1",
+  "URL": "/workspace/538E373AEF88E05CDE8830FF9F64976C",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 19:26:47.8871  INFO - [Socket] 작업 소요시간: 00:00:03.3742048
+2020-04-18 19:26:47.9496  INFO - [Socket]세션ID: b4667135-3b0b-4297-b44c-68df0c03054c 접속해제: ClientClosing
+2020-04-18 19:27:14.1179  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:1762
+2020-04-18 19:27:14.1491  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "ConvertIMG": 1
+}
+
+2020-04-18 19:27:15.9456  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:27:17.4296  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "1",
+  "URL": "/workspace/538E373AEF88E05CDE8830FF9F64976C",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 19:27:17.4452  INFO - [Socket] 작업 소요시간: 00:00:01.4996156
+2020-04-18 19:27:17.5077  INFO - [Socket]세션ID: 7788ae9d-76b0-4691-b784-663d646fd7ee 접속해제: ClientClosing
+2020-04-18 19:27:41.4723  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 19:27:41.7067  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 19:27:41.7067  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 19:27:41.7067  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 19:27:41.8004  INFO - [Socket]핸들러 등록 완료
+2020-04-18 19:27:41.8004  INFO - [Socket]서버 생성 성공
+2020-04-18 19:27:41.8472  INFO - [Socket Server Listening...]
+2020-04-18 19:27:41.8472  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 19:27:41.9566  INFO - [Web Socket Server Listening...]
+2020-04-18 19:27:41.9566  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 19:27:43.7530  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:27:46.7367  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "1",
+  "URL": "/workspace/538E373AEF88E05CDE8830FF9F64976C",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 19:27:46.7367  INFO - [Socket] 작업 소요시간: 00:00:02.9836699
+2020-04-18 19:27:46.7992  INFO - [Socket]세션ID: 77c89ebd-a557-4d6d-abd0-9503f2b81985 접속해제: ClientClosing
+2020-04-18 19:27:53.9607  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:27:54.6168  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:1787
+2020-04-18 19:27:54.6480  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "ConvertIMG": 1
+}
+
+2020-04-18 19:32:32.1666  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 19:32:32.4156  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 19:32:32.4156  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 19:32:32.4156  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 19:32:32.5093  INFO - [Socket]핸들러 등록 완료
+2020-04-18 19:32:32.5093  INFO - [Socket]서버 생성 성공
+2020-04-18 19:32:32.5406  INFO - [Socket Server Listening...]
+2020-04-18 19:32:32.5406  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 19:32:32.6343  INFO - [Web Socket Server Listening...]
+2020-04-18 19:32:32.6343  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 19:32:45.4119  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:32:45.8181  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:1821
+2020-04-18 19:32:45.9118  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "ConvertIMG": 1
+}
+
+2020-04-18 19:36:40.4898  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 19:36:40.7241  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 19:36:40.7241  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 19:36:40.7241  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 19:36:40.8335  INFO - [Socket]핸들러 등록 완료
+2020-04-18 19:36:40.8335  INFO - [Socket]서버 생성 성공
+2020-04-18 19:36:40.8804  INFO - [Socket Server Listening...]
+2020-04-18 19:36:40.8804  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 19:36:41.0209  INFO - [Web Socket Server Listening...]
+2020-04-18 19:36:41.0209  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 19:36:52.5935  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:36:52.9996  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:1879
+2020-04-18 19:36:53.0934  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "ConvertIMG": 1
+}
+
+2020-04-18 19:42:22.6074  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 19:42:22.8417  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 19:42:22.8417  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 19:42:22.8417  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 19:42:22.9667  INFO - [Socket]핸들러 등록 완료
+2020-04-18 19:42:22.9667  INFO - [Socket]서버 생성 성공
+2020-04-18 19:42:22.9979  INFO - [Socket Server Listening...]
+2020-04-18 19:42:22.9979  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 19:42:23.1229  INFO - [Web Socket Server Listening...]
+2020-04-18 19:42:23.1229  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 19:42:49.5601  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 19:42:49.7944  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 19:42:49.7944  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 19:42:49.7944  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 19:42:49.9038  INFO - [Socket]핸들러 등록 완료
+2020-04-18 19:42:49.9038  INFO - [Socket]서버 생성 성공
+2020-04-18 19:42:49.9350  INFO - [Socket Server Listening...]
+2020-04-18 19:42:49.9350  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 19:42:50.0756  INFO - [Web Socket Server Listening...]
+2020-04-18 19:42:50.0756  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 19:43:06.2669  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:43:06.9073  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 19:43:07.6572  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/2B699FCE2A5094957B24445F97FCE8CC",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 19:43:07.6572  INFO - [Socket] 작업 소요시간: 00:00:00.7498223
+2020-04-18 19:43:07.7353  INFO - [Socket]세션ID: 7bbe300b-5c27-48b2-b76c-b44c5f05ef21 접속해제: ClientClosing
+2020-04-18 19:43:07.8446  INFO - 변환중 오류발생 자세한 내용은 오류로그 참고
+2020-04-18 19:43:07.8602  INFO - 
+[Socket][Server => Client]
+{
+  "isSuccess": false,
+  "msg": "'C:\\Data\\workspace\\538E373AEF88E05CDE8830FF9F64976C\\2-1. 사직서.pdf' 파일을 찾을 수 없습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 19:43:07.8602  INFO - [Socket] 작업 소요시간: 00:00:01.5933769
+2020-04-18 19:43:07.8602  INFO - [Socket]세션ID: af7ae7ca-ee04-44c0-bd10-d9f7971faefd 접속해제: ClientClosing
+2020-04-18 19:43:12.4998  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:43:13.1090  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 19:44:08.0027  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 19:44:08.2370  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 19:44:08.2370  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 19:44:08.2370  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 19:44:08.3776  INFO - [Socket]핸들러 등록 완료
+2020-04-18 19:44:08.3776  INFO - [Socket]서버 생성 성공
+2020-04-18 19:44:08.4089  INFO - [Socket Server Listening...]
+2020-04-18 19:44:08.4089  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 19:44:08.5339  INFO - [Web Socket Server Listening...]
+2020-04-18 19:44:08.5339  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 19:44:11.0021  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:44:11.5956  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 19:45:52.5981  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 19:45:52.8168  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 19:45:52.8168  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 19:45:52.8168  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 19:45:52.9105  INFO - [Socket]핸들러 등록 완료
+2020-04-18 19:45:52.9105  INFO - [Socket]서버 생성 성공
+2020-04-18 19:45:52.9417  INFO - [Socket Server Listening...]
+2020-04-18 19:45:52.9417  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 19:45:53.0667  INFO - [Web Socket Server Listening...]
+2020-04-18 19:45:53.0667  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 19:45:55.0037  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:45:55.7067  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 19:54:11.1618  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 19:54:11.4898  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 19:54:11.4898  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 19:54:11.5055  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 19:54:11.6773  INFO - [Socket]핸들러 등록 완료
+2020-04-18 19:54:11.6773  INFO - [Socket]서버 생성 성공
+2020-04-18 19:54:11.7086  INFO - [Socket Server Listening...]
+2020-04-18 19:54:11.7086  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 19:54:11.8023  INFO - [Web Socket Server Listening...]
+2020-04-18 19:54:11.8023  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 19:54:14.8818  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:54:15.7878  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 19:55:26.3126  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 19:55:26.5625  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 19:55:26.5625  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 19:55:26.5625  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 19:55:26.6719  INFO - [Socket]핸들러 등록 완료
+2020-04-18 19:55:26.6719  INFO - [Socket]서버 생성 성공
+2020-04-18 19:55:26.7187  INFO - [Socket Server Listening...]
+2020-04-18 19:55:26.7187  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 19:55:26.8437  INFO - [Web Socket Server Listening...]
+2020-04-18 19:55:26.8437  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 19:55:51.6877  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:56:11.2184  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 19:57:03.7949  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 19:57:04.0448  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 19:57:04.0448  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 19:57:04.0448  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 19:57:04.1230  INFO - [Socket]핸들러 등록 완료
+2020-04-18 19:57:04.1230  INFO - [Socket]서버 생성 성공
+2020-04-18 19:57:04.1698  INFO - [Socket Server Listening...]
+2020-04-18 19:57:04.1698  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 19:57:04.2791  INFO - [Web Socket Server Listening...]
+2020-04-18 19:57:04.2791  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 19:57:07.3562  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:57:09.9847  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "1",
+  "URL": "/workspace/538E373AEF88E05CDE8830FF9F64976C",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 19:57:09.9847  INFO - [Socket] 작업 소요시간: 00:00:02.6275099
+2020-04-18 19:57:10.0628  INFO - [Socket]세션ID: b2fcc02f-1546-41e1-b656-43fd682f45bc 접속해제: ClientClosing
+2020-04-18 19:57:11.4062  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:57:13.2808  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "1",
+  "URL": "/workspace/538E373AEF88E05CDE8830FF9F64976C",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 19:57:13.2808  INFO - [Socket] 작업 소요시간: 00:00:01.8589370
+2020-04-18 19:57:13.3432  INFO - [Socket]세션ID: 351601fc-8e59-4db4-8bd5-f2fe8a717a8d 접속해제: ClientClosing
+2020-04-18 19:57:15.0376  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 19:57:16.8340  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "1",
+  "URL": "/workspace/538E373AEF88E05CDE8830FF9F64976C",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 19:57:16.8340  INFO - [Socket] 작업 소요시간: 00:00:01.7964518
+2020-04-18 19:57:16.8965  INFO - [Socket]세션ID: 77826656-9e27-4c6c-9ae0-834b8b8ad1b7 접속해제: ClientClosing
+2020-04-18 20:01:25.8498  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 20:01:26.1153  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 20:01:26.1153  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 20:01:26.1153  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 20:01:26.2091  INFO - [Socket]핸들러 등록 완료
+2020-04-18 20:01:26.2091  INFO - [Socket]서버 생성 성공
+2020-04-18 20:01:26.2559  INFO - [Socket Server Listening...]
+2020-04-18 20:01:26.2559  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 20:01:26.3809  INFO - [Web Socket Server Listening...]
+2020-04-18 20:01:26.3809  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 20:01:30.6340  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 20:01:31.1963  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:02:05.6816  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 20:02:05.9003  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 20:02:05.9003  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 20:02:05.9003  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 20:02:06.0096  INFO - [Socket]핸들러 등록 완료
+2020-04-18 20:02:06.0096  INFO - [Socket]서버 생성 성공
+2020-04-18 20:02:06.0877  INFO - [Socket Server Listening...]
+2020-04-18 20:02:06.0877  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 20:02:06.1971  INFO - [Web Socket Server Listening...]
+2020-04-18 20:02:06.1971  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 20:02:07.1187  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 20:02:08.0716  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:02:08.3997  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/2B699FCE2A5094957B24445F97FCE8CC",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:02:08.3997  INFO - [Socket] 작업 소요시간: 00:00:00.3280468
+2020-04-18 20:02:08.4465  INFO - [Socket]세션ID: c67528ca-00b9-4ed3-9487-ddf27ad97cee 접속해제: ClientClosing
+2020-04-18 20:02:08.7590  INFO - 변환중 오류발생 자세한 내용은 오류로그 참고
+2020-04-18 20:02:08.7746  INFO - 
+[Socket][Server => Client]
+{
+  "isSuccess": false,
+  "msg": "'C:\\Data\\workspace\\538E373AEF88E05CDE8830FF9F64976C\\2-1. 사직서.pdf' 파일을 찾을 수 없습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:02:08.7746  INFO - [Socket] 작업 소요시간: 00:00:01.6558623
+2020-04-18 20:02:08.7746  INFO - [Socket]세션ID: c8bebd14-4039-4628-a13c-96d11ebca910 접속해제: ClientClosing
+2020-04-18 20:02:12.2581  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 20:02:12.9142  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:02:26.0441  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 20:02:26.3097  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 20:02:26.3097  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 20:02:26.3253  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 20:02:26.4034  INFO - [Socket]핸들러 등록 완료
+2020-04-18 20:02:26.4034  INFO - [Socket]서버 생성 성공
+2020-04-18 20:02:26.4503  INFO - [Socket Server Listening...]
+2020-04-18 20:02:26.4503  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 20:02:26.5440  INFO - [Web Socket Server Listening...]
+2020-04-18 20:02:26.5440  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 20:02:29.0122  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 20:02:29.5901  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:03:00.8064  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 20:03:01.0251  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 20:03:01.0251  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 20:03:01.0407  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 20:03:01.1345  INFO - [Socket]핸들러 등록 완료
+2020-04-18 20:03:01.1501  INFO - [Socket]서버 생성 성공
+2020-04-18 20:03:01.1657  INFO - [Socket Server Listening...]
+2020-04-18 20:03:01.1657  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 20:03:01.2751  INFO - [Web Socket Server Listening...]
+2020-04-18 20:03:01.2751  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 20:03:10.4498  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 20:03:10.7153  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 20:03:10.7153  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 20:03:10.7153  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 20:03:10.8091  INFO - [Socket]핸들러 등록 완료
+2020-04-18 20:03:10.8091  INFO - [Socket]서버 생성 성공
+2020-04-18 20:03:10.8872  INFO - [Socket Server Listening...]
+2020-04-18 20:03:10.8872  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 20:03:10.9809  INFO - [Web Socket Server Listening...]
+2020-04-18 20:03:10.9809  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 20:03:13.5116  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 20:03:14.1208  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:03:57.6525  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 20:03:57.9024  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 20:03:57.9024  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 20:03:57.9024  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 20:03:58.0118  INFO - [Socket]핸들러 등록 완료
+2020-04-18 20:03:58.0118  INFO - [Socket]서버 생성 성공
+2020-04-18 20:03:58.0430  INFO - [Socket Server Listening...]
+2020-04-18 20:03:58.0430  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 20:03:58.1680  INFO - [Web Socket Server Listening...]
+2020-04-18 20:03:58.1680  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 20:04:03.5574  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 20:04:06.4161  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "1",
+  "URL": "/workspace/538E373AEF88E05CDE8830FF9F64976C",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:04:06.4161  INFO - [Socket] 작업 소요시간: 00:00:02.8587718
+2020-04-18 20:04:06.4785  INFO - [Socket]세션ID: c01c7b52-e087-414c-9c59-91948e6265a7 접속해제: ClientClosing
+2020-04-18 20:04:15.7571  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 20:04:17.6785  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "1",
+  "URL": "/workspace/538E373AEF88E05CDE8830FF9F64976C",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:04:17.6785  INFO - [Socket] 작업 소요시간: 00:00:01.9214166
+2020-04-18 20:04:17.7410  INFO - [Socket]세션ID: c18ee8ab-00a1-4b66-91ac-d9a8bc40eb88 접속해제: ClientClosing
+2020-04-18 20:04:30.7983  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-18 20:04:32.4385  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "1",
+  "URL": "/workspace/538E373AEF88E05CDE8830FF9F64976C",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:04:32.4385  INFO - [Socket] 작업 소요시간: 00:00:01.6402391
+2020-04-18 20:04:32.5010  INFO - [Socket]세션ID: 4d0ba1bc-74de-4056-a8d1-1cd3a396ad9f 접속해제: ClientClosing
+2020-04-18 20:04:36.7003  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 1
+}
+
+2020-04-18 20:04:38.5593  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "1",
+  "URL": "/workspace/538E373AEF88E05CDE8830FF9F64976C",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:04:38.5593  INFO - [Socket] 작업 소요시간: 00:00:01.8589397
+2020-04-18 20:04:38.6217  INFO - [Socket]세션ID: e5a32783-a818-417b-a719-23f19428dbd9 접속해제: ClientClosing
+2020-04-18 20:11:10.9202  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 20:11:11.1701  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 20:11:11.1701  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 20:11:11.1701  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 20:11:11.2795  INFO - [Socket]핸들러 등록 완료
+2020-04-18 20:11:11.2795  INFO - [Socket]서버 생성 성공
+2020-04-18 20:11:11.3263  INFO - [Socket Server Listening...]
+2020-04-18 20:11:11.3263  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 20:11:11.4357  INFO - [Web Socket Server Listening...]
+2020-04-18 20:11:11.4357  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 20:11:28.1349  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:11:28.8378  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:12:01.1426  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 20:12:01.3456  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 20:12:01.3613  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 20:12:01.3613  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 20:12:01.4550  INFO - [Socket]핸들러 등록 완료
+2020-04-18 20:12:01.4550  INFO - [Socket]서버 생성 성공
+2020-04-18 20:12:01.5175  INFO - [Socket Server Listening...]
+2020-04-18 20:12:01.5175  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 20:12:01.5956  INFO - [Web Socket Server Listening...]
+2020-04-18 20:12:01.5956  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 20:12:02.5485  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:13:13.8348  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 20:13:14.1230  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 20:13:14.1230  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 20:13:14.1230  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 20:13:14.2480  INFO - [Socket]핸들러 등록 완료
+2020-04-18 20:13:14.2480  INFO - [Socket]서버 생성 성공
+2020-04-18 20:13:14.2792  INFO - [Socket Server Listening...]
+2020-04-18 20:13:14.2792  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 20:13:14.4042  INFO - [Web Socket Server Listening...]
+2020-04-18 20:13:14.4042  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 20:13:48.3258  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-2. 인수인계서.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:13:58.9805  INFO - [Socket]세션ID: accadbc3-fae0-4b11-90c2-d3f54a7078aa 접속해제: ServerShutdown
+2020-04-18 20:14:27.1341  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 20:14:27.3528  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 20:14:27.3528  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 20:14:27.3528  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 20:14:27.4466  INFO - [Socket]핸들러 등록 완료
+2020-04-18 20:14:27.4466  INFO - [Socket]서버 생성 성공
+2020-04-18 20:14:27.4778  INFO - [Socket Server Listening...]
+2020-04-18 20:14:27.4778  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 20:14:27.5715  INFO - [Web Socket Server Listening...]
+2020-04-18 20:14:27.5715  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 20:14:34.7105  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:14:37.5223  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/538E373AEF88E05CDE8830FF9F64976C",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:14:37.5223  INFO - [Socket] 작업 소요시간: 00:00:02.8118365
+2020-04-18 20:14:37.5848  INFO - [Socket]세션ID: 0f02296d-38b0-45c9-a599-5ff8faa0653a 접속해제: ClientClosing
+2020-04-18 20:14:53.4560  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:14:55.2994  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/538E373AEF88E05CDE8830FF9F64976C",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:14:55.2994  INFO - [Socket] 작업 소요시간: 00:00:01.8433185
+2020-04-18 20:14:55.3306  INFO - [Socket]세션ID: b2f85750-8cb3-4538-aab1-8b83fc21cfed 접속해제: ClientClosing
+2020-04-18 20:14:56.6584  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:14:57.3926  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:16:15.6001  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 20:16:15.8344  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 20:16:15.8500  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 20:16:15.8500  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 20:16:15.9438  INFO - [Socket]핸들러 등록 완료
+2020-04-18 20:16:15.9438  INFO - [Socket]서버 생성 성공
+2020-04-18 20:16:15.9906  INFO - [Socket Server Listening...]
+2020-04-18 20:16:15.9906  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 20:16:16.1000  INFO - [Web Socket Server Listening...]
+2020-04-18 20:16:16.1000  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 20:16:26.3319  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-2. 인수인계서.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:16:26.9099  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:16:27.3942  INFO - 
+[Socket][Server => Client]
+{
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:16:27.3942  INFO - [Socket] 작업 소요시간: 00:00:01.0622556
+2020-04-18 20:16:29.2687  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/538E373AEF88E05CDE8830FF9F64976C",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:16:29.2687  INFO - [Socket] 작업 소요시간: 00:00:02.3588213
+2020-04-18 20:16:29.3156  INFO - [Socket]세션ID: 280b6e98-ab6b-463e-9470-d8585e63c9c0 접속해제: ClientClosing
+2020-04-18 20:16:48.0966  INFO - [Socket]세션ID: d7773175-d9e0-42f7-8ce7-f7940f17ed77 접속해제: SocketError
+2020-04-18 20:17:08.7649  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 20:17:08.9680  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 20:17:08.9680  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 20:17:08.9680  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 20:17:09.0930  INFO - [Socket]핸들러 등록 완료
+2020-04-18 20:17:09.0930  INFO - [Socket]서버 생성 성공
+2020-04-18 20:17:09.1398  INFO - [Socket Server Listening...]
+2020-04-18 20:17:09.1398  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 20:17:09.2336  INFO - [Web Socket Server Listening...]
+2020-04-18 20:17:09.2336  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 20:17:20.4497  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:17:20.9808  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:17:21.4807  INFO - 
+[Socket][Server => Client]
+{
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:17:21.4807  INFO - [Socket] 작업 소요시간: 00:00:01.0309773
+2020-04-18 20:17:25.0423  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/2B699FCE2A5094957B24445F97FCE8CC",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:17:25.0423  INFO - [Socket] 작업 소요시간: 00:00:04.0615462
+2020-04-18 20:17:25.1204  INFO - [Socket]세션ID: bb2a8670-0fa0-4d27-900b-6ba7a136e7b1 접속해제: ClientClosing
+2020-04-18 20:19:29.3096  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 20:19:29.5595  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 20:19:29.5595  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 20:19:29.5595  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 20:19:29.6845  INFO - [Socket]핸들러 등록 완료
+2020-04-18 20:19:29.6845  INFO - [Socket]서버 생성 성공
+2020-04-18 20:19:29.7314  INFO - [Socket Server Listening...]
+2020-04-18 20:19:29.7314  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 20:19:29.8251  INFO - [Web Socket Server Listening...]
+2020-04-18 20:19:29.8251  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 20:21:29.0731  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 20:21:29.3699  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 20:21:29.3699  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 20:21:29.3699  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 20:21:29.5105  INFO - [Socket]핸들러 등록 완료
+2020-04-18 20:21:29.5105  INFO - [Socket]서버 생성 성공
+2020-04-18 20:21:29.5417  INFO - [Socket Server Listening...]
+2020-04-18 20:21:29.5417  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 20:21:29.6354  INFO - [Web Socket Server Listening...]
+2020-04-18 20:21:29.6354  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 20:21:46.5577  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:21:47.1357  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-2. 인수인계서.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:21:47.6981  INFO - 
+[Socket][Server => Client]
+{
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:21:47.6981  INFO - [Socket] 작업 소요시간: 00:00:01.1403532
+2020-04-18 20:21:50.4643  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/FC1A0B1FA22CA57C65A470DA18C88C81",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:21:50.4643  INFO - [Socket] 작업 소요시간: 00:00:03.3286366
+2020-04-18 20:21:50.5241  INFO - [Socket]세션ID: 97b6878b-2911-4545-babd-1a4955da0373 접속해제: ClientClosing
+2020-04-18 20:23:57.0723  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 20:23:57.3535  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 20:23:57.3535  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 20:23:57.3535  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 20:23:57.4628  INFO - [Socket]핸들러 등록 완료
+2020-04-18 20:23:57.4628  INFO - [Socket]서버 생성 성공
+2020-04-18 20:23:57.5253  INFO - [Socket Server Listening...]
+2020-04-18 20:23:57.5253  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 20:23:57.6972  INFO - [Web Socket Server Listening...]
+2020-04-18 20:23:57.6972  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 20:24:09.6006  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:24:10.1005  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-2. 인수인계서.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:24:10.6472  INFO - 변환중 오류발생 자세한 내용은 오류로그 참고
+2020-04-18 20:24:10.7097  INFO - 
+[Socket][Server => Client]
+{
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:24:10.7097  INFO - [Socket] 작업 소요시간: 00:00:01.1091109
+2020-04-18 20:24:13.0721  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/FC1A0B1FA22CA57C65A470DA18C88C81",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:24:13.0721  INFO - [Socket] 작업 소요시간: 00:00:02.9716206
+2020-04-18 20:24:13.1420  INFO - [Socket]세션ID: 3a87f5d0-5205-447d-9899-d5bb50047171 접속해제: ClientClosing
+2020-04-18 20:24:22.2041  INFO - [Socket]세션ID: d5470cd0-ccdd-4373-a369-310ebbccf4ff 접속해제: SocketError
+2020-04-18 20:26:14.3662  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 20:26:14.6317  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 20:26:14.6317  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 20:26:14.6317  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 20:26:14.7411  INFO - [Socket]핸들러 등록 완료
+2020-04-18 20:26:14.7411  INFO - [Socket]서버 생성 성공
+2020-04-18 20:26:14.7879  INFO - [Socket Server Listening...]
+2020-04-18 20:26:14.7879  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 20:26:14.9598  INFO - [Web Socket Server Listening...]
+2020-04-18 20:26:14.9598  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-18 20:26:35.5973  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:26:36.2690  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-2. 인수인계서.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:26:38.1904  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/538E373AEF88E05CDE8830FF9F64976C",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:26:38.1904  INFO - [Socket] 작업 소요시간: 00:00:02.5931704
+2020-04-18 20:26:38.2529  INFO - [Socket]세션ID: dc1be3ae-68f6-41ac-b1c1-4895bd0af8b5 접속해제: ClientClosing
+2020-04-18 20:26:40.6586  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/FC1A0B1FA22CA57C65A470DA18C88C81",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:26:40.6586  INFO - [Socket] 작업 소요시간: 00:00:04.3895869
+2020-04-18 20:26:40.7211  INFO - [Socket]세션ID: 53c6e72a-10e5-42f2-a9b1-e8170ef5e5e6 접속해제: ClientClosing
+2020-04-18 20:27:02.7315  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:27:03.4188  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-2. 인수인계서.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:27:04.6685  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/538E373AEF88E05CDE8830FF9F64976C",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:27:04.6685  INFO - [Socket] 작업 소요시간: 00:00:01.9370418
+2020-04-18 20:27:04.6998  INFO - [Socket]세션ID: 170e43f2-69d3-40da-845f-b96285f987bc 접속해제: ClientClosing
+2020-04-18 20:27:07.1629  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/FC1A0B1FA22CA57C65A470DA18C88C81",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:27:07.1629  INFO - [Socket] 작업 소요시간: 00:00:03.7440604
+2020-04-18 20:27:07.2098  INFO - [Socket]세션ID: 2e1b927c-651e-4fff-a6a0-328876411a41 접속해제: ClientClosing
+2020-04-18 20:27:19.6254  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:27:20.4377  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:27:23.7806  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/2B699FCE2A5094957B24445F97FCE8CC",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:27:23.7806  INFO - [Socket] 작업 소요시간: 00:00:04.1552705
+2020-04-18 20:27:23.8431  INFO - [Socket]세션ID: 90e2f411-acea-42cc-ba14-8cf7f7eba23a 접속해제: ClientClosing
+2020-04-18 20:27:25.7021  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/538E373AEF88E05CDE8830FF9F64976C",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:27:25.7021  INFO - [Socket] 작업 소요시간: 00:00:05.2487640
+2020-04-18 20:27:25.7333  INFO - [Socket]세션ID: f7776672-ebff-4142-91e7-1f3ab6d38b71 접속해제: ClientClosing
+2020-04-18 20:27:40.1456  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:27:40.6767  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:27:42.8325  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/2B699FCE2A5094957B24445F97FCE8CC",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:27:42.8325  INFO - [Socket] 작업 소요시간: 00:00:02.6868706
+2020-04-18 20:27:42.8949  INFO - [Socket]세션ID: 0c0105dd-8866-4663-8e90-c40054596518 접속해제: ClientClosing
+2020-04-18 20:27:44.5352  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/538E373AEF88E05CDE8830FF9F64976C",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:27:44.5352  INFO - [Socket] 작업 소요시간: 00:00:03.8584664
+2020-04-18 20:27:44.5821  INFO - [Socket]세션ID: cf9efe42-4dbe-45c4-bccf-ecde92fe4ea0 접속해제: ClientClosing
+2020-04-18 20:27:45.8786  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-2. 인수인계서.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:27:48.2843  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/FC1A0B1FA22CA57C65A470DA18C88C81",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:27:48.2999  INFO - [Socket] 작업 소요시간: 00:00:02.4213035
+2020-04-18 20:27:48.3468  INFO - [Socket]세션ID: 7ea81827-c9c8-4c60-bcba-33da4ed03ab9 접속해제: ClientClosing
+2020-04-18 20:27:49.3153  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "2-1. 사직서.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:27:50.0339  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 0
+}
+
+2020-04-18 20:27:51.2055  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/538E373AEF88E05CDE8830FF9F64976C",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:27:51.2055  INFO - [Socket] 작업 소요시간: 00:00:01.8901786
+2020-04-18 20:27:51.2524  INFO - [Socket]세션ID: ac9646b8-6f47-4976-bc4d-4bd602a48fd3 접속해제: ClientClosing
+2020-04-18 20:27:53.7205  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/2B699FCE2A5094957B24445F97FCE8CC",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-18 20:27:53.7205  INFO - [Socket] 작업 소요시간: 00:00:03.6866501
+2020-04-18 20:27:53.7518  INFO - [Socket]세션ID: 4eecfed7-1161-470f-b30e-c2dd3e28615f 접속해제: ClientClosing

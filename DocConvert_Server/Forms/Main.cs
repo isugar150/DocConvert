@@ -26,14 +26,13 @@ namespace DocConvert_Server
         private MainServer socketServer = new MainServer();
         private int wsSessionCount = 0;
         private static System.Windows.Forms.Timer tScheduler;
-        private const int CHECK_INTERVAL = 60; //타이머 주기
+        private const int CHECK_INTERVAL = 60; // 스케줄러 주기 (분)
         private WebSocketListener webSocketServer = null;
-        private JObject checkLicense;
-        public int totalCnt = 0;
-        public int successCnt = 0;
-        public int errorCnt = 0;
+        private JObject checkLicense = new JObject();
+        public static bool isHwpConverting = false;
 
         private static Logger logger = LogManager.GetLogger("DocConvert_Server_Log");
+
         public Form1(string[] args)
         {
             InitializeComponent();
@@ -228,7 +227,6 @@ namespace DocConvert_Server
                 while (ws.IsConnected && !cancellation.IsCancellationRequested)
                 {
                     ++wsSessionCount;
-                    ++totalCnt;
                     //클라이언트로부터 메시지가 왔는지 비동기읽음
                     string requestInfo = await ws.ReadStringAsync(cancellation).ConfigureAwait(false);
 
@@ -254,11 +252,9 @@ namespace DocConvert_Server
                             ws.Close();
 
                             DevLog.Write("[WebSocket]서버와 연결이 해제되었습니다.", LOG_LEVEL.INFO);
-                            ++successCnt;
                         }
                         catch (Exception e1)
                         {
-                            ++errorCnt;
                             responseMsg["Msg"] = e1.Message;
                         }
                     }
