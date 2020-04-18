@@ -49,5 +49,4 @@ C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Server\obj\Release\DocConv
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.pdb
 C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\phantomjs.exe
 C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\rasterize.js
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.csprojAssemblyReference.cache
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.Forms.AboutForm.resources

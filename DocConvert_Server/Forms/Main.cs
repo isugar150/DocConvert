@@ -89,15 +89,7 @@ namespace DocConvert_Server
                 DevLog.Write("[INFO] 한글 DLL을 레지스트리에 등록하였습니다.", LOG_LEVEL.INFO);
             }
             #endregion
-            if (Properties.Settings.Default.AppVisible)        
-                this.Visible = true;
-            else
-                this.Visible = false;
-            #region Create SocketServer
-            socketServer.InitConfig();
-            socketServer.CreateServer();
-
-            bool IsResult = false;
+            #region 스케줄러 관련
             if (Properties.Settings.Default.DeletionScheduler)
             {
                 DevLog.Write("[Scheduler] 스케줄러가 실행중입니다. ");
@@ -107,6 +99,16 @@ namespace DocConvert_Server
                 tScheduler.Tick += new EventHandler(tScheduler_Tick);
                 tScheduler.Start();
             }
+            #endregion
+            if (Properties.Settings.Default.AppVisible)        
+                this.Visible = true;
+            else
+                this.Visible = false;
+            #region Create SocketServer
+            socketServer.InitConfig();
+            socketServer.CreateServer();
+
+            bool IsResult = false;
 
             if (checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID()))
                 IsResult = socketServer.Start();
