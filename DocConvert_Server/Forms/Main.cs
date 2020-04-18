@@ -16,6 +16,7 @@ using DocConvert_Server.License;
 using NLog;
 using System.Reflection;
 using DocConvert_Server.Forms;
+using Microsoft.Win32;
 
 namespace DocConvert_Server
 {
@@ -31,10 +32,24 @@ namespace DocConvert_Server
         public int errorCnt = 0;
 
         private static Logger logger = LogManager.GetLogger("DocConvert_Server_Log");
-        public Form1()
+        public Form1(string[] args)
         {
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
+
+            if(args.Length == 0)
+            {
+                DevLog.Write("DocConvert Server를 수동으로 실행하였습니다.", LOG_LEVEL.INFO);
+            }
+            else
+            {
+                string arg = "";
+                for(int i = 0; i<args.Length; i++)
+                {
+                    arg += string.Format("   [{0}]: {1}", i, args[i].ToString());
+                }
+                DevLog.Write("아규먼트: " + arg, LOG_LEVEL.INFO);
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -65,7 +80,14 @@ namespace DocConvert_Server
             toolStripStatusLabel6.Text = "WebSocket Port: " + Properties.Settings.Default.webSocketPORT.ToString();
             toolStripStatusLabel7.Text = "File Server Port: " + Properties.Settings.Default.fileServerPORT.ToString();
             checkBox1.Checked = Properties.Settings.Default.FollowTail;
-            if (Properties.Settings.Default.AppVisible)
+            #region 한글 DLL 레지스트리 등록
+            if (File.Exists(Application.StartupPath + @"\FilePathCheckerModuleExample.dll"))
+            {
+                RegistryKey regKey = Registry.CurrentUser.CreateSubKey(@"Software\HNC\HwpCtrl\Modules", RegistryKeyPermissionCheck.ReadWriteSubTree);
+                DevLog.Write("한글 DLL을 레지스트리에 등록하였습니다.", LOG_LEVEL.INFO);
+            }
+            #endregion
+            if (Properties.Settings.Default.AppVisible)        
                 this.Visible = true;
             else
                 this.Visible = false;
@@ -110,7 +132,6 @@ namespace DocConvert_Server
                         pictureBox2.Image = Properties.Resources.success_icon;
                     else
                         pictureBox2.Image = Properties.Resources.error_icon;
-
                     Thread.Sleep(1000);
                 }
             }).Start();
@@ -357,8 +378,12 @@ namespace DocConvert_Server
                         webSocketServer.Dispose();
                     }
                     catch (Exception) { }
-                    Application.ExitThread();
-                    Environment.Exit(0);
+                    try
+                    {
+                        Application.ExitThread();
+                        Environment.Exit(0);
+                    }
+                    catch (Exception) { }
                 }
             }
             else
@@ -373,6 +398,7 @@ namespace DocConvert_Server
                     webSocketServer.Dispose();
                 }
                 catch (Exception) { }
+                this.Dispose();
                 Application.ExitThread();
                 Environment.Exit(0);
             }

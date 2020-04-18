@@ -667,8 +667,6 @@ namespace DocConvert_Util
             #endregion
         }
 
-        #endregion
-
         private void pictureBox8_Click(object sender, EventArgs e)
         {
             #region 페이지 번호 추출
@@ -704,7 +702,6 @@ namespace DocConvert_Util
                 textBox6.Enabled = true;
                 textBox7.Enabled = true;
                 textBox8.Enabled = true;
-                panel1.Enabled = false;
                 panel2.Enabled = false;
                 panel3.Enabled = false;
                 panel4.Enabled = false;
@@ -712,12 +709,12 @@ namespace DocConvert_Util
             }
             else
             {
+                comboBox2.SelectedIndex = 0;
                 textBox4.Enabled = false;
                 textBox5.Enabled = false;
                 textBox6.Enabled = false;
                 textBox7.Enabled = false;
                 textBox8.Enabled = false;
-                panel1.Enabled = true;
                 panel2.Enabled = true;
                 panel3.Enabled = true;
                 panel4.Enabled = true;
@@ -740,5 +737,7 @@ namespace DocConvert_Util
                 panel6.Visible = false;
             }
         }
+
+        #endregion
     }
 }

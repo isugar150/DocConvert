@@ -75,5 +75,10 @@ namespace DocConvert_Server.Forms
             else
                 return null;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

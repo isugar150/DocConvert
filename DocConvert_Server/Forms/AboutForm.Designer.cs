@@ -35,11 +35,12 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +62,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "DocConvert_Server";
+            this.label1.Text = "DocConvert Server";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // listView1
@@ -99,6 +100,11 @@
             // 
             this.columnHeader3.Text = "라이센스";
             this.columnHeader3.Width = 180;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "설명";
+            this.columnHeader4.Width = 300;
             // 
             // textBox1
             // 
@@ -143,23 +149,31 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Location = new System.Drawing.Point(12, 556);
+            this.label3.Location = new System.Drawing.Point(183, 556);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(839, 17);
+            this.label3.Size = new System.Drawing.Size(676, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "<Copyright 2020. Jm\'s Corp. All rights reserved.>";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // columnHeader4
+            // button1
             // 
-            this.columnHeader4.Text = "설명";
-            this.columnHeader4.Width = 300;
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.Location = new System.Drawing.Point(12, 530);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(165, 40);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "나가기";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 582);
+            this.ControlBox = false;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
@@ -168,6 +182,8 @@
             this.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(886, 621);
             this.Name = "AboutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -193,5 +209,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Button button1;
     }
 }
