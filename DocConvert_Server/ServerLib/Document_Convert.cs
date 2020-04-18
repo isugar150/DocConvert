@@ -33,7 +33,7 @@ namespace DocConvert_Server
             {
                 requestMsg = JObject.Parse(requestInfo); // 요청받은 JSON 파싱
 
-                if (!requestMsg["KEY"].ToString().Equals(Properties.Settings.Default.key))
+                if (!requestMsg["KEY"].ToString().Equals(Properties.Settings.Default.클라이언트키))
                 {
                     responseMsg["URL"] = null;
                     responseMsg["isSuccess"] = false;
@@ -44,12 +44,12 @@ namespace DocConvert_Server
                 {
                     #region DocConvert
                     bool PAGINGNUM = false;
-                    bool APPVISIBLE = Properties.Settings.Default.ConvertVisible;
+                    bool APPVISIBLE = Properties.Settings.Default.변환시보이기;
                     string fileName = requestMsg["FileName"].ToString(); // 파일 이름
                     string convertIMG = requestMsg["ConvertIMG"].ToString(); // 0: NONE  1:JPEG  2:PNG  3:BMP
                                                                              //string docPassword = requestMsg["DocPassword"].ToString(); // 문서 비밀번호
                     string docPassword = null; // 문서 비밀번호
-                    string dataPath = Properties.Settings.Default.DataPath; // 파일 출력경로
+                    string dataPath = Properties.Settings.Default.데이터경로; // 파일 출력경로
 
                     string documents = @"workspace";
                     string tmpPath = @"tmp";
@@ -165,7 +165,7 @@ namespace DocConvert_Server
                     #region WebCapture
                     Thread WebCapture = new Thread(() =>
                     {
-                        status = WebCapture_Core.WebCapture(requestMsg["URL"].ToString(), Properties.Settings.Default.DataPath + dataPath);
+                        status = WebCapture_Core.WebCapture(requestMsg["URL"].ToString(), Properties.Settings.Default.데이터경로 + dataPath);
                     });
                     WebCapture.SetApartmentState(ApartmentState.STA);
                     WebCapture.Start();

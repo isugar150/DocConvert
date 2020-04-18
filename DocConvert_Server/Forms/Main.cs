@@ -55,7 +55,7 @@ namespace DocConvert_Server
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Text += " - " + Properties.Settings.Default.serverName;
+            this.Text += " - " + Properties.Settings.Default.서버이름;
             textBox1.Text = ("┏━━━┓╋╋╋╋╋┏━━━┓╋╋╋╋╋╋╋╋╋╋╋╋╋┏┓╋┏━━━┓\r\n" +
                              "┗┓┏┓┃╋╋╋╋╋┃┏━┓┃╋╋╋╋╋╋╋╋╋╋╋╋┏┛┗┓┃┏━┓┃\r\n" +
                              "╋┃┃┃┣━━┳━━┫┃╋┗╋━━┳━┓┏┓┏┳━━┳┻┓┏┛┃┗━━┳━━┳━┳┓┏┳━━┳━┓\r\n" +
@@ -65,8 +65,8 @@ namespace DocConvert_Server
             #region checkLicense
             try
             {
-                Debug.WriteLine(Properties.Settings.Default.LicenseKEY);
-                string licenseInfo = LicenseInfo.decryptAES256(Properties.Settings.Default.LicenseKEY, "JmDoCOnVerTerServErJmCoRp");
+                Debug.WriteLine(Properties.Settings.Default.라이센스키);
+                string licenseInfo = LicenseInfo.decryptAES256(Properties.Settings.Default.라이센스키, "JmDoCOnVerTerServErJmCoRp");
                 checkLicense = JObject.Parse(licenseInfo);
                 if (!checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID())) { new MessageDialog("라이센스 오류", "라이센스 확인 후 다시시도하세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
                 if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now) { new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되었습니다. 갱신후 다시시도해주세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
@@ -76,10 +76,14 @@ namespace DocConvert_Server
             }
             catch (Exception) { new MessageDialog("라이센스 오류", "라이센스키 파싱오류.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
             #endregion
-            toolStripStatusLabel4.Text = "IP Address: " + Properties.Settings.Default.serverIP;
-            toolStripStatusLabel5.Text = "Socket Port: : " + Properties.Settings.Default.socketPORT.ToString();
-            toolStripStatusLabel6.Text = "WebSocket Port: " + Properties.Settings.Default.webSocketPORT.ToString();
-            toolStripStatusLabel7.Text = "File Server Port: " + Properties.Settings.Default.fileServerPORT.ToString();
+            DirectoryInfo directoryInfo = new DirectoryInfo(Properties.Settings.Default.데이터경로 + @"\tmp");
+            if (!directoryInfo.Exists)
+                directoryInfo.Create();
+            toolStripStatusLabel4.Text = "IP Address: " + Properties.Settings.Default.서버IP;
+            toolStripStatusLabel5.Text = "Socket Port: : " + Properties.Settings.Default.소켓서버포트.ToString();
+            toolStripStatusLabel6.Text = "WebSocket Port: " + Properties.Settings.Default.웹소켓포트.ToString();
+            toolStripStatusLabel7.Text = "File Server Port: " + Properties.Settings.Default.파일서버포트.ToString();
+
             checkBox1.Checked = Properties.Settings.Default.FollowTail;
             #region 한글 DLL 레지스트리 등록
             if (File.Exists(Application.StartupPath + @"\FilePathCheckerModuleExample.dll"))
@@ -89,7 +93,7 @@ namespace DocConvert_Server
             }
             #endregion
             #region 스케줄러 관련
-            if (Properties.Settings.Default.DeletionScheduler)
+            if (Properties.Settings.Default.작업공간정리스케줄러)
             {
                 DevLog.Write("[Scheduler] 스케줄러가 실행중입니다. ");
 
@@ -99,7 +103,7 @@ namespace DocConvert_Server
                 tScheduler.Start();
             }
             #endregion
-            if (Properties.Settings.Default.AppVisible)        
+            if (Properties.Settings.Default.오피스디버깅모드)        
                 this.Visible = true;
             else
                 this.Visible = false;
@@ -115,7 +119,7 @@ namespace DocConvert_Server
             if (IsResult)
             {
                 DevLog.Write("[Socket] Server Listening...", LOG_LEVEL.INFO);
-                DevLog.Write(string.Format("[Socket][INFO] IP: {0}   포트: {1}   프로토콜: {2}   서버이름: {3}", Properties.Settings.Default.serverIP, socketServer.Config.Port, socketServer.Config.Mode, socketServer.Config.Name), LOG_LEVEL.INFO);
+                DevLog.Write(string.Format("[Socket][INFO] IP: {0}   포트: {1}   프로토콜: {2}   서버이름: {3}", Properties.Settings.Default.서버IP, socketServer.Config.Port, socketServer.Config.Mode, socketServer.Config.Name), LOG_LEVEL.INFO);
 
                 pictureBox1.Image = DocConvert_Server.Properties.Resources.success_icon;
             }
@@ -126,36 +130,12 @@ namespace DocConvert_Server
                 return;
             }
             #endregion
-            #region Thread
-            workProcessTimer.Tick += new EventHandler(OnProcessTimedEvent);
-            workProcessTimer.Interval = new TimeSpan(0, 0, 0, 0, 32);
-            workProcessTimer.Start();
-            new Thread(delegate ()
-            {
-                while (!this.IsDisposed)
-                {
-                    toolStripStatusLabel2.Text = string.Format("Socket Session Count: {0}/{1}", socketServer.SessionCount, Properties.Settings.Default.socketSessionCount);
-                    toolStripStatusLabel3.Text = string.Format("Web Socket Session Count: {0}/{1}", wsSessionCount, "1");
-
-                    if (IsTcpPortAvailable(Properties.Settings.Default.webSocketPORT))
-                        pictureBox3.Image = Properties.Resources.success_icon;
-                    else
-                        pictureBox3.Image = Properties.Resources.error_icon;
-
-                    if (IsTcpPortAvailable(Properties.Settings.Default.fileServerPORT))
-                        pictureBox2.Image = Properties.Resources.success_icon;
-                    else
-                        pictureBox2.Image = Properties.Resources.error_icon;
-                    Thread.Sleep(1000);
-                }
-            }).Start();
-            #endregion
             #region Create WebSocketServer
             try
             {
                 CancellationTokenSource cancellation = new CancellationTokenSource();
                 //var endpoint = new IPEndPoint(IPAddress.Any, 1818);
-                var endpoint = new IPEndPoint(IPAddress.Parse(Properties.Settings.Default.serverIP), Properties.Settings.Default.webSocketPORT);
+                var endpoint = new IPEndPoint(IPAddress.Parse(Properties.Settings.Default.서버IP), Properties.Settings.Default.웹소켓포트);
                 var options = new WebSocketListenerOptions()
                 {
                     WebSocketReceiveTimeout = new TimeSpan(0, 3, 0),
@@ -192,6 +172,30 @@ namespace DocConvert_Server
             Console.WriteLine("Server stoping");
             cancellation.Cancel();
             task.Wait();*/
+            #endregion
+            #region Thread
+            workProcessTimer.Tick += new EventHandler(OnProcessTimedEvent);
+            workProcessTimer.Interval = new TimeSpan(0, 0, 0, 0, 32);
+            workProcessTimer.Start();
+            new Thread(delegate ()
+            {
+                while (!this.IsDisposed)
+                {
+                    toolStripStatusLabel2.Text = string.Format("Socket Session Count: {0}/{1}", socketServer.SessionCount, Properties.Settings.Default.소켓최대세션);
+                    toolStripStatusLabel3.Text = string.Format("Web Socket Session Count: {0}/{1}", wsSessionCount, "1");
+
+                    if (IsTcpPortAvailable(Properties.Settings.Default.웹소켓포트))
+                        pictureBox3.Image = Properties.Resources.success_icon;
+                    else
+                        pictureBox3.Image = Properties.Resources.error_icon;
+
+                    if (IsTcpPortAvailable(Properties.Settings.Default.파일서버포트))
+                        pictureBox2.Image = Properties.Resources.success_icon;
+                    else
+                        pictureBox2.Image = Properties.Resources.error_icon;
+                    Thread.Sleep(1000);
+                }
+            }).Start();
             #endregion
         }
 
@@ -294,7 +298,7 @@ namespace DocConvert_Server
                 {
                     ++logWorkCount;
 
-                    if (listBoxLog.Items.Count >= Properties.Settings.Default.LogMaxCount)
+                    if (listBoxLog.Items.Count >= Properties.Settings.Default.최대로그개수)
                     {
                         listBoxLog.Items.RemoveAt(0);
                     }
@@ -307,7 +311,7 @@ namespace DocConvert_Server
                         textBox1.AppendText(msg + "\r\n");
                     }
 
-                    toolStripStatusLabel1.Text = string.Format("LogCount: {0}/{1}", listBoxLog.Items.Count, Properties.Settings.Default.LogMaxCount);
+                    toolStripStatusLabel1.Text = string.Format("LogCount: {0}/{1}", listBoxLog.Items.Count, Properties.Settings.Default.최대로그개수);
                 }
                 else
                 {
@@ -472,8 +476,8 @@ namespace DocConvert_Server
         {
             DevLog.Write("[Scheduler] 작업폴더 삭제 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
             tScheduler.Interval = CalculateTimerInterval(CHECK_INTERVAL);
-            deleteFolder(Properties.Settings.Default.DataPath + @"\workspace", Properties.Settings.Default.DeletionCycle);
-            deleteFolder(Properties.Settings.Default.DataPath + @"\tmp", Properties.Settings.Default.DeletionCycle);
+            deleteFolder(Properties.Settings.Default.데이터경로 + @"\workspace", Properties.Settings.Default.작업공간정리주기);
+            deleteFolder(Properties.Settings.Default.데이터경로 + @"\tmp", Properties.Settings.Default.작업공간정리주기);
         }
 
         public static void deleteFolder(string strPath, int DeletionCycle)

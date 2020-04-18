@@ -26,87 +26,87 @@ namespace DocConvert_Server.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("12000")]
-        public int socketPORT {
+        public int 소켓서버포트 {
             get {
-                return ((int)(this["socketPORT"]));
+                return ((int)(this["소켓서버포트"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("ConvertServer")]
-        public string serverName {
+        public string 서버이름 {
             get {
-                return ((string)(this["serverName"]));
+                return ((string)(this["서버이름"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("100")]
-        public int socketSessionCount {
+        public int 소켓최대세션 {
             get {
-                return ((int)(this["socketSessionCount"]));
+                return ((int)(this["소켓최대세션"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1000")]
-        public int LogMaxCount {
+        public int 최대로그개수 {
             get {
-                return ((int)(this["LogMaxCount"]));
+                return ((int)(this["최대로그개수"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2")]
-        public string key {
+        public string 클라이언트키 {
             get {
-                return ((string)(this["key"]));
+                return ((string)(this["클라이언트키"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("C:\\Data")]
-        public string DataPath {
+        public string 데이터경로 {
             get {
-                return ((string)(this["DataPath"]));
+                return ((string)(this["데이터경로"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("12100")]
-        public int fileServerPORT {
+        public int 파일서버포트 {
             get {
-                return ((int)(this["fileServerPORT"]));
+                return ((int)(this["파일서버포트"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool ConvertVisible {
+        public bool 변환시보이기 {
             get {
-                return ((bool)(this["ConvertVisible"]));
+                return ((bool)(this["변환시보이기"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("12005")]
-        public int webSocketPORT {
+        public int 웹소켓포트 {
             get {
-                return ((int)(this["webSocketPORT"]));
+                return ((int)(this["웹소켓포트"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool FollowTail {
             get {
                 return ((bool)(this["FollowTail"]));
@@ -118,45 +118,45 @@ namespace DocConvert_Server.Properties {
         [global::System.Configuration.DefaultSettingValueAttribute("7kOQCsa87IIeLnU6hQyxTOzuV0Khg5cBBY5B5p75qAuzJlFKnC8zxpcXxyfsFTOLKn7hnUE4RuBi6VJV9" +
             "4/UlYAQT6is46zbBIsDiqck9In2erCV0LpIT6KQjpdK/hC2m1o4SQnIQkLTcQ735Vi5tWWgzADqL4q6H" +
             "WOoiByIm0s=")]
-        public string LicenseKEY {
+        public string 라이센스키 {
             get {
-                return ((string)(this["LicenseKEY"]));
+                return ((string)(this["라이센스키"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool AppVisible {
+        public bool 오피스디버깅모드 {
             get {
-                return ((bool)(this["AppVisible"]));
+                return ((bool)(this["오피스디버깅모드"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool DeletionScheduler {
+        public bool 작업공간정리스케줄러 {
             get {
-                return ((bool)(this["DeletionScheduler"]));
+                return ((bool)(this["작업공간정리스케줄러"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("30")]
-        public int DeletionCycle {
+        public int 작업공간정리주기 {
             get {
-                return ((int)(this["DeletionCycle"]));
+                return ((int)(this["작업공간정리주기"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("127.0.0.1")]
-        public string serverIP {
+        public string 서버IP {
             get {
-                return ((string)(this["serverIP"]));
+                return ((string)(this["서버IP"]));
             }
         }
     }
