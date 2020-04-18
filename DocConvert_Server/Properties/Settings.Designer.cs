@@ -141,5 +141,23 @@ namespace DocConvert_Server.Properties {
                 return ((bool)(this["AppVisible"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool DeletionScheduler {
+            get {
+                return ((bool)(this["DeletionScheduler"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("30")]
+        public int DeletionCycle {
+            get {
+                return ((int)(this["DeletionCycle"]));
+            }
+        }
     }
 }

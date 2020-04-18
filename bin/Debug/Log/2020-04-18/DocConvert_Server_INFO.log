@@ -1,0 +1,298 @@
+2020-04-18 15:12:59.1728  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 15:12:59.3759  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 15:12:59.3759  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 15:12:59.3759  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 15:12:59.4540  INFO - [Socket]핸들러 등록 완료
+2020-04-18 15:12:59.4540  INFO - [Socket]서버 생성 성공
+2020-04-18 15:12:59.5008  INFO - [Socket Server Listening...]
+2020-04-18 15:12:59.5008  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 15:12:59.6414  INFO - [Web Socket Server Listening...]
+2020-04-18 15:12:59.6414  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 15:13:26.7042  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 15:13:27.0947  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 15:13:27.0947  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 15:13:27.1104  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 15:13:27.2197  INFO - [Socket]핸들러 등록 완료
+2020-04-18 15:13:27.2197  INFO - [Socket]서버 생성 성공
+2020-04-18 15:13:27.2509  INFO - [Socket Server Listening...]
+2020-04-18 15:13:27.2509  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 15:13:27.3759  INFO - [Web Socket Server Listening...]
+2020-04-18 15:13:27.3759  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 15:18:37.9667  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 15:18:38.1840  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 15:18:38.1840  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 15:18:38.1840  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 15:18:38.2927  INFO - [Socket]핸들러 등록 완료
+2020-04-18 15:18:38.2927  INFO - [Socket]서버 생성 성공
+2020-04-18 15:18:38.3346  INFO - [Socket Server Listening...]
+2020-04-18 15:18:38.3356  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 15:18:38.4653  INFO - [Web Socket Server Listening...]
+2020-04-18 15:18:38.4653  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 15:22:15.7032  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 15:22:16.0781  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 15:22:16.0781  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 15:22:16.0781  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 15:22:16.1719  INFO - [Socket]핸들러 등록 완료
+2020-04-18 15:22:16.1719  INFO - [Socket]서버 생성 성공
+2020-04-18 15:22:16.2031  INFO - [Socket Server Listening...]
+2020-04-18 15:22:16.2031  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 15:22:16.3281  INFO - [Web Socket Server Listening...]
+2020-04-18 15:22:16.3281  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 15:27:28.8288  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 15:27:29.0944  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 15:27:29.0944  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 15:27:29.0944  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 15:27:29.1881  INFO - [Socket]핸들러 등록 완료
+2020-04-18 15:27:29.1881  INFO - [Socket]서버 생성 성공
+2020-04-18 15:27:29.2194  INFO - [Socket Server Listening...]
+2020-04-18 15:27:29.2194  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 15:27:29.3287  INFO - [Web Socket Server Listening...]
+2020-04-18 15:27:29.3287  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 15:55:33.9027  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 15:55:34.1682  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 15:55:34.1682  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 15:55:34.1839  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 15:55:34.2932  INFO - [Socket]핸들러 등록 완료
+2020-04-18 15:55:34.2932  INFO - [Socket]서버 생성 성공
+2020-04-18 15:55:34.3401  INFO - [Socket Server Listening...]
+2020-04-18 15:55:34.3401  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 15:55:34.4650  INFO - [Web Socket Server Listening...]
+2020-04-18 15:55:34.4650  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 15:55:56.1955  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 15:55:56.4142  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 15:55:56.4142  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 15:55:56.4298  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 15:55:56.5235  INFO - [Socket]핸들러 등록 완료
+2020-04-18 15:55:56.5235  INFO - [Socket]서버 생성 성공
+2020-04-18 15:55:56.5547  INFO - [Socket Server Listening...]
+2020-04-18 15:55:56.5547  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 15:55:56.6485  INFO - [Web Socket Server Listening...]
+2020-04-18 15:55:56.6485  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 15:56:00.0077  INFO - [INFO] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 15:56:00.0077  INFO - 파일 C:\Data\workspace\Word 시작.docx 삭제하였습니다.
+2020-04-18 15:57:00.0191  INFO - [INFO] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 15:57:00.0191  INFO - 파일 C:\Data\workspace\PowerPoint 시작.pptx 삭제하였습니다.
+2020-04-18 15:57:00.0191  INFO - 파일 C:\Data\workspace\Welcome to Hwp.hwp 삭제하였습니다.
+2020-04-18 15:57:00.0191  INFO - 파일 C:\Data\workspace\Welcome to Hwp.pdf 삭제하였습니다.
+2020-04-18 15:57:00.0191  INFO - 파일 C:\Data\workspace\Word 시작.docx 삭제하였습니다.
+2020-04-18 15:57:00.0191  INFO - 파일 C:\Data\workspace\Word 시작.pdf 삭제하였습니다.
+2020-04-18 15:57:00.0191  INFO - 파일 C:\Data\workspace\출근부 관리 프로그램(2016-10).zip 삭제하였습니다.
+2020-04-18 15:57:49.9262  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 15:57:50.2386  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 15:57:50.2386  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 15:57:50.2386  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 15:57:50.3479  INFO - [Socket]핸들러 등록 완료
+2020-04-18 15:57:50.3479  INFO - [Socket]서버 생성 성공
+2020-04-18 15:57:50.3792  INFO - [Socket Server Listening...]
+2020-04-18 15:57:50.3792  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 15:57:50.4885  INFO - [Web Socket Server Listening...]
+2020-04-18 15:57:50.4885  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 15:58:00.0023  INFO - [INFO] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 15:58:00.0023  INFO - 파일 C:\Data\workspace\Word 시작.pdf 삭제하였습니다.
+2020-04-18 15:58:33.7777  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 15:58:33.9964  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 15:58:33.9964  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 15:58:34.0120  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 15:58:34.1057  INFO - [Socket]핸들러 등록 완료
+2020-04-18 15:58:34.1057  INFO - [Socket]서버 생성 성공
+2020-04-18 15:58:34.1370  INFO - [Socket Server Listening...]
+2020-04-18 15:58:34.1370  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 15:58:34.2307  INFO - [Web Socket Server Listening...]
+2020-04-18 15:58:34.2307  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 15:59:15.4906  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 15:59:15.7562  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 15:59:15.7562  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 15:59:15.7562  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 15:59:15.8343  INFO - [Socket]핸들러 등록 완료
+2020-04-18 15:59:15.8343  INFO - [Socket]서버 생성 성공
+2020-04-18 15:59:15.8811  INFO - [Socket Server Listening...]
+2020-04-18 15:59:15.8811  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 15:59:16.0061  INFO - [Web Socket Server Listening...]
+2020-04-18 15:59:16.0061  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 15:59:49.8493  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 15:59:50.0368  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 15:59:50.0368  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 15:59:50.0368  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 15:59:50.1305  INFO - [Socket]핸들러 등록 완료
+2020-04-18 15:59:50.1305  INFO - [Socket]서버 생성 성공
+2020-04-18 15:59:50.1618  INFO - [Socket Server Listening...]
+2020-04-18 15:59:50.1618  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 15:59:50.3180  INFO - [Web Socket Server Listening...]
+2020-04-18 15:59:50.3180  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 15:59:59.9988  INFO - [INFO] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 15:59:59.9988  INFO - 파일 C:\Data\workspace\PowerPoint 시작.pptx 삭제하였습니다.
+2020-04-18 15:59:59.9988  INFO - 파일 C:\Data\workspace\Welcome to Hwp.hwp 삭제하였습니다.
+2020-04-18 15:59:59.9988  INFO - 파일 C:\Data\workspace\Welcome to Hwp.pdf 삭제하였습니다.
+2020-04-18 15:59:59.9988  INFO - 파일 C:\Data\workspace\Word 시작.docx 삭제하였습니다.
+2020-04-18 15:59:59.9988  INFO - 파일 C:\Data\workspace\Word 시작.pdf 삭제하였습니다.
+2020-04-18 16:00:00.0141  INFO - [INFO] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 16:01:00.0211  INFO - [INFO] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 16:01:00.0211  INFO - 파일 C:\Data\workspace\Welcome to Hwp.pdf 삭제하였습니다.
+2020-04-18 16:01:00.0211  INFO - 파일 C:\Data\workspace\Word 시작.docx 삭제하였습니다.
+2020-04-18 16:01:00.0211  INFO - 파일 C:\Data\workspace\Word 시작.pdf 삭제하였습니다.
+2020-04-18 16:05:11.7460  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 16:05:11.9647  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 16:05:11.9647  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 16:05:11.9804  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 16:05:12.0585  INFO - [Socket]핸들러 등록 완료
+2020-04-18 16:05:12.0585  INFO - [Socket]서버 생성 성공
+2020-04-18 16:05:12.1053  INFO - [Socket Server Listening...]
+2020-04-18 16:05:12.1053  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 16:05:12.2303  INFO - [Web Socket Server Listening...]
+2020-04-18 16:05:12.2303  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 16:06:00.0145  INFO - [INFO] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 16:07:00.0222  INFO - [INFO] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 16:08:28.5621  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 16:08:28.8121  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 16:08:28.8121  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 16:08:28.8121  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 16:08:28.9058  INFO - [Socket]핸들러 등록 완료
+2020-04-18 16:08:28.9058  INFO - [Socket]서버 생성 성공
+2020-04-18 16:08:28.9370  INFO - [Socket Server Listening...]
+2020-04-18 16:08:28.9370  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 16:08:29.0308  INFO - [Web Socket Server Listening...]
+2020-04-18 16:08:29.0308  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 16:09:00.0142  INFO - [INFO] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 16:18:35.6370  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 16:18:35.9026  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 16:18:35.9026  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 16:18:35.9026  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 16:18:36.0119  INFO - [Socket]핸들러 등록 완료
+2020-04-18 16:18:36.0119  INFO - [Socket]서버 생성 성공
+2020-04-18 16:18:36.0744  INFO - [Socket Server Listening...]
+2020-04-18 16:18:36.0744  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 16:18:36.1994  INFO - [Web Socket Server Listening...]
+2020-04-18 16:18:36.1994  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 16:18:45.9071  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 16:18:46.1589  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 16:18:46.1589  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 16:18:46.1745  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 16:18:46.2995  INFO - [Socket]핸들러 등록 완료
+2020-04-18 16:18:46.2995  INFO - [Socket]서버 생성 성공
+2020-04-18 16:18:46.3307  INFO - [Socket Server Listening...]
+2020-04-18 16:18:46.3307  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 16:18:46.4557  INFO - [Web Socket Server Listening...]
+2020-04-18 16:18:46.4557  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 16:18:59.9998  INFO - [INFO] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 16:19:00.0151  INFO - [INFO] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 16:21:02.6375  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 16:21:02.8562  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 16:21:02.8562  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 16:21:02.8562  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 16:21:02.9499  INFO - [Socket]핸들러 등록 완료
+2020-04-18 16:21:02.9499  INFO - [Socket]서버 생성 성공
+2020-04-18 16:21:02.9968  INFO - [Socket Server Listening...]
+2020-04-18 16:21:02.9968  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 16:21:03.1061  INFO - [Web Socket Server Listening...]
+2020-04-18 16:21:03.1061  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 16:22:00.0069  INFO - [INFO] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 16:23:42.9339  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 16:23:43.1370  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 16:23:43.1370  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 16:23:43.1526  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 16:23:43.2620  INFO - [Socket]핸들러 등록 완료
+2020-04-18 16:23:43.2620  INFO - [Socket]서버 생성 성공
+2020-04-18 16:23:43.2932  INFO - [Socket Server Listening...]
+2020-04-18 16:23:43.2932  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 16:23:43.4338  INFO - [Web Socket Server Listening...]
+2020-04-18 16:23:43.4338  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 16:24:00.0076  INFO - [INFO] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 16:25:25.7869  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 16:25:26.0524  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 16:25:26.0524  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 16:25:26.0524  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 16:25:26.1462  INFO - [Socket]핸들러 등록 완료
+2020-04-18 16:25:26.1462  INFO - [Socket]서버 생성 성공
+2020-04-18 16:25:26.1774  INFO - [Socket Server Listening...]
+2020-04-18 16:25:26.1774  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 16:25:26.3492  INFO - [Web Socket Server Listening...]
+2020-04-18 16:25:26.3492  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 16:25:52.3921  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 16:25:52.5796  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 16:25:52.5952  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 16:25:52.5952  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 16:25:52.7202  INFO - [Socket]핸들러 등록 완료
+2020-04-18 16:25:52.7202  INFO - [Socket]서버 생성 성공
+2020-04-18 16:25:52.7827  INFO - [Socket Server Listening...]
+2020-04-18 16:25:52.7827  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 16:25:52.8764  INFO - [Web Socket Server Listening...]
+2020-04-18 16:25:52.8764  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 16:26:00.0055  INFO - [INFO] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 16:27:10.3269  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 16:27:10.6081  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 16:27:10.6081  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 16:27:10.6081  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 16:27:10.7018  INFO - [Socket]핸들러 등록 완료
+2020-04-18 16:27:10.7018  INFO - [Socket]서버 생성 성공
+2020-04-18 16:27:10.7487  INFO - [Socket Server Listening...]
+2020-04-18 16:27:10.7487  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 16:27:10.8580  INFO - [Web Socket Server Listening...]
+2020-04-18 16:27:10.8580  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 16:28:00.0109  INFO - [INFO] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 16:31:00.0132  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 16:31:00.2475  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 16:31:00.2475  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 16:31:00.2475  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 16:31:00.3412  INFO - [Socket]핸들러 등록 완료
+2020-04-18 16:31:00.3412  INFO - [Socket]서버 생성 성공
+2020-04-18 16:31:00.3725  INFO - [Socket Server Listening...]
+2020-04-18 16:31:00.3725  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 16:31:00.4662  INFO - [Web Socket Server Listening...]
+2020-04-18 16:31:00.4662  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 16:32:00.0150  INFO - [INFO] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 16:33:42.5305  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 16:33:42.7492  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 16:33:42.7492  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 16:33:42.7492  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 16:33:42.8585  INFO - [Socket]핸들러 등록 완료
+2020-04-18 16:33:42.8585  INFO - [Socket]서버 생성 성공
+2020-04-18 16:33:42.9054  INFO - [Socket Server Listening...]
+2020-04-18 16:33:42.9054  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 16:33:43.0147  INFO - [Web Socket Server Listening...]
+2020-04-18 16:33:43.0147  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 16:34:00.0100  INFO - [INFO] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 16:39:05.7074  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 16:39:05.9729  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 16:39:05.9729  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 16:39:05.9729  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 16:39:06.0823  INFO - [Socket]핸들러 등록 완료
+2020-04-18 16:39:06.0823  INFO - [Socket]서버 생성 성공
+2020-04-18 16:39:06.1135  INFO - [Socket Server Listening...]
+2020-04-18 16:39:06.1135  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 16:39:06.2229  INFO - [Web Socket Server Listening...]
+2020-04-18 16:39:06.2229  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 16:39:59.9954  INFO - [Scheduler] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 16:40:00.0107  INFO - [Scheduler] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 16:41:03.5332  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 16:41:03.8457  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 16:41:03.8457  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 16:41:03.8457  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 16:41:03.9550  INFO - [Socket]핸들러 등록 완료
+2020-04-18 16:41:03.9550  INFO - [Socket]서버 생성 성공
+2020-04-18 16:41:03.9863  INFO - [Socket Server Listening...]
+2020-04-18 16:41:03.9863  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 16:41:04.0956  INFO - [Web Socket Server Listening...]
+2020-04-18 16:41:04.0956  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 16:43:53.3070  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 16:43:53.5413  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 16:43:53.5413  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 16:43:53.5413  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 16:43:53.6506  INFO - [Socket]핸들러 등록 완료
+2020-04-18 16:43:53.6506  INFO - [Socket]서버 생성 성공
+2020-04-18 16:43:53.6819  INFO - [Socket Server Listening...]
+2020-04-18 16:43:53.6819  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 16:43:53.7756  INFO - [Web Socket Server Listening...]
+2020-04-18 16:43:53.7756  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 16:44:00.0104  INFO - [Scheduler] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 16:45:00.0072  INFO - [Scheduler] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-18 16:47:02.1536  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-18 16:47:02.4192  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-18 16:47:02.4192  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-18 16:47:02.4348  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-18 16:47:02.5129  INFO - [Socket]핸들러 등록 완료
+2020-04-18 16:47:02.5129  INFO - [Socket]서버 생성 성공
+2020-04-18 16:47:02.5442  INFO - [Socket Server Listening...]
+2020-04-18 16:47:02.5442  INFO - [Socket][INFO] IP: 192.168.0.101   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-18 16:47:02.6379  INFO - [Web Socket Server Listening...]
+2020-04-18 16:47:02.6379  INFO - [Web Socket][INFO] IP: 192.168.0.101   포트: 12005
+2020-04-18 16:48:00.0119  INFO - [Scheduler] 작업폴더 삭제 스케줄러가 실행되었습니다.

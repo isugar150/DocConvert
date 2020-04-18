@@ -25,8 +25,10 @@ namespace DocConvert_Server
         private System.Windows.Threading.DispatcherTimer workProcessTimer = new System.Windows.Threading.DispatcherTimer();
         private MainServer socketServer = new MainServer();
         private int wsSessionCount = 0;
-        WebSocketListener webSocketServer = null;
-        JObject checkLicense;
+        private static System.Windows.Forms.Timer tScheduler;
+        private const int CHECK_INTERVAL = 60; //타이머 주기
+        private WebSocketListener webSocketServer = null;
+        private JObject checkLicense;
         public int totalCnt = 0;
         public int successCnt = 0;
         public int errorCnt = 0;
@@ -94,7 +96,18 @@ namespace DocConvert_Server
             #region Create SocketServer
             socketServer.InitConfig();
             socketServer.CreateServer();
+
             bool IsResult = false;
+            if (Properties.Settings.Default.DeletionScheduler)
+            {
+                DevLog.Write("[Scheduler] 스케줄러가 실행중입니다. ");
+
+                tScheduler = new System.Windows.Forms.Timer();
+                tScheduler.Interval = CalculateTimerInterval(CHECK_INTERVAL);
+                tScheduler.Tick += new EventHandler(tScheduler_Tick);
+                tScheduler.Start();
+            }
+
             if (checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID()))
                 IsResult = socketServer.Start();
 
@@ -440,6 +453,64 @@ namespace DocConvert_Server
         {
             this.Visible = true;
             this.Activate();
+        }
+
+        private int CalculateTimerInterval(int minute)
+        {
+            if (minute <= 0)
+                minute = 60;
+            DateTime now = DateTime.Now;
+
+            DateTime future = now.AddMinutes((minute - (now.Minute % minute))).AddSeconds(now.Second * -1).AddMilliseconds(now.Millisecond * -1);
+
+            TimeSpan interval = future - now;
+
+            return (int)interval.TotalMilliseconds;
+        }
+
+        private void tScheduler_Tick(object sender, EventArgs e)
+        {
+            DevLog.Write("[Scheduler] 작업폴더 삭제 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
+            tScheduler.Interval = CalculateTimerInterval(CHECK_INTERVAL);
+            deleteFolder(Properties.Settings.Default.DataPath + @"\workspace", Properties.Settings.Default.DeletionCycle);
+            deleteFolder(Properties.Settings.Default.DataPath + @"\tmp", Properties.Settings.Default.DeletionCycle);
+        }
+
+        public static void deleteFolder(string strPath, int DeletionCycle)
+        {
+            foreach (string Folder in Directory.GetDirectories(strPath))
+                deleteFolder(Folder, DeletionCycle); //재귀함수 호출
+
+            foreach (string file in Directory.GetFiles(strPath))
+            {
+                FileInfo fi = new FileInfo(file);
+                if (fi.LastWriteTime <= DateTime.Now.AddDays(-DeletionCycle))
+                {
+                    fi.Delete();
+                    DevLog.Write("[Scheduler] 파일 " + fi.FullName + " 삭제됨.");
+                }
+                if (!isFiles(fi.DirectoryName))
+                {
+                    DirectoryInfo di = new DirectoryInfo(fi.DirectoryName);
+                    DevLog.Write("[Scheduler] 폴더 " + fi.DirectoryName + " 삭제됨.");
+                    di.Delete(true);
+                }
+            }
+        }
+
+        private static bool isFiles(string dir)
+        {
+            string[] Directories = Directory.GetDirectories(dir);   // Defalut Folder
+            {
+                string[] Files = Directory.GetFiles(dir);   // File list Search
+                if (Files.Length != 0) return true;
+
+                foreach (string nodeDir in Directories)   // Folder list Search
+                {
+                    isFiles(nodeDir);   // reSearch
+                }
+            }
+            return false;
         }
     }
 }
