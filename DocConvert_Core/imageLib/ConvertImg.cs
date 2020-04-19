@@ -1,15 +1,11 @@
-﻿using PdfiumViewer;
+﻿using DocConvert_Core.interfaces;
+using NLog;
+using PdfiumViewer;
 using System;
-using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using DocConvert_Core.interfaces;
-using System.Diagnostics;
-using NLog;
 using System.Reflection;
 
 namespace DocConvert_Core.imageLib
@@ -50,7 +46,7 @@ namespace DocConvert_Core.imageLib
                             ++totalCnt;
                         }
                     }
-                    if(pageCount == totalCnt)
+                    if (pageCount == totalCnt)
                     {
                         returnValue.PageCount = pageCount;
                         returnValue.isSuccess = true;

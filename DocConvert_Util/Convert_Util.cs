@@ -1,31 +1,23 @@
-﻿using System;
+﻿using DocConvert_Core.HWPLib;
+using DocConvert_Core.imageLib;
+using DocConvert_Core.interfaces;
+using DocConvert_Core.OfficeLib;
+using FluentFTP;
+using Microsoft.Win32;
+using Newtonsoft.Json.Linq;
+using PdfiumViewer;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Sockets;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using DocConvert_Core.imageLib;
-using DocConvert_Core.interfaces;
-using DocConvert_Core.OfficeLib;
-
-using Newtonsoft.Json.Linq;
-
-using DocConvert_Core.HWPLib;
-using Microsoft.Win32;
-using System.Threading;
-using System.Net.Sockets;
-using FluentFTP;
-using System.Security.Authentication;
-using static DocConvert_Core.imageLib.ConvertImg;
-using PdfiumViewer;
-using System.Reflection;
 
 namespace DocConvert_Util
 {
@@ -408,7 +400,8 @@ namespace DocConvert_Util
                         SendData(requestMsg.ToString());
                     }
                 }
-            } catch(Exception e1)
+            }
+            catch (Exception e1)
             {
                 tb2_appendText("변환중 오류발생");
                 tb2_appendText("======= Method: " + MethodBase.GetCurrentMethod().Name + " =======");

@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DocConvert_Core.FileLib;
 using DocConvert_Core.interfaces;
-using DocConvert_Core.FileLib;
+using Microsoft.Office.Core;
 using Microsoft.Office.Interop.Word;
 using NLog;
-using Word = Microsoft.Office.Interop.Word;
-using Microsoft.Office.Core;
+using System;
 using System.IO;
+using System.Reflection;
+using System.Runtime.InteropServices;
+using Word = Microsoft.Office.Interop.Word;
 
 namespace DocConvert_Core.OfficeLib
 {
@@ -131,25 +126,25 @@ namespace DocConvert_Core.OfficeLib
                 object CompatibilityMode = Type.Missing;
                 #endregion
                 #region PDF저장
-                 doc.SaveAs2(
-                    outPath,
-                    FileFormat,
-                    LockComments,
-                    Password,
-                    AddToRecentFiles,
-                    WritePassword,
-                    ReadOnlyRecommended,
-                    EmbedTrueTypeFonts,
-                    SaveNativePictureFormat,
-                    SaveFormsData,
-                    SaveAsAOCELetter,
-                    Encoding,
-                    InsertLineBreaks,
-                    AllowSubstitutions,
-                    LineEnding,
-                    AddBiDiMarks,
-                    CompatibilityMode
-                );
+                doc.SaveAs2(
+                   outPath,
+                   FileFormat,
+                   LockComments,
+                   Password,
+                   AddToRecentFiles,
+                   WritePassword,
+                   ReadOnlyRecommended,
+                   EmbedTrueTypeFonts,
+                   SaveNativePictureFormat,
+                   SaveFormsData,
+                   SaveAsAOCELetter,
+                   Encoding,
+                   InsertLineBreaks,
+                   AllowSubstitutions,
+                   LineEnding,
+                   AddBiDiMarks,
+                   CompatibilityMode
+               );
                 #endregion
                 #region 문서 닫기 옵션 https://docs.microsoft.com/en-us/dotnet/api/microsoft.office.interop.word.documents.close?view=word-pia
                 object SaveChanges = WdSaveOptions.wdDoNotSaveChanges;
@@ -164,7 +159,7 @@ namespace DocConvert_Core.OfficeLib
                 returnValue.Message = "변환에 성공하였습니다.";
                 return returnValue;
             }
-            catch(Exception e1)
+            catch (Exception e1)
             {
                 throw e1;
             }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DocConvert_Core.interfaces
+﻿namespace DocConvert_Core.interfaces
 {
     interface returnValue
     {

@@ -1,18 +1,10 @@
-﻿using DocConvert_Core.imageLib;
-using DocConvert_Core.interfaces;
+﻿using DocConvert_Core.interfaces;
 using NLog;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Drawing;
-using System.Drawing.Imaging;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DocConvert_Core.WebCaptureLib
@@ -49,13 +41,13 @@ namespace DocConvert_Core.WebCaptureLib
                 DateTime timeTaken = DateTime.Now.AddSeconds(20);
                 while (!process.HasExited)
                 {
-                    if(DateTime.Now > timeTaken)
+                    if (DateTime.Now > timeTaken)
                         process.Kill();
                     Thread.Sleep(300);
                 }
                 process.Dispose();
 
-                if(new FileInfo(outPath + @"\" + "0.png").Exists)
+                if (new FileInfo(outPath + @"\" + "0.png").Exists)
                 {
                     returnValue.isSuccess = true;
                     returnValue.Message = "WebCapture에 성공하였습니다.";

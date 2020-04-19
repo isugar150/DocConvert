@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DocConvert_Server.Forms
@@ -36,16 +29,16 @@ namespace DocConvert_Server.Forms
             if (listView1.SelectedItems.Count == 0)
                 return;
             ListView.SelectedListViewItemCollection itemColl = listView1.SelectedItems;
-            foreach(ListViewItem item in itemColl)
+            foreach (ListViewItem item in itemColl)
             {
-                for(int i = 0; i<listView1.Items.Count; i++)
+                for (int i = 0; i < listView1.Items.Count; i++)
                     listView1.Items[i].SubItems[0].Text = "";
                 listView1.Items[item.Index].SubItems[0].Text = "*";
                 textBox1.Text = getLicenseInfo(listView1.Items[item.Index].SubItems[1].Text);
             }
-            
+
         }
-        
+
         private string getLicenseInfo(string license)
         {
             #region License Info

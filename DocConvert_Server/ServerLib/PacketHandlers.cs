@@ -1,20 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-
-using DocConvert_Core.imageLib;
-using DocConvert_Core.interfaces;
-using DocConvert_Core.OfficeLib;
-using DocConvert_Core.HWPLib;
-
-using System.Security.Cryptography;
-using System.IO;
-using System.Threading;
 
 namespace DocConvert_Server
 {

@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using SuperSocket.Common;
-using SuperSocket.SocketBase.Protocol;
+﻿using SuperSocket.Common;
 using SuperSocket.Facility.Protocol;
+using SuperSocket.SocketBase.Protocol;
+using System;
 
 namespace DocConvert_Server
 {
@@ -49,7 +44,7 @@ namespace DocConvert_Server
 
             return new EFBinaryRequestInfo(BitConverter.ToInt32(header.Array, 0),
                                            BitConverter.ToInt16(header.Array, 0 + 4),
-                                           BitConverter.ToInt16(header.Array, 0 + 6), 
+                                           BitConverter.ToInt16(header.Array, 0 + 6),
                                            bodyBuffer.CloneRange(offset, length));
         }
     }

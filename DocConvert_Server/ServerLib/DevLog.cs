@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using System.Runtime.CompilerServices;
-using System.IO;
-using log4net.Config;
-using log4net;
+﻿using log4net.Config;
 using NLog;
-using NLog.Fluent;
+using System;
+using System.IO;
+using System.Runtime.CompilerServices;
 
 namespace DocConvert_Server
 {

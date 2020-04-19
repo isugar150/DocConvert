@@ -68,11 +68,6 @@ C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert\obj\Debug\DocConvert_Core.dl
 C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert\obj\Debug\DocConvert_Core.pdb
 C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert\obj\Debug\DocConvert_Core.csprojAssemblyReference.cache
 C:\Users\o0_0o\Source\Repos\isugar150\DocConvert\DocConvert\obj\Debug\DocConvert_Core.csprojAssemblyReference.cache
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\NLog.config
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\FilePathCheckerModuleExample.dll
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\pdfium.dll
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\DocConvert_Core.dll
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\DocConvert_Core.pdb
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert\obj\Debug\Interop.HWPCONTROLLib.dll
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert\obj\Debug\AxInterop.HWPCONTROLLib.dll
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert\obj\Debug\DocConvert_Core.csproj.ResolveComReference.cache
@@ -82,9 +77,15 @@ C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert\obj\Debug\DocConvert_Core.
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert\obj\Debug\DocConvert_Core.csproj.CopyComplete
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert\obj\Debug\DocConvert_Core.dll
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert\obj\Debug\DocConvert_Core.pdb
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert\obj\Debug\DocConvert_Core.csprojAssemblyReference.cache
 C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\phantomjs.exe
 C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\rasterize.js
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert\obj\Debug\DocConvert_Core.csprojAssemblyReference.cache
+C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\NLog.config
+C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\FilePathCheckerModuleExample.dll
+C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\pdfium.dll
+C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\DocConvert_Core.dll
+C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\DocConvert_Core.pdb
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.csprojAssemblyReference.cache
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\Interop.HWPCONTROLLib.dll
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\AxInterop.HWPCONTROLLib.dll
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.csproj.ResolveComReference.cache
@@ -94,4 +95,3 @@ C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.csproj.CopyComplete
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.dll
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.pdb
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.csprojAssemblyReference.cache

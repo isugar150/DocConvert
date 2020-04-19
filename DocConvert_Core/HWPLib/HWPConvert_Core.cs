@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using DocConvert_Core.FileLib;
 using DocConvert_Core.interfaces;
-using DocConvert_Core.FileLib;
-using Microsoft.Win32;
 using NLog;
+using System;
+using System.Reflection;
 using System.Threading;
 
 namespace DocConvert_Core.HWPLib
@@ -55,7 +46,7 @@ namespace DocConvert_Core.HWPLib
                 }
 
                 axHwpCtrl.CreateControl();
-                
+
                 axHwpCtrl.RegisterModule("FilePathCheckDLL", "FilePathCheckerModuleExample");
                 #region 문서 열기
                 if (axHwpCtrl.Open(FilePath, "HWP", "suspendpassword:TRUE;forceopen:TRUE;versionwarning:FALSE"))

@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using System.Runtime.CompilerServices;
-using System.Diagnostics;
-
-using SuperSocket.SocketBase.Logging;
-using SuperSocket.SocketBase;
-using SuperSocket.SocketBase.Protocol;
+﻿using SuperSocket.SocketBase;
 using SuperSocket.SocketBase.Config;
+using SuperSocket.SocketBase.Logging;
+using SuperSocket.SocketBase.Protocol;
+using System;
+using System.Collections.Generic;
 
 namespace DocConvert_Server
 {
@@ -88,7 +81,7 @@ namespace DocConvert_Server
         void RequestReceived(NetworkSession session, EFBinaryRequestInfo reqInfo)
         {
             DevLog.Write(string.Format("[Socket] 세션ID: {0} 받은 데이터 크기: {1}, ThreadId: {2}", session.SessionID, reqInfo.Body.Length, System.Threading.Thread.CurrentThread.ManagedThreadId), LOG_LEVEL.DEBUG);
-           
+
 
             var PacketID = reqInfo.PacketID;
             var value1 = reqInfo.Value1;

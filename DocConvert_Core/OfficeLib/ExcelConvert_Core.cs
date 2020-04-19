@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DocConvert_Core.FileLib;
 using DocConvert_Core.interfaces;
-using DocConvert_Core.FileLib;
 using Microsoft.Office.Interop.Excel;
 using NLog;
+using System;
+using System.Reflection;
+using System.Runtime.InteropServices;
 using Excel = Microsoft.Office.Interop.Excel;
 
 namespace DocConvert_Core.OfficeLib

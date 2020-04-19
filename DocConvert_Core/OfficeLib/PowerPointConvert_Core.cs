@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DocConvert_Core.FileLib;
 using DocConvert_Core.interfaces;
-using DocConvert_Core.FileLib;
 using Microsoft.Office.Interop.PowerPoint;
 using NLog;
-using PowerPoint = Microsoft.Office.Interop.PowerPoint;
-using MsoTriState = Microsoft.Office.Core.MsoTriState;
-using System.Runtime.InteropServices;
+using System;
 using System.Reflection;
-using System.Diagnostics;
-using System.Threading;
+using System.Runtime.InteropServices;
+using MsoTriState = Microsoft.Office.Core.MsoTriState;
+using PowerPoint = Microsoft.Office.Interop.PowerPoint;
 
 namespace DocConvert_Core.OfficeLib
 {

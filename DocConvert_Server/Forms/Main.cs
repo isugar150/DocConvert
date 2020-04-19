@@ -1,23 +1,18 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using DocConvert_Server.Forms;
+using DocConvert_Server.License;
+using Microsoft.Win32;
+using Newtonsoft.Json.Linq;
+using NLog;
 using System;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Net.NetworkInformation;
-using System.Net.Sockets;
-using System.ServiceModel.Channels;
-using System.Text;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using vtortola.WebSockets;
-
-using DocConvert_Server.License;
-using NLog;
-using System.Reflection;
-using DocConvert_Server.Forms;
-using Microsoft.Win32;
-using Microsoft.SqlServer.Server;
 
 // TODO FTPS 지원 (클라이언트단)
 
@@ -41,14 +36,14 @@ namespace DocConvert_Server
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
 
-            if(args.Length == 0)
+            if (args.Length == 0)
             {
                 DevLog.Write("[INFO] DocConvert Server를 옵션없이 실행하였습니다.", LOG_LEVEL.INFO);
             }
             else
             {
                 string arg = "";
-                for(int i = 0; i<args.Length; i++)
+                for (int i = 0; i < args.Length; i++)
                 {
                     arg += string.Format("   [{0}]: {1}", i, args[i].ToString());
                 }
@@ -111,7 +106,7 @@ namespace DocConvert_Server
                 tScheduler.Start();
             }
             #endregion
-            if (Properties.Settings.Default.오피스디버깅모드)        
+            if (Properties.Settings.Default.오피스디버깅모드)
                 this.Visible = true;
             else
                 this.Visible = false;
