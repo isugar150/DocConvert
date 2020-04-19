@@ -66,3 +66,11 @@
 2020-04-19 19:51:54.3353  INFO - Method: PDFtoPng, FilePath: C:\Data\workspace\8DF91B0995A750BFE6B8873646995F7B\Excel 시작.pdf, outPath: C:\Data\workspace\8DF91B0995A750BFE6B8873646995F7B\Excel 시작\
 2020-04-19 19:51:55.2212  INFO - 이미지 변환 성공!
 2020-04-19 19:51:55.2212  INFO - ==================== End ====================
+2020-04-19 21:31:30.7652  INFO - ==================== Start ====================
+2020-04-19 21:31:30.7965  INFO - Method: PDFtoPng, FilePath: C:\Users\o0_0o\Desktop\Clip.jsp.pdf, outPath: C:\Users\o0_0o\Desktop\Clip.jsp\
+2020-04-19 21:31:30.8590  INFO - 이미지 변환 성공!
+2020-04-19 21:31:30.8590  INFO - ==================== End ====================
+2020-04-19 21:31:40.0798  INFO - ==================== Start ====================
+2020-04-19 21:31:40.0798  INFO - Method: PDFtoPng, FilePath: C:\Users\o0_0o\Desktop\Clip1.jsp.pdf, outPath: C:\Users\o0_0o\Desktop\Clip1.jsp\
+2020-04-19 21:31:40.0954  INFO - 이미지 변환 성공!
+2020-04-19 21:31:40.0954  INFO - ==================== End ====================

@@ -722,6 +722,7 @@ namespace DocConvert_Util
                 panel3.Enabled = false;
                 panel4.Enabled = false;
                 panel5.Enabled = true;
+                checkBox2.Enabled = true;
             }
             else
             {
@@ -735,6 +736,7 @@ namespace DocConvert_Util
                 panel3.Enabled = true;
                 panel4.Enabled = true;
                 panel5.Enabled = false;
+                checkBox2.Enabled = false;
             }
         }
 

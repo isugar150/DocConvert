@@ -1,11 +1,11 @@
 {
-  "serverIP": "127.0.0.1",
+  "serverIP": "192.168.0.111",
   "ftpUser": "user1",
-  "ftpPwd": "1234",
+  "ftpPwd": "123458",
   "socketPort": "12000",
   "filePort": "12150",
   "isFTPS": true,
   "appvisible": true,
-  "runafter": true,
-  "pagingnum": true
+  "runafter": false,
+  "pagingnum": false
 }
