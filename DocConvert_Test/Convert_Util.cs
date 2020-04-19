@@ -348,7 +348,7 @@ namespace DocConvert_Util
                                 Setting["filePort"] = textBox6.Text;
                                 Setting["isFTPS"] = checkBox2.Checked;
                                 File.WriteAllText(Application.StartupPath + @"\Settings.json", Setting.ToString());
-                                tb2_appendText("FTP서버 " + serverIP + ":" + filePORT + "에 연결하였습니다.");
+                                tb2_appendText("File Server  " + serverIP + ":" + filePORT + "에 연결하였습니다.");
 
                                 ftpClient.UploadFile(textBox1.Text, "tmp/" + Path.GetFileName(textBox1.Text), FtpRemoteExists.Overwrite, true);
                                 tb2_appendText("서버에 파일을 업로드하였습니다.");
