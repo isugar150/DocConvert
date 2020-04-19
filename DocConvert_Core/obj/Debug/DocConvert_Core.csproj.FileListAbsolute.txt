@@ -85,3 +85,13 @@ C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert\obj\Debug\DocConvert_Core.
 C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\phantomjs.exe
 C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\rasterize.js
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert\obj\Debug\DocConvert_Core.csprojAssemblyReference.cache
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\Interop.HWPCONTROLLib.dll
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\AxInterop.HWPCONTROLLib.dll
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.csproj.ResolveComReference.cache
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.Properties.Resources.resources
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.csproj.GenerateResource.cache
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.csproj.CoreCompileInputs.cache
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.csproj.CopyComplete
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.dll
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.pdb
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.csprojAssemblyReference.cache
