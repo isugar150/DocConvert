@@ -116,3 +116,4 @@ String SourcePDF: 웹 캡쳐 URL
 String outPath: 이미지 내보낼 경로  
 ```
 ### License
+License 파일 참조
