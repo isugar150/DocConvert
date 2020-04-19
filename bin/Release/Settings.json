@@ -1,7 +1,0 @@
-{
-  "serverIP": "127.0.0.1",
-  "ftpUser": "Anonymous",
-  "ftpPwd": "",
-  "socketPort": "12000",
-  "filePort": "12100"
-}

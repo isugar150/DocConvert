@@ -63,6 +63,16 @@ namespace DocConvert_Server.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap DocConvert_Server {
+            get {
+                object obj = ResourceManager.GetObject("DocConvert_Server", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap error_icon {
             get {
                 object obj = ResourceManager.GetObject("error_icon", resourceCulture);

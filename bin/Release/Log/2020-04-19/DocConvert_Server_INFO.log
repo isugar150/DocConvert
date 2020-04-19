@@ -1,9 +1,0 @@
-2020-04-19 17:43:46.1234  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
-2020-04-19 17:43:46.1850  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
-2020-04-19 17:43:46.1850  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 30일   로그 정리 스케줄러: 30일
-2020-04-19 17:43:46.2509  INFO - [Socket] 핸들러 등록 완료
-2020-04-19 17:43:46.2509  INFO - [Socket] 서버 생성 성공
-2020-04-19 17:43:46.2637  INFO - [Socket] Server Listening...
-2020-04-19 17:43:46.2637  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
-2020-04-19 17:43:46.3017  INFO - [Web Socket] Server Listening...
-2020-04-19 17:43:46.3017  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005

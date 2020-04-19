@@ -805,3 +805,36 @@
 2020-04-19 17:41:50.5534  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
 2020-04-19 17:41:50.6571  INFO - [Web Socket] Server Listening...
 2020-04-19 17:41:50.6571  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-19 18:42:34.4956  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-19 18:42:34.7799  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-19 18:42:34.7799  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-19 18:42:34.7799  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-19 18:42:34.7799  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 30일   로그 정리 스케줄러: 30일
+2020-04-19 18:42:34.8905  INFO - [Socket] 핸들러 등록 완료
+2020-04-19 18:42:34.8905  INFO - [Socket] 서버 생성 성공
+2020-04-19 18:42:34.9288  INFO - [Socket] Server Listening...
+2020-04-19 18:42:34.9288  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-19 18:42:35.0611  INFO - [Web Socket] Server Listening...
+2020-04-19 18:42:35.0611  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-19 18:52:00.4543  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-19 18:52:00.7177  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-19 18:52:00.7177  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-19 18:52:00.7177  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-19 18:52:00.7177  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 30일   로그 정리 스케줄러: 30일
+2020-04-19 18:52:00.8222  INFO - [Socket] 핸들러 등록 완료
+2020-04-19 18:52:00.8222  INFO - [Socket] 서버 생성 성공
+2020-04-19 18:52:00.8818  INFO - [Socket] Server Listening...
+2020-04-19 18:52:00.8818  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-19 18:52:00.9701  INFO - [Web Socket] Server Listening...
+2020-04-19 18:52:00.9701  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-19 18:52:20.7785  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-19 18:52:20.9622  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-19 18:52:20.9622  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-19 18:52:20.9692  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-19 18:52:20.9692  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 30일   로그 정리 스케줄러: 30일
+2020-04-19 18:52:21.0819  INFO - [Socket] 핸들러 등록 완료
+2020-04-19 18:52:21.0819  INFO - [Socket] 서버 생성 성공
+2020-04-19 18:52:21.1135  INFO - [Socket] Server Listening...
+2020-04-19 18:52:21.1135  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-19 18:52:21.2137  INFO - [Web Socket] Server Listening...
+2020-04-19 18:52:21.2137  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
