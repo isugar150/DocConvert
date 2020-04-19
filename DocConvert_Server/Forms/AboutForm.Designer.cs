@@ -117,7 +117,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(661, 375);
+            this.textBox1.Size = new System.Drawing.Size(661, 450);
             this.textBox1.TabIndex = 3;
             // 
             // groupBox1
@@ -131,7 +131,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(676, 537);
+            this.groupBox1.Size = new System.Drawing.Size(676, 613);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "라이센스 정보";
@@ -149,7 +149,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Location = new System.Drawing.Point(183, 556);
+            this.label3.Location = new System.Drawing.Point(183, 632);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(676, 17);
             this.label3.TabIndex = 6;
@@ -159,7 +159,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(12, 556);
+            this.button1.Location = new System.Drawing.Point(12, 609);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(165, 40);
             this.button1.TabIndex = 7;
@@ -171,7 +171,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 605);
+            this.ClientSize = new System.Drawing.Size(870, 661);
             this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);

@@ -76,6 +76,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -100,6 +101,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.checkBox2);
             this.groupBox1.Controls.Add(this.panel7);
             this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Controls.Add(this.textBox4);
@@ -151,10 +153,10 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(270, 23);
+            this.textBox6.Location = new System.Drawing.Point(270, 53);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(77, 23);
-            this.textBox6.TabIndex = 3;
+            this.textBox6.TabIndex = 4;
             // 
             // textBox4
             // 
@@ -165,7 +167,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(182, 56);
+            this.label2.Location = new System.Drawing.Point(182, 27);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 15);
             this.label2.TabIndex = 17;
@@ -217,14 +219,14 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(270, 52);
+            this.textBox5.Location = new System.Drawing.Point(270, 23);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(77, 23);
-            this.textBox5.TabIndex = 5;
+            this.textBox5.TabIndex = 3;
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(186, 27);
+            this.label9.Location = new System.Drawing.Point(186, 57);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(75, 15);
             this.label9.TabIndex = 19;
@@ -254,7 +256,7 @@
             this.textBox8.Location = new System.Drawing.Point(94, 53);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(77, 23);
-            this.textBox8.TabIndex = 4;
+            this.textBox8.TabIndex = 5;
             // 
             // panel6
             // 
@@ -591,6 +593,16 @@
             this.textBox2.Size = new System.Drawing.Size(610, 193);
             this.textBox2.TabIndex = 0;
             // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(6, 217);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(87, 19);
+            this.checkBox2.TabIndex = 103;
+            this.checkBox2.Text = "check FTPS";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
             // Convert_Util
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -606,7 +618,8 @@
             this.MinimumSize = new System.Drawing.Size(664, 547);
             this.Name = "Convert_Util";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Convert_Util";
+            this.Text = "DocConvert Util";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Convert_Util_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -682,6 +695,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
 

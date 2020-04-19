@@ -11,7 +11,7 @@
     <Setting Name="소켓최대세션" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">100</Value>
     </Setting>
-    <Setting Name="최대로그개수" Type="System.Int32" Scope="Application">
+    <Setting Name="리스트박스최대로그개수" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">1000</Value>
     </Setting>
     <Setting Name="클라이언트키" Type="System.String" Scope="Application">
@@ -30,7 +30,7 @@
       <Value Profile="(Default)">12005</Value>
     </Setting>
     <Setting Name="FollowTail" Type="System.Boolean" Scope="Application">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="라이센스키" Type="System.String" Scope="Application">
       <Value Profile="(Default)">7kOQCsa87IIeLnU6hQyxTOzuV0Khg5cBBY5B5p75qAuzJlFKnC8zxpcXxyfsFTOLKn7hnUE4RuBi6VJV94/UlYAQT6is46zbBIsDiqck9In2erCV0LpIT6KQjpdK/hC2m1o4SQnIQkLTcQ735Vi5tWWgzADqL4q6HWOoiByIm0s=</Value>
@@ -41,11 +41,17 @@
     <Setting Name="작업공간정리스케줄러" Type="System.Boolean" Scope="Application">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="작업공간정리주기" Type="System.Int32" Scope="Application">
+    <Setting Name="작업공간정리주기_일" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">30</Value>
     </Setting>
-    <Setting Name="서버IP" Type="System.String" Scope="Application">
+    <Setting Name="바인딩_IP" Type="System.String" Scope="Application">
       <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="로그정리스케줄러" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="로그정리주기_일" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">30</Value>
     </Setting>
   </Settings>
 </SettingsFile>

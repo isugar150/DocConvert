@@ -17,6 +17,9 @@ using NLog;
 using System.Reflection;
 using DocConvert_Server.Forms;
 using Microsoft.Win32;
+using Microsoft.SqlServer.Server;
+
+// TODO FTPS 지원 (클라이언트단)
 
 namespace DocConvert_Server
 {
@@ -26,7 +29,7 @@ namespace DocConvert_Server
         private MainServer socketServer = new MainServer();
         private int wsSessionCount = 0;
         private static System.Windows.Forms.Timer tScheduler;
-        private const int CHECK_INTERVAL = 60; // 스케줄러 주기 (분)
+        private const int CHECK_INTERVAL = 60 * 24; // 스케줄러 주기 (분)
         private WebSocketListener webSocketServer = null;
         private JObject checkLicense = new JObject();
         public static bool isHwpConverting = false;
@@ -40,7 +43,7 @@ namespace DocConvert_Server
 
             if(args.Length == 0)
             {
-                DevLog.Write("[INFO] DocConvert Server를 수동으로 실행하였습니다.", LOG_LEVEL.INFO);
+                DevLog.Write("[INFO] DocConvert Server를 옵션없이 실행하였습니다.", LOG_LEVEL.INFO);
             }
             else
             {
@@ -79,7 +82,7 @@ namespace DocConvert_Server
             DirectoryInfo directoryInfo = new DirectoryInfo(Properties.Settings.Default.데이터경로 + @"\tmp");
             if (!directoryInfo.Exists)
                 directoryInfo.Create();
-            toolStripStatusLabel4.Text = "IP Address: " + Properties.Settings.Default.서버IP;
+            toolStripStatusLabel4.Text = "IP Address: " + Properties.Settings.Default.바인딩_IP;
             toolStripStatusLabel5.Text = "Socket Port: : " + Properties.Settings.Default.소켓서버포트.ToString();
             toolStripStatusLabel6.Text = "WebSocket Port: " + Properties.Settings.Default.웹소켓포트.ToString();
             toolStripStatusLabel7.Text = "File Server Port: " + Properties.Settings.Default.파일서버포트.ToString();
@@ -93,9 +96,14 @@ namespace DocConvert_Server
             }
             #endregion
             #region 스케줄러 관련
-            if (Properties.Settings.Default.작업공간정리스케줄러)
+            if (Properties.Settings.Default.작업공간정리스케줄러 || Properties.Settings.Default.로그정리스케줄러)
             {
-                DevLog.Write("[Scheduler] 스케줄러가 실행중입니다. ");
+                string SchedulerInfo = "";
+                if (Properties.Settings.Default.작업공간정리스케줄러)
+                    SchedulerInfo += string.Format("작업공간 정리 스케줄러: {0}일   ", Properties.Settings.Default.작업공간정리주기_일);
+                if (Properties.Settings.Default.로그정리스케줄러)
+                    SchedulerInfo += string.Format("로그 정리 스케줄러: {0}일", Properties.Settings.Default.로그정리주기_일);
+                DevLog.Write("[Scheduler] 스케줄러가 실행중입니다. " + SchedulerInfo, LOG_LEVEL.INFO);
 
                 tScheduler = new System.Windows.Forms.Timer();
                 tScheduler.Interval = CalculateTimerInterval(CHECK_INTERVAL);
@@ -119,7 +127,7 @@ namespace DocConvert_Server
             if (IsResult)
             {
                 DevLog.Write("[Socket] Server Listening...", LOG_LEVEL.INFO);
-                DevLog.Write(string.Format("[Socket][INFO] IP: {0}   포트: {1}   프로토콜: {2}   서버이름: {3}", Properties.Settings.Default.서버IP, socketServer.Config.Port, socketServer.Config.Mode, socketServer.Config.Name), LOG_LEVEL.INFO);
+                DevLog.Write(string.Format("[Socket][INFO] IP: {0}   포트: {1}   프로토콜: {2}   서버이름: {3}", Properties.Settings.Default.바인딩_IP, socketServer.Config.Port, socketServer.Config.Mode, socketServer.Config.Name), LOG_LEVEL.INFO);
 
                 pictureBox1.Image = DocConvert_Server.Properties.Resources.success_icon;
             }
@@ -135,11 +143,11 @@ namespace DocConvert_Server
             {
                 CancellationTokenSource cancellation = new CancellationTokenSource();
                 //var endpoint = new IPEndPoint(IPAddress.Any, 1818);
-                var endpoint = new IPEndPoint(IPAddress.Parse(Properties.Settings.Default.서버IP), Properties.Settings.Default.웹소켓포트);
+                var endpoint = new IPEndPoint(IPAddress.Parse(Properties.Settings.Default.바인딩_IP), Properties.Settings.Default.웹소켓포트);
                 var options = new WebSocketListenerOptions()
                 {
-                    WebSocketReceiveTimeout = new TimeSpan(0, 3, 0),
-                    WebSocketSendTimeout = new TimeSpan(0, 0, 5), // 클라이언트가 연결을 끊었을때 타임아웃
+                    WebSocketReceiveTimeout = new TimeSpan(0, 3, 0), // 클라이언트가 서버로 요청했을때 서버가 바쁘면 Timeout
+                    WebSocketSendTimeout = new TimeSpan(0, 0, 5), // 클라이언트가 연결을 끊었을때 Timeout
                     NegotiationTimeout = new TimeSpan(0, 3, 0),
                     PingTimeout = new TimeSpan(0, 3, 0),
                     PingMode = PingModes.LatencyControl
@@ -298,7 +306,7 @@ namespace DocConvert_Server
                 {
                     ++logWorkCount;
 
-                    if (listBoxLog.Items.Count >= Properties.Settings.Default.최대로그개수)
+                    if (listBoxLog.Items.Count >= Properties.Settings.Default.리스트박스최대로그개수)
                     {
                         listBoxLog.Items.RemoveAt(0);
                     }
@@ -311,7 +319,7 @@ namespace DocConvert_Server
                         textBox1.AppendText(msg + "\r\n");
                     }
 
-                    toolStripStatusLabel1.Text = string.Format("LogCount: {0}/{1}", listBoxLog.Items.Count, Properties.Settings.Default.최대로그개수);
+                    toolStripStatusLabel1.Text = string.Format("LogCount: {0}/{1}", listBoxLog.Items.Count, Properties.Settings.Default.리스트박스최대로그개수);
                 }
                 else
                 {
@@ -474,10 +482,18 @@ namespace DocConvert_Server
 
         private void tScheduler_Tick(object sender, EventArgs e)
         {
-            DevLog.Write("[Scheduler] 작업폴더 삭제 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
             tScheduler.Interval = CalculateTimerInterval(CHECK_INTERVAL);
-            deleteFolder(Properties.Settings.Default.데이터경로 + @"\workspace", Properties.Settings.Default.작업공간정리주기);
-            deleteFolder(Properties.Settings.Default.데이터경로 + @"\tmp", Properties.Settings.Default.작업공간정리주기);
+            if (Properties.Settings.Default.작업공간정리스케줄러)
+            {
+                DevLog.Write("[Scheduler] 작업공간 삭제 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
+                deleteFolder(Properties.Settings.Default.데이터경로 + @"\workspace", Properties.Settings.Default.작업공간정리주기_일);
+                deleteFolder(Properties.Settings.Default.데이터경로 + @"\tmp", Properties.Settings.Default.작업공간정리주기_일);
+            }
+            if (Properties.Settings.Default.로그정리스케줄러)
+            {
+                DevLog.Write("[Scheduler] 로그 삭제 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
+                deleteFolder(Application.StartupPath + @"\Log", Properties.Settings.Default.로그정리주기_일);
+            }
         }
 
         public static void deleteFolder(string strPath, int DeletionCycle)

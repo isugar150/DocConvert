@@ -11,6 +11,7 @@ public class getProperties {
     private int ftpPORT;
     private String ftpUSER;
     private String ftpPASS;
+    private boolean isFTPS;
     private boolean OnlyImgDownload;
 
     public String getServerIP() {
@@ -26,6 +27,8 @@ public class getProperties {
     public String getFtpUSER() { return ftpUSER; }
 
     public String getFtpPASS() { return ftpPASS; }
+
+    public boolean getIsFTPS() { return isFTPS; }
 
     public boolean getOnlyImgDownload() { return OnlyImgDownload; }
 
@@ -56,7 +59,8 @@ public class getProperties {
             this.ftpPORT = Integer.parseInt(props.getProperty("ftpPORT").trim());
             this.ftpUSER = props.getProperty("ftpUSER").trim();
             this.ftpPASS = props.getProperty("ftpPASS").trim();
-            this.OnlyImgDownload = Boolean.getBoolean("OnlyImgDownload");
+            this.isFTPS = Boolean.parseBoolean(props.getProperty("isFTPS").trim());
+            this.OnlyImgDownload = Boolean.parseBoolean(props.getProperty("OnlyImgDownload").trim());
             return true;
         } catch (Exception e) {
             e.printStackTrace();

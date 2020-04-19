@@ -1,0 +1,798 @@
+2020-04-19 13:11:53.5256  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-19 13:11:53.7287  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-19 13:11:53.7287  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-19 13:11:53.7443  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-19 13:11:53.7443  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 30일   로그 정리 스케줄러: 30일
+2020-04-19 13:11:53.8380  INFO - [Socket] 핸들러 등록 완료
+2020-04-19 13:11:53.8380  INFO - [Socket] 서버 생성 성공
+2020-04-19 13:11:53.8849  INFO - [Socket] Server Listening...
+2020-04-19 13:11:53.8849  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-19 13:11:53.9630  INFO - [Web Socket] Server Listening...
+2020-04-19 13:11:53.9630  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-19 13:12:04.6640  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertIMG": 2
+}
+
+2020-04-19 13:12:10.0534  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "5",
+  "URL": "/workspace/2B699FCE2A5094957B24445F97FCE8CC",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 13:12:10.0534  INFO - [Socket] 작업 소요시간: 00:00:05.3893547
+2020-04-19 13:12:10.2408  INFO - [Socket] 세션ID: 0dab01a5-371e-4ac2-a30f-8198d44ef9cd 접속해제: ClientClosing
+2020-04-19 13:15:20.7646  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Word 시작.docx",
+  "ConvertIMG": 2
+}
+
+2020-04-19 13:15:25.3054  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "8",
+  "URL": "/workspace/FC88A00681BEA2BA4BCA029AEC82643A",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 13:15:25.3054  INFO - [Socket] 작업 소요시간: 00:00:04.5407587
+2020-04-19 13:15:25.4616  INFO - [Socket] 세션ID: 5d6c2760-a469-492d-9e17-23ffe043b951 접속해제: ClientClosing
+2020-04-19 13:15:32.3630  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작.xlsx",
+  "ConvertIMG": 2
+}
+
+2020-04-19 13:15:47.6719  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "92",
+  "URL": "/workspace/8DF91B0995A750BFE6B8873646995F7B",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 13:15:47.6719  INFO - [Socket] 작업 소요시간: 00:00:15.3089046
+2020-04-19 13:15:49.0778  INFO - [Socket] 세션ID: 0246fb2d-0b04-4974-8b63-52d5ab0bee6c 접속해제: ClientClosing
+2020-04-19 13:16:37.2540  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-19 13:16:37.4258  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-19 13:16:37.4258  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-19 13:16:37.4258  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-19 13:16:37.4414  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 30일   로그 정리 스케줄러: 30일
+2020-04-19 13:16:37.5195  INFO - [Socket] 핸들러 등록 완료
+2020-04-19 13:16:37.5195  INFO - [Socket] 서버 생성 성공
+2020-04-19 13:16:37.5664  INFO - [Socket] Server Listening...
+2020-04-19 13:16:37.5664  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-19 13:16:37.6601  INFO - [Web Socket] Server Listening...
+2020-04-19 13:16:37.6601  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-19 13:17:25.9127  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "DocConvert.docx",
+  "ConvertIMG": 1
+}
+
+2020-04-19 13:17:30.1305  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "5",
+  "URL": "/workspace/2E48D4CF48C7B4A7959CD45D68C9E915",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 13:17:30.1305  INFO - [Socket] 작업 소요시간: 00:00:04.2177861
+2020-04-19 13:17:30.2711  INFO - [Socket] 세션ID: 6d2b7a5e-06e5-4a7d-a7b9-79ee47133409 접속해제: ClientClosing
+2020-04-19 13:17:55.0889  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작.xlsx",
+  "ConvertIMG": 1
+}
+
+2020-04-19 13:18:08.5076  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "92",
+  "URL": "/workspace/8DF91B0995A750BFE6B8873646995F7B",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 13:18:08.5076  INFO - [Socket] 작업 소요시간: 00:00:13.4187105
+2020-04-19 13:18:09.8198  INFO - [Socket] 세션ID: 8462a29b-e47a-4260-8124-5bb4545f1e49 접속해제: ClientClosing
+2020-04-19 13:18:15.8953  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Word 시작.docx",
+  "ConvertIMG": 1
+}
+
+2020-04-19 13:18:20.0975  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "8",
+  "URL": "/workspace/FC88A00681BEA2BA4BCA029AEC82643A",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 13:18:20.0975  INFO - [Socket] 작업 소요시간: 00:00:04.2021725
+2020-04-19 13:18:20.2693  INFO - [Socket] 세션ID: 3b97b623-3669-4d53-bf2a-563ad92e8823 접속해제: ClientClosing
+2020-04-19 13:19:00.6964  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-19 13:19:00.8839  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-19 13:19:00.8839  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-19 13:19:00.8839  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-19 13:19:00.8839  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 30일   로그 정리 스케줄러: 30일
+2020-04-19 13:19:00.9776  INFO - [Socket] 핸들러 등록 완료
+2020-04-19 13:19:00.9776  INFO - [Socket] 서버 생성 성공
+2020-04-19 13:19:01.0401  INFO - [Socket] Server Listening...
+2020-04-19 13:19:01.0401  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-19 13:19:01.1494  INFO - [Web Socket] Server Listening...
+2020-04-19 13:19:01.1494  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-19 13:19:21.5406  INFO - [INFO] DocConvert Server를 수동으로 실행하였습니다.
+2020-04-19 13:19:21.7281  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-19 13:19:21.7281  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-19 13:19:21.7281  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-19 13:19:21.7281  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 30일   로그 정리 스케줄러: 30일
+2020-04-19 13:19:21.8374  INFO - [Socket] 핸들러 등록 완료
+2020-04-19 13:19:21.8374  INFO - [Socket] 서버 생성 성공
+2020-04-19 13:19:21.8843  INFO - [Socket] Server Listening...
+2020-04-19 13:19:21.8843  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-19 13:19:21.9936  INFO - [Web Socket] Server Listening...
+2020-04-19 13:19:21.9936  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-19 13:19:36.1600  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-19 13:19:36.3475  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-19 13:19:36.3475  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-19 13:19:36.3475  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-19 13:19:36.3475  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 30일   로그 정리 스케줄러: 30일
+2020-04-19 13:19:36.4724  INFO - [Socket] 핸들러 등록 완료
+2020-04-19 13:19:36.4724  INFO - [Socket] 서버 생성 성공
+2020-04-19 13:19:36.5193  INFO - [Socket] Server Listening...
+2020-04-19 13:19:36.5193  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-19 13:19:36.6287  INFO - [Web Socket] Server Listening...
+2020-04-19 13:19:36.6287  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-19 13:19:51.1076  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-19 13:19:51.2951  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-19 13:19:51.2951  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-19 13:19:51.2951  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-19 13:19:51.2951  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 30일   로그 정리 스케줄러: 30일
+2020-04-19 13:19:51.3888  INFO - [Socket] 핸들러 등록 완료
+2020-04-19 13:19:51.3888  INFO - [Socket] 서버 생성 성공
+2020-04-19 13:19:51.4201  INFO - [Socket] Server Listening...
+2020-04-19 13:19:51.4201  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-19 13:19:51.5138  INFO - [Web Socket] Server Listening...
+2020-04-19 13:19:51.5138  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-19 13:20:00.0118  INFO - [Scheduler] 작업폴더 삭제 스케줄러가 실행되었습니다.
+2020-04-19 13:20:41.1220  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-19 13:20:41.3251  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-19 13:20:41.3251  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-19 13:20:41.3251  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-19 13:20:41.3251  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 30일   로그 정리 스케줄러: 30일
+2020-04-19 13:20:41.4345  INFO - [Socket] 핸들러 등록 완료
+2020-04-19 13:20:41.4345  INFO - [Socket] 서버 생성 성공
+2020-04-19 13:20:41.4813  INFO - [Socket] Server Listening...
+2020-04-19 13:20:41.4813  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-19 13:20:41.6063  INFO - [Web Socket] Server Listening...
+2020-04-19 13:20:41.6063  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-19 13:20:49.9325  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "PowerPoint 시작.pptx",
+  "ConvertIMG": 2
+}
+
+2020-04-19 13:20:52.0832  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "9",
+  "URL": "/workspace/EF571FDA3EDF671CBBF1EDDF9C63C0ED",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 13:20:52.0832  INFO - [Socket] 작업 소요시간: 00:00:02.1506869
+2020-04-19 13:20:52.2862  INFO - [Socket] 세션ID: 7a1c6017-11b4-4a27-b712-053e4372b27d 접속해제: ClientClosing
+2020-04-19 13:21:00.0132  INFO - [Scheduler] 작업공간 삭제 스케줄러가 실행되었습니다.
+2020-04-19 13:21:00.0444  INFO - [Scheduler] 로그 삭제 스케줄러가 실행되었습니다.
+2020-04-19 13:22:00.0090  INFO - [Scheduler] 작업공간 삭제 스케줄러가 실행되었습니다.
+2020-04-19 13:22:00.0396  INFO - [Scheduler] 로그 삭제 스케줄러가 실행되었습니다.
+2020-04-19 13:25:32.5207  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-19 13:25:32.8957  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-19 13:25:32.8957  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-19 13:25:32.8957  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-19 13:25:32.9113  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 30일   로그 정리 스케줄러: 30일
+2020-04-19 13:25:33.0050  INFO - [Socket] 핸들러 등록 완료
+2020-04-19 13:25:33.0050  INFO - [Socket] 서버 생성 성공
+2020-04-19 13:25:33.0362  INFO - [Socket] Server Listening...
+2020-04-19 13:25:33.0362  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-19 13:25:33.1300  INFO - [Web Socket] Server Listening...
+2020-04-19 13:25:33.1300  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-19 13:27:30.9980  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-19 13:27:31.2167  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-19 13:27:31.2167  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-19 13:27:31.2479  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-19 13:27:31.2479  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 30일   로그 정리 스케줄러: 30일
+2020-04-19 13:27:31.3729  INFO - [Socket] 핸들러 등록 완료
+2020-04-19 13:27:31.3729  INFO - [Socket] 서버 생성 성공
+2020-04-19 13:27:31.4042  INFO - [Socket] Server Listening...
+2020-04-19 13:27:31.4042  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-19 13:27:31.5291  INFO - [Web Socket] Server Listening...
+2020-04-19 13:27:31.5291  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-19 13:52:02.8313  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-19 13:52:03.1749  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-19 13:52:03.1749  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-19 13:52:03.1749  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-19 13:52:03.1749  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 30일   로그 정리 스케줄러: 30일
+2020-04-19 13:52:03.2687  INFO - [Socket] 핸들러 등록 완료
+2020-04-19 13:52:03.2687  INFO - [Socket] 서버 생성 성공
+2020-04-19 13:52:03.3155  INFO - [Socket] Server Listening...
+2020-04-19 13:52:03.3155  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-19 13:52:03.4249  INFO - [Web Socket] Server Listening...
+2020-04-19 13:52:03.4249  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-19 14:00:03.2777  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-19 14:00:03.5121  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-19 14:00:03.5121  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-19 14:00:03.5121  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-19 14:00:03.5121  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 30일   로그 정리 스케줄러: 30일
+2020-04-19 14:00:03.6214  INFO - [Socket] 핸들러 등록 완료
+2020-04-19 14:00:03.6214  INFO - [Socket] 서버 생성 성공
+2020-04-19 14:00:03.6527  INFO - [Socket] Server Listening...
+2020-04-19 14:00:03.6527  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-19 14:00:03.7464  INFO - [Web Socket] Server Listening...
+2020-04-19 14:00:03.7464  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-19 14:16:23.4592  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-19 14:16:23.6154  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-19 14:16:23.6154  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-19 14:16:23.6154  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-19 14:16:23.6154  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 30일   로그 정리 스케줄러: 30일
+2020-04-19 14:16:23.6623  INFO - [Socket] 핸들러 등록 완료
+2020-04-19 14:16:23.6623  INFO - [Socket] 서버 생성 성공
+2020-04-19 14:16:23.6935  INFO - [Socket] Server Listening...
+2020-04-19 14:16:23.6935  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-19 14:16:23.7404  INFO - [Web Socket] Server Listening...
+2020-04-19 14:16:23.7404  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-19 14:16:56.0416  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "DocConvert.docx",
+  "ConvertIMG": 1
+}
+
+2020-04-19 14:17:00.7752  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "5",
+  "URL": "/workspace/2E48D4CF48C7B4A7959CD45D68C9E915",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 14:17:00.7752  INFO - [Socket] 작업 소요시간: 00:00:04.7336431
+2020-04-19 14:17:01.0564  INFO - [Socket] 세션ID: 1e00350c-98c7-4ae2-8f80-9db85ba6344e 접속해제: ClientClosing
+2020-04-19 14:17:09.9614  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "DocConvert.docx",
+  "ConvertIMG": 0
+}
+
+2020-04-19 14:17:14.0998  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/2E48D4CF48C7B4A7959CD45D68C9E915",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 14:17:14.0998  INFO - [Socket] 작업 소요시간: 00:00:04.1383383
+2020-04-19 14:17:14.2400  INFO - [Socket] 세션ID: ef3e8e2e-94d6-4b4f-83c5-095eb5e5385c 접속해제: ClientClosing
+2020-04-19 14:17:27.2453  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com"
+}
+
+2020-04-19 14:17:40.3452  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/0ee4e333-e23d-4e9d-8dd0-4e84006409b2_2020-04-19/0.png",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 1,
+  "Method": "WebCapture"
+}
+
+2020-04-19 14:17:40.3452  INFO - [Socket] 작업 소요시간: 00:00:13.0998753
+2020-04-19 14:17:40.4543  INFO - [Socket] 세션ID: 503b2cad-8ab8-4b57-8817-fe9516d15a3f 접속해제: ClientClosing
+2020-04-19 14:20:42.8951  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-19 14:20:43.0454  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-19 14:20:43.0454  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-19 14:20:43.0454  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-19 14:20:43.0454  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 30일   로그 정리 스케줄러: 30일
+2020-04-19 14:20:43.0962  INFO - [Socket] 핸들러 등록 완료
+2020-04-19 14:20:43.0962  INFO - [Socket] 서버 생성 성공
+2020-04-19 14:20:43.1295  INFO - [Socket] Server Listening...
+2020-04-19 14:20:43.1295  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-19 14:20:43.1742  INFO - [Web Socket] Server Listening...
+2020-04-19 14:20:43.1742  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-19 14:21:03.8194  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작.xlsx",
+  "ConvertIMG": 0
+}
+
+2020-04-19 14:21:18.0201  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/8DF91B0995A750BFE6B8873646995F7B",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 14:21:18.0201  INFO - [Socket] 작업 소요시간: 00:00:14.2006453
+2020-04-19 14:21:18.1294  INFO - [Socket] 세션ID: 4152ea93-0cb8-4b62-a2f0-54941112d09e 접속해제: ClientClosing
+2020-04-19 14:21:22.2106  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작.xlsx",
+  "ConvertIMG": 1
+}
+
+2020-04-19 14:21:36.1154  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "92",
+  "URL": "/workspace/8DF91B0995A750BFE6B8873646995F7B",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 14:21:36.1154  INFO - [Socket] 작업 소요시간: 00:00:13.9037583
+2020-04-19 14:21:38.8351  INFO - [Socket] 세션ID: caace1e8-1ecf-4598-a93c-d5b9a6063b42 접속해제: ClientClosing
+2020-04-19 14:23:41.5007  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-19 14:23:41.6413  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-19 14:23:41.6413  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-19 14:23:41.6413  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-19 14:23:41.6413  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 30일   로그 정리 스케줄러: 30일
+2020-04-19 14:23:41.6882  INFO - [Socket] 핸들러 등록 완료
+2020-04-19 14:23:41.6882  INFO - [Socket] 서버 생성 성공
+2020-04-19 14:23:41.7350  INFO - [Socket] Server Listening...
+2020-04-19 14:23:41.7350  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-19 14:23:41.7662  INFO - [Web Socket] Server Listening...
+2020-04-19 14:23:41.7662  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-19 14:23:54.8355  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "DocConvert.docx",
+  "ConvertIMG": 0
+}
+
+2020-04-19 14:23:59.1258  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/2E48D4CF48C7B4A7959CD45D68C9E915",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 14:23:59.1258  INFO - [Socket] 작업 소요시간: 00:00:04.2902656
+2020-04-19 14:23:59.2508  INFO - [Socket] 세션ID: 7263d2fe-2c9a-42a5-bbda-638082056dec 접속해제: ClientClosing
+2020-04-19 14:24:01.6026  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "DocConvert.docx",
+  "ConvertIMG": 1
+}
+
+2020-04-19 14:24:05.8516  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "5",
+  "URL": "/workspace/2E48D4CF48C7B4A7959CD45D68C9E915",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 14:24:05.8516  INFO - [Socket] 작업 소요시간: 00:00:04.2489980
+2020-04-19 14:24:06.0859  INFO - [Socket] 세션ID: be24f3a0-98bf-4bb9-a7d2-e73112f9aaad 접속해제: ClientClosing
+2020-04-19 14:24:17.9286  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com"
+}
+
+2020-04-19 14:24:27.2642  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/e39b4742-c650-45e4-b8d5-965f90275bda_2020-04-19/0.png",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 1,
+  "Method": "WebCapture"
+}
+
+2020-04-19 14:24:27.2642  INFO - [Socket] 작업 소요시간: 00:00:09.3355141
+2020-04-19 14:24:27.3891  INFO - [Socket] 세션ID: 44f593aa-86bc-4ff9-831e-b4b4c176ce64 접속해제: ClientClosing
+2020-04-19 14:33:10.7078  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-19 14:33:10.9030  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-19 14:33:10.9030  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-19 14:33:10.9130  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-19 14:33:10.9130  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 30일   로그 정리 스케줄러: 30일
+2020-04-19 14:33:11.0127  INFO - [Socket] 핸들러 등록 완료
+2020-04-19 14:33:11.0127  INFO - [Socket] 서버 생성 성공
+2020-04-19 14:33:11.0627  INFO - [Socket] Server Listening...
+2020-04-19 14:33:11.0627  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-19 14:33:11.1629  INFO - [Web Socket] Server Listening...
+2020-04-19 14:33:11.1629  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-19 15:06:49.9333  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:10578
+2020-04-19 15:06:50.0113  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작.xlsx",
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "ConvertIMG": 1
+}
+
+2020-04-19 15:07:04.3931  INFO - 
+[WebSocket][Server => Client]
+{
+  "convertImgCnt": "92",
+  "URL": "/workspace/8DF91B0995A750BFE6B8873646995F7B",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 15:07:04.3931  INFO - [WebSocket] 작업 소요시간: 00:00:14.4130520
+2020-04-19 15:07:04.3931  INFO - [WebSocket]서버와 연결이 해제되었습니다.
+2020-04-19 15:08:04.5005  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "Word 시작.docx",
+  "ConvertIMG": 0
+}
+
+2020-04-19 15:08:08.9214  INFO - 
+[Socket][Server => Client]
+{
+  "URL": "/workspace/FC88A00681BEA2BA4BCA029AEC82643A",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 15:08:08.9214  INFO - [Socket] 작업 소요시간: 00:00:04.4208327
+2020-04-19 15:08:08.9996  INFO - [Socket] 세션ID: 47c71d08-83f3-4903-8af4-08104319082b 접속해제: ClientClosing
+2020-04-19 15:28:09.7850  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "DocConvert.docx",
+  "ConvertIMG": 1
+}
+
+2020-04-19 15:28:14.2058  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "5",
+  "URL": "/workspace/2E48D4CF48C7B4A7959CD45D68C9E915",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 15:28:14.2058  INFO - [Socket] 작업 소요시간: 00:00:04.4208613
+2020-04-19 15:28:14.3620  INFO - [Socket] 세션ID: 3d706c3c-e363-4281-955f-cf23a079736b 접속해제: ClientClosing
+2020-04-19 15:28:40.8764  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "DocConvert.docx",
+  "ConvertIMG": 1
+}
+
+2020-04-19 15:28:45.0005  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "5",
+  "URL": "/workspace/2E48D4CF48C7B4A7959CD45D68C9E915",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 15:28:45.0005  INFO - [Socket] 작업 소요시간: 00:00:04.1240265
+2020-04-19 15:28:45.1411  INFO - [Socket] 세션ID: 8c56126b-8c5d-44af-ab77-e9a1171e1da7 접속해제: ClientClosing
+2020-04-19 15:48:37.6551  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:11603
+2020-04-19 15:48:37.6551  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작.xlsx",
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "ConvertIMG": 0
+}
+
+2020-04-19 15:48:37.7020  INFO - 변환중 오류발생 자세한 내용은 오류로그 참고
+2020-04-19 15:48:37.7176  INFO - 
+[WebSocket][Server => Client]
+{
+  "isSuccess": false,
+  "msg": "'C:\\Data\\tmp\\Excel 시작.xlsx' 파일을 찾을 수 없습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 15:48:37.7176  INFO - [WebSocket] 작업 소요시간: 00:00:00.0624855
+2020-04-19 15:48:37.7176  INFO - [WebSocket]서버와 연결이 해제되었습니다.
+2020-04-19 15:53:36.1858  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:11744
+2020-04-19 15:53:36.2014  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작.xlsx",
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "ConvertIMG": 0
+}
+
+2020-04-19 15:53:36.2171  INFO - 변환중 오류발생 자세한 내용은 오류로그 참고
+2020-04-19 15:53:36.2171  INFO - 
+[WebSocket][Server => Client]
+{
+  "isSuccess": false,
+  "msg": "'C:\\Data\\tmp\\Excel 시작.xlsx' 파일을 찾을 수 없습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 15:53:36.2171  INFO - [WebSocket] 작업 소요시간: 00:00:00.0156218
+2020-04-19 15:53:36.2171  INFO - [WebSocket]서버와 연결이 해제되었습니다.
+2020-04-19 15:56:41.2027  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:11770
+2020-04-19 15:56:41.2183  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작.xlsx",
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "ConvertIMG": 0
+}
+
+2020-04-19 15:56:41.2339  INFO - 변환중 오류발생 자세한 내용은 오류로그 참고
+2020-04-19 15:56:41.2339  INFO - 
+[WebSocket][Server => Client]
+{
+  "isSuccess": false,
+  "msg": "'C:\\Data\\tmp\\Excel 시작.xlsx' 파일을 찾을 수 없습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 15:56:41.2339  INFO - [WebSocket] 작업 소요시간: 00:00:00.0156221
+2020-04-19 15:56:41.2339  INFO - [WebSocket]서버와 연결이 해제되었습니다.
+2020-04-19 15:58:07.3270  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:11785
+2020-04-19 15:58:07.3426  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "ConvertIMG": 0
+}
+
+2020-04-19 15:58:07.3582  INFO - 변환중 오류발생 자세한 내용은 오류로그 참고
+2020-04-19 15:58:07.3582  INFO - 
+[WebSocket][Server => Client]
+{
+  "isSuccess": false,
+  "msg": "'C:\\Data\\tmp\\Welcome to Hwp.hwp' 파일을 찾을 수 없습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 15:58:07.3582  INFO - [WebSocket] 작업 소요시간: 00:00:00.0156201
+2020-04-19 15:58:07.3582  INFO - [WebSocket]서버와 연결이 해제되었습니다.
+2020-04-19 15:59:37.5495  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:11801
+2020-04-19 15:59:37.5651  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작.xlsx",
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "ConvertIMG": 0
+}
+
+2020-04-19 15:59:37.5808  INFO - 변환중 오류발생 자세한 내용은 오류로그 참고
+2020-04-19 15:59:37.5808  INFO - 
+[WebSocket][Server => Client]
+{
+  "isSuccess": false,
+  "msg": "'C:\\Data\\tmp\\Excel 시작.xlsx' 파일을 찾을 수 없습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 15:59:37.5808  INFO - [WebSocket] 작업 소요시간: 00:00:00.0156209
+2020-04-19 15:59:37.5808  INFO - [WebSocket]서버와 연결이 해제되었습니다.
+2020-04-19 16:07:53.1066  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-19 16:07:53.4786  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-19 16:07:53.4786  INFO - [INFO] 라이센스 만료날짜: 2021-10-20
+2020-04-19 16:07:53.4786  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-19 16:07:53.4786  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 30일   로그 정리 스케줄러: 30일
+2020-04-19 16:07:53.7528  INFO - [Socket] 핸들러 등록 완료
+2020-04-19 16:07:53.7528  INFO - [Socket] 서버 생성 성공
+2020-04-19 16:07:53.9234  INFO - [Socket] Server Listening...
+2020-04-19 16:07:53.9234  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-19 16:07:54.1518  INFO - [Web Socket] Server Listening...
+2020-04-19 16:07:54.1518  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-19 16:08:27.9657  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:1272
+2020-04-19 16:08:28.0282  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "Method": "DocConvert",
+  "FileName": "PowerPoint 시작.pptx",
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "ConvertIMG": 1
+}
+
+2020-04-19 16:08:28.0751  INFO - 변환중 오류발생 자세한 내용은 오류로그 참고
+2020-04-19 16:08:28.0907  INFO - 
+[WebSocket][Server => Client]
+{
+  "isSuccess": false,
+  "msg": "'C:\\Data\\tmp\\PowerPoint 시작.pptx' 파일을 찾을 수 없습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 16:08:28.0907  INFO - [WebSocket] 작업 소요시간: 00:00:00.1093762
+2020-04-19 16:08:28.0907  INFO - [WebSocket]서버와 연결이 해제되었습니다.
+2020-04-19 16:09:09.4154  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:1333
+2020-04-19 16:09:09.4310  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "Method": "DocConvert",
+  "FileName": "PowerPoint 시작.pptx",
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "ConvertIMG": 0
+}
+
+2020-04-19 16:09:09.4466  INFO - 변환중 오류발생 자세한 내용은 오류로그 참고
+2020-04-19 16:09:09.4466  INFO - 
+[WebSocket][Server => Client]
+{
+  "isSuccess": false,
+  "msg": "'C:\\Data\\tmp\\PowerPoint 시작.pptx' 파일을 찾을 수 없습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 16:09:09.4466  INFO - [WebSocket] 작업 소요시간: 00:00:00.0156222
+2020-04-19 16:09:09.4466  INFO - [WebSocket]서버와 연결이 해제되었습니다.
+2020-04-19 16:12:26.5171  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:1464
+2020-04-19 16:12:26.5290  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "Method": "DocConvert",
+  "FileName": "PowerPoint 시작.pptx",
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "ConvertIMG": 1
+}
+
+2020-04-19 16:12:32.3858  INFO - 
+[WebSocket][Server => Client]
+{
+  "convertImgCnt": "9",
+  "URL": "/workspace/EF571FDA3EDF671CBBF1EDDF9C63C0ED",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 16:12:32.3858  INFO - [WebSocket] 작업 소요시간: 00:00:05.8577349
+2020-04-19 16:12:32.3858  INFO - [WebSocket]서버와 연결이 해제되었습니다.
+2020-04-19 16:13:18.5919  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:1488
+2020-04-19 16:13:18.6049  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "Method": "DocConvert",
+  "FileName": "PowerPoint 시작.pptx",
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "ConvertIMG": 0
+}
+
+2020-04-19 16:13:20.5587  INFO - 
+[WebSocket][Server => Client]
+{
+  "URL": "/workspace/EF571FDA3EDF671CBBF1EDDF9C63C0ED",
+  "isSuccess": true,
+  "msg": "변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 16:13:20.5587  INFO - [WebSocket] 작업 소요시간: 00:00:01.9538137
+2020-04-19 16:13:20.5587  INFO - [WebSocket]서버와 연결이 해제되었습니다.
+2020-04-19 16:14:13.4586  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:1529
+2020-04-19 16:14:13.4700  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "Method": "DocConvert",
+  "FileName": "PowerPoint 시작.pptx",
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "ConvertIMG": 2
+}
+
+2020-04-19 16:14:15.6369  INFO - 
+[WebSocket][Server => Client]
+{
+  "convertImgCnt": "9",
+  "URL": "/workspace/EF571FDA3EDF671CBBF1EDDF9C63C0ED",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-19 16:14:15.6369  INFO - [WebSocket] 작업 소요시간: 00:00:02.1668793
+2020-04-19 16:14:15.6369  INFO - [WebSocket]서버와 연결이 해제되었습니다.

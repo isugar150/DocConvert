@@ -53,9 +53,9 @@ namespace DocConvert_Server.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1000")]
-        public int 최대로그개수 {
+        public int 리스트박스최대로그개수 {
             get {
-                return ((int)(this["최대로그개수"]));
+                return ((int)(this["리스트박스최대로그개수"]));
             }
         }
         
@@ -106,7 +106,7 @@ namespace DocConvert_Server.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool FollowTail {
             get {
                 return ((bool)(this["FollowTail"]));
@@ -145,18 +145,36 @@ namespace DocConvert_Server.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("30")]
-        public int 작업공간정리주기 {
+        public int 작업공간정리주기_일 {
             get {
-                return ((int)(this["작업공간정리주기"]));
+                return ((int)(this["작업공간정리주기_일"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("127.0.0.1")]
-        public string 서버IP {
+        public string 바인딩_IP {
             get {
-                return ((string)(this["서버IP"]));
+                return ((string)(this["바인딩_IP"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool 로그정리스케줄러 {
+            get {
+                return ((bool)(this["로그정리스케줄러"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("30")]
+        public int 로그정리주기_일 {
+            get {
+                return ((int)(this["로그정리주기_일"]));
             }
         }
     }

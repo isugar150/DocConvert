@@ -39,6 +39,7 @@ public class DocConvert {
         int ftpPort = properties.getFtpPORT();
         String ftpUser = properties.getFtpUSER(); // 유저이름
         String ftpPass = properties.getFtpPASS(); // 암호
+        final boolean isFTPS = properties.getIsFTPS(); // FTPS 사용여부
 
         final long start = System.currentTimeMillis(); //코드 실행 전에 시간 받아오기
 
@@ -49,11 +50,18 @@ public class DocConvert {
 
         // FTP변수 초기화
         final FTPManager ftpManager = new FTPManager();
-        ftpManager.Connect(host, ftpPort, ftpUser, ftpPass);
+        if(isFTPS)
+            ftpManager.ConnectFTPS(host, ftpPort, ftpUser, ftpPass);
+        else
+            ftpManager.Connect(host, ftpPort, ftpUser, ftpPass);
 
         // 변환할 파일 업 로드
         try{
-            ftpManager.uploadFile(filePath, fileName, "/tmp/");
+            if(isFTPS){
+                ftpManager.uploadFileFTPS(filePath, fileName, "/tmp/");
+            } else{
+                ftpManager.uploadFile(filePath, fileName, "/tmp/");
+            }
         } catch(Exception e){
             e.printStackTrace();
             return returnValue;
@@ -91,7 +99,11 @@ public class DocConvert {
                     System.out.println("localFile: " + filePath + File.separator + downloadPDFName);
                     // PDF 다운로드
                     if(properties.getOnlyImgDownload() || toImg == 0)
-                        ftpManager.downloadFile(responseData.get("URL").toString() + "/" + downloadPDFName, filePath + File.separator + downloadPDFName);
+                        if(isFTPS){
+                            ftpManager.downloadFileFTPS(responseData.get("URL").toString() + "/" + downloadPDFName, filePath + File.separator + downloadPDFName);
+                        } else{
+                            ftpManager.downloadFile(responseData.get("URL").toString() + "/" + downloadPDFName, filePath + File.separator + downloadPDFName);
+                        }
                     if(toImg != 0){
                         String imgExtension = null;
                         if(Integer.parseInt(requestMsg.get("ConvertIMG").toString()) == 1)
@@ -103,13 +115,23 @@ public class DocConvert {
 
                         new File(filePath + File.separator + downloadIMGDir).mkdirs();
                         for(int i = 0; i < Integer.parseInt(responseData.get("convertImgCnt").toString()); i++){
-                            ftpManager.downloadFile(responseData.get("URL").toString() + "/" + downloadIMGDir + "/" + (i + 1) + imgExtension, filePath + File.separator + File.separator + downloadIMGDir + File.separator + (i + 1) + imgExtension);
+                            if(isFTPS){
+                                ftpManager.downloadFileFTPS(responseData.get("URL").toString() + "/" + downloadIMGDir + "/" + (i + 1) + imgExtension, filePath + File.separator + File.separator + downloadIMGDir + File.separator + (i + 1) + imgExtension);
+                            }
+                            else{
+                                ftpManager.downloadFile(responseData.get("URL").toString() + "/" + downloadIMGDir + "/" + (i + 1) + imgExtension, filePath + File.separator + File.separator + downloadIMGDir + File.separator + (i + 1) + imgExtension);
+                            }
                         }
                     }
                 } catch (ParseException | IOException e) {
                     e.printStackTrace();
                 }
-                ftpManager.disConnect();
+                if (isFTPS) {
+                    ftpManager.disConnectFTPS();
+                }
+                else{
+                    ftpManager.disConnect();
+                }
                 returnValue = responseData.toJSONString();
                 long end = System.currentTimeMillis(); //프로그램이 끝나는 시점 계산
                 System.out.println( "실행 시간 : " + ( end - start )/1000.0 +"초"); //실행 시간 계산 및 출력
@@ -119,13 +141,23 @@ public class DocConvert {
             public void onClose(int code, String reason, boolean remote) {
                 // 서버 연결 종료 후 동작 정의
                 System.out.println(String.format("[DocConvert] code: %s, reason: %s, remote: %s", code, reason, remote));
-                ftpManager.disConnect();
+                if(isFTPS){
+                    ftpManager.disConnectFTPS();
+                }
+                else{
+                    ftpManager.disConnect();
+                }
             }
 
             @Override
             public void onError(Exception ex) {
                 // 예외 발생시 동작 정의
-                ftpManager.disConnect();
+                if(isFTPS){
+                    ftpManager.disConnectFTPS();
+                }
+                else{
+                    ftpManager.disConnect();
+                }
                 ex.printStackTrace();
             }
         };

@@ -43,7 +43,7 @@ namespace DocConvert_Server
             m_Config = new ServerConfig
             {
                 Port = Properties.Settings.Default.소켓서버포트,
-                Ip = Properties.Settings.Default.서버IP,
+                Ip = Properties.Settings.Default.바인딩_IP,
                 MaxConnectionNumber = Properties.Settings.Default.소켓최대세션,
                 Mode = SocketMode.Tcp,
                 Name = Properties.Settings.Default.서버이름

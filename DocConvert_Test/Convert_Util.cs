@@ -118,6 +118,9 @@ namespace DocConvert_Util
                 textBox4.Text = Setting["serverIP"].ToString();
                 textBox8.Text = Setting["ftpUser"].ToString();
                 textBox7.Text = Setting["ftpPwd"].ToString();
+                textBox5.Text = Setting["socketPort"].ToString();
+                textBox6.Text = Setting["filePort"].ToString();
+                checkBox2.Checked = bool.Parse(Setting["isFTPS"].ToString());
                 #endregion
             }
             else
@@ -126,9 +129,13 @@ namespace DocConvert_Util
                 Setting["serverIP"] = "127.0.0.1";
                 Setting["ftpUser"] = "Anonymous";
                 Setting["ftpPwd"] = "";
+                Setting["socketPort"] = "12000";
+                Setting["filePort"] = "12100";
                 textBox4.Text = Setting["serverIP"].ToString();
                 textBox8.Text = Setting["ftpUser"].ToString();
                 textBox7.Text = Setting["ftpPwd"].ToString();
+                textBox5.Text = Setting["socketPort"].ToString();
+                textBox6.Text = Setting["filePort"].ToString();
                 #endregion
                 tb2_appendText("[정보]   설정 파일이 존재하지 않습니다.");
             }
@@ -160,8 +167,6 @@ namespace DocConvert_Util
             comboBox1.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
             //디버깅 전용
-            textBox5.Text = "12000";
-            textBox6.Text = "12100";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -329,17 +334,26 @@ namespace DocConvert_Util
                                 ftpClient.Host = serverIP;
                                 ftpClient.Port = filePORT;
                                 ftpClient.Credentials = new NetworkCredential(ftpUser, ftpPwd);
-
+                                if (checkBox2.Checked)
+                                {
+                                    ftpClient.EncryptionMode = FtpEncryptionMode.Implicit;
+                                    ftpClient.ValidateAnyCertificate = true;
+                                }
                                 tb2_appendText(serverIP + ":" + filePORT + "에 연결을 시도합니다.");
                                 ftpClient.Connect();
                                 Setting["serverIP"] = textBox4.Text;
                                 Setting["ftpUser"] = textBox8.Text;
                                 Setting["ftpPwd"] = textBox7.Text;
+                                Setting["socketPort"] = textBox5.Text;
+                                Setting["filePort"] = textBox6.Text;
+                                Setting["isFTPS"] = checkBox2.Checked;
                                 File.WriteAllText(Application.StartupPath + @"\Settings.json", Setting.ToString());
                                 tb2_appendText("FTP서버 " + serverIP + ":" + filePORT + "에 연결하였습니다.");
 
                                 ftpClient.UploadFile(textBox1.Text, "tmp/" + Path.GetFileName(textBox1.Text), FtpRemoteExists.Overwrite, true);
                                 tb2_appendText("서버에 파일을 업로드하였습니다.");
+                                ftpClient.Disconnect();
+                                ftpClient.Dispose();
                             }
                         }
                         catch (Exception e1)
@@ -469,17 +483,21 @@ namespace DocConvert_Util
                 {
                     #region DocConvert
                     string imgType = comboBox1.Text.Replace("<", "").Replace(">", "");
-
+                    string serverIP = textBox4.Text;
+                    int filePORT = int.Parse(textBox6.Text);
+                    string ftpUser = textBox8.Text;
+                    string ftpPwd = textBox7.Text;
                     using (var ftpClient = new FtpClient())
                     {
-                        string serverIP = textBox4.Text;
-                        int filePORT = int.Parse(textBox6.Text);
-                        string ftpUser = textBox8.Text;
-                        string ftpPwd = textBox7.Text;
-
                         ftpClient.Host = serverIP;
                         ftpClient.Port = filePORT;
                         ftpClient.Credentials = new NetworkCredential(ftpUser, ftpPwd);
+                        if (checkBox2.Checked)
+                        {
+                            ftpClient.EncryptionMode = FtpEncryptionMode.Implicit;
+                            ftpClient.ValidateAnyCertificate = true;
+                        }
+                        ftpClient.Connect();
                         if (isSuccess.Equals("True"))
                         {
                             string outPath = Path.GetDirectoryName(textBox1.Text);
@@ -503,15 +521,20 @@ namespace DocConvert_Util
                 else if (responseData["Method"].ToString().Equals("WebCapture"))
                 {
                     #region WebCapture
+                    string serverIP = textBox4.Text;
+                    int filePORT = int.Parse(textBox6.Text);
+                    string ftpUser = textBox8.Text;
+                    string ftpPwd = textBox7.Text;
                     using (var ftpClient = new FtpClient())
                     {
-                        string serverIP = textBox4.Text;
-                        int filePORT = int.Parse(textBox6.Text);
-                        string ftpUser = textBox8.Text;
-                        string ftpPwd = textBox7.Text;
                         ftpClient.Host = serverIP;
                         ftpClient.Port = filePORT;
                         ftpClient.Credentials = new NetworkCredential(ftpUser, ftpPwd);
+                        if (checkBox2.Checked)
+                        {
+                            ftpClient.EncryptionMode = FtpEncryptionMode.Implicit;
+                            ftpClient.ValidateAnyCertificate = true;
+                        }
                         if (isSuccess.Equals("True"))
                         {
                             ftpClient.DownloadFile(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + @"\" + new FileInfo(url).Name, url, FtpLocalExists.Overwrite, FtpVerify.None);
@@ -739,5 +762,17 @@ namespace DocConvert_Util
         }
 
         #endregion
+
+        private void Convert_Util_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                File.WriteAllText(Application.StartupPath + @"\Settings.json", Setting.ToString());
+            }
+            catch (Exception e1)
+            {
+                tb2_appendText("[오류]   " + e1.Message);
+            }
+        }
     }
 }
