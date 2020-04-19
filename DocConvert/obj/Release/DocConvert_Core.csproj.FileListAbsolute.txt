@@ -101,4 +101,3 @@ C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert\obj\Release\DocConvert_Cor
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert\obj\Release\DocConvert_Core.pdb
 C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\phantomjs.exe
 C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\rasterize.js
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert\obj\Release\DocConvert_Core.csprojAssemblyReference.cache
