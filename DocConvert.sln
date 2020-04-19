@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocConvert_Core", "DocConvert\DocConvert_Core.csproj", "{E66D151A-0A14-4EE5-97D8-DFC33B913AE0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocConvert_Core", "DocConvert_Core\DocConvert_Core.csproj", "{E66D151A-0A14-4EE5-97D8-DFC33B913AE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocConvert_Util", "DocConvert_Test\DocConvert_Util.csproj", "{AC55CE0B-72D3-4D18-98FD-4B3ED7CEEECB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocConvert_Util", "DocConvert_Util\DocConvert_Util.csproj", "{AC55CE0B-72D3-4D18-98FD-4B3ED7CEEECB}"
 	ProjectSection(ProjectDependencies) = postProject
 		{E66D151A-0A14-4EE5-97D8-DFC33B913AE0} = {E66D151A-0A14-4EE5-97D8-DFC33B913AE0}
 	EndProjectSection
