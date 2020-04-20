@@ -176,6 +176,10 @@
     <Content Include="Install\FileZilla_Server-0_9_60_2.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\nd_white_x2.png" />
+    <None Include="Resources\nc_white_x2.png" />
+    <None Include="Resources\cc_icon_white_x2.png" />
+    <None Include="Resources\attribution_icon_white_x2.png" />
     <None Include="Resources\DocConvert_Server.png" />
     <None Include="Resources\info_icon.png" />
     <None Include="Resources\success_icon.png" />
