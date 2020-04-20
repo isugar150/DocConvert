@@ -483,13 +483,13 @@ namespace DocConvert_Server
             tScheduler.Interval = CalculateTimerInterval(CHECK_INTERVAL);
             if (Properties.Settings.Default.작업공간정리스케줄러)
             {
-                DevLog.Write("[Scheduler] 작업공간 삭제 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
+                DevLog.Write("[Scheduler] 작업공간 정리 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
                 deleteFolder(Properties.Settings.Default.데이터경로 + @"\workspace", Properties.Settings.Default.작업공간정리주기_일);
                 deleteFolder(Properties.Settings.Default.데이터경로 + @"\tmp", Properties.Settings.Default.작업공간정리주기_일);
             }
             if (Properties.Settings.Default.로그정리스케줄러)
             {
-                DevLog.Write("[Scheduler] 로그 삭제 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
+                DevLog.Write("[Scheduler] 로그 정리 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
                 deleteFolder(Application.StartupPath + @"\Log", Properties.Settings.Default.로그정리주기_일);
             }
         }
