@@ -42,7 +42,7 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="작업공간정리주기_일" Type="System.Int32" Scope="Application">
-      <Value Profile="(Default)">30</Value>
+      <Value Profile="(Default)">3</Value>
     </Setting>
     <Setting Name="바인딩_IP" Type="System.String" Scope="Application">
       <Value Profile="(Default)">127.0.0.1</Value>

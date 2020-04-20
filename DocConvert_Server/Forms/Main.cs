@@ -24,7 +24,7 @@ namespace DocConvert_Server
         private MainServer socketServer = new MainServer();
         private int wsSessionCount = 0;
         private static System.Windows.Forms.Timer tScheduler;
-        private const int CHECK_INTERVAL = 60 * 24; // 스케줄러 주기 (분)
+        private const int CHECK_INTERVAL = 60; // 스케줄러 주기 (분)
         private WebSocketListener webSocketServer = null;
         private JObject checkLicense = new JObject();
         public static bool isHwpConverting = false;

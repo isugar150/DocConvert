@@ -59,7 +59,6 @@ C:\Users\JMKIM\Desktop\source\DocConvert\bin\Release\pdfium.dll
 C:\Users\JMKIM\Desktop\source\DocConvert\bin\Release\DocConvert_Server.exe.config
 C:\Users\JMKIM\Desktop\source\DocConvert\bin\Release\DocConvert_Server.exe
 C:\Users\JMKIM\Desktop\source\DocConvert\bin\Release\DocConvert_Server.pdb
-C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.csprojAssemblyReference.cache
 C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.Forms.AboutForm.resources
 C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.Form1.resources
 C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.MessageDialog.resources
