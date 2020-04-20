@@ -32,9 +32,6 @@
     <Setting Name="FollowTail" Type="System.Boolean" Scope="Application">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="라이센스키" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">7kOQCsa87IIeLnU6hQyxTOzuV0Khg5cBBY5B5p75qAuzJlFKnC8zxpcXxyfsFTOLKn7hnUE4RuBi6VJV94/UlYAQT6is46zbBIsDiqck9In2erCV0LpIT6KQjpdK/hC2m1o4SQnIQkLTcQ735Vi5tWWgzADqL4q6HWOoiByIm0s=</Value>
-    </Setting>
     <Setting Name="오피스디버깅모드" Type="System.Boolean" Scope="Application">
       <Value Profile="(Default)">True</Value>
     </Setting>
@@ -52,6 +49,9 @@
     </Setting>
     <Setting Name="로그정리주기_일" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="라이센스키" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">7kOQCsa87IIeLnU6hQyxTOzuV0Khg5cBBY5B5p75qAuzJlFKnC8zxpcXxyfsFTOL2IzjSXE4a+okonKGqkg2FdHoUhIrJlH0WAMxz5yDArD0BgSGc8smTvn9KVlrCMLrTzKTdCFpK2MwOp0h0ZHi59EVc9xk1pFd293qB/EowD0=</Value>
     </Setting>
   </Settings>
 </SettingsFile>

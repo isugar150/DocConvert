@@ -26,3 +26,16 @@ C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.csproj.CopyComplete
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.exe
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.pdb
+C:\Users\JMKIM\Desktop\source\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Debug\DCLicenseGenerator.exe.config
+C:\Users\JMKIM\Desktop\source\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Debug\DCLicenseGenerator.exe
+C:\Users\JMKIM\Desktop\source\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Debug\DCLicenseGenerator.pdb
+C:\Users\JMKIM\Desktop\source\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Debug\Newtonsoft.Json.dll
+C:\Users\JMKIM\Desktop\source\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Debug\Newtonsoft.Json.xml
+C:\Users\JMKIM\Desktop\source\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.csprojAssemblyReference.cache
+C:\Users\JMKIM\Desktop\source\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.Main.resources
+C:\Users\JMKIM\Desktop\source\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.MessageDialog.resources
+C:\Users\JMKIM\Desktop\source\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.Properties.Resources.resources
+C:\Users\JMKIM\Desktop\source\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.csproj.GenerateResource.cache
+C:\Users\JMKIM\Desktop\source\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.csproj.CopyComplete
+C:\Users\JMKIM\Desktop\source\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.exe
+C:\Users\JMKIM\Desktop\source\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.pdb

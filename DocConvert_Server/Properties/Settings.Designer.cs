@@ -115,17 +115,6 @@ namespace DocConvert_Server.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("7kOQCsa87IIeLnU6hQyxTOzuV0Khg5cBBY5B5p75qAuzJlFKnC8zxpcXxyfsFTOLKn7hnUE4RuBi6VJV9" +
-            "4/UlYAQT6is46zbBIsDiqck9In2erCV0LpIT6KQjpdK/hC2m1o4SQnIQkLTcQ735Vi5tWWgzADqL4q6H" +
-            "WOoiByIm0s=")]
-        public string 라이센스키 {
-            get {
-                return ((string)(this["라이센스키"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool 오피스디버깅모드 {
             get {
@@ -175,6 +164,17 @@ namespace DocConvert_Server.Properties {
         public int 로그정리주기_일 {
             get {
                 return ((int)(this["로그정리주기_일"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("7kOQCsa87IIeLnU6hQyxTOzuV0Khg5cBBY5B5p75qAuzJlFKnC8zxpcXxyfsFTOL2IzjSXE4a+okonKGq" +
+            "kg2FdHoUhIrJlH0WAMxz5yDArD0BgSGc8smTvn9KVlrCMLrTzKTdCFpK2MwOp0h0ZHi59EVc9xk1pFd2" +
+            "93qB/EowD0=")]
+        public string 라이센스키 {
+            get {
+                return ((string)(this["라이센스키"]));
             }
         }
     }

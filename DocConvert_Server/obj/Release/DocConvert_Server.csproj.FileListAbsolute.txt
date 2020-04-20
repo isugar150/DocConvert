@@ -67,3 +67,4 @@ C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert_Server\obj\Release\DocConver
 C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.csproj.CopyComplete
 C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.exe
 C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.pdb
+C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.csprojAssemblyReference.cache

@@ -13,6 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using vtortola.WebSockets;
+using vtortola.WebSockets.Deflate;
 
 // TODO FTPS 지원 (클라이언트단)
 
@@ -149,6 +150,7 @@ namespace DocConvert_Server
                 };
                 webSocketServer = new WebSocketListener(endpoint, options);
                 var rfc6455 = new vtortola.WebSockets.Rfc6455.WebSocketFactoryRfc6455(webSocketServer);
+                rfc6455.MessageExtensions.RegisterExtension(new WebSocketDeflateExtension());
                 webSocketServer.Standards.RegisterStandard(rfc6455);
                 if (checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID()))
                     webSocketServer.Start();
@@ -185,7 +187,7 @@ namespace DocConvert_Server
                 while (!this.IsDisposed)
                 {
                     toolStripStatusLabel2.Text = string.Format("Socket Session Count: {0}/{1}", socketServer.SessionCount, Properties.Settings.Default.소켓최대세션);
-                    toolStripStatusLabel3.Text = string.Format("Web Socket Session Count: {0}/{1}", wsSessionCount, "1");
+                    toolStripStatusLabel3.Text = string.Format("Web Socket Session Count: {0}", wsSessionCount);
 
                     if (IsTcpPortAvailable(Properties.Settings.Default.웹소켓포트))
                         pictureBox3.Image = Properties.Resources.success_icon;
@@ -216,7 +218,8 @@ namespace DocConvert_Server
 
                     //소켓이 null 이 아니면, 핸들러를 스타트 합니다.(또 다른 친구가 들어올 수도 있으니 비동기로...)
                     if (ws != null)
-                        await Task.Run(() => HandleConnectionAsync(ws, token));
+                        // await Task.Run(() => HandleConnectionAsync(ws, token)); <== await 시 요청을 받으면 이전 요청이 종료할때까지 대기했다가 실행
+                        _ = Task.Run(() => HandleConnectionAsync(ws, token));
                 }
                 catch (Exception)
                 {
