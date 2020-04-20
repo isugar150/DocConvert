@@ -12,7 +12,7 @@ namespace DocConvert_Server.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.4.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.5.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -43,7 +43,7 @@ namespace DocConvert_Server.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
         public int 소켓최대세션 {
             get {
                 return ((int)(this["소켓최대세션"]));
@@ -169,9 +169,9 @@ namespace DocConvert_Server.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("7kOQCsa87IIeLnU6hQyxTOzuV0Khg5cBBY5B5p75qAuzJlFKnC8zxpcXxyfsFTOL2IzjSXE4a+okonKGq" +
-            "kg2FdHoUhIrJlH0WAMxz5yDArD0BgSGc8smTvn9KVlrCMLrTzKTdCFpK2MwOp0h0ZHi59EVc9xk1pFd2" +
-            "93qB/EowD0=")]
+        [global::System.Configuration.DefaultSettingValueAttribute("7kOQCsa87IIeLnU6hQyxTOzuV0Khg5cBBY5B5p75qAuzJlFKnC8zxpcXxyfsFTOLKn7hnUE4RuBi6VJV9" +
+            "4/UlYAQT6is46zbBIsDiqck9In2erCV0LpIT6KQjpdK/hC2RXqaN6G7C8G3jfq8QHYodEDA8FoZuFspG" +
+            "vQyWNg6h1g=")]
         public string 라이센스키 {
             get {
                 return ((string)(this["라이센스키"]));

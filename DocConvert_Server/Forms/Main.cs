@@ -25,7 +25,7 @@ namespace DocConvert_Server
         private MainServer socketServer = new MainServer();
         private int wsSessionCount = 0;
         private static System.Windows.Forms.Timer tScheduler;
-        private const int CHECK_INTERVAL = 60; // 스케줄러 주기 (분)
+        private const int CHECK_INTERVAL = 1; // 스케줄러 주기 (일)
         private WebSocketListener webSocketServer = null;
         private JObject checkLicense = new JObject();
         public static bool isHwpConverting = false;
@@ -465,17 +465,14 @@ namespace DocConvert_Server
             this.Activate();
         }
 
-        private int CalculateTimerInterval(int minute)
+        private int CalculateTimerInterval(int day)
         {
-            if (minute <= 0)
-                minute = 60;
-            DateTime now = DateTime.Now;
+            DateTime timeTaken = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0).AddDays(1);
+            TimeSpan curTime = timeTaken - DateTime.Now;
 
-            DateTime future = now.AddMinutes((minute - (now.Minute % minute))).AddSeconds(now.Second * -1).AddMilliseconds(now.Millisecond * -1);
-
-            TimeSpan interval = future - now;
-
-            return (int)interval.TotalMilliseconds;
+            Console.WriteLine(timeTaken.ToString("yyyy-MM-dd HH:mm:ss"));
+            Console.WriteLine(curTime);
+            return (int)curTime.TotalMilliseconds;
         }
 
         private void tScheduler_Tick(object sender, EventArgs e)

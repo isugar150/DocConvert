@@ -9,7 +9,7 @@
       <Value Profile="(Default)">ConvertServer</Value>
     </Setting>
     <Setting Name="소켓최대세션" Type="System.Int32" Scope="Application">
-      <Value Profile="(Default)">100</Value>
+      <Value Profile="(Default)">10</Value>
     </Setting>
     <Setting Name="리스트박스최대로그개수" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">1000</Value>
@@ -51,7 +51,7 @@
       <Value Profile="(Default)">30</Value>
     </Setting>
     <Setting Name="라이센스키" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">7kOQCsa87IIeLnU6hQyxTOzuV0Khg5cBBY5B5p75qAuzJlFKnC8zxpcXxyfsFTOL2IzjSXE4a+okonKGqkg2FdHoUhIrJlH0WAMxz5yDArD0BgSGc8smTvn9KVlrCMLrTzKTdCFpK2MwOp0h0ZHi59EVc9xk1pFd293qB/EowD0=</Value>
+      <Value Profile="(Default)">7kOQCsa87IIeLnU6hQyxTOzuV0Khg5cBBY5B5p75qAuzJlFKnC8zxpcXxyfsFTOLKn7hnUE4RuBi6VJV94/UlYAQT6is46zbBIsDiqck9In2erCV0LpIT6KQjpdK/hC2RXqaN6G7C8G3jfq8QHYodEDA8FoZuFspGvQyWNg6h1g=</Value>
     </Setting>
   </Settings>
 </SettingsFile>
