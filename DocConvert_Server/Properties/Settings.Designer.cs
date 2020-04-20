@@ -25,19 +25,30 @@ namespace DocConvert_Server.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("12000")]
-        public int 소켓서버포트 {
+        [global::System.Configuration.DefaultSettingValueAttribute("7kOQCsa87IIeLnU6hQyxTOzuV0Khg5cBBY5B5p75qAuzJlFKnC8zxpcXxyfsFTOLKn7hnUE4RuBi6VJV9" +
+            "4/UlYAQT6is46zbBIsDiqck9In2erCV0LpIT6KQjpdK/hC2RXqaN6G7C8G3jfq8QHYodEDA8FoZuFspG" +
+            "vQyWNg6h1g=")]
+        public string 라이센스키 {
             get {
-                return ((int)(this["소켓서버포트"]));
+                return ((string)(this["라이센스키"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ConvertServer")]
-        public string 서버이름 {
+        [global::System.Configuration.DefaultSettingValueAttribute("127.0.0.1")]
+        public string 바인딩_IP {
             get {
-                return ((string)(this["서버이름"]));
+                return ((string)(this["바인딩_IP"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("12000")]
+        public int 소켓서버포트 {
+            get {
+                return ((int)(this["소켓서버포트"]));
             }
         }
         
@@ -52,10 +63,37 @@ namespace DocConvert_Server.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1000")]
-        public int 리스트박스최대로그개수 {
+        [global::System.Configuration.DefaultSettingValueAttribute("12005")]
+        public int 웹소켓포트 {
             get {
-                return ((int)(this["리스트박스최대로그개수"]));
+                return ((int)(this["웹소켓포트"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("12100")]
+        public int 파일서버포트 {
+            get {
+                return ((int)(this["파일서버포트"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ConvertServer")]
+        public string 서버이름 {
+            get {
+                return ((string)(this["서버이름"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("300")]
+        public int 보여지는로그최대개수 {
+            get {
+                return ((int)(this["보여지는로그최대개수"]));
             }
         }
         
@@ -79,28 +117,10 @@ namespace DocConvert_Server.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("12100")]
-        public int 파일서버포트 {
-            get {
-                return ((int)(this["파일서버포트"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool 변환시보이기 {
+        public bool 오피스디버깅모드 {
             get {
-                return ((bool)(this["변환시보이기"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("12005")]
-        public int 웹소켓포트 {
-            get {
-                return ((int)(this["웹소켓포트"]));
+                return ((bool)(this["오피스디버깅모드"]));
             }
         }
         
@@ -110,15 +130,6 @@ namespace DocConvert_Server.Properties {
         public bool FollowTail {
             get {
                 return ((bool)(this["FollowTail"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool 오피스디버깅모드 {
-            get {
-                return ((bool)(this["오피스디버깅모드"]));
             }
         }
         
@@ -142,15 +153,6 @@ namespace DocConvert_Server.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("127.0.0.1")]
-        public string 바인딩_IP {
-            get {
-                return ((string)(this["바인딩_IP"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool 로그정리스케줄러 {
             get {
@@ -164,17 +166,6 @@ namespace DocConvert_Server.Properties {
         public int 로그정리주기_일 {
             get {
                 return ((int)(this["로그정리주기_일"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("7kOQCsa87IIeLnU6hQyxTOzuV0Khg5cBBY5B5p75qAuzJlFKnC8zxpcXxyfsFTOLKn7hnUE4RuBi6VJV9" +
-            "4/UlYAQT6is46zbBIsDiqck9In2erCV0LpIT6KQjpdK/hC2RXqaN6G7C8G3jfq8QHYodEDA8FoZuFspG" +
-            "vQyWNg6h1g=")]
-        public string 라이센스키 {
-            get {
-                return ((string)(this["라이센스키"]));
             }
         }
     }

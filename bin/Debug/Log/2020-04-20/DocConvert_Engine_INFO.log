@@ -70,3 +70,39 @@
 2020-04-20 18:21:44.6467  INFO - Method: PDFtoPng, FilePath: C:\Data\workspace\5834CC7C5A3E18A5EC2C012F7F3D91D9\memo_calendar.pdf, outPath: C:\Data\workspace\5834CC7C5A3E18A5EC2C012F7F3D91D9\memo_calendar\
 2020-04-20 18:21:45.3493  INFO - 이미지 변환 성공!
 2020-04-20 18:21:45.3853  INFO - ==================== End ====================
+2020-04-20 20:27:25.3652  INFO - ==================== Start ====================
+2020-04-20 20:27:25.3662  INFO - Method: WordSaveAs, FilePath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.docx, outPath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf, docPassword: 
+2020-04-20 20:27:25.3662  INFO - 파일 언락 성공!
+2020-04-20 20:27:33.0614  INFO - 변환 성공
+2020-04-20 20:27:33.3396  INFO - ==================== End ====================
+2020-04-20 20:27:33.3551  INFO - ==================== Start ====================
+2020-04-20 20:27:33.3551  INFO - Method: PDFtoJpeg, FilePath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf, outPath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\
+2020-04-20 20:27:33.7537  INFO - 이미지 변환 성공!
+2020-04-20 20:27:33.7537  INFO - ==================== End ====================
+2020-04-20 20:27:51.5408  INFO - ==================== Start ====================
+2020-04-20 20:27:51.5408  INFO - Method: WordSaveAs, FilePath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.docx, outPath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf, docPassword: 
+2020-04-20 20:27:51.5408  INFO - 파일 언락 성공!
+2020-04-20 20:27:57.1407  INFO - 변환 성공
+2020-04-20 20:27:57.3420  INFO - ==================== End ====================
+2020-04-20 20:27:57.3420  INFO - ==================== Start ====================
+2020-04-20 20:27:57.3420  INFO - Method: PDFtoJpeg, FilePath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf, outPath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\
+2020-04-20 20:27:57.4984  INFO - 이미지 변환 성공!
+2020-04-20 20:27:57.4984  INFO - ==================== End ====================
+2020-04-20 20:28:44.9096  INFO - ==================== Start ====================
+2020-04-20 20:28:44.9096  INFO - Method: WordSaveAs, FilePath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.docx, outPath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf, docPassword: 
+2020-04-20 20:28:44.9128  INFO - 파일 언락 성공!
+2020-04-20 20:28:50.5437  INFO - 변환 성공
+2020-04-20 20:28:50.7553  INFO - ==================== End ====================
+2020-04-20 20:28:50.7715  INFO - ==================== Start ====================
+2020-04-20 20:28:50.7715  INFO - Method: PDFtoJpeg, FilePath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf, outPath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\
+2020-04-20 20:28:51.0324  INFO - 이미지 변환 성공!
+2020-04-20 20:28:51.0324  INFO - ==================== End ====================
+2020-04-20 20:34:32.7267  INFO - ==================== Start ====================
+2020-04-20 20:34:32.7267  INFO - Method: WordSaveAs, FilePath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.docx, outPath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf, docPassword: 
+2020-04-20 20:34:32.7413  INFO - 파일 언락 성공!
+2020-04-20 20:34:38.7328  INFO - 변환 성공
+2020-04-20 20:34:38.9176  INFO - ==================== End ====================
+2020-04-20 20:34:38.9176  INFO - ==================== Start ====================
+2020-04-20 20:34:38.9176  INFO - Method: PDFtoPng, FilePath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf, outPath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\
+2020-04-20 20:34:39.2348  INFO - 이미지 변환 성공!
+2020-04-20 20:34:39.2348  INFO - ==================== End ====================

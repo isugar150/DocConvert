@@ -31,14 +31,16 @@ namespace DocConvert_Server
                 {
                     responseMsg["URL"] = null;
                     responseMsg["isSuccess"] = false;
-                    responseMsg["msg"] = "키가 유효하지 않습니다.";
+                    responseMsg["msg"] = "키가 유효하지 않습니다. 확인 후 다시시도하세요.";
+                    responseMsg["Method"] = requestMsg["Method"];
+                    return responseMsg;
                 }
 
                 if (requestMsg["Method"].ToString().Equals("DocConvert"))
                 {
                     #region DocConvert
                     bool PAGINGNUM = false;
-                    bool APPVISIBLE = Properties.Settings.Default.변환시보이기;
+                    bool APPVISIBLE = Properties.Settings.Default.오피스디버깅모드;
                     string fileName = requestMsg["FileName"].ToString(); // 파일 이름
                     string convertIMG = requestMsg["ConvertIMG"].ToString(); // 0: NONE  1:JPEG  2:PNG  3:BMP
                                                                              //string docPassword = requestMsg["DocPassword"].ToString(); // 문서 비밀번호

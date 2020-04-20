@@ -107,10 +107,6 @@ namespace DocConvert_Server
                 tScheduler.Start();
             }
             #endregion
-            if (Properties.Settings.Default.오피스디버깅모드)
-                this.Visible = true;
-            else
-                this.Visible = false;
             #region Create SocketServer
             socketServer.InitConfig();
             socketServer.CreateServer();
@@ -304,7 +300,7 @@ namespace DocConvert_Server
                 {
                     ++logWorkCount;
 
-                    if (listBoxLog.Items.Count >= Properties.Settings.Default.리스트박스최대로그개수)
+                    if (listBoxLog.Items.Count >= Properties.Settings.Default.보여지는로그최대개수)
                     {
                         listBoxLog.Items.RemoveAt(0);
                     }
@@ -317,7 +313,7 @@ namespace DocConvert_Server
                         textBox1.AppendText(msg + "\r\n");
                     }
 
-                    toolStripStatusLabel1.Text = string.Format("LogCount: {0}/{1}", listBoxLog.Items.Count, Properties.Settings.Default.리스트박스최대로그개수);
+                    toolStripStatusLabel1.Text = string.Format("LogCount: {0}/{1}", listBoxLog.Items.Count, Properties.Settings.Default.보여지는로그최대개수);
                 }
                 else
                 {

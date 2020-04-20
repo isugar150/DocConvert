@@ -40,6 +40,7 @@ public class DocConvert {
         String ftpUser = properties.getFtpUSER(); // 유저이름
         String ftpPass = properties.getFtpPASS(); // 암호
         final boolean isFTPS = properties.getIsFTPS(); // FTPS 사용여부
+        String clientKEY = properties.getClientKEY();
 
         final long start = System.currentTimeMillis(); //코드 실행 전에 시간 받아오기
 
@@ -70,7 +71,7 @@ public class DocConvert {
         // 웹소켓 기능
         // 서버 전송전 데이터
         final JSONObject requestMsg = new JSONObject();
-        requestMsg.put("KEY", "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2");
+        requestMsg.put("KEY", clientKEY);
         requestMsg.put("Method", "DocConvert");
         requestMsg.put("FileName", fileName);
         requestMsg.put("ConvertIMG", toImg);
@@ -95,15 +96,21 @@ public class DocConvert {
 
                     System.out.println("[Server ==> Client]\r\n" + responseData.toJSONString());
 
+                    if(responseData.get("isSuccess").toString().equals("false")){
+                        System.out.println("서버에서 문서 변환에 실패하였습니다. 자세한 내용은 서버 로그를 확인하세요.");
+                        return;
+                    }
+
                     System.out.println("remoteFile: " + responseData.get("URL").toString() + "/" + downloadPDFName);
                     System.out.println("localFile: " + filePath + File.separator + downloadPDFName);
                     // PDF 다운로드
-                    if(properties.getOnlyImgDownload() || toImg == 0)
-                        if(isFTPS){
+                    if(!properties.getOnlyImgDownload() || toImg == 0) {
+                        if (isFTPS) {
                             ftpManager.downloadFileFTPS(responseData.get("URL").toString() + "/" + downloadPDFName, filePath + File.separator + downloadPDFName);
-                        } else{
+                        } else {
                             ftpManager.downloadFile(responseData.get("URL").toString() + "/" + downloadPDFName, filePath + File.separator + downloadPDFName);
                         }
+                    }
                     if(toImg != 0){
                         String imgExtension = null;
                         if(Integer.parseInt(requestMsg.get("ConvertIMG").toString()) == 1)
