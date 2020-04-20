@@ -523,5 +523,13 @@ namespace DocConvert_Server
             }
             return false;
         }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            if (this.TopMost)
+                this.TopMost = false;
+            else
+                this.TopMost = true;
+        }
     }
 }

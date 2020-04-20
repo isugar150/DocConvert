@@ -106,3 +106,12 @@
 2020-04-20 20:34:38.9176  INFO - Method: PDFtoPng, FilePath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf, outPath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\
 2020-04-20 20:34:39.2348  INFO - 이미지 변환 성공!
 2020-04-20 20:34:39.2348  INFO - ==================== End ====================
+2020-04-20 21:53:13.3412  INFO - ==================== Start ====================
+2020-04-20 21:53:13.3412  INFO - Method: PowerPointSaveAs, FilePath: C:\Data\workspace\EF571FDA3EDF671CBBF1EDDF9C63C0ED\PowerPoint 시작.pptx, outPath: C:\Data\workspace\EF571FDA3EDF671CBBF1EDDF9C63C0ED\PowerPoint 시작.pdf, docPassword: 
+2020-04-20 21:53:13.3412  INFO - 파일 언락 성공!
+2020-04-20 21:53:16.7154  INFO - 변환 성공
+2020-04-20 21:53:16.7779  INFO - ==================== End ====================
+2020-04-20 21:53:16.7936  INFO - ==================== Start ====================
+2020-04-20 21:53:16.7936  INFO - Method: PDFtoPng, FilePath: C:\Data\workspace\EF571FDA3EDF671CBBF1EDDF9C63C0ED\PowerPoint 시작.pdf, outPath: C:\Data\workspace\EF571FDA3EDF671CBBF1EDDF9C63C0ED\PowerPoint 시작\
+2020-04-20 21:53:17.1216  INFO - 이미지 변환 성공!
+2020-04-20 21:53:17.1372  INFO - ==================== End ====================

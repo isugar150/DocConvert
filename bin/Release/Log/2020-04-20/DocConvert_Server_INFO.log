@@ -1,0 +1,57 @@
+2020-04-20 21:42:26.7045  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-20 21:42:26.8138  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-20 21:42:26.8138  INFO - [INFO] 라이센스 만료날짜: 2020-12-31
+2020-04-20 21:42:26.8138  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-20 21:42:26.8138  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 30일
+2020-04-20 21:42:26.8607  INFO - [Socket] 핸들러 등록 완료
+2020-04-20 21:42:26.8607  INFO - [Socket] 서버 생성 성공
+2020-04-20 21:42:26.8763  INFO - [Socket] Server Listening...
+2020-04-20 21:42:26.8763  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-20 21:42:26.9174  INFO - [Web Socket] Server Listening...
+2020-04-20 21:42:26.9174  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-20 21:47:48.5864  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:6968
+2020-04-20 21:47:48.6489  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "FileName": "Excel 시작.xlsx",
+  "Method": "DocConvert",
+  "ConvertIMG": 2,
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2"
+}
+
+2020-04-20 21:47:49.4143  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:6972
+2020-04-20 21:47:49.4299  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "FileName": "DocConvert.docx",
+  "Method": "DocConvert",
+  "ConvertIMG": 1,
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2"
+}
+
+2020-04-20 21:48:03.0986  INFO - 
+[WebSocket][Server => Client]
+{
+  "convertImgCnt": "5",
+  "URL": "/workspace/2E48D4CF48C7B4A7959CD45D68C9E915",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-20 21:48:03.0986  INFO - [WebSocket] 작업 소요시간: 00:00:13.6686459
+2020-04-20 21:48:03.1142  INFO - [WebSocket]서버와 연결이 해제되었습니다.
+2020-04-20 21:48:07.3476  INFO - 
+[WebSocket][Server => Client]
+{
+  "convertImgCnt": "92",
+  "URL": "/workspace/8DF91B0995A750BFE6B8873646995F7B",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-20 21:48:07.3476  INFO - [WebSocket] 작업 소요시간: 00:00:18.7455768
+2020-04-20 21:48:07.3476  INFO - [WebSocket]서버와 연결이 해제되었습니다.

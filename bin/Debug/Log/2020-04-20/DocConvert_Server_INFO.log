@@ -630,3 +630,46 @@
 
 2020-04-20 20:34:39.2348  INFO - [WebSocket] 작업 소요시간: 00:00:06.5137345
 2020-04-20 20:34:39.2416  INFO - [WebSocket]서버와 연결이 해제되었습니다.
+2020-04-20 21:50:26.5915  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-20 21:50:26.7820  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-20 21:50:26.7820  INFO - [INFO] 라이센스 만료날짜: 2020-12-31
+2020-04-20 21:50:26.7820  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-20 21:50:26.7820  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 30일
+2020-04-20 21:50:26.8668  INFO - [Socket] 핸들러 등록 완료
+2020-04-20 21:50:26.8668  INFO - [Socket] 서버 생성 성공
+2020-04-20 21:50:26.8987  INFO - [Socket] Server Listening...
+2020-04-20 21:50:26.8987  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-20 21:50:27.0044  INFO - [Web Socket] Server Listening...
+2020-04-20 21:50:27.0044  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-20 21:52:06.1735  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-20 21:52:06.3297  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-20 21:52:06.3297  INFO - [INFO] 라이센스 만료날짜: 2020-12-31
+2020-04-20 21:52:06.3297  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-20 21:52:06.3454  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 30일
+2020-04-20 21:52:06.4078  INFO - [Socket] 핸들러 등록 완료
+2020-04-20 21:52:06.4078  INFO - [Socket] 서버 생성 성공
+2020-04-20 21:52:06.4235  INFO - [Socket] Server Listening...
+2020-04-20 21:52:06.4235  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-20 21:52:06.5016  INFO - [Web Socket] Server Listening...
+2020-04-20 21:52:06.5016  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-20 21:53:13.3100  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "PowerPoint 시작.pptx",
+  "ConvertIMG": 2
+}
+
+2020-04-20 21:53:17.1685  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "9",
+  "URL": "/workspace/EF571FDA3EDF671CBBF1EDDF9C63C0ED",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-20 21:53:17.1685  INFO - [Socket] 작업 소요시간: 00:00:03.8584634
+2020-04-20 21:53:17.3715  INFO - [Socket] 세션ID: f982b09d-d775-4a20-b5fa-c38bdced73e5 접속해제: ClientClosing
