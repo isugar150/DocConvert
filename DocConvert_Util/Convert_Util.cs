@@ -564,7 +564,7 @@ namespace DocConvert_Util
         // IP입력창 키 이벤트
         private void ipAddressControl1_KeyUp(object sender, KeyEventArgs e)
         {
-            Console.WriteLine("KeyUp: {0}", e.KeyValue);
+            Debug.WriteLine("KeyUp: {0}", e.KeyValue);
         }
 
         // textBox2  문자열 추가

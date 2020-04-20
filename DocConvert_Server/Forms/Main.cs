@@ -170,7 +170,7 @@ namespace DocConvert_Server
 
             // 소켓서버 소멸
             /*Console.ReadKey(true);
-            Console.WriteLine("Server stoping");
+            Debug.WriteLine("Server stoping");
             cancellation.Cancel();
             task.Wait();*/
             #endregion
@@ -466,8 +466,8 @@ namespace DocConvert_Server
             DateTime timeTaken = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0).AddDays(1);
             TimeSpan curTime = timeTaken - DateTime.Now;
 
-            Console.WriteLine(timeTaken.ToString("yyyy-MM-dd HH:mm:ss"));
-            Console.WriteLine(curTime);
+            Debug.WriteLine(timeTaken.ToString("yyyy-MM-dd HH:mm:ss"));
+            Debug.WriteLine(curTime);
             return (int)curTime.TotalMilliseconds;
         }
 
