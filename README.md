@@ -115,5 +115,14 @@ WebCapture_Core.WebCapture(string Url, string outPath)
 String SourcePDF: 웹 캡쳐 URL  
 String outPath: 이미지 내보낼 경로  
 ```
+### FAQ
+```
+Q: 동시에 몇개까지 변환이 가능합니까?
+A: 서버 사양이 따라주면 변환 가능한 개수제한은 따로 없습니다.
+```
+```
+Q: 한글에서 PDF 변환 시 오른쪽과 하단에 공백이 생깁니다.
+A: 한글 자체의 문제이며 임의 문서를 PDF로 인쇄하고 다시시도하면 정상작동합니다.
+```
 ### License
 License 파일 참조
