@@ -43,7 +43,7 @@ namespace DocConvert_Server
             if (출력가능_로그레벨 <= logLevel)
             {
                 /*logMsgQueue.Enqueue(string.Format("{0}   Method: {1}   Message: {2}", System.DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss.fff"), methodName, msg));*/
-                logMsgQueue.Enqueue(string.Format("{0}   Message: {1}", System.DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss.fff"), msg));
+                logMsgQueue.Enqueue(string.Format("{0}   Message: {1}", System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.fff"), msg));
             }
             if (logLevel == LOG_LEVEL.ERROR)
                 logger.Error(msg);

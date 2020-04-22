@@ -29,7 +29,7 @@ namespace DocConvert_Server
             {
                 requestMsg = JObject.Parse(requestInfo); // 요청받은 JSON 파싱
 
-                if (!requestMsg["KEY"].ToString().Equals(Properties.Settings.Default.클라이언트키))
+                if (!requestMsg["KEY"].ToString().Equals(Properties.Settings.Default.클라이언트키) || requestMsg["KEY"] == null)
                 {
                     responseMsg["URL"] = null;
                     responseMsg["isSuccess"] = false;
@@ -38,26 +38,17 @@ namespace DocConvert_Server
                     return responseMsg;
                 }
 
-                if (requestMsg["useCompression"].ToString().Equals("True") && requestMsg["ConvertIMG"].ToString().Equals("0"))
-                {
-                    responseMsg["URL"] = null;
-                    responseMsg["isSuccess"] = false;
-                    responseMsg["msg"] = "이미지 변환을 하지 않으면 압축할 수 없습니다.";
-                    responseMsg["Method"] = requestMsg["Method"];
-                    return responseMsg;
-                }
-
-                if (requestMsg["Method"].ToString().Equals("WebCapture") && !requestMsg["ConvertIMG"].ToString().Equals("0"))
-                {
-                    responseMsg["URL"] = null;
-                    responseMsg["isSuccess"] = false;
-                    responseMsg["msg"] = "유효하지 않은 옵션입니다.";
-                    responseMsg["Method"] = requestMsg["Method"];
-                    return responseMsg;
-                }
-
                 if (requestMsg["Method"].ToString().Equals("DocConvert"))
                 {
+                    if (requestMsg["useCompression"].ToString().Equals("True") && requestMsg["ConvertIMG"].ToString().Equals("0"))
+                    {
+                        responseMsg["URL"] = null;
+                        responseMsg["isSuccess"] = false;
+                        responseMsg["msg"] = "이미지 변환을 하지 않으면 압축할 수 없습니다.";
+                        responseMsg["Method"] = requestMsg["Method"];
+                        return responseMsg;
+                    }
+
                     #region DocConvert
                     bool PAGINGNUM = false;
                     bool APPVISIBLE = Properties.Settings.Default.오피스디버깅모드;
@@ -161,11 +152,12 @@ namespace DocConvert_Server
                             if (requestMsg["useCompression"].ToString().Equals("True"))
                             {
                                 string zipoutPath = Path.GetDirectoryName(outPath) + @"\" + Path.GetFileNameWithoutExtension(outPath) + ".zip";
-                                FileInfo fi = new FileInfo(zipoutPath);
-                                if (fi.Exists)
-                                    fi.Delete();
+                                if (File.Exists(zipoutPath))
+                                    File.Delete(zipoutPath);
+                                if (Directory.Exists(outPath + @"\" + Path.GetFileNameWithoutExtension(outPath)))
+                                    Directory.Delete(outPath + @"\" + Path.GetFileNameWithoutExtension(outPath));
                                 ZipLib.CreateZipFile(Directory.GetFiles(imageOutput), zipoutPath);
-                                responseMsg["zipURL"] = documents + "/" + md5_filechecksum + "/" + Path.GetFileNameWithoutExtension(outPath) + ".zip";
+                                responseMsg["zipURL"] = "/" + documents + "/" + md5_filechecksum + "/" + Path.GetFileNameWithoutExtension(outPath) + ".zip";
                             }
                         }
                         else

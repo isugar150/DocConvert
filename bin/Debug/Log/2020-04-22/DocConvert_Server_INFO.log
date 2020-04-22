@@ -825,3 +825,288 @@
 
 2020-04-22 12:38:03.9000  INFO - [WebSocket] 작업 소요시간: 00:00:15.9767519
 2020-04-22 12:38:03.9000  INFO - [WebSocket]서버와 연결이 해제되었습니다.
+2020-04-22 13:39:34.6392  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-22 13:39:34.8416  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-22 13:39:34.8416  INFO - [INFO] 라이센스 만료날짜: 2020-12-31
+2020-04-22 13:39:34.8416  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-22 13:39:34.8486  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 30일
+2020-04-22 13:39:34.9284  INFO - [Socket] 핸들러 등록 완료
+2020-04-22 13:39:34.9284  INFO - [Socket] 서버 생성 성공
+2020-04-22 13:39:34.9513  INFO - [Socket] Server Listening...
+2020-04-22 13:39:34.9513  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-22 13:39:35.0581  INFO - [Web Socket] Server Listening...
+2020-04-22 13:39:35.0581  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-22 13:39:47.3686  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-22 13:39:47.4003  INFO - 변환중 오류발생 자세한 내용은 오류로그 참고
+2020-04-22 13:39:47.4469  INFO - 
+[Socket][Server => Client]
+{
+  "isSuccess": false,
+  "msg": "개체 참조가 개체의 인스턴스로 설정되지 않았습니다.",
+  "Method": "WebCapture"
+}
+
+2020-04-22 13:39:47.4469  INFO - [Socket] 작업 소요시간: 00:00:00.0783091
+2020-04-22 13:39:47.4626  INFO - [Socket] 세션ID: e5bb9eff-ed64-4ffc-b592-3eb22c53c8ef 접속해제: ClientClosing
+2020-04-22 13:40:03.6344  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-22 13:40:03.6500  INFO - 변환중 오류발생 자세한 내용은 오류로그 참고
+2020-04-22 13:40:03.6500  INFO - 
+[Socket][Server => Client]
+{
+  "isSuccess": false,
+  "msg": "개체 참조가 개체의 인스턴스로 설정되지 않았습니다.",
+  "Method": "WebCapture"
+}
+
+2020-04-22 13:40:03.6500  INFO - [Socket] 작업 소요시간: 00:00:00.0156255
+2020-04-22 13:40:03.6656  INFO - [Socket] 세션ID: afee4867-b926-4ed0-ba2e-da4a9350183b 접속해제: ClientClosing
+2020-04-22 13:40:44.4781  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-22 13:40:44.6344  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-22 13:40:44.6344  INFO - [INFO] 라이센스 만료날짜: 2020-12-31
+2020-04-22 13:40:44.6344  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-22 13:40:44.6344  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 30일
+2020-04-22 13:40:44.7126  INFO - [Socket] 핸들러 등록 완료
+2020-04-22 13:40:44.7126  INFO - [Socket] 서버 생성 성공
+2020-04-22 13:40:44.7437  INFO - [Socket] Server Listening...
+2020-04-22 13:40:44.7437  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-22 13:40:44.8221  INFO - [Web Socket] Server Listening...
+2020-04-22 13:40:44.8221  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-22 13:40:46.3691  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-22 13:40:46.3845  INFO - 변환중 오류발생 자세한 내용은 오류로그 참고
+2020-04-22 13:40:46.4313  INFO - 
+[Socket][Server => Client]
+{
+  "isSuccess": false,
+  "msg": "개체 참조가 개체의 인스턴스로 설정되지 않았습니다.",
+  "Method": "WebCapture"
+}
+
+2020-04-22 13:40:46.4313  INFO - [Socket] 작업 소요시간: 00:00:00.0622144
+2020-04-22 13:40:46.4313  INFO - [Socket] 세션ID: 333625c6-16b2-4cc2-80d9-3d685075b86a 접속해제: ClientClosing
+2020-04-22 13:41:09.8218  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-22 13:41:09.9781  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-22 13:41:09.9781  INFO - [INFO] 라이센스 만료날짜: 2020-12-31
+2020-04-22 13:41:09.9781  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-22 13:41:09.9781  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 30일
+2020-04-22 13:41:10.0564  INFO - [Socket] 핸들러 등록 완료
+2020-04-22 13:41:10.0564  INFO - [Socket] 서버 생성 성공
+2020-04-22 13:41:10.0876  INFO - [Socket] Server Listening...
+2020-04-22 13:41:10.0876  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-22 13:41:10.1660  INFO - [Web Socket] Server Listening...
+2020-04-22 13:41:10.1660  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-22 13:41:11.4783  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-04-22 13:41:31.8534  INFO - 
+[Socket][Server => Client]
+{
+  "isSuccess": false,
+  "msg": "WebCapture에 실패하였습니다.",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-04-22 13:41:31.8534  INFO - [Socket] 작업 소요시간: 00:00:20.3751232
+2020-04-22 13:41:31.8690  INFO - [Socket] 세션ID: 5cea8b78-79ef-44ef-8174-186300c366b9 접속해제: ClientClosing
+2020-04-22 14:04:42.4468  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-22 14:04:42.5718  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-22 14:04:42.5718  INFO - [INFO] 라이센스 만료날짜: 2020-12-31
+2020-04-22 14:04:42.5874  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-22 14:04:42.5874  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 30일
+2020-04-22 14:04:42.6187  INFO - [Socket] 핸들러 등록 완료
+2020-04-22 14:04:42.6187  INFO - [Socket] 서버 생성 성공
+2020-04-22 14:04:42.6344  INFO - [Socket] Server Listening...
+2020-04-22 14:04:42.6344  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-22 14:04:42.6656  INFO - [Web Socket] Server Listening...
+2020-04-22 14:04:42.6656  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-22 14:04:53.1815  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "PowerPoint 시작.pptx",
+  "ConvertIMG": 0,
+  "useCompression": true
+}
+
+2020-04-22 14:04:53.2282  INFO - 
+[Socket][Server => Client]
+{
+  "URL": null,
+  "isSuccess": false,
+  "msg": "이미지 변환을 하지 않으면 압축할 수 없습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-22 14:04:53.2282  INFO - [Socket] 작업 소요시간: 00:00:00.0466488
+2020-04-22 14:04:53.2593  INFO - [Socket] 세션ID: 65d48567-9357-4f6d-8de4-23344f8cb259 접속해제: ClientClosing
+2020-04-22 14:04:56.5407  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "PowerPoint 시작.pptx",
+  "ConvertIMG": 2,
+  "useCompression": true
+}
+
+2020-04-22 14:04:59.8686  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "9",
+  "zipURL": "workspace/EF571FDA3EDF671CBBF1EDDF9C63C0ED/PowerPoint 시작.zip",
+  "URL": "/workspace/EF571FDA3EDF671CBBF1EDDF9C63C0ED",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-22 14:04:59.8686  INFO - [Socket] 작업 소요시간: 00:00:03.3279583
+2020-04-22 14:04:59.9156  INFO - [Socket] 세션ID: af66f1b1-8381-47df-b569-456ed292748d 접속해제: ClientClosing
+2020-04-22 14:05:01.8688  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "PowerPoint 시작.pptx",
+  "ConvertIMG": 2,
+  "useCompression": true
+}
+
+2020-04-22 14:05:03.5875  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "9",
+  "zipURL": "workspace/EF571FDA3EDF671CBBF1EDDF9C63C0ED/PowerPoint 시작.zip",
+  "URL": "/workspace/EF571FDA3EDF671CBBF1EDDF9C63C0ED",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-22 14:05:03.5875  INFO - [Socket] 작업 소요시간: 00:00:01.7187309
+2020-04-22 14:05:03.6343  INFO - [Socket] 세션ID: f71d3a53-b83f-4d60-9aca-2a38b5c5d80a 접속해제: ClientClosing
+2020-04-22 14:05:05.4155  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "PowerPoint 시작.pptx",
+  "ConvertIMG": 2,
+  "useCompression": true
+}
+
+2020-04-22 14:05:07.1345  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "9",
+  "zipURL": "workspace/EF571FDA3EDF671CBBF1EDDF9C63C0ED/PowerPoint 시작.zip",
+  "URL": "/workspace/EF571FDA3EDF671CBBF1EDDF9C63C0ED",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-22 14:05:07.1345  INFO - [Socket] 작업 소요시간: 00:00:01.7189551
+2020-04-22 14:05:07.1812  INFO - [Socket] 세션ID: 9c198531-887a-4555-9455-49f09829dc91 접속해제: ClientClosing
+2020-04-22 14:06:33.8846  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:4540
+2020-04-22 14:06:33.9157  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "FileName": "Welcome to Hwp.hwp",
+  "Method": "DocConvert",
+  "ConvertIMG": 1,
+  "useCompression": true,
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2"
+}
+
+2020-04-22 14:06:37.5409  INFO - 
+[WebSocket][Server => Client]
+{
+  "convertImgCnt": "5",
+  "zipURL": "workspace/2B699FCE2A5094957B24445F97FCE8CC/Welcome to Hwp.zip",
+  "URL": "/workspace/2B699FCE2A5094957B24445F97FCE8CC",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-22 14:06:37.5409  INFO - [WebSocket] 작업 소요시간: 00:00:03.6252092
+2020-04-22 14:06:37.5409  INFO - [WebSocket]서버와 연결이 해제되었습니다.
+2020-04-22 14:06:43.8691  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:4545
+2020-04-22 14:06:43.8846  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "FileName": "Welcome to Hwp.hwp",
+  "Method": "DocConvert",
+  "ConvertIMG": 2,
+  "useCompression": true,
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2"
+}
+
+2020-04-22 14:06:45.8066  INFO - 
+[WebSocket][Server => Client]
+{
+  "convertImgCnt": "5",
+  "zipURL": "workspace/2B699FCE2A5094957B24445F97FCE8CC/Welcome to Hwp.zip",
+  "URL": "/workspace/2B699FCE2A5094957B24445F97FCE8CC",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-22 14:06:45.8066  INFO - [WebSocket] 작업 소요시간: 00:00:01.9219342
+2020-04-22 14:06:45.8066  INFO - [WebSocket]서버와 연결이 해제되었습니다.
+2020-04-22 14:06:51.2905  INFO - [WebSocket] 클라이언트로 부터 연결요청이 들어옴: 127.0.0.1:4549
+2020-04-22 14:06:51.2905  INFO - 
+[WebSocket][Client => Server]
+{
+  "DocPassword": "",
+  "FileName": "Welcome to Hwp.hwp",
+  "Method": "DocConvert",
+  "ConvertIMG": 1,
+  "useCompression": true,
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2"
+}
+
+2020-04-22 14:06:53.2909  INFO - 
+[WebSocket][Server => Client]
+{
+  "convertImgCnt": "5",
+  "zipURL": "workspace/2B699FCE2A5094957B24445F97FCE8CC/Welcome to Hwp.zip",
+  "URL": "/workspace/2B699FCE2A5094957B24445F97FCE8CC",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-22 14:06:53.2909  INFO - [WebSocket] 작업 소요시간: 00:00:02.0004283
+2020-04-22 14:06:53.2909  INFO - [WebSocket]서버와 연결이 해제되었습니다.

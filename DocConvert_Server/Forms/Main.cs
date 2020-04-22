@@ -138,10 +138,10 @@ namespace DocConvert_Server
                 var endpoint = new IPEndPoint(IPAddress.Parse(Properties.Settings.Default.바인딩_IP), Properties.Settings.Default.웹소켓포트);
                 var options = new WebSocketListenerOptions()
                 {
-                    WebSocketReceiveTimeout = new TimeSpan(0, 3, 0), // 클라이언트가 서버로 요청했을때 서버가 바쁘면 Timeout
+                    WebSocketReceiveTimeout = new TimeSpan(0, 1, 0), // 클라이언트가 서버로 요청했을때 서버가 바쁘면 Timeout
                     WebSocketSendTimeout = new TimeSpan(0, 0, 5), // 클라이언트가 연결을 끊었을때 Timeout
-                    NegotiationTimeout = new TimeSpan(0, 3, 0),
-                    PingTimeout = new TimeSpan(0, 3, 0),
+                    NegotiationTimeout = new TimeSpan(0, 1, 0),
+                    PingTimeout = new TimeSpan(0, 1, 0),
                     PingMode = PingModes.LatencyControl
                 };
                 webSocketServer = new WebSocketListener(endpoint, options);

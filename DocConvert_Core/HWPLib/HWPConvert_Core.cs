@@ -3,6 +3,7 @@ using DocConvert_Core.interfaces;
 using NLog;
 using System;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Threading;
 
 namespace DocConvert_Core.HWPLib
@@ -103,6 +104,9 @@ namespace DocConvert_Core.HWPLib
             {
                 #region 앱 종료
                 axHwpCtrl.Dispose();
+                axHwpCtrl = null;
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
                 #endregion
                 logger.Info("==================== End ====================");
             }

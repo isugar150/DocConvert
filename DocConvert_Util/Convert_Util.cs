@@ -583,7 +583,7 @@ namespace DocConvert_Util
         // textBox2  문자열 추가
         private void tb2_appendText(string str)
         {
-            textBox2.AppendText(System.DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss.fff") + "   " + str + "\r\n");
+            textBox2.AppendText(System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.fff") + "   " + str + "\r\n");
         }
 
         // 한글 DLL 등록 버튼
@@ -760,12 +760,14 @@ namespace DocConvert_Util
                 panel6.Location = new Point(0, 78);
                 panel6.Visible = true;
                 panel7.Visible = false;
+                checkBox3.Enabled = true;
             }
             else if (comboBox2.SelectedIndex == 1)
             {
                 panel7.Location = new Point(0, 109);
                 panel7.Visible = true;
                 panel6.Visible = false;
+                checkBox3.Enabled = false;
             }
         }
 
