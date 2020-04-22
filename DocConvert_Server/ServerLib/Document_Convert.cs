@@ -162,7 +162,10 @@ namespace DocConvert_Server
                         }
                         else
                         {
-                            responseMsg["convertImgCnt"] = -1;
+                            responseMsg["URL"] = null;
+                            responseMsg["isSuccess"] = status.isSuccess;
+                            responseMsg["msg"] = status.Message;
+                            responseMsg["convertImgCnt"] = status.PageCount;
                         }
                     }
 

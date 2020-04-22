@@ -1110,3 +1110,232 @@
 
 2020-04-22 14:06:53.2909  INFO - [WebSocket] 작업 소요시간: 00:00:02.0004283
 2020-04-22 14:06:53.2909  INFO - [WebSocket]서버와 연결이 해제되었습니다.
+2020-04-22 18:35:29.8465  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-22 18:35:30.0958  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-22 18:35:30.0958  INFO - [INFO] 라이센스 만료날짜: 2020-12-31
+2020-04-22 18:35:30.0958  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-22 18:35:30.0958  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 30일
+2020-04-22 18:35:30.1916  INFO - [Socket] 핸들러 등록 완료
+2020-04-22 18:35:30.1916  INFO - [Socket] 서버 생성 성공
+2020-04-22 18:35:30.2255  INFO - [Socket] Server Listening...
+2020-04-22 18:35:30.2255  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-22 18:35:30.3352  INFO - [Web Socket] Server Listening...
+2020-04-22 18:35:30.3352  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-22 18:35:40.5867  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "새 Microsoft PowerPoint 프레젠테이션.pptx",
+  "ConvertIMG": 1,
+  "useCompression": false
+}
+
+2020-04-22 18:35:42.0271  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": "1",
+  "URL": "/workspace/03A8A432584F4914A83C87CD646955CF",
+  "isSuccess": true,
+  "msg": "이미지 변환에 성공하였습니다.",
+  "Method": "DocConvert"
+}
+
+2020-04-22 18:35:42.0271  INFO - [Socket] 작업 소요시간: 00:00:01.4405167
+2020-04-22 18:35:42.0869  INFO - [Socket] 세션ID: 7440fe2a-6a64-4979-b66d-b422822f25d8 접속해제: ClientClosing
+2020-04-22 18:36:35.9485  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "새 Microsoft PowerPoint 프레젠테이션.pptx",
+  "ConvertIMG": 1,
+  "useCompression": false
+}
+
+2020-04-22 18:37:20.7926  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-22 18:37:21.0005  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-22 18:37:21.0005  INFO - [INFO] 라이센스 만료날짜: 2020-12-31
+2020-04-22 18:37:21.0005  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-22 18:37:21.0005  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 30일
+2020-04-22 18:37:21.0738  INFO - [Socket] 핸들러 등록 완료
+2020-04-22 18:37:21.0738  INFO - [Socket] 서버 생성 성공
+2020-04-22 18:37:21.0968  INFO - [Socket] Server Listening...
+2020-04-22 18:37:21.0968  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-22 18:37:21.1815  INFO - [Web Socket] Server Listening...
+2020-04-22 18:37:21.1815  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-22 18:37:23.7026  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "새 Microsoft PowerPoint 프레젠테이션.pptx",
+  "ConvertIMG": 1,
+  "useCompression": false
+}
+
+2020-04-22 18:56:38.9196  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-22 18:56:39.0960  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-22 18:56:39.0960  INFO - [INFO] 라이센스 만료날짜: 2020-12-31
+2020-04-22 18:56:39.0960  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-22 18:56:39.0960  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 30일
+2020-04-22 18:56:39.1772  INFO - [Socket] 핸들러 등록 완료
+2020-04-22 18:56:39.1772  INFO - [Socket] 서버 생성 성공
+2020-04-22 18:56:39.2071  INFO - [Socket] Server Listening...
+2020-04-22 18:56:39.2071  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-22 18:56:39.2959  INFO - [Web Socket] Server Listening...
+2020-04-22 18:56:39.2959  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-22 18:56:46.8010  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "새 Microsoft PowerPoint 프레젠테이션.pptx",
+  "ConvertIMG": 2,
+  "useCompression": false
+}
+
+2020-04-22 22:12:04.3634  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-22 22:12:04.6290  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-22 22:12:04.6290  INFO - [INFO] 라이센스 만료날짜: 2020-12-31
+2020-04-22 22:12:04.6290  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-22 22:12:04.6290  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 30일
+2020-04-22 22:12:04.7071  INFO - [Socket] 핸들러 등록 완료
+2020-04-22 22:12:04.7071  INFO - [Socket] 서버 생성 성공
+2020-04-22 22:12:04.7383  INFO - [Socket] Server Listening...
+2020-04-22 22:12:04.7383  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-22 22:12:04.8321  INFO - [Web Socket] Server Listening...
+2020-04-22 22:12:04.8321  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-22 22:12:14.7676  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "새 Microsoft PowerPoint 프레젠테이션.pdf",
+  "ConvertIMG": 1,
+  "useCompression": false
+}
+
+2020-04-22 22:12:14.9238  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": -1,
+  "Method": "DocConvert"
+}
+
+2020-04-22 22:12:14.9238  INFO - [Socket] 작업 소요시간: 00:00:00.1562152
+2020-04-22 22:12:20.3288  INFO - [Socket] 세션ID: f6d01e9d-f15a-489d-a1a6-526963be6ffb 접속해제: SocketError
+2020-04-22 22:12:27.3740  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-22 22:12:27.6396  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-22 22:12:27.6396  INFO - [INFO] 라이센스 만료날짜: 2020-12-31
+2020-04-22 22:12:27.6396  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-22 22:12:27.6396  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 30일
+2020-04-22 22:12:27.7333  INFO - [Socket] 핸들러 등록 완료
+2020-04-22 22:12:27.7333  INFO - [Socket] 서버 생성 성공
+2020-04-22 22:12:27.7645  INFO - [Socket] Server Listening...
+2020-04-22 22:12:27.7645  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-22 22:12:27.8583  INFO - [Web Socket] Server Listening...
+2020-04-22 22:12:27.8583  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-22 22:12:45.4635  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "새 Microsoft PowerPoint 프레젠테이션.pdf",
+  "ConvertIMG": 1,
+  "useCompression": false
+}
+
+2020-04-22 22:12:45.6197  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": -1,
+  "Method": "DocConvert"
+}
+
+2020-04-22 22:12:45.6197  INFO - [Socket] 작업 소요시간: 00:00:00.1562143
+2020-04-22 22:12:47.2131  INFO - [Socket] 세션ID: 11efe89e-f5a4-4c16-b2fd-f3d5acb8e28b 접속해제: SocketError
+2020-04-22 22:13:32.9135  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-22 22:13:33.0698  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-22 22:13:33.0854  INFO - [INFO] 라이센스 만료날짜: 2020-12-31
+2020-04-22 22:13:33.0854  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-22 22:13:33.0854  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 30일
+2020-04-22 22:13:33.1635  INFO - [Socket] 핸들러 등록 완료
+2020-04-22 22:13:33.1635  INFO - [Socket] 서버 생성 성공
+2020-04-22 22:13:33.2572  INFO - [Socket] Server Listening...
+2020-04-22 22:13:33.2572  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-22 22:13:33.3509  INFO - [Web Socket] Server Listening...
+2020-04-22 22:13:33.3509  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-22 22:13:42.3176  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "새 Microsoft PowerPoint 프레젠테이션.pdf",
+  "ConvertIMG": 1,
+  "useCompression": false
+}
+
+2020-04-22 22:13:42.4738  INFO - 
+[Socket][Server => Client]
+{
+  "convertImgCnt": -1,
+  "Method": "DocConvert"
+}
+
+2020-04-22 22:13:42.4738  INFO - [Socket] 작업 소요시간: 00:00:00.1562211
+2020-04-22 22:13:45.2232  INFO - [Socket] 세션ID: 79f54053-4e22-46f2-84f3-4ec946ff3c46 접속해제: SocketError
+2020-04-22 22:14:10.3583  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-22 22:14:10.5145  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-22 22:14:10.5145  INFO - [INFO] 라이센스 만료날짜: 2020-12-31
+2020-04-22 22:14:10.5145  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-22 22:14:10.5145  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 30일
+2020-04-22 22:14:10.5926  INFO - [Socket] 핸들러 등록 완료
+2020-04-22 22:14:10.5926  INFO - [Socket] 서버 생성 성공
+2020-04-22 22:14:10.6394  INFO - [Socket] Server Listening...
+2020-04-22 22:14:10.6394  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-22 22:14:10.7332  INFO - [Web Socket] Server Listening...
+2020-04-22 22:14:10.7332  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-22 22:14:18.7625  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "새 Microsoft PowerPoint 프레젠테이션.pdf",
+  "ConvertIMG": 1,
+  "useCompression": false
+}
+
+2020-04-22 22:15:34.8331  INFO - [INFO] DocConvert Server를 옵션없이 실행하였습니다.
+2020-04-22 22:15:35.0675  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-22 22:15:35.0675  INFO - [INFO] 라이센스 만료날짜: 2020-12-31
+2020-04-22 22:15:35.0675  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-22 22:15:35.0675  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 30일
+2020-04-22 22:15:35.1456  INFO - [Socket] 핸들러 등록 완료
+2020-04-22 22:15:35.1456  INFO - [Socket] 서버 생성 성공
+2020-04-22 22:15:35.1768  INFO - [Socket] Server Listening...
+2020-04-22 22:15:35.1768  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-22 22:15:35.2549  INFO - [Web Socket] Server Listening...
+2020-04-22 22:15:35.2549  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-22 22:15:37.9105  INFO - 
+[Socket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "DocConvert",
+  "FileName": "새 Microsoft PowerPoint 프레젠테이션.pdf",
+  "ConvertIMG": 1,
+  "useCompression": false
+}
+
+2020-04-22 22:15:40.7068  INFO - 
+[Socket][Server => Client]
+{
+  "URL": null,
+  "isSuccess": false,
+  "msg": "PDF에서 이미지로 최대 120장 까지 가능합니다.",
+  "convertImgCnt": 280,
+  "Method": "DocConvert"
+}
+
+2020-04-22 22:15:40.7068  INFO - [Socket] 작업 소요시간: 00:00:02.7962195
+2020-04-22 22:15:40.7380  INFO - [Socket] 세션ID: 153d6001-81b2-4f64-92fe-c859eff8815b 접속해제: ClientClosing

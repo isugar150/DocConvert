@@ -29,6 +29,13 @@ namespace DocConvert_Core.imageLib
                 using (var document = PdfDocument.Load(SourcePDF))
                 {
                     var pageCount = document.PageCount;
+                    if(pageCount >= 120)
+                    {
+                        returnValue.PageCount = pageCount;
+                        returnValue.isSuccess = false;
+                        returnValue.Message = "PDF에서 이미지로 최대 120장 까지 가능합니다.";
+                        return returnValue;
+                    }
                     int totalCnt = 0;
                     for (int i = 0; i < pageCount; i++)
                     {
@@ -89,6 +96,13 @@ namespace DocConvert_Core.imageLib
                 using (var document = PdfDocument.Load(SourcePDF))
                 {
                     var pageCount = document.PageCount;
+                    if (pageCount >= 120)
+                    {
+                        returnValue.PageCount = pageCount;
+                        returnValue.isSuccess = false;
+                        returnValue.Message = "PDF에서 이미지로 최대 120장 까지 가능합니다.";
+                        return returnValue;
+                    }
                     int totalCnt = 0;
                     for (int i = 0; i < pageCount; i++)
                     {
@@ -150,6 +164,13 @@ namespace DocConvert_Core.imageLib
                 using (var document = PdfDocument.Load(SourcePDF))
                 {
                     var pageCount = document.PageCount;
+                    if (pageCount >= 120)
+                    {
+                        returnValue.PageCount = pageCount;
+                        returnValue.isSuccess = false;
+                        returnValue.Message = "PDF에서 이미지로 최대 120장 까지 가능합니다.";
+                        return returnValue;
+                    }
                     int totalCnt = 0;
                     for (int i = 0; i < pageCount; i++)
                     {
