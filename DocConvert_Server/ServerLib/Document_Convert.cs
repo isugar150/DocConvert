@@ -42,6 +42,15 @@ namespace DocConvert_Server
                 {
                     responseMsg["URL"] = null;
                     responseMsg["isSuccess"] = false;
+                    responseMsg["msg"] = "이미지 변환을 하지 않으면 압축할 수 없습니다.";
+                    responseMsg["Method"] = requestMsg["Method"];
+                    return responseMsg;
+                }
+
+                if (requestMsg["Method"].ToString().Equals("WebCapture") && !requestMsg["ConvertIMG"].ToString().Equals("0"))
+                {
+                    responseMsg["URL"] = null;
+                    responseMsg["isSuccess"] = false;
                     responseMsg["msg"] = "유효하지 않은 옵션입니다.";
                     responseMsg["Method"] = requestMsg["Method"];
                     return responseMsg;
