@@ -40,13 +40,15 @@
   "KEY": "ANY",  
   "FileName": "DOCUMENT.xlsx",  
   "ConvertIMG": 2,  
-  "DocPassword": ""  
+  "DocPassword": "",  
+  "useCompression": true //압축 다운로드시 사용  
     
  - [Server => Client]  
   "convertImgCnt": "92",  
   "URL": "/workspace/74C5728223BB8AE604AC1056C0D7DC2A",  
   "isSuccess": true,  
-  "msg": "변환에 성공하였습니다."  
+  "msg": "변환에 성공하였습니다.",  
+  "zipURL": "/workspace/74C5728223BB8AE604AC1056C0D7DC2A/DOCUMENT.zip" // 압축파일 경로  
 ```  
 `웹 캡쳐시`
 ```
@@ -54,7 +56,7 @@
   [Socket][Client => Server]
   "KEY": "Any",
   "Method": "WebCapture",
-  "URL": "http://www.naver.com"
+  "URL": "http://www.naver.com",
     
  - [Server => Client]  
   "URL": "/workspace/0d73a975-b29b-463f-85a1-44d61c91508c_2020-04-16/ImageName.png",
