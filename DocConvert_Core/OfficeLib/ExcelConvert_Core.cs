@@ -28,7 +28,6 @@ namespace DocConvert_Core.OfficeLib
             try
             {
                 LockFile.UnLock_File(FilePath);
-                logger.Info("파일 언락 성공!");
             }
             catch (Exception e1)
             {

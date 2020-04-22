@@ -1,4 +1,5 @@
-﻿using ICSharpCode.SharpZipLib.Zip;
+﻿using DocConvert_Core.FileLib;
+using ICSharpCode.SharpZipLib.Zip;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,6 +13,10 @@ namespace DocConvert_Core.ZipLib
     {
 		public static bool CreateZipFile(string[] filenames, string outPath)
 		{
+			foreach(var str in filenames)
+			{
+				LockFile.UnLock_File(str);
+			}
 			using (ZipOutputStream s = new ZipOutputStream(File.Create(outPath)))
 			{
 				s.SetLevel(9); // 압축 레벨

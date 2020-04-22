@@ -376,6 +376,8 @@ namespace DocConvert_Util
                             requestMsg["Method"] = "DocConvert";
                             requestMsg["FileName"] = new FileInfo(textBox1.Text).Name;
                             requestMsg["ConvertIMG"] = comboBox1.SelectedIndex;
+                            if(comboBox2.SelectedIndex == 0)
+                                requestMsg["useCompression"] = checkBox3.Checked;
 
                             SendData(requestMsg.ToString());
                         }
@@ -495,16 +497,27 @@ namespace DocConvert_Util
                         {
                             string outPath = Path.GetDirectoryName(textBox1.Text);
                             string outFileName = Path.GetFileNameWithoutExtension(textBox1.Text);
-                            ftpClient.DownloadFile(outPath + @"\" + outFileName + ".pdf", url + "/" + outFileName + ".pdf", FtpLocalExists.Overwrite, FtpVerify.None);
                             if (comboBox1.SelectedIndex != 0)
                             {
-                                for (int i = 0; i < int.Parse(convertImgCnt); i++)
+                                if (responseData["zipURL"] != null)
                                 {
-                                    ftpClient.DownloadFile(outPath + @"\" + outFileName + @"\" + (i + 1) + "." + imgType, url + "/" + outFileName + "/" + (i + 1) + "." + imgType, FtpLocalExists.Overwrite, FtpVerify.None);
-                                    tb2_appendText(outPath + @"\" + outFileName + @"\" + (i + 1) + "." + imgType + " 파일 다운로드 완료");
+                                    ftpClient.DownloadFile(outPath + @"\" + outFileName + ".zip", responseData["zipURL"].ToString(), FtpLocalExists.Overwrite, FtpVerify.None); 
+                                    tb2_appendText(outPath + @"\" + outFileName + ".zip 파일 다운로드 완료");
+                                }
+                                else
+                                {
+                                    for (int i = 0; i < int.Parse(convertImgCnt); i++)
+                                    {
+                                        ftpClient.DownloadFile(outPath + @"\" + outFileName + @"\" + (i + 1) + "." + imgType, url + "/" + outFileName + "/" + (i + 1) + "." + imgType, FtpLocalExists.Overwrite, FtpVerify.None);
+                                        tb2_appendText(outPath + @"\" + outFileName + @"\" + (i + 1) + "." + imgType + " 파일 다운로드 완료");
+                                    }
                                 }
                             }
-                            tb2_appendText(outPath + @"\" + outFileName + ".pdf" + " 파일 다운로드 완료");
+                            if(comboBox1.SelectedIndex == 0)
+                            {
+                                ftpClient.DownloadFile(outPath + @"\" + outFileName + ".pdf", url + "/" + outFileName + ".pdf", FtpLocalExists.Overwrite, FtpVerify.None);
+                                tb2_appendText(outPath + @"\" + outFileName + ".pdf" + " 파일 다운로드 완료");
+                            }
                         }
                         ftpClient.Disconnect();
                         ftpClient.Dispose();
@@ -753,6 +766,18 @@ namespace DocConvert_Util
                 panel7.Location = new Point(0, 109);
                 panel7.Visible = true;
                 panel6.Visible = false;
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBox1.SelectedIndex != 0 && comboBox2.SelectedIndex == 0)
+            {
+                checkBox3.Enabled = true;
+            }
+            else
+            {
+                checkBox3.Enabled = false;
             }
         }
 

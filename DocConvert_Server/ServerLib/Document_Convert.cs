@@ -1,8 +1,10 @@
-﻿using DocConvert_Core.HWPLib;
+﻿using DocConvert_Core.FileLib;
+using DocConvert_Core.HWPLib;
 using DocConvert_Core.imageLib;
 using DocConvert_Core.interfaces;
 using DocConvert_Core.OfficeLib;
 using DocConvert_Core.WebCaptureLib;
+using DocConvert_Core.ZipLib;
 using Newtonsoft.Json.Linq;
 using NLog;
 using System;
@@ -32,6 +34,15 @@ namespace DocConvert_Server
                     responseMsg["URL"] = null;
                     responseMsg["isSuccess"] = false;
                     responseMsg["msg"] = "키가 유효하지 않습니다. 확인 후 다시시도하세요.";
+                    responseMsg["Method"] = requestMsg["Method"];
+                    return responseMsg;
+                }
+
+                if (requestMsg["useCompression"].ToString().Equals("True") && requestMsg["ConvertIMG"].ToString().Equals("0"))
+                {
+                    responseMsg["URL"] = null;
+                    responseMsg["isSuccess"] = false;
+                    responseMsg["msg"] = "유효하지 않은 옵션입니다.";
                     responseMsg["Method"] = requestMsg["Method"];
                     return responseMsg;
                 }
@@ -137,6 +148,16 @@ namespace DocConvert_Server
                         if (status.isSuccess)
                         {
                             responseMsg["convertImgCnt"] = string.Format("{0}", status.PageCount);
+
+                            if (requestMsg["useCompression"].ToString().Equals("True"))
+                            {
+                                string zipoutPath = Path.GetDirectoryName(outPath) + @"\" + Path.GetFileNameWithoutExtension(outPath) + ".zip";
+                                FileInfo fi = new FileInfo(zipoutPath);
+                                if (fi.Exists)
+                                    fi.Delete();
+                                ZipLib.CreateZipFile(Directory.GetFiles(imageOutput), zipoutPath);
+                                responseMsg["zipURL"] = documents + "/" + md5_filechecksum + "/" + Path.GetFileNameWithoutExtension(outPath) + ".zip";
+                            }
                         }
                         else
                         {

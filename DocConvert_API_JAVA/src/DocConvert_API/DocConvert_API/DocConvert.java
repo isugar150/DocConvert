@@ -39,7 +39,8 @@ public class DocConvert {
         int ftpPort = properties.getFtpPORT();
         String ftpUser = properties.getFtpUSER(); // 유저이름
         String ftpPass = properties.getFtpPASS(); // 암호
-        final boolean isFTPS = properties.getIsFTPS(); // FTPS 사용여부
+        final boolean isFTPS = properties.getIsFTPS().equals("Y") ? true : false; // FTPS 사용여부
+        final boolean useCompression = properties.getUseCompression().equals("Y") ? true : false; // 압축 사용여부
         String clientKEY = properties.getClientKEY();
 
         final long start = System.currentTimeMillis(); //코드 실행 전에 시간 받아오기
@@ -48,6 +49,7 @@ public class DocConvert {
         String sourceFileExten = fileName.substring(fileName.lastIndexOf("."), fileName.length());
         final String downloadIMGDir = fileName.replace(sourceFileExten, "");
         final String downloadPDFName = fileName.replace(sourceFileExten, ".pdf");
+        final String downloadZIPName = fileName.replace(sourceFileExten, ".zip");
 
         // FTP변수 초기화
         final FTPManager ftpManager = new FTPManager();
@@ -75,6 +77,7 @@ public class DocConvert {
         requestMsg.put("Method", "DocConvert");
         requestMsg.put("FileName", fileName);
         requestMsg.put("ConvertIMG", toImg);
+        requestMsg.put("useCompression", useCompression);
         requestMsg.put("DocPassword", "");
 
         // 웹 소켓으로 서버에게 데이터 전송
@@ -101,10 +104,8 @@ public class DocConvert {
                         return;
                     }
 
-                    System.out.println("remoteFile: " + responseData.get("URL").toString() + "/" + downloadPDFName);
-                    System.out.println("localFile: " + filePath + File.separator + downloadPDFName);
                     // PDF 다운로드
-                    if(!properties.getOnlyImgDownload() || toImg == 0) {
+                    if(toImg == 0) {
                         if (isFTPS) {
                             ftpManager.downloadFileFTPS(responseData.get("URL").toString() + "/" + downloadPDFName, filePath + File.separator + downloadPDFName);
                         } else {
@@ -119,14 +120,22 @@ public class DocConvert {
                             imgExtension = ".png";
                         else if(Integer.parseInt(requestMsg.get("ConvertIMG").toString()) == 3)
                             imgExtension = ".bmp";
-
-                        new File(filePath + File.separator + downloadIMGDir).mkdirs();
-                        for(int i = 0; i < Integer.parseInt(responseData.get("convertImgCnt").toString()); i++){
+                        if(useCompression){
                             if(isFTPS){
-                                ftpManager.downloadFileFTPS(responseData.get("URL").toString() + "/" + downloadIMGDir + "/" + (i + 1) + imgExtension, filePath + File.separator + File.separator + downloadIMGDir + File.separator + (i + 1) + imgExtension);
+                                ftpManager.downloadFileFTPS(responseData.get("URL").toString() + "/" + downloadZIPName, filePath + File.separator + downloadZIPName);
                             }
                             else{
-                                ftpManager.downloadFile(responseData.get("URL").toString() + "/" + downloadIMGDir + "/" + (i + 1) + imgExtension, filePath + File.separator + File.separator + downloadIMGDir + File.separator + (i + 1) + imgExtension);
+                                ftpManager.downloadFile(responseData.get("URL").toString() + "/" + downloadZIPName, filePath + File.separator + downloadZIPName);
+                            }
+                        } else{
+                            new File(filePath + File.separator + downloadIMGDir).mkdirs();
+                            for(int i = 0; i < Integer.parseInt(responseData.get("convertImgCnt").toString()); i++){
+                                if(isFTPS){
+                                    ftpManager.downloadFileFTPS(responseData.get("URL").toString() + "/" + downloadIMGDir + "/" + (i + 1) + imgExtension, filePath + File.separator + File.separator + downloadIMGDir + File.separator + (i + 1) + imgExtension);
+                                }
+                                else{
+                                    ftpManager.downloadFile(responseData.get("URL").toString() + "/" + downloadIMGDir + "/" + (i + 1) + imgExtension, filePath + File.separator + File.separator + downloadIMGDir + File.separator + (i + 1) + imgExtension);
+                                }
                             }
                         }
                     }
