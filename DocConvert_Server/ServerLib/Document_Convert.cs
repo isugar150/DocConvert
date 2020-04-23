@@ -135,15 +135,15 @@ namespace DocConvert_Server
                             new DirectoryInfo(imageOutput).Create();
                         if (convertIMG.Equals("1"))
                         {
-                            status = ConvertImg.PDFtoJpeg(outPath, imageOutput);
+                            status = ConvertImg.PDFtoJpeg(outPath, imageOutput, Properties.Settings.Default.PDF에서이미지최대카운트);
                         }
                         else if (convertIMG.Equals("2"))
                         {
-                            status = ConvertImg.PDFtoPng(outPath, imageOutput);
+                            status = ConvertImg.PDFtoPng(outPath, imageOutput, Properties.Settings.Default.PDF에서이미지최대카운트);
                         }
                         else if (convertIMG.Equals("3"))
                         {
-                            status = ConvertImg.PDFtoBmp(outPath, imageOutput);
+                            status = ConvertImg.PDFtoBmp(outPath, imageOutput, Properties.Settings.Default.PDF에서이미지최대카운트);
                         }
                         if (status.isSuccess)
                         {

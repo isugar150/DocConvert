@@ -15,11 +15,11 @@ namespace DocConvert_Core.imageLib
         private static Logger logger = LogManager.GetLogger("DocConvert_Engine_Log");
 
         // 참고문서: https://github.com/pvginkel/PdfiumViewer
-        public static ReturnValue PDFtoJpeg(string SourcePDF, string outPath)
+        public static ReturnValue PDFtoJpeg(string SourcePDF, string outPath, int maxConvert)
         {
-            return PDFtoJpeg(SourcePDF, outPath, PdfRenderFlags.ForPrinting);
+            return PDFtoJpeg(SourcePDF, outPath, maxConvert, PdfRenderFlags.ForPrinting);
         }
-        public static ReturnValue PDFtoJpeg(string SourcePDF, string outPath, PdfRenderFlags quality)
+        public static ReturnValue PDFtoJpeg(string SourcePDF, string outPath, int maxConvert, PdfRenderFlags quality)
         {
             ReturnValue returnValue = new ReturnValue();
             try
@@ -29,11 +29,11 @@ namespace DocConvert_Core.imageLib
                 using (var document = PdfDocument.Load(SourcePDF))
                 {
                     var pageCount = document.PageCount;
-                    if(pageCount >= 120)
+                    if (pageCount > maxConvert && maxConvert != 0)
                     {
                         returnValue.PageCount = pageCount;
                         returnValue.isSuccess = false;
-                        returnValue.Message = "PDF에서 이미지로 최대 120장 까지 가능합니다.";
+                        returnValue.Message = "PDF에서 이미지로 최대 " + maxConvert + "장 까지 가능합니다.";
                         return returnValue;
                     }
                     int totalCnt = 0;
@@ -82,11 +82,11 @@ namespace DocConvert_Core.imageLib
         }
 
         // 참고문서: https://github.com/pvginkel/PdfiumViewer
-        public static ReturnValue PDFtoBmp(string SourcePDF, string outPath)
+        public static ReturnValue PDFtoBmp(string SourcePDF, string outPath, int maxConvert)
         {
-            return PDFtoBmp(SourcePDF, outPath, PdfRenderFlags.ForPrinting);
+            return PDFtoBmp(SourcePDF, outPath, maxConvert, PdfRenderFlags.ForPrinting);
         }
-        public static ReturnValue PDFtoBmp(string SourcePDF, string outPath, PdfRenderFlags quality)
+        public static ReturnValue PDFtoBmp(string SourcePDF, string outPath, int maxConvert, PdfRenderFlags quality)
         {
             ReturnValue returnValue = new ReturnValue();
             try
@@ -96,11 +96,11 @@ namespace DocConvert_Core.imageLib
                 using (var document = PdfDocument.Load(SourcePDF))
                 {
                     var pageCount = document.PageCount;
-                    if (pageCount >= 120)
+                    if (pageCount > maxConvert && maxConvert != 0)
                     {
                         returnValue.PageCount = pageCount;
                         returnValue.isSuccess = false;
-                        returnValue.Message = "PDF에서 이미지로 최대 120장 까지 가능합니다.";
+                        returnValue.Message = "PDF에서 이미지로 최대 " + maxConvert + "장 까지 가능합니다.";
                         return returnValue;
                     }
                     int totalCnt = 0;
@@ -150,11 +150,11 @@ namespace DocConvert_Core.imageLib
         }
 
         // 참고문서: https://github.com/pvginkel/PdfiumViewer
-        public static ReturnValue PDFtoPng(string SourcePDF, string outPath)
+        public static ReturnValue PDFtoPng(string SourcePDF, string outPath, int maxConvert)
         {
-            return PDFtoPng(SourcePDF, outPath, PdfRenderFlags.ForPrinting);
+            return PDFtoPng(SourcePDF, outPath, maxConvert, PdfRenderFlags.ForPrinting);
         }
-        public static ReturnValue PDFtoPng(string SourcePDF, string outPath, PdfRenderFlags quality)
+        public static ReturnValue PDFtoPng(string SourcePDF, string outPath, int maxConvert, PdfRenderFlags quality)
         {
             ReturnValue returnValue = new ReturnValue();
             try
@@ -164,11 +164,11 @@ namespace DocConvert_Core.imageLib
                 using (var document = PdfDocument.Load(SourcePDF))
                 {
                     var pageCount = document.PageCount;
-                    if (pageCount >= 120)
+                    if (pageCount > maxConvert && maxConvert != 0)
                     {
                         returnValue.PageCount = pageCount;
                         returnValue.isSuccess = false;
-                        returnValue.Message = "PDF에서 이미지로 최대 120장 까지 가능합니다.";
+                        returnValue.Message = "PDF에서 이미지로 최대 " + maxConvert + "장 까지 가능합니다.";
                         return returnValue;
                     }
                     int totalCnt = 0;

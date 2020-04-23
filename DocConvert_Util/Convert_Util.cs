@@ -248,13 +248,16 @@ namespace DocConvert_Util
                             }
                             else if (Path.GetExtension(FileNames[i]).Equals(".pdf"))
                             {
-                                ReturnValue pdfreturnValue = new ReturnValue();
-                                pdfreturnValue.isSuccess = true;
-                                pdfreturnValue.Message = "PDF파일은 변환할 필요가 없습니다.";
-                                pdfreturnValue.PageCount = ConvertImg.pdfPageCount(FileNames[i]);
-                                status = pdfreturnValue;
+                                if (comboBox1.SelectedIndex == 0)
+                                {
+                                    ReturnValue pdfreturnValue = new ReturnValue();
+                                    pdfreturnValue.isSuccess = true;
+                                    pdfreturnValue.Message = "PDF파일은 변환할 필요가 없습니다.";
+                                    pdfreturnValue.PageCount = ConvertImg.pdfPageCount(FileNames[i]);
+                                    status = pdfreturnValue;
+                                }
                             }
-                            else
+                            else 
                             {
                                 tb2_appendText("[상태]   지원포맷 아님. 파싱한 확장자: " + Path.GetExtension(FileNames[i]));
                             }
@@ -279,15 +282,15 @@ namespace DocConvert_Util
                                     new DirectoryInfo(imageOutput).Create();
                                 if (comboBox1.SelectedIndex == 1)
                                 {
-                                    pdfToImgReturn = ConvertImg.PDFtoJpeg(outPath, imageOutput, quality);
+                                    pdfToImgReturn = ConvertImg.PDFtoJpeg(outPath, imageOutput, 120, quality);
                                 }
                                 else if (comboBox1.SelectedIndex == 2)
                                 {
-                                    pdfToImgReturn = ConvertImg.PDFtoPng(outPath, imageOutput, quality);
+                                    pdfToImgReturn = ConvertImg.PDFtoPng(outPath, imageOutput, 0, quality);
                                 }
                                 else if (comboBox1.SelectedIndex == 3)
                                 {
-                                    pdfToImgReturn = ConvertImg.PDFtoBmp(outPath, imageOutput, quality);
+                                    pdfToImgReturn = ConvertImg.PDFtoBmp(outPath, imageOutput, 0, quality);
                                 }
                                 if (pdfToImgReturn.isSuccess)
                                 {
@@ -405,6 +408,8 @@ namespace DocConvert_Util
             }
             catch (Exception e1)
             {
+                groupBox1.Enabled = true;
+                groupBox2.Enabled = true;
                 tb2_appendText("변환중 오류발생");
                 tb2_appendText("======= Method: " + MethodBase.GetCurrentMethod().Name + " =======");
                 tb2_appendText(new StackTrace(e1, true).ToString());

@@ -168,5 +168,14 @@ namespace DocConvert_Server.Properties {
                 return ((int)(this["로그정리주기_일"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("120")]
+        public int PDF에서이미지최대카운트 {
+            get {
+                return ((int)(this["PDF에서이미지최대카운트"]));
+            }
+        }
     }
 }
