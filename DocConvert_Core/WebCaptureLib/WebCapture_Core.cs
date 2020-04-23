@@ -19,7 +19,7 @@ namespace DocConvert_Core.WebCaptureLib
         /// <param name="outPath">내보낼 경로</param>
         /// <returns></returns>
         [STAThread]
-        public static ReturnValue WebCapture(string Url, string outPath)
+        public static ReturnValue WebCapture(string Url, string outPath, int timeOut)
         {
             ReturnValue returnValue = new ReturnValue();
             try
@@ -38,7 +38,7 @@ namespace DocConvert_Core.WebCaptureLib
                 process.Start();
                 process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
                 // 20초동안 끝나지않았을때 강제종료
-                DateTime timeTaken = DateTime.Now.AddSeconds(20);
+                DateTime timeTaken = DateTime.Now.AddSeconds(timeOut);
                 while (!process.HasExited)
                 {
                     if (DateTime.Now > timeTaken)

@@ -248,14 +248,11 @@ namespace DocConvert_Util
                             }
                             else if (Path.GetExtension(FileNames[i]).Equals(".pdf"))
                             {
-                                if (comboBox1.SelectedIndex == 0)
-                                {
-                                    ReturnValue pdfreturnValue = new ReturnValue();
-                                    pdfreturnValue.isSuccess = true;
-                                    pdfreturnValue.Message = "PDF파일은 변환할 필요가 없습니다.";
-                                    pdfreturnValue.PageCount = ConvertImg.pdfPageCount(FileNames[i]);
-                                    status = pdfreturnValue;
-                                }
+                                ReturnValue pdfreturnValue = new ReturnValue();
+                                pdfreturnValue.isSuccess = true;
+                                pdfreturnValue.Message = "PDF파일은 변환할 필요가 없습니다.";
+                                pdfreturnValue.PageCount = ConvertImg.pdfPageCount(FileNames[i]);
+                                status = pdfreturnValue;
                             }
                             else 
                             {
@@ -504,9 +501,9 @@ namespace DocConvert_Util
                             string outFileName = Path.GetFileNameWithoutExtension(textBox1.Text);
                             if (comboBox1.SelectedIndex != 0)
                             {
-                                if (responseData["zipURL"] != null)
+                                if (responseData["useCompression"].ToString().Equals("True"))
                                 {
-                                    ftpClient.DownloadFile(outPath + @"\" + outFileName + ".zip", responseData["zipURL"].ToString(), FtpLocalExists.Overwrite, FtpVerify.None); 
+                                    ftpClient.DownloadFile(outPath + @"\" + outFileName + ".zip", responseData["URL"].ToString() + @"\" + outFileName + ".zip", FtpLocalExists.Overwrite, FtpVerify.None); 
                                     tb2_appendText(outPath + @"\" + outFileName + ".zip 파일 다운로드 완료");
                                 }
                                 else

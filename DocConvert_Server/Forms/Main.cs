@@ -15,8 +15,6 @@ using System.Windows.Forms;
 using vtortola.WebSockets;
 using vtortola.WebSockets.Deflate;
 
-// TODO FTPS 지원 (클라이언트단)
-
 namespace DocConvert_Server
 {
     public partial class Form1 : Form

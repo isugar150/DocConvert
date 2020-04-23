@@ -157,7 +157,6 @@ namespace DocConvert_Server
                                 if (Directory.Exists(outPath + @"\" + Path.GetFileNameWithoutExtension(outPath)))
                                     Directory.Delete(outPath + @"\" + Path.GetFileNameWithoutExtension(outPath));
                                 ZipLib.CreateZipFile(Directory.GetFiles(imageOutput), zipoutPath);
-                                responseMsg["zipURL"] = "/" + documents + "/" + md5_filechecksum + "/" + Path.GetFileNameWithoutExtension(outPath) + ".zip";
                             }
                         }
                         else
@@ -177,6 +176,7 @@ namespace DocConvert_Server
                             responseMsg["pageNum"] = status.PageCount;
                         responseMsg["msg"] = status.Message;
                     }
+                    responseMsg["useCompression"] = requestMsg["useCompression"];
                     #endregion
                 }
                 else if (requestMsg["Method"].ToString().Equals("WebCapture"))
@@ -186,7 +186,7 @@ namespace DocConvert_Server
                     #region WebCapture
                     Thread WebCapture = new Thread(() =>
                     {
-                        status = WebCapture_Core.WebCapture(requestMsg["URL"].ToString(), Properties.Settings.Default.데이터경로 + dataPath);
+                        status = WebCapture_Core.WebCapture(requestMsg["URL"].ToString(), Properties.Settings.Default.데이터경로 + dataPath, + Properties.Settings.Default.웹캡쳐_타임아웃_sec);
                     });
                     WebCapture.SetApartmentState(ApartmentState.STA);
                     WebCapture.Start();

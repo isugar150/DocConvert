@@ -177,5 +177,14 @@ namespace DocConvert_Server.Properties {
                 return ((int)(this["PDF에서이미지최대카운트"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("30")]
+        public int 웹캡쳐_타임아웃_sec {
+            get {
+                return ((int)(this["웹캡쳐_타임아웃_sec"]));
+            }
+        }
     }
 }
