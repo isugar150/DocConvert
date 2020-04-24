@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("DocConvert_Server")]
 [assembly: AssemblyDescription("문서 변환서버")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Jm's Corp")]
+[assembly: AssemblyCompany("JMKim")]
 [assembly: AssemblyProduct("DocConvert_Server")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyCopyright("Copyright © 2020. JMKIM. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
