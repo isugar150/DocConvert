@@ -79,3 +79,4 @@ C:\Users\JMKIM\Desktop\source\DocConvert\bin\Debug\phantomjs.exe
 C:\Users\JMKIM\Desktop\source\DocConvert\bin\Debug\rasterize.js
 C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.Forms.AboutForm.resources
 C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.MessageDialog.resources
+C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\Utility\Office Uninstall v1.8.2.exe
