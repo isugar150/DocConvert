@@ -279,15 +279,15 @@ namespace DocConvert_Util
                                     new DirectoryInfo(imageOutput).Create();
                                 if (comboBox1.SelectedIndex == 1)
                                 {
-                                    pdfToImgReturn = ConvertImg.PDFtoJpeg(outPath, imageOutput, 120, quality);
+                                    pdfToImgReturn = ConvertImg.PDFtoJpeg(outPath, imageOutput, quality);
                                 }
                                 else if (comboBox1.SelectedIndex == 2)
                                 {
-                                    pdfToImgReturn = ConvertImg.PDFtoPng(outPath, imageOutput, 0, quality);
+                                    pdfToImgReturn = ConvertImg.PDFtoPng(outPath, imageOutput, quality);
                                 }
                                 else if (comboBox1.SelectedIndex == 3)
                                 {
-                                    pdfToImgReturn = ConvertImg.PDFtoBmp(outPath, imageOutput, 0, quality);
+                                    pdfToImgReturn = ConvertImg.PDFtoBmp(outPath, imageOutput, quality);
                                 }
                                 if (pdfToImgReturn.isSuccess)
                                 {

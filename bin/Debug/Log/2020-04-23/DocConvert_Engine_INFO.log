@@ -102,3 +102,27 @@
 2020-04-23 15:38:22.6921  INFO - Method: PDFtoJpeg, FilePath: C:\Data\workspace\9F0F61777342306CFB1C982B4D44671E\word.pdf, outPath: C:\Data\workspace\9F0F61777342306CFB1C982B4D44671E\word\
 2020-04-23 15:38:22.8171  INFO - 이미지 변환 성공!
 2020-04-23 15:38:22.8327  INFO - ==================== End ====================
+2020-04-23 17:26:15.2382  INFO - ==================== Start ====================
+2020-04-23 17:26:15.2382  INFO - Method: WordSaveAs, FilePath: C:\Data\workspace\2E48D4CF48C7B4A7959CD45D68C9E915\DocConvert.docx, outPath: C:\Data\workspace\2E48D4CF48C7B4A7959CD45D68C9E915\DocConvert.pdf, docPassword: 
+2020-04-23 17:26:19.2162  INFO - 변환 성공
+2020-04-23 17:26:19.3442  INFO - ==================== End ====================
+2020-04-23 17:26:19.3473  INFO - ==================== Start ====================
+2020-04-23 17:26:19.3473  INFO - Method: PDFtoJpeg, FilePath: C:\Data\workspace\2E48D4CF48C7B4A7959CD45D68C9E915\DocConvert.pdf, outPath: C:\Data\workspace\2E48D4CF48C7B4A7959CD45D68C9E915\DocConvert\
+2020-04-23 17:26:19.5220  INFO - 이미지 변환 성공!
+2020-04-23 17:26:19.5220  INFO - ==================== End ====================
+2020-04-23 17:26:37.2271  INFO - ==================== Start ====================
+2020-04-23 17:26:37.2271  INFO - Method: PowerPointSaveAs, FilePath: C:\Data\workspace\EF571FDA3EDF671CBBF1EDDF9C63C0ED\PowerPoint 시작.pptx, outPath: C:\Data\workspace\EF571FDA3EDF671CBBF1EDDF9C63C0ED\PowerPoint 시작.pdf, docPassword: 
+2020-04-23 17:26:40.1061  INFO - 변환 성공
+2020-04-23 17:26:40.2975  INFO - ==================== End ====================
+2020-04-23 17:26:40.2975  INFO - ==================== Start ====================
+2020-04-23 17:26:40.2975  INFO - Method: PDFtoJpeg, FilePath: C:\Data\workspace\EF571FDA3EDF671CBBF1EDDF9C63C0ED\PowerPoint 시작.pdf, outPath: C:\Data\workspace\EF571FDA3EDF671CBBF1EDDF9C63C0ED\PowerPoint 시작\
+2020-04-23 17:26:40.5349  INFO - 이미지 변환 성공!
+2020-04-23 17:26:40.5349  INFO - ==================== End ====================
+2020-04-23 17:26:43.1809  INFO - ==================== Start ====================
+2020-04-23 17:26:43.1809  INFO - Method: PowerPointSaveAs, FilePath: C:\Data\workspace\EF571FDA3EDF671CBBF1EDDF9C63C0ED\PowerPoint 시작.pptx, outPath: C:\Data\workspace\EF571FDA3EDF671CBBF1EDDF9C63C0ED\PowerPoint 시작.pdf, docPassword: 
+2020-04-23 17:26:44.6784  INFO - 변환 성공
+2020-04-23 17:26:44.7060  INFO - ==================== End ====================
+2020-04-23 17:26:44.7060  INFO - ==================== Start ====================
+2020-04-23 17:26:44.7060  INFO - Method: PDFtoJpeg, FilePath: C:\Data\workspace\EF571FDA3EDF671CBBF1EDDF9C63C0ED\PowerPoint 시작.pdf, outPath: C:\Data\workspace\EF571FDA3EDF671CBBF1EDDF9C63C0ED\PowerPoint 시작\
+2020-04-23 17:26:44.8949  INFO - 이미지 변환 성공!
+2020-04-23 17:26:44.8949  INFO - ==================== End ====================

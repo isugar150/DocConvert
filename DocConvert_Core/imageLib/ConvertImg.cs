@@ -1,4 +1,5 @@
 ﻿using DocConvert_Core.interfaces;
+using Microsoft.Office.Interop.Word;
 using NLog;
 using PdfiumViewer;
 using System;
@@ -15,59 +16,65 @@ namespace DocConvert_Core.imageLib
         private static Logger logger = LogManager.GetLogger("DocConvert_Engine_Log");
 
         // 참고문서: https://github.com/pvginkel/PdfiumViewer
-        public static ReturnValue PDFtoJpeg(string SourcePDF, string outPath, int maxConvert)
+        public static ReturnValue PDFtoJpeg(string SourcePDF, string outPath)
         {
-            return PDFtoJpeg(SourcePDF, outPath, maxConvert, PdfRenderFlags.ForPrinting);
+            return PDFtoJpeg(SourcePDF, outPath, PdfRenderFlags.ForPrinting);
         }
-        public static ReturnValue PDFtoJpeg(string SourcePDF, string outPath, int maxConvert, PdfRenderFlags quality)
+        public static ReturnValue PDFtoJpeg(string SourcePDF, string outPath, PdfRenderFlags quality)
         {
             ReturnValue returnValue = new ReturnValue();
             try
             {
                 logger.Info("==================== Start ====================");
                 logger.Info("Method: " + MethodBase.GetCurrentMethod().Name + ", FilePath: " + SourcePDF + ", outPath: " + outPath);
-                using (var document = PdfDocument.Load(SourcePDF))
+                PdfDocument documentPage = PdfDocument.Load(SourcePDF);
+                int pageCount = documentPage.PageCount;
+                PdfDocument[] document = new PdfDocument[(pageCount / 100) + 1];
+                int totalCnt = 0;
+                int x = 0;
+                for (int i = 0; i < (pageCount / 100) + 1; i++)
                 {
-                    var pageCount = document.PageCount;
-                    if (pageCount > maxConvert && maxConvert != 0)
-                    {
-                        returnValue.PageCount = pageCount;
-                        returnValue.isSuccess = false;
-                        returnValue.Message = "PDF에서 이미지로 최대 " + maxConvert + "장 까지 가능합니다.";
-                        return returnValue;
-                    }
-                    int totalCnt = 0;
-                    for (int i = 0; i < pageCount; i++)
+                    document[i] = PdfDocument.Load(SourcePDF);
+
+                    if (i == (pageCount / 100))
+                        x = pageCount % 100;
+                    else
+                        x = 100;
+
+                    for (int j = i * 100; j < (i * 100) + x; j++)
                     {
                         var dpi = 300;
 
-                        using (var image = document.Render(i, dpi, dpi, quality))
+                        using (var image = document[i].Render(j, dpi, dpi, quality))
                         {
                             var encoder = ImageCodecInfo.GetImageEncoders()
                                 .First(c => c.FormatID == ImageFormat.Jpeg.Guid);
                             var encParams = new EncoderParameters(1);
-                            encParams.Param[0] = new EncoderParameter(
-                                System.Drawing.Imaging.Encoder.Quality, 100L);
+                            encParams.Param[0] = new EncoderParameter(Encoder.Quality, 100L);
 
-                            image.Save(outPath + (i + 1) + ".jpg", encoder, encParams);
+                            image.Save(outPath + (j + 1) + ".jpg", encoder, encParams);
                             ++totalCnt;
                         }
                     }
-                    if (pageCount == totalCnt)
-                    {
-                        returnValue.PageCount = pageCount;
-                        returnValue.isSuccess = true;
-                        returnValue.Message = "이미지 변환에 성공하였습니다.";
-                        logger.Info("이미지 변환 성공!");
-                    }
-                    else
-                    {
-                        returnValue.PageCount = pageCount;
-                        returnValue.isSuccess = false;
-                        returnValue.Message = "이미지 변환에 실패하였습니다.";
-                        logger.Error("이미지 변환 실패!");
-                        new IOException("이미지 변환에 실패하였습니다.");
-                    }
+                    document[i].Dispose();
+
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
+                }
+                if (pageCount == totalCnt)
+                {
+                    returnValue.PageCount = pageCount;
+                    returnValue.isSuccess = true;
+                    returnValue.Message = "이미지 변환에 성공하였습니다.";
+                    logger.Info("이미지 변환 성공!");
+                }
+                else
+                {
+                    returnValue.PageCount = pageCount;
+                    returnValue.isSuccess = false;
+                    returnValue.Message = "이미지 변환에 실패하였습니다.";
+                    logger.Error("이미지 변환 실패!");
+                    new IOException("이미지 변환에 실패하였습니다.");
                 }
             }
             catch (Exception e1)
@@ -82,60 +89,65 @@ namespace DocConvert_Core.imageLib
         }
 
         // 참고문서: https://github.com/pvginkel/PdfiumViewer
-        public static ReturnValue PDFtoBmp(string SourcePDF, string outPath, int maxConvert)
+        public static ReturnValue PDFtoBmp(string SourcePDF, string outPath)
         {
-            return PDFtoBmp(SourcePDF, outPath, maxConvert, PdfRenderFlags.ForPrinting);
+            return PDFtoBmp(SourcePDF, outPath, PdfRenderFlags.ForPrinting);
         }
-        public static ReturnValue PDFtoBmp(string SourcePDF, string outPath, int maxConvert, PdfRenderFlags quality)
+        public static ReturnValue PDFtoBmp(string SourcePDF, string outPath, PdfRenderFlags quality)
         {
             ReturnValue returnValue = new ReturnValue();
             try
             {
                 logger.Info("==================== Start ====================");
                 logger.Info("Method: " + MethodBase.GetCurrentMethod().Name + ", FilePath: " + SourcePDF + ", outPath: " + outPath);
-                using (var document = PdfDocument.Load(SourcePDF))
+                PdfDocument documentPage = PdfDocument.Load(SourcePDF);
+                int pageCount = documentPage.PageCount;
+                PdfDocument[] document = new PdfDocument[(pageCount / 100) + 1];
+                int totalCnt = 0;
+                int x = 0;
+                for (int i = 0; i < (pageCount / 100) + 1; i++)
                 {
-                    var pageCount = document.PageCount;
-                    if (pageCount > maxConvert && maxConvert != 0)
+                    document[i] = PdfDocument.Load(SourcePDF);
+
+                    if (i == (pageCount / 100))
+                        x = pageCount % 100;
+                    else
+                        x = 100;
+
+                    for (int j = i * 100; j < (i * 100) + x; j++)
                     {
-                        returnValue.PageCount = pageCount;
-                        returnValue.isSuccess = false;
-                        returnValue.Message = "PDF에서 이미지로 최대 " + maxConvert + "장 까지 가능합니다.";
-                        return returnValue;
-                    }
-                    int totalCnt = 0;
-                    for (int i = 0; i < pageCount; i++)
-                    {
-                        Debug.WriteLine(outPath + (i + 1) + ".bmp");
                         var dpi = 300;
 
-                        using (var image = document.Render(i, dpi, dpi, quality))
+                        using (var image = document[i].Render(j, dpi, dpi, quality))
                         {
                             var encoder = ImageCodecInfo.GetImageEncoders()
                                 .First(c => c.FormatID == ImageFormat.Bmp.Guid);
                             var encParams = new EncoderParameters(1);
-                            encParams.Param[0] = new EncoderParameter(
-                                System.Drawing.Imaging.Encoder.Quality, 100L);
+                            encParams.Param[0] = new EncoderParameter(Encoder.Quality, 100L);
 
-                            image.Save(outPath + (i + 1) + ".bmp", encoder, encParams);
+                            image.Save(outPath + (j + 1) + ".bmp", encoder, encParams);
                             ++totalCnt;
                         }
                     }
-                    if (pageCount == totalCnt)
-                    {
-                        returnValue.PageCount = pageCount;
-                        returnValue.isSuccess = true;
-                        returnValue.Message = "이미지 변환에 성공하였습니다.";
-                        logger.Info("이미지 변환 성공!");
-                    }
-                    else
-                    {
-                        returnValue.PageCount = pageCount;
-                        returnValue.isSuccess = false;
-                        returnValue.Message = "이미지 변환에 실패하였습니다.";
-                        logger.Error("이미지 변환 실패!");
-                        new IOException("이미지 변환에 실패하였습니다.");
-                    }
+                    document[i].Dispose();
+
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
+                }
+                if (pageCount == totalCnt)
+                {
+                    returnValue.PageCount = pageCount;
+                    returnValue.isSuccess = true;
+                    returnValue.Message = "이미지 변환에 성공하였습니다.";
+                    logger.Info("이미지 변환 성공!");
+                }
+                else
+                {
+                    returnValue.PageCount = pageCount;
+                    returnValue.isSuccess = false;
+                    returnValue.Message = "이미지 변환에 실패하였습니다.";
+                    logger.Error("이미지 변환 실패!");
+                    new IOException("이미지 변환에 실패하였습니다.");
                 }
             }
             catch (Exception e1)
@@ -150,60 +162,66 @@ namespace DocConvert_Core.imageLib
         }
 
         // 참고문서: https://github.com/pvginkel/PdfiumViewer
-        public static ReturnValue PDFtoPng(string SourcePDF, string outPath, int maxConvert)
+        public static ReturnValue PDFtoPng(string SourcePDF, string outPath)
         {
-            return PDFtoPng(SourcePDF, outPath, maxConvert, PdfRenderFlags.ForPrinting);
+            return PDFtoPng(SourcePDF, outPath, PdfRenderFlags.ForPrinting);
         }
-        public static ReturnValue PDFtoPng(string SourcePDF, string outPath, int maxConvert, PdfRenderFlags quality)
+        public static ReturnValue PDFtoPng(string SourcePDF, string outPath, PdfRenderFlags quality)
         {
+
             ReturnValue returnValue = new ReturnValue();
             try
             {
                 logger.Info("==================== Start ====================");
                 logger.Info("Method: " + MethodBase.GetCurrentMethod().Name + ", FilePath: " + SourcePDF + ", outPath: " + outPath);
-                using (var document = PdfDocument.Load(SourcePDF))
+                PdfDocument documentPage = PdfDocument.Load(SourcePDF);
+                int pageCount = documentPage.PageCount;
+                PdfDocument[] document = new PdfDocument[(pageCount / 100) + 1];
+                int totalCnt = 0;
+                int x = 0;
+                for (int i = 0; i < (pageCount / 100) + 1; i++)
                 {
-                    var pageCount = document.PageCount;
-                    if (pageCount > maxConvert && maxConvert != 0)
+                    document[i] = PdfDocument.Load(SourcePDF);
+
+                    if (i == (pageCount / 100))
+                        x = pageCount % 100;
+                    else
+                        x = 100;
+
+                    for (int j = i * 100; j < (i * 100) + x; j++)
                     {
-                        returnValue.PageCount = pageCount;
-                        returnValue.isSuccess = false;
-                        returnValue.Message = "PDF에서 이미지로 최대 " + maxConvert + "장 까지 가능합니다.";
-                        return returnValue;
-                    }
-                    int totalCnt = 0;
-                    for (int i = 0; i < pageCount; i++)
-                    {
-                        Debug.WriteLine(outPath + (i + 1) + ".png");
                         var dpi = 300;
 
-                        using (var image = document.Render(i, dpi, dpi, quality))
+                        using (var image = document[i].Render(j, dpi, dpi, quality))
                         {
                             var encoder = ImageCodecInfo.GetImageEncoders()
                                 .First(c => c.FormatID == ImageFormat.Png.Guid);
                             var encParams = new EncoderParameters(1);
-                            encParams.Param[0] = new EncoderParameter(
-                                System.Drawing.Imaging.Encoder.Quality, 100L);
+                            encParams.Param[0] = new EncoderParameter(Encoder.Quality, 100L);
 
-                            image.Save(outPath + (i + 1) + ".png", encoder, encParams);
+                            image.Save(outPath + (j + 1) + ".png", encoder, encParams);
                             ++totalCnt;
                         }
                     }
-                    if (pageCount == totalCnt)
-                    {
-                        returnValue.PageCount = pageCount;
-                        returnValue.isSuccess = true;
-                        returnValue.Message = "이미지 변환에 성공하였습니다.";
-                        logger.Info("이미지 변환 성공!");
-                    }
-                    else
-                    {
-                        returnValue.PageCount = pageCount;
-                        returnValue.isSuccess = false;
-                        returnValue.Message = "이미지 변환에 실패하였습니다.";
-                        logger.Error("이미지 변환 실패!");
-                        new IOException("이미지 변환에 실패하였습니다.");
-                    }
+                    document[i].Dispose();
+
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
+                }
+                if (pageCount == totalCnt)
+                {
+                    returnValue.PageCount = pageCount;
+                    returnValue.isSuccess = true;
+                    returnValue.Message = "이미지 변환에 성공하였습니다.";
+                    logger.Info("이미지 변환 성공!");
+                }
+                else
+                {
+                    returnValue.PageCount = pageCount;
+                    returnValue.isSuccess = false;
+                    returnValue.Message = "이미지 변환에 실패하였습니다.";
+                    logger.Error("이미지 변환 실패!");
+                    new IOException("이미지 변환에 실패하였습니다.");
                 }
             }
             catch (Exception e1)

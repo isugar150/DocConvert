@@ -1,8 +1,0 @@
-2020-04-23 15:45:36.6922  INFO - ==================== Start ====================
-2020-04-23 15:45:36.6922  INFO - Method: WordSaveAs, FilePath: C:\Data\workspace\116B6DA0EA720F54E082F1E8B9A866D4\word.docx, outPath: C:\Data\workspace\116B6DA0EA720F54E082F1E8B9A866D4\word.pdf, docPassword: 
-2020-04-23 15:45:40.5740  INFO - 변환 성공
-2020-04-23 15:45:41.8338  INFO - ==================== End ====================
-2020-04-23 15:45:41.8338  INFO - ==================== Start ====================
-2020-04-23 15:45:41.8338  INFO - Method: PDFtoJpeg, FilePath: C:\Data\workspace\116B6DA0EA720F54E082F1E8B9A866D4\word.pdf, outPath: C:\Data\workspace\116B6DA0EA720F54E082F1E8B9A866D4\word\
-2020-04-23 15:45:42.0369  INFO - 이미지 변환 성공!
-2020-04-23 15:45:42.0369  INFO - ==================== End ====================

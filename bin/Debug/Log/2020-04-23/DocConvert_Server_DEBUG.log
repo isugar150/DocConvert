@@ -10,3 +10,9 @@
 2020-04-23 15:36:19.0516 DEBUG - [Socket] 세션ID: 2bcdf8a6-02fe-464e-a172-6f3904ad5023 받은 데이터 크기: 324, ThreadId: 17
 2020-04-23 15:39:06.2080 DEBUG - [Socket] 세션ID: 6cd4c71f-afec-48c3-aa89-145ed0c09c2e 접속
 2020-04-23 15:39:06.2391 DEBUG - [Socket] 세션ID: 6cd4c71f-afec-48c3-aa89-145ed0c09c2e 받은 데이터 크기: 248, ThreadId: 17
+2020-04-23 17:26:15.2097 DEBUG - [Socket] 세션ID: ce662767-d1aa-4eb5-b642-bba12ecaee54 접속
+2020-04-23 17:26:15.2197 DEBUG - [Socket] 세션ID: ce662767-d1aa-4eb5-b642-bba12ecaee54 받은 데이터 크기: 338, ThreadId: 17
+2020-04-23 17:26:37.1962 DEBUG - [Socket] 세션ID: 52f5b74b-7bb0-464e-af22-1b4f9a7358af 접속
+2020-04-23 17:26:37.2042 DEBUG - [Socket] 세션ID: 52f5b74b-7bb0-464e-af22-1b4f9a7358af 받은 데이터 크기: 346, ThreadId: 13
+2020-04-23 17:26:43.1610 DEBUG - [Socket] 세션ID: a98858b5-4cbe-44e5-9ff4-86b41788d2f2 접속
+2020-04-23 17:26:43.1610 DEBUG - [Socket] 세션ID: a98858b5-4cbe-44e5-9ff4-86b41788d2f2 받은 데이터 크기: 344, ThreadId: 13
