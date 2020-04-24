@@ -158,7 +158,6 @@ namespace DocConvert_Util
             #endregion
             comboBox1.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
-            //디버깅 전용
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -415,14 +414,18 @@ namespace DocConvert_Util
             }
         }
         #region Socket Server Method
-
+        /// <summary>
+        /// 설정한 서버에 소켓 
+        /// </summary>
+        /// <param name="address"></param>
+        /// <param name="port"></param>
+        /// <returns></returns>
         private bool ConnectServer(string address, int port)
         {
-            tb2_appendText("서버접속중. . .");
             try
             {
                 socket.conn(address, port);
-                tb2_appendText("서버에 요청하였습니다. . .");
+                tb2_appendText("서버에 접속하였습니다.");
                 return true;
             }
             catch (SocketException e1)
@@ -434,18 +437,24 @@ namespace DocConvert_Util
             }
         }
 
+        /// <summary>
+        /// 핸들러
+        /// </summary>
         public enum PACKETID : int
         {
-            REQ_ECHO = 1,
-            REQ_LOGIN = 11,
+            REQ_Message = 1,
         }
 
+        /// <summary>
+        /// 소켓으로 데이터 던질때 호출하는 함수
+        /// </summary>
+        /// <param name="Message">서버에 던질 메시지</param>
         async void SendData(string Message)
         {
             byte[] Body = Encoding.Unicode.GetBytes(Message);
 
             List<byte> dataSource = new List<byte>();
-            dataSource.AddRange(BitConverter.GetBytes((Int32)PACKETID.REQ_ECHO));
+            dataSource.AddRange(BitConverter.GetBytes((Int32)PACKETID.REQ_Message));
             dataSource.AddRange(BitConverter.GetBytes((Int16)0));
             dataSource.AddRange(BitConverter.GetBytes((Int16)0));
             dataSource.AddRange(BitConverter.GetBytes(Body.Length));
@@ -568,27 +577,36 @@ namespace DocConvert_Util
 
         #endregion
 
-        #region 자잘한 이벤트
+        #region 컴포넌트 이벤트
 
-        // 로그 폴더 실행
+        /// <summary>
+        /// 로그폴더 실행
+        /// </summary>
         private void button4_Click(object sender, EventArgs e)
         {
             Process.Start(Application.StartupPath + @"\Log");
         }
 
-        // IP입력창 키 이벤트
+        /// <summary>
+        /// IP입력창 키 이벤트
+        /// </summary>
         private void ipAddressControl1_KeyUp(object sender, KeyEventArgs e)
         {
             Debug.WriteLine("KeyUp: {0}", e.KeyValue);
         }
 
-        // textBox2  문자열 추가
+        /// <summary>
+        /// textBox2  문자열 추가
+        /// </summary>
+        /// <param name="str">Append할 텍스트</param>
         private void tb2_appendText(string str)
         {
             textBox2.AppendText(System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.fff") + "   " + str + "\r\n");
         }
 
-        // 한글 DLL 등록 버튼
+        /// <summary>
+        /// 한글 DLL 등록 버튼
+        /// </summary>
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             #region 한글 DLL 레지스트리 관리
@@ -644,7 +662,9 @@ namespace DocConvert_Util
             #endregion
         }
 
-        // 변환창 보이기 버튼
+        /// <summary>
+        /// 변환창 보이기 버튼
+        /// </summary>
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             #region 변환창 보이기 설정
@@ -671,7 +691,9 @@ namespace DocConvert_Util
             #endregion
         }
 
-        // 변환 후 실행 버튼
+        /// <summary>
+        /// 변환 후 실행 버튼
+        /// </summary>
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             #region 파일 변환 후 실행
@@ -698,6 +720,9 @@ namespace DocConvert_Util
             #endregion
         }
 
+        /// <summary>
+        /// 페이지 추출 버튼 (서버는 사용안함)
+        /// </summary>
         private void pictureBox8_Click(object sender, EventArgs e)
         {
             #region 페이지 번호 추출
@@ -724,6 +749,9 @@ namespace DocConvert_Util
             #endregion
         }
 
+        /// <summary>
+        /// 서버 IP 체크박스 클릭 시
+        /// </summary>
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
@@ -755,6 +783,9 @@ namespace DocConvert_Util
             }
         }
 
+        /// <summary>
+        /// 변환 메소드 콤보박스
+        /// </summary>
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox2.SelectedIndex == 0)
@@ -773,6 +804,9 @@ namespace DocConvert_Util
             }
         }
 
+        /// <summary>
+        /// 변환할 이미지 콤보박스
+        /// </summary>
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(comboBox1.SelectedIndex != 0 && comboBox2.SelectedIndex == 0)
@@ -785,8 +819,9 @@ namespace DocConvert_Util
             }
         }
 
-        #endregion
-
+        /// <summary>
+        /// 해당 창을 닫을때 실행하는 이벤트
+        /// </summary>
         private void Convert_Util_FormClosing(object sender, FormClosingEventArgs e)
         {
             try
@@ -798,5 +833,7 @@ namespace DocConvert_Util
                 tb2_appendText("[오류]   " + e1.Message);
             }
         }
+
+        #endregion
     }
 }

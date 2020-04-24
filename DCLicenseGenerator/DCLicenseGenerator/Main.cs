@@ -24,9 +24,14 @@ namespace DCLicenseGenerator
             jObject["EndDate"] = dateTimePicker1.Value.ToString("yyyy-MM-dd");
             Debug.WriteLine("KEY: " + key);
             Debug.WriteLine("Data: " + jObject.ToString());
-            new MessageDialog("라이선스 발급", "다음 코드를 DocConvert_Server.exe.config 파일에 LicenseKEY에 입력하세요.", encryptAES256(jObject.ToString(), key)).ShowDialog(this);
+            textBox2.Text = encryptAES256(jObject.ToString(), key);
         }
 
+        /// <summary>
+        /// Base64 디코딩
+        /// </summary>
+        /// <param name="data">디코딩할 텍스트</param>
+        /// <returns></returns>
         public static string Base64Encode(string data)
         {
             try
@@ -42,6 +47,12 @@ namespace DCLicenseGenerator
             }
         }
 
+        /// <summary>
+        /// AES256 Encrypt
+        /// </summary>
+        /// <param name="text">암호화할 텍스트</param>
+        /// <param name="key">해제할 키</param>
+        /// <returns></returns>
         public static string encryptAES256(string text, string key)
         {
             MemoryStream ms = null;

@@ -25,6 +25,7 @@ namespace DocConvert_Server.Forms
             listView1.Items.Add(new ListViewItem(new string[] { "", "phantomjs", "BSD License", "웹 페이지 캡쳐 라이브러리" }));
         }
 
+        #region 컴포넌트 이벤트
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listView1.SelectedItems.Count == 0)
@@ -37,8 +38,13 @@ namespace DocConvert_Server.Forms
                 listView1.Items[item.Index].SubItems[0].Text = "*";
                 textBox1.Text = getLicenseInfo(listView1.Items[item.Index].SubItems[1].Text);
             }
-
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+        #endregion
 
         private string getLicenseInfo(string license)
         {
@@ -74,11 +80,6 @@ namespace DocConvert_Server.Forms
                 return sharpziplib;
             else
                 return null;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
         }
     }
 }

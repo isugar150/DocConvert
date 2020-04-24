@@ -20,6 +20,12 @@ namespace DocConvert_Server
     public class Document_Convert
     {
         private static Logger logger = LogManager.GetLogger("DocConvert_Server_Log");
+
+        /// <summary>
+        /// 소켓, 웹소켓에서 들어온 요청을 처리하는 부분
+        /// </summary>
+        /// <param name="requestInfo">클라이언트에서 던진 String</param>
+        /// <returns></returns>
         public JObject document_Convert(string requestInfo)
         {
             ReturnValue status = new ReturnValue();

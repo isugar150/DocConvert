@@ -6,13 +6,17 @@ namespace DocConvert_Util
 {
     public class ClientSocket
     {
-        //초기화
         public Socket socket = null;    //server 연결을 위한 ClientSock
 
         public string LatestErrorMsg;
         public string LatestReceiveMsg;
 
-        //소켓연결        
+        /// <summary>
+        /// 소켓으로 서버에 접속하는 함수
+        /// </summary>
+        /// <param name="IP">타겟 서버 아이피 주소</param>
+        /// <param name="PORT">타겟 서버 포트</param>
+        /// <returns>접속 성공여부</returns>
         public bool conn(string IP, int PORT)
         {
             IPAddress serverIP = IPAddress.Parse(IP);
@@ -32,7 +36,9 @@ namespace DocConvert_Util
             return true;
         }
 
-        //스트림에서 읽어오기(소켓 연결확인은 버튼을 누르면...! form 에서...)
+        /// <summary>
+        /// 스트림에서 읽어오기
+        /// </summary>
         public Tuple<int, byte[]> s_read()
         {
             try
@@ -49,7 +55,10 @@ namespace DocConvert_Util
             return null;
         }
 
-        //스트림에 쓰기
+        /// <summary>
+        /// 스트림에 쓰기
+        /// </summary>
+        /// <param name="senddata">서버로 보낼 Byte</param>
         public void s_write(byte[] senddata)
         {
             try
@@ -69,7 +78,9 @@ namespace DocConvert_Util
             }
         }
 
-        //소켓과 스트림 닫기
+        /// <summary>
+        /// 소켓과 스트림 닫기
+        /// </summary>
         public void close()
         {
             socket.Close();

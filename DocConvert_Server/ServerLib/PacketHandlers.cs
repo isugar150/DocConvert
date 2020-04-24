@@ -13,7 +13,7 @@ namespace DocConvert_Server
 
     public enum PACKETID : int
     {
-        REQ_ECHO = 1,
+        REQ_Message = 1,
     }
     public class CommonHandler
     {
@@ -32,7 +32,7 @@ namespace DocConvert_Server
             DevLog.Write(string.Format("[Socket] 작업 소요시간: {0}", curTime.ToString()), LOG_LEVEL.INFO);
 
             List<byte> dataSource = new List<byte>();
-            dataSource.AddRange(BitConverter.GetBytes((int)PACKETID.REQ_ECHO));
+            dataSource.AddRange(BitConverter.GetBytes((int)PACKETID.REQ_Message));
             dataSource.AddRange(BitConverter.GetBytes(requestInfo.Body.Length));
             dataSource.AddRange(Encoding.Unicode.GetBytes(responseMsg.ToString()));
 

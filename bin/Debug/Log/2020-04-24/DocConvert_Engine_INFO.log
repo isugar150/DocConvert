@@ -497,3 +497,23 @@
 2020-04-24 20:01:12.1040  INFO - Method: PDFtoPng, FilePath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf, outPath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작\
 2020-04-24 20:01:12.3013  INFO - 이미지 변환 성공!
 2020-04-24 20:01:12.3013  INFO - ==================== End ====================
+2020-04-24 20:30:39.6549  INFO - ==================== Start ====================
+2020-04-24 20:30:39.6549  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\8DF91B0995A750BFE6B8873646995F7B\Excel 시작.xlsx, outPath: C:\Data\workspace\8DF91B0995A750BFE6B8873646995F7B\Excel 시작.pdf, docPassword: 
+2020-04-24 20:31:02.1241  INFO - 변환 성공
+2020-04-24 20:31:02.9388  INFO - ==================== End ====================
+2020-04-24 20:31:02.9527  INFO - ==================== Start ====================
+2020-04-24 20:31:02.9527  INFO - Method: PDFtoJpeg, FilePath: C:\Data\workspace\8DF91B0995A750BFE6B8873646995F7B\Excel 시작.pdf, outPath: C:\Data\workspace\8DF91B0995A750BFE6B8873646995F7B\Excel 시작\
+2020-04-24 20:31:04.3104  INFO - 이미지 변환 성공!
+2020-04-24 20:31:04.3104  INFO - ==================== End ====================
+2020-04-24 20:31:35.0843  INFO - ==================== Start ====================
+2020-04-24 20:31:35.0843  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\8DF91B0995A750BFE6B8873646995F7B\Excel 시작.xlsx, outPath: C:\Data\workspace\8DF91B0995A750BFE6B8873646995F7B\Excel 시작.pdf, docPassword: 
+2020-04-24 20:31:56.1296  INFO - 변환 성공
+2020-04-24 20:31:57.0789  INFO - ==================== End ====================
+2020-04-24 20:31:57.0789  INFO - ==================== Start ====================
+2020-04-24 20:31:57.0789  INFO - Method: PDFtoJpeg, FilePath: C:\Data\workspace\8DF91B0995A750BFE6B8873646995F7B\Excel 시작.pdf, outPath: C:\Data\workspace\8DF91B0995A750BFE6B8873646995F7B\Excel 시작\
+2020-04-24 20:31:58.3779  INFO - 이미지 변환 성공!
+2020-04-24 20:31:58.3779  INFO - ==================== End ====================
+2020-04-24 20:55:29.5113  INFO - ==================== Start ====================
+2020-04-24 20:55:29.5113  INFO - Method: WordSaveAs, FilePath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.docx, outPath: C:\Data\workspace\FC88A00681BEA2BA4BCA029AEC82643A\Word 시작.pdf, docPassword: 
+2020-04-24 20:55:35.1950  INFO - 변환 성공
+2020-04-24 20:55:35.3514  INFO - ==================== End ====================

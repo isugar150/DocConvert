@@ -70,6 +70,12 @@ namespace DocConvert_Server.License
             }
         }
 
+        /// <summary>
+        /// Base64 디코딩 함수
+        /// </summary>
+        /// <param name="DecodingText">인코딩된 텍스트</param>
+        /// <param name="oEncoding">텍스트 인코딩</param>
+        /// <returns></returns>
         public static string Base64Decoding(string DecodingText, System.Text.Encoding oEncoding = null)
         {
             if (oEncoding == null)

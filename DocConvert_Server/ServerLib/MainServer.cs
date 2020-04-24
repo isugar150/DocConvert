@@ -26,7 +26,7 @@ namespace DocConvert_Server
 
         void RegistHandler()
         {
-            HandlerMap.Add((int)PACKETID.REQ_ECHO, CommonHan.RequestMsg);
+            HandlerMap.Add((int)PACKETID.REQ_Message, CommonHan.RequestMsg);
 
             DevLog.Write(string.Format("[Socket] 핸들러 등록 완료"), LOG_LEVEL.INFO);
         }

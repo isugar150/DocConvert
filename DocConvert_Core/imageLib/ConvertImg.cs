@@ -20,6 +20,13 @@ namespace DocConvert_Core.imageLib
         {
             return PDFtoJpeg(SourcePDF, outPath, PdfRenderFlags.ForPrinting);
         }
+        /// <summary>
+        /// PDF에서 JPG로 변환하는 함수
+        /// </summary>
+        /// <param name="SourcePDF">대상 PDF 경로</param>
+        /// <param name="outPath">내보낼 경로</param>
+        /// <param name="quality">이미지 퀄리티</param>
+        /// <returns>성공 여부(JSON)</returns>
         public static ReturnValue PDFtoJpeg(string SourcePDF, string outPath, PdfRenderFlags quality)
         {
             ReturnValue returnValue = new ReturnValue();
@@ -91,6 +98,13 @@ namespace DocConvert_Core.imageLib
         {
             return PDFtoBmp(SourcePDF, outPath, PdfRenderFlags.ForPrinting);
         }
+        /// <summary>
+        /// PDF에서 BMP로 변환하는 함수
+        /// </summary>
+        /// <param name="SourcePDF">대상 PDF 경로</param>
+        /// <param name="outPath">내보낼 경로</param>
+        /// <param name="quality">이미지 퀄리티</param>
+        /// <returns>성공 여부(JSON)</returns>
         public static ReturnValue PDFtoBmp(string SourcePDF, string outPath, PdfRenderFlags quality)
         {
             ReturnValue returnValue = new ReturnValue();
@@ -162,6 +176,13 @@ namespace DocConvert_Core.imageLib
         {
             return PDFtoPng(SourcePDF, outPath, PdfRenderFlags.ForPrinting);
         }
+        /// <summary>
+        /// PDF에서 PNG로 변환하는 함수
+        /// </summary>
+        /// <param name="SourcePDF">대상 PDF 경로</param>
+        /// <param name="outPath">내보낼 경로</param>
+        /// <param name="quality">이미지 퀄리티</param>
+        /// <returns>성공 여부(JSON)</returns>
         public static ReturnValue PDFtoPng(string SourcePDF, string outPath, PdfRenderFlags quality)
         {
 
@@ -229,6 +250,11 @@ namespace DocConvert_Core.imageLib
             return returnValue;
         }
 
+        /// <summary>
+        /// PDF를 읽어서 페이지 카운트하는 로직
+        /// </summary>
+        /// <param name="SourcePDF">대상 PDF 경로</param>
+        /// <returns>페이지 카운트</returns>
         public static int pdfPageCount(string SourcePDF)
         {
             try

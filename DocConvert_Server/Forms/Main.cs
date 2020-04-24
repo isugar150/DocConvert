@@ -23,7 +23,6 @@ namespace DocConvert_Server
         private MainServer socketServer = new MainServer();
         private int wsSessionCount = 0;
         private static System.Windows.Forms.Timer tScheduler;
-        private const int CHECK_INTERVAL = 1; // 스케줄러 주기 (일)
         private WebSocketListener webSocketServer = null;
         private JObject checkLicense = new JObject();
         public static bool isHwpConverting = false;
@@ -100,7 +99,7 @@ namespace DocConvert_Server
                 DevLog.Write("[Scheduler] 스케줄러가 실행중입니다. " + SchedulerInfo, LOG_LEVEL.INFO);
 
                 tScheduler = new System.Windows.Forms.Timer();
-                tScheduler.Interval = CalculateTimerInterval(CHECK_INTERVAL);
+                tScheduler.Interval = CalculateTimerInterval();
                 tScheduler.Tick += new EventHandler(tScheduler_Tick);
                 tScheduler.Start();
             }
@@ -199,7 +198,12 @@ namespace DocConvert_Server
         }
 
         #region WebSocket Method
-        //웹 소켓으로 접속하는 클라이언트를 받아들입니다.
+        /// <summary>
+        /// 클라이언트가 웹 소켓으로 접속했을때 작동하는 로직
+        /// </summary>
+        /// <param name="server">웹소켓 리스너</param>
+        /// <param name="token">웹소켓 토큰</param>
+        /// <returns></returns>
         async Task AcceptWebSocketClientsAsync(WebSocketListener server, CancellationToken token)
         {
             while (!token.IsCancellationRequested)
@@ -223,6 +227,12 @@ namespace DocConvert_Server
             DevLog.Write("[WebSocket] Server Stop accepting clients", LOG_LEVEL.ERROR);
         }
 
+        /// <summary>
+        /// 클라이언트가 메시지 던졌을때 로직
+        /// </summary>
+        /// <param name="ws">웹소켓</param>
+        /// <param name="cancellation">토큰</param>
+        /// <returns></returns>
         async Task HandleConnectionAsync(WebSocket ws, CancellationToken cancellation)
         {
             try
@@ -345,6 +355,11 @@ namespace DocConvert_Server
         #endregion
 
         #region File Method
+        /// <summary>
+        /// TCP 포트가 살아있는지 확인하는 함수
+        /// </summary>
+        /// <param name="tcpPort">확인할 TCP포트</param>
+        /// <returns>살아잇으면 true</returns>
         public static bool IsTcpPortAvailable(int tcpPort)
         {
             var ipgp = IPGlobalProperties.GetIPGlobalProperties();
@@ -363,6 +378,45 @@ namespace DocConvert_Server
         }
         #endregion
 
+        /// <summary>
+        /// 프로그램 종료시 로직 Application.Exit(0) 안먹음
+        /// </summary>
+        /// <param name="forceExit">다이얼로그 띄우고 종료할건지 강제 종료할건지 여부</param>
+        private void program_Exit(bool forceExit)
+        {
+            if (!forceExit)
+            {
+                if (MessageBox.Show(this, "DocConvert 서버를 종료하시겠습니까?", "경고", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                {
+                    if (socketServer != null)
+                        socketServer.Dispose();
+                    if (webSocketServer != null)
+                        webSocketServer.Dispose();
+                    try
+                    {
+                        Application.ExitThread();
+                        Environment.Exit(0);
+                    }
+                    catch (Exception) { }
+                }
+            }
+            else
+            {
+                if (socketServer != null)
+                    socketServer.Dispose();
+                if (webSocketServer != null)
+                    webSocketServer.Dispose();
+                try
+                {
+                    Application.ExitThread();
+                    Environment.Exit(0);
+                }
+                catch (Exception) { }
+            }
+        }
+
+        #region 컴포넌트 이벤트
+
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
@@ -374,48 +428,6 @@ namespace DocConvert_Server
             using (var dialog = new AboutForm())
             {
                 dialog.ShowDialog(this);
-            }
-        }
-
-        private void program_Exit(bool forceExit)
-        {
-            if (!forceExit)
-            {
-                if (MessageBox.Show(this, "DocConvert 서버를 종료하시겠습니까?", "경고", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
-                {
-                    try
-                    {
-                        socketServer.Dispose();
-                    }
-                    catch (Exception) { }
-                    try
-                    {
-                        webSocketServer.Dispose();
-                    }
-                    catch (Exception) { }
-                    try
-                    {
-                        Application.ExitThread();
-                        Environment.Exit(0);
-                    }
-                    catch (Exception) { }
-                }
-            }
-            else
-            {
-                try
-                {
-                    socketServer.Dispose();
-                }
-                catch (Exception) { }
-                try
-                {
-                    webSocketServer.Dispose();
-                }
-                catch (Exception) { }
-                this.Dispose();
-                Application.ExitThread();
-                Environment.Exit(0);
             }
         }
 
@@ -459,7 +471,21 @@ namespace DocConvert_Server
             this.Activate();
         }
 
-        private int CalculateTimerInterval(int day)
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            if (this.TopMost)
+                this.TopMost = false;
+            else
+                this.TopMost = true;
+        }
+
+        #endregion
+
+        /// <summary>
+        /// 스케줄러 등록시 지정할 타이머
+        /// </summary>
+        /// <returns>해당 시간까지 Milliseconds</returns>
+        private int CalculateTimerInterval()
         {
             DateTime timeTaken = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0).AddDays(1);
             TimeSpan curTime = timeTaken - DateTime.Now;
@@ -469,9 +495,12 @@ namespace DocConvert_Server
             return (int)curTime.TotalMilliseconds;
         }
 
+        /// <summary>
+        /// 해당 시간이 되면 작업 스케줄러 실행로직
+        /// </summary>
         private void tScheduler_Tick(object sender, EventArgs e)
         {
-            tScheduler.Interval = CalculateTimerInterval(CHECK_INTERVAL);
+            tScheduler.Interval = CalculateTimerInterval();
             if (Properties.Settings.Default.작업공간정리스케줄러)
             {
                 DevLog.Write("[Scheduler] 작업공간 정리 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
@@ -485,6 +514,11 @@ namespace DocConvert_Server
             }
         }
 
+        /// <summary>
+        /// 수정날짜가 설정한 일수가 지났으면 디렉토리와 안의 파일까지 삭제하는 로직
+        /// </summary>
+        /// <param name="strPath">대상 경로</param>
+        /// <param name="DeletionCycle">지난 일수</param>
         public static void deleteFolder(string strPath, int DeletionCycle)
         {
             foreach (string Folder in Directory.GetDirectories(strPath))
@@ -507,6 +541,11 @@ namespace DocConvert_Server
             }
         }
 
+        /// <summary>
+        /// 파일인지 디렉토리인지 확인하는 로직.
+        /// </summary>
+        /// <param name="dir"></param>
+        /// <returns></returns>
         private static bool isFiles(string dir)
         {
             string[] Directories = Directory.GetDirectories(dir);   // Defalut Folder
@@ -520,14 +559,6 @@ namespace DocConvert_Server
                 }
             }
             return false;
-        }
-
-        private void toolStripMenuItem4_Click(object sender, EventArgs e)
-        {
-            if (this.TopMost)
-                this.TopMost = false;
-            else
-                this.TopMost = true;
         }
     }
 }
