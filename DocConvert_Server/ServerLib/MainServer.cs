@@ -70,7 +70,7 @@ namespace DocConvert_Server
 
         void OnConnected(NetworkSession session)
         {
-            DevLog.Write(string.Format("[Socket] 세션ID: {0} 접속", session.SessionID), LOG_LEVEL.DEBUG);
+            DevLog.Write(string.Format("[Socket] 접속IP: {0}, 세션ID: {1}", session.RemoteEndPoint.Address, session.SessionID), LOG_LEVEL.DEBUG);
         }
 
         void OnClosed(NetworkSession session, CloseReason reason)

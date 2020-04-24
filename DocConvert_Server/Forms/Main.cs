@@ -208,7 +208,7 @@ namespace DocConvert_Server
                 {
                     var ws = await server.AcceptWebSocketAsync(token).ConfigureAwait(false);
 
-                    DevLog.Write("[WebSocket] 클라이언트로 부터 연결요청이 들어옴: " + ws.RemoteEndpoint, LOG_LEVEL.INFO);
+                    DevLog.Write(string.Format("[WebSocket] 접속 IP: {0}", ws.RemoteEndpoint.Address), LOG_LEVEL.INFO);
 
                     //소켓이 null 이 아니면, 핸들러를 스타트 합니다.(또 다른 친구가 들어올 수도 있으니 비동기로...)
                     if (ws != null)
@@ -255,7 +255,7 @@ namespace DocConvert_Server
 
                             ws.Close();
 
-                            DevLog.Write("[WebSocket]서버와 연결이 해제되었습니다.", LOG_LEVEL.INFO);
+                            DevLog.Write("[WebSocket] 클라이언트와 연결을 해제함.", LOG_LEVEL.INFO);
                         }
                         catch (Exception e1)
                         {
