@@ -29,6 +29,7 @@ namespace DocConvert_Core.imageLib
                 logger.Info("Method: " + MethodBase.GetCurrentMethod().Name + ", FilePath: " + SourcePDF + ", outPath: " + outPath);
                 PdfDocument documentPage = PdfDocument.Load(SourcePDF);
                 int pageCount = documentPage.PageCount;
+                documentPage.Dispose();
                 PdfDocument[] document = new PdfDocument[(pageCount / 100) + 1];
                 int totalCnt = 0;
                 int x = 0;
@@ -57,9 +58,6 @@ namespace DocConvert_Core.imageLib
                         }
                     }
                     document[i].Dispose();
-
-                    GC.Collect();
-                    GC.WaitForPendingFinalizers();
                 }
                 if (pageCount == totalCnt)
                 {
@@ -102,6 +100,7 @@ namespace DocConvert_Core.imageLib
                 logger.Info("Method: " + MethodBase.GetCurrentMethod().Name + ", FilePath: " + SourcePDF + ", outPath: " + outPath);
                 PdfDocument documentPage = PdfDocument.Load(SourcePDF);
                 int pageCount = documentPage.PageCount;
+                documentPage.Dispose();
                 PdfDocument[] document = new PdfDocument[(pageCount / 100) + 1];
                 int totalCnt = 0;
                 int x = 0;
@@ -130,9 +129,6 @@ namespace DocConvert_Core.imageLib
                         }
                     }
                     document[i].Dispose();
-
-                    GC.Collect();
-                    GC.WaitForPendingFinalizers();
                 }
                 if (pageCount == totalCnt)
                 {
@@ -176,6 +172,7 @@ namespace DocConvert_Core.imageLib
                 logger.Info("Method: " + MethodBase.GetCurrentMethod().Name + ", FilePath: " + SourcePDF + ", outPath: " + outPath);
                 PdfDocument documentPage = PdfDocument.Load(SourcePDF);
                 int pageCount = documentPage.PageCount;
+                documentPage.Dispose();
                 PdfDocument[] document = new PdfDocument[(pageCount / 100) + 1];
                 int totalCnt = 0;
                 int x = 0;
@@ -204,9 +201,6 @@ namespace DocConvert_Core.imageLib
                         }
                     }
                     document[i].Dispose();
-
-                    GC.Collect();
-                    GC.WaitForPendingFinalizers();
                 }
                 if (pageCount == totalCnt)
                 {

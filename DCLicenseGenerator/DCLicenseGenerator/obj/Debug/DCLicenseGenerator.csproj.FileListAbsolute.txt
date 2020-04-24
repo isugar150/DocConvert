@@ -38,3 +38,4 @@ C:\Users\JMKIM\Desktop\source\DocConvert\DCLicenseGenerator\DCLicenseGenerator\o
 C:\Users\JMKIM\Desktop\source\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.csproj.CopyComplete
 C:\Users\JMKIM\Desktop\source\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.exe
 C:\Users\JMKIM\Desktop\source\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.pdb
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.csprojAssemblyReference.cache
