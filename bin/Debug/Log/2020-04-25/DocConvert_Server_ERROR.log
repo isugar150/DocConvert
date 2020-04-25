@@ -1,0 +1,17 @@
+2020-04-25 11:25:16.7285 ERROR - [Socket][ERROR] 서버 네트워크 시작 실패, 설정한 IP주소가 일치하지거나 바인딩한 포트가 이미 사용중일경우 발생하는 오류.
+2020-04-25 11:27:12.4410 ERROR - [Socket][ERROR] 서버 네트워크 시작 실패, 설정한 IP주소가 일치하지거나 바인딩한 포트가 이미 사용중일경우 발생하는 오류.
+2020-04-25 11:27:31.4387 ERROR - [Socket][ERROR] 서버 네트워크 시작 실패, 설정한 IP주소가 일치하지거나 바인딩한 포트가 이미 사용중일경우 발생하는 오류.
+2020-04-25 13:45:39.1243 ERROR - ==================== Method: document_Convert ====================
+2020-04-25 13:45:39.1243 ERROR -    위치: DocConvert_Core.imageLib.ConvertImg.PDFtoJpeg(String SourcePDF, String outPath, PdfRenderFlags quality)
+   위치: DocConvert_Core.imageLib.ConvertImg.PDFtoJpeg(String SourcePDF, String outPath)
+   위치: DocConvert_Server.Document_Convert.document_Convert(String requestInfo)
+
+2020-04-25 13:45:39.1399 ERROR - 변환 실패: 'C:\Data\workspace\0C41CBA8F243DEA3885EA1AF77742D52\certificate.pdf' 파일을 찾을 수 없습니다.
+2020-04-25 13:45:39.1399 ERROR - ==================== End ====================
+2020-04-25 14:57:40.6510 ERROR - ==================== Method: document_Convert ====================
+2020-04-25 14:57:40.6510 ERROR -    위치: DocConvert_Core.imageLib.ConvertImg.PDFtoJpeg(String SourcePDF, String outPath, PdfRenderFlags quality)
+   위치: DocConvert_Core.imageLib.ConvertImg.PDFtoJpeg(String SourcePDF, String outPath)
+   위치: DocConvert_Server.Document_Convert.document_Convert(String requestInfo)
+
+2020-04-25 14:57:40.6510 ERROR - 변환 실패: 'C:\Data\workspace\86DE8EC53B8C707D9CA39F5C2EDD86BC\setting.pdf' 파일을 찾을 수 없습니다.
+2020-04-25 14:57:40.6510 ERROR - ==================== End ====================

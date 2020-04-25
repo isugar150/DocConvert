@@ -18,7 +18,6 @@ public class DocConvert {
 
     /**
      * 각종 문서를 PDF 또는 이미지로 변환합니다.
-     *
      * @param filePath  파일의 경로(파일명 빼고)
      * @param outPath   내보낼 경로
      * @param fileName  문서파일의 이름
@@ -131,10 +130,10 @@ public class DocConvert {
                             new File(filePath + File.separator + downloadIMGDir).mkdirs();
                             for(int i = 0; i < Integer.parseInt(responseData.get("convertImgCnt").toString()); i++){
                                 if(isFTPS){
-                                    ftpManager.downloadFileFTPS(responseData.get("URL").toString() + "/" + downloadIMGDir + "/" + (i + 1) + imgExtension, filePath + File.separator + File.separator + downloadIMGDir + File.separator + (i + 1) + imgExtension);
+                                    ftpManager.downloadFileFTPS(responseData.get("URL").toString() + "/" + downloadIMGDir + "/" + (i + 1) + imgExtension, filePath + File.separator + downloadIMGDir + File.separator + (i + 1) + imgExtension);
                                 }
                                 else{
-                                    ftpManager.downloadFile(responseData.get("URL").toString() + "/" + downloadIMGDir + "/" + (i + 1) + imgExtension, filePath + File.separator + File.separator + downloadIMGDir + File.separator + (i + 1) + imgExtension);
+                                    ftpManager.downloadFile(responseData.get("URL").toString() + "/" + downloadIMGDir + "/" + (i + 1) + imgExtension, filePath + File.separator + downloadIMGDir + File.separator + (i + 1) + imgExtension);
                                 }
                             }
                         }

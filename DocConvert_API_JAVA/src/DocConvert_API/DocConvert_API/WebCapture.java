@@ -13,6 +13,14 @@ import java.net.URI;
 public class WebCapture {
     private JSONObject responseData = null;
     private String returnValue = null;
+
+    /**
+     * 웹 페이지를 캡쳐합니다.
+     * @param Url        캡쳐할 URL주소
+     * @param outPath    내보낼 경로(파일명까지)
+     * @return           서버와 마지막 통신한 JSON
+     * @throws Exception
+     */
     public String WebCapture_Start(final String Url, final String outPath) throws Exception {
         // 환경설정 읽기
         final getProperties properties = new getProperties();

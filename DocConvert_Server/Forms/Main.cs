@@ -26,6 +26,7 @@ namespace DocConvert_Server
         private WebSocketListener webSocketServer = null;
         private JObject checkLicense = new JObject();
         public static bool isHwpConverting = false;
+        private bool noLicense = false;
 
         private static Logger logger = LogManager.GetLogger("DocConvert_Server_Log");
 
@@ -33,19 +34,13 @@ namespace DocConvert_Server
         {
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
-
-            if (args.Length == 0)
+            if(args.Length != 0)
             {
-                DevLog.Write("[INFO] DocConvert Server를 옵션없이 실행하였습니다.", LOG_LEVEL.INFO);
-            }
-            else
-            {
-                string arg = "";
-                for (int i = 0; i < args.Length; i++)
+                if (args[0].Equals("noLicense") && args[1].Equals("JmSoftware"))
                 {
-                    arg += string.Format("   [{0}]: {1}", i, args[i].ToString());
+                    noLicense = true;
+                    DevLog.Write("라이센스없이 프로그램을 실행하였습니다", LOG_LEVEL.DEBUG);
                 }
-                DevLog.Write("[INFO] 아규먼트: " + arg, LOG_LEVEL.INFO);
             }
         }
 
@@ -64,13 +59,15 @@ namespace DocConvert_Server
                 Debug.WriteLine(Properties.Settings.Default.라이센스키);
                 string licenseInfo = LicenseInfo.decryptAES256(Properties.Settings.Default.라이센스키, "JmDoCOnVerTerServErJmCoRp");
                 checkLicense = JObject.Parse(licenseInfo);
-                if (!checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID())) { new MessageDialog("라이센스 오류", "라이센스 확인 후 다시시도하세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
-                if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now) { new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되었습니다. 갱신후 다시시도해주세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
+                if (!checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID()) && !noLicense) { new MessageDialog("라이센스 오류", "라이센스 확인 후 다시시도하세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
+                if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now && !noLicense) { new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되었습니다. 갱신후 다시시도해주세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
 
                 DevLog.Write("[INFO] 나의 하드웨어 ID: " + new LicenseInfo().getHWID(), LOG_LEVEL.INFO);
-                DevLog.Write(string.Format("[INFO] 라이센스 만료날짜: {0}", checkLicense["EndDate"].ToString()), LOG_LEVEL.INFO);
+                if(!noLicense)
+                    DevLog.Write(string.Format("[INFO] 라이센스 만료날짜: {0}", checkLicense["EndDate"].ToString()), LOG_LEVEL.INFO);
+
             }
-            catch (Exception) { new MessageDialog("라이센스 오류", "라이센스키 파싱오류.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
+            catch (Exception) { new MessageDialog("라이센스 오류", "라이센스키 파싱오류.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); if (!noLicense) { program_Exit(true); return; } }
             #endregion
             DirectoryInfo directoryInfo = new DirectoryInfo(Properties.Settings.Default.데이터경로 + @"\tmp");
             if (!directoryInfo.Exists)
@@ -109,10 +106,12 @@ namespace DocConvert_Server
             socketServer.CreateServer();
 
             bool IsResult = false;
-
-            if (checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID()))
-                IsResult = socketServer.Start();
-
+            try
+            {
+                if (checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID()))
+                    IsResult = socketServer.Start();
+            }
+            catch (Exception) { if (noLicense) IsResult = socketServer.Start(); }
             if (IsResult)
             {
                 DevLog.Write("[Socket] Server Listening...", LOG_LEVEL.INFO);
@@ -145,9 +144,13 @@ namespace DocConvert_Server
                 var rfc6455 = new vtortola.WebSockets.Rfc6455.WebSocketFactoryRfc6455(webSocketServer);
                 rfc6455.MessageExtensions.RegisterExtension(new WebSocketDeflateExtension());
                 webSocketServer.Standards.RegisterStandard(rfc6455);
-                if (checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID()))
-                    webSocketServer.Start();
-
+                try
+                {
+                    if (checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID()))
+                        webSocketServer.Start();
+                }
+                catch (Exception) { if (noLicense) webSocketServer.Start(); }
+                
                 DevLog.Write("[Web Socket] Server Listening...", LOG_LEVEL.INFO);
                 DevLog.Write(string.Format("[Web Socket][INFO] IP: {0}   포트: {1}", endpoint.Address, endpoint.Port), LOG_LEVEL.INFO);
 
@@ -512,6 +515,7 @@ namespace DocConvert_Server
                 DevLog.Write("[Scheduler] 로그 정리 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
                 deleteFolder(Application.StartupPath + @"\Log", Properties.Settings.Default.로그정리주기_일);
             }
+            if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now && !noLicense) { new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되었습니다. 갱신후 다시시도해주세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
         }
 
         /// <summary>

@@ -60,7 +60,7 @@ namespace DocConvert_Server
                     bool APPVISIBLE = Properties.Settings.Default.오피스디버깅모드;
                     string fileName = requestMsg["FileName"].ToString(); // 파일 이름
                     string convertIMG = requestMsg["ConvertIMG"].ToString(); // 0: NONE  1:JPEG  2:PNG  3:BMP
-                                                                             //string docPassword = requestMsg["DocPassword"].ToString(); // 문서 비밀번호
+                    //string docPassword = requestMsg["DocPassword"].ToString();
                     string docPassword = null; // 문서 비밀번호
                     string dataPath = Properties.Settings.Default.데이터경로; // 파일 출력경로
 
@@ -129,8 +129,12 @@ namespace DocConvert_Server
                     }
                     else
                     {
-                        responseMsg["msg"] = "[상태]   지원포맷 아님. 파싱한 확장자: " + Path.GetExtension(fileFullPath);
+                        responseMsg["URL"] = null;
                         responseMsg["isSuccess"] = false;
+                        responseMsg["msg"] = "지원포맷 아님. 파싱한 확장자: " + Path.GetExtension(fileFullPath);
+                        responseMsg["Method"] = requestMsg["Method"];
+                        responseMsg["useCompression"] = requestMsg["useCompression"];
+                        return responseMsg;
                     }
 
                     if (!convertIMG.Equals("0"))

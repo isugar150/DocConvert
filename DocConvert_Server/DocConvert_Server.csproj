@@ -190,4 +190,8 @@ copy /Y "$(SolutionDir)DocConvert_API_JAVA\out\production\DocConvert_API_JAVA_TE
 DEL "$(TargetDir)*.xml" /Q
 DEL "$(TargetDir)*.pdb" /Q</PostBuildEvent>
   </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
 </Project>

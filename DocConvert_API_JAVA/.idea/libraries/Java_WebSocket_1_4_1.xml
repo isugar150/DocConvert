@@ -3,8 +3,9 @@
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/Java-WebSocket-1.4.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/json-simple-1.1.1.jar!/" />
-      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.7.25.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/commons-net-3.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.7.25.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-simple-1.7.25.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -27,19 +27,18 @@ public class FTPManager {
         ftpClient.setControlEncoding("UTF-8");
         /*ftpClient.addProtocolCommandListener(new PrintCommandListener(new PrintWriter(System.out)));*/
         int reply;
-        System.out.println("FTP서버에 연결을 시도합니다..");
         ftpClient.connect(serverIP, serverPORT);//호스트 연결
         reply = ftpClient.getReplyCode();
         if (!FTPReply.isPositiveCompletion(reply)) {
             ftpClient.disconnect();
-            throw new IOException("Exception in connecting to FTP Server");
+            throw new IOException("[FTP] Exception in connecting to FTP Server");
         }
         ftpClient.login(ftpUser, ftpPassword);//로그인
         ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
         ftpClient.setFileTransferMode(FTP.BINARY_FILE_TYPE);
         ftpClient.enterLocalPassiveMode();
         ftpClient.setControlKeepAliveTimeout((1000*60)*5);
-        System.out.println(serverIP + ":" + serverPORT + " 해당 FTP서버에 접속하였습니다.");
+        System.out.println("[FTP] " + serverIP + ":" + serverPORT + " FTP서버에 접속하였습니다.");
     }
 
     public void ConnectFTPS(String serverIP, int serverPORT, String ftpUser, String ftpPassword) throws IOException{
@@ -47,12 +46,11 @@ public class FTPManager {
         ftpsClient.setControlEncoding("UTF-8");
         /*ftpsClient.addProtocolCommandListener(new PrintCommandListener(new PrintWriter(System.out)));*/
         int reply;
-        System.out.println("FTPS서버에 연결을 시도합니다..");
         ftpsClient.connect(serverIP, serverPORT);//호스트 연결
         reply = ftpsClient.getReplyCode();
         if (!FTPReply.isPositiveCompletion(reply)) {
             ftpsClient.disconnect();
-            throw new IOException("Exception in connecting to FTPS Server");
+            throw new IOException("[FTPS] Exception in connecting to FTPS Server");
         }
         ftpsClient.login(ftpUser, ftpPassword);//로그인
         ftpsClient.setFileType(FTP.BINARY_FILE_TYPE);
@@ -61,7 +59,7 @@ public class FTPManager {
         ftpsClient.setControlKeepAliveTimeout((1000*60)*5);
         ftpsClient.execPBSZ(0);
         ftpsClient.execPROT("P");
-        System.out.println(serverIP + ":" + serverPORT + " 해당 FTPS서버에 접속하였습니다.");
+        System.out.println("[FTPS] " + serverIP + ":" + serverPORT + " FTPS서버에 접속하였습니다.");
     }
 
     /**
@@ -75,7 +73,7 @@ public class FTPManager {
     public void uploadFile(String localFilePath, String fileName, String remoteDir) throws Exception {
         try (InputStream input = new FileInputStream(new File(localFilePath + File.separator + fileName))) {
             ftpClient.storeFile(remoteDir + fileName, input);
-            System.out.println(remoteDir + fileName + " 해당 파일을 업로드 하였습니다.");
+            System.out.println("[FTP] " + remoteDir + fileName + " 파일을 업로드 하였습니다.");
         } catch(Exception e){
             throw e;
         }
@@ -84,7 +82,7 @@ public class FTPManager {
     public void uploadFileFTPS(String localFilePath, String fileName, String remoteDir) throws Exception {
         try (InputStream input = new FileInputStream(new File(localFilePath + File.separator + fileName))) {
             ftpsClient.storeFile(remoteDir + fileName, input);
-            System.out.println("[FTPS]" + remoteDir + fileName + " 해당 파일을 업로드 하였습니다.");
+            System.out.println("[FTPS] " + remoteDir + fileName + " 파일을 업로드 하였습니다.");
         } catch(Exception e){
             throw e;
         }
@@ -99,13 +97,13 @@ public class FTPManager {
     public void downloadFile(String remoteFile, String localFile) throws IOException {
         FileOutputStream fos = new FileOutputStream(localFile);
         ftpClient.retrieveFile(remoteFile, fos);
-        System.out.println("파일을 다운로드 하였습니다. " + localFile);
+        System.out.println("[FTP] 파일을 다운로드 하였습니다. " + localFile);
     }
 
     public void downloadFileFTPS(String remoteFile, String localFile) throws IOException {
         FileOutputStream fos = new FileOutputStream(localFile);
         ftpsClient.retrieveFile(remoteFile, fos);
-        System.out.println("파일을 다운로드 하였습니다. " + localFile);
+        System.out.println("[FTPS] 파일을 다운로드 하였습니다. " + localFile);
     }
 
     /**
@@ -135,7 +133,7 @@ public class FTPManager {
             try {
                 ftpClient.logout();
                 ftpClient.disconnect();
-                System.out.println("FTP서버에서 접속을 해제하였습니다.");
+                System.out.println("[FTP] FTP서버에서 접속을 해제하였습니다.");
             } catch (IOException f) {
                 f.printStackTrace();
             }
@@ -147,7 +145,7 @@ public class FTPManager {
             try {
                 ftpsClient.logout();
                 ftpsClient.disconnect();
-                System.out.println("FTPS서버에서 접속을 해제하였습니다.");
+                System.out.println("[FTPS] FTPS서버에서 접속을 해제하였습니다.");
             } catch (IOException f) {
                 f.printStackTrace();
             }
