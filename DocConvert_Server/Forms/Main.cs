@@ -39,7 +39,8 @@ namespace DocConvert_Server
                 if (args[0].Equals("noLicense") && args[1].Equals("JmSoftware"))
                 {
                     noLicense = true;
-                    DevLog.Write("라이센스없이 프로그램을 실행하였습니다", LOG_LEVEL.DEBUG);
+                    DevLog.Write("라이센스없이 프로그램을 실행하였습니다.\r\n=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.", LOG_LEVEL.DEBUG);
+                    this.Text += " - No License Version ";
                 }
             }
         }

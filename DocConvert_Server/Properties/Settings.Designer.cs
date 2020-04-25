@@ -25,9 +25,8 @@ namespace DocConvert_Server.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("7kOQCsa87IIeLnU6hQyxTOzuV0Khg5cBBY5B5p75qAuzJlFKnC8zxpcXxyfsFTOLKn7hnUE4RuBi6VJV9" +
-            "4/UlYAQT6is46zbBIsDiqck9In2erCV0LpIT6KQjpdK/hC2RXqaN6G7C8G3jfq8QHYodEDA8FoZuFspG" +
-            "vQyWNg6h1g=")]
+        [global::System.Configuration.DefaultSettingValueAttribute("nUE4RuBi6VJV94/UlYAQT6is46zbBIsDiqck9In2erCV0LpIT6KQjpdK/hC2RXqaN6G7C8G3jfq8QHYod" +
+            "EDA8FoZuFspGvQyWNg6h1g=")]
         public string 라이센스키 {
             get {
                 return ((string)(this["라이센스키"]));

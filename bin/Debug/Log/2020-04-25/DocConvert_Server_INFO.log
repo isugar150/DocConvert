@@ -643,3 +643,60 @@
 
 2020-04-25 15:02:48.4346  INFO - [Socket] 작업 소요시간: 00:00:02.1367779
 2020-04-25 15:02:48.4815  INFO - [Socket] 세션ID: c450dd6b-8913-4b38-ab77-6c0d9b0c65ea 접속해제: ClientClosing
+2020-04-25 15:10:51.8763  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-04-25 15:10:51.8763  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-25 15:10:51.8763  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 30일
+2020-04-25 15:10:51.9740  INFO - [Socket] 핸들러 등록 완료
+2020-04-25 15:10:51.9740  INFO - [Socket] 서버 생성 성공
+2020-04-25 15:10:52.0089  INFO - [Socket] Server Listening...
+2020-04-25 15:10:52.0089  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-25 15:10:52.1386  INFO - [Web Socket] Server Listening...
+2020-04-25 15:10:52.1386  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-25 15:11:08.8362  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-25 15:11:08.8362  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 30일
+2020-04-25 15:11:08.9143  INFO - [Socket] 핸들러 등록 완료
+2020-04-25 15:11:08.9143  INFO - [Socket] 서버 생성 성공
+2020-04-25 15:11:08.9456  INFO - [Socket] Server Listening...
+2020-04-25 15:11:08.9456  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-25 15:11:09.0237  INFO - [Web Socket] Server Listening...
+2020-04-25 15:11:09.0237  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-25 15:13:27.5761  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-25 15:13:27.5917  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 30일
+2020-04-25 15:13:27.6542  INFO - [Socket] 핸들러 등록 완료
+2020-04-25 15:13:27.6699  INFO - [Socket] 서버 생성 성공
+2020-04-25 15:13:27.6855  INFO - [Socket] Server Listening...
+2020-04-25 15:13:27.6855  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-25 15:13:27.7480  INFO - [Web Socket] Server Listening...
+2020-04-25 15:13:27.7480  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-25 15:13:47.1712  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-25 15:13:47.1712  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 30일
+2020-04-25 15:13:47.2650  INFO - [Socket] 핸들러 등록 완료
+2020-04-25 15:13:47.2650  INFO - [Socket] 서버 생성 성공
+2020-04-25 15:13:47.2806  INFO - [Socket] Server Listening...
+2020-04-25 15:13:47.2806  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-25 15:13:47.3587  INFO - [Web Socket] Server Listening...
+2020-04-25 15:13:47.3587  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-25 15:14:32.0954  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-25 15:14:32.0954  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 30일
+2020-04-25 15:14:32.1735  INFO - [Socket] 핸들러 등록 완료
+2020-04-25 15:14:32.1735  INFO - [Socket] 서버 생성 성공
+2020-04-25 15:14:32.2047  INFO - [Socket] Server Listening...
+2020-04-25 15:14:32.2047  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-25 15:14:32.2828  INFO - [Web Socket] Server Listening...
+2020-04-25 15:14:32.2828  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-25 15:14:43.5470  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-25 15:14:43.5470  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 30일
+2020-04-25 15:14:43.6096  INFO - [Socket] 핸들러 등록 완료
+2020-04-25 15:14:43.6251  INFO - [Socket] 서버 생성 성공
+2020-04-25 15:14:43.6408  INFO - [Socket] Server Listening...
+2020-04-25 15:14:43.6408  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-25 15:14:43.7032  INFO - [Web Socket] Server Listening...
+2020-04-25 15:14:43.7032  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
+2020-04-25 15:15:07.7584  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-04-25 15:15:07.7584  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 30일
+2020-04-25 15:15:07.8365  INFO - [Socket] 핸들러 등록 완료
+2020-04-25 15:15:07.8365  INFO - [Socket] 서버 생성 성공
+2020-04-25 15:15:07.8677  INFO - [Socket] Server Listening...
+2020-04-25 15:15:07.8677  INFO - [Socket][INFO] IP: 127.0.0.1   포트: 12000   프로토콜: Tcp   서버이름: ConvertServer
+2020-04-25 15:15:07.9615  INFO - [Web Socket] Server Listening...
+2020-04-25 15:15:07.9615  INFO - [Web Socket][INFO] IP: 127.0.0.1   포트: 12005
