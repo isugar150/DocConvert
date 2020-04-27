@@ -106,3 +106,5 @@ C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.dll
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.pdb
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.csprojAssemblyReference.cache
+C:\Users\JMKIM\Desktop\source\DocConvert\bin\Debug\Utility\Office Uninstall v1.8.2.exe
+C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.csprojAssemblyReference.cache

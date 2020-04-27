@@ -34,7 +34,7 @@ namespace DocConvert_Server
         {
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
-            if(args.Length != 0)
+            if (args.Length != 0)
             {
                 if (args[0].Equals("noLicense") && args[1].Equals("JmSoftware"))
                 {
@@ -64,7 +64,7 @@ namespace DocConvert_Server
                 if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now && !noLicense) { new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되었습니다. 갱신후 다시시도해주세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
 
                 DevLog.Write("[INFO] 나의 하드웨어 ID: " + new LicenseInfo().getHWID(), LOG_LEVEL.INFO);
-                if(!noLicense)
+                if (!noLicense)
                     DevLog.Write(string.Format("[INFO] 라이센스 만료날짜: {0}", checkLicense["EndDate"].ToString()), LOG_LEVEL.INFO);
 
             }
@@ -151,7 +151,7 @@ namespace DocConvert_Server
                         webSocketServer.Start();
                 }
                 catch (Exception) { if (noLicense) webSocketServer.Start(); }
-                
+
                 DevLog.Write("[Web Socket] Server Listening...", LOG_LEVEL.INFO);
                 DevLog.Write(string.Format("[Web Socket][INFO] IP: {0}   포트: {1}", endpoint.Address, endpoint.Port), LOG_LEVEL.INFO);
 
@@ -492,6 +492,7 @@ namespace DocConvert_Server
         private int CalculateTimerInterval()
         {
             DateTime timeTaken = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0).AddDays(1);
+
             TimeSpan curTime = timeTaken - DateTime.Now;
 
             Debug.WriteLine(timeTaken.ToString("yyyy-MM-dd HH:mm:ss"));
@@ -504,7 +505,12 @@ namespace DocConvert_Server
         /// </summary>
         private void tScheduler_Tick(object sender, EventArgs e)
         {
-            tScheduler.Interval = CalculateTimerInterval();
+            Thread.Sleep(3000);
+            try
+            {
+                tScheduler.Interval = CalculateTimerInterval();
+            }
+            catch (Exception) { DevLog.Write("스케줄러 작동중 오류가 발생하여 비활성화 하였습니다."); }
             if (Properties.Settings.Default.작업공간정리스케줄러)
             {
                 DevLog.Write("[Scheduler] 작업공간 정리 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
@@ -516,7 +522,15 @@ namespace DocConvert_Server
                 DevLog.Write("[Scheduler] 로그 정리 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
                 deleteFolder(Application.StartupPath + @"\Log", Properties.Settings.Default.로그정리주기_일);
             }
-            if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now && !noLicense) { new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되었습니다. 갱신후 다시시도해주세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
+            if (checkLicense["EndDate"] != null || !noLicense)
+            {
+                if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now || !noLicense) {
+                    new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되었습니다. 갱신후 다시시도해주세요.",
+                        "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this);
+                    program_Exit(true);
+                    return;
+                }
+            }
         }
 
         /// <summary>
