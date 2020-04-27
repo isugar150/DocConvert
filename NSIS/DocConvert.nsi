@@ -45,6 +45,8 @@ ShowInstDetails show
 ShowUnInstDetails show
 
 Section "MainSection" SEC01
+  ExecWait "taskkill /f /im DocConvert_Server.exe"
+  ExecWait "taskkill /f /im DocConvert_Util.exe"
   SetOutPath "$INSTDIR"
   SetOverwrite on
   File "..\bin\Release\JAVA_API\DocConvert_API.jar"
@@ -132,15 +134,17 @@ SectionEnd
 
 Function un.onUninstSuccess
   HideWindow
-  MessageBox MB_ICONINFORMATION|MB_OK "$(^Name)를 완전히 제거하였습니다."
+  MessageBox MB_ICONINFORMATION|MB_OK "$(^Name)를 완전히 삭제하였습니다.."
 FunctionEnd
 
 Function un.onInit
-  MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "$(^Name)를 사용자 컴퓨터에서 제거하시겠습니까?" IDYES +2
+  MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "$(^Name)를 컴퓨터에서 삭제하시겠습니까?" IDYES +2
   Abort
 FunctionEnd
 
 Section Uninstall
+  ExecWait "taskkill /f /im DocConvert_Server.exe"
+  ExecWait "taskkill /f /im DocConvert_Util.exe"
   Delete "$INSTDIR\${PRODUCT_NAME}.url"
   Delete "$INSTDIR\uninst.exe"
   Delete "$INSTDIR\AxInterop.HWPCONTROLLib.dll"
