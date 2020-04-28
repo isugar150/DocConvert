@@ -522,15 +522,6 @@ namespace DocConvert_Server
                 DevLog.Write("[Scheduler] 로그 정리 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
                 deleteFolder(Application.StartupPath + @"\Log", Properties.Settings.Default.로그정리주기_일);
             }
-            if (checkLicense["EndDate"] != null || !noLicense)
-            {
-                if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now || !noLicense) {
-                    new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되었습니다. 갱신후 다시시도해주세요.",
-                        "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this);
-                    program_Exit(true);
-                    return;
-                }
-            }
         }
 
         /// <summary>
