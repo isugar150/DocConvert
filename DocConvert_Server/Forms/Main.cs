@@ -382,43 +382,6 @@ namespace DocConvert_Server
         }
         #endregion
 
-        /// <summary>
-        /// 프로그램 종료시 로직 Application.Exit(0) 안먹음
-        /// </summary>
-        /// <param name="forceExit">다이얼로그 띄우고 종료할건지 강제 종료할건지 여부</param>
-        private void program_Exit(bool forceExit)
-        {
-            if (!forceExit)
-            {
-                if (MessageBox.Show(this, "DocConvert 서버를 종료하시겠습니까?", "경고", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
-                {
-                    if (socketServer != null)
-                        socketServer.Dispose();
-                    if (webSocketServer != null)
-                        webSocketServer.Dispose();
-                    try
-                    {
-                        Application.ExitThread();
-                        Environment.Exit(0);
-                    }
-                    catch (Exception) { }
-                }
-            }
-            else
-            {
-                if (socketServer != null)
-                    socketServer.Dispose();
-                if (webSocketServer != null)
-                    webSocketServer.Dispose();
-                try
-                {
-                    Application.ExitThread();
-                    Environment.Exit(0);
-                }
-                catch (Exception) { }
-            }
-        }
-
         #region 컴포넌트 이벤트
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -483,8 +446,6 @@ namespace DocConvert_Server
                 this.TopMost = true;
         }
 
-        #endregion
-
         /// <summary>
         /// 스케줄러 등록시 지정할 타이머
         /// </summary>
@@ -510,7 +471,7 @@ namespace DocConvert_Server
             {
                 tScheduler.Interval = CalculateTimerInterval();
             }
-            catch (Exception) { DevLog.Write("스케줄러 작동중 오류가 발생하여 비활성화 하였습니다."); }
+            catch (Exception) { tScheduler.Dispose(); DevLog.Write("스케줄러 작동중 오류가 발생하여 비활성화 하였습니다."); }
             if (Properties.Settings.Default.작업공간정리스케줄러)
             {
                 DevLog.Write("[Scheduler] 작업공간 정리 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
@@ -524,7 +485,8 @@ namespace DocConvert_Server
             }
             if (checkLicense["EndDate"] != null || !noLicense)
             {
-                if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now || !noLicense) {
+                if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now)
+                {
                     new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되었습니다. 갱신후 다시시도해주세요.",
                         "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this);
                     program_Exit(true);
@@ -579,5 +541,44 @@ namespace DocConvert_Server
             }
             return false;
         }
+
+        /// <summary>
+        /// 프로그램 종료시 로직 Application.Exit(0) 안먹음
+        /// </summary>
+        /// <param name="forceExit">다이얼로그 띄우고 종료할건지 강제 종료할건지 여부</param>
+        private void program_Exit(bool forceExit)
+        {
+            if (!forceExit)
+            {
+                if (MessageBox.Show(this, "DocConvert 서버를 종료하시겠습니까?", "경고", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                {
+                    if (socketServer != null)
+                        socketServer.Dispose();
+                    if (webSocketServer != null)
+                        webSocketServer.Dispose();
+                    try
+                    {
+                        Application.ExitThread();
+                        Environment.Exit(0);
+                    }
+                    catch (Exception) { }
+                }
+            }
+            else
+            {
+                if (socketServer != null)
+                    socketServer.Dispose();
+                if (webSocketServer != null)
+                    webSocketServer.Dispose();
+                try
+                {
+                    Application.ExitThread();
+                    Environment.Exit(0);
+                }
+                catch (Exception) { }
+            }
+        }
+
+        #endregion
     }
 }
