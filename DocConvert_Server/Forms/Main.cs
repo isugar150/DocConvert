@@ -384,12 +384,6 @@ namespace DocConvert_Server
 
         #region 컴포넌트 이벤트
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            e.Cancel = true;
-            this.Visible = false;
-        }
-
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (var dialog = new AboutForm())
@@ -398,44 +392,15 @@ namespace DocConvert_Server
             }
         }
 
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            program_Exit(false);
+        }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             program_Exit(false);
-        }
-
-        private void toolStripMenuItem3_Click(object sender, EventArgs e)
-        {
-            program_Exit(false);
-        }
-
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            using (var dialog = new AboutForm())
-            {
-                dialog.ShowDialog(this);
-            }
-        }
-
-        private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                if (this.Visible)
-                    this.Visible = false;
-                else
-                {
-                    this.Visible = true;
-                    if (this.WindowState == FormWindowState.Minimized)
-                        this.WindowState = FormWindowState.Normal;
-                    this.Activate();
-                }
-            }
-        }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            this.Visible = true;
-            this.Activate();
         }
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
@@ -482,16 +447,6 @@ namespace DocConvert_Server
             {
                 DevLog.Write("[Scheduler] 로그 정리 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
                 deleteFolder(Application.StartupPath + @"\Log", Properties.Settings.Default.로그정리주기_일);
-            }
-            if (checkLicense["EndDate"] != null || !noLicense)
-            {
-                if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now)
-                {
-                    new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되었습니다. 갱신후 다시시도해주세요.",
-                        "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this);
-                    program_Exit(true);
-                    return;
-                }
             }
         }
 

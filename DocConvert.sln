@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocConvert_Server", "DocCon
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCLicenseGenerator", "DCLicenseGenerator\DCLicenseGenerator\DCLicenseGenerator.csproj", "{13703F53-B9E9-4DE6-B999-55B09A34C994}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocConvert_Manager", "DocConvert_Manager\DocConvert_Manager.csproj", "{D8EC0B1A-7C5E-4561-B8F1-5AAD05D994EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{13703F53-B9E9-4DE6-B999-55B09A34C994}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13703F53-B9E9-4DE6-B999-55B09A34C994}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13703F53-B9E9-4DE6-B999-55B09A34C994}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8EC0B1A-7C5E-4561-B8F1-5AAD05D994EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8EC0B1A-7C5E-4561-B8F1-5AAD05D994EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8EC0B1A-7C5E-4561-B8F1-5AAD05D994EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8EC0B1A-7C5E-4561-B8F1-5AAD05D994EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -20,7 +20,7 @@ namespace DocConvert_Server
 
         private void MessageDialog_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            this.Dispose();
         }
     }
 }
