@@ -50,7 +50,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>DocConvert_Util.ico</ApplicationIcon>
+    <ApplicationIcon>docConvert.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
@@ -137,8 +137,10 @@
     <None Include="Resources\help_grey_24x24.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DocConvert_Util.ico" />
     <None Include="Resources\DocConvert_Util.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="docConvert.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

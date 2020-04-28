@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>DocConvert_Server.ico</ApplicationIcon>
+    <ApplicationIcon>docConvert.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
@@ -172,12 +172,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DocConvert_Server.ico" />
+    <Content Include="docConvert.ico" />
     <Content Include="Install\FileZilla_Server-0_9_60_2.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\DocConvert_Server.png" />
-    <None Include="Resources\info_icon.png" />
+    <None Include="Resources\docConvert.png" />
     <None Include="Resources\success_icon.png" />
     <None Include="Resources\error_icon.png" />
   </ItemGroup>
