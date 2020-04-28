@@ -1,9 +1,11 @@
 C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\DocConvert_Manager.exe.config
 C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\DocConvert_Manager.exe
 C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\DocConvert_Manager.pdb
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.Form1.resources
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.Properties.Resources.resources
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.csproj.GenerateResource.cache
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.csproj.CoreCompileInputs.cache
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.exe
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.pdb
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.csprojAssemblyReference.cache
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.Manager.resources
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.csproj.CopyComplete

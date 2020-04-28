@@ -17,7 +17,7 @@ namespace DocConvert_Server
 
     public class DevLog
     {
-        private static Logger logger = NLog.LogManager.GetLogger("DocConvert_Server_Log");
+        private static Logger logger = LogManager.GetLogger("DocConvert_Server_Log");
         static System.Collections.Concurrent.ConcurrentQueue<string> logMsgQueue = new System.Collections.Concurrent.ConcurrentQueue<string>();
 
         static LOG_LEVEL 출력가능_로그레벨 = new LOG_LEVEL();
@@ -35,7 +35,7 @@ namespace DocConvert_Server
             출력가능_로그레벨 = logLevel;
         }
 
-        static public void Write(string msg, LOG_LEVEL logLevel = LOG_LEVEL.TRACE,
+        static public void Write(object msg, LOG_LEVEL logLevel = LOG_LEVEL.TRACE,
                                 [CallerFilePath] string fileName = "",
                                 [CallerMemberName] string methodName = "",
                                 [CallerLineNumber] int lineNumber = 0)
@@ -46,15 +46,15 @@ namespace DocConvert_Server
                 logMsgQueue.Enqueue(string.Format("{0}   Message: {1}", System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.fff"), msg));
             }
             if (logLevel == LOG_LEVEL.ERROR)
-                logger.Error(msg);
+                logger.Error(msg.ToString());
             else if (logLevel == LOG_LEVEL.DEBUG)
-                logger.Debug(msg);
+                logger.Debug(msg.ToString());
             else if (logLevel == LOG_LEVEL.INFO)
-                logger.Info(msg);
+                logger.Info(msg.ToString());
             else if (logLevel == LOG_LEVEL.TRACE)
-                logger.Trace(msg);
+                logger.Trace(msg.ToString());
             else if (logLevel == LOG_LEVEL.WARN)
-                logger.Warn(msg);
+                logger.Warn(msg.ToString());
         }
 
         static public bool GetLog(out string msg)

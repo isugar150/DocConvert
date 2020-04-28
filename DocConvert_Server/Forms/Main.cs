@@ -1,4 +1,6 @@
-﻿using DocConvert_Server.Forms;
+﻿using DocConvert_Core.IniLib;
+using DocConvert_Core.interfaces;
+using DocConvert_Server.Forms;
 using DocConvert_Server.License;
 using Microsoft.Win32;
 using Newtonsoft.Json.Linq;
@@ -27,6 +29,7 @@ namespace DocConvert_Server
         private JObject checkLicense = new JObject();
         public static bool isHwpConverting = false;
         private bool noLicense = false;
+        public static iniProperties IniProperties = new iniProperties();
 
         private static Logger logger = LogManager.GetLogger("DocConvert_Server_Log");
 
@@ -47,18 +50,83 @@ namespace DocConvert_Server
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Text += " - " + Properties.Settings.Default.서버이름;
             textBox1.Text = ("┏━━━┓╋╋╋╋╋┏━━━┓╋╋╋╋╋╋╋╋╋╋╋╋╋┏┓╋┏━━━┓\r\n" +
                              "┗┓┏┓┃╋╋╋╋╋┃┏━┓┃╋╋╋╋╋╋╋╋╋╋╋╋┏┛┗┓┃┏━┓┃\r\n" +
                              "╋┃┃┃┣━━┳━━┫┃╋┗╋━━┳━┓┏┓┏┳━━┳┻┓┏┛┃┗━━┳━━┳━┳┓┏┳━━┳━┓\r\n" +
                              "╋┃┃┃┃┏┓┃┏━┫┃╋┏┫┏┓┃┏┓┫┗┛┃┃━┫┏┫┃╋┗━━┓┃┃━┫┏┫┗┛┃┃━┫┏┛\r\n" +
                              "┏┛┗┛┃┗┛┃┗━┫┗━┛┃┗┛┃┃┃┣┓┏┫┃━┫┃┃┗┓┃┗━┛┃┃━┫┃┗┓┏┫┃━┫┃\r\n" +
                              "┗━━━┻━━┻━━┻━━━┻━━┻┛┗┛┗┛┗━━┻┛┗━┛┗━━━┻━━┻┛╋┗┛┗━━┻┛\r\n");
+            #region Parse INI
+            IniFile pairs = new IniFile();
+            try
+            {
+                while (true)
+                {
+                    if (new FileInfo("./setting.ini").Exists)
+                    {
+                        pairs.Load("./setting.ini");
+                        IniProperties.LicenseKEY = pairs["DC Server"]["LicenseKEY"].ToString();
+                        IniProperties.ServerName = pairs["DC Server"]["ServerName"].ToString();
+                        IniProperties.BindIP = pairs["DC Server"]["BindIP"].ToString();
+                        IniProperties.SocketPort = int.Parse(pairs["DC Server"]["SocketPort"].ToString());
+                        IniProperties.WebSocketPort = int.Parse(pairs["DC Server"]["WebSocketPort"].ToString());
+                        IniProperties.FileServerPort = int.Parse(pairs["DC Server"]["FileServerPort"].ToString());
+                        IniProperties.SocketMaxCnt = int.Parse(pairs["DC Server"]["SocketMaxCnt"].ToString());
+                        IniProperties.DisplayLogCnt = int.Parse(pairs["DC Server"]["DisplayLogCnt"].ToString());
+                        IniProperties.ClientKEY = pairs["DC Server"]["ClientKEY"].ToString();
+                        IniProperties.DataPath = pairs["DC Server"]["DataPath"].ToString();
+                        IniProperties.OfficeDebugMode = pairs["DC Server"]["OfficeDebugMode"].ToString().Equals("Y") ? true : false;
+                        IniProperties.FollowTail = pairs["DC Server"]["FollowTail"].ToString().Equals("Y") ? true : false;
+                        IniProperties.CleanWorkspaceScheduler = pairs["DC Server"]["CleanWorkspaceScheduler"].ToString().Equals("Y") ? true : false;
+                        IniProperties.CleanWorkspaceDay = int.Parse(pairs["DC Server"]["CleanWorkspaceDay"].ToString());
+                        IniProperties.CleanLogScheduler = pairs["DC Server"]["CleanLogScheduler"].ToString().Equals("Y") ? true : false;
+                        IniProperties.CleanLogDay = int.Parse(pairs["DC Server"]["CleanLogDay"].ToString());
+                        IniProperties.WebCaptureTimeout = int.Parse(pairs["DC Server"]["WebCaptureTimeout"].ToString());
+
+                        /*DevLog.Write("=============== Properties ===============");
+                        //DevLog.Write(string.Format("LicenseKEY: {0}", IniProperties.LicenseKEY), LOG_LEVEL.DEBUG);
+                        DevLog.Write(string.Format("ServerName: {0}", IniProperties.ServerName), LOG_LEVEL.DEBUG);
+                        DevLog.Write(string.Format("BindIP: {0}", IniProperties.BindIP), LOG_LEVEL.DEBUG);
+                        DevLog.Write(string.Format("SocketPort: {0}", IniProperties.SocketPort), LOG_LEVEL.DEBUG);
+                        DevLog.Write(string.Format("WebSocketPort: {0}", IniProperties.WebSocketPort), LOG_LEVEL.DEBUG);
+                        DevLog.Write(string.Format("FileServerPort: {0}", IniProperties.FileServerPort), LOG_LEVEL.DEBUG);
+                        DevLog.Write(string.Format("SocketMaxCnt: {0}", IniProperties.SocketMaxCnt), LOG_LEVEL.DEBUG);
+                        DevLog.Write(string.Format("DisplayLogCnt: {0}", IniProperties.DisplayLogCnt), LOG_LEVEL.DEBUG);
+                        DevLog.Write(string.Format("ClientKEY: {0}", IniProperties.ClientKEY), LOG_LEVEL.DEBUG);
+                        DevLog.Write(string.Format("DataPath: {0}", IniProperties.DataPath), LOG_LEVEL.DEBUG);
+                        DevLog.Write(string.Format("OfficeDebugMode: {0}", IniProperties.OfficeDebugMode), LOG_LEVEL.DEBUG);
+                        DevLog.Write(string.Format("FollowTail: {0}", IniProperties.FollowTail), LOG_LEVEL.DEBUG);
+                        DevLog.Write(string.Format("CleanWorkspaceScheduler: {0}", IniProperties.CleanWorkspaceScheduler), LOG_LEVEL.DEBUG);
+                        DevLog.Write(string.Format("CleanWorkspaceDay: {0}", IniProperties.CleanWorkspaceDay), LOG_LEVEL.DEBUG);
+                        DevLog.Write(string.Format("CleanLogScheduler: {0}", IniProperties.CleanLogScheduler), LOG_LEVEL.DEBUG);
+                        DevLog.Write(string.Format("CleanLogDay: {0}", IniProperties.CleanLogDay), LOG_LEVEL.DEBUG);
+                        DevLog.Write(string.Format("WebCaptureTimeout: {0}", IniProperties.WebCaptureTimeout), LOG_LEVEL.DEBUG);
+                        DevLog.Write("==========================================");*/
+                        break;
+                    }
+                    else
+                    {
+                        Setting.createSetting();
+                        MessageBox.Show("설정 파일을 생성하였습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (ArgumentNullException) {
+                if (MessageBox.Show("설정 파일이 손상되었습니다. 초기화하시겠습니까?", "알림", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    Setting.createSetting();
+                    MessageBox.Show("설정 파일을 초기화하였습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                    program_Exit(true);
+            }
+            #endregion
+            this.Text += " - " + IniProperties.ServerName;
             #region checkLicense
             try
             {
-                Debug.WriteLine(Properties.Settings.Default.라이센스키);
-                string licenseInfo = LicenseInfo.decryptAES256(Properties.Settings.Default.라이센스키, "JmDoCOnVerTerServErJmCoRp");
+                Debug.WriteLine(IniProperties.LicenseKEY);
+                string licenseInfo = LicenseInfo.decryptAES256(IniProperties.LicenseKEY, "JmDoCOnVerTerServErJmCoRp");
                 checkLicense = JObject.Parse(licenseInfo);
                 if (!checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID()) && !noLicense) { new MessageDialog("라이센스 오류", "라이센스 확인 후 다시시도하세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
                 if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now && !noLicense) { new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되었습니다. 갱신후 다시시도해주세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
@@ -70,15 +138,15 @@ namespace DocConvert_Server
             }
             catch (Exception) { new MessageDialog("라이센스 오류", "라이센스키 파싱오류.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); if (!noLicense) { program_Exit(true); return; } }
             #endregion
-            DirectoryInfo directoryInfo = new DirectoryInfo(Properties.Settings.Default.데이터경로 + @"\tmp");
+            DirectoryInfo directoryInfo = new DirectoryInfo(IniProperties.DataPath + @"\tmp");
             if (!directoryInfo.Exists)
                 directoryInfo.Create();
-            toolStripStatusLabel4.Text = "IP Address: " + Properties.Settings.Default.바인딩_IP;
-            toolStripStatusLabel5.Text = "Socket Port: : " + Properties.Settings.Default.소켓서버포트.ToString();
-            toolStripStatusLabel6.Text = "WebSocket Port: " + Properties.Settings.Default.웹소켓포트.ToString();
-            toolStripStatusLabel7.Text = "File Server Port: " + Properties.Settings.Default.파일서버포트.ToString();
+            toolStripStatusLabel4.Text = "IP Address: " + IniProperties.BindIP;
+            toolStripStatusLabel5.Text = "Socket Port: : " + IniProperties.SocketPort;
+            toolStripStatusLabel6.Text = "WebSocket Port: " + IniProperties.WebSocketPort;
+            toolStripStatusLabel7.Text = "File Server Port: " + IniProperties.FileServerPort;
 
-            checkBox1.Checked = Properties.Settings.Default.FollowTail;
+            checkBox1.Checked = IniProperties.FollowTail;
             #region 한글 DLL 레지스트리 등록
             if (File.Exists(Application.StartupPath + @"\FilePathCheckerModuleExample.dll"))
             {
@@ -87,13 +155,13 @@ namespace DocConvert_Server
             }
             #endregion
             #region 스케줄러 관련
-            if (Properties.Settings.Default.작업공간정리스케줄러 || Properties.Settings.Default.로그정리스케줄러)
+            if (IniProperties.CleanWorkspaceScheduler || IniProperties.CleanLogScheduler)
             {
                 string SchedulerInfo = "";
-                if (Properties.Settings.Default.작업공간정리스케줄러)
-                    SchedulerInfo += string.Format("작업공간 정리 스케줄러: {0}일   ", Properties.Settings.Default.작업공간정리주기_일);
-                if (Properties.Settings.Default.로그정리스케줄러)
-                    SchedulerInfo += string.Format("로그 정리 스케줄러: {0}일", Properties.Settings.Default.로그정리주기_일);
+                if (IniProperties.CleanWorkspaceScheduler)
+                    SchedulerInfo += string.Format("작업공간 정리 스케줄러: {0}일   ", IniProperties.CleanWorkspaceDay);
+                if (IniProperties.CleanLogScheduler)
+                    SchedulerInfo += string.Format("로그 정리 스케줄러: {0}일", IniProperties.CleanLogDay);
                 DevLog.Write("[Scheduler] 스케줄러가 실행중입니다. " + SchedulerInfo, LOG_LEVEL.INFO);
 
                 tScheduler = new System.Windows.Forms.Timer();
@@ -116,7 +184,7 @@ namespace DocConvert_Server
             if (IsResult)
             {
                 DevLog.Write("[Socket] Server Listening...", LOG_LEVEL.INFO);
-                DevLog.Write(string.Format("[Socket][INFO] IP: {0}   포트: {1}   프로토콜: {2}   서버이름: {3}", Properties.Settings.Default.바인딩_IP, socketServer.Config.Port, socketServer.Config.Mode, socketServer.Config.Name), LOG_LEVEL.INFO);
+                DevLog.Write(string.Format("[Socket][INFO] IP: {0}   포트: {1}   프로토콜: {2}   서버이름: {3}", IniProperties.BindIP, socketServer.Config.Port, socketServer.Config.Mode, socketServer.Config.Name), LOG_LEVEL.INFO);
 
                 pictureBox1.Image = DocConvert_Server.Properties.Resources.success_icon;
             }
@@ -132,7 +200,7 @@ namespace DocConvert_Server
             {
                 CancellationTokenSource cancellation = new CancellationTokenSource();
                 //var endpoint = new IPEndPoint(IPAddress.Any, 1818);
-                var endpoint = new IPEndPoint(IPAddress.Parse(Properties.Settings.Default.바인딩_IP), Properties.Settings.Default.웹소켓포트);
+                var endpoint = new IPEndPoint(IPAddress.Parse(IniProperties.BindIP), IniProperties.WebSocketPort);
                 var options = new WebSocketListenerOptions()
                 {
                     WebSocketReceiveTimeout = new TimeSpan(0, 1, 0), // 클라이언트가 서버로 요청했을때 서버가 바쁘면 Timeout
@@ -183,15 +251,15 @@ namespace DocConvert_Server
             {
                 while (!this.IsDisposed)
                 {
-                    toolStripStatusLabel2.Text = string.Format("Socket Session Count: {0}/{1}", socketServer.SessionCount, Properties.Settings.Default.소켓최대세션);
+                    toolStripStatusLabel2.Text = string.Format("Socket Session Count: {0}/{1}", socketServer.SessionCount, IniProperties.SocketMaxCnt);
                     toolStripStatusLabel3.Text = string.Format("Web Socket Session Count: {0}", wsSessionCount);
 
-                    if (IsTcpPortAvailable(Properties.Settings.Default.웹소켓포트))
+                    if (IsTcpPortAvailable(IniProperties.WebSocketPort))
                         pictureBox3.Image = Properties.Resources.success_icon;
                     else
                         pictureBox3.Image = Properties.Resources.error_icon;
 
-                    if (IsTcpPortAvailable(Properties.Settings.Default.파일서버포트))
+                    if (IsTcpPortAvailable(IniProperties.FileServerPort))
                         pictureBox2.Image = Properties.Resources.success_icon;
                     else
                         pictureBox2.Image = Properties.Resources.error_icon;
@@ -312,7 +380,7 @@ namespace DocConvert_Server
                 {
                     ++logWorkCount;
 
-                    if (listBoxLog.Items.Count >= Properties.Settings.Default.보여지는로그최대개수)
+                    if (listBoxLog.Items.Count >= IniProperties.DisplayLogCnt)
                     {
                         listBoxLog.Items.RemoveAt(0);
                     }
@@ -325,7 +393,7 @@ namespace DocConvert_Server
                         textBox1.AppendText(msg + "\r\n");
                     }
 
-                    toolStripStatusLabel1.Text = string.Format("LogCount: {0}/{1}", listBoxLog.Items.Count, Properties.Settings.Default.보여지는로그최대개수);
+                    toolStripStatusLabel1.Text = string.Format("LogCount: {0}/{1}", listBoxLog.Items.Count, IniProperties.DisplayLogCnt);
                 }
                 else
                 {
@@ -437,16 +505,16 @@ namespace DocConvert_Server
                 tScheduler.Interval = CalculateTimerInterval();
             }
             catch (Exception) { tScheduler.Dispose(); DevLog.Write("스케줄러 작동중 오류가 발생하여 비활성화 하였습니다."); }
-            if (Properties.Settings.Default.작업공간정리스케줄러)
+            if (IniProperties.CleanWorkspaceScheduler)
             {
                 DevLog.Write("[Scheduler] 작업공간 정리 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
-                deleteFolder(Properties.Settings.Default.데이터경로 + @"\workspace", Properties.Settings.Default.작업공간정리주기_일);
-                deleteFolder(Properties.Settings.Default.데이터경로 + @"\tmp", Properties.Settings.Default.작업공간정리주기_일);
+                deleteFolder(IniProperties.DataPath + @"\workspace", IniProperties.CleanWorkspaceDay);
+                deleteFolder(IniProperties.DataPath + @"\tmp", IniProperties.CleanWorkspaceDay);
             }
-            if (Properties.Settings.Default.로그정리스케줄러)
+            if (IniProperties.CleanLogScheduler)
             {
                 DevLog.Write("[Scheduler] 로그 정리 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
-                deleteFolder(Application.StartupPath + @"\Log", Properties.Settings.Default.로그정리주기_일);
+                deleteFolder(Application.StartupPath + @"\Log", IniProperties.CleanLogDay);
             }
         }
 

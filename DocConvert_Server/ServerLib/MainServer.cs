@@ -35,11 +35,11 @@ namespace DocConvert_Server
         {
             m_Config = new ServerConfig
             {
-                Port = Properties.Settings.Default.소켓서버포트,
-                Ip = Properties.Settings.Default.바인딩_IP,
-                MaxConnectionNumber = Properties.Settings.Default.소켓최대세션,
+                Port = Form1.IniProperties.SocketPort,
+                Ip = Form1.IniProperties.BindIP,
+                MaxConnectionNumber = Form1.IniProperties.SocketMaxCnt,
                 Mode = SocketMode.Tcp,
-                Name = Properties.Settings.Default.서버이름
+                Name = Form1.IniProperties.ServerName
             };
         }
 

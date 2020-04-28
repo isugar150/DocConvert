@@ -68,7 +68,6 @@ C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\NLog.config
 C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\Install\FileZilla_Server-0_9_60_2.exe
 C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\FilePathCheckerModuleExample.dll
 C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\pdfium.dll
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\DocConvert_Server.exe.config
 C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\DocConvert_Server.exe
 C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Debug\DocConvert_Server.pdb
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.csprojAssemblyReference.cache

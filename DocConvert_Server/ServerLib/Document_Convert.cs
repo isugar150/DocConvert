@@ -20,6 +20,7 @@ namespace DocConvert_Server
     public class Document_Convert
     {
         private static Logger logger = LogManager.GetLogger("DocConvert_Server_Log");
+        public static iniProperties IniProperties = new iniProperties();
 
         /// <summary>
         /// 소켓, 웹소켓에서 들어온 요청을 처리하는 부분
@@ -35,7 +36,7 @@ namespace DocConvert_Server
             {
                 requestMsg = JObject.Parse(requestInfo); // 요청받은 JSON 파싱
 
-                if (!requestMsg["KEY"].ToString().Equals(Properties.Settings.Default.클라이언트키) || requestMsg["KEY"] == null)
+                if (!requestMsg["KEY"].ToString().Equals(Form1.IniProperties.ClientKEY) || requestMsg["KEY"] == null)
                 {
                     responseMsg["URL"] = null;
                     responseMsg["isSuccess"] = false;
@@ -57,12 +58,12 @@ namespace DocConvert_Server
 
                     #region DocConvert
                     bool PAGINGNUM = false;
-                    bool APPVISIBLE = Properties.Settings.Default.오피스디버깅모드;
+                    bool APPVISIBLE = Form1.IniProperties.OfficeDebugMode;
                     string fileName = requestMsg["FileName"].ToString(); // 파일 이름
                     string convertIMG = requestMsg["ConvertIMG"].ToString(); // 0: NONE  1:JPEG  2:PNG  3:BMP
                     //string docPassword = requestMsg["DocPassword"].ToString();
                     string docPassword = null; // 문서 비밀번호
-                    string dataPath = Properties.Settings.Default.데이터경로; // 파일 출력경로
+                    string dataPath = Form1.IniProperties.DataPath; // 파일 출력경로
 
                     string documents = @"workspace";
                     string tmpPath = @"tmp";
@@ -196,7 +197,7 @@ namespace DocConvert_Server
                     #region WebCapture
                     Thread WebCapture = new Thread(() =>
                     {
-                        status = WebCapture_Core.WebCapture(requestMsg["URL"].ToString(), Properties.Settings.Default.데이터경로 + dataPath, + Properties.Settings.Default.웹캡쳐_타임아웃_sec);
+                        status = WebCapture_Core.WebCapture(requestMsg["URL"].ToString(), Form1.IniProperties.DataPath + dataPath, +Form1.IniProperties.WebCaptureTimeout);
                     });
                     WebCapture.SetApartmentState(ApartmentState.STA);
                     WebCapture.Start();

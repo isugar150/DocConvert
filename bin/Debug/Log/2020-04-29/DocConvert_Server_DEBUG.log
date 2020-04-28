@@ -1,0 +1,337 @@
+2020-04-29 00:00:00.5606 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:00:32.0511 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:08:40.3040 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:09:27.9557 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:09:28.0233 DEBUG - =============== Properties ===============
+2020-04-29 00:09:28.0233 DEBUG - 
+2020-04-29 00:09:28.0233 DEBUG - Jm's DCServer
+2020-04-29 00:09:28.0233 DEBUG - 127.0.0.1
+2020-04-29 00:09:28.0233 DEBUG - 12000
+2020-04-29 00:09:28.0233 DEBUG - 12005
+2020-04-29 00:09:28.0233 DEBUG - 12100
+2020-04-29 00:09:28.0233 DEBUG - 10
+2020-04-29 00:09:28.0233 DEBUG - 300
+2020-04-29 00:09:28.0233 DEBUG - B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-04-29 00:09:28.0233 DEBUG - C:\Data
+2020-04-29 00:09:28.0233 DEBUG - True
+2020-04-29 00:09:28.0233 DEBUG - True
+2020-04-29 00:09:28.0233 DEBUG - True
+2020-04-29 00:09:28.0233 DEBUG - 3
+2020-04-29 00:09:28.0233 DEBUG - True
+2020-04-29 00:09:28.0233 DEBUG - 10
+2020-04-29 00:09:28.0233 DEBUG - 20
+2020-04-29 00:09:28.0233 DEBUG - ==========================================
+2020-04-29 00:10:50.5562 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:13:46.5744 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:13:46.6552 DEBUG - LicenseKEY: 
+2020-04-29 00:13:46.6552 DEBUG - ServerName: Jm's DCServer
+2020-04-29 00:13:46.6552 DEBUG - BindIP: 127.0.0.1
+2020-04-29 00:13:46.6552 DEBUG - SocketPort: 12000
+2020-04-29 00:13:46.6552 DEBUG - WebSocketPort: 12005
+2020-04-29 00:13:46.6552 DEBUG - FileServerPort: 12100
+2020-04-29 00:13:46.6552 DEBUG - SocketMaxCnt: 10
+2020-04-29 00:13:46.6552 DEBUG - DisplayLogCnt: 300
+2020-04-29 00:13:46.6552 DEBUG - ClientKEY: B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-04-29 00:13:46.6552 DEBUG - DataPath: C:\Data
+2020-04-29 00:13:46.6552 DEBUG - OfficeDebugMode: True
+2020-04-29 00:13:46.6552 DEBUG - FollowTail: True
+2020-04-29 00:13:46.6552 DEBUG - CleanWorkspaceScheduler: True
+2020-04-29 00:13:46.6552 DEBUG - CleanWorkspaceDay: 3
+2020-04-29 00:13:46.6552 DEBUG - CleanLogScheduler: True
+2020-04-29 00:13:46.6552 DEBUG - CleanLogDay: 10
+2020-04-29 00:13:46.6552 DEBUG - WebCaptureTimeout: 20
+2020-04-29 00:17:59.7031 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:17:59.7729 DEBUG - LicenseKEY: 
+2020-04-29 00:17:59.7729 DEBUG - ServerName: Jm's DCServer
+2020-04-29 00:17:59.7729 DEBUG - BindIP: 127.0.0.1
+2020-04-29 00:17:59.7729 DEBUG - SocketPort: 12000
+2020-04-29 00:17:59.7729 DEBUG - WebSocketPort: 12005
+2020-04-29 00:17:59.7729 DEBUG - FileServerPort: 12100
+2020-04-29 00:17:59.7729 DEBUG - SocketMaxCnt: 10
+2020-04-29 00:17:59.7729 DEBUG - DisplayLogCnt: 300
+2020-04-29 00:17:59.7729 DEBUG - ClientKEY: B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-04-29 00:17:59.7729 DEBUG - DataPath: C:\Data
+2020-04-29 00:17:59.7729 DEBUG - OfficeDebugMode: True
+2020-04-29 00:17:59.7729 DEBUG - FollowTail: True
+2020-04-29 00:17:59.7729 DEBUG - CleanWorkspaceScheduler: True
+2020-04-29 00:17:59.7729 DEBUG - CleanWorkspaceDay: 3
+2020-04-29 00:17:59.7729 DEBUG - CleanLogScheduler: True
+2020-04-29 00:17:59.7729 DEBUG - CleanLogDay: 10
+2020-04-29 00:17:59.7729 DEBUG - WebCaptureTimeout: 20
+2020-04-29 00:18:23.4399 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:18:34.5286 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:18:34.6004 DEBUG - LicenseKEY: 
+2020-04-29 00:18:34.6014 DEBUG - ServerName: Jm's DCServer
+2020-04-29 00:18:34.6014 DEBUG - BindIP: 127.0.0.1
+2020-04-29 00:18:34.6014 DEBUG - SocketPort: 12000
+2020-04-29 00:18:34.6014 DEBUG - WebSocketPort: 12005
+2020-04-29 00:18:34.6014 DEBUG - FileServerPort: 12100
+2020-04-29 00:18:34.6014 DEBUG - SocketMaxCnt: 10
+2020-04-29 00:18:34.6014 DEBUG - DisplayLogCnt: 300
+2020-04-29 00:18:34.6014 DEBUG - ClientKEY: B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-04-29 00:18:34.6014 DEBUG - DataPath: C:\Data
+2020-04-29 00:18:34.6014 DEBUG - OfficeDebugMode: True
+2020-04-29 00:18:34.6014 DEBUG - FollowTail: True
+2020-04-29 00:18:34.6014 DEBUG - CleanWorkspaceScheduler: True
+2020-04-29 00:18:34.6014 DEBUG - CleanWorkspaceDay: 3
+2020-04-29 00:18:34.6014 DEBUG - CleanLogScheduler: True
+2020-04-29 00:18:34.6014 DEBUG - CleanLogDay: 10
+2020-04-29 00:18:34.6014 DEBUG - WebCaptureTimeout: 20
+2020-04-29 00:19:03.4972 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:19:03.5785 DEBUG - LicenseKEY: 
+2020-04-29 00:19:03.5785 DEBUG - ServerName: Jm's DCServer
+2020-04-29 00:19:03.5785 DEBUG - BindIP: 127.0.0.1
+2020-04-29 00:19:03.5785 DEBUG - SocketPort: 12000
+2020-04-29 00:19:03.5785 DEBUG - WebSocketPort: 12005
+2020-04-29 00:19:03.5785 DEBUG - FileServerPort: 12100
+2020-04-29 00:19:03.5785 DEBUG - SocketMaxCnt: 10
+2020-04-29 00:19:03.5785 DEBUG - DisplayLogCnt: 300
+2020-04-29 00:19:03.5785 DEBUG - ClientKEY: B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-04-29 00:19:03.5785 DEBUG - DataPath: C:\Data
+2020-04-29 00:19:03.5785 DEBUG - OfficeDebugMode: True
+2020-04-29 00:19:03.5785 DEBUG - FollowTail: True
+2020-04-29 00:19:03.5785 DEBUG - CleanWorkspaceScheduler: True
+2020-04-29 00:19:03.5785 DEBUG - CleanWorkspaceDay: 3
+2020-04-29 00:19:03.5785 DEBUG - CleanLogScheduler: True
+2020-04-29 00:19:03.5785 DEBUG - CleanLogDay: 10
+2020-04-29 00:19:03.5785 DEBUG - WebCaptureTimeout: 20
+2020-04-29 00:19:20.4652 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:19:20.5487 DEBUG - LicenseKEY: 
+2020-04-29 00:19:20.5487 DEBUG - ServerName: Jm's DCServer
+2020-04-29 00:19:20.5487 DEBUG - BindIP: 127.0.0.1
+2020-04-29 00:19:20.5487 DEBUG - SocketPort: 12000
+2020-04-29 00:19:20.5487 DEBUG - WebSocketPort: 12005
+2020-04-29 00:19:20.5487 DEBUG - FileServerPort: 12100
+2020-04-29 00:19:20.5487 DEBUG - SocketMaxCnt: 10
+2020-04-29 00:19:20.5487 DEBUG - DisplayLogCnt: 300
+2020-04-29 00:19:20.5487 DEBUG - ClientKEY: B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-04-29 00:19:20.5487 DEBUG - DataPath: C:\Data
+2020-04-29 00:19:20.5487 DEBUG - OfficeDebugMode: True
+2020-04-29 00:19:20.5547 DEBUG - FollowTail: True
+2020-04-29 00:19:20.5547 DEBUG - CleanWorkspaceScheduler: True
+2020-04-29 00:19:20.5547 DEBUG - CleanWorkspaceDay: 3
+2020-04-29 00:19:20.5547 DEBUG - CleanLogScheduler: True
+2020-04-29 00:19:20.5547 DEBUG - CleanLogDay: 10
+2020-04-29 00:19:20.5547 DEBUG - WebCaptureTimeout: 20
+2020-04-29 00:19:34.0928 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:22:29.9069 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:22:35.6674 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:24:00.9549 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:24:01.0356 DEBUG - LicenseKEY: 
+2020-04-29 00:24:01.0356 DEBUG - ServerName: Jm's DCServer
+2020-04-29 00:24:01.0356 DEBUG - BindIP: 127.0.0.1
+2020-04-29 00:24:01.0356 DEBUG - SocketPort: 12000
+2020-04-29 00:24:01.0356 DEBUG - WebSocketPort: 12005
+2020-04-29 00:24:01.0356 DEBUG - FileServerPort: 12100
+2020-04-29 00:24:01.0387 DEBUG - SocketMaxCnt: 10
+2020-04-29 00:24:01.0387 DEBUG - DisplayLogCnt: 300
+2020-04-29 00:24:01.0387 DEBUG - ClientKEY: B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-04-29 00:24:01.0387 DEBUG - DataPath: C:\Data
+2020-04-29 00:24:01.0387 DEBUG - OfficeDebugMode: True
+2020-04-29 00:24:01.0387 DEBUG - FollowTail: True
+2020-04-29 00:24:01.0387 DEBUG - CleanWorkspaceScheduler: True
+2020-04-29 00:24:01.0387 DEBUG - CleanWorkspaceDay: 3
+2020-04-29 00:24:01.0387 DEBUG - CleanLogScheduler: True
+2020-04-29 00:24:01.0387 DEBUG - CleanLogDay: 10
+2020-04-29 00:24:01.0387 DEBUG - WebCaptureTimeout: 20
+2020-04-29 00:24:12.0022 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:24:12.0761 DEBUG - LicenseKEY: 
+2020-04-29 00:24:12.0761 DEBUG - ServerName: Jm's DCServer
+2020-04-29 00:24:12.0761 DEBUG - BindIP: 127.0.0.1
+2020-04-29 00:24:12.0761 DEBUG - SocketPort: 12000
+2020-04-29 00:24:12.0761 DEBUG - WebSocketPort: 12005
+2020-04-29 00:24:12.0761 DEBUG - FileServerPort: 12100
+2020-04-29 00:24:12.0761 DEBUG - SocketMaxCnt: 10
+2020-04-29 00:24:12.0761 DEBUG - DisplayLogCnt: 300
+2020-04-29 00:24:12.0761 DEBUG - ClientKEY: B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-04-29 00:24:12.0761 DEBUG - DataPath: C:\Data
+2020-04-29 00:24:12.0761 DEBUG - OfficeDebugMode: True
+2020-04-29 00:24:12.0761 DEBUG - FollowTail: True
+2020-04-29 00:24:12.0761 DEBUG - CleanWorkspaceScheduler: True
+2020-04-29 00:24:12.0761 DEBUG - CleanWorkspaceDay: 3
+2020-04-29 00:24:12.0761 DEBUG - CleanLogScheduler: True
+2020-04-29 00:24:12.0761 DEBUG - CleanLogDay: 10
+2020-04-29 00:24:12.0761 DEBUG - WebCaptureTimeout: 20
+2020-04-29 00:24:20.6790 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:25:30.7762 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:25:35.5142 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:25:51.4811 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:25:51.5780 DEBUG - LicenseKEY: 
+2020-04-29 00:25:51.5780 DEBUG - ServerName: Jm's DCServer
+2020-04-29 00:25:51.5780 DEBUG - BindIP: 127.0.0.1
+2020-04-29 00:25:51.5780 DEBUG - SocketPort: 12000
+2020-04-29 00:25:51.5780 DEBUG - WebSocketPort: 12005
+2020-04-29 00:25:51.5780 DEBUG - FileServerPort: 12100
+2020-04-29 00:25:51.5780 DEBUG - SocketMaxCnt: 10
+2020-04-29 00:25:51.5780 DEBUG - DisplayLogCnt: 300
+2020-04-29 00:25:51.5780 DEBUG - ClientKEY: B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-04-29 00:25:51.5780 DEBUG - DataPath: C:\Data
+2020-04-29 00:25:51.5780 DEBUG - OfficeDebugMode: True
+2020-04-29 00:25:51.5780 DEBUG - FollowTail: True
+2020-04-29 00:25:51.5780 DEBUG - CleanWorkspaceScheduler: True
+2020-04-29 00:25:51.5780 DEBUG - CleanWorkspaceDay: 3
+2020-04-29 00:25:51.5780 DEBUG - CleanLogScheduler: True
+2020-04-29 00:25:51.5780 DEBUG - CleanLogDay: 10
+2020-04-29 00:25:51.5780 DEBUG - WebCaptureTimeout: 20
+2020-04-29 00:34:02.6431 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:34:02.7259 DEBUG - LicenseKEY: 
+2020-04-29 00:34:02.7259 DEBUG - ServerName: Jm's DCServer
+2020-04-29 00:34:02.7259 DEBUG - BindIP: 127.0.0.1
+2020-04-29 00:34:02.7259 DEBUG - SocketPort: 12000
+2020-04-29 00:34:02.7259 DEBUG - WebSocketPort: 12005
+2020-04-29 00:34:02.7259 DEBUG - FileServerPort: 12100
+2020-04-29 00:34:02.7259 DEBUG - SocketMaxCnt: 10
+2020-04-29 00:34:02.7259 DEBUG - DisplayLogCnt: 300
+2020-04-29 00:34:02.7259 DEBUG - ClientKEY: B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-04-29 00:34:02.7259 DEBUG - DataPath: C:\Data
+2020-04-29 00:34:02.7259 DEBUG - OfficeDebugMode: True
+2020-04-29 00:34:02.7259 DEBUG - FollowTail: True
+2020-04-29 00:34:02.7259 DEBUG - CleanWorkspaceScheduler: True
+2020-04-29 00:34:02.7259 DEBUG - CleanWorkspaceDay: 3
+2020-04-29 00:34:02.7259 DEBUG - CleanLogScheduler: True
+2020-04-29 00:34:02.7259 DEBUG - CleanLogDay: 10
+2020-04-29 00:34:02.7259 DEBUG - WebCaptureTimeout: 20
+2020-04-29 00:34:24.4293 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:34:24.5320 DEBUG - LicenseKEY: 7kOQCsa87IIeLnU6hQyxTOzuV0Khg5cBBY5B5p75qAuzJlFKnC8zxpcXxyfsFTOLKn7hnUE4RuBi6VJV94/UlYAQT6is46zbBIsDiqck9In2erCV0LpIT6KQjpdK/hC2RXqaN6G7C8G3jfq8QHYodEDA8FoZuFspGvQyWNg6h1g=
+2020-04-29 00:34:24.5320 DEBUG - ServerName: Jm's DCServer
+2020-04-29 00:34:24.5320 DEBUG - BindIP: 127.0.0.1
+2020-04-29 00:34:24.5320 DEBUG - SocketPort: 12000
+2020-04-29 00:34:24.5320 DEBUG - WebSocketPort: 12005
+2020-04-29 00:34:24.5320 DEBUG - FileServerPort: 12100
+2020-04-29 00:34:24.5320 DEBUG - SocketMaxCnt: 10
+2020-04-29 00:34:24.5320 DEBUG - DisplayLogCnt: 300
+2020-04-29 00:34:24.5320 DEBUG - ClientKEY: B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-04-29 00:34:24.5320 DEBUG - DataPath: C:\Data
+2020-04-29 00:34:24.5320 DEBUG - OfficeDebugMode: True
+2020-04-29 00:34:24.5320 DEBUG - FollowTail: True
+2020-04-29 00:34:24.5320 DEBUG - CleanWorkspaceScheduler: True
+2020-04-29 00:34:24.5320 DEBUG - CleanWorkspaceDay: 3
+2020-04-29 00:34:24.5320 DEBUG - CleanLogScheduler: True
+2020-04-29 00:34:24.5320 DEBUG - CleanLogDay: 10
+2020-04-29 00:34:24.5320 DEBUG - WebCaptureTimeout: 20
+2020-04-29 00:34:51.9543 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:34:52.0480 DEBUG - ServerName: Jm's DCServer
+2020-04-29 00:34:52.0480 DEBUG - BindIP: 127.0.0.1
+2020-04-29 00:34:52.0480 DEBUG - SocketPort: 12000
+2020-04-29 00:34:52.0480 DEBUG - WebSocketPort: 12005
+2020-04-29 00:34:52.0480 DEBUG - FileServerPort: 12100
+2020-04-29 00:34:52.0480 DEBUG - SocketMaxCnt: 10
+2020-04-29 00:34:52.0480 DEBUG - DisplayLogCnt: 300
+2020-04-29 00:34:52.0480 DEBUG - ClientKEY: B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-04-29 00:34:52.0480 DEBUG - DataPath: C:\Data
+2020-04-29 00:34:52.0480 DEBUG - OfficeDebugMode: True
+2020-04-29 00:34:52.0480 DEBUG - FollowTail: True
+2020-04-29 00:34:52.0480 DEBUG - CleanWorkspaceScheduler: True
+2020-04-29 00:34:52.0480 DEBUG - CleanWorkspaceDay: 3
+2020-04-29 00:34:52.0540 DEBUG - CleanLogScheduler: True
+2020-04-29 00:34:52.0540 DEBUG - CleanLogDay: 10
+2020-04-29 00:34:52.0540 DEBUG - WebCaptureTimeout: 20
+2020-04-29 00:40:34.3103 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:41:07.7918 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:41:19.5265 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:41:53.6073 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:42:19.4451 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:42:19.5149 DEBUG - ServerName: Jm's DCServer
+2020-04-29 00:42:19.5149 DEBUG - BindIP: 127.0.0.1
+2020-04-29 00:42:19.5149 DEBUG - SocketPort: 12000
+2020-04-29 00:42:19.5149 DEBUG - WebSocketPort: 12005
+2020-04-29 00:42:19.5149 DEBUG - FileServerPort: 12100
+2020-04-29 00:42:19.5149 DEBUG - SocketMaxCnt: 10
+2020-04-29 00:42:19.5149 DEBUG - DisplayLogCnt: 300
+2020-04-29 00:42:19.5149 DEBUG - ClientKEY: B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-04-29 00:42:19.5149 DEBUG - DataPath: C:\Data
+2020-04-29 00:42:19.5149 DEBUG - OfficeDebugMode: True
+2020-04-29 00:42:19.5149 DEBUG - FollowTail: True
+2020-04-29 00:42:19.5149 DEBUG - CleanWorkspaceScheduler: True
+2020-04-29 00:42:19.5149 DEBUG - CleanWorkspaceDay: 3
+2020-04-29 00:42:19.5149 DEBUG - CleanLogScheduler: True
+2020-04-29 00:42:19.5149 DEBUG - CleanLogDay: 10
+2020-04-29 00:42:19.5149 DEBUG - WebCaptureTimeout: 20
+2020-04-29 00:42:32.0079 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:44:55.0183 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:44:55.1026 DEBUG - ServerName: Jm's DCServer
+2020-04-29 00:44:55.1026 DEBUG - BindIP: 127.0.0.1
+2020-04-29 00:44:55.1026 DEBUG - SocketPort: 12000
+2020-04-29 00:44:55.1026 DEBUG - WebSocketPort: 12005
+2020-04-29 00:44:55.1026 DEBUG - FileServerPort: 12100
+2020-04-29 00:44:55.1026 DEBUG - SocketMaxCnt: 10
+2020-04-29 00:44:55.1026 DEBUG - DisplayLogCnt: 300
+2020-04-29 00:44:55.1026 DEBUG - ClientKEY: B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-04-29 00:44:55.1026 DEBUG - DataPath: C:\Data
+2020-04-29 00:44:55.1026 DEBUG - OfficeDebugMode: True
+2020-04-29 00:44:55.1026 DEBUG - FollowTail: True
+2020-04-29 00:44:55.1026 DEBUG - CleanWorkspaceScheduler: True
+2020-04-29 00:44:55.1026 DEBUG - CleanWorkspaceDay: 3
+2020-04-29 00:44:55.1026 DEBUG - CleanLogScheduler: True
+2020-04-29 00:44:55.1026 DEBUG - CleanLogDay: 10
+2020-04-29 00:44:55.1026 DEBUG - WebCaptureTimeout: 20
+2020-04-29 00:45:04.0834 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:46:03.9621 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:46:05.3529 DEBUG - ServerName: Jm's DCServer
+2020-04-29 00:46:05.3529 DEBUG - BindIP: 127.0.0.1
+2020-04-29 00:46:05.3529 DEBUG - SocketPort: 12000
+2020-04-29 00:46:05.3529 DEBUG - WebSocketPort: 12005
+2020-04-29 00:46:05.3529 DEBUG - FileServerPort: 12100
+2020-04-29 00:46:05.3529 DEBUG - SocketMaxCnt: 10
+2020-04-29 00:46:05.3529 DEBUG - DisplayLogCnt: 300
+2020-04-29 00:46:05.3529 DEBUG - ClientKEY: B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-04-29 00:46:05.3529 DEBUG - DataPath: C:\Data
+2020-04-29 00:46:05.3689 DEBUG - OfficeDebugMode: True
+2020-04-29 00:46:05.3689 DEBUG - FollowTail: True
+2020-04-29 00:46:05.3689 DEBUG - CleanWorkspaceScheduler: True
+2020-04-29 00:46:05.3689 DEBUG - CleanWorkspaceDay: 3
+2020-04-29 00:46:05.3689 DEBUG - CleanLogScheduler: True
+2020-04-29 00:46:05.3689 DEBUG - CleanLogDay: 10
+2020-04-29 00:46:05.3689 DEBUG - WebCaptureTimeout: 20
+2020-04-29 00:46:23.5266 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.
+2020-04-29 00:46:24.6356 DEBUG - ServerName: Jm's DCServer
+2020-04-29 00:46:24.6356 DEBUG - BindIP: 127.0.0.1
+2020-04-29 00:46:24.6356 DEBUG - SocketPort: 12000
+2020-04-29 00:46:24.6356 DEBUG - WebSocketPort: 12005
+2020-04-29 00:46:24.6356 DEBUG - FileServerPort: 12100
+2020-04-29 00:46:24.6356 DEBUG - SocketMaxCnt: 10
+2020-04-29 00:46:24.6356 DEBUG - DisplayLogCnt: 300
+2020-04-29 00:46:24.6356 DEBUG - ClientKEY: B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-04-29 00:46:24.6356 DEBUG - DataPath: C:\Data
+2020-04-29 00:46:24.6356 DEBUG - OfficeDebugMode: True
+2020-04-29 00:46:24.6356 DEBUG - FollowTail: True
+2020-04-29 00:46:24.6356 DEBUG - CleanWorkspaceScheduler: True
+2020-04-29 00:46:24.6356 DEBUG - CleanWorkspaceDay: 3
+2020-04-29 00:46:24.6356 DEBUG - CleanLogScheduler: True
+2020-04-29 00:46:24.6356 DEBUG - CleanLogDay: 10
+2020-04-29 00:46:24.6356 DEBUG - WebCaptureTimeout: 20
+2020-04-29 00:46:56.4707 DEBUG - 라이센스없이 프로그램을 실행하였습니다.
+=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.

@@ -102,12 +102,6 @@ Section "MainSection" SEC01
   CreateShortCut "$DESKTOP\DocConvert Util.lnk" "$INSTDIR\DocConvert_Util.exe"
   CreateDirectory "$SMPROGRAMS\DocConvert"
   CreateShortCut "$SMPROGRAMS\DocConvert\DocConvert Util.lnk" "$INSTDIR\DocConvert_Util.exe"
-  IfFileExists "$INSTDIR\DocConvert_Server.exe.config" isFile notFile
-  isFile:
-  goto END
-  notFile:
-  File "..\bin\Release\DocConvert_Server.exe.config"
-  END:
   File "..\bin\Release\DocConvert_Server.exe"
   CreateShortCut "$SMPROGRAMS\DocConvert\DocConvert Server.lnk" "$INSTDIR\DocConvert_Server.exe"
   CreateShortCut "$DESKTOP\DocConvert Server.lnk" "$INSTDIR\DocConvert_Server.exe"
