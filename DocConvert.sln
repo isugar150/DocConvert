@@ -18,6 +18,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCLicenseGenerator", "DCLicenseGenerator\DCLicenseGenerator\DCLicenseGenerator.csproj", "{13703F53-B9E9-4DE6-B999-55B09A34C994}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocConvert_Manager", "DocConvert_Manager\DocConvert_Manager.csproj", "{D8EC0B1A-7C5E-4561-B8F1-5AAD05D994EA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E66D151A-0A14-4EE5-97D8-DFC33B913AE0} = {E66D151A-0A14-4EE5-97D8-DFC33B913AE0}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

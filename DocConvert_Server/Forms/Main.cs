@@ -5,6 +5,7 @@ using DocConvert_Server.License;
 using Microsoft.Win32;
 using Newtonsoft.Json.Linq;
 using NLog;
+using NLog.Fluent;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -22,7 +23,6 @@ namespace DocConvert_Server
     public partial class Form1 : Form
     {
         private System.Windows.Threading.DispatcherTimer workProcessTimer = new System.Windows.Threading.DispatcherTimer();
-        private MainServer socketServer = new MainServer();
         private int wsSessionCount = 0;
         private static System.Windows.Forms.Timer tScheduler;
         private WebSocketListener webSocketServer = null;
@@ -39,6 +39,10 @@ namespace DocConvert_Server
             CheckForIllegalCrossThreadCalls = false;
             if (args.Length != 0)
             {
+                if (args[0].Equals("Minimized"))
+                {
+                    this.WindowState = FormWindowState.Minimized;
+                }
                 if (args[0].Equals("noLicense") && args[1].Equals("JmSoftware"))
                 {
                     noLicense = true;
@@ -68,10 +72,8 @@ namespace DocConvert_Server
                         IniProperties.LicenseKEY = pairs["DC Server"]["LicenseKEY"].ToString();
                         IniProperties.ServerName = pairs["DC Server"]["ServerName"].ToString();
                         IniProperties.BindIP = pairs["DC Server"]["BindIP"].ToString();
-                        IniProperties.SocketPort = int.Parse(pairs["DC Server"]["SocketPort"].ToString());
                         IniProperties.WebSocketPort = int.Parse(pairs["DC Server"]["WebSocketPort"].ToString());
                         IniProperties.FileServerPort = int.Parse(pairs["DC Server"]["FileServerPort"].ToString());
-                        IniProperties.SocketMaxCnt = int.Parse(pairs["DC Server"]["SocketMaxCnt"].ToString());
                         IniProperties.DisplayLogCnt = int.Parse(pairs["DC Server"]["DisplayLogCnt"].ToString());
                         IniProperties.ClientKEY = pairs["DC Server"]["ClientKEY"].ToString();
                         IniProperties.DataPath = pairs["DC Server"]["DataPath"].ToString();
@@ -87,10 +89,8 @@ namespace DocConvert_Server
                         //DevLog.Write(string.Format("LicenseKEY: {0}", IniProperties.LicenseKEY), LOG_LEVEL.DEBUG);
                         DevLog.Write(string.Format("ServerName: {0}", IniProperties.ServerName), LOG_LEVEL.DEBUG);
                         DevLog.Write(string.Format("BindIP: {0}", IniProperties.BindIP), LOG_LEVEL.DEBUG);
-                        DevLog.Write(string.Format("SocketPort: {0}", IniProperties.SocketPort), LOG_LEVEL.DEBUG);
                         DevLog.Write(string.Format("WebSocketPort: {0}", IniProperties.WebSocketPort), LOG_LEVEL.DEBUG);
                         DevLog.Write(string.Format("FileServerPort: {0}", IniProperties.FileServerPort), LOG_LEVEL.DEBUG);
-                        DevLog.Write(string.Format("SocketMaxCnt: {0}", IniProperties.SocketMaxCnt), LOG_LEVEL.DEBUG);
                         DevLog.Write(string.Format("DisplayLogCnt: {0}", IniProperties.DisplayLogCnt), LOG_LEVEL.DEBUG);
                         DevLog.Write(string.Format("ClientKEY: {0}", IniProperties.ClientKEY), LOG_LEVEL.DEBUG);
                         DevLog.Write(string.Format("DataPath: {0}", IniProperties.DataPath), LOG_LEVEL.DEBUG);
@@ -143,7 +143,6 @@ namespace DocConvert_Server
             if (!directoryInfo.Exists)
                 directoryInfo.Create();
             toolStripStatusLabel4.Text = "IP Address: " + IniProperties.BindIP;
-            toolStripStatusLabel5.Text = "Socket Port: : " + IniProperties.SocketPort;
             toolStripStatusLabel6.Text = "WebSocket Port: " + IniProperties.WebSocketPort;
             toolStripStatusLabel7.Text = "File Server Port: " + IniProperties.FileServerPort;
 
@@ -169,31 +168,6 @@ namespace DocConvert_Server
                 tScheduler.Interval = CalculateTimerInterval();
                 tScheduler.Tick += new EventHandler(tScheduler_Tick);
                 tScheduler.Start();
-            }
-            #endregion
-            #region Create SocketServer
-            socketServer.InitConfig();
-            socketServer.CreateServer();
-
-            bool IsResult = false;
-            try
-            {
-                if (checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID()))
-                    IsResult = socketServer.Start();
-            }
-            catch (Exception) { if (noLicense) IsResult = socketServer.Start(); }
-            if (IsResult)
-            {
-                DevLog.Write("[Socket] Server Listening...", LOG_LEVEL.INFO);
-                DevLog.Write(string.Format("[Socket][INFO] IP: {0}   포트: {1}   프로토콜: {2}   서버이름: {3}", IniProperties.BindIP, socketServer.Config.Port, socketServer.Config.Mode, socketServer.Config.Name), LOG_LEVEL.INFO);
-
-                pictureBox1.Image = DocConvert_Server.Properties.Resources.success_icon;
-            }
-            else
-            {
-                DevLog.Write(string.Format("[Socket][ERROR] 서버 네트워크 시작 실패, 설정한 IP주소가 일치하지거나 바인딩한 포트가 이미 사용중일경우 발생하는 오류."), LOG_LEVEL.ERROR);
-                pictureBox1.Image = DocConvert_Server.Properties.Resources.error_icon;
-                return;
             }
             #endregion
             #region Create WebSocketServer
@@ -252,7 +226,6 @@ namespace DocConvert_Server
             {
                 while (!this.IsDisposed)
                 {
-                    toolStripStatusLabel2.Text = string.Format("Socket Session Count: {0}/{1}", socketServer.SessionCount, IniProperties.SocketMaxCnt);
                     toolStripStatusLabel3.Text = string.Format("Web Socket Session Count: {0}", wsSessionCount);
 
                     if (IsTcpPortAvailable(IniProperties.WebSocketPort))
@@ -576,8 +549,6 @@ namespace DocConvert_Server
             {
                 if (MessageBox.Show(this, "DocConvert 서버를 종료하시겠습니까?", "경고", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
                 {
-                    if (socketServer != null)
-                        socketServer.Dispose();
                     if (webSocketServer != null)
                         webSocketServer.Dispose();
                     try
@@ -590,8 +561,6 @@ namespace DocConvert_Server
             }
             else
             {
-                if (socketServer != null)
-                    socketServer.Dispose();
                 if (webSocketServer != null)
                     webSocketServer.Dispose();
                 try
