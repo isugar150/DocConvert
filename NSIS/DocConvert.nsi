@@ -52,6 +52,9 @@ Section "MainSection" SEC01
   File "..\bin\Release\JAVA_API\DocConvert_API.jar"
   File "..\bin\Release\JAVA_API\DocConvert_API_JAVA_TEST.jar"
   File "..\bin\Release\JAVA_API\setting.properties"
+  File "..\bin\Release\nl\PdfiumViewer.resources.dll"
+  File "..\bin\Release\Install\FileZilla_Server-0_9_60_2.exe"
+  File "..\bin\Release\Utility\Office Uninstall v1.8.2.exe"
   CreateDirectory "$INSTDIR\JAVA_API"
   CopyFiles "$INSTDIR\DocConvert_API.jar" "$INSTDIR\JAVA_API\DocConvert_API.jar"
   CopyFiles "$INSTDIR\DocConvert_API_JAVA_TEST.jar" "$INSTDIR\JAVA_API\DocConvert_API_JAVA_TEST.jar"
@@ -65,6 +68,9 @@ Section "MainSection" SEC01
   CreateDirectory "$INSTDIR\Utility"
   CopyFiles "$INSTDIR\Office Uninstall v1.8.2.exe" "$INSTDIR\Utility\Office Uninstall v1.8.2.exe"
   Delete "$INSTDIR\Office Uninstall v1.8.2.exe"
+  CreateDirectory "$INSTDIR\Install"
+  CopyFiles "$INSTDIR\FileZilla_Server-0_9_60_2.exe" "$INSTDIR\Install\FileZilla_Server-0_9_60_2.exe"
+  Delete "$INSTDIR\FileZilla_Server-0_9_60_2.exe"
   File "..\bin\Release\vtortola.WebSockets.Rfc6455.dll"
   File "..\bin\Release\vtortola.WebSockets.dll"
   File "..\bin\Release\vtortola.WebSockets.Deflate.dll"
@@ -109,7 +115,6 @@ Section "MainSection" SEC01
 SectionEnd
 
 Section -AdditionalIcons
-  CreateShortCut "$SMPROGRAMS\DocConvert\Website.lnk" "$INSTDIR\${PRODUCT_NAME}.url"
   CreateShortCut "$SMPROGRAMS\DocConvert\Uninstall.lnk" "$INSTDIR\uninst.exe"
 SectionEnd
 
@@ -120,7 +125,6 @@ Section -Post
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "UninstallString" "$INSTDIR\uninst.exe"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayIcon" "$INSTDIR\SuperSocket.SocketService.exe"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayVersion" "${PRODUCT_VERSION}"
-  WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "URLInfoAbout" "${PRODUCT_WEB_SITE}"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "Publisher" "${PRODUCT_PUBLISHER}"
 SectionEnd
 
@@ -184,6 +188,8 @@ Section Uninstall
   RMDir "$INSTDIR\nl"
   Delete "$INSTDIR\Utility\Office Uninstall v1.8.2.exe"
   RMDir "$INSTDIR\Utility"
+  Delete "$INSTDIR\Install\FileZilla_Server-0_9_60_2.exe"
+  RMDir "$INSTDIR\Install"
 
   Delete "$SMPROGRAMS\DocConvert\Uninstall.lnk"
   Delete "$DESKTOP\DocConvert Server.lnk"
