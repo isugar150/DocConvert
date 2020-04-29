@@ -121,6 +121,7 @@
     <Compile Include="Forms\MessageDialog.Designer.cs">
       <DependentUpon>MessageDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="interface\Settings.cs" />
     <Compile Include="License\LicenseInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

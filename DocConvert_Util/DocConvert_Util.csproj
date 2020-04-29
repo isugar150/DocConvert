@@ -90,6 +90,7 @@
     <Compile Include="Convert_Util.Designer.cs">
       <DependentUpon>Convert_Util.cs</DependentUpon>
     </Compile>
+    <Compile Include="interface\Settings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerLib\ClientSocket.cs" />

@@ -5,7 +5,6 @@
 !define PRODUCT_NAME "DocConvert"
 !define PRODUCT_VERSION "1.0.0"
 !define PRODUCT_PUBLISHER "Jm's Corp"
-!define PRODUCT_WEB_SITE "https://www.namejm.org"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\SuperSocket.SocketService.exe"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
 !define PRODUCT_UNINST_ROOT_KEY "HKLM"
@@ -110,7 +109,6 @@ Section "MainSection" SEC01
 SectionEnd
 
 Section -AdditionalIcons
-  WriteIniStr "$INSTDIR\${PRODUCT_NAME}.url" "InternetShortcut" "URL" "${PRODUCT_WEB_SITE}"
   CreateShortCut "$SMPROGRAMS\DocConvert\Website.lnk" "$INSTDIR\${PRODUCT_NAME}.url"
   CreateShortCut "$SMPROGRAMS\DocConvert\Uninstall.lnk" "$INSTDIR\uninst.exe"
 SectionEnd
@@ -188,7 +186,6 @@ Section Uninstall
   RMDir "$INSTDIR\Utility"
 
   Delete "$SMPROGRAMS\DocConvert\Uninstall.lnk"
-  Delete "$SMPROGRAMS\DocConvert\Website.lnk"
   Delete "$DESKTOP\DocConvert Server.lnk"
   Delete "$SMPROGRAMS\DocConvert\DocConvert Server.lnk"
   Delete "$SMPROGRAMS\DocConvert\DocConvert Util.lnk"

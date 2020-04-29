@@ -87,3 +87,18 @@ C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Util\obj\Debug\DocConvert_
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.csproj.CopyComplete
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.exe
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.pdb
+C:\Users\JMKIM\Documents\SmartGit\bin\Debug\phantomjs.exe
+C:\Users\JMKIM\Documents\SmartGit\bin\Debug\rasterize.js
+C:\Users\JMKIM\Documents\SmartGit\bin\Debug\Utility\Office Uninstall v1.8.2.exe
+C:\Users\JMKIM\Documents\SmartGit\bin\Debug\NLog.config
+C:\Users\JMKIM\Documents\SmartGit\bin\Debug\FilePathCheckerModuleExample.dll
+C:\Users\JMKIM\Documents\SmartGit\bin\Debug\pdfium.dll
+C:\Users\JMKIM\Documents\SmartGit\bin\Debug\DocConvert_Util.exe
+C:\Users\JMKIM\Documents\SmartGit\bin\Debug\DocConvert_Util.pdb
+C:\Users\JMKIM\Documents\SmartGit\DocConvert_Util\obj\Debug\DocConvert_Util.csprojAssemblyReference.cache
+C:\Users\JMKIM\Documents\SmartGit\DocConvert_Util\obj\Debug\DocConvert_Util.Convert_Util.resources
+C:\Users\JMKIM\Documents\SmartGit\DocConvert_Util\obj\Debug\DocConvert_Util.Properties.Resources.resources
+C:\Users\JMKIM\Documents\SmartGit\DocConvert_Util\obj\Debug\DocConvert_Util.csproj.GenerateResource.cache
+C:\Users\JMKIM\Documents\SmartGit\DocConvert_Util\obj\Debug\DocConvert_Util.csproj.CopyComplete
+C:\Users\JMKIM\Documents\SmartGit\DocConvert_Util\obj\Debug\DocConvert_Util.exe
+C:\Users\JMKIM\Documents\SmartGit\DocConvert_Util\obj\Debug\DocConvert_Util.pdb

@@ -127,7 +127,6 @@
     <Compile Include="imageLib\ConvertImg.cs" />
     <Compile Include="IniLib\Ini.cs" />
     <Compile Include="interface\returnValue.cs" />
-    <Compile Include="interface\Settings.cs" />
     <Compile Include="OfficeLib\ExcelConvert_Core.cs" />
     <Compile Include="OfficeLib\PowerPointConvert_Core.cs" />
     <Compile Include="OfficeLib\WordConvert_Core.cs" />

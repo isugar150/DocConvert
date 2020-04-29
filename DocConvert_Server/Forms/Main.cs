@@ -58,13 +58,13 @@ namespace DocConvert_Server
                              "┗━━━┻━━┻━━┻━━━┻━━┻┛┗┛┗┛┗━━┻┛┗━┛┗━━━┻━━┻┛╋┗┛┗━━┻┛\r\n");
             #region Parse INI
             IniFile pairs = new IniFile();
-            try
+            while (true)
             {
-                while (true)
+                try
                 {
-                    if (new FileInfo("./setting.ini").Exists)
+                    if (new FileInfo("./DocConvert_Server.ini").Exists)
                     {
-                        pairs.Load("./setting.ini");
+                        pairs.Load("./DocConvert_Server.ini");
                         IniProperties.LicenseKEY = pairs["DC Server"]["LicenseKEY"].ToString();
                         IniProperties.ServerName = pairs["DC Server"]["ServerName"].ToString();
                         IniProperties.BindIP = pairs["DC Server"]["BindIP"].ToString();
@@ -75,11 +75,11 @@ namespace DocConvert_Server
                         IniProperties.DisplayLogCnt = int.Parse(pairs["DC Server"]["DisplayLogCnt"].ToString());
                         IniProperties.ClientKEY = pairs["DC Server"]["ClientKEY"].ToString();
                         IniProperties.DataPath = pairs["DC Server"]["DataPath"].ToString();
-                        IniProperties.OfficeDebugMode = pairs["DC Server"]["OfficeDebugMode"].ToString().Equals("Y") ? true : false;
-                        IniProperties.FollowTail = pairs["DC Server"]["FollowTail"].ToString().Equals("Y") ? true : false;
-                        IniProperties.CleanWorkspaceScheduler = pairs["DC Server"]["CleanWorkspaceScheduler"].ToString().Equals("Y") ? true : false;
+                        IniProperties.OfficeDebugMode = pairs["DC Server"]["OfficeDebugMode"].ToString().Equals("Y");
+                        IniProperties.FollowTail = pairs["DC Server"]["FollowTail"].ToString().Equals("Y");
+                        IniProperties.CleanWorkspaceScheduler = pairs["DC Server"]["CleanWorkspaceScheduler"].ToString().Equals("Y");
                         IniProperties.CleanWorkspaceDay = int.Parse(pairs["DC Server"]["CleanWorkspaceDay"].ToString());
-                        IniProperties.CleanLogScheduler = pairs["DC Server"]["CleanLogScheduler"].ToString().Equals("Y") ? true : false;
+                        IniProperties.CleanLogScheduler = pairs["DC Server"]["CleanLogScheduler"].ToString().Equals("Y");
                         IniProperties.CleanLogDay = int.Parse(pairs["DC Server"]["CleanLogDay"].ToString());
                         IniProperties.WebCaptureTimeout = int.Parse(pairs["DC Server"]["WebCaptureTimeout"].ToString());
 
@@ -110,15 +110,16 @@ namespace DocConvert_Server
                         MessageBox.Show("설정 파일을 생성하였습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-            }
-            catch (ArgumentNullException) {
-                if (MessageBox.Show("설정 파일이 손상되었습니다. 초기화하시겠습니까?", "알림", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                catch (Exception)
                 {
-                    Setting.createSetting();
-                    MessageBox.Show("설정 파일을 초기화하였습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (MessageBox.Show("설정 파일이 손상되었습니다. 초기화하시겠습니까?", "알림", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                        Setting.createSetting();
+                        MessageBox.Show("설정 파일을 초기화하였습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                        program_Exit(true);
                 }
-                else
-                    program_Exit(true);
             }
             #endregion
             this.Text += " - " + IniProperties.ServerName;

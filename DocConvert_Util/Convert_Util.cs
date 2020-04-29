@@ -1,5 +1,6 @@
 ﻿using DocConvert_Core.HWPLib;
 using DocConvert_Core.imageLib;
+using DocConvert_Core.IniLib;
 using DocConvert_Core.interfaces;
 using DocConvert_Core.OfficeLib;
 using FluentFTP;
@@ -24,13 +25,13 @@ namespace DocConvert_Util
     public partial class Convert_Util : Form
     {
         public ClientSocket socket = new ClientSocket();
-        private JObject Setting = new JObject();
         private bool HWPREGDLL = false;
         private bool APPVISIBLE = false;
         private bool RUNAFTER = false;
         private bool PAGINGNUM = false;
         private DateTime timeTaken;
         private PdfRenderFlags quality = PdfRenderFlags.ForPrinting;
+        public static iniProperties IniProperties = new iniProperties();
         public Convert_Util()
         {
             InitializeComponent();
@@ -39,97 +40,66 @@ namespace DocConvert_Util
         private void Form1_Load(object sender, EventArgs e)
         {
             checkBox1.Checked = true;
-            #region JSON파일 파싱
-            if (File.Exists(Application.StartupPath + @"\Settings.json"))
+
+            #region Parse INI
+            IniFile pairs = new IniFile();
+            while (true)
             {
-                Setting = JObject.Parse(File.ReadAllText(Application.StartupPath + @"\Settings.json"));
-                #region 변환창 보이기 초기데이터
                 try
                 {
-                    if (bool.Parse(Setting["appvisible"].ToString()))
+                    if (new FileInfo("./DocConvert_Util.ini").Exists)
                     {
-                        pictureBox4.Image = DocConvert_Util.Properties.Resources.switch_on;
-                        APPVISIBLE = true;
+                        pairs.Load("./DocConvert_Util.ini");
+                        IniProperties.TargetIP = pairs["DC Util"]["targetIP"].ToString();
+                        IniProperties.ftpUser = pairs["DC Util"]["ftpUser"].ToString();
+                        IniProperties.ftpPwd = pairs["DC Util"]["ftpPwd"].ToString();
+                        IniProperties.socketPort = int.Parse(pairs["DC Util"]["socketPort"].ToString());
+                        IniProperties.filePort = int.Parse(pairs["DC Util"]["filePort"].ToString());
+                        IniProperties.isFTPS = pairs["DC Util"]["isFTPS"].ToString().Equals("Y");
+                        IniProperties.appvisible = pairs["DC Util"]["appvisible"].ToString().Equals("Y");
+                        IniProperties.runafter = pairs["DC Util"]["runafter"].ToString().Equals("Y");
+                        IniProperties.pagingnum = pairs["DC Util"]["pagingnum"].ToString().Equals("Y");
+
+                        textBox4.Text = IniProperties.TargetIP;
+                        textBox5.Text = IniProperties.socketPort.ToString();
+                        textBox6.Text = IniProperties.filePort.ToString();
+                        textBox8.Text = IniProperties.ftpUser;
+                        textBox7.Text = IniProperties.ftpPwd;
+
+                        checkBox2.Checked = IniProperties.isFTPS;
+
+                        if (IniProperties.appvisible)
+                        {
+                            pictureBox4.Image = Properties.Resources.switch_on;
+                            APPVISIBLE = true;
+                        }
+                        if (IniProperties.runafter)
+                        {
+                            pictureBox6.Image = Properties.Resources.switch_on;
+                            RUNAFTER = true;
+                        }
+                        if (IniProperties.pagingnum)
+                        {
+                            pictureBox8.Image = Properties.Resources.switch_on;
+                            PAGINGNUM = true;
+                        }
+
+                        break;
                     }
                     else
                     {
-                        pictureBox4.Image = DocConvert_Util.Properties.Resources.switch_off;
-                        APPVISIBLE = false;
+                        Setting.createSetting();
+                        MessageBox.Show("설정 파일을 생성하였습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 catch (Exception)
                 {
-                    pictureBox4.Image = DocConvert_Util.Properties.Resources.switch_on;
-                    APPVISIBLE = true;
-                    Setting["appvisible"] = APPVISIBLE;
-                }
-                #endregion
-                #region 변환후 실행 초기 데이터
-                try
-                {
-                    if (bool.Parse(Setting["runafter"].ToString()))
+                    if (MessageBox.Show("설정 파일이 손상되었습니다. 초기화하시겠습니까?", "알림", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
-                        pictureBox6.Image = DocConvert_Util.Properties.Resources.switch_on;
-                        RUNAFTER = true;
-                    }
-                    else
-                    {
-                        pictureBox6.Image = DocConvert_Util.Properties.Resources.switch_off;
-                        RUNAFTER = false;
+                        Setting.createSetting();
+                        MessageBox.Show("설정 파일을 초기화하였습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-                catch (Exception)
-                {
-                    pictureBox6.Image = DocConvert_Util.Properties.Resources.switch_on;
-                    RUNAFTER = true;
-                    Setting["runafter"] = RUNAFTER;
-                }
-                #endregion
-                #region 페이징 번호
-                try
-                {
-                    if (bool.Parse(Setting["pagingnum"].ToString()))
-                    {
-                        pictureBox8.Image = DocConvert_Util.Properties.Resources.switch_on;
-                        PAGINGNUM = true;
-                    }
-                    else
-                    {
-                        pictureBox8.Image = DocConvert_Util.Properties.Resources.switch_off;
-                        PAGINGNUM = false;
-                    }
-                }
-                catch (Exception)
-                {
-                    pictureBox8.Image = DocConvert_Util.Properties.Resources.switch_on;
-                    PAGINGNUM = true;
-                    Setting["pagingnum"] = PAGINGNUM;
-                }
-                #endregion
-                #region FTP 계정 초기 데이터
-                textBox4.Text = Setting["serverIP"].ToString();
-                textBox8.Text = Setting["ftpUser"].ToString();
-                textBox7.Text = Setting["ftpPwd"].ToString();
-                textBox5.Text = Setting["socketPort"].ToString();
-                textBox6.Text = Setting["filePort"].ToString();
-                checkBox2.Checked = bool.Parse(Setting["isFTPS"].ToString());
-                #endregion
-            }
-            else
-            {
-                #region FTP 계정
-                Setting["serverIP"] = "127.0.0.1";
-                Setting["ftpUser"] = "Anonymous";
-                Setting["ftpPwd"] = "";
-                Setting["socketPort"] = "12000";
-                Setting["filePort"] = "12100";
-                textBox4.Text = Setting["serverIP"].ToString();
-                textBox8.Text = Setting["ftpUser"].ToString();
-                textBox7.Text = Setting["ftpPwd"].ToString();
-                textBox5.Text = Setting["socketPort"].ToString();
-                textBox6.Text = Setting["filePort"].ToString();
-                #endregion
-                tb2_appendText("[정보]   설정 파일이 존재하지 않습니다.");
             }
             #endregion
             #region 아래 한글 레지스트리 등록 확인
@@ -332,13 +302,13 @@ namespace DocConvert_Util
                                 }
                                 tb2_appendText(serverIP + ":" + filePORT + "에 연결을 시도합니다.");
                                 ftpClient.Connect();
-                                Setting["serverIP"] = textBox4.Text;
-                                Setting["ftpUser"] = textBox8.Text;
-                                Setting["ftpPwd"] = textBox7.Text;
-                                Setting["socketPort"] = textBox5.Text;
-                                Setting["filePort"] = textBox6.Text;
-                                Setting["isFTPS"] = checkBox2.Checked;
-                                File.WriteAllText(Application.StartupPath + @"\Settings.json", Setting.ToString());
+                                IniProperties.TargetIP = textBox4.Text;
+                                IniProperties.ftpUser = textBox8.Text;
+                                IniProperties.ftpPwd = textBox7.Text;
+                                IniProperties.socketPort = int.Parse(textBox5.Text);
+                                IniProperties.filePort = int.Parse(textBox6.Text);
+                                IniProperties.isFTPS = checkBox2.Checked;
+                                Setting.updateSetting(IniProperties);
                                 tb2_appendText("File Server  " + serverIP + ":" + filePORT + "에 연결하였습니다.");
 
                                 ftpClient.UploadFile(textBox1.Text, "tmp/" + Path.GetFileName(textBox1.Text), FtpRemoteExists.Overwrite, true);
@@ -670,19 +640,19 @@ namespace DocConvert_Util
             #region 변환창 보이기 설정
             if (APPVISIBLE)
             {
-                pictureBox4.Image = DocConvert_Util.Properties.Resources.switch_off;
+                pictureBox4.Image = Properties.Resources.switch_off;
                 APPVISIBLE = false;
             }
             else
             {
-                pictureBox4.Image = DocConvert_Util.Properties.Resources.switch_on;
+                pictureBox4.Image = Properties.Resources.switch_on;
                 APPVISIBLE = true;
             }
-            Setting["appvisible"] = APPVISIBLE;
+            IniProperties.appvisible = APPVISIBLE;
             tb2_appendText("[정보]   변환창 보이기 설정: " + APPVISIBLE);
             try
             {
-                File.WriteAllText(Application.StartupPath + @"\Settings.json", Setting.ToString());
+                Setting.updateSetting(IniProperties);
             }
             catch (Exception e1)
             {
@@ -707,11 +677,11 @@ namespace DocConvert_Util
                 pictureBox6.Image = DocConvert_Util.Properties.Resources.switch_on;
                 RUNAFTER = true;
             }
-            Setting["runafter"] = RUNAFTER;
+            IniProperties.runafter = RUNAFTER;
             tb2_appendText("[정보]   변환 후 실행 설정: " + RUNAFTER);
             try
             {
-                File.WriteAllText(Application.StartupPath + @"\Settings.json", Setting.ToString());
+                Setting.updateSetting(IniProperties);
             }
             catch (Exception e1)
             {
@@ -736,11 +706,11 @@ namespace DocConvert_Util
                 pictureBox8.Image = DocConvert_Util.Properties.Resources.switch_on;
                 PAGINGNUM = true;
             }
-            Setting["pagingnum"] = PAGINGNUM;
+            IniProperties.pagingnum = PAGINGNUM;
             tb2_appendText("[정보]   페이지 번호 추출: " + PAGINGNUM);
             try
             {
-                File.WriteAllText(Application.StartupPath + @"\Settings.json", Setting.ToString());
+                Setting.updateSetting(IniProperties);
             }
             catch (Exception e1)
             {
@@ -826,7 +796,7 @@ namespace DocConvert_Util
         {
             try
             {
-                File.WriteAllText(Application.StartupPath + @"\Settings.json", Setting.ToString());
+                Setting.updateSetting(IniProperties);
             }
             catch (Exception e1)
             {
