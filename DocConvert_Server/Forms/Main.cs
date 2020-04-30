@@ -188,12 +188,7 @@ namespace DocConvert_Server
                 var rfc6455 = new vtortola.WebSockets.Rfc6455.WebSocketFactoryRfc6455(webSocketServer);
                 rfc6455.MessageExtensions.RegisterExtension(new WebSocketDeflateExtension());
                 webSocketServer.Standards.RegisterStandard(rfc6455);
-                try
-                {
-                    if (checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID()))
-                        webSocketServer.Start();
-                }
-                catch (Exception e1) { DevLog.Write(e1.Message); }
+                webSocketServer.Start();
 
                 DevLog.Write("[Web Socket] Server Listening...", LOG_LEVEL.INFO);
                 DevLog.Write(string.Format("[Web Socket][INFO] IP: {0}   포트: {1}", endpoint.Address, endpoint.Port), LOG_LEVEL.INFO);
@@ -235,11 +230,8 @@ namespace DocConvert_Server
                         pictureBox3.Image = Properties.Resources.error_icon;
                         try
                         {
-                            if (checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID()))
-                            {
-                                webSocketServer.Start();
-                                DevLog.Write("웹소켓 서버가 비정상적으로 종료되어 재시작 하였습니다.");
-                            }
+                            webSocketServer.Start();
+                            DevLog.Write("웹소켓 서버가 비정상적으로 종료되어 재시작 하였습니다.");
                         }
                         catch (Exception e1) { DevLog.Write(e1.Message); }
                     }
@@ -581,6 +573,12 @@ namespace DocConvert_Server
                 }
                 catch (Exception) { }
             }
+        }
+
+        private void settingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DevLog.Write("설정 파일을 실행하였습니다. 변경 내용을 적용하려면 서버를 재시작해야합니다.", LOG_LEVEL.INFO);
+            Process.Start("notepad", Application.StartupPath + @"\DocConvert_Server.ini");
         }
 
         #endregion
