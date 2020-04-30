@@ -77,15 +77,6 @@ namespace DocConvert_Core.interfaces
             setting["DC Server"]["CleanLogDay"] = "10";
             setting["DC Server"]["WebCaptureTimeout"] = "20";
 
-            /*setting["DC Util"]["Util_TargetIP"] = "127.0.0.1";
-            setting["DC Util"]["Util_ftpUser"] = "user1";
-            setting["DC Util"]["Util_ftpPwd"] = "1234";
-            setting["DC Util"]["Util_socketPort"] = "12000";
-            setting["DC Util"]["Util_filePort"] = "12000";
-            setting["DC Util"]["Util_isFTPS"] = "N";
-            setting["DC Util"]["Util_appvisible"] = "N";
-            setting["DC Util"]["Util_runafter"] = "N";
-            setting["DC Util"]["Util_pagingnum"] = "N";*/
             setting.Save("./DocConvert_Server.ini");
         }
     }

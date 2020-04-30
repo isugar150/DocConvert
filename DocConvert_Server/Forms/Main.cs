@@ -68,6 +68,7 @@ namespace DocConvert_Server
                 {
                     if (new FileInfo("./DocConvert_Server.ini").Exists)
                     {
+                        Console.WriteLine("test"+pairs["DC Server"]["DisplayLogCnt"].ToString());
                         pairs.Load("./DocConvert_Server.ini");
                         IniProperties.LicenseKEY = pairs["DC Server"]["LicenseKEY"].ToString();
                         IniProperties.ServerName = pairs["DC Server"]["ServerName"].ToString();
