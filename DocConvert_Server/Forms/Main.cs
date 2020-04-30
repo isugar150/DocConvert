@@ -193,7 +193,7 @@ namespace DocConvert_Server
                     if (checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID()))
                         webSocketServer.Start();
                 }
-                catch (Exception) { if (noLicense) webSocketServer.Start(); }
+                catch (Exception e1) { DevLog.Write(e1.Message); }
 
                 DevLog.Write("[Web Socket] Server Listening...", LOG_LEVEL.INFO);
                 DevLog.Write(string.Format("[Web Socket][INFO] IP: {0}   포트: {1}", endpoint.Address, endpoint.Port), LOG_LEVEL.INFO);
@@ -231,7 +231,18 @@ namespace DocConvert_Server
                     if (IsTcpPortAvailable(IniProperties.WebSocketPort))
                         pictureBox3.Image = Properties.Resources.success_icon;
                     else
+                    {
                         pictureBox3.Image = Properties.Resources.error_icon;
+                        try
+                        {
+                            if (checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID()))
+                            {
+                                webSocketServer.Start();
+                                DevLog.Write("웹소켓 서버가 비정상적으로 종료되어 재시작 하였습니다.");
+                            }
+                        }
+                        catch (Exception e1) { DevLog.Write(e1.Message); }
+                    }
 
                     if (IsTcpPortAvailable(IniProperties.FileServerPort))
                         pictureBox2.Image = Properties.Resources.success_icon;

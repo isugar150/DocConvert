@@ -175,7 +175,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(274, 53);
+            this.textBox6.Location = new System.Drawing.Point(290, 52);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(77, 23);
             this.textBox6.TabIndex = 4;
@@ -191,9 +191,9 @@
             // 
             this.label2.Location = new System.Drawing.Point(186, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 15);
+            this.label2.Size = new System.Drawing.Size(109, 15);
             this.label2.TabIndex = 17;
-            this.label2.Text = "Socket Port:";
+            this.label2.Text = "Web Socket Port:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // button3
@@ -241,16 +241,16 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(274, 23);
+            this.textBox5.Location = new System.Drawing.Point(301, 22);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(77, 23);
+            this.textBox5.Size = new System.Drawing.Size(66, 23);
             this.textBox5.TabIndex = 3;
             // 
             // label9
             // 
             this.label9.Location = new System.Drawing.Point(190, 57);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 15);
+            this.label9.Size = new System.Drawing.Size(93, 15);
             this.label9.TabIndex = 19;
             this.label9.Text = "File Port:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -296,7 +296,7 @@
             // 
             this.label7.Location = new System.Drawing.Point(182, 6);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 15);
+            this.label7.Size = new System.Drawing.Size(100, 15);
             this.label7.TabIndex = 14;
             this.label7.Text = "Convert Img:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -321,7 +321,7 @@
             "<jpg>",
             "<png>",
             "<bmp>"});
-            this.comboBox1.Location = new System.Drawing.Point(270, 3);
+            this.comboBox1.Location = new System.Drawing.Point(285, 3);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(77, 23);
             this.comboBox1.TabIndex = 7;

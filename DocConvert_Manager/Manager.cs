@@ -97,19 +97,9 @@ namespace DocConvert_Manager
                         if (targetPID == 0)
                         {
                             if (IniProperties.targetPath.Contains("./"))
-                            {
-                                if (IniProperties.minimized)
-                                    Process.Start(Application.StartupPath + @"\" + IniProperties.targetPath.Replace("./", ""), "Minimized");
-                                else
                                     Process.Start(Application.StartupPath + @"\" + IniProperties.targetPath.Replace("./", ""));
-                            }
                             else
-                            {
-                                if (IniProperties.minimized)
-                                    Process.Start(IniProperties.targetPath, "Minimized");
-                                else
                                     Process.Start(IniProperties.targetPath);
-                            }
                             DevLog.Write("타겟 프로세스를 실행하였습니다.");
                         }
                     }

@@ -64,7 +64,7 @@ namespace DocConvert_Core.interfaces
             setting["DC Server"]["LicenseKEY"] = "";
             setting["DC Server"]["ServerName"] = "Jm's DCServer";
             setting["DC Server"]["BindIP"] = "127.0.0.1";
-            setting["DC Server"]["WebSocketPort"] = "12005";
+            setting["DC Server"]["WebSocketPort"] = "12000";
             setting["DC Server"]["FileServerPort"] = "12100";
             setting["DC Server"]["DisplayLogCnt"] = "300";
             setting["DC Server"]["ClientKEY"] = "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2";

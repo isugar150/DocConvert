@@ -19,12 +19,12 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebSocketSharp;
 
 namespace DocConvert_Util
 {
     public partial class Convert_Util : Form
     {
-        public ClientSocket socket = new ClientSocket();
         private bool HWPREGDLL = false;
         private bool APPVISIBLE = false;
         private bool RUNAFTER = false;
@@ -35,6 +35,7 @@ namespace DocConvert_Util
         public Convert_Util()
         {
             InitializeComponent();
+            CheckForIllegalCrossThreadCalls = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -338,18 +339,15 @@ namespace DocConvert_Util
                             groupBox2.Enabled = true;
                             return;
                         }
-                        if (ConnectServer(serverIP, serverPORT))
-                        {
-                            JObject requestMsg = new JObject();
-                            requestMsg["KEY"] = "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2";
-                            requestMsg["Method"] = "DocConvert";
-                            requestMsg["FileName"] = new FileInfo(textBox1.Text).Name;
-                            requestMsg["ConvertIMG"] = comboBox1.SelectedIndex;
-                            if(comboBox2.SelectedIndex == 0)
-                                requestMsg["useCompression"] = checkBox3.Checked;
+                        JObject requestMsg = new JObject();
+                        requestMsg["KEY"] = "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2";
+                        requestMsg["Method"] = "DocConvert";
+                        requestMsg["FileName"] = new FileInfo(textBox1.Text).Name;
+                        requestMsg["ConvertIMG"] = comboBox1.SelectedIndex;
+                        if(comboBox2.SelectedIndex == 0)
+                            requestMsg["useCompression"] = checkBox3.Checked;
 
-                            SendData(requestMsg.ToString());
-                        }
+                        SendData(requestMsg.ToString());
                         #endregion
                     }
                 }
@@ -362,14 +360,11 @@ namespace DocConvert_Util
                         groupBox2.Enabled = true;
                         return;
                     }
-                    if (ConnectServer(serverIP, serverPORT))
-                    {
-                        JObject requestMsg = new JObject();
-                        requestMsg["KEY"] = "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2";
-                        requestMsg["Method"] = "WebCapture";
-                        requestMsg["URL"] = textBox9.Text;
-                        SendData(requestMsg.ToString());
-                    }
+                    JObject requestMsg = new JObject();
+                    requestMsg["KEY"] = "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2";
+                    requestMsg["Method"] = "WebCapture";
+                    requestMsg["URL"] = textBox9.Text;
+                    SendData(requestMsg.ToString());
                 }
             }
             catch (Exception e1)
@@ -385,62 +380,25 @@ namespace DocConvert_Util
         }
         #region Socket Server Method
         /// <summary>
-        /// 설정한 서버에 소켓 
-        /// </summary>
-        /// <param name="address"></param>
-        /// <param name="port"></param>
-        /// <returns></returns>
-        private bool ConnectServer(string address, int port)
-        {
-            try
-            {
-                socket.conn(address, port);
-                tb2_appendText("서버에 접속하였습니다.");
-                return true;
-            }
-            catch (SocketException e1)
-            {
-                tb2_appendText(e1.Message);
-                groupBox1.Enabled = true;
-                groupBox2.Enabled = true;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// 핸들러
-        /// </summary>
-        public enum PACKETID : int
-        {
-            REQ_Message = 1,
-        }
-
-        /// <summary>
-        /// 소켓으로 데이터 던질때 호출하는 함수
+        /// 엡소켓연결 메소드
         /// </summary>
         /// <param name="Message">서버에 던질 메시지</param>
         async void SendData(string Message)
         {
-            byte[] Body = Encoding.Unicode.GetBytes(Message);
+            string targetURL = "ws://" + textBox4.Text + ":" + textBox5.Text;
+            tb2_appendText(targetURL + "에 연결을 시도합니다.");
+            WebSocket websocketClient = new WebSocket(url: targetURL);
+            websocketClient.Connect();
 
-            List<byte> dataSource = new List<byte>();
-            dataSource.AddRange(BitConverter.GetBytes((Int32)PACKETID.REQ_Message));
-            dataSource.AddRange(BitConverter.GetBytes((Int16)0));
-            dataSource.AddRange(BitConverter.GetBytes((Int16)0));
-            dataSource.AddRange(BitConverter.GetBytes(Body.Length));
-            dataSource.AddRange(Body);
+            tb2_appendText(targetURL + "에 보낸 데이터\r\n" + Message);
+            websocketClient.Send(Encoding.UTF8.GetBytes(Message));
 
-            await Task.Run(() => socket.s_write(dataSource.ToArray()));
-
-            Tuple<int, byte[]> recvData = null;
-            await Task.Run(() => recvData = socket.s_read());
-
-            if (recvData != null && recvData.Item1 > 0)
+            websocketClient.OnMessage += (sender, e) =>
             {
-                var arySeg = new ArraySegment<byte>(recvData.Item2, 8, (recvData.Item1 - 8));
-                string msg = System.Text.Encoding.GetEncoding("utf-16").GetString(arySeg.ToArray());
-                tb2_appendText("서버에서 응답받은 메시지\r\n" + msg);
-                JObject responseData = JObject.Parse(msg);
+                tb2_appendText("서버와 연결을 해제하였습니다.");
+                websocketClient.Close();
+                tb2_appendText(targetURL + "에서 받은 데이터\r\n" + e.Data);
+                JObject responseData = JObject.Parse(e.Data);
 
                 string isSuccess = responseData["isSuccess"].ToString();
                 string url = null;
@@ -482,7 +440,7 @@ namespace DocConvert_Util
                             {
                                 if (responseData["useCompression"].ToString().Equals("True"))
                                 {
-                                    ftpClient.DownloadFile(outPath + @"\" + outFileName + ".zip", responseData["URL"].ToString() + @"\" + outFileName + ".zip", FtpLocalExists.Overwrite, FtpVerify.None); 
+                                    ftpClient.DownloadFile(outPath + @"\" + outFileName + ".zip", responseData["URL"].ToString() + @"\" + outFileName + ".zip", FtpLocalExists.Overwrite, FtpVerify.None);
                                     tb2_appendText(outPath + @"\" + outFileName + ".zip 파일 다운로드 완료");
                                 }
                                 else
@@ -494,7 +452,7 @@ namespace DocConvert_Util
                                     }
                                 }
                             }
-                            if(comboBox1.SelectedIndex == 0)
+                            if (comboBox1.SelectedIndex == 0)
                             {
                                 ftpClient.DownloadFile(outPath + @"\" + outFileName + ".pdf", url + "/" + outFileName + ".pdf", FtpLocalExists.Overwrite, FtpVerify.None);
                                 tb2_appendText(outPath + @"\" + outFileName + ".pdf" + " 파일 다운로드 완료");
@@ -532,17 +490,11 @@ namespace DocConvert_Util
                     }
                     #endregion
                 }
-            }
-            else
-            {
-                tb2_appendText("서버와 접속이 끊어졌습니다.");
-            }
-            socket.close(); //연결 해제
-            tb2_appendText("서버와 연결을 해제하였습니다.");
-            groupBox1.Enabled = true;
-            groupBox2.Enabled = true;
-            TimeSpan curTime = DateTime.Now - timeTaken;
-            tb2_appendText(string.Format("작업 소요시간: {0}", curTime.ToString()));
+                groupBox1.Enabled = true;
+                groupBox2.Enabled = true;
+                TimeSpan curTime = DateTime.Now - timeTaken;
+                tb2_appendText(string.Format("작업 소요시간: {0}", curTime.ToString()));
+            };
         }
 
         #endregion
@@ -571,7 +523,8 @@ namespace DocConvert_Util
         /// <param name="str">Append할 텍스트</param>
         private void tb2_appendText(string str)
         {
-            textBox2.AppendText(System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.fff") + "   " + str + "\r\n");
+            textBox2.AppendText(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.fff") + "   " + str + "\r\n");
+            Debug.WriteLine(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.fff") + "   " + str + "\r\n");
         }
 
         /// <summary>
