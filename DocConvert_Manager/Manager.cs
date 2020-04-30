@@ -219,5 +219,14 @@ namespace DocConvert_Manager
         {
             this.Visible = false;
         }
+
+        private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            if (this.Visible && e.Button == MouseButtons.Left)
+                this.Visible = false;
+            else
+                this.Visible = true;
+        }
     }
 }
