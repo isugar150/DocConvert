@@ -175,7 +175,15 @@ namespace DocConvert_Server
             {
                 CancellationTokenSource cancellation = new CancellationTokenSource();
                 //var endpoint = new IPEndPoint(IPAddress.Any, 1818);
-                var endpoint = new IPEndPoint(IPAddress.Parse(IniProperties.BindIP), IniProperties.WebSocketPort);
+                IPEndPoint endpoint;
+                if (IniProperties.BindIP.Equals("Any"))
+                {
+                    endpoint = new IPEndPoint(IPAddress.Any, IniProperties.WebSocketPort);
+                }
+                else
+                {
+                    endpoint = new IPEndPoint(IPAddress.Parse(IniProperties.BindIP), IniProperties.WebSocketPort);
+                }
                 var options = new WebSocketListenerOptions()
                 {
                     WebSocketReceiveTimeout = new TimeSpan(0, 1, 0), // 클라이언트가 서버로 요청했을때 서버가 바쁘면 Timeout
