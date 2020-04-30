@@ -1,6 +1,6 @@
 # DocConvert
-* Socket 또는 WebSocket으로 통신하여 오피스파일(docx, doc, xlsx, xls, pptx, ppt), 한글파일(hwp), 기타 파일(pdf, txt, html)등 여러 파일을 PDF로 변환하거나 이미지 파일(jpg, png, bmp)로 변환합니다.
-* 기본포트: Socket: 12000, webSocket: 12005, FTPServer: FTP/FTPS 12100/12150
+* WebSocket으로 통신하여 오피스파일(docx, doc, xlsx, xls, pptx, ppt), 한글파일(hwp), 기타 파일(pdf, txt, html)등 여러 파일을 PDF로 변환하거나 이미지 파일(jpg, png, bmp)로 변환합니다.
+* 기본포트: webSocket: 12000, FTPServer: FTP/FTPS 12100/12150
 * 이미지 변환 ENUM: (0: 변환안함), (1: JPG), (2: PNG), (3: BMP)  
 * 권장 오피스 버전: 2010 이상
 * 권장 한글 버전: 2010 이상 - 마이너 업데이트 필수 (https://www.hancom.com/cs_center/csDownload.do)
@@ -9,7 +9,7 @@
 
 
 ### 설치 가이드
-1. 압축 해제후 DocConvert_Server.exe.config 환경에 맞게 설정
+1. 압축 해제후 DocConvert_Server.ini 환경에 맞게 설정
 2. DocConvert_Util 실행 후 HWP DLL 등록 체크
 3. Install 폴더안에 있는 FileZilla Server 인스톨
 4. FileZilla Server Interface에서 Edit - Setting에서 Listen on these ports: 12100 입력
@@ -21,7 +21,7 @@
 
 ![dcLogic](https://user-images.githubusercontent.com/13088077/78665631-16137400-7911-11ea-8843-5320c42fa519.png)   
 
-> 사용된 C#라이브러리: SuperSocket, vtortola.WebSockets, pdfium, NLOG, OfficeAPI, HWP API, log4j, FluentFTP, phantomjs    
+> 사용된 C#라이브러리: vtortola.WebSockets, websocket-sharp, pdfium, NLOG, OfficeAPI, HWP API, log4j, FluentFTP, phantomjs    
 > 사용된 Java라이브러리: commons-net-3.6.jar, Java-WebSocket-1.4.1.jar, json-simple-1.1.1.jar, slf4j-api-1.7.25.jar  
 ### 스크린샷
 
