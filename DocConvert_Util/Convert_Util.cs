@@ -348,6 +348,14 @@ namespace DocConvert_Util
                             requestMsg["useCompression"] = checkBox3.Checked;
 
                         SendData(requestMsg.ToString());
+
+                        IniProperties.TargetIP = textBox4.Text;
+                        IniProperties.ftpUser = textBox8.Text;
+                        IniProperties.ftpPwd = textBox7.Text;
+                        IniProperties.socketPort = int.Parse(textBox5.Text);
+                        IniProperties.filePort = int.Parse(textBox6.Text);
+                        IniProperties.isFTPS = checkBox2.Checked;
+                        Setting.updateSetting(IniProperties);
                         #endregion
                     }
                 }

@@ -37,7 +37,7 @@ namespace DocConvert_Core.WebCaptureLib
                 process.StartInfo = processStartInfo;
                 process.Start();
                 process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                // 20초동안 끝나지않았을때 강제종료
+
                 DateTime timeTaken = DateTime.Now.AddSeconds(timeOut);
                 while (!process.HasExited)
                 {
@@ -48,6 +48,72 @@ namespace DocConvert_Core.WebCaptureLib
                 process.Dispose();
 
                 if (new FileInfo(outPath + @"\" + "0.png").Exists)
+                {
+                    returnValue.isSuccess = true;
+                    returnValue.Message = "WebCapture에 성공하였습니다.";
+                    returnValue.PageCount = 1;
+                }
+                else
+                {
+                    returnValue.isSuccess = false;
+                    returnValue.Message = "WebCapture에 실패하였습니다.";
+                    returnValue.PageCount = 0;
+                }
+            }
+            catch (Exception e1)
+            {
+                returnValue.isSuccess = false;
+                returnValue.Message = e1.Message;
+                returnValue.PageCount = 0;
+                logger.Info("변환중 오류발생 자세한 내용은 오류로그 참고");
+                logger.Error("==================== Method: " + MethodBase.GetCurrentMethod().Name + "====================");
+                logger.Error(new StackTrace(e1, true));
+                logger.Error("변환 실패: " + e1.Message);
+                logger.Error("==================== End ====================");
+            }
+
+            return returnValue;
+        }
+
+
+        [STAThread]
+        public static ReturnValue ChromiumCapture(string Url, string outPath, int docWidth, int docHeight, int timeOut)
+        {
+            ReturnValue returnValue = new ReturnValue();
+            try
+            {
+                if (docWidth < 1366)
+                    docWidth = 1366;
+                if (docHeight < 720)
+                    docHeight = 720;
+
+                string ChromiumPath = "\"" + Application.StartupPath + @"\CefSharp WebCapture\CefSharp.OffScreen.Example.exe" + "\"";
+
+                string arguments = string.Format("{0} {1} {2} {3}", "\"" + Url + "\"", "\"" + outPath + "\"", "\"" + docWidth + "\"", "\" " + docHeight + "\"");
+
+                Debug.WriteLine(ChromiumPath + " " + arguments);
+
+                Process process = new Process();
+                ProcessStartInfo processStartInfo = new ProcessStartInfo();
+                processStartInfo.FileName = ChromiumPath;
+                processStartInfo.Arguments = arguments;
+
+                process.StartInfo = processStartInfo;
+                process.Start();
+                process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+
+                DateTime timeTaken = DateTime.Now.AddSeconds(timeOut);
+                while (!new FileInfo(outPath).Exists)
+                {
+                    if (DateTime.Now > timeTaken)
+                        process.Kill();
+                    Thread.Sleep(300);
+                }
+                Thread.Sleep(3000);
+                process.Kill();
+                process.Dispose();
+
+                if (new FileInfo(outPath).Exists)
                 {
                     returnValue.isSuccess = true;
                     returnValue.Message = "WebCapture에 성공하였습니다.";

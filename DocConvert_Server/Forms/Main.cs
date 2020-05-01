@@ -78,12 +78,13 @@ namespace DocConvert_Server
                         IniProperties.DisplayLogCnt = int.Parse(pairs["DC Server"]["DisplayLogCnt"].ToString());
                         IniProperties.ClientKEY = pairs["DC Server"]["ClientKEY"].ToString();
                         IniProperties.DataPath = pairs["DC Server"]["DataPath"].ToString();
-                        IniProperties.OfficeDebugMode = pairs["DC Server"]["OfficeDebugMode"].ToString().Equals("Y");
-                        IniProperties.FollowTail = pairs["DC Server"]["FollowTail"].ToString().Equals("Y");
-                        IniProperties.CleanWorkspaceScheduler = pairs["DC Server"]["CleanWorkspaceScheduler"].ToString().Equals("Y");
+                        IniProperties.OfficeDebugModeYn = pairs["DC Server"]["OfficeDebugModeYn"].ToString().Equals("Y");
+                        IniProperties.FollowTailYn = pairs["DC Server"]["FollowTailYn"].ToString().Equals("Y");
+                        IniProperties.CleanWorkspaceSchedulerYn = pairs["DC Server"]["CleanWorkspaceSchedulerYn"].ToString().Equals("Y");
                         IniProperties.CleanWorkspaceDay = int.Parse(pairs["DC Server"]["CleanWorkspaceDay"].ToString());
-                        IniProperties.CleanLogScheduler = pairs["DC Server"]["CleanLogScheduler"].ToString().Equals("Y");
+                        IniProperties.CleanLogSchedulerYn = pairs["DC Server"]["CleanLogSchedulerYn"].ToString().Equals("Y");
                         IniProperties.CleanLogDay = int.Parse(pairs["DC Server"]["CleanLogDay"].ToString());
+                        IniProperties.ChromiumCaptureYn = pairs["DC Server"]["ChromiumCaptureYn"].ToString().Equals("Y");
                         IniProperties.WebCaptureTimeout = int.Parse(pairs["DC Server"]["WebCaptureTimeout"].ToString());
 
                         /*DevLog.Write("=============== Properties ===============");
@@ -147,7 +148,7 @@ namespace DocConvert_Server
             toolStripStatusLabel6.Text = "WebSocket Port: " + IniProperties.WebSocketPort;
             toolStripStatusLabel7.Text = "File Server Port: " + IniProperties.FileServerPort;
 
-            checkBox1.Checked = IniProperties.FollowTail;
+            checkBox1.Checked = IniProperties.FollowTailYn;
             #region 한글 DLL 레지스트리 등록
             if (File.Exists(Application.StartupPath + @"\FilePathCheckerModuleExample.dll"))
             {
@@ -156,12 +157,12 @@ namespace DocConvert_Server
             }
             #endregion
             #region 스케줄러 관련
-            if (IniProperties.CleanWorkspaceScheduler || IniProperties.CleanLogScheduler)
+            if (IniProperties.CleanWorkspaceSchedulerYn || IniProperties.CleanLogSchedulerYn)
             {
                 string SchedulerInfo = "";
-                if (IniProperties.CleanWorkspaceScheduler)
+                if (IniProperties.CleanWorkspaceSchedulerYn)
                     SchedulerInfo += string.Format("작업공간 정리 스케줄러: {0}일   ", IniProperties.CleanWorkspaceDay);
-                if (IniProperties.CleanLogScheduler)
+                if (IniProperties.CleanLogSchedulerYn)
                     SchedulerInfo += string.Format("로그 정리 스케줄러: {0}일", IniProperties.CleanLogDay);
                 DevLog.Write("[Scheduler] 스케줄러가 실행중입니다. " + SchedulerInfo, LOG_LEVEL.INFO);
 
@@ -491,13 +492,13 @@ namespace DocConvert_Server
                 tScheduler.Interval = CalculateTimerInterval();
             }
             catch (Exception) { tScheduler.Dispose(); DevLog.Write("스케줄러 작동중 오류가 발생하여 비활성화 하였습니다."); }
-            if (IniProperties.CleanWorkspaceScheduler)
+            if (IniProperties.CleanWorkspaceSchedulerYn)
             {
                 DevLog.Write("[Scheduler] 작업공간 정리 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
                 deleteFolder(IniProperties.DataPath + @"\workspace", IniProperties.CleanWorkspaceDay);
                 deleteFolder(IniProperties.DataPath + @"\tmp", IniProperties.CleanWorkspaceDay);
             }
-            if (IniProperties.CleanLogScheduler)
+            if (IniProperties.CleanLogSchedulerYn)
             {
                 DevLog.Write("[Scheduler] 로그 정리 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
                 deleteFolder(Application.StartupPath + @"\Log", IniProperties.CleanLogDay);

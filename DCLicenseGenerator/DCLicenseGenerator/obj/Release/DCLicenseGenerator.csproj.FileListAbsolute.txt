@@ -16,7 +16,6 @@ C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Release\DCLicenseGenerator.pdb
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Release\Newtonsoft.Json.dll
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Release\Newtonsoft.Json.xml
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.csprojAssemblyReference.cache
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.Main.resources
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.Properties.Resources.resources
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.csproj.GenerateResource.cache

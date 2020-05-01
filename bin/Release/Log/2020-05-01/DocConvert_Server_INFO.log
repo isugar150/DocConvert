@@ -1,0 +1,48 @@
+2020-05-01 17:17:45.0008  INFO - [INFO] 나의 하드웨어 ID: BFEBFBFF000806EB
+2020-05-01 17:17:45.0165  INFO - [INFO] 라이센스 만료날짜: 2020-11-12
+2020-05-01 17:17:45.0165  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-05-01 17:17:45.0165  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 10일
+2020-05-01 17:17:45.0477  INFO - [Web Socket] Server Listening...
+2020-05-01 17:17:45.0477  INFO - [Web Socket][INFO] IP: 0.0.0.0   포트: 12000
+2020-05-01 17:17:58.3014  INFO - [WebSocket] 접속 IP: 127.0.0.1
+2020-05-01 17:17:58.3639  INFO - 
+[WebSocket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://bootswatch.com/"
+}
+
+2020-05-01 17:18:09.1522  INFO - 
+[WebSocket][Server => Client]
+{
+  "URL": "/workspace/098785a7-7e8b-484c-8e33-718613cb0f96_2020-05-01/0.png",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 1,
+  "Method": "WebCapture"
+}
+
+2020-05-01 17:18:09.1522  INFO - [WebSocket] 작업 소요시간: 00:00:10.8195165
+2020-05-01 17:18:09.1679  INFO - [WebSocket] 클라이언트와 연결을 해제함.
+2020-05-01 17:18:28.0260  INFO - [WebSocket] 접속 IP: 127.0.0.1
+2020-05-01 17:18:28.0260  INFO - 
+[WebSocket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-05-01 17:18:33.6690  INFO - 
+[WebSocket][Server => Client]
+{
+  "URL": "/workspace/58958d11-9f9d-45a8-bc87-870276ca5a3d_2020-05-01/0.png",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 1,
+  "Method": "WebCapture"
+}
+
+2020-05-01 17:18:33.6690  INFO - [WebSocket] 작업 소요시간: 00:00:05.6429852
+2020-05-01 17:18:33.6690  INFO - [WebSocket] 클라이언트와 연결을 해제함.

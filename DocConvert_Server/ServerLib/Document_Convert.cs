@@ -14,13 +14,13 @@ using System.Linq;
 using System.Reflection;
 using System.Security.Cryptography;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace DocConvert_Server
 {
     public class Document_Convert
     {
         private static Logger logger = LogManager.GetLogger("DocConvert_Server_Log");
-        public static iniProperties IniProperties = new iniProperties();
 
         /// <summary>
         /// 소켓, 웹소켓에서 들어온 요청을 처리하는 부분
@@ -58,7 +58,7 @@ namespace DocConvert_Server
 
                     #region DocConvert
                     bool PAGINGNUM = false;
-                    bool APPVISIBLE = Form1.IniProperties.OfficeDebugMode;
+                    bool APPVISIBLE = Form1.IniProperties.OfficeDebugModeYn;
                     string fileName = requestMsg["FileName"].ToString(); // 파일 이름
                     string convertIMG = requestMsg["ConvertIMG"].ToString(); // 0: NONE  1:JPEG  2:PNG  3:BMP
                     //string docPassword = requestMsg["DocPassword"].ToString();
@@ -194,26 +194,67 @@ namespace DocConvert_Server
                 {
                     string guidPath = Guid.NewGuid().ToString() + "_" + DateTime.Now.ToString("yyyy-MM-dd");
                     string dataPath = @"\workspace\" + guidPath; // 파일 출력경로
-                    #region WebCapture
-                    Thread WebCapture = new Thread(() =>
+                    new DirectoryInfo(Form1.IniProperties.DataPath + dataPath).Create();
+                    if(!new DirectoryInfo(@"..\..\..\..\CefSharp.Example\Resources").Exists)
+                        new DirectoryInfo(@"..\..\..\..\CefSharp.Example\Resources").Create();
+                    if (Form1.IniProperties.ChromiumCaptureYn) //Chromium 캡쳐시
                     {
-                        status = WebCapture_Core.WebCapture(requestMsg["URL"].ToString(), Form1.IniProperties.DataPath + dataPath, +Form1.IniProperties.WebCaptureTimeout);
-                    });
-                    WebCapture.SetApartmentState(ApartmentState.STA);
-                    WebCapture.Start();
-                    WebCapture.Join();
-                    if (status.isSuccess)
-                    {
-                        responseMsg["URL"] = "/" + "workspace" + "/" + guidPath + "/" + "0.png";
-                        responseMsg["isSuccess"] = status.isSuccess;
-                        responseMsg["msg"] = status.Message;
-                        responseMsg["convertImgCnt"] = status.PageCount;
+                        Thread WebCapture = new Thread(() =>
+                        {
+                            WebBrowser webBrowser = new WebBrowser();
+                            webBrowser.CreateControl();
+                            webBrowser.ScrollBarsEnabled = false;
+                            webBrowser.ScriptErrorsSuppressed = true;
+
+                            webBrowser.Navigate(requestMsg["URL"].ToString());
+                            while (webBrowser.ReadyState != WebBrowserReadyState.Complete)
+                            {
+                                Application.DoEvents();
+                            }
+
+                            status = WebCapture_Core.ChromiumCapture(requestMsg["URL"].ToString(), Form1.IniProperties.DataPath + dataPath + @"\0.png", webBrowser.Document.Body.ScrollRectangle.Width + 30, webBrowser.Document.Body.ScrollRectangle.Height, Form1.IniProperties.WebCaptureTimeout);
+                            webBrowser.Dispose();
+                        });
+                        WebCapture.SetApartmentState(ApartmentState.STA);
+                        WebCapture.Start();
+                        WebCapture.Join();
+                        if (status.isSuccess)
+                        {
+                            responseMsg["URL"] = "/" + "workspace" + "/" + guidPath + "/" + "0.png";
+                            responseMsg["isSuccess"] = status.isSuccess;
+                            responseMsg["msg"] = status.Message;
+                            responseMsg["convertImgCnt"] = status.PageCount;
+                        }
+                        else
+                        {
+                            responseMsg["isSuccess"] = status.isSuccess;
+                            responseMsg["msg"] = status.Message;
+                            responseMsg["convertImgCnt"] = status.PageCount;
+                        }
                     }
-                    else
+                    else //PhantomJS 사용시
                     {
-                        responseMsg["isSuccess"] = status.isSuccess;
-                        responseMsg["msg"] = status.Message;
-                        responseMsg["convertImgCnt"] = status.PageCount;
+                        #region WebCapture
+                        Thread WebCapture = new Thread(() =>
+                        {
+                            status = WebCapture_Core.WebCapture(requestMsg["URL"].ToString(), Form1.IniProperties.DataPath + dataPath, Form1.IniProperties.WebCaptureTimeout);
+                        });
+                        WebCapture.SetApartmentState(ApartmentState.STA);
+                        WebCapture.Start();
+                        WebCapture.Join();
+                        if (status.isSuccess)
+                        {
+                            responseMsg["URL"] = "/" + "workspace" + "/" + guidPath + "/" + "0.png";
+                            responseMsg["isSuccess"] = status.isSuccess;
+                            responseMsg["msg"] = status.Message;
+                            responseMsg["convertImgCnt"] = status.PageCount;
+                        }
+                        else
+                        {
+                            responseMsg["isSuccess"] = status.isSuccess;
+                            responseMsg["msg"] = status.Message;
+                            responseMsg["convertImgCnt"] = status.PageCount;
+                        }
                     }
                     #endregion
                 }
