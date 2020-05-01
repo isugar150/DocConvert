@@ -149,6 +149,16 @@ namespace DocConvert_Server
             toolStripStatusLabel7.Text = "File Server Port: " + IniProperties.FileServerPort;
 
             checkBox1.Checked = IniProperties.FollowTailYn;
+
+            DevLog.Write("[INFO] 데이터 경로: " + IniProperties.DataPath, LOG_LEVEL.INFO);
+            DevLog.Write("[INFO] 클라이언트 키: " + IniProperties.ClientKEY, LOG_LEVEL.INFO);
+            DevLog.Write("[INFO] 오피스 디버깅모드: " + IniProperties.OfficeDebugModeYn, LOG_LEVEL.INFO);
+            if (IniProperties.ChromiumCaptureYn)
+                DevLog.Write("[INFO] 웹 캡쳐 모드: Chromium Capture", LOG_LEVEL.INFO);
+            else
+                DevLog.Write("[INFO] 웹 캡쳐 모드: Phantom JS", LOG_LEVEL.INFO);
+            DevLog.Write("[INFO] 웹 캡쳐 타임아웃: " + IniProperties.WebCaptureTimeout + "초", LOG_LEVEL.INFO);
+
             #region 한글 DLL 레지스트리 등록
             if (File.Exists(Application.StartupPath + @"\FilePathCheckerModuleExample.dll"))
             {

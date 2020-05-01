@@ -121,3 +121,4 @@ C:\Users\JMKIM\Documents\SmartGit\DocConvert_Util\obj\Release\DocConvert_Util.cs
 C:\Users\JMKIM\Documents\SmartGit\DocConvert_Util\obj\Release\DocConvert_Util.csproj.CopyComplete
 C:\Users\JMKIM\Documents\SmartGit\DocConvert_Util\obj\Release\DocConvert_Util.exe
 C:\Users\JMKIM\Documents\SmartGit\DocConvert_Util\obj\Release\DocConvert_Util.pdb
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Util\obj\Release\DocConvert_Util.csprojAssemblyReference.cache

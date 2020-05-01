@@ -303,13 +303,6 @@ namespace DocConvert_Util
                                 }
                                 tb2_appendText(serverIP + ":" + filePORT + "에 연결을 시도합니다.");
                                 ftpClient.Connect();
-                                IniProperties.TargetIP = textBox4.Text;
-                                IniProperties.ftpUser = textBox8.Text;
-                                IniProperties.ftpPwd = textBox7.Text;
-                                IniProperties.socketPort = int.Parse(textBox5.Text);
-                                IniProperties.filePort = int.Parse(textBox6.Text);
-                                IniProperties.isFTPS = checkBox2.Checked;
-                                Setting.updateSetting(IniProperties);
                                 tb2_appendText("File Server  " + serverIP + ":" + filePORT + "에 연결하였습니다.");
 
                                 ftpClient.UploadFile(textBox1.Text, "tmp/" + Path.GetFileName(textBox1.Text), FtpRemoteExists.Overwrite, true);
@@ -348,14 +341,6 @@ namespace DocConvert_Util
                             requestMsg["useCompression"] = checkBox3.Checked;
 
                         SendData(requestMsg.ToString());
-
-                        IniProperties.TargetIP = textBox4.Text;
-                        IniProperties.ftpUser = textBox8.Text;
-                        IniProperties.ftpPwd = textBox7.Text;
-                        IniProperties.socketPort = int.Parse(textBox5.Text);
-                        IniProperties.filePort = int.Parse(textBox6.Text);
-                        IniProperties.isFTPS = checkBox2.Checked;
-                        Setting.updateSetting(IniProperties);
                         #endregion
                     }
                 }
@@ -393,116 +378,132 @@ namespace DocConvert_Util
         /// <param name="Message">서버에 던질 메시지</param>
         async void SendData(string Message)
         {
-            string targetURL = "ws://" + textBox4.Text + ":" + textBox5.Text;
-            tb2_appendText(targetURL + "에 연결을 시도합니다.");
-            WebSocket websocketClient = new WebSocket(url: targetURL);
-            websocketClient.Connect();
-
-            tb2_appendText(targetURL + "에 보낸 데이터\r\n" + Message);
-            websocketClient.Send(Encoding.UTF8.GetBytes(Message));
-
-            websocketClient.OnMessage += (sender, e) =>
+            try
             {
-                tb2_appendText("서버와 연결을 해제하였습니다.");
-                websocketClient.Close();
-                tb2_appendText(targetURL + "에서 받은 데이터\r\n" + e.Data);
-                JObject responseData = JObject.Parse(e.Data);
+                string targetURL = "ws://" + textBox4.Text + ":" + textBox5.Text;
+                tb2_appendText(targetURL + "에 연결을 시도합니다.");
+                WebSocket websocketClient = new WebSocket(url: targetURL);
+                websocketClient.Connect();
 
-                string isSuccess = responseData["isSuccess"].ToString();
-                string url = null;
-                try
+                tb2_appendText(targetURL + "에 보낸 데이터\r\n" + Message);
+                websocketClient.Send(Encoding.UTF8.GetBytes(Message));
+
+                websocketClient.OnMessage += (sender, e) =>
                 {
-                    url = responseData["URL"].ToString();
-                }
-                catch { }
-                string convertImgCnt = null;
-                try
-                {
-                    convertImgCnt = responseData["convertImgCnt"].ToString();
-                }
-                catch { }
-                if (responseData["Method"].ToString().Equals("DocConvert"))
-                {
+                    tb2_appendText("서버와 연결을 해제하였습니다.");
+                    websocketClient.Close();
+                    tb2_appendText(targetURL + "에서 받은 데이터\r\n" + e.Data);
+                    JObject responseData = JObject.Parse(e.Data);
+
+                    string isSuccess = responseData["isSuccess"].ToString();
+                    string url = null;
+                    try
+                    {
+                        url = responseData["URL"].ToString();
+                    }
+                    catch { }
+                    string convertImgCnt = null;
+                    try
+                    {
+                        convertImgCnt = responseData["convertImgCnt"].ToString();
+                    }
+                    catch { }
+                    if (responseData["Method"].ToString().Equals("DocConvert"))
+                    {
                     #region DocConvert
                     string imgType = comboBox1.Text.Replace("<", "").Replace(">", "");
-                    string serverIP = textBox4.Text;
-                    int filePORT = int.Parse(textBox6.Text);
-                    string ftpUser = textBox8.Text;
-                    string ftpPwd = textBox7.Text;
-                    using (var ftpClient = new FtpClient())
-                    {
-                        ftpClient.Host = serverIP;
-                        ftpClient.Port = filePORT;
-                        ftpClient.Credentials = new NetworkCredential(ftpUser, ftpPwd);
-                        if (checkBox2.Checked)
+                        string serverIP = textBox4.Text;
+                        int filePORT = int.Parse(textBox6.Text);
+                        string ftpUser = textBox8.Text;
+                        string ftpPwd = textBox7.Text;
+                        using (var ftpClient = new FtpClient())
                         {
-                            ftpClient.EncryptionMode = FtpEncryptionMode.Implicit;
-                            ftpClient.ValidateAnyCertificate = true;
-                        }
-                        ftpClient.Connect();
-                        if (isSuccess.Equals("True"))
-                        {
-                            string outPath = Path.GetDirectoryName(textBox1.Text);
-                            string outFileName = Path.GetFileNameWithoutExtension(textBox1.Text);
-                            if (comboBox1.SelectedIndex != 0)
+                            ftpClient.Host = serverIP;
+                            ftpClient.Port = filePORT;
+                            ftpClient.Credentials = new NetworkCredential(ftpUser, ftpPwd);
+                            if (checkBox2.Checked)
                             {
-                                if (responseData["useCompression"].ToString().Equals("True"))
+                                ftpClient.EncryptionMode = FtpEncryptionMode.Implicit;
+                                ftpClient.ValidateAnyCertificate = true;
+                            }
+                            ftpClient.Connect();
+                            if (isSuccess.Equals("True"))
+                            {
+                                string outPath = Path.GetDirectoryName(textBox1.Text);
+                                string outFileName = Path.GetFileNameWithoutExtension(textBox1.Text);
+                                if (comboBox1.SelectedIndex != 0)
                                 {
-                                    ftpClient.DownloadFile(outPath + @"\" + outFileName + ".zip", responseData["URL"].ToString() + @"\" + outFileName + ".zip", FtpLocalExists.Overwrite, FtpVerify.None);
-                                    tb2_appendText(outPath + @"\" + outFileName + ".zip 파일 다운로드 완료");
-                                }
-                                else
-                                {
-                                    for (int i = 0; i < int.Parse(convertImgCnt); i++)
+                                    if (responseData["useCompression"].ToString().Equals("True"))
                                     {
-                                        ftpClient.DownloadFile(outPath + @"\" + outFileName + @"\" + (i + 1) + "." + imgType, url + "/" + outFileName + "/" + (i + 1) + "." + imgType, FtpLocalExists.Overwrite, FtpVerify.None);
-                                        tb2_appendText(outPath + @"\" + outFileName + @"\" + (i + 1) + "." + imgType + " 파일 다운로드 완료");
+                                        ftpClient.DownloadFile(outPath + @"\" + outFileName + ".zip", responseData["URL"].ToString() + @"\" + outFileName + ".zip", FtpLocalExists.Overwrite, FtpVerify.None);
+                                        tb2_appendText(outPath + @"\" + outFileName + ".zip 파일 다운로드 완료");
+                                    }
+                                    else
+                                    {
+                                        for (int i = 0; i < int.Parse(convertImgCnt); i++)
+                                        {
+                                            ftpClient.DownloadFile(outPath + @"\" + outFileName + @"\" + (i + 1) + "." + imgType, url + "/" + outFileName + "/" + (i + 1) + "." + imgType, FtpLocalExists.Overwrite, FtpVerify.None);
+                                            tb2_appendText(outPath + @"\" + outFileName + @"\" + (i + 1) + "." + imgType + " 파일 다운로드 완료");
+                                        }
                                     }
                                 }
+                                if (comboBox1.SelectedIndex == 0)
+                                {
+                                    ftpClient.DownloadFile(outPath + @"\" + outFileName + ".pdf", url + "/" + outFileName + ".pdf", FtpLocalExists.Overwrite, FtpVerify.None);
+                                    tb2_appendText(outPath + @"\" + outFileName + ".pdf" + " 파일 다운로드 완료");
+                                }
                             }
-                            if (comboBox1.SelectedIndex == 0)
-                            {
-                                ftpClient.DownloadFile(outPath + @"\" + outFileName + ".pdf", url + "/" + outFileName + ".pdf", FtpLocalExists.Overwrite, FtpVerify.None);
-                                tb2_appendText(outPath + @"\" + outFileName + ".pdf" + " 파일 다운로드 완료");
-                            }
+                            ftpClient.Disconnect();
+                            ftpClient.Dispose();
                         }
-                        ftpClient.Disconnect();
-                        ftpClient.Dispose();
-                    }
                     #endregion
                 }
-                else if (responseData["Method"].ToString().Equals("WebCapture"))
-                {
+                    else if (responseData["Method"].ToString().Equals("WebCapture"))
+                    {
                     #region WebCapture
                     string serverIP = textBox4.Text;
-                    int filePORT = int.Parse(textBox6.Text);
-                    string ftpUser = textBox8.Text;
-                    string ftpPwd = textBox7.Text;
-                    using (var ftpClient = new FtpClient())
-                    {
-                        ftpClient.Host = serverIP;
-                        ftpClient.Port = filePORT;
-                        ftpClient.Credentials = new NetworkCredential(ftpUser, ftpPwd);
-                        if (checkBox2.Checked)
+                        int filePORT = int.Parse(textBox6.Text);
+                        string ftpUser = textBox8.Text;
+                        string ftpPwd = textBox7.Text;
+                        using (var ftpClient = new FtpClient())
                         {
-                            ftpClient.EncryptionMode = FtpEncryptionMode.Implicit;
-                            ftpClient.ValidateAnyCertificate = true;
+                            ftpClient.Host = serverIP;
+                            ftpClient.Port = filePORT;
+                            ftpClient.Credentials = new NetworkCredential(ftpUser, ftpPwd);
+                            if (checkBox2.Checked)
+                            {
+                                ftpClient.EncryptionMode = FtpEncryptionMode.Implicit;
+                                ftpClient.ValidateAnyCertificate = true;
+                            }
+                            if (isSuccess.Equals("True"))
+                            {
+                                ftpClient.DownloadFile(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + @"\" + new FileInfo(url).Name, url, FtpLocalExists.Overwrite, FtpVerify.None);
+                                tb2_appendText("이미지를 바탕화면에 저장하였습니다.");
+                            }
+                            ftpClient.Disconnect();
+                            ftpClient.Dispose();
                         }
-                        if (isSuccess.Equals("True"))
-                        {
-                            ftpClient.DownloadFile(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + @"\" + new FileInfo(url).Name, url, FtpLocalExists.Overwrite, FtpVerify.None);
-                            tb2_appendText("이미지를 바탕화면에 저장하였습니다.");
-                        }
-                        ftpClient.Disconnect();
-                        ftpClient.Dispose();
-                    }
                     #endregion
                 }
+                    groupBox1.Enabled = true;
+                    groupBox2.Enabled = true;
+                    TimeSpan curTime = DateTime.Now - timeTaken;
+                    tb2_appendText(string.Format("작업 소요시간: {0}", curTime.ToString()));
+
+                    IniProperties.TargetIP = textBox4.Text;
+                    IniProperties.ftpUser = textBox8.Text;
+                    IniProperties.ftpPwd = textBox7.Text;
+                    IniProperties.socketPort = int.Parse(textBox5.Text);
+                    IniProperties.filePort = int.Parse(textBox6.Text);
+                    IniProperties.isFTPS = checkBox2.Checked;
+                    Setting.updateSetting(IniProperties);
+                };
+            } catch(Exception e1)
+            {
                 groupBox1.Enabled = true;
                 groupBox2.Enabled = true;
-                TimeSpan curTime = DateTime.Now - timeTaken;
-                tb2_appendText(string.Format("작업 소요시간: {0}", curTime.ToString()));
-            };
+                tb2_appendText(e1.Message);
+            }
         }
 
         #endregion
@@ -757,6 +758,12 @@ namespace DocConvert_Util
         {
             try
             {
+                IniProperties.TargetIP = textBox4.Text;
+                IniProperties.ftpUser = textBox8.Text;
+                IniProperties.ftpPwd = textBox7.Text;
+                IniProperties.socketPort = int.Parse(textBox5.Text);
+                IniProperties.filePort = int.Parse(textBox6.Text);
+                IniProperties.isFTPS = checkBox2.Checked;
                 Setting.updateSetting(IniProperties);
             }
             catch (Exception e1)
