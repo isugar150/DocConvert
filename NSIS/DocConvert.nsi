@@ -44,10 +44,10 @@ InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
 ShowUnInstDetails show
 
-Section "MainSection" SEC01
-  ExecWait "taskkill /f /im DocConvert_Server.exe"
+Section "MainSection" 
   ExecWait "taskkill /f /im DocConvert_Util.exe"
   ExecWait "taskkill /f /im DocConvert_Manager.exe"
+  ExecWait "taskkill /f /im DocConvert_Server.exe"
   SetOutPath "$INSTDIR"
   SetOverwrite on
   File "..\bin\Release\JAVA_API\DocConvert_API.jar"

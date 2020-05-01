@@ -211,6 +211,10 @@ namespace DocConvert_Server
                             {
                                 Application.DoEvents();
                             }
+                            Console.WriteLine(webBrowser.Document.Body.ScrollRectangle.Height);
+                            if (webBrowser.Document.Body.ScrollRectangle.Width < 1366)
+                                webBrowser.Width = 1366;
+                            Console.WriteLine(webBrowser.Document.Body.ScrollRectangle.Height);
 
                             status = WebCapture_Core.ChromiumCapture(requestMsg["URL"].ToString(), Form1.IniProperties.DataPath + dataPath + @"\0.png", webBrowser.Document.Body.ScrollRectangle.Width + 30, webBrowser.Document.Body.ScrollRectangle.Height, Form1.IniProperties.WebCaptureTimeout);
                             webBrowser.Dispose();

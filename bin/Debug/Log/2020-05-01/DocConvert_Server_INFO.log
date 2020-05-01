@@ -1120,3 +1120,170 @@
 
 2020-05-01 17:01:37.0964  INFO - [WebSocket] 작업 소요시간: 00:00:12.9356415
 2020-05-01 17:01:37.0964  INFO - [WebSocket] 클라이언트와 연결을 해제함.
+2020-05-01 20:00:02.8796  INFO - [INFO] 데이터 경로: C:\Data
+2020-05-01 20:00:02.8796  INFO - [INFO] 클라이언트 키: B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-05-01 20:00:02.8796  INFO - [INFO] 오피스 디버깅모드: True
+2020-05-01 20:00:02.8796  INFO - [INFO] 웹 캡쳐 모드: Phantom JS
+2020-05-01 20:00:02.8796  INFO - [INFO] 웹 캡쳐 타임아웃: 30초
+2020-05-01 20:00:02.8796  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-05-01 20:00:02.8796  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 10일
+2020-05-01 20:00:02.9577  INFO - [Web Socket] Server Listening...
+2020-05-01 20:00:02.9577  INFO - [Web Socket][INFO] IP: 0.0.0.0   포트: 12000
+2020-05-01 20:00:14.2574  INFO - [WebSocket] 접속 IP: 127.0.0.1
+2020-05-01 20:00:14.3511  INFO - 
+[WebSocket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.json.org/json-ko.html"
+}
+
+2020-05-01 20:00:21.2675  INFO - 
+[WebSocket][Server => Client]
+{
+  "URL": "/workspace/c2b4231d-804f-4852-ad70-664f41f2569b_2020-05-01/0.png",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 1,
+  "Method": "WebCapture"
+}
+
+2020-05-01 20:00:21.2675  INFO - [WebSocket] 작업 소요시간: 00:00:06.9789074
+2020-05-01 20:00:21.2675  INFO - [WebSocket] 클라이언트와 연결을 해제함.
+2020-05-01 20:00:21.7516  INFO - 설정 파일을 실행하였습니다. 변경 내용을 적용하려면 서버를 재시작해야합니다.
+2020-05-01 20:00:42.8417  INFO - [INFO] 데이터 경로: C:\Data
+2020-05-01 20:00:42.8417  INFO - [INFO] 클라이언트 키: B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-05-01 20:00:42.8417  INFO - [INFO] 오피스 디버깅모드: True
+2020-05-01 20:00:42.8417  INFO - [INFO] 웹 캡쳐 모드: Chromium Capture
+2020-05-01 20:00:42.8417  INFO - [INFO] 웹 캡쳐 타임아웃: 30초
+2020-05-01 20:00:42.8417  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-05-01 20:00:42.8417  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 10일
+2020-05-01 20:00:42.9354  INFO - [Web Socket] Server Listening...
+2020-05-01 20:00:42.9354  INFO - [Web Socket][INFO] IP: 0.0.0.0   포트: 12000
+2020-05-01 20:00:45.7316  INFO - [WebSocket] 접속 IP: 127.0.0.1
+2020-05-01 20:00:45.9035  INFO - 
+[WebSocket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.json.org/json-ko.html"
+}
+
+2020-05-01 20:01:06.2944  INFO - [INFO] 데이터 경로: C:\Data
+2020-05-01 20:01:06.2944  INFO - [INFO] 클라이언트 키: B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-05-01 20:01:06.2944  INFO - [INFO] 오피스 디버깅모드: True
+2020-05-01 20:01:06.2944  INFO - [INFO] 웹 캡쳐 모드: Chromium Capture
+2020-05-01 20:01:06.2944  INFO - [INFO] 웹 캡쳐 타임아웃: 30초
+2020-05-01 20:01:06.2944  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-05-01 20:01:06.2944  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 10일
+2020-05-01 20:01:06.3882  INFO - [Web Socket] Server Listening...
+2020-05-01 20:01:06.3882  INFO - [Web Socket][INFO] IP: 0.0.0.0   포트: 12000
+2020-05-01 20:01:16.6826  INFO - [WebSocket] 접속 IP: 127.0.0.1
+2020-05-01 20:01:16.7764  INFO - 
+[WebSocket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.json.org/json-ko.html"
+}
+
+2020-05-01 20:01:19.2289  INFO - 
+[WebSocket][Server => Client]
+{
+  "isSuccess": false,
+  "msg": "지정된 파일을 찾을 수 없습니다",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-05-01 20:01:19.2289  INFO - [WebSocket] 작업 소요시간: 00:00:02.5150330
+2020-05-01 20:01:19.2289  INFO - [WebSocket] 클라이언트와 연결을 해제함.
+2020-05-01 20:01:33.8661  INFO - [WebSocket] 접속 IP: 127.0.0.1
+2020-05-01 20:01:33.8661  INFO - 
+[WebSocket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.json.org/json-ko.html"
+}
+
+2020-05-01 20:01:33.9598  INFO - 
+[WebSocket][Server => Client]
+{
+  "isSuccess": false,
+  "msg": "지정된 파일을 찾을 수 없습니다",
+  "convertImgCnt": 0,
+  "Method": "WebCapture"
+}
+
+2020-05-01 20:01:33.9598  INFO - [WebSocket] 작업 소요시간: 00:00:00.0937238
+2020-05-01 20:01:33.9598  INFO - [WebSocket] 클라이언트와 연결을 해제함.
+2020-05-01 20:01:41.1572  INFO - [WebSocket] 접속 IP: 127.0.0.1
+2020-05-01 20:01:41.1642  INFO - 
+[WebSocket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.json.org/json-ko.html"
+}
+
+2020-05-01 20:02:57.8982  INFO - [INFO] 데이터 경로: C:\Data
+2020-05-01 20:02:57.8982  INFO - [INFO] 클라이언트 키: B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-05-01 20:02:57.8982  INFO - [INFO] 오피스 디버깅모드: True
+2020-05-01 20:02:57.8982  INFO - [INFO] 웹 캡쳐 모드: Chromium Capture
+2020-05-01 20:02:57.8982  INFO - [INFO] 웹 캡쳐 타임아웃: 30초
+2020-05-01 20:02:57.8982  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-05-01 20:02:57.8982  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 10일
+2020-05-01 20:02:57.9763  INFO - [Web Socket] Server Listening...
+2020-05-01 20:02:57.9763  INFO - [Web Socket][INFO] IP: 0.0.0.0   포트: 12000
+2020-05-01 20:02:59.7259  INFO - [WebSocket] 접속 IP: 127.0.0.1
+2020-05-01 20:02:59.8196  INFO - 
+[WebSocket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.json.org/json-ko.html"
+}
+
+2020-05-01 20:03:15.9935  INFO - 
+[WebSocket][Server => Client]
+{
+  "URL": "/workspace/0e47ca2e-1b73-4ac6-bf4d-c97edcdd2e41_2020-05-01/0.png",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 1,
+  "Method": "WebCapture"
+}
+
+2020-05-01 20:03:15.9935  INFO - [WebSocket] 작업 소요시간: 00:00:16.2363689
+2020-05-01 20:03:15.9935  INFO - [WebSocket] 클라이언트와 연결을 해제함.
+2020-05-01 20:05:02.1915  INFO - [INFO] 데이터 경로: C:\Data
+2020-05-01 20:05:02.2071  INFO - [INFO] 클라이언트 키: B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-05-01 20:05:02.2071  INFO - [INFO] 오피스 디버깅모드: True
+2020-05-01 20:05:02.2071  INFO - [INFO] 웹 캡쳐 모드: Chromium Capture
+2020-05-01 20:05:02.2071  INFO - [INFO] 웹 캡쳐 타임아웃: 30초
+2020-05-01 20:05:02.2071  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-05-01 20:05:02.2071  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 10일
+2020-05-01 20:05:02.2852  INFO - [Web Socket] Server Listening...
+2020-05-01 20:05:02.2852  INFO - [Web Socket][INFO] IP: 0.0.0.0   포트: 12000
+2020-05-01 20:05:04.8159  INFO - [WebSocket] 접속 IP: 127.0.0.1
+2020-05-01 20:05:04.8940  INFO - 
+[WebSocket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.json.org/json-ko.html"
+}
+
+2020-05-01 20:05:10.0629  INFO - 
+[WebSocket][Server => Client]
+{
+  "URL": "/workspace/4b45b00c-4497-439d-b6bb-82da5de79e17_2020-05-01/0.png",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 1,
+  "Method": "WebCapture"
+}
+
+2020-05-01 20:05:10.0629  INFO - [WebSocket] 작업 소요시간: 00:00:05.2313891
+2020-05-01 20:05:10.0629  INFO - [WebSocket] 클라이언트와 연결을 해제함.
