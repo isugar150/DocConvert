@@ -22,6 +22,7 @@ namespace DCLicenseGenerator
             JObject jObject = new JObject();
             jObject["HWID"] = textBox1.Text;
             jObject["EndDate"] = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+            jObject["CompanyName"] = textBox3.Text;
             Debug.WriteLine("KEY: " + key);
             Debug.WriteLine("Data: " + jObject.ToString());
             textBox2.Text = encryptAES256(jObject.ToString(), key);

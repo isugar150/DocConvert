@@ -171,6 +171,12 @@ namespace DocConvert_Core.IniLib
         {
             return Value;
         }
+        public string ToString2()
+        {
+            if (Value.Contains(";"))
+                Value = Value.Split(';')[0];
+            return Value;
+        }
 
         public static implicit operator IniValue(byte o)
         {

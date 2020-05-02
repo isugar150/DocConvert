@@ -67,42 +67,24 @@ namespace DocConvert_Server
                 {
                     if (new FileInfo("./DocConvert_Server.ini").Exists)
                     {
-                        Console.WriteLine("test" + pairs["DC Server"]["DisplayLogCnt"].ToString());
                         pairs.Load("./DocConvert_Server.ini");
-                        IniProperties.LicenseKEY = pairs["DC Server"]["LicenseKEY"].ToString();
-                        IniProperties.ServerName = pairs["DC Server"]["ServerName"].ToString();
-                        IniProperties.BindIP = pairs["DC Server"]["BindIP"].ToString();
-                        IniProperties.WebSocketPort = int.Parse(pairs["DC Server"]["WebSocketPort"].ToString());
-                        IniProperties.FileServerPort = int.Parse(pairs["DC Server"]["FileServerPort"].ToString());
-                        IniProperties.DisplayLogCnt = int.Parse(pairs["DC Server"]["DisplayLogCnt"].ToString());
-                        IniProperties.ClientKEY = pairs["DC Server"]["ClientKEY"].ToString();
-                        IniProperties.DataPath = pairs["DC Server"]["DataPath"].ToString();
-                        IniProperties.OfficeDebugModeYn = pairs["DC Server"]["OfficeDebugModeYn"].ToString().Equals("Y");
-                        IniProperties.FollowTailYn = pairs["DC Server"]["FollowTailYn"].ToString().Equals("Y");
-                        IniProperties.CleanWorkspaceSchedulerYn = pairs["DC Server"]["CleanWorkspaceSchedulerYn"].ToString().Equals("Y");
-                        IniProperties.CleanWorkspaceDay = int.Parse(pairs["DC Server"]["CleanWorkspaceDay"].ToString());
-                        IniProperties.CleanLogSchedulerYn = pairs["DC Server"]["CleanLogSchedulerYn"].ToString().Equals("Y");
-                        IniProperties.CleanLogDay = int.Parse(pairs["DC Server"]["CleanLogDay"].ToString());
-                        IniProperties.ChromiumCaptureYn = pairs["DC Server"]["ChromiumCaptureYn"].ToString().Equals("Y");
-                        IniProperties.WebCaptureTimeout = int.Parse(pairs["DC Server"]["WebCaptureTimeout"].ToString());
+                        IniProperties.LicenseKEY = pairs["DC Server"]["LicenseKEY"].ToString2();
+                        IniProperties.BindIP = pairs["DC Server"]["BindIP"].ToString2();
+                        IniProperties.WebSocketPort = int.Parse(pairs["DC Server"]["WebSocketPort"].ToString2());
+                        IniProperties.FileServerPort = int.Parse(pairs["DC Server"]["FileServerPort"].ToString2());
+                        IniProperties.DisplayLogCnt = int.Parse(pairs["DC Server"]["DisplayLogCnt"].ToString2());
+                        IniProperties.ClientKEY = pairs["DC Server"]["ClientKEY"].ToString2();
+                        IniProperties.DataPath = pairs["DC Server"]["DataPath"].ToString2();
+                        IniProperties.SchedulerTime = pairs["DC Server"]["SchedulerTime"].ToString2();
+                        IniProperties.OfficeDebugModeYn = pairs["DC Server"]["OfficeDebugModeYn"].ToString2().Equals("Y");
+                        IniProperties.FollowTailYn = pairs["DC Server"]["FollowTailYn"].ToString2().Equals("Y");
+                        IniProperties.CleanWorkspaceSchedulerYn = pairs["DC Server"]["CleanWorkspaceSchedulerYn"].ToString2().Equals("Y");
+                        IniProperties.CleanWorkspaceDay = int.Parse(pairs["DC Server"]["CleanWorkspaceDay"].ToString2());
+                        IniProperties.CleanLogSchedulerYn = pairs["DC Server"]["CleanLogSchedulerYn"].ToString2().Equals("Y");
+                        IniProperties.CleanLogDay = int.Parse(pairs["DC Server"]["CleanLogDay"].ToString2());
+                        IniProperties.ChromiumCaptureYn = pairs["DC Server"]["ChromiumCaptureYn"].ToString2().Equals("Y");
+                        IniProperties.WebCaptureTimeout = int.Parse(pairs["DC Server"]["WebCaptureTimeout"].ToString2());
 
-                        /*DevLog.Write("=============== Properties ===============");
-                        //DevLog.Write(string.Format("LicenseKEY: {0}", IniProperties.LicenseKEY), LOG_LEVEL.DEBUG);
-                        DevLog.Write(string.Format("ServerName: {0}", IniProperties.ServerName), LOG_LEVEL.DEBUG);
-                        DevLog.Write(string.Format("BindIP: {0}", IniProperties.BindIP), LOG_LEVEL.DEBUG);
-                        DevLog.Write(string.Format("WebSocketPort: {0}", IniProperties.WebSocketPort), LOG_LEVEL.DEBUG);
-                        DevLog.Write(string.Format("FileServerPort: {0}", IniProperties.FileServerPort), LOG_LEVEL.DEBUG);
-                        DevLog.Write(string.Format("DisplayLogCnt: {0}", IniProperties.DisplayLogCnt), LOG_LEVEL.DEBUG);
-                        DevLog.Write(string.Format("ClientKEY: {0}", IniProperties.ClientKEY), LOG_LEVEL.DEBUG);
-                        DevLog.Write(string.Format("DataPath: {0}", IniProperties.DataPath), LOG_LEVEL.DEBUG);
-                        DevLog.Write(string.Format("OfficeDebugMode: {0}", IniProperties.OfficeDebugMode), LOG_LEVEL.DEBUG);
-                        DevLog.Write(string.Format("FollowTail: {0}", IniProperties.FollowTail), LOG_LEVEL.DEBUG);
-                        DevLog.Write(string.Format("CleanWorkspaceScheduler: {0}", IniProperties.CleanWorkspaceScheduler), LOG_LEVEL.DEBUG);
-                        DevLog.Write(string.Format("CleanWorkspaceDay: {0}", IniProperties.CleanWorkspaceDay), LOG_LEVEL.DEBUG);
-                        DevLog.Write(string.Format("CleanLogScheduler: {0}", IniProperties.CleanLogScheduler), LOG_LEVEL.DEBUG);
-                        DevLog.Write(string.Format("CleanLogDay: {0}", IniProperties.CleanLogDay), LOG_LEVEL.DEBUG);
-                        DevLog.Write(string.Format("WebCaptureTimeout: {0}", IniProperties.WebCaptureTimeout), LOG_LEVEL.DEBUG);
-                        DevLog.Write("==========================================");*/
                         break;
                     }
                     else
@@ -125,7 +107,6 @@ namespace DocConvert_Server
                 }
             }
             #endregion
-            this.Text += " - " + IniProperties.ServerName;
             #region checkLicense
             try
             {
@@ -134,6 +115,8 @@ namespace DocConvert_Server
                 checkLicense = JObject.Parse(licenseInfo);
                 if (!checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID()) && !noLicense) { new MessageDialog("라이센스 오류", "라이센스 확인 후 다시시도하세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
                 if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now && !noLicense) { new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되었습니다. 갱신후 다시시도해주세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
+
+                this.Text += " - " + checkLicense["CompanyName"].ToString();
 
                 DevLog.Write("[INFO] 나의 하드웨어 ID: " + new LicenseInfo().getHWID(), LOG_LEVEL.INFO);
                 if (!noLicense)
@@ -177,26 +160,24 @@ namespace DocConvert_Server
             }
             #endregion
             #region 스케줄러 관련
-            if (IniProperties.CleanWorkspaceSchedulerYn || IniProperties.CleanLogSchedulerYn)
+            string SchedulerInfo = "";
+            if (IniProperties.CleanWorkspaceSchedulerYn)
             {
-                string SchedulerInfo = "";
-                if (IniProperties.CleanWorkspaceSchedulerYn)
-                {
-                    SchedulerInfo += string.Format("작업공간 정리 스케줄러: {0}일   ", IniProperties.CleanWorkspaceDay);
-                }
-
-                if (IniProperties.CleanLogSchedulerYn)
-                {
-                    SchedulerInfo += string.Format("로그 정리 스케줄러: {0}일", IniProperties.CleanLogDay);
-                }
-
-                DevLog.Write("[Scheduler] 스케줄러가 실행중입니다. " + SchedulerInfo, LOG_LEVEL.INFO);
-
-                tScheduler = new System.Windows.Forms.Timer();
-                tScheduler.Interval = CalculateTimerInterval();
-                tScheduler.Tick += new EventHandler(tScheduler_Tick);
-                tScheduler.Start();
+                SchedulerInfo += string.Format("작업공간 정리 스케줄러: {0}일   ", IniProperties.CleanWorkspaceDay);
             }
+
+            if (IniProperties.CleanLogSchedulerYn)
+            {
+                SchedulerInfo += string.Format("로그 정리 스케줄러: {0}일", IniProperties.CleanLogDay);
+            }
+
+            DevLog.Write("[Scheduler] 스케줄러가 실행중입니다. " + SchedulerInfo, LOG_LEVEL.INFO);
+
+            tScheduler = new System.Windows.Forms.Timer();
+            tScheduler.Interval = CalculateTimerInterval();
+            tScheduler.Tick += new EventHandler(tScheduler_Tick);
+            tScheduler.Start();
+            DevLog.Write("[Scheduler] 다음 스케줄러 작동시간: " + (DateTime.Now + TimeSpan.FromMilliseconds(tScheduler.Interval)));
             #endregion
             #region Create WebSocketServer
             try
@@ -505,7 +486,13 @@ namespace DocConvert_Server
         /// <returns>해당 시간까지 Milliseconds</returns>
         private int CalculateTimerInterval()
         {
-            DateTime timeTaken = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0).AddDays(1);
+            string[] timeStr = IniProperties.SchedulerTime.Split(',');
+            int[] time = new int[3];
+            for (int i = 0; i<2; i++)
+            {
+                time[i] = int.Parse(timeStr[i]);
+            }
+            DateTime timeTaken = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, time[0], time[1], time[2]).AddDays(1);
 
             TimeSpan curTime = timeTaken - DateTime.Now;
 
@@ -523,6 +510,7 @@ namespace DocConvert_Server
             try
             {
                 tScheduler.Interval = CalculateTimerInterval();
+                DevLog.Write("[Scheduler] 다음 스케줄러 작동시간: " + (DateTime.Now + TimeSpan.FromMilliseconds(tScheduler.Interval)));
             }
             catch (Exception) { tScheduler.Dispose(); DevLog.Write("스케줄러 작동중 오류가 발생하여 비활성화 하였습니다."); }
             if (IniProperties.CleanWorkspaceSchedulerYn)
