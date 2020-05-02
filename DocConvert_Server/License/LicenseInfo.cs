@@ -7,7 +7,7 @@ using System.Text;
 
 namespace DocConvert_Server.License
 {
-    class LicenseInfo
+    internal class LicenseInfo
     {
         /// <summary>
         /// 하드웨어 아이디를 반환
@@ -15,7 +15,7 @@ namespace DocConvert_Server.License
         /// <returns>하드웨어 아이디</returns>
         public string getHWID()
         {
-            var mbs = new ManagementObjectSearcher("Select ProcessorId From Win32_processor");
+            ManagementObjectSearcher mbs = new ManagementObjectSearcher("Select ProcessorId From Win32_processor");
             ManagementObjectCollection mbsList = mbs.Get();
             string id = "";
             foreach (ManagementObject mo in mbsList)
@@ -79,7 +79,9 @@ namespace DocConvert_Server.License
         public static string Base64Decoding(string DecodingText, System.Text.Encoding oEncoding = null)
         {
             if (oEncoding == null)
+            {
                 oEncoding = System.Text.Encoding.UTF8;
+            }
 
             byte[] arr = System.Convert.FromBase64String(DecodingText);
             return oEncoding.GetString(arr);

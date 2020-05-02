@@ -75,9 +75,9 @@ public class WebCapture {
                     System.out.println("downloadUrl: " + downloadUrl);
                     // PDF 다운로드
                     if(isFTPS)
-                        ftpManager.downloadFileFTPS(responseData.get("URL").toString().replace("\\", "/"), outPath + File.separator + new File(outPath).getName());
+                        ftpManager.downloadFileFTPS(responseData.get("URL").toString().replace("\\", "/"), outPath + File.separator + new File(responseData.get("URL").toString()).getName());
                     else
-                        ftpManager.downloadFile(responseData.get("URL").toString().replace("\\", "/"), outPath + File.separator + new File(outPath).getName());
+                        ftpManager.downloadFile(responseData.get("URL").toString().replace("\\", "/"), outPath + File.separator + new File(responseData.get("URL").toString()).getName());
                 } catch (ParseException | IOException e) {
                     e.printStackTrace();
                 }

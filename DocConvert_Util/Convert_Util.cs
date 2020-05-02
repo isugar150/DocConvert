@@ -8,16 +8,12 @@ using Microsoft.Win32;
 using Newtonsoft.Json.Linq;
 using PdfiumViewer;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Net.Sockets;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WebSocketSharp;
 
@@ -56,6 +52,7 @@ namespace DocConvert_Util
                         IniProperties.ftpPwd = pairs["DC Util"]["ftpPwd"].ToString();
                         IniProperties.socketPort = int.Parse(pairs["DC Util"]["socketPort"].ToString());
                         IniProperties.filePort = int.Parse(pairs["DC Util"]["filePort"].ToString());
+                        IniProperties.clientKEY = pairs["DC Util"]["clientKEY"].ToString();
                         IniProperties.isFTPS = pairs["DC Util"]["isFTPS"].ToString().Equals("Y");
                         IniProperties.appvisible = pairs["DC Util"]["appvisible"].ToString().Equals("Y");
                         IniProperties.runafter = pairs["DC Util"]["runafter"].ToString().Equals("Y");
@@ -103,6 +100,7 @@ namespace DocConvert_Util
                 }
             }
             #endregion
+            tb2_appendText("ClientKEY: " + IniProperties.clientKEY);
             #region 아래 한글 레지스트리 등록 확인
             RegistryKey regKey = Registry.CurrentUser.CreateSubKey(@"Software\HNC\HwpCtrl\Modules", RegistryKeyPermissionCheck.ReadWriteSubTree);
             try
@@ -224,21 +222,30 @@ namespace DocConvert_Util
                                 pdfreturnValue.PageCount = ConvertImg.pdfPageCount(FileNames[i]);
                                 status = pdfreturnValue;
                             }
-                            else 
+                            else
                             {
                                 tb2_appendText("[상태]   지원포맷 아님. 파싱한 확장자: " + Path.GetExtension(FileNames[i]));
                             }
                             if (status != null)
                             {
                                 if (PAGINGNUM)
+                                {
                                     tb2_appendText("[정보]   페이지 수: " + Convert.ToString(status.PageCount));
+                                }
 
                                 if (status.isSuccess)
+                                {
                                     tb2_appendText("[상태]   " + status.Message);
+                                }
                                 else
+                                {
                                     tb2_appendText("[오류]   " + status.Message);
+                                }
+
                                 if (status.isSuccess)
+                                {
                                     SuccessCount += 1;
+                                }
                             }
                             // PDF To Image
                             if (comboBox1.SelectedIndex != 0)
@@ -246,7 +253,10 @@ namespace DocConvert_Util
                                 ReturnValue pdfToImgReturn = null;
                                 String imageOutput = Path.GetDirectoryName(outPath) + "\\" + Path.GetFileNameWithoutExtension(outPath) + "\\";
                                 if (!new DirectoryInfo(imageOutput).Exists)
+                                {
                                     new DirectoryInfo(imageOutput).Create();
+                                }
+
                                 if (comboBox1.SelectedIndex == 1)
                                 {
                                     pdfToImgReturn = ConvertImg.PDFtoJpeg(outPath, imageOutput, quality);
@@ -277,9 +287,13 @@ namespace DocConvert_Util
                             #endregion
                         }
                         if (FileNames.Length == SuccessCount)
+                        {
                             tb2_appendText("[상태]   모든 파일을 변환완료 하였습니다.");
+                        }
                         else
+                        {
                             tb2_appendText("[상태]   일부 파일 변환을 실패하였습니다.");
+                        }
                         #endregion
                         groupBox1.Enabled = true;
                         groupBox2.Enabled = true;
@@ -291,7 +305,7 @@ namespace DocConvert_Util
                         #region Server 변환시
                         try
                         {
-                            using (var ftpClient = new FtpClient())
+                            using (FtpClient ftpClient = new FtpClient())
                             {
                                 ftpClient.Host = serverIP;
                                 ftpClient.Port = filePORT;
@@ -333,12 +347,14 @@ namespace DocConvert_Util
                             return;
                         }
                         JObject requestMsg = new JObject();
-                        requestMsg["KEY"] = "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2";
+                        requestMsg["KEY"] = IniProperties.clientKEY;
                         requestMsg["Method"] = "DocConvert";
                         requestMsg["FileName"] = new FileInfo(textBox1.Text).Name;
                         requestMsg["ConvertIMG"] = comboBox1.SelectedIndex;
-                        if(comboBox2.SelectedIndex == 0)
+                        if (comboBox2.SelectedIndex == 0)
+                        {
                             requestMsg["useCompression"] = checkBox3.Checked;
+                        }
 
                         SendData(requestMsg.ToString());
                         #endregion
@@ -354,7 +370,7 @@ namespace DocConvert_Util
                         return;
                     }
                     JObject requestMsg = new JObject();
-                    requestMsg["KEY"] = "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2";
+                    requestMsg["KEY"] = IniProperties.clientKEY;
                     requestMsg["Method"] = "WebCapture";
                     requestMsg["URL"] = textBox9.Text;
                     SendData(requestMsg.ToString());
@@ -371,18 +387,19 @@ namespace DocConvert_Util
                 tb2_appendText("================ End ================");
             }
         }
-        #region Socket Server Method
+        #region Web Socket Server Method
         /// <summary>
         /// 엡소켓연결 메소드
         /// </summary>
         /// <param name="Message">서버에 던질 메시지</param>
-        async void SendData(string Message)
+        private void SendData(string Message)
         {
             try
             {
                 string targetURL = "ws://" + textBox4.Text + ":" + textBox5.Text;
                 tb2_appendText(targetURL + "에 연결을 시도합니다.");
                 WebSocket websocketClient = new WebSocket(url: targetURL);
+                websocketClient.WaitTime = TimeSpan.FromMinutes(2);
                 websocketClient.Connect();
 
                 tb2_appendText(targetURL + "에 보낸 데이터\r\n" + Message);
@@ -410,13 +427,13 @@ namespace DocConvert_Util
                     catch { }
                     if (responseData["Method"].ToString().Equals("DocConvert"))
                     {
-                    #region DocConvert
-                    string imgType = comboBox1.Text.Replace("<", "").Replace(">", "");
+                        #region DocConvert
+                        string imgType = comboBox1.Text.Replace("<", "").Replace(">", "");
                         string serverIP = textBox4.Text;
                         int filePORT = int.Parse(textBox6.Text);
                         string ftpUser = textBox8.Text;
                         string ftpPwd = textBox7.Text;
-                        using (var ftpClient = new FtpClient())
+                        using (FtpClient ftpClient = new FtpClient())
                         {
                             ftpClient.Host = serverIP;
                             ftpClient.Port = filePORT;
@@ -456,16 +473,16 @@ namespace DocConvert_Util
                             ftpClient.Disconnect();
                             ftpClient.Dispose();
                         }
-                    #endregion
-                }
+                        #endregion
+                    }
                     else if (responseData["Method"].ToString().Equals("WebCapture"))
                     {
-                    #region WebCapture
-                    string serverIP = textBox4.Text;
+                        #region WebCapture
+                        string serverIP = textBox4.Text;
                         int filePORT = int.Parse(textBox6.Text);
                         string ftpUser = textBox8.Text;
                         string ftpPwd = textBox7.Text;
-                        using (var ftpClient = new FtpClient())
+                        using (FtpClient ftpClient = new FtpClient())
                         {
                             ftpClient.Host = serverIP;
                             ftpClient.Port = filePORT;
@@ -477,14 +494,23 @@ namespace DocConvert_Util
                             }
                             if (isSuccess.Equals("True"))
                             {
-                                ftpClient.DownloadFile(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + @"\" + new FileInfo(url).Name, url, FtpLocalExists.Overwrite, FtpVerify.None);
+                                try
+                                {
+                                    ftpClient.DownloadFile(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + @"\" + new FileInfo(url).Name, url, FtpLocalExists.Overwrite, FtpVerify.None);
+                                }
+                                catch (FtpException)
+                                {
+                                    groupBox1.Enabled = true;
+                                    groupBox2.Enabled = true;
+                                    tb2_appendText("FTP 접속 정보가 올바르지 않습니다. 확인후 다시시도하세요.");
+                                }
                                 tb2_appendText("이미지를 바탕화면에 저장하였습니다.");
                             }
                             ftpClient.Disconnect();
                             ftpClient.Dispose();
                         }
-                    #endregion
-                }
+                        #endregion
+                    }
                     groupBox1.Enabled = true;
                     groupBox2.Enabled = true;
                     TimeSpan curTime = DateTime.Now - timeTaken;
@@ -498,7 +524,8 @@ namespace DocConvert_Util
                     IniProperties.isFTPS = checkBox2.Checked;
                     Setting.updateSetting(IniProperties);
                 };
-            } catch(Exception e1)
+            }
+            catch (Exception e1)
             {
                 groupBox1.Enabled = true;
                 groupBox2.Enabled = true;
@@ -560,7 +587,7 @@ namespace DocConvert_Util
                     regKey.Close();
                 }
 
-                pictureBox1.Image = DocConvert_Util.Properties.Resources.switch_off;
+                pictureBox1.Image = Properties.Resources.switch_off;
                 HWPREGDLL = false;
             }
             else
@@ -573,7 +600,7 @@ namespace DocConvert_Util
                         regKey.SetValue("FilePathCheckerModuleExample", Application.StartupPath + @"\FilePathCheckerModuleExample.dll", RegistryValueKind.String);
                         tb2_appendText("[정보]   HWP DLL을 레지스트리에 등록하였습니다.");
 
-                        pictureBox1.Image = DocConvert_Util.Properties.Resources.switch_on;
+                        pictureBox1.Image = Properties.Resources.switch_on;
                         HWPREGDLL = true;
                     }
                     catch (Exception e1)
@@ -631,12 +658,12 @@ namespace DocConvert_Util
             #region 파일 변환 후 실행
             if (RUNAFTER)
             {
-                pictureBox6.Image = DocConvert_Util.Properties.Resources.switch_off;
+                pictureBox6.Image = Properties.Resources.switch_off;
                 RUNAFTER = false;
             }
             else
             {
-                pictureBox6.Image = DocConvert_Util.Properties.Resources.switch_on;
+                pictureBox6.Image = Properties.Resources.switch_on;
                 RUNAFTER = true;
             }
             IniProperties.runafter = RUNAFTER;
@@ -660,12 +687,12 @@ namespace DocConvert_Util
             #region 페이지 번호 추출
             if (PAGINGNUM)
             {
-                pictureBox8.Image = DocConvert_Util.Properties.Resources.switch_off;
+                pictureBox8.Image = Properties.Resources.switch_off;
                 PAGINGNUM = false;
             }
             else
             {
-                pictureBox8.Image = DocConvert_Util.Properties.Resources.switch_on;
+                pictureBox8.Image = Properties.Resources.switch_on;
                 PAGINGNUM = true;
             }
             IniProperties.pagingnum = PAGINGNUM;
@@ -741,7 +768,7 @@ namespace DocConvert_Util
         /// </summary>
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboBox1.SelectedIndex != 0 && comboBox2.SelectedIndex == 0)
+            if (comboBox1.SelectedIndex != 0 && comboBox2.SelectedIndex == 0)
             {
                 checkBox3.Enabled = true;
             }

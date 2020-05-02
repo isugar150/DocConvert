@@ -2,7 +2,7 @@
 
 namespace DocConvert_Core.interfaces
 {
-    interface iniproperties
+    internal interface iniproperties
     {
         string LicenseKEY { get; set; }
         string ServerName { get; set; }

@@ -65,16 +65,24 @@ namespace DocConvert_Core.OfficeLib
                 object AddToRecentFiles = false;
                 object PasswordDocument = Type.Missing;
                 if (docPassword != null)
+                {
                     PasswordDocument = docPassword;
+                }
+
                 object PasswordTemplate = Type.Missing;
                 object Revert = Type.Missing;
                 object WritePasswordDocument = Type.Missing;
                 object WritePasswordTemplate = Type.Missing;
                 object Format = Type.Missing;
                 if (Path.GetExtension(FilePath).Equals(".txt"))
+                {
                     Format = WdOpenFormat.wdOpenFormatEncodedText;
+                }
                 else if (Path.GetExtension(FilePath).Equals(".html"))
+                {
                     Format = WdOpenFormat.wdOpenFormatWebPages;
+                }
+
                 object Encoding = Type.Missing;
                 object Visible = false;
                 object OpenAndRepair = Type.Missing;
@@ -106,7 +114,9 @@ namespace DocConvert_Core.OfficeLib
                 #endregion
                 #region 페이지수 얻기
                 if (pageCounting)
+                {
                     returnValue.PageCount = doc.ComputeStatistics(WdStatistic.wdStatisticPages, -1);
+                }
                 #endregion
                 #region 저장 옵션 https://docs.microsoft.com/ko-kr/dotnet/api/microsoft.office.tools.word.document.saveas2?view=vsto-2017
                 object FileFormat = WdSaveFormat.wdFormatPDF;

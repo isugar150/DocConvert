@@ -1,6 +1,6 @@
 ﻿namespace DocConvert_Core.interfaces
 {
-    interface returnValue
+    internal interface returnValue
     {
         bool isSuccess { get; set; }
         string Message { get; set; }

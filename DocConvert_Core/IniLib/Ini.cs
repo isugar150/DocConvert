@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace DocConvert_Core.IniLib
 {
@@ -44,7 +43,7 @@ namespace DocConvert_Core.IniLib
 
         public IniValue(object value)
         {
-            var formattable = value as IFormattable;
+            IFormattable formattable = value as IFormattable;
             if (formattable != null)
             {
                 Value = formattable.ToString(null, System.Globalization.CultureInfo.InvariantCulture);
@@ -77,7 +76,7 @@ namespace DocConvert_Core.IniLib
                 result = default(bool);
                 return false;
             }
-            var boolStr = Value.Trim().ToLowerInvariant();
+            string boolStr = Value.Trim().ToLowerInvariant();
             if (boolStr == "true")
             {
                 result = true;
@@ -156,10 +155,10 @@ namespace DocConvert_Core.IniLib
             {
                 return "";
             }
-            var trimmed = Value.Trim();
+            string trimmed = Value.Trim();
             if (allowOuterQuotes && trimmed.Length >= 2 && trimmed[0] == '"' && trimmed[trimmed.Length - 1] == '"')
             {
-                var inner = trimmed.Substring(1, trimmed.Length - 2);
+                string inner = trimmed.Substring(1, trimmed.Length - 2);
                 return preserveWhitespace ? inner : inner.Trim();
             }
             else
@@ -247,7 +246,7 @@ namespace DocConvert_Core.IniLib
 
         public void Save(string path, FileMode mode = FileMode.Create)
         {
-            using (var stream = new FileStream(path, mode, FileAccess.Write))
+            using (FileStream stream = new FileStream(path, mode, FileAccess.Write))
             {
                 Save(stream);
             }
@@ -255,7 +254,7 @@ namespace DocConvert_Core.IniLib
 
         public void Save(Stream stream)
         {
-            using (var writer = new StreamWriter(stream))
+            using (StreamWriter writer = new StreamWriter(stream))
             {
                 Save(writer);
             }
@@ -263,12 +262,12 @@ namespace DocConvert_Core.IniLib
 
         public void Save(StreamWriter writer)
         {
-            foreach (var section in sections)
+            foreach (KeyValuePair<string, IniSection> section in sections)
             {
                 if (section.Value.Count > 0 || SaveEmptySections)
                 {
                     writer.WriteLine(string.Format("[{0}]", section.Key.Trim()));
-                    foreach (var kvp in section.Value)
+                    foreach (KeyValuePair<string, IniValue> kvp in section.Value)
                     {
                         writer.WriteLine(string.Format("{0}={1}", kvp.Key, kvp.Value));
                     }
@@ -279,7 +278,7 @@ namespace DocConvert_Core.IniLib
 
         public void Load(string path, bool ordered = false)
         {
-            using (var stream = new FileStream(path, FileMode.Open, FileAccess.Read))
+            using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read))
             {
                 Load(stream, ordered);
             }
@@ -287,7 +286,7 @@ namespace DocConvert_Core.IniLib
 
         public void Load(Stream stream, bool ordered = false)
         {
-            using (var reader = new StreamReader(stream))
+            using (StreamReader reader = new StreamReader(stream))
             {
                 Load(reader, ordered);
             }
@@ -299,20 +298,20 @@ namespace DocConvert_Core.IniLib
 
             while (!reader.EndOfStream)
             {
-                var line = reader.ReadLine();
+                string line = reader.ReadLine();
 
                 if (line != null)
                 {
-                    var trimStart = line.TrimStart();
+                    string trimStart = line.TrimStart();
 
                     if (trimStart.Length > 0)
                     {
                         if (trimStart[0] == '[')
                         {
-                            var sectionEnd = trimStart.IndexOf(']');
+                            int sectionEnd = trimStart.IndexOf(']');
                             if (sectionEnd > 0)
                             {
-                                var sectionName = trimStart.Substring(1, sectionEnd - 1).Trim();
+                                string sectionName = trimStart.Substring(1, sectionEnd - 1).Trim();
                                 section = new IniSection(StringComparer) { Ordered = ordered };
                                 sections[sectionName] = section;
                             }
@@ -334,7 +333,7 @@ namespace DocConvert_Core.IniLib
 
         private bool LoadValue(string line, out string key, out IniValue val)
         {
-            var assignIndex = line.IndexOf('=');
+            int assignIndex = line.IndexOf('=');
             if (assignIndex <= 0)
             {
                 key = null;
@@ -343,7 +342,7 @@ namespace DocConvert_Core.IniLib
             }
 
             key = line.Substring(0, assignIndex).Trim();
-            var value = line.Substring(assignIndex + 1);
+            string value = line.Substring(assignIndex + 1);
 
             val = new IniValue(value);
             return true;
@@ -386,7 +385,7 @@ namespace DocConvert_Core.IniLib
 
         public IniSection Add(string section, bool ordered = false)
         {
-            var value = new IniSection(StringComparer) { Ordered = ordered };
+            IniSection value = new IniSection(StringComparer) { Ordered = ordered };
             sections.Add(section, value);
             return value;
         }
@@ -471,7 +470,7 @@ namespace DocConvert_Core.IniLib
             }
             set
             {
-                var v = value;
+                IniSection v = value;
                 if (v.Comparer != StringComparer)
                 {
                     v = new IniSection(v, StringComparer);
@@ -482,18 +481,18 @@ namespace DocConvert_Core.IniLib
 
         public string GetContents()
         {
-            using (var stream = new MemoryStream())
+            using (MemoryStream stream = new MemoryStream())
             {
                 Save(stream);
                 stream.Flush();
-                var builder = new StringBuilder(Encoding.UTF8.GetString(stream.ToArray()));
+                StringBuilder builder = new StringBuilder(Encoding.UTF8.GetString(stream.ToArray()));
                 return builder.ToString();
             }
         }
 
         public static IEqualityComparer<string> DefaultComparer = new CaseInsensitiveStringComparer();
 
-        class CaseInsensitiveStringComparer : IEqualityComparer<string>
+        private class CaseInsensitiveStringComparer : IEqualityComparer<string>
         {
             public bool Equals(string x, string y)
             {
@@ -568,7 +567,7 @@ namespace DocConvert_Core.IniLib
             {
                 throw new ArgumentException("Index and count were out of bounds for the array or count is greater than the number of elements from index to the end of the source collection.");
             }
-            var end = index + count;
+            int end = index + count;
             for (int i = index; i < end; i++)
             {
                 if (Comparer.Equals(orderedKeys[i], key))
@@ -615,7 +614,7 @@ namespace DocConvert_Core.IniLib
             {
                 throw new ArgumentException("Index and count were out of bounds for the array or count is greater than the number of elements from index to the end of the source collection.");
             }
-            var end = index + count;
+            int end = index + count;
             for (int i = end - 1; i >= index; i--)
             {
                 if (Comparer.Equals(orderedKeys[i], key))
@@ -654,7 +653,7 @@ namespace DocConvert_Core.IniLib
             {
                 throw new IndexOutOfRangeException("Index must be within the bounds." + Environment.NewLine + "Parameter name: index");
             }
-            foreach (var kvp in collection)
+            foreach (KeyValuePair<string, IniValue> kvp in collection)
             {
                 Insert(index, kvp.Key, kvp.Value);
                 index++;
@@ -671,7 +670,7 @@ namespace DocConvert_Core.IniLib
             {
                 throw new IndexOutOfRangeException("Index must be within the bounds." + Environment.NewLine + "Parameter name: index");
             }
-            var key = orderedKeys[index];
+            string key = orderedKeys[index];
             orderedKeys.RemoveAt(index);
             values.Remove(key);
         }
@@ -736,7 +735,7 @@ namespace DocConvert_Core.IniLib
             {
                 throw new InvalidOperationException("Cannot call GetOrderedValues() on IniSection: section was not ordered.");
             }
-            var list = new List<IniValue>();
+            List<IniValue> list = new List<IniValue>();
             for (int i = 0; i < orderedKeys.Count; i++)
             {
                 list.Add(values[orderedKeys[i]]);
@@ -768,7 +767,7 @@ namespace DocConvert_Core.IniLib
                 {
                     throw new IndexOutOfRangeException("Index must be within the bounds." + Environment.NewLine + "Parameter name: index");
                 }
-                var key = orderedKeys[index];
+                string key = orderedKeys[index];
                 values[key] = value;
             }
         }
@@ -843,7 +842,7 @@ namespace DocConvert_Core.IniLib
 
         public bool Remove(string key)
         {
-            var ret = values.Remove(key);
+            bool ret = values.Remove(key);
             if (Ordered && ret)
             {
                 for (int i = 0; i < orderedKeys.Count; i++)
@@ -914,7 +913,7 @@ namespace DocConvert_Core.IniLib
 
         bool ICollection<KeyValuePair<string, IniValue>>.Remove(KeyValuePair<string, IniValue> item)
         {
-            var ret = ((IDictionary<string, IniValue>)values).Remove(item);
+            bool ret = ((IDictionary<string, IniValue>)values).Remove(item);
             if (Ordered && ret)
             {
                 for (int i = 0; i < orderedKeys.Count; i++)

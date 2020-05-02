@@ -29,12 +29,18 @@ namespace DocConvert_Server.Forms
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listView1.SelectedItems.Count == 0)
+            {
                 return;
+            }
+
             ListView.SelectedListViewItemCollection itemColl = listView1.SelectedItems;
             foreach (ListViewItem item in itemColl)
             {
                 for (int i = 0; i < listView1.Items.Count; i++)
+                {
                     listView1.Items[i].SubItems[0].Text = "";
+                }
+
                 listView1.Items[item.Index].SubItems[0].Text = "*";
                 textBox1.Text = getLicenseInfo(listView1.Items[item.Index].SubItems[1].Text);
             }
@@ -61,25 +67,45 @@ namespace DocConvert_Server.Forms
             #endregion
 
             if (license.Equals("DocConvert"))
+            {
                 return docConvert;
+            }
             else if (license.Equals("vtortola.WebSockets"))
+            {
                 return webSockets;
+            }
             else if (license.Equals("websocket-sharp"))
+            {
                 return webSocketClient;
+            }
             else if (license.Equals("pdfium"))
+            {
                 return pdfium;
+            }
             else if (license.Equals("FluentFTP"))
+            {
                 return fluentFTP;
+            }
             else if (license.Equals("NLOG"))
+            {
                 return nLog;
+            }
             else if (license.Equals("log4j"))
+            {
                 return log4j;
+            }
             else if (license.Equals("phantomjs"))
+            {
                 return phantomjs;
+            }
             else if (license.Equals("SharpZipLib"))
+            {
                 return sharpziplib;
+            }
             else
+            {
                 return null;
+            }
         }
     }
 }

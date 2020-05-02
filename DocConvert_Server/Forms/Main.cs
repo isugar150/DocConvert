@@ -5,7 +5,6 @@ using DocConvert_Server.License;
 using Microsoft.Win32;
 using Newtonsoft.Json.Linq;
 using NLog;
-using NLog.Fluent;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -68,7 +67,7 @@ namespace DocConvert_Server
                 {
                     if (new FileInfo("./DocConvert_Server.ini").Exists)
                     {
-                        Console.WriteLine("test"+pairs["DC Server"]["DisplayLogCnt"].ToString());
+                        Console.WriteLine("test" + pairs["DC Server"]["DisplayLogCnt"].ToString());
                         pairs.Load("./DocConvert_Server.ini");
                         IniProperties.LicenseKEY = pairs["DC Server"]["LicenseKEY"].ToString();
                         IniProperties.ServerName = pairs["DC Server"]["ServerName"].ToString();
@@ -120,7 +119,9 @@ namespace DocConvert_Server
                         MessageBox.Show("설정 파일을 초기화하였습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
+                    {
                         program_Exit(true);
+                    }
                 }
             }
             #endregion
@@ -136,14 +137,18 @@ namespace DocConvert_Server
 
                 DevLog.Write("[INFO] 나의 하드웨어 ID: " + new LicenseInfo().getHWID(), LOG_LEVEL.INFO);
                 if (!noLicense)
+                {
                     DevLog.Write(string.Format("[INFO] 라이센스 만료날짜: {0}", checkLicense["EndDate"].ToString()), LOG_LEVEL.INFO);
-
+                }
             }
             catch (Exception) { new MessageDialog("라이센스 오류", "라이센스키 파싱오류.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); if (!noLicense) { program_Exit(true); return; } }
             #endregion
             DirectoryInfo directoryInfo = new DirectoryInfo(IniProperties.DataPath + @"\tmp");
             if (!directoryInfo.Exists)
+            {
                 directoryInfo.Create();
+            }
+
             toolStripStatusLabel4.Text = "IP Address: " + IniProperties.BindIP;
             toolStripStatusLabel6.Text = "WebSocket Port: " + IniProperties.WebSocketPort;
             toolStripStatusLabel7.Text = "File Server Port: " + IniProperties.FileServerPort;
@@ -154,9 +159,14 @@ namespace DocConvert_Server
             DevLog.Write("[INFO] 클라이언트 키: " + IniProperties.ClientKEY, LOG_LEVEL.INFO);
             DevLog.Write("[INFO] 오피스 디버깅모드: " + IniProperties.OfficeDebugModeYn, LOG_LEVEL.INFO);
             if (IniProperties.ChromiumCaptureYn)
+            {
                 DevLog.Write("[INFO] 웹 캡쳐 모드: Chromium Capture", LOG_LEVEL.INFO);
+            }
             else
+            {
                 DevLog.Write("[INFO] 웹 캡쳐 모드: Phantom JS", LOG_LEVEL.INFO);
+            }
+
             DevLog.Write("[INFO] 웹 캡쳐 타임아웃: " + IniProperties.WebCaptureTimeout + "초", LOG_LEVEL.INFO);
 
             #region 한글 DLL 레지스트리 등록
@@ -171,9 +181,15 @@ namespace DocConvert_Server
             {
                 string SchedulerInfo = "";
                 if (IniProperties.CleanWorkspaceSchedulerYn)
+                {
                     SchedulerInfo += string.Format("작업공간 정리 스케줄러: {0}일   ", IniProperties.CleanWorkspaceDay);
+                }
+
                 if (IniProperties.CleanLogSchedulerYn)
+                {
                     SchedulerInfo += string.Format("로그 정리 스케줄러: {0}일", IniProperties.CleanLogDay);
+                }
+
                 DevLog.Write("[Scheduler] 스케줄러가 실행중입니다. " + SchedulerInfo, LOG_LEVEL.INFO);
 
                 tScheduler = new System.Windows.Forms.Timer();
@@ -196,16 +212,16 @@ namespace DocConvert_Server
                 {
                     endpoint = new IPEndPoint(IPAddress.Parse(IniProperties.BindIP), IniProperties.WebSocketPort);
                 }
-                var options = new WebSocketListenerOptions()
+                WebSocketListenerOptions options = new WebSocketListenerOptions()
                 {
-                    WebSocketReceiveTimeout = new TimeSpan(0, 1, 0), // 클라이언트가 서버로 요청했을때 서버가 바쁘면 Timeout
+                    WebSocketReceiveTimeout = new TimeSpan(0, 2, 0), // 클라이언트가 서버로 요청했을때 서버가 바쁘면 Timeout
                     WebSocketSendTimeout = new TimeSpan(0, 0, 5), // 클라이언트가 연결을 끊었을때 Timeout
-                    NegotiationTimeout = new TimeSpan(0, 1, 0),
-                    PingTimeout = new TimeSpan(0, 1, 0),
+                    NegotiationTimeout = new TimeSpan(0, 2, 0),
+                    PingTimeout = new TimeSpan(0, 2, 0),
                     PingMode = PingModes.LatencyControl
                 };
                 webSocketServer = new WebSocketListener(endpoint, options);
-                var rfc6455 = new vtortola.WebSockets.Rfc6455.WebSocketFactoryRfc6455(webSocketServer);
+                vtortola.WebSockets.Rfc6455.WebSocketFactoryRfc6455 rfc6455 = new vtortola.WebSockets.Rfc6455.WebSocketFactoryRfc6455(webSocketServer);
                 rfc6455.MessageExtensions.RegisterExtension(new WebSocketDeflateExtension());
                 webSocketServer.Standards.RegisterStandard(rfc6455);
                 webSocketServer.Start();
@@ -213,7 +229,7 @@ namespace DocConvert_Server
                 DevLog.Write("[Web Socket] Server Listening...", LOG_LEVEL.INFO);
                 DevLog.Write(string.Format("[Web Socket][INFO] IP: {0}   포트: {1}", endpoint.Address, endpoint.Port), LOG_LEVEL.INFO);
 
-                var task = Task.Run(() => AcceptWebSocketClientsAsync(webSocketServer, cancellation.Token));
+                Task task = Task.Run(() => AcceptWebSocketClientsAsync(webSocketServer, cancellation.Token));
                 pictureBox3.Image = Properties.Resources.success_icon;
             }
             catch (Exception e1)
@@ -244,7 +260,9 @@ namespace DocConvert_Server
                     toolStripStatusLabel3.Text = string.Format("Web Socket Session Count: {0}", wsSessionCount);
 
                     if (IsTcpPortAvailable(IniProperties.WebSocketPort))
+                    {
                         pictureBox3.Image = Properties.Resources.success_icon;
+                    }
                     else
                     {
                         pictureBox3.Image = Properties.Resources.error_icon;
@@ -257,9 +275,14 @@ namespace DocConvert_Server
                     }
 
                     if (IsTcpPortAvailable(IniProperties.FileServerPort))
+                    {
                         pictureBox2.Image = Properties.Resources.success_icon;
+                    }
                     else
+                    {
                         pictureBox2.Image = Properties.Resources.error_icon;
+                    }
+
                     Thread.Sleep(1000);
                 }
             }).Start();
@@ -273,20 +296,22 @@ namespace DocConvert_Server
         /// <param name="server">웹소켓 리스너</param>
         /// <param name="token">웹소켓 토큰</param>
         /// <returns></returns>
-        async Task AcceptWebSocketClientsAsync(WebSocketListener server, CancellationToken token)
+        private async Task AcceptWebSocketClientsAsync(WebSocketListener server, CancellationToken token)
         {
             while (!token.IsCancellationRequested)
             {
                 try
                 {
-                    var ws = await server.AcceptWebSocketAsync(token).ConfigureAwait(false);
+                    WebSocket ws = await server.AcceptWebSocketAsync(token).ConfigureAwait(false);
 
                     DevLog.Write(string.Format("[WebSocket] 접속 IP: {0}", ws.RemoteEndpoint.Address), LOG_LEVEL.INFO);
 
                     //소켓이 null 이 아니면, 핸들러를 스타트 합니다.(또 다른 친구가 들어올 수도 있으니 비동기로...)
                     if (ws != null)
+                    {
                         // await Task.Run(() => HandleConnectionAsync(ws, token)); <== await 시 요청을 받으면 이전 요청이 종료할때까지 대기했다가 실행
                         _ = Task.Run(() => HandleConnectionAsync(ws, token));
+                    }
                 }
                 catch (Exception)
                 {
@@ -302,7 +327,7 @@ namespace DocConvert_Server
         /// <param name="ws">웹소켓</param>
         /// <param name="cancellation">토큰</param>
         /// <returns></returns>
-        async Task HandleConnectionAsync(WebSocket ws, CancellationToken cancellation)
+        private async Task HandleConnectionAsync(WebSocket ws, CancellationToken cancellation)
         {
             try
             {
@@ -409,7 +434,7 @@ namespace DocConvert_Server
             if (!checkBox1.Checked)
             {
                 textBox1.Text = "";
-                foreach (var logList in listBoxLog.SelectedItems)
+                foreach (object logList in listBoxLog.SelectedItems)
                 {
                     textBox1.AppendText(logList.ToString() + "\r\n");
                 }
@@ -431,11 +456,11 @@ namespace DocConvert_Server
         /// <returns>살아잇으면 true</returns>
         public static bool IsTcpPortAvailable(int tcpPort)
         {
-            var ipgp = IPGlobalProperties.GetIPGlobalProperties();
+            IPGlobalProperties ipgp = IPGlobalProperties.GetIPGlobalProperties();
 
             // Check LISTENING ports
             IPEndPoint[] endpoints = ipgp.GetActiveTcpListeners();
-            foreach (var ep in endpoints)
+            foreach (IPEndPoint ep in endpoints)
             {
                 if (ep.Port == tcpPort)
                 {
@@ -451,7 +476,7 @@ namespace DocConvert_Server
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (var dialog = new AboutForm())
+            using (AboutForm dialog = new AboutForm())
             {
                 dialog.ShowDialog(this);
             }
@@ -471,9 +496,13 @@ namespace DocConvert_Server
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
             if (this.TopMost)
+            {
                 this.TopMost = false;
+            }
             else
+            {
                 this.TopMost = true;
+            }
         }
 
         /// <summary>
@@ -523,7 +552,9 @@ namespace DocConvert_Server
         public static void deleteFolder(string strPath, int DeletionCycle)
         {
             foreach (string Folder in Directory.GetDirectories(strPath))
+            {
                 deleteFolder(Folder, DeletionCycle); //재귀함수 호출
+            }
 
             foreach (string file in Directory.GetFiles(strPath))
             {
@@ -552,7 +583,10 @@ namespace DocConvert_Server
             string[] Directories = Directory.GetDirectories(dir);   // Defalut Folder
             {
                 string[] Files = Directory.GetFiles(dir);   // File list Search
-                if (Files.Length != 0) return true;
+                if (Files.Length != 0)
+                {
+                    return true;
+                }
 
                 foreach (string nodeDir in Directories)   // Folder list Search
                 {
@@ -573,7 +607,10 @@ namespace DocConvert_Server
                 if (MessageBox.Show(this, "DocConvert 서버를 종료하시겠습니까?", "경고", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
                 {
                     if (webSocketServer != null)
+                    {
                         webSocketServer.Dispose();
+                    }
+
                     try
                     {
                         Application.ExitThread();
@@ -585,7 +622,10 @@ namespace DocConvert_Server
             else
             {
                 if (webSocketServer != null)
+                {
                     webSocketServer.Dispose();
+                }
+
                 try
                 {
                     Application.ExitThread();

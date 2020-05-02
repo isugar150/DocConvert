@@ -44,7 +44,7 @@ namespace DocConvert_Util
             try
             {
                 byte[] getbyte = new byte[4096];
-                var nRecv = socket.Receive(getbyte, 0, getbyte.Length, SocketFlags.None);
+                int nRecv = socket.Receive(getbyte, 0, getbyte.Length, SocketFlags.None);
                 return new Tuple<int, byte[]>(nRecv, getbyte);
             }
             catch (SocketException se)

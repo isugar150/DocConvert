@@ -66,7 +66,10 @@ namespace DocConvert_Core.OfficeLib
                 object Format = Type.Missing;
                 object Password = Type.Missing;
                 if (docPassword != null)
+                {
                     Password = docPassword;
+                }
+
                 object WriteResPassword = Type.Missing;
                 object IgnoreReadOnlyRecommended = true;
                 object Origin = Type.Missing;

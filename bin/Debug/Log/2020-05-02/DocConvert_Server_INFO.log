@@ -1,0 +1,81 @@
+2020-05-02 12:33:39.1878  INFO - [INFO] 데이터 경로: C:\Data
+2020-05-02 12:33:39.1878  INFO - [INFO] 클라이언트 키: B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-05-02 12:33:39.1878  INFO - [INFO] 오피스 디버깅모드: True
+2020-05-02 12:33:39.1878  INFO - [INFO] 웹 캡쳐 모드: Phantom JS
+2020-05-02 12:33:39.1878  INFO - [INFO] 웹 캡쳐 타임아웃: 30초
+2020-05-02 12:33:39.1878  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-05-02 12:33:39.1878  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 10일
+2020-05-02 12:33:39.2666  INFO - [Web Socket] Server Listening...
+2020-05-02 12:33:39.2666  INFO - [Web Socket][INFO] IP: 0.0.0.0   포트: 12000
+2020-05-02 12:33:45.3400  INFO - [WebSocket] 접속 IP: 127.0.0.1
+2020-05-02 12:33:45.4308  INFO - 
+[WebSocket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://github.com/isugar150/DocConvert"
+}
+
+2020-05-02 12:33:51.2026  INFO - 
+[WebSocket][Server => Client]
+{
+  "URL": "/workspace/2a4952fc-c1a9-42a0-b645-a3aad769c31b_2020-05-02/0.png",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 1,
+  "Method": "WebCapture"
+}
+
+2020-05-02 12:33:51.2026  INFO - [WebSocket] 작업 소요시간: 00:00:05.8386613
+2020-05-02 12:33:51.2096  INFO - [WebSocket] 클라이언트와 연결을 해제함.
+2020-05-02 12:34:26.2159  INFO - [INFO] 데이터 경로: C:\Data
+2020-05-02 12:34:26.2159  INFO - [INFO] 클라이언트 키: B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2
+2020-05-02 12:34:26.2159  INFO - [INFO] 오피스 디버깅모드: True
+2020-05-02 12:34:26.2159  INFO - [INFO] 웹 캡쳐 모드: Phantom JS
+2020-05-02 12:34:26.2159  INFO - [INFO] 웹 캡쳐 타임아웃: 30초
+2020-05-02 12:34:26.2159  INFO - [INFO] 한글 DLL을 레지스트리에 등록하였습니다.
+2020-05-02 12:34:26.2159  INFO - [Scheduler] 스케줄러가 실행중입니다. 작업공간 정리 스케줄러: 3일   로그 정리 스케줄러: 10일
+2020-05-02 12:34:26.2987  INFO - [Web Socket] Server Listening...
+2020-05-02 12:34:26.2987  INFO - [Web Socket][INFO] IP: 0.0.0.0   포트: 12000
+2020-05-02 12:34:27.7310  INFO - [WebSocket] 접속 IP: 127.0.0.1
+2020-05-02 12:34:27.8088  INFO - 
+[WebSocket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://www.naver.com/"
+}
+
+2020-05-02 12:34:34.4684  INFO - 
+[WebSocket][Server => Client]
+{
+  "URL": "/workspace/2880430a-f52c-4eee-81ef-55ac112bc4ac_2020-05-02/0.png",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 1,
+  "Method": "WebCapture"
+}
+
+2020-05-02 12:34:34.4684  INFO - [WebSocket] 작업 소요시간: 00:00:06.7194694
+2020-05-02 12:34:34.4684  INFO - [WebSocket] 클라이언트와 연결을 해제함.
+2020-05-02 12:34:49.5008  INFO - [WebSocket] 접속 IP: 127.0.0.1
+2020-05-02 12:34:49.5068  INFO - 
+[WebSocket][Client => Server]
+{
+  "KEY": "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2",
+  "Method": "WebCapture",
+  "URL": "https://ko.javascript.info/?fbclid=IwAR0u39RKLA76nYcZj4njL2vjvEFiwtFrJDESRXo4UiiHt_nd1L1AyjqDwAA"
+}
+
+2020-05-02 12:34:57.3440  INFO - 
+[WebSocket][Server => Client]
+{
+  "URL": "/workspace/94da48a2-39b8-41f3-b452-c69673d35df7_2020-05-02/0.png",
+  "isSuccess": true,
+  "msg": "WebCapture에 성공하였습니다.",
+  "convertImgCnt": 1,
+  "Method": "WebCapture"
+}
+
+2020-05-02 12:34:57.3440  INFO - [WebSocket] 작업 소요시간: 00:00:07.8372453
+2020-05-02 12:34:57.3440  INFO - [WebSocket] 클라이언트와 연결을 해제함.

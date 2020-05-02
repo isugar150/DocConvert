@@ -1,5 +1,4 @@
-﻿using DocConvert_Core.FileLib;
-using DocConvert_Core.HWPLib;
+﻿using DocConvert_Core.HWPLib;
 using DocConvert_Core.imageLib;
 using DocConvert_Core.interfaces;
 using DocConvert_Core.OfficeLib;
@@ -78,13 +77,17 @@ namespace DocConvert_Server
 
                     // 폴더가 있으면 삭제
                     if (createDirectory.Exists)
+                    {
                         createDirectory.Delete(true);
+                    }
 
                     createDirectory.Create();
 
                     // 파일 이동
                     if (moveFile.Exists)
+                    {
                         moveFile.MoveTo(fileFullPath);
+                    }
 
                     // PDF로 변환
 
@@ -143,7 +146,10 @@ namespace DocConvert_Server
                         // 이미지로 변환
                         String imageOutput = Path.GetDirectoryName(outPath) + "\\" + Path.GetFileNameWithoutExtension(outPath) + "\\";
                         if (!new DirectoryInfo(imageOutput).Exists)
+                        {
                             new DirectoryInfo(imageOutput).Create();
+                        }
+
                         if (convertIMG.Equals("1"))
                         {
                             status = ConvertImg.PDFtoJpeg(outPath, imageOutput);
@@ -164,9 +170,15 @@ namespace DocConvert_Server
                             {
                                 string zipoutPath = Path.GetDirectoryName(outPath) + @"\" + Path.GetFileNameWithoutExtension(outPath) + ".zip";
                                 if (File.Exists(zipoutPath))
+                                {
                                     File.Delete(zipoutPath);
+                                }
+
                                 if (Directory.Exists(outPath + @"\" + Path.GetFileNameWithoutExtension(outPath)))
+                                {
                                     Directory.Delete(outPath + @"\" + Path.GetFileNameWithoutExtension(outPath));
+                                }
+
                                 ZipLib.CreateZipFile(Directory.GetFiles(imageOutput), zipoutPath);
                             }
                         }
@@ -184,7 +196,10 @@ namespace DocConvert_Server
                         responseMsg["URL"] = "/" + documents + "/" + md5_filechecksum;
                         responseMsg["isSuccess"] = status.isSuccess;
                         if (PAGINGNUM)
+                        {
                             responseMsg["pageNum"] = status.PageCount;
+                        }
+
                         responseMsg["msg"] = status.Message;
                     }
                     responseMsg["useCompression"] = requestMsg["useCompression"];
@@ -195,8 +210,11 @@ namespace DocConvert_Server
                     string guidPath = Guid.NewGuid().ToString() + "_" + DateTime.Now.ToString("yyyy-MM-dd");
                     string dataPath = @"\workspace\" + guidPath; // 파일 출력경로
                     new DirectoryInfo(Form1.IniProperties.DataPath + dataPath).Create();
-                    if(!new DirectoryInfo(@"..\..\..\..\CefSharp.Example\Resources").Exists)
+                    if (!new DirectoryInfo(@"..\..\..\..\CefSharp.Example\Resources").Exists)
+                    {
                         new DirectoryInfo(@"..\..\..\..\CefSharp.Example\Resources").Create();
+                    }
+
                     if (Form1.IniProperties.ChromiumCaptureYn) //Chromium 캡쳐시
                     {
                         Thread WebCapture = new Thread(() =>
@@ -284,9 +302,11 @@ namespace DocConvert_Server
 
         private string MD5_CheckSUM(string filename)
         {
-            using (var fs = File.OpenRead(filename))
-            using (var md5 = new MD5CryptoServiceProvider())
+            using (FileStream fs = File.OpenRead(filename))
+            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+            {
                 return string.Join("", md5.ComputeHash(fs).ToArray().Select(i => i.ToString("X2")));
+            }
         }
     }
 }

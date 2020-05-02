@@ -1,9 +1,7 @@
 ﻿using DocConvert_Core.interfaces;
-using Microsoft.Office.Interop.Word;
 using NLog;
 using PdfiumViewer;
 using System;
-using System.Diagnostics;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
@@ -45,19 +43,23 @@ namespace DocConvert_Core.imageLib
                     document[i] = PdfDocument.Load(SourcePDF);
 
                     if (i == (pageCount / 100))
+                    {
                         x = pageCount % 100;
+                    }
                     else
+                    {
                         x = 100;
+                    }
 
                     for (int j = i * 100; j < (i * 100) + x; j++)
                     {
-                        var dpi = 300;
+                        int dpi = 300;
 
-                        using (var image = document[i].Render(j, dpi, dpi, quality))
+                        using (System.Drawing.Image image = document[i].Render(j, dpi, dpi, quality))
                         {
-                            var encoder = ImageCodecInfo.GetImageEncoders()
+                            ImageCodecInfo encoder = ImageCodecInfo.GetImageEncoders()
                                 .First(c => c.FormatID == ImageFormat.Jpeg.Guid);
-                            var encParams = new EncoderParameters(1);
+                            EncoderParameters encParams = new EncoderParameters(1);
                             encParams.Param[0] = new EncoderParameter(Encoder.Quality, 100L);
 
                             image.Save(outPath + (j + 1) + ".jpg", encoder, encParams);
@@ -123,19 +125,23 @@ namespace DocConvert_Core.imageLib
                     document[i] = PdfDocument.Load(SourcePDF);
 
                     if (i == (pageCount / 100))
+                    {
                         x = pageCount % 100;
+                    }
                     else
+                    {
                         x = 100;
+                    }
 
                     for (int j = i * 100; j < (i * 100) + x; j++)
                     {
-                        var dpi = 300;
+                        int dpi = 300;
 
-                        using (var image = document[i].Render(j, dpi, dpi, quality))
+                        using (System.Drawing.Image image = document[i].Render(j, dpi, dpi, quality))
                         {
-                            var encoder = ImageCodecInfo.GetImageEncoders()
+                            ImageCodecInfo encoder = ImageCodecInfo.GetImageEncoders()
                                 .First(c => c.FormatID == ImageFormat.Bmp.Guid);
-                            var encParams = new EncoderParameters(1);
+                            EncoderParameters encParams = new EncoderParameters(1);
                             encParams.Param[0] = new EncoderParameter(Encoder.Quality, 100L);
 
                             image.Save(outPath + (j + 1) + ".bmp", encoder, encParams);
@@ -202,19 +208,23 @@ namespace DocConvert_Core.imageLib
                     document[i] = PdfDocument.Load(SourcePDF);
 
                     if (i == (pageCount / 100))
+                    {
                         x = pageCount % 100;
+                    }
                     else
+                    {
                         x = 100;
+                    }
 
                     for (int j = i * 100; j < (i * 100) + x; j++)
                     {
-                        var dpi = 300;
+                        int dpi = 300;
 
-                        using (var image = document[i].Render(j, dpi, dpi, quality))
+                        using (System.Drawing.Image image = document[i].Render(j, dpi, dpi, quality))
                         {
-                            var encoder = ImageCodecInfo.GetImageEncoders()
+                            ImageCodecInfo encoder = ImageCodecInfo.GetImageEncoders()
                                 .First(c => c.FormatID == ImageFormat.Png.Guid);
-                            var encParams = new EncoderParameters(1);
+                            EncoderParameters encParams = new EncoderParameters(1);
                             encParams.Param[0] = new EncoderParameter(Encoder.Quality, 100L);
 
                             image.Save(outPath + (j + 1) + ".png", encoder, encParams);
@@ -259,7 +269,7 @@ namespace DocConvert_Core.imageLib
         {
             try
             {
-                using (var document = PdfDocument.Load(SourcePDF))
+                using (PdfDocument document = PdfDocument.Load(SourcePDF))
                 {
                     return document.PageCount;
                 }

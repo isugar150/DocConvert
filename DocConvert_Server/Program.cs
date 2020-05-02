@@ -3,13 +3,13 @@ using System.Windows.Forms;
 
 namespace DocConvert_Server
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// 해당 애플리케이션의 주 진입점입니다.
         /// </summary>
         [STAThread]
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

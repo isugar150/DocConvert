@@ -1,21 +1,11 @@
-﻿using NLog;
-using NLog.Internal;
+﻿using DocConvert_Core.IniLib;
+using DocConvert_Core.interfaces;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Configuration;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-using DocConvert_Core.IniLib;
 using System.IO;
-using DocConvert_Core.interfaces;
+using System.Threading;
+using System.Windows.Forms;
 
 namespace DocConvert_Manager
 {
@@ -63,7 +53,9 @@ namespace DocConvert_Manager
                         MessageBox.Show("설정 파일을 초기화하였습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
+                    {
                         program_Exit(true);
+                    }
                 }
             }
             #endregion
@@ -97,9 +89,14 @@ namespace DocConvert_Manager
                         if (targetPID == 0)
                         {
                             if (IniProperties.targetPath.Contains("./"))
-                                    Process.Start(Application.StartupPath + @"\" + IniProperties.targetPath.Replace("./", ""));
+                            {
+                                Process.Start(Application.StartupPath + @"\" + IniProperties.targetPath.Replace("./", ""));
+                            }
                             else
-                                    Process.Start(IniProperties.targetPath);
+                            {
+                                Process.Start(IniProperties.targetPath);
+                            }
+
                             DevLog.Write("타겟 프로세스를 실행하였습니다.");
                         }
                     }
@@ -224,9 +221,13 @@ namespace DocConvert_Manager
         {
 
             if (this.Visible && e.Button == MouseButtons.Left)
+            {
                 this.Visible = false;
+            }
             else
+            {
                 this.Visible = true;
+            }
         }
     }
 }

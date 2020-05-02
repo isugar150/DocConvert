@@ -3,7 +3,6 @@ using DocConvert_Core.interfaces;
 using NLog;
 using System;
 using System.Reflection;
-using System.Runtime.InteropServices;
 using System.Threading;
 
 namespace DocConvert_Core.HWPLib

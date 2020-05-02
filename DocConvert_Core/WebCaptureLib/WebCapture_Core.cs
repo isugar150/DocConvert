@@ -42,7 +42,10 @@ namespace DocConvert_Core.WebCaptureLib
                 while (!process.HasExited)
                 {
                     if (DateTime.Now > timeTaken)
+                    {
                         process.Kill();
+                    }
+
                     Thread.Sleep(300);
                 }
                 process.Dispose();
@@ -83,9 +86,11 @@ namespace DocConvert_Core.WebCaptureLib
             try
             {
                 if (docWidth < 1366)
+                {
                     docWidth = 1366;
+                }
 
-                string ChromiumPath = "\"" + Application.StartupPath + @"\CefSharp WebCapture\CefSharp.OffScreen.Example.exe" + "\"";
+                string ChromiumPath = "\"" + Application.StartupPath + @"\CefSharp\CefSharp.OffScreen.Example.exe" + "\"";
 
                 string arguments = string.Format("{0} {1} {2}", "\"" + Url + "\"", "\"" + outPath + "\"", "\"" + docWidth + "\"");
 
@@ -104,11 +109,18 @@ namespace DocConvert_Core.WebCaptureLib
                 while (!new FileInfo(outPath).Exists)
                 {
                     if (DateTime.Now > timeTaken)
+                    {
                         process.Kill();
+                    }
+
                     Thread.Sleep(300);
                 }
-                Thread.Sleep(3000);
-                //process.Kill();
+                Thread.Sleep(1000);
+                try
+                {
+                    process.Kill();
+                }
+                catch (Exception){ }
                 process.Dispose();
 
                 if (new FileInfo(outPath).Exists)
