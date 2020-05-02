@@ -50,24 +50,6 @@ C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert_Server\obj\Release\DocConver
 C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.exe
 C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.pdb
 C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.csprojAssemblyReference.cache
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\phantomjs.exe
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\rasterize.js
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\NLog.config
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\Install\FileZilla_Server-0_9_60_2.exe
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\FilePathCheckerModuleExample.dll
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\pdfium.dll
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\DocConvert_Server.exe
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\DocConvert_Server.pdb
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.Forms.AboutForm.resources
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.Form1.resources
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.MessageDialog.resources
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.Properties.Resources.resources
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.csproj.GenerateResource.cache
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.csproj.CoreCompileInputs.cache
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.csproj.CopyComplete
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.exe
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.pdb
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\Utility\Office Uninstall v1.8.2.exe
 C:\Users\JMKIM\Desktop\source\DocConvert\bin\Release\Utility\Office Uninstall v1.8.2.exe
 C:\Users\JMKIM\Documents\SmartGit\bin\Release\phantomjs.exe
 C:\Users\JMKIM\Documents\SmartGit\bin\Release\rasterize.js

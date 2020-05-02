@@ -90,21 +90,6 @@ C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert_Util\obj\Release\DocConvert_
 C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert_Util\obj\Release\DocConvert_Util.csproj.CopyComplete
 C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert_Util\obj\Release\DocConvert_Util.exe
 C:\Users\JMKIM\Desktop\source\DocConvert\DocConvert_Util\obj\Release\DocConvert_Util.pdb
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\phantomjs.exe
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\rasterize.js
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\NLog.config
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\FilePathCheckerModuleExample.dll
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\pdfium.dll
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\DocConvert_Util.exe
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\DocConvert_Util.pdb
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Util\obj\Release\DocConvert_Util.Convert_Util.resources
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Util\obj\Release\DocConvert_Util.Properties.Resources.resources
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Util\obj\Release\DocConvert_Util.csproj.GenerateResource.cache
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Util\obj\Release\DocConvert_Util.csproj.CoreCompileInputs.cache
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Util\obj\Release\DocConvert_Util.csproj.CopyComplete
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Util\obj\Release\DocConvert_Util.exe
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Util\obj\Release\DocConvert_Util.pdb
-C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\Utility\Office Uninstall v1.8.2.exe
 C:\Users\JMKIM\Desktop\source\DocConvert\bin\Release\Utility\Office Uninstall v1.8.2.exe
 C:\Users\JMKIM\Documents\SmartGit\bin\Release\phantomjs.exe
 C:\Users\JMKIM\Documents\SmartGit\bin\Release\rasterize.js

@@ -207,10 +207,11 @@ namespace DocConvert_Server
                 }
                 else if (requestMsg["Method"].ToString().Equals("WebCapture"))
                 {
+                    #region WebCapture
                     string guidPath = Guid.NewGuid().ToString() + "_" + DateTime.Now.ToString("yyyy-MM-dd");
                     string dataPath = @"\workspace\" + guidPath; // 파일 출력경로
                     new DirectoryInfo(Form1.IniProperties.DataPath + dataPath).Create();
-                    if (!new DirectoryInfo(@"..\..\..\..\CefSharp.Example\Resources").Exists)
+                    if (!new DirectoryInfo(@"..\..\..\..\CefSharp.Example\Resources").Exists) // 해당 폴더 생성안하면 Exception
                     {
                         new DirectoryInfo(@"..\..\..\..\CefSharp.Example\Resources").Create();
                     }
@@ -219,19 +220,7 @@ namespace DocConvert_Server
                     {
                         Thread WebCapture = new Thread(() =>
                         {
-                            WebBrowser webBrowser = new WebBrowser();
-                            webBrowser.CreateControl();
-                            webBrowser.ScrollBarsEnabled = false;
-                            webBrowser.ScriptErrorsSuppressed = true;
-
-                            webBrowser.Navigate(requestMsg["URL"].ToString());
-                            while (webBrowser.ReadyState != WebBrowserReadyState.Complete)
-                            {
-                                Application.DoEvents();
-                            }
-
-                            status = WebCapture_Core.ChromiumCapture(requestMsg["URL"].ToString(), Form1.IniProperties.DataPath + dataPath + @"\0.png", webBrowser.Document.Body.ScrollRectangle.Width + 30, Form1.IniProperties.WebCaptureTimeout);
-                            webBrowser.Dispose();
+                            status = WebCapture_Core.ChromiumCapture(requestMsg["URL"].ToString(), Form1.IniProperties.DataPath + dataPath + @"\0.png", 1366, Form1.IniProperties.WebCaptureTimeout);
                         });
                         WebCapture.SetApartmentState(ApartmentState.STA);
                         WebCapture.Start();
@@ -252,7 +241,6 @@ namespace DocConvert_Server
                     }
                     else //PhantomJS 사용시
                     {
-                        #region WebCapture
                         Thread WebCapture = new Thread(() =>
                         {
                             status = WebCapture_Core.WebCapture(requestMsg["URL"].ToString(), Form1.IniProperties.DataPath + dataPath, Form1.IniProperties.WebCaptureTimeout);

@@ -17,7 +17,6 @@ namespace DocConvert_Core.WebCaptureLib
         /// </summary>
         /// <param name="Url">캡쳐할 웹사이트의 페이지</param>
         /// <param name="outPath">내보낼 경로</param>
-        /// <returns></returns>
         [STAThread]
         public static ReturnValue WebCapture(string Url, string outPath, int timeOut)
         {
@@ -78,7 +77,13 @@ namespace DocConvert_Core.WebCaptureLib
             return returnValue;
         }
 
-
+        /// <summary>
+        /// CefSharp을 이용한 웹브라우저 문서 캡쳐
+        /// </summary>
+        /// <param name="Url">타깃 URL</param>
+        /// <param name="outPath">내보낼 경로(경로만)</param>
+        /// <param name="docWidth">브라우저 넓이</param>
+        /// <param name="timeOut">특정시간이 지나도 안끝나면 강제 Kill</param>
         [STAThread]
         public static ReturnValue ChromiumCapture(string Url, string outPath, int docWidth, int timeOut)
         {

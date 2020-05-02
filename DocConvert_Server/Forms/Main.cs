@@ -242,12 +242,6 @@ namespace DocConvert_Server
                 DevLog.Write("[WebSocketServer][Error] " + e1.Message, LOG_LEVEL.ERROR);
                 pictureBox3.Image = Properties.Resources.error_icon;
             }
-
-            // 소켓서버 소멸
-            /*Console.ReadKey(true);
-            Debug.WriteLine("Server stoping");
-            cancellation.Cancel();
-            task.Wait();*/
             #endregion
             #region Thread
             workProcessTimer.Tick += new EventHandler(OnProcessTimedEvent);
@@ -608,6 +602,7 @@ namespace DocConvert_Server
                 {
                     if (webSocketServer != null)
                     {
+                        webSocketServer.Stop();
                         webSocketServer.Dispose();
                     }
 
@@ -623,6 +618,7 @@ namespace DocConvert_Server
             {
                 if (webSocketServer != null)
                 {
+                    webSocketServer.Stop();
                     webSocketServer.Dispose();
                 }
 

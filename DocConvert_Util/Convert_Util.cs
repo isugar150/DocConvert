@@ -14,6 +14,7 @@ using System.IO;
 using System.Net;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 using WebSocketSharp;
 
@@ -402,8 +403,8 @@ namespace DocConvert_Util
                 websocketClient.WaitTime = TimeSpan.FromMinutes(2);
                 websocketClient.Connect();
 
-                tb2_appendText(targetURL + "에 보낸 데이터\r\n" + Message);
                 websocketClient.Send(Encoding.UTF8.GetBytes(Message));
+                tb2_appendText(targetURL + "에 보낸 데이터\r\n" + Message);
 
                 websocketClient.OnMessage += (sender, e) =>
                 {
@@ -523,6 +524,21 @@ namespace DocConvert_Util
                     IniProperties.filePort = int.Parse(textBox6.Text);
                     IniProperties.isFTPS = checkBox2.Checked;
                     Setting.updateSetting(IniProperties);
+                };
+
+                websocketClient.OnClose += (sender, e) =>
+                {
+                    tb2_appendText("웹 소켓 서버와 연결이 끊겼습니다.");
+                    groupBox1.Enabled = true;
+                    groupBox2.Enabled = true;
+                };
+
+                websocketClient.OnError += (sender, e) =>
+                {
+                    tb2_appendText("웹 소켓 서버와 연결이 끊겼습니다.");
+                    tb2_appendText("오류: " + e.Message);
+                    groupBox1.Enabled = true;
+                    groupBox2.Enabled = true;
                 };
             }
             catch (Exception e1)
