@@ -77,19 +77,17 @@ namespace DocConvert_Core.WebCaptureLib
 
 
         [STAThread]
-        public static ReturnValue ChromiumCapture(string Url, string outPath, int docWidth, int docHeight, int timeOut)
+        public static ReturnValue ChromiumCapture(string Url, string outPath, int docWidth, int timeOut)
         {
             ReturnValue returnValue = new ReturnValue();
             try
             {
                 if (docWidth < 1366)
                     docWidth = 1366;
-                if (docHeight < 720)
-                    docHeight = 720;
 
                 string ChromiumPath = "\"" + Application.StartupPath + @"\CefSharp WebCapture\CefSharp.OffScreen.Example.exe" + "\"";
 
-                string arguments = string.Format("{0} {1} {2} {3}", "\"" + Url + "\"", "\"" + outPath + "\"", "\"" + docWidth + "\"", "\" " + docHeight + "\"");
+                string arguments = string.Format("{0} {1} {2}", "\"" + Url + "\"", "\"" + outPath + "\"", "\"" + docWidth + "\"");
 
                 Debug.WriteLine(ChromiumPath + " " + arguments);
 
@@ -110,7 +108,7 @@ namespace DocConvert_Core.WebCaptureLib
                     Thread.Sleep(300);
                 }
                 Thread.Sleep(3000);
-                process.Kill();
+                //process.Kill();
                 process.Dispose();
 
                 if (new FileInfo(outPath).Exists)
