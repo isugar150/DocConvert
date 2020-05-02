@@ -96,7 +96,6 @@
     <Compile Include="interface\Settings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServerLib\ClientSocket.cs" />
     <EmbeddedResource Include="Convert_Util.resx">
       <DependentUpon>Convert_Util.cs</DependentUpon>
     </EmbeddedResource>

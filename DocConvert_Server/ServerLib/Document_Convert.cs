@@ -22,7 +22,7 @@ namespace DocConvert_Server
         private static Logger logger = LogManager.GetLogger("DocConvert_Server_Log");
 
         /// <summary>
-        /// 소켓, 웹소켓에서 들어온 요청을 처리하는 부분
+        /// 웹소켓에서 들어온 요청을 처리하는 부분
         /// </summary>
         /// <param name="requestInfo">클라이언트에서 던진 String</param>
         /// <returns></returns>
@@ -46,6 +46,7 @@ namespace DocConvert_Server
 
                 if (requestMsg["Method"].ToString().Equals("DocConvert"))
                 {
+                    #region DocConvert
                     if (requestMsg["useCompression"].ToString().Equals("True") && requestMsg["ConvertIMG"].ToString().Equals("0"))
                     {
                         responseMsg["URL"] = null;
@@ -55,7 +56,6 @@ namespace DocConvert_Server
                         return responseMsg;
                     }
 
-                    #region DocConvert
                     bool PAGINGNUM = false;
                     bool APPVISIBLE = Form1.IniProperties.OfficeDebugModeYn;
                     string fileName = requestMsg["FileName"].ToString(); // 파일 이름

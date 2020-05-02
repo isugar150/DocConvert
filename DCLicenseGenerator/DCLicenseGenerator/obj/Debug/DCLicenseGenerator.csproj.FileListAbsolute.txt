@@ -36,3 +36,16 @@ C:\Users\JMKIM\Documents\SmartGit\DCLicenseGenerator\DCLicenseGenerator\obj\Debu
 C:\Users\JMKIM\Documents\SmartGit\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.csproj.CopyComplete
 C:\Users\JMKIM\Documents\SmartGit\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.exe
 C:\Users\JMKIM\Documents\SmartGit\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.pdb
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Debug\DCLicenseGenerator.exe.config
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Debug\DCLicenseGenerator.exe
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Debug\DCLicenseGenerator.pdb
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Debug\Newtonsoft.Json.dll
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Debug\Newtonsoft.Json.xml
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.Main.resources
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.Properties.Resources.resources
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.csproj.GenerateResource.cache
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.csproj.CoreCompileInputs.cache
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.csproj.CopyComplete
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.exe
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.pdb
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Debug\DCLicenseGenerator.csprojAssemblyReference.cache

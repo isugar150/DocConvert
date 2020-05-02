@@ -263,7 +263,7 @@ namespace DocConvert_Server
                         try
                         {
                             webSocketServer.Start();
-                            DevLog.Write("웹소켓 서버가 비정상적으로 종료되어 재시작 하였습니다.");
+                            DevLog.Write("웹 소켓 서버가 비정상적으로 종료되어 재시작 하였습니다.");
                         }
                         catch (Exception e1) { DevLog.Write(e1.Message); }
                     }
@@ -287,8 +287,8 @@ namespace DocConvert_Server
         /// <summary>
         /// 클라이언트가 웹 소켓으로 접속했을때 작동하는 로직
         /// </summary>
-        /// <param name="server">웹소켓 리스너</param>
-        /// <param name="token">웹소켓 토큰</param>
+        /// <param name="server">웹 소켓 리스너</param>
+        /// <param name="token">웹 소켓 토큰</param>
         /// <returns></returns>
         private async Task AcceptWebSocketClientsAsync(WebSocketListener server, CancellationToken token)
         {
@@ -300,7 +300,7 @@ namespace DocConvert_Server
 
                     DevLog.Write(string.Format("[WebSocket] 접속 IP: {0}", ws.RemoteEndpoint.Address), LOG_LEVEL.INFO);
 
-                    //소켓이 null 이 아니면, 핸들러를 스타트 합니다.(또 다른 친구가 들어올 수도 있으니 비동기로...)
+                    // 웹 소켓이 null 이 아니면, 핸들러를 스타트 합니다.(또 다른 친구가 들어올 수도 있으니 비동기로...)
                     if (ws != null)
                     {
                         // await Task.Run(() => HandleConnectionAsync(ws, token)); <== await 시 요청을 받으면 이전 요청이 종료할때까지 대기했다가 실행
@@ -318,7 +318,7 @@ namespace DocConvert_Server
         /// <summary>
         /// 클라이언트가 메시지 던졌을때 로직
         /// </summary>
-        /// <param name="ws">웹소켓</param>
+        /// <param name="ws">웹 소켓</param>
         /// <param name="cancellation">토큰</param>
         /// <returns></returns>
         private async Task HandleConnectionAsync(WebSocket ws, CancellationToken cancellation)
@@ -376,7 +376,7 @@ namespace DocConvert_Server
             }
             finally
             {
-                //소켓은 Dispose 해 줍니다.
+                // 웹 소켓은 Dispose 해 줍니다.
                 ws.Dispose();
             }
         }
