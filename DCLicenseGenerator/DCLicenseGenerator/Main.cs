@@ -13,6 +13,7 @@ namespace DCLicenseGenerator
         public Main()
         {
             InitializeComponent();
+            dateTimePicker1.Value = DateTime.Now;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -21,7 +22,7 @@ namespace DCLicenseGenerator
             string key = "JmDoCOnVerTerServErJmCoRp";
             JObject jObject = new JObject();
             jObject["HWID"] = textBox1.Text;
-            jObject["EndDate"] = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+            jObject["EndDate"] = dateTimePicker1.Value.ToString("yyyy-MM-dd 23:59:59");
             jObject["CompanyName"] = textBox3.Text;
             Debug.WriteLine("KEY: " + key);
             Debug.WriteLine("Data: " + jObject.ToString());

@@ -120,7 +120,7 @@ namespace DocConvert_Server
                 string licenseInfo = LicenseInfo.decryptAES256(IniProperties.LicenseKEY, "JmDoCOnVerTerServErJmCoRp");
                 checkLicense = JObject.Parse(licenseInfo);
                 if (!checkLicense["HWID"].ToString().Equals(new LicenseInfo().getHWID()) && !noLicense) { new MessageDialog("라이센스 오류", "라이센스 확인 후 다시시도하세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
-                if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now && !noLicense) { new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되었습니다. 갱신후 다시시도해주세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); program_Exit(true); return; }
+                if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now && !noLicense) { new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되었습니다. 갱신후 다시시도해주세요.", "HWID: " + new LicenseInfo().getHWID() + "\r\n" + "파싱한 날짜: " + DateTime.Parse(checkLicense["EndDate"].ToString()).ToString("yyyy-MM-dd")).ShowDialog(this); program_Exit(true); return; }
 
                 this.Text += " - " + checkLicense["CompanyName"].ToString();
 
@@ -132,6 +132,8 @@ namespace DocConvert_Server
             }
             catch (Exception) { new MessageDialog("라이센스 오류", "라이센스키 파싱오류.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); if (!noLicense) { program_Exit(true); return; } }
             #endregion
+
+            #region 초기 설정 및 파싱 데이터 출력
             DirectoryInfo directoryInfo = new DirectoryInfo(IniProperties.DataPath + @"\tmp");
             if (!directoryInfo.Exists)
             {
@@ -157,7 +159,7 @@ namespace DocConvert_Server
             }
 
             DevLog.Write("[INFO] 웹 캡쳐 타임아웃: " + IniProperties.WebCaptureTimeout + "초", LOG_LEVEL.INFO);
-
+            #endregion
             #region 한글 DLL 레지스트리 등록
             if (File.Exists(Application.StartupPath + @"\FilePathCheckerModuleExample.dll"))
             {
@@ -429,7 +431,7 @@ namespace DocConvert_Server
 
         #endregion
 
-        #region File Method
+        #region Port Method
         /// <summary>
         /// TCP 포트가 살아있는지 확인하는 함수
         /// </summary>
@@ -498,7 +500,11 @@ namespace DocConvert_Server
             {
                 time[i] = int.Parse(timeStr[i]);
             }
-            DateTime timeTaken = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, time[0], time[1], time[2]).AddDays(1);
+            DateTime timeTaken = new DateTime();
+            if (new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, time[0], time[1], time[2]) < DateTime.Now)
+                timeTaken = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, time[0], time[1], time[2]).AddDays(1);
+            else
+                timeTaken = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, time[0], time[1], time[2]);
 
             TimeSpan curTime = timeTaken - DateTime.Now;
 
@@ -523,13 +529,14 @@ namespace DocConvert_Server
             {
                 DevLog.Write("[Scheduler] 작업공간 정리 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
                 deleteFolder(IniProperties.DataPath + @"\workspace", IniProperties.CleanWorkspaceDay);
-                deleteFolder(IniProperties.DataPath + @"\tmp", IniProperties.CleanWorkspaceDay);
             }
+            deleteFolder(IniProperties.DataPath + @"\tmp", 1);
             if (IniProperties.CleanLogSchedulerYn)
             {
                 DevLog.Write("[Scheduler] 로그 정리 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
                 deleteFolder(Application.StartupPath + @"\Log", IniProperties.CleanLogDay);
             }
+            if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now && !noLicense) { new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되었습니다. 갱신후 다시시도해주세요.", "HWID: " + new LicenseInfo().getHWID() + "\r\n" + "파싱한 날짜: " + DateTime.Parse(checkLicense["EndDate"].ToString()).ToString("yyyy-MM-dd")).ShowDialog(this); program_Exit(true); return; }
         }
 
         /// <summary>

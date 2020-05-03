@@ -114,7 +114,6 @@ C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\FilePathCheckerModuleExam
 C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\pdfium.dll
 C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\DocConvert_Util.exe
 C:\Users\o0_0o\Documents\GitHub\DocConvert\bin\Release\DocConvert_Util.pdb
-C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Util\obj\Release\DocConvert_Util.csprojAssemblyReference.cache
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Util\obj\Release\DocConvert_Util.Convert_Util.resources
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Util\obj\Release\DocConvert_Util.Properties.Resources.resources
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Util\obj\Release\DocConvert_Util.csproj.GenerateResource.cache

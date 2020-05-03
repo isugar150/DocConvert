@@ -35,9 +35,10 @@ namespace DocConvert_Manager
                     {
                         pairs.Load("./DocConvert_Manager.ini");
                         IniProperties.targetPath = pairs["DC Manager"]["targetPath"].ToString();
-                        IniProperties.minimized = pairs["DC Manager"]["minimized"].ToString().Equals("Y");
                         IniProperties.refreshCycle = int.Parse(pairs["DC Manager"]["refreshCycle"].ToString());
                         IniProperties.runOption = pairs["DC Manager"]["runOption"].ToString();
+                        IniProperties.autoRestart = pairs["DC Manager"]["autoRestart"].ToString().Equals("Y");
+                        IniProperties.autoRestartTime = pairs["DC Manager"]["autoRestartTime"].ToString();
                         break;
                     }
                     else
@@ -66,6 +67,10 @@ namespace DocConvert_Manager
             tScheduler.Tick += new EventHandler(tScheduler_Tick);
             tScheduler.Start();
             #endregion
+            DevLog.Write((IniProperties.refreshCycle / 1000) + "초 마다 감지", LOG_LEVEL.INFO);
+            DevLog.Write("타겟 프로세스 자동 재시작: " + (IniProperties.autoRestart ? "Y" : "n"), LOG_LEVEL.INFO);
+            if (IniProperties.autoRestart)
+                DevLog.Write("다음 스케줄러 작동시간: " + (DateTime.Now + TimeSpan.FromMilliseconds(tScheduler.Interval)));
         }
 
         private void Manager_Load(object sender, EventArgs e)
@@ -119,7 +124,13 @@ namespace DocConvert_Manager
         #region 스케줄러 메소드
         private int CalculateTimerInterval()
         {
-            DateTime timeTaken = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0).AddDays(1);
+            string[] timeStr = IniProperties.autoRestartTime.Split(',');
+            int[] time = new int[3];
+            for (int i = 0; i < 2; i++)
+            {
+                time[i] = int.Parse(timeStr[i]);
+            }
+            DateTime timeTaken = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, time[0], time[1], time[2]).AddDays(1);
 
             TimeSpan curTime = timeTaken - DateTime.Now;
 
@@ -136,7 +147,34 @@ namespace DocConvert_Manager
                 tScheduler.Interval = CalculateTimerInterval();
             }
             catch (Exception) { tScheduler.Dispose(); DevLog.Write("스케줄러 작동중 오류가 발생하여 비활성화 하였습니다."); }
-            textBox1.Text = "";
+
+            if (IniProperties.autoRestart)
+            {
+                ProcessStartInfo pri = new ProcessStartInfo();
+                Process pro = new Process();
+                //실행할 파일 명 입력하기
+                pri.FileName = "cmd.exe";
+
+                //cmd 창 띄우기
+                pri.CreateNoWindow = false; //flase가 띄우기, true가 안 띄우기
+                pri.UseShellExecute = false;
+
+                pri.RedirectStandardInput = true;
+                pri.RedirectStandardOutput = true;
+                pri.RedirectStandardError = true;
+
+                pro.StartInfo = pri;
+                pro.Start();
+
+                //명령어 실행
+                pro.StandardInput.Write(@"taskkill /f /pid " + targetPID + Environment.NewLine);
+                pro.StandardInput.Close();
+                string resultValue = pro.StandardOutput.ReadToEnd();
+                pro.WaitForExit();
+                pro.Close();
+                //DevLog.Write(resultValue, LOG_LEVEL.INFO);
+                DevLog.Write("스케줄러에 의해 타겟프로그램을 종료하였습니다.", LOG_LEVEL.INFO);
+            }
         }
 
         #endregion

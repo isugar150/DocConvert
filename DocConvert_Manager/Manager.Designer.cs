@@ -78,7 +78,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(541, 25);
+            this.panel1.Size = new System.Drawing.Size(638, 25);
             this.panel1.TabIndex = 1;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
@@ -90,7 +90,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(101, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(341, 20);
+            this.label1.Size = new System.Drawing.Size(438, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "DC Manager";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -110,7 +110,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(543, 244);
+            this.panel2.Size = new System.Drawing.Size(640, 320);
             this.panel2.TabIndex = 2;
             // 
             // label2
@@ -118,7 +118,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(438, 138);
+            this.label2.Location = new System.Drawing.Point(535, 138);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 15);
             this.label2.TabIndex = 3;
@@ -130,7 +130,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(438, 153);
+            this.label3.Location = new System.Drawing.Point(535, 153);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 15);
             this.label3.TabIndex = 6;
@@ -141,7 +141,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::DocConvert_Manager.Properties.Resources.docConvert;
-            this.pictureBox1.Location = new System.Drawing.Point(438, 41);
+            this.pictureBox1.Location = new System.Drawing.Point(535, 41);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(95, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -154,7 +154,7 @@
             this.button3.BackColor = System.Drawing.Color.DimGray;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(438, 188);
+            this.button3.Location = new System.Drawing.Point(535, 264);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(95, 43);
             this.button3.TabIndex = 5;
@@ -164,12 +164,15 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(11, 31);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(421, 200);
+            this.groupBox1.Size = new System.Drawing.Size(518, 276);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Console";
@@ -185,7 +188,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(415, 178);
+            this.textBox1.Size = new System.Drawing.Size(512, 254);
             this.textBox1.TabIndex = 0;
             // 
             // Manager
@@ -193,12 +196,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(543, 244);
+            this.ClientSize = new System.Drawing.Size(640, 320);
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MinimumSize = new System.Drawing.Size(640, 320);
             this.Name = "Manager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DocConvert Manager";
