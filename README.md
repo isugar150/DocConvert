@@ -29,13 +29,13 @@
 > 사용된 Java라이브러리: commons-net-3.6.jar, Java-WebSocket-1.4.1.jar, json-simple-1.1.1.jar, slf4j-api-1.7.25.jar  
 ### 프로그램별 설명
 * 설정한 포트로 WebSocket을 Listen하며 요청이 들어오면 해당 문서를 변환해주는 역할  
-![image](https://user-images.githubusercontent.com/13088077/80710846-5f2ea080-8b2a-11ea-86f0-030d05112780.png)  
+![image](https://user-images.githubusercontent.com/13088077/80710856-635abe00-8b2a-11ea-9cf6-db09143aac8b.png)  
 <DocConvert 서버 메인화면>  
 * 혹시라도 서버 프로그램이 오류로인해 강제로 종료될경우 자동으로 실행시켜주는 관리 프로그램  
 ![image](https://user-images.githubusercontent.com/13088077/80711349-2e02a000-8b2b-11ea-8dd2-0bc5e59731f0.png)  
 <DocConvert 매니저 메인화면>  
 * 서버가 정상 동작하는지 가장빠르게 확인할수있는 프로그램  
-![image](https://user-images.githubusercontent.com/13088077/80710856-635abe00-8b2a-11ea-9cf6-db09143aac8b.png)  
+![image](https://user-images.githubusercontent.com/13088077/80710846-5f2ea080-8b2a-11ea-86f0-030d05112780.png)  
 <DocConvert 유틸 메인화면>  
 * 자바 개발시 서버에 요청하고 다운로드받는 작업을 도와주는 API
 ![image](https://user-images.githubusercontent.com/13088077/80711207-f136a900-8b2a-11ea-869e-1d4eb244a901.png)  
