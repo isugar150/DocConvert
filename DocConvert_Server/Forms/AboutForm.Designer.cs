@@ -144,7 +144,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(676, 17);
             this.label3.TabIndex = 6;
-            this.label3.Text = "<Copyright 2020. Jm\'s Corp. All rights reserved.>";
+            this.label3.Text = "<Copyright 2020. Jm\'s Software. All rights reserved.>";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1

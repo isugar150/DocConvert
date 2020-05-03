@@ -38,15 +38,21 @@ namespace DocConvert_Server
             CheckForIllegalCrossThreadCalls = false;
             if (args.Length != 0)
             {
-                if (args[0].Equals("Minimized"))
+                for(int i = 0; i<args.Length; i++)
                 {
-                    this.WindowState = FormWindowState.Minimized;
-                }
-                if (args[0].Equals("noLicense") && args[1].Equals("JmSoftware"))
-                {
-                    noLicense = true;
-                    DevLog.Write("라이센스없이 프로그램을 실행하였습니다.\r\n=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.", LOG_LEVEL.DEBUG);
-                    this.Text += " - No License Version ";
+                    if (args[i].Equals("/Minimized"))
+                    {
+                        this.WindowState = FormWindowState.Minimized;
+                    }
+                    if (args[i].Contains("/noLicense"))
+                    {
+                        if (args[i].Split('=')[1].Equals("JmSoftware"))
+                        {
+                            noLicense = true;
+                            DevLog.Write("라이센스없이 프로그램을 실행하였습니다.\r\n=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.", LOG_LEVEL.DEBUG);
+                            this.Text += " - No License Version ";
+                        }
+                    }
                 }
             }
         }

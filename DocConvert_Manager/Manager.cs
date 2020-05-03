@@ -37,6 +37,7 @@ namespace DocConvert_Manager
                         IniProperties.targetPath = pairs["DC Manager"]["targetPath"].ToString();
                         IniProperties.minimized = pairs["DC Manager"]["minimized"].ToString().Equals("Y");
                         IniProperties.refreshCycle = int.Parse(pairs["DC Manager"]["refreshCycle"].ToString());
+                        IniProperties.runOption = pairs["DC Manager"]["runOption"].ToString();
                         break;
                     }
                     else
@@ -90,11 +91,11 @@ namespace DocConvert_Manager
                         {
                             if (IniProperties.targetPath.Contains("./"))
                             {
-                                Process.Start(Application.StartupPath + @"\" + IniProperties.targetPath.Replace("./", ""));
+                                Process.Start(Application.StartupPath + @"\" + IniProperties.targetPath.Replace("./", ""), IniProperties.runOption);
                             }
                             else
                             {
-                                Process.Start(IniProperties.targetPath);
+                                Process.Start(IniProperties.targetPath, IniProperties.runOption);
                             }
 
                             DevLog.Write("타겟 프로세스를 실행하였습니다.");

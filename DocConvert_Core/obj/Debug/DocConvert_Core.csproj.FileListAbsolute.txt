@@ -124,3 +124,4 @@ C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.csproj.CopyComplete
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.dll
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.pdb
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.csprojAssemblyReference.cache
