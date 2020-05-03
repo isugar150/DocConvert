@@ -98,12 +98,14 @@ public class FTPManager {
         FileOutputStream fos = new FileOutputStream(localFile);
         ftpClient.retrieveFile(remoteFile, fos);
         System.out.println("[FTP] 파일을 다운로드 하였습니다. " + localFile);
+        fos.close();
     }
 
     public void downloadFileFTPS(String remoteFile, String localFile) throws IOException {
         FileOutputStream fos = new FileOutputStream(localFile);
         ftpsClient.retrieveFile(remoteFile, fos);
         System.out.println("[FTPS] 파일을 다운로드 하였습니다. " + localFile);
+        fos.close();
     }
 
     /**
