@@ -266,6 +266,9 @@ namespace DocConvert_Server
                         pictureBox2.Image = Properties.Resources.error_icon;
                     }
 
+                    // 라이센스 체크로직
+                    if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now && !noLicense) { webSocketServer.Stop(); new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되어 소켓 LISTEN을 중지하였습니다. 갱신 후 다시시도하세요.", "HWID: " + new LicenseInfo().getHWID() + "\r\n" + "파싱한 날짜: " + DateTime.Parse(checkLicense["EndDate"].ToString()).ToString("yyyy-MM-dd")).ShowDialog(this); program_Exit(true); return; }
+
                     Thread.Sleep(1000);
                 }
             }).Start();
@@ -536,7 +539,6 @@ namespace DocConvert_Server
                 DevLog.Write("[Scheduler] 로그 정리 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
                 deleteFolder(Application.StartupPath + @"\Log", IniProperties.CleanLogDay);
             }
-            if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now && !noLicense) { new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되었습니다. 갱신후 다시시도해주세요.", "HWID: " + new LicenseInfo().getHWID() + "\r\n" + "파싱한 날짜: " + DateTime.Parse(checkLicense["EndDate"].ToString()).ToString("yyyy-MM-dd")).ShowDialog(this); program_Exit(true); return; }
         }
 
         /// <summary>

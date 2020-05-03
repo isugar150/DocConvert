@@ -304,6 +304,20 @@ namespace DocConvert_Util
                     else
                     {
                         #region Server 변환시
+                        // 아이피주소 유효성 검사
+                        try
+                        {
+                            IPAddress.Parse(serverIP);
+                        }
+                        catch (Exception) { tb2_appendText("유효한 아이피 주소를 입력하세요."); groupBox1.Enabled = true; groupBox2.Enabled = true; return; }
+                        // 포트번호 유효성 검사
+                        if (serverPORT < IPEndPoint.MinPort || serverPORT > IPEndPoint.MaxPort || filePORT < IPEndPoint.MinPort || filePORT > IPEndPoint.MaxPort)
+                        {
+                            tb2_appendText("유효한 포트번호를 입력하세요.");
+                            groupBox1.Enabled = true;
+                            groupBox2.Enabled = true;
+                            return;
+                        }
                         try
                         {
                             using (FtpClient ftpClient = new FtpClient())
@@ -329,20 +343,6 @@ namespace DocConvert_Util
                         catch (Exception e1)
                         {
                             tb2_appendText(e1.Message);
-                            groupBox1.Enabled = true;
-                            groupBox2.Enabled = true;
-                            return;
-                        }
-                        // 아이피주소 유효성 검사
-                        try
-                        {
-                            IPAddress.Parse(serverIP);
-                        }
-                        catch (Exception) { tb2_appendText("유효한 아이피 주소를 입력하세요."); groupBox1.Enabled = true; groupBox2.Enabled = true; return; }
-                        // 포트번호 유효성 검사
-                        if (serverPORT < IPEndPoint.MinPort || serverPORT > IPEndPoint.MaxPort)
-                        {
-                            tb2_appendText("유효한 포트번호를 입력하세요.");
                             groupBox1.Enabled = true;
                             groupBox2.Enabled = true;
                             return;

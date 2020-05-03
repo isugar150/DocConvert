@@ -1,4 +1,5 @@
-﻿using DocConvert_Core.HWPLib;
+﻿using DocConvert_Core.FileLib;
+using DocConvert_Core.HWPLib;
 using DocConvert_Core.imageLib;
 using DocConvert_Core.interfaces;
 using DocConvert_Core.OfficeLib;
@@ -82,6 +83,18 @@ namespace DocConvert_Server
                     }
 
                     createDirectory.Create();
+
+                    #region File Unlock
+                    try
+                    {
+                        LockFile.UnLock_File(fileFullPath);
+                    }
+                    catch (Exception e1)
+                    {
+                        logger.Info("파일 언락 실패! 자세한내용 로그 참고");
+                        logger.Error(e1.Message);
+                    }
+                    #endregion
 
                     // 파일 이동
                     if (moveFile.Exists)

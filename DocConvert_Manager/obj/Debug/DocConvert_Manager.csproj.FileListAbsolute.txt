@@ -23,3 +23,4 @@ C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Manager\obj\Debug\DocConve
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.csproj.CopyComplete
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.exe
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.pdb
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.csprojAssemblyReference.cache
