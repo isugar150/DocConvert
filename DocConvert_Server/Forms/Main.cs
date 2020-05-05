@@ -149,7 +149,23 @@ namespace DocConvert_Server
 
             checkBox1.Checked = IniProperties.ShowTextBoxYn;
             checkBox2.Checked = IniProperties.FollowTailYn;
-            if (checkBox1.Checked)
+
+            if (checkBox2.Checked)
+            {
+                for (int i = 0; i < listBoxLog.Items.Count; i++)
+                {
+                    listBoxLog.SelectedIndex = i;
+                }
+                IniProperties.FollowTailYn = true;
+                listBoxLog.Enabled = false;
+            }
+            else
+            {
+                listBoxLog.ClearSelected();
+                IniProperties.FollowTailYn = false;
+                listBoxLog.Enabled = true;
+            }
+            if (!checkBox1.Checked)
                 checkBox2.Checked = false;
 
             DevLog.Write("[INFO] 데이터 경로: " + IniProperties.DataPath, LOG_LEVEL.INFO);
