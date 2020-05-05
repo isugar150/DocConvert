@@ -12,6 +12,7 @@ namespace DocConvert_Core.interfaces
         string ClientKEY { get; set; }
         string DataPath { get; set; }
         bool OfficeDebugModeYn { get; set; }
+        bool ShowTextBoxYn { get; set; }
         bool FollowTailYn { get; set; }
         string ResponseTimeout { get; set; }
         string SchedulerTime { get; set; }
@@ -33,6 +34,7 @@ namespace DocConvert_Core.interfaces
         private string _ClientKEY;
         private string _DataPath;
         private bool _OfficeDebugModeYn;
+        private bool _ShowTextBoxYn;
         private bool _FollowTailYn;
         private string _ResponseTimeout;
         private string _SchedulerTime;
@@ -50,6 +52,7 @@ namespace DocConvert_Core.interfaces
         public string ClientKEY { get { return _ClientKEY; } set { _ClientKEY = value; } }
         public string DataPath { get { return _DataPath; } set { _DataPath = value; } }
         public bool OfficeDebugModeYn { get { return _OfficeDebugModeYn; } set { _OfficeDebugModeYn = value; } }
+        public bool ShowTextBoxYn { get { return _ShowTextBoxYn; } set { _ShowTextBoxYn = value; } }
         public bool FollowTailYn { get { return _FollowTailYn; } set { _FollowTailYn = value; } }
         public string ResponseTimeout { get { return _ResponseTimeout; } set { _ResponseTimeout = value; } }
         public string SchedulerTime { get { return _SchedulerTime; } set { _SchedulerTime = value; } }
@@ -75,7 +78,8 @@ namespace DocConvert_Core.interfaces
             setting["DC Server"]["ClientKEY"] = "B29D00A3 - F825 - 4EB7 - 93C1 - A77F5E31A7C2;해당 클라이언트가 허용한 클라이언트인지 확인하는 문자열, 클라이언트와 동일하게 맞추면됨.";
             setting["DC Server"]["DataPath"] = "C:\\Data;작업폴더 실제 경로";
             setting["DC Server"]["OfficeDebugModeYn"] = "Y;오피스 변환시 변환하는 화면보이기 (Y:사용) (n:사용안함)";
-            setting["DC Server"]["FollowTailYn"] = "Y;프로그램 시작시 FollowTail 체크 (Y:사용) (n:사용안함)";
+            setting["DC Server"]["ShowTextBoxYn"] = "Y;프로그램 시작시 TextBox 체크 (Y:사용) (n:사용안함)";
+            setting["DC Server"]["FollowTailYn"] = "n;프로그램 시작시 FollowTail 체크 (Y:사용) (n:사용안함)";
             setting["DC Server"]["ResponseTimeout"] = "2,0;서버에서 클라이언트로 응답 Timeout 서버 환경에따라 설정 (분,초)";
             setting["DC Server"]["SchedulerTime"] = "1,0;스케줄러 동작시간(매일) 24시간중 (시간,분)";
             setting["DC Server"]["CleanWorkspaceSchedulerYn"] = "Y;작업공간 정리 스케줄러 사용 (Y:사용) (n:사용안함)";

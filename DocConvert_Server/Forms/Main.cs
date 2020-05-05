@@ -29,6 +29,7 @@ namespace DocConvert_Server
         public static bool isHwpConverting = false;
         private bool noLicense = false;
         public static iniProperties IniProperties = new iniProperties();
+        private bool FollowTailSelect = false;
 
         private static Logger logger = LogManager.GetLogger("DocConvert_Server_Log");
 
@@ -36,6 +37,12 @@ namespace DocConvert_Server
         {
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
+            DevLog.Write2("┏━━━┓╋╋╋╋╋┏━━━┓╋╋╋╋╋╋╋╋╋╋╋╋╋┏┓╋┏━━━┓\r\n" +
+                          "┗┓┏┓┃╋╋╋╋╋┃┏━┓┃╋╋╋╋╋╋╋╋╋╋╋╋┏┛┗┓┃┏━┓┃\r\n" +
+                          "╋┃┃┃┣━━┳━━┫┃╋┗╋━━┳━┓┏┓┏┳━━┳┻┓┏┛┃┗━━┳━━┳━┳┓┏┳━━┳━┓\r\n" +
+                          "╋┃┃┃┃┏┓┃┏━┫┃╋┏┫┏┓┃┏┓┫┗┛┃┃━┫┏┫┃╋┗━━┓┃┃━┫┏┫┗┛┃┃━┫┏┛\r\n" +
+                          "┏┛┗┛┃┗┛┃┗━┫┗━┛┃┗┛┃┃┃┣┓┏┫┃━┫┃┃┗┓┃┗━┛┃┃━┫┃┗┓┏┫┃━┫┃\r\n" +
+                          "┗━━━┻━━┻━━┻━━━┻━━┻┛┗┛┗┛┗━━┻┛┗━┛┗━━━┻━━┻┛╋┗┛┗━━┻┛", LOG_LEVEL.TRACE);
             if (args.Length != 0)
             {
                 for(int i = 0; i<args.Length; i++)
@@ -59,12 +66,6 @@ namespace DocConvert_Server
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            textBox1.Text = ("┏━━━┓╋╋╋╋╋┏━━━┓╋╋╋╋╋╋╋╋╋╋╋╋╋┏┓╋┏━━━┓\r\n" +
-                             "┗┓┏┓┃╋╋╋╋╋┃┏━┓┃╋╋╋╋╋╋╋╋╋╋╋╋┏┛┗┓┃┏━┓┃\r\n" +
-                             "╋┃┃┃┣━━┳━━┫┃╋┗╋━━┳━┓┏┓┏┳━━┳┻┓┏┛┃┗━━┳━━┳━┳┓┏┳━━┳━┓\r\n" +
-                             "╋┃┃┃┃┏┓┃┏━┫┃╋┏┫┏┓┃┏┓┫┗┛┃┃━┫┏┫┃╋┗━━┓┃┃━┫┏┫┗┛┃┃━┫┏┛\r\n" +
-                             "┏┛┗┛┃┗┛┃┗━┫┗━┛┃┗┛┃┃┃┣┓┏┫┃━┫┃┃┗┓┃┗━┛┃┃━┫┃┗┓┏┫┃━┫┃\r\n" +
-                             "┗━━━┻━━┻━━┻━━━┻━━┻┛┗┛┗┛┗━━┻┛┗━┛┗━━━┻━━┻┛╋┗┛┗━━┻┛\r\n");
             #region Parse INI
             IniFile pairs = new IniFile();
             while (true)
@@ -84,6 +85,7 @@ namespace DocConvert_Server
                         IniProperties.ResponseTimeout = pairs["DC Server"]["ResponseTimeout"].ToString2();
                         IniProperties.SchedulerTime = pairs["DC Server"]["SchedulerTime"].ToString2();
                         IniProperties.OfficeDebugModeYn = pairs["DC Server"]["OfficeDebugModeYn"].ToString2().Equals("Y");
+                        IniProperties.ShowTextBoxYn = pairs["DC Server"]["ShowTextBoxYn"].ToString2().Equals("Y");
                         IniProperties.FollowTailYn = pairs["DC Server"]["FollowTailYn"].ToString2().Equals("Y");
                         IniProperties.CleanWorkspaceSchedulerYn = pairs["DC Server"]["CleanWorkspaceSchedulerYn"].ToString2().Equals("Y");
                         IniProperties.CleanWorkspaceDay = int.Parse(pairs["DC Server"]["CleanWorkspaceDay"].ToString2());
@@ -145,7 +147,10 @@ namespace DocConvert_Server
             toolStripStatusLabel6.Text = "WebSocket Port: " + IniProperties.WebSocketPort;
             toolStripStatusLabel7.Text = "File Server Port: " + IniProperties.FileServerPort;
 
-            checkBox1.Checked = IniProperties.FollowTailYn;
+            checkBox1.Checked = IniProperties.ShowTextBoxYn;
+            checkBox2.Checked = IniProperties.FollowTailYn;
+            if (checkBox1.Checked)
+                checkBox2.Checked = false;
 
             DevLog.Write("[INFO] 데이터 경로: " + IniProperties.DataPath, LOG_LEVEL.INFO);
             DevLog.Write("[INFO] 클라이언트 키: " + IniProperties.ClientKEY, LOG_LEVEL.INFO);
@@ -281,7 +286,6 @@ namespace DocConvert_Server
                     {
                         if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now) { webSocketServer.Stop(); new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되어 소켓 LISTEN을 중지하였습니다. 갱신 후 다시시도하세요.", "HWID: " + new LicenseInfo().getHWID() + "\r\n" + "파싱한 날짜: " + DateTime.Parse(checkLicense["EndDate"].ToString()).ToString("yyyy-MM-dd")).ShowDialog(this); program_Exit(true); return; }
                     }
-                    Debug.WriteLine("Test");
                     
                     Thread.Sleep(1000);
                 }
@@ -409,8 +413,9 @@ namespace DocConvert_Server
 
                     listBoxLog.Items.Add(msg);
 
-                    if (checkBox1.Checked)
+                    if (checkBox2.Checked)
                     {
+                        FollowTailSelect = true;
                         listBoxLog.SelectedIndex = listBoxLog.Items.Count - 1;
                         textBox1.AppendText(msg + "\r\n");
                     }
@@ -431,19 +436,19 @@ namespace DocConvert_Server
 
         private void listBoxLog_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (!checkBox1.Checked)
+            if (checkBox1.Checked)
             {
-                textBox1.Text = "";
-                foreach (object logList in listBoxLog.SelectedItems)
+                if (!FollowTailSelect || !checkBox2.Checked)
                 {
-                    textBox1.AppendText(logList.ToString() + "\r\n");
+                    textBox1.Text = "";
+
+                    foreach (object logList in listBoxLog.SelectedItems)
+                    {
+                        textBox1.AppendText(logList.ToString() + "\r\n");
+                    }
+                    FollowTailSelect = false;
                 }
             }
-        }
-
-        private void listBoxLog_Click(object sender, EventArgs e)
-        {
-            checkBox1.Checked = false;
         }
 
         #endregion
@@ -651,6 +656,41 @@ namespace DocConvert_Server
         {
             DevLog.Write("설정 파일을 실행하였습니다. 변경 내용을 적용하려면 서버를 재시작해야합니다.", LOG_LEVEL.INFO);
             Process.Start("notepad", Application.StartupPath + @"\DocConvert_Server.ini");
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                splitContainer2.SplitterDistance = 300;
+                checkBox2.Checked = IniProperties.FollowTailYn;
+                checkBox2.Enabled = true;
+            }
+            else
+            {
+                splitContainer2.SplitterDistance = splitContainer2.Width;
+                checkBox2.Checked = false;
+                checkBox2.Enabled = false;
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                for (int i = 0; i < listBoxLog.Items.Count; i++)
+                {
+                    listBoxLog.SelectedIndex = i;
+                }
+                IniProperties.FollowTailYn = true;
+                listBoxLog.Enabled = false;
+            }
+            else
+            {
+                listBoxLog.ClearSelected();
+                IniProperties.FollowTailYn = false;
+                listBoxLog.Enabled = true;
+            }
         }
 
         #endregion

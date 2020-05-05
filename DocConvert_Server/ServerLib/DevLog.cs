@@ -66,6 +66,17 @@ namespace DocConvert_Server
             }
         }
 
+        static public void Write2(object msg, LOG_LEVEL logLevel = LOG_LEVEL.TRACE,
+                                [CallerFilePath] string fileName = "",
+                                [CallerMemberName] string methodName = "",
+                                [CallerLineNumber] int lineNumber = 0)
+        {
+            if (출력가능_로그레벨 <= logLevel)
+            {
+                logMsgQueue.Enqueue(string.Format("{0}", msg));
+            }
+        }
+
         static public bool GetLog(out string msg)
         {
             if (logMsgQueue.TryDequeue(out msg))

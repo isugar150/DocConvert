@@ -23,3 +23,4 @@ C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.csproj.CopyComplete
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.exe
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.pdb
+C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.csprojAssemblyReference.cache
