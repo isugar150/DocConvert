@@ -7,6 +7,7 @@ import java.io.OutputStream;
 import java.util.Map;
 
 import DocConvert_API.DocConvert;
+import DocConvert_API.getProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -29,7 +30,7 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 public class HomeController{
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	private static final String SAVE_PATH = "C:\\Users\\o0_0o\\Documents\\GitHub\\DocConvert\\DocConvert_JAVA_Spring_TEST\\workspace";
+	private static String SAVE_PATH = "";
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(HttpServletRequest request) {
@@ -38,13 +39,15 @@ public class HomeController{
 		logger.info("▶▶▶▶▶ IP: " + req.getRemoteAddr());
 		logger.info("▶▶▶▶▶ CLASS: " + HomeController.class);
 		logger.info("▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶▶");
+		dcProperties dcProperties = new dcProperties();
+		dcProperties.readProperties();
+		SAVE_PATH = dcProperties.workspacePath();
 
 		return "home";
 	}
 
 	@RequestMapping(value = "/fileUpload", method = RequestMethod.POST)
 	public ModelAndView upload(@RequestParam(value="file1", required = false) MultipartFile mf) throws Exception {
-
 		String originalFileName = mf.getOriginalFilename();
 		long fileSize = mf.getSize();
 		String saveFile = SAVE_PATH + File.separator + System.currentTimeMillis() + originalFileName;
@@ -61,6 +64,9 @@ public class HomeController{
 
 		String sourceFileExten = saveFile.substring(saveFile.lastIndexOf("."), saveFile.length());
 		File downloadFile = new File(saveFile.replace(sourceFileExten, ".zip"));
+
+		if(!downloadFile.exists())
+			return null;
 
 		return new ModelAndView("download", "downloadFile", downloadFile);
 	}

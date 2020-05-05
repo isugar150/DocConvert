@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace DocConvert_Server
@@ -11,9 +12,16 @@ namespace DocConvert_Server
         [STAThread]
         private static void Main(string[] args)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(args));
+            using (Mutex mutex = new Mutex(false, "Global\\58d05e01-d185-4f89-a413-a59d7e75ec86"))
+            {
+                if (!mutex.WaitOne(500, false))
+                {
+                    return;
+                }
+                /*Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);*/
+                Application.Run(new Form1(args));
+            }
         }
     }
 }

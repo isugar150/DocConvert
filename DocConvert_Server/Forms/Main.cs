@@ -81,6 +81,7 @@ namespace DocConvert_Server
                         IniProperties.DisplayLogCnt = int.Parse(pairs["DC Server"]["DisplayLogCnt"].ToString2());
                         IniProperties.ClientKEY = pairs["DC Server"]["ClientKEY"].ToString2();
                         IniProperties.DataPath = pairs["DC Server"]["DataPath"].ToString2();
+                        IniProperties.ResponseTimeout = pairs["DC Server"]["ResponseTimeout"].ToString2();
                         IniProperties.SchedulerTime = pairs["DC Server"]["SchedulerTime"].ToString2();
                         IniProperties.OfficeDebugModeYn = pairs["DC Server"]["OfficeDebugModeYn"].ToString2().Equals("Y");
                         IniProperties.FollowTailYn = pairs["DC Server"]["FollowTailYn"].ToString2().Equals("Y");
@@ -201,12 +202,21 @@ namespace DocConvert_Server
                 {
                     endpoint = new IPEndPoint(IPAddress.Parse(IniProperties.BindIP), IniProperties.WebSocketPort);
                 }
+
+
+                string[] timeStr = IniProperties.ResponseTimeout.Split(',');
+                int[] time = new int[2];
+                time[0] = int.Parse(timeStr[0]); // 분
+                time[1] = int.Parse(timeStr[1]); // 초
+
+                DevLog.Write("[Web Socket] 웹 소켓 타임아웃: " + time[0] + "분 " + time[1] + "초", LOG_LEVEL.INFO);
+
                 WebSocketListenerOptions options = new WebSocketListenerOptions()
                 {
-                    WebSocketReceiveTimeout = new TimeSpan(0, 2, 0), // 클라이언트가 서버로 요청했을때 서버가 바쁘면 Timeout
+                    WebSocketReceiveTimeout = new TimeSpan(0, time[0], time[1]), // 클라이언트가 서버로 요청했을때 서버가 바쁘면 Timeout
                     WebSocketSendTimeout = new TimeSpan(0, 0, 5), // 클라이언트가 연결을 끊었을때 Timeout
-                    NegotiationTimeout = new TimeSpan(0, 2, 0),
-                    PingTimeout = new TimeSpan(0, 2, 0),
+                    NegotiationTimeout = new TimeSpan(0, time[0], time[1]),
+                    PingTimeout = new TimeSpan(0, time[0], time[1]),
                     PingMode = PingModes.LatencyControl
                 };
                 webSocketServer = new WebSocketListener(endpoint, options);
@@ -267,8 +277,12 @@ namespace DocConvert_Server
                     }
 
                     // 라이센스 체크로직
-                    if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now && !noLicense) { webSocketServer.Stop(); new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되어 소켓 LISTEN을 중지하였습니다. 갱신 후 다시시도하세요.", "HWID: " + new LicenseInfo().getHWID() + "\r\n" + "파싱한 날짜: " + DateTime.Parse(checkLicense["EndDate"].ToString()).ToString("yyyy-MM-dd")).ShowDialog(this); program_Exit(true); return; }
-
+                    if (!noLicense)
+                    {
+                        if (DateTime.Parse(checkLicense["EndDate"].ToString()) < DateTime.Now) { webSocketServer.Stop(); new MessageDialog("라이센스 오류", "라이센스 날짜가 만료되어 소켓 LISTEN을 중지하였습니다. 갱신 후 다시시도하세요.", "HWID: " + new LicenseInfo().getHWID() + "\r\n" + "파싱한 날짜: " + DateTime.Parse(checkLicense["EndDate"].ToString()).ToString("yyyy-MM-dd")).ShowDialog(this); program_Exit(true); return; }
+                    }
+                    Debug.WriteLine("Test");
+                    
                     Thread.Sleep(1000);
                 }
             }).Start();
@@ -500,14 +514,13 @@ namespace DocConvert_Server
             string[] timeStr = IniProperties.SchedulerTime.Split(',');
             int[] time = new int[3];
             for (int i = 0; i<2; i++)
-            {
-                time[i] = int.Parse(timeStr[i]);
-            }
+            time[0] = int.Parse(timeStr[0]); // 시
+            time[1] = int.Parse(timeStr[1]); // 분
             DateTime timeTaken = new DateTime();
-            if (new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, time[0], time[1], time[2]) < DateTime.Now)
-                timeTaken = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, time[0], time[1], time[2]).AddDays(1);
+            if (new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, time[0], time[1], 0) < DateTime.Now)
+                timeTaken = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, time[0], time[1], 0).AddDays(1);
             else
-                timeTaken = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, time[0], time[1], time[2]);
+                timeTaken = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, time[0], time[1], 0);
 
             TimeSpan curTime = timeTaken - DateTime.Now;
 

@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="dc-1.0.0-BUILD-SNAPSHOT.war">
+    <root id="archive" name="dc-Unknown.war">
       <element id="artifact" artifact-name="dc:war exploded" />
     </root>
   </artifact>
