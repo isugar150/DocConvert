@@ -7,6 +7,7 @@ import java.io.OutputStream;
 import java.util.Map;
 
 import DocConvert_API.DocConvert;
+import DocConvert_API.WebCapture;
 import DocConvert_API.getProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -64,6 +65,19 @@ public class HomeController{
 
 		String sourceFileExten = saveFile.substring(saveFile.lastIndexOf("."), saveFile.length());
 		File downloadFile = new File(saveFile.replace(sourceFileExten, ".zip"));
+
+		if(!downloadFile.exists())
+			return null;
+
+		return new ModelAndView("download", "downloadFile", downloadFile);
+	}
+
+	@RequestMapping(value = "/webCapture", method = RequestMethod.POST)
+	public ModelAndView webCapture(@RequestParam("URL") String url) throws Exception {
+
+		String saveFile = SAVE_PATH + File.separator + System.currentTimeMillis();
+		File downloadFile = new File(saveFile + ".png");
+		String isSuccess = new WebCapture().WebCapture_Start(url, downloadFile.getAbsolutePath());
 
 		if(!downloadFile.exists())
 			return null;
