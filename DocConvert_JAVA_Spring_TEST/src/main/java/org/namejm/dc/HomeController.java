@@ -76,12 +76,14 @@ public class HomeController{
 	public ModelAndView webCapture(@RequestParam("URL") String url) throws Exception {
 
 		String saveFile = SAVE_PATH + File.separator + System.currentTimeMillis();
-		File downloadFile = new File(saveFile + ".png");
+		File downloadFile = new File(saveFile);
+		downloadFile.mkdirs();
 		String isSuccess = new WebCapture().WebCapture_Start(url, downloadFile.getAbsolutePath());
 
 		if(!downloadFile.exists())
 			return null;
 
-		return new ModelAndView("download", "downloadFile", downloadFile);
+		File realDownloadFile = new File(downloadFile.getAbsolutePath() + File.separator + "0.png");
+		return new ModelAndView("download", "downloadFile", realDownloadFile);
 	}
 }
