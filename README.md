@@ -12,8 +12,10 @@
   * CefSharp (Chromium 기반)
     * 크로미움 브라우저로 거의 완벽하게 캡쳐.
 * 데모 서버: http://www.namejm.org:8080/
+## 저작권 표시
+![image](https://user-images.githubusercontent.com/13088077/81154082-853ac180-8fbe-11ea-9699-4fb81c96aeeb.png)
 
-### 설치 가이드
+## 설치 가이드
 1. 압축 해제후 DocConvert_Server.ini 환경에 맞게 설정
 2. DocConvert_Util 실행 후 HWP DLL 등록 체크
 3. Install 폴더안에 있는 FileZilla Server 인스톨
@@ -28,7 +30,7 @@
 
 > 사용된 C#라이브러리: vtortola.WebSockets, websocket-sharp, pdfium, NLOG, OfficeAPI, HWP API, log4j, FluentFTP, phantomjs    
 > 사용된 Java라이브러리: commons-net-3.6.jar, Java-WebSocket-1.4.1.jar, json-simple-1.1.1.jar, slf4j-api-1.7.25.jar  
-### 프로그램별 설명
+## 프로그램별 설명
 * 설정한 포트로 WebSocket을 Listen하며 요청이 들어오면 해당 문서를 변환해주는 역할  
 ![image](https://user-images.githubusercontent.com/13088077/80710856-635abe00-8b2a-11ea-9cf6-db09143aac8b.png)  
 <DocConvert 서버 메인화면>  
@@ -76,7 +78,7 @@
   "Method": "WebCapture"
 ```  
 
-### DocConverter Engien
+## DocConverter Engien
 ```
 WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, bool pageCounting, bool appvisible)
 String FilePath: 소스 파일경로  
@@ -127,7 +129,7 @@ WebCapture_Core.WebCapture(string Url, string outPath)
 String SourcePDF: 웹 캡쳐 URL  
 String outPath: 이미지 내보낼 경로  
 ```
-### FAQ
+## FAQ
 ```
 Q: 동시에 몇개까지 변환이 가능합니까?
 A: 서버 사양이 따라주면 동시변환 제한은 따로 없습니다.
@@ -144,5 +146,5 @@ A: 한글 처음 설치 후 바로 변환하면 해당 증상이 발생하며 �
 Q: 한글 변환시 프로그램이 꺼집니다.
 A: 해당 문제는 한글 버전이 낮아서 발생하며, 구버전 한글의 경우 마이너 업데이트를 진행해야 정상작동합니다.
 ```
-### License
+## License
 License 파일 참조
