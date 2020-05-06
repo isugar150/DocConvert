@@ -11,8 +11,10 @@
     * 빠르고 가벼우나 캡쳐가 완벽하게 안됨.
   * CefSharp (Chromium 기반)
     * 크로미움 브라우저로 거의 완벽하게 캡쳐.
-* 데모 서버: http://www.namejm.org:8080/
-## 저작권 표시
+* [데모 서버](http://www.namejm.org:8080/)  
+  * 개인 서버라 변환 속도가 느릴 수 있음.
+  * Timeout 2분 30초 걸어놔서 너무 용량이 큰 파일은 중간에 변환이 끊길 수 있습니다.
+## 저작권 정보
 ![image](https://user-images.githubusercontent.com/13088077/81154082-853ac180-8fbe-11ea-9699-4fb81c96aeeb.png)
 
 ## 설치 가이드
