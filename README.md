@@ -11,6 +11,7 @@
     * 빠르고 가벼우나 캡쳐가 완벽하게 안됨.
   * CefSharp (Chromium 기반)
     * 크로미움 브라우저로 거의 완벽하게 캡쳐.
+* 데모 서버: http://www.namejm.org:8080/
 
 ### 설치 가이드
 1. 압축 해제후 DocConvert_Server.ini 환경에 맞게 설정
