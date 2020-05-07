@@ -29,7 +29,8 @@ namespace DocConvert_Server
         public static bool isHwpConverting = false;
         private bool noLicense = false;
         public static iniProperties IniProperties = new iniProperties();
-        private bool FollowTailSelect = false;
+        private int selectLastIndex = 0;
+        private bool checkedFollowTail = false;
 
         private static Logger logger = LogManager.GetLogger("DocConvert_Server_Log");
 
@@ -152,10 +153,6 @@ namespace DocConvert_Server
 
             if (checkBox2.Checked)
             {
-                for (int i = 0; i < listBoxLog.Items.Count; i++)
-                {
-                    listBoxLog.SelectedIndex = i;
-                }
                 IniProperties.FollowTailYn = true;
                 listBoxLog.Enabled = false;
             }
@@ -431,9 +428,7 @@ namespace DocConvert_Server
 
                     if (checkBox2.Checked)
                     {
-                        FollowTailSelect = true;
                         listBoxLog.SelectedIndex = listBoxLog.Items.Count - 1;
-                        textBox1.AppendText(msg + "\r\n");
                     }
 
                     toolStripStatusLabel1.Text = string.Format("LogCount: {0}/{1}", listBoxLog.Items.Count, IniProperties.DisplayLogCnt);
@@ -454,7 +449,7 @@ namespace DocConvert_Server
         {
             if (checkBox1.Checked)
             {
-                if (!FollowTailSelect || !checkBox2.Checked)
+                if (!checkedFollowTail)
                 {
                     textBox1.Text = "";
 
@@ -462,7 +457,10 @@ namespace DocConvert_Server
                     {
                         textBox1.AppendText(logList.ToString() + "\r\n");
                     }
-                    FollowTailSelect = false;
+                }
+                else
+                {
+                    textBox1.AppendText(listBoxLog.Items[selectLastIndex].ToString() + "\r\n");
                 }
             }
         }
@@ -687,6 +685,7 @@ namespace DocConvert_Server
                 splitContainer2.SplitterDistance = splitContainer2.Width;
                 checkBox2.Checked = false;
                 checkBox2.Enabled = false;
+                textBox1.Text = "";
             }
         }
 
@@ -694,10 +693,15 @@ namespace DocConvert_Server
         {
             if (checkBox2.Checked)
             {
+                listBoxLog.ClearSelected();
+                textBox1.Text = "";
+                checkedFollowTail = true;
                 for (int i = 0; i < listBoxLog.Items.Count; i++)
                 {
+                    selectLastIndex = i;
                     listBoxLog.SelectedIndex = i;
                 }
+                checkedFollowTail = false;
                 IniProperties.FollowTailYn = true;
                 listBoxLog.Enabled = false;
             }

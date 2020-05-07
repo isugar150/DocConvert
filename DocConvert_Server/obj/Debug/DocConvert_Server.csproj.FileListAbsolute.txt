@@ -3,7 +3,6 @@ D:\sources\DocConvert\DocConvert_Server\bin\Debug\DocConvert_Server.exe
 D:\sources\DocConvert\DocConvert_Server\bin\Debug\DocConvert_Server.pdb
 D:\sources\DocConvert\DocConvert_Server\bin\Debug\NLog.dll
 D:\sources\DocConvert\DocConvert_Server\bin\Debug\NLog.xml
-D:\sources\DocConvert\bin\Debug\DocConvert_Server.exe.config
 D:\sources\DocConvert\bin\Debug\DocConvert_Server.exe
 D:\sources\DocConvert\bin\Debug\DocConvert_Server.pdb
 D:\sources\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.Form1.resources
@@ -98,3 +97,13 @@ C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Server\obj\Debug\DocConver
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.exe
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.pdb
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.csprojAssemblyReference.cache
+D:\sources\DocConvert\bin\Debug\phantomjs.exe
+D:\sources\DocConvert\bin\Debug\rasterize.js
+D:\sources\DocConvert\bin\Debug\Utility\Office Uninstall v1.8.2.exe
+D:\sources\DocConvert\bin\Debug\NLog.config
+D:\sources\DocConvert\bin\Debug\Install\FileZilla_Server-0_9_60_2.exe
+D:\sources\DocConvert\bin\Debug\FilePathCheckerModuleExample.dll
+D:\sources\DocConvert\bin\Debug\pdfium.dll
+D:\sources\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.Forms.AboutForm.resources
+D:\sources\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.MessageDialog.resources
+D:\sources\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.csproj.CoreCompileInputs.cache
