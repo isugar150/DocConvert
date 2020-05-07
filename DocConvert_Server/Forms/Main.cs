@@ -21,29 +21,38 @@ namespace DocConvert_Server
 {
     public partial class Form1 : Form
     {
+        #region 전역변수
+        private static Logger logger = LogManager.GetLogger("DocConvert_Server_Log");
         private System.Windows.Threading.DispatcherTimer workProcessTimer = new System.Windows.Threading.DispatcherTimer();
-        private int wsSessionCount = 0;
-        private static System.Windows.Forms.Timer tScheduler;
+        private System.Windows.Forms.Timer tScheduler;
         private WebSocketListener webSocketServer = null;
         private JObject checkLicense = new JObject();
-        public static bool isHwpConverting = false;
-        private bool noLicense = false;
-        public static iniProperties IniProperties = new iniProperties();
+        private int wsSessionCount = 0;
         private int selectLastIndex = 0;
         private bool checkedFollowTail = false;
+        private bool noLicense = false;
+        #endregion
 
-        private static Logger logger = LogManager.GetLogger("DocConvert_Server_Log");
+        #region 공유변수
+        public static bool isHwpConverting = false;
+        public static iniProperties IniProperties = new iniProperties();
+        #endregion
 
         public Form1(string[] args)
         {
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
+
+            #region Welcome Message
             DevLog.Write2("┏━━━┓╋╋╋╋╋┏━━━┓╋╋╋╋╋╋╋╋╋╋╋╋╋┏┓╋┏━━━┓\r\n" +
                           "┗┓┏┓┃╋╋╋╋╋┃┏━┓┃╋╋╋╋╋╋╋╋╋╋╋╋┏┛┗┓┃┏━┓┃\r\n" +
                           "╋┃┃┃┣━━┳━━┫┃╋┗╋━━┳━┓┏┓┏┳━━┳┻┓┏┛┃┗━━┳━━┳━┳┓┏┳━━┳━┓\r\n" +
                           "╋┃┃┃┃┏┓┃┏━┫┃╋┏┫┏┓┃┏┓┫┗┛┃┃━┫┏┫┃╋┗━━┓┃┃━┫┏┫┗┛┃┃━┫┏┛\r\n" +
                           "┏┛┗┛┃┗┛┃┗━┫┗━┛┃┗┛┃┃┃┣┓┏┫┃━┫┃┃┗┓┃┗━┛┃┃━┫┃┗┓┏┫┃━┫┃\r\n" +
                           "┗━━━┻━━┻━━┻━━━┻━━┻┛┗┛┗┛┗━━┻┛┗━┛┗━━━┻━━┻┛╋┗┛┗━━┻┛", LOG_LEVEL.TRACE);
+            #endregion
+
+            #region 아규먼트 파싱
             if (args.Length != 0)
             {
                 for(int i = 0; i<args.Length; i++)
@@ -63,6 +72,7 @@ namespace DocConvert_Server
                     }
                 }
             }
+            #endregion
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -117,6 +127,7 @@ namespace DocConvert_Server
                 }
             }
             #endregion
+
             #region checkLicense
             try
             {
@@ -179,6 +190,7 @@ namespace DocConvert_Server
 
             DevLog.Write("[INFO] 웹 캡쳐 타임아웃: " + IniProperties.WebCaptureTimeout + "초", LOG_LEVEL.INFO);
             #endregion
+
             #region 한글 DLL 레지스트리 등록
             if (File.Exists(Application.StartupPath + @"\FilePathCheckerModuleExample.dll"))
             {
@@ -186,7 +198,8 @@ namespace DocConvert_Server
                 DevLog.Write("[INFO] 한글 DLL을 레지스트리에 등록하였습니다.", LOG_LEVEL.INFO);
             }
             #endregion
-            #region 스케줄러 관련
+
+            #region 스케줄러 호출
             string SchedulerInfo = "";
             if (IniProperties.CleanWorkspaceSchedulerYn)
             {
@@ -206,6 +219,7 @@ namespace DocConvert_Server
             tScheduler.Start();
             DevLog.Write("[Scheduler] 다음 스케줄러 작동시간: " + (DateTime.Now + TimeSpan.FromMilliseconds(tScheduler.Interval)));
             #endregion
+
             #region Create WebSocketServer
             try
             {
@@ -260,6 +274,7 @@ namespace DocConvert_Server
                 pictureBox3.Image = Properties.Resources.error_icon;
             }
             #endregion
+
             #region Thread
             workProcessTimer.Tick += new EventHandler(OnProcessTimedEvent);
             workProcessTimer.Interval = new TimeSpan(0, 0, 0, 0, 32);
@@ -491,38 +506,7 @@ namespace DocConvert_Server
         }
         #endregion
 
-        #region 컴포넌트 이벤트
-
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (AboutForm dialog = new AboutForm())
-            {
-                dialog.ShowDialog(this);
-            }
-        }
-
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            e.Cancel = true;
-            program_Exit(false);
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            program_Exit(false);
-        }
-
-        private void toolStripMenuItem4_Click(object sender, EventArgs e)
-        {
-            if (this.TopMost)
-            {
-                this.TopMost = false;
-            }
-            else
-            {
-                this.TopMost = true;
-            }
-        }
+        #region 스케줄러 메소드
 
         /// <summary>
         /// 스케줄러 등록시 지정할 타이머
@@ -532,8 +516,8 @@ namespace DocConvert_Server
         {
             string[] timeStr = IniProperties.SchedulerTime.Split(',');
             int[] time = new int[3];
-            for (int i = 0; i<2; i++)
-            time[0] = int.Parse(timeStr[0]); // 시
+            for (int i = 0; i < 2; i++)
+                time[0] = int.Parse(timeStr[0]); // 시
             time[1] = int.Parse(timeStr[1]); // 분
             DateTime timeTaken = new DateTime();
             if (new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, time[0], time[1], 0) < DateTime.Now)
@@ -624,6 +608,40 @@ namespace DocConvert_Server
             }
             return false;
         }
+        #endregion
+
+        #region 컴포넌트 이벤트
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (AboutForm dialog = new AboutForm())
+            {
+                dialog.ShowDialog(this);
+            }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            program_Exit(false);
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            program_Exit(false);
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            if (this.TopMost)
+            {
+                this.TopMost = false;
+            }
+            else
+            {
+                this.TopMost = true;
+            }
+        }
 
         /// <summary>
         /// 프로그램 종료시 로직 Application.Exit(0) 안먹음
@@ -637,6 +655,7 @@ namespace DocConvert_Server
                 {
                     if (webSocketServer != null)
                     {
+                        DevLog.Write("[INFO] 웹 소켓 서버를 종료합니다.", LOG_LEVEL.INFO);
                         webSocketServer.Stop();
                         webSocketServer.Dispose();
                     }
@@ -653,6 +672,7 @@ namespace DocConvert_Server
             {
                 if (webSocketServer != null)
                 {
+                    DevLog.Write("[INFO] 웹 소켓 서버를 종료합니다.", LOG_LEVEL.INFO);
                     webSocketServer.Stop();
                     webSocketServer.Dispose();
                 }

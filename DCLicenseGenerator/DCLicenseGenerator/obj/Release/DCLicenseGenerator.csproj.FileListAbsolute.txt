@@ -24,3 +24,16 @@ C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.exe
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.pdb
 C:\Users\o0_0o\Documents\GitHub\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.csprojAssemblyReference.cache
+D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Release\DCLicenseGenerator.exe.config
+D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Release\DCLicenseGenerator.exe
+D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Release\DCLicenseGenerator.pdb
+D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Release\Newtonsoft.Json.dll
+D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Release\Newtonsoft.Json.xml
+D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.csprojAssemblyReference.cache
+D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.Main.resources
+D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.Properties.Resources.resources
+D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.csproj.GenerateResource.cache
+D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.csproj.CoreCompileInputs.cache
+D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.csproj.CopyComplete
+D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.exe
+D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.pdb

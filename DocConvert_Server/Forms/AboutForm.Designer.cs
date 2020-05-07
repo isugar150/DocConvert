@@ -60,6 +60,7 @@
             // 
             this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -102,13 +103,15 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Location = new System.Drawing.Point(7, 155);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(661, 450);
+            this.textBox1.Size = new System.Drawing.Size(661, 427);
             this.textBox1.TabIndex = 3;
             // 
             // groupBox1
@@ -122,7 +125,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(676, 613);
+            this.groupBox1.Size = new System.Drawing.Size(676, 590);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "라이센스 정보";
@@ -131,7 +134,7 @@
             // 
             this.label2.Location = new System.Drawing.Point(33, 181);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 20);
+            this.label2.Size = new System.Drawing.Size(114, 14);
             this.label2.TabIndex = 5;
             this.label2.Text = "ver.";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -140,7 +143,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Location = new System.Drawing.Point(183, 632);
+            this.label3.Location = new System.Drawing.Point(183, 621);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(676, 17);
             this.label3.TabIndex = 6;
@@ -150,6 +153,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(12, 609);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(165, 40);
@@ -173,9 +177,9 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(12, 201);
+            this.label4.Location = new System.Drawing.Point(12, 212);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(157, 33);
+            this.label4.Size = new System.Drawing.Size(157, 31);
             this.label4.TabIndex = 8;
             this.label4.Text = "등록번호 \r\nC-2020-013602";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
