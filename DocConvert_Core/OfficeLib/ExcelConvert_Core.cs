@@ -140,8 +140,9 @@ namespace DocConvert_Core.OfficeLib
                     }
                 }
                 #endregion
-                #region 저장 옵션 https://docs.microsoft.com/ko-kr/dotnet/api/microsoft.office.tools.excel.workbook.exportasfixedformat?view=vsto-2017
-                XlFixedFormatType FileFormat = XlFixedFormatType.xlTypePDF;
+                #region 저장 옵션
+                // 내보내기 https://docs.microsoft.com/ko-kr/dotnet/api/microsoft.office.tools.excel.workbook.exportasfixedformat?view=vsto-2017
+                XlFixedFormatType ExportFileFormat = XlFixedFormatType.xlTypePDF;
                 XlFixedFormatQuality Quality = XlFixedFormatQuality.xlQualityStandard;
                 object IncludeDocProperties = Type.Missing;
                 object IgnorePrintAreas = false;
@@ -152,7 +153,7 @@ namespace DocConvert_Core.OfficeLib
                 #endregion
                 #region PDF저장
                 doc.ExportAsFixedFormat(
-                    Type: FileFormat,
+                    Type: ExportFileFormat,
                     Filename: outPath,
                     Quality: Quality,
                     IncludeDocProperties: IncludeDocProperties,
