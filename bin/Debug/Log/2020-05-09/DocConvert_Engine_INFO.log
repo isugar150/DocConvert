@@ -102,3 +102,33 @@
 2020-05-09 11:55:24.6809  INFO - ==================== Start ====================
 2020-05-09 11:55:24.7058  INFO - Method: WordSaveAs, FilePath: C:\Users\o0_0o\Desktop\file-sample_100kB.doc, outPath: C:\Users\o0_0o\Desktop\file-sample_100kB.pdf, docPassword: 
 2020-05-09 11:55:27.5517  INFO - ==================== End ====================
+2020-05-09 19:52:09.3642  INFO - ==================== Start ====================
+2020-05-09 19:52:09.3953  INFO - Method: PowerPointSaveAs, FilePath: C:\Users\o0_0o\Desktop\1.pptx, outPath: C:\Users\o0_0o\Desktop\1.pdf, docPassword: 
+2020-05-09 19:52:29.7395  INFO - ==================== Start ====================
+2020-05-09 19:52:29.7695  INFO - Method: PowerPointSaveAs, FilePath: C:\Users\o0_0o\Desktop\1.pptx, outPath: C:\Users\o0_0o\Desktop\1.pdf, docPassword: 
+2020-05-09 19:52:40.8043  INFO - 변환 성공
+2020-05-09 19:52:40.8221  INFO - ==================== End ====================
+2020-05-09 19:53:10.3803  INFO - ==================== Start ====================
+2020-05-09 19:53:10.4102  INFO - Method: PowerPointSaveAs, FilePath: C:\Users\o0_0o\Desktop\1.pptx, outPath: C:\Users\o0_0o\Desktop\1.pdf, docPassword: 
+2020-05-09 19:53:11.3024  INFO - ==================== End ====================
+2020-05-09 19:57:30.4874  INFO - ==================== Start ====================
+2020-05-09 19:57:30.5147  INFO - Method: PowerPointSaveAs, FilePath: C:\Users\o0_0o\Desktop\1.pptx, outPath: C:\Users\o0_0o\Desktop\1.pdf, docPassword: 
+2020-05-09 19:57:31.6957  INFO - ==================== End ====================
+2020-05-09 20:15:42.9754  INFO - ==================== Start ====================
+2020-05-09 20:15:43.0208  INFO - Method: PowerPointSaveAs, FilePath: C:\Users\o0_0o\Desktop\1.pptx, outPath: C:\Users\o0_0o\Desktop\1.pdf, docPassword: 
+2020-05-09 20:15:44.1371  INFO - ==================== End ====================
+2020-05-09 20:16:03.1267  INFO - ==================== Start ====================
+2020-05-09 20:16:03.1728  INFO - Method: PowerPointSaveAs, FilePath: C:\Users\o0_0o\Desktop\1.pptx, outPath: C:\Users\o0_0o\Desktop\1.pdf, docPassword: 
+2020-05-09 20:16:04.2941  INFO - ==================== End ====================
+2020-05-09 20:16:30.4239  INFO - ==================== Start ====================
+2020-05-09 20:16:30.4595  INFO - Method: PowerPointSaveAs, FilePath: C:\Users\o0_0o\Desktop\1.pptx, outPath: C:\Users\o0_0o\Desktop\1.pdf, docPassword: 
+2020-05-09 20:16:32.3843  INFO - 변환 성공
+2020-05-09 20:16:32.4057  INFO - ==================== End ====================
+2020-05-09 20:18:09.1588  INFO - ==================== Start ====================
+2020-05-09 20:18:09.2036  INFO - Method: PowerPointSaveAs, FilePath: C:\Users\o0_0o\Desktop\첨부변환 오류파일200508.pptx, outPath: C:\Users\o0_0o\Desktop\첨부변환 오류파일200508.pdf, docPassword: 
+2020-05-09 20:18:11.1280  INFO - 변환 성공
+2020-05-09 20:18:11.1439  INFO - ==================== End ====================
+2020-05-09 20:18:28.5801  INFO - ==================== Start ====================
+2020-05-09 20:18:28.6240  INFO - Method: PowerPointSaveAs, FilePath: C:\Users\o0_0o\Desktop\1.pptx, outPath: C:\Users\o0_0o\Desktop\1.pdf, docPassword: 
+2020-05-09 20:18:30.3602  INFO - 변환 성공
+2020-05-09 20:18:30.3782  INFO - ==================== End ====================

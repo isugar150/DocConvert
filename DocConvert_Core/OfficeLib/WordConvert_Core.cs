@@ -95,22 +95,22 @@ namespace DocConvert_Core.OfficeLib
                 #endregion
                 #region 문서 열기
                 _Document doc = word.Documents.Open(
-                    FilePath,
-                    ConfirmConversions,
-                    ReadOnly,
-                    AddToRecentFiles,
-                    PasswordDocument,
-                    PasswordTemplate,
-                    Revert,
-                    WritePasswordDocument,
-                    WritePasswordTemplate,
-                    Format,
-                    Encoding,
-                    Visible,
-                    OpenAndRepair,
-                    DocumentDirection,
-                    NoEncodingDialog,
-                    XMLTransform
+                    FileName: FilePath,
+                    ConfirmConversions: ConfirmConversions,
+                    ReadOnly: ReadOnly,
+                    AddToRecentFiles: AddToRecentFiles,
+                    PasswordDocument: PasswordDocument,
+                    PasswordTemplate: PasswordTemplate,
+                    Revert: Revert,
+                    WritePasswordDocument: WritePasswordDocument,
+                    WritePasswordTemplate: WritePasswordTemplate,
+                    Format: Format,
+                    Encoding: Encoding,
+                    Visible: Visible,
+                    OpenAndRepair: OpenAndRepair,
+                    DocumentDirection: DocumentDirection,
+                    NoEncodingDialog: NoEncodingDialog,
+                    XMLTransform: XMLTransform
                 );
 
                 doc.Activate();
@@ -121,8 +121,8 @@ namespace DocConvert_Core.OfficeLib
                     returnValue.PageCount = doc.ComputeStatistics(WdStatistic.wdStatisticPages, -1);
                 }
                 #endregion
-                #region 저장 옵션 https://docs.microsoft.com/ko-kr/dotnet/api/microsoft.office.tools.word.document.saveas2?view=vsto-2017
-                // SaveAs2
+                #region 저장 옵션
+                // 다른 이름으로 저장 https://docs.microsoft.com/ko-kr/dotnet/api/microsoft.office.tools.word.document.saveas2?view=vsto-2017
                 object FileFormat = WdSaveFormat.wdFormatPDF;
                 object LockComments = Type.Missing;
                 object Password = Type.Missing;
@@ -138,7 +138,7 @@ namespace DocConvert_Core.OfficeLib
                 object AddBiDiMarks = Type.Missing;
                 object CompatibilityMode = Type.Missing;
 
-                // ExportAsFixedFormat
+                // 내보내기 https://docs.microsoft.com/en-us/office/vba/api/word.document.exportasfixedformat
                 WdExportFormat ExportFormat = WdExportFormat.wdExportFormatPDF;
                 bool OpenAfterExport = false;
                 WdExportOptimizeFor OptimizeFor = WdExportOptimizeFor.wdExportOptimizeForPrint;
@@ -150,7 +150,7 @@ namespace DocConvert_Core.OfficeLib
                 bool KeepIRM = false;
                 WdExportCreateBookmarks CreateBookmarks = WdExportCreateBookmarks.wdExportCreateNoBookmarks;
                 bool DocStructureTags = false;
-                bool BitmapMissingFonts = false;
+                bool BitmapMissingFonts = true;
                 bool UseISO19005_1 = false;
                 object FixedFormatExtClassPtr = Type.Missing;
 
@@ -159,43 +159,43 @@ namespace DocConvert_Core.OfficeLib
                 try
                 {
                     doc.SaveAs2(
-                       outPath,
-                       FileFormat,
-                       LockComments,
-                       Password,
-                       AddToRecentFiles,
-                       WritePassword,
-                       ReadOnlyRecommended,
-                       EmbedTrueTypeFonts,
-                       SaveNativePictureFormat,
-                       SaveFormsData,
-                       SaveAsAOCELetter,
-                       Encoding,
-                       InsertLineBreaks,
-                       AllowSubstitutions,
-                       LineEnding,
-                       AddBiDiMarks,
-                       CompatibilityMode
+                       FileName: outPath,
+                       FileFormat: FileFormat,
+                       LockComments: LockComments,
+                       Password: Password,
+                       AddToRecentFiles: AddToRecentFiles,
+                       WritePassword: WritePassword,
+                       ReadOnlyRecommended: ReadOnlyRecommended,
+                       EmbedTrueTypeFonts: EmbedTrueTypeFonts,
+                       SaveNativePictureFormat: SaveNativePictureFormat,
+                       SaveFormsData: SaveFormsData,
+                       SaveAsAOCELetter: SaveAsAOCELetter,
+                       Encoding: Encoding,
+                       InsertLineBreaks: InsertLineBreaks,
+                       AllowSubstitutions: AllowSubstitutions,
+                       LineEnding: LineEnding,
+                       AddBiDiMarks: AddBiDiMarks,
+                       CompatibilityMode: CompatibilityMode
                    );
                 }
                 catch (Exception)
                 {
                     doc.ExportAsFixedFormat(
-                        outPath,
-                        ExportFormat,
-                        OpenAfterExport,
-                        OptimizeFor,
-                        Range,
-                        From,
-                        To,
-                        Item,
-                        IncludeDocProps,
-                        KeepIRM,
-                        CreateBookmarks,
-                        DocStructureTags,
-                        BitmapMissingFonts,
-                        UseISO19005_1,
-                        FixedFormatExtClassPtr
+                        OutputFileName: outPath,
+                        ExportFormat: ExportFormat,
+                        OpenAfterExport: OpenAfterExport,
+                        OptimizeFor: OptimizeFor,
+                        Range: Range,
+                        From: From,
+                        To: To,
+                        Item: Item,
+                        IncludeDocProps: IncludeDocProps,
+                        KeepIRM: KeepIRM,
+                        CreateBookmarks: CreateBookmarks,
+                        DocStructureTags: DocStructureTags,
+                        BitmapMissingFonts: BitmapMissingFonts,
+                        UseISO19005_1: UseISO19005_1,
+                        FixedFormatExtClassPtr: FixedFormatExtClassPtr
                     );
                 }
                 #endregion
@@ -205,7 +205,7 @@ namespace DocConvert_Core.OfficeLib
                 object RouteDocument = false;
                 #endregion
                 #region 문서 닫기
-                doc.Close(SaveChanges, OriginalFormat, RouteDocument);
+                doc.Close(SaveChanges: SaveChanges, OriginalFormat: OriginalFormat, RouteDocument: RouteDocument);
                 #endregion
                 logger.Info("변환 성공");
                 returnValue.isSuccess = true;

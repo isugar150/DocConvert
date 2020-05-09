@@ -4,6 +4,7 @@ using Microsoft.Office.Interop.PowerPoint;
 using NLog;
 using System;
 using System.Diagnostics;
+using System.Drawing.Printing;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using MsoTriState = Microsoft.Office.Core.MsoTriState;
@@ -61,26 +62,26 @@ namespace DocConvert_Core.OfficeLib
                 {
                     WithWindow = MsoTriState.msoFalse;
                 }
-                MsoTriState OpenAndRepair = MsoTriState.msoTrue; // 200y Only
+                MsoTriState OpenAndRepair = MsoTriState.msoTrue; // 07 Only
                 #endregion
                 #region 문서 열기
                 try // Presentations.Open https://docs.microsoft.com/en-us/office/vba/api/powerpoint.presentations.open
                 {
                     doc = multiPresentations.Open(
-                        FilePath,
-                        ReadOnly,
-                        Untitled,
-                        WithWindow
+                        FileName: FilePath,
+                        ReadOnly: ReadOnly,
+                        Untitled: Untitled,
+                        WithWindow: WithWindow
                     );
                 }
                 catch (Exception) // Presentations.Open2007 https://docs.microsoft.com/en-us/office/vba/api/powerpoint.presentations.open2007
                 {
                     doc = multiPresentations.Open2007(
-                        FilePath,
-                        ReadOnly,
-                        Untitled,
-                        WithWindow,
-                        OpenAndRepair
+                        FileName: FilePath,
+                        ReadOnly: ReadOnly,
+                        Untitled: Untitled,
+                        WithWindow: WithWindow,
+                        OpenAndRepair: OpenAndRepair
                     );
                 }
                 #endregion
@@ -101,16 +102,57 @@ namespace DocConvert_Core.OfficeLib
                     }
                 }
                 #endregion
-                #region 저장 옵션 https://docs.microsoft.com/en-us/previous-versions/office/developer/office-2010/ff762466(v%3Doffice.14)
+                #region 저장 옵션
+                // 다른 이름으로 저장 https://docs.microsoft.com/en-us/office/vba/api/powerpoint.presentation.saveas
                 PpSaveAsFileType ppSaveAsFileType = PpSaveAsFileType.ppSaveAsPDF;
                 MsoTriState msoTriState = MsoTriState.msoFalse;
+
+                // 내보내기 https://docs.microsoft.com/en-us/office/vba/api/powerpoint.presentation.exportasfixedformat
+                PpFixedFormatType FixedFormatType = PpFixedFormatType.ppFixedFormatTypePDF;
+                PpFixedFormatIntent Intent = PpFixedFormatIntent.ppFixedFormatIntentPrint;
+                MsoTriState FrameSlides = MsoTriState.msoFalse;
+                PpPrintHandoutOrder HandoutOrder = PpPrintHandoutOrder.ppPrintHandoutVerticalFirst;
+                PpPrintOutputType OutputType = PpPrintOutputType.ppPrintOutputSlides;
+                MsoTriState PrintHiddenSlides = MsoTriState.msoFalse;
+                PowerPoint.PrintRange PrintRange = null;
+                PpPrintRangeType RangeType = PpPrintRangeType.ppPrintAll;
+                string SlideShowName = string.Empty;
+                bool IncludeDocProperties = false;
+                bool KeepIRMSettings = false;
+                bool DocStructureTags = true;
+                bool BitmapMissingFonts = true;
+                bool UseISO19005_1 = false;
                 #endregion
                 #region PDF저장
-                doc.SaveAs(
-                    outPath,
-                    ppSaveAsFileType,
-                    msoTriState
-                );
+                try 
+                {
+                    doc.SaveAs(
+                        FileName: outPath,
+                        FileFormat: ppSaveAsFileType,
+                        EmbedTrueTypeFonts: msoTriState
+                    );
+                }
+                catch (Exception)
+                {
+                    doc.ExportAsFixedFormat(
+                        Path: outPath,
+                        FixedFormatType: FixedFormatType,
+                        Intent: Intent,
+                        FrameSlides: FrameSlides,
+                        HandoutOrder: HandoutOrder,
+                        OutputType: OutputType,
+                        PrintHiddenSlides: PrintHiddenSlides,
+                        PrintRange: PrintRange,
+                        RangeType: RangeType,
+                        SlideShowName: SlideShowName,
+                        IncludeDocProperties: IncludeDocProperties,
+                        KeepIRMSettings: KeepIRMSettings,
+                        DocStructureTags: DocStructureTags,
+                        BitmapMissingFonts: BitmapMissingFonts,
+                        UseISO19005_1: UseISO19005_1,
+                        ExternalExporter: Type.Missing
+                    );
+                }
                 #endregion
                 #region 문서 닫기
                 doc.Close();
