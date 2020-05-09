@@ -2,6 +2,7 @@
 using NLog;
 using PdfiumViewer;
 using System;
+using System.Diagnostics;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
@@ -86,6 +87,10 @@ namespace DocConvert_Core.imageLib
             }
             catch (Exception e1)
             {
+                logger.Error("======= Method: " + MethodBase.GetCurrentMethod().Name + " =======");
+                logger.Error(new StackTrace(e1, true).ToString());
+                logger.Error("변환 실패: " + e1.Message);
+                logger.Error("================ End ================");
                 throw e1;
             }
             finally
@@ -168,6 +173,10 @@ namespace DocConvert_Core.imageLib
             }
             catch (Exception e1)
             {
+                logger.Error("======= Method: " + MethodBase.GetCurrentMethod().Name + " =======");
+                logger.Error(new StackTrace(e1, true).ToString());
+                logger.Error("변환 실패: " + e1.Message);
+                logger.Error("================ End ================");
                 throw e1;
             }
             finally
@@ -251,6 +260,10 @@ namespace DocConvert_Core.imageLib
             }
             catch (Exception e1)
             {
+                logger.Error("======= Method: " + MethodBase.GetCurrentMethod().Name + " =======");
+                logger.Error(new StackTrace(e1, true).ToString());
+                logger.Error("변환 실패: " + e1.Message);
+                logger.Error("================ End ================");
                 throw e1;
             }
             finally
@@ -276,9 +289,10 @@ namespace DocConvert_Core.imageLib
             }
             catch (Exception e1)
             {
-                logger.Info("이미지 카운팅 실패!");
-                logger.Info("Source image: " + SourcePDF);
-                logger.Info(e1.Message);
+                logger.Error("======= Method: " + MethodBase.GetCurrentMethod().Name + " =======");
+                logger.Error(new StackTrace(e1, true).ToString());
+                logger.Error("변환 카운팅 실패: " + e1.Message);
+                logger.Error("================ End ================");
                 return -1;
             }
         }

@@ -2,6 +2,7 @@
 using DocConvert_Core.interfaces;
 using NLog;
 using System;
+using System.Diagnostics;
 using System.Reflection;
 using System.Threading;
 
@@ -87,6 +88,10 @@ namespace DocConvert_Core.HWPLib
 
             catch (Exception e1)
             {
+                logger.Error("======= Method: " + MethodBase.GetCurrentMethod().Name + " =======");
+                logger.Error(new StackTrace(e1, true).ToString());
+                logger.Error("변환 실패: " + e1.Message);
+                logger.Error("================ End ================");
                 try
                 {
                     throw e1;

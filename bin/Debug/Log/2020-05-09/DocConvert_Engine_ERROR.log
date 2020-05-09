@@ -1,0 +1,6 @@
+2020-05-09 11:55:27.5057 ERROR - ======= Method: WordSaveAs =======
+2020-05-09 11:55:27.5087 ERROR -    위치: Microsoft.Office.Interop.Word.DocumentClass.ExportAsFixedFormat(String OutputFileName, WdExportFormat ExportFormat, Boolean OpenAfterExport, WdExportOptimizeFor OptimizeFor, WdExportRange Range, Int32 From, Int32 To, WdExportItem Item, Boolean IncludeDocProps, Boolean KeepIRM, WdExportCreateBookmarks CreateBookmarks, Boolean DocStructureTags, Boolean BitmapMissingFonts, Boolean UseISO19005_1, Object& FixedFormatExtClassPtr)
+   위치: DocConvert_Core.OfficeLib.WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible) 파일 D:\sources\DocConvert\DocConvert_Core\OfficeLib\WordConvert_Core.cs:줄 183
+
+2020-05-09 11:55:27.5087 ERROR - 변환 실패: 오류로 인해 내보내지 못했습니다.
+2020-05-09 11:55:27.5087 ERROR - ================ End ================

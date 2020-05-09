@@ -3,6 +3,7 @@ using DocConvert_Core.interfaces;
 using Microsoft.Office.Interop.Excel;
 using NLog;
 using System;
+using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using Excel = Microsoft.Office.Interop.Excel;
@@ -177,6 +178,10 @@ namespace DocConvert_Core.OfficeLib
             }
             catch (Exception e1)
             {
+                logger.Error("======= Method: " + MethodBase.GetCurrentMethod().Name + " =======");
+                logger.Error(new StackTrace(e1, true).ToString());
+                logger.Error("변환 실패: " + e1.Message);
+                logger.Error("================ End ================");
                 throw e1;
             }
             finally

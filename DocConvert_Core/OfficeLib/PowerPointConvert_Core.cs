@@ -3,6 +3,7 @@ using DocConvert_Core.interfaces;
 using Microsoft.Office.Interop.PowerPoint;
 using NLog;
 using System;
+using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using MsoTriState = Microsoft.Office.Core.MsoTriState;
@@ -48,6 +49,7 @@ namespace DocConvert_Core.OfficeLib
                 #endregion
 
                 #region 열기 옵션 https://docs.microsoft.com/en-us/previous-versions/office/developer/office-2010/ff763759(v%3Doffice.14)
+                Presentation doc;
                 MsoTriState ReadOnly = MsoTriState.msoTrue;
                 MsoTriState Untitled = MsoTriState.msoFalse;
                 MsoTriState WithWindow;
@@ -59,14 +61,28 @@ namespace DocConvert_Core.OfficeLib
                 {
                     WithWindow = MsoTriState.msoFalse;
                 }
+                MsoTriState OpenAndRepair = MsoTriState.msoTrue; // 200y Only
                 #endregion
                 #region 문서 열기
-                Presentation doc = multiPresentations.Open(
-                    FilePath,
-                    ReadOnly,
-                    Untitled,
-                    WithWindow
-                );
+                try // Presentations.Open https://docs.microsoft.com/en-us/office/vba/api/powerpoint.presentations.open
+                {
+                    doc = multiPresentations.Open(
+                        FilePath,
+                        ReadOnly,
+                        Untitled,
+                        WithWindow
+                    );
+                }
+                catch (Exception) // Presentations.Open2007 https://docs.microsoft.com/en-us/office/vba/api/powerpoint.presentations.open2007
+                {
+                    doc = multiPresentations.Open2007(
+                        FilePath,
+                        ReadOnly,
+                        Untitled,
+                        WithWindow,
+                        OpenAndRepair
+                    );
+                }
                 #endregion
                 #region 페이지수 얻기
                 if (pageCounting)
@@ -86,10 +102,10 @@ namespace DocConvert_Core.OfficeLib
                 }
                 #endregion
                 #region 저장 옵션 https://docs.microsoft.com/en-us/previous-versions/office/developer/office-2010/ff762466(v%3Doffice.14)
-                #endregion
-                #region PDF저장
                 PpSaveAsFileType ppSaveAsFileType = PpSaveAsFileType.ppSaveAsPDF;
                 MsoTriState msoTriState = MsoTriState.msoFalse;
+                #endregion
+                #region PDF저장
                 doc.SaveAs(
                     outPath,
                     ppSaveAsFileType,
@@ -106,6 +122,10 @@ namespace DocConvert_Core.OfficeLib
             }
             catch (Exception e1)
             {
+                logger.Error("======= Method: " + MethodBase.GetCurrentMethod().Name + " =======");
+                logger.Error(new StackTrace(e1, true).ToString());
+                logger.Error("변환 실패: " + e1.Message);
+                logger.Error("================ End ================");
                 throw e1;
             }
             finally
