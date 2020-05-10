@@ -1,0 +1,8 @@
+2020-05-10 20:00:37.2448  INFO - ==================== Start ====================
+2020-05-10 20:00:37.2777  INFO - Method: ExcelSaveAs, FilePath: C:\Users\o0_0o\Desktop\MOCK_DATA.csv, outPath: C:\Users\o0_0o\Desktop\MOCK_DATA.pdf, docPassword: 
+2020-05-10 20:00:39.6937  INFO - 변환 성공
+2020-05-10 20:00:40.1936  INFO - ==================== End ====================
+2020-05-10 20:02:18.4254  INFO - ==================== Start ====================
+2020-05-10 20:02:18.4254  INFO - Method: ExcelSaveAs, FilePath: C:\Data\workspace\92CBCCECAC573A4743E1A828226B7D8B\MOCK_DATA.csv, outPath: C:\Data\workspace\92CBCCECAC573A4743E1A828226B7D8B\MOCK_DATA.pdf, docPassword: 
+2020-05-10 20:02:20.5761  INFO - 변환 성공
+2020-05-10 20:02:21.0556  INFO - ==================== End ====================

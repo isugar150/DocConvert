@@ -40,8 +40,10 @@ namespace DocConvert_Server
 
         public Form1(string[] args)
         {
+            #region Init Form
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
+            #endregion
 
             #region Welcome Message
             DevLog.Write2("┏━━━┓╋╋╋╋╋┏━━━┓╋╋╋╋╋╋╋╋╋╋╋╋╋┏┓╋┏━━━┓\r\n" +

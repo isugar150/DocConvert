@@ -29,7 +29,6 @@ D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Release\DCLicens
 D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Release\DCLicenseGenerator.pdb
 D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Release\Newtonsoft.Json.dll
 D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\bin\Release\Newtonsoft.Json.xml
-D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.csprojAssemblyReference.cache
 D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.Main.resources
 D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.Properties.Resources.resources
 D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.csproj.GenerateResource.cache

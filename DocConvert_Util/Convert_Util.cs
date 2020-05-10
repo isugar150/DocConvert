@@ -133,9 +133,9 @@ namespace DocConvert_Util
         private void button1_Click(object sender, EventArgs e)
         {
             openFileDialog1.FileName = "";
-            openFileDialog1.Filter = "지원하는 형식 (*.docx;*.doc;*.hwp;*.xlsx;*.xls;*.pptx;*.ppt;*.pdf;*.txt;*.html;)|*.docx;*.doc;*.hwp;*.xlsx;*.xls;*.pptx;*.ppt;*.ppt;*.pdf;*.txt;*.html;" +
+            openFileDialog1.Filter = "지원하는 형식 (*.docx;*.doc;*.hwp;*.xlsx;*.xls;*.csv;*.pptx;*.ppt;*.pdf;*.txt;*.html;)|*.docx;*.doc;*.hwp;*.xlsx;*.xls;*.csv;*.pptx;*.ppt;*.ppt;*.pdf;*.txt;*.html;" +
                 "|Word 형식 (*.docx;*.doc;*.hwp;*.txt;*.html;)|*.docx;*.doc;*.hwp;*.txt;*.html;" +
-                "|Cell 형식 (*.xlsx;*.xls;)|*.xlsx;*.xls;" +
+                "|Cell 형식 (*.xlsx;*.xls;*.csv;)|*.xlsx;*.xls*.csv;;" +
                 "|PPT 형식 (*.pptx;*.ppt;)|*.pptx;*.ppt;" +
                 "|PDF 형식 (*.pdf)|*.pdf" +
                 "|All Files (*.*)|*.*";
@@ -203,7 +203,7 @@ namespace DocConvert_Util
                             {
                                 status = WordConvert_Core.WordSaveAs(FileNames[i], outPath, passwd, PAGINGNUM, APPVISIBLE);
                             }
-                            else if (Path.GetExtension(FileNames[i]).Equals(".xlsx") || Path.GetExtension(FileNames[i]).Equals(".xls"))
+                            else if (Path.GetExtension(FileNames[i]).Equals(".xlsx") || Path.GetExtension(FileNames[i]).Equals(".xls") || Path.GetExtension(FileNames[i]).Equals(".csv"))
                             {
                                 status = ExcelConvert_Core.ExcelSaveAs(FileNames[i], outPath, passwd, PAGINGNUM, APPVISIBLE);
                             }

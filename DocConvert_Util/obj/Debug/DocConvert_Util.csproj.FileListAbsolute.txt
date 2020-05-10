@@ -12,11 +12,6 @@ C:\Users\Jm\Source\Repos\isugar150\DocConvert\DocConvert_Test\obj\Debug\DocConve
 C:\Users\Jm\Source\Repos\isugar150\DocConvert\DocConvert_Test\obj\Debug\DocConvert_Util.csproj.CopyComplete
 C:\Users\Jm\Source\Repos\isugar150\DocConvert\DocConvert_Test\obj\Debug\DocConvert_Util.exe
 C:\Users\Jm\Source\Repos\isugar150\DocConvert\DocConvert_Test\obj\Debug\DocConvert_Util.pdb
-D:\sources\DocConvert\bin\Debug\NLog.config
-D:\sources\DocConvert\bin\Debug\FilePathCheckerModuleExample.dll
-D:\sources\DocConvert\bin\Debug\pdfium.dll
-D:\sources\DocConvert\bin\Debug\DocConvert_Util.exe
-D:\sources\DocConvert\bin\Debug\DocConvert_Util.pdb
 D:\sources\DocConvert\DocConvert_Test\obj\Debug\DocConvert_Util.csprojAssemblyReference.cache
 D:\sources\DocConvert\DocConvert_Test\obj\Debug\Interop.HWPCONTROLLib.dll
 D:\sources\DocConvert\DocConvert_Test\obj\Debug\AxInterop.HWPCONTROLLib.dll
@@ -104,6 +99,11 @@ C:\Users\o0_0o\Documents\GitHub\DocConvert\DocConvert_Util\obj\Debug\DocConvert_
 D:\sources\DocConvert\bin\Debug\phantomjs.exe
 D:\sources\DocConvert\bin\Debug\rasterize.js
 D:\sources\DocConvert\bin\Debug\Utility\Office Uninstall v1.8.2.exe
+D:\sources\DocConvert\bin\Debug\NLog.config
+D:\sources\DocConvert\bin\Debug\FilePathCheckerModuleExample.dll
+D:\sources\DocConvert\bin\Debug\pdfium.dll
+D:\sources\DocConvert\bin\Debug\DocConvert_Util.exe
+D:\sources\DocConvert\bin\Debug\DocConvert_Util.pdb
 D:\sources\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.csprojAssemblyReference.cache
 D:\sources\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.Convert_Util.resources
 D:\sources\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.Properties.Resources.resources
