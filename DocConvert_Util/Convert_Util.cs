@@ -3,6 +3,7 @@ using DocConvert_Core.imageLib;
 using DocConvert_Core.IniLib;
 using DocConvert_Core.interfaces;
 using DocConvert_Core.OfficeLib;
+using DocConvert_Core.ZipLib;
 using FluentFTP;
 using Microsoft.Win32;
 using Newtonsoft.Json.Linq;
@@ -278,6 +279,21 @@ namespace DocConvert_Util
                                 else
                                 {
                                     tb2_appendText("[오류]   " + pdfToImgReturn.Message);
+                                }
+                                if (checkBox3.Checked)
+                                {
+                                    string zipoutPath = Path.GetDirectoryName(outPath) + @"\" + Path.GetFileNameWithoutExtension(outPath) + ".zip";
+                                    if (File.Exists(zipoutPath))
+                                    {
+                                        File.Delete(zipoutPath);
+                                    }
+
+                                    if (Directory.Exists(outPath + @"\" + Path.GetFileNameWithoutExtension(outPath)))
+                                    {
+                                        Directory.Delete(outPath + @"\" + Path.GetFileNameWithoutExtension(outPath));
+                                    }
+
+                                    ZipLib.CreateZipFile(Directory.GetFiles(imageOutput), zipoutPath);
                                 }
                             }
                             #region 변환 후 실행

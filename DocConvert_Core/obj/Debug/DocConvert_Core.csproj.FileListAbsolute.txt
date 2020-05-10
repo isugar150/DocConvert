@@ -136,3 +136,4 @@ D:\sources\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.csproj.CoreCompi
 D:\sources\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.csproj.CopyComplete
 D:\sources\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.dll
 D:\sources\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.pdb
+D:\sources\DocConvert\DocConvert_Core\obj\Debug\DocConvert_Core.csprojAssemblyReference.cache

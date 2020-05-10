@@ -36,3 +36,4 @@ D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicens
 D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.csproj.CopyComplete
 D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.exe
 D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.pdb
+D:\sources\DocConvert\DCLicenseGenerator\DCLicenseGenerator\obj\Release\DCLicenseGenerator.csprojAssemblyReference.cache
