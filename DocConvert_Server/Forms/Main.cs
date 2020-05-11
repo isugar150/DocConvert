@@ -549,9 +549,15 @@ namespace DocConvert_Server
             if (IniProperties.CleanWorkspaceSchedulerYn)
             {
                 DevLog.Write("[Scheduler] 작업공간 정리 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
-                deleteFolder(IniProperties.DataPath + @"\workspace", IniProperties.CleanWorkspaceDay);
+                DirectoryInfo workspace = new DirectoryInfo(IniProperties.DataPath + @"\workspace");
+                deleteFolder(workspace.FullName, IniProperties.CleanWorkspaceDay);
+                if (!workspace.Exists)
+                    workspace.Create();
             }
-            deleteFolder(IniProperties.DataPath + @"\tmp", 1);
+            DirectoryInfo tmp = new DirectoryInfo(IniProperties.DataPath + @"\tmp");
+            deleteFolder(tmp.FullName, 1);
+            if (!tmp.Exists)
+                tmp.Create();
             if (IniProperties.CleanLogSchedulerYn)
             {
                 DevLog.Write("[Scheduler] 로그 정리 스케줄러가 실행되었습니다.", LOG_LEVEL.INFO);
