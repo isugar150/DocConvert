@@ -129,7 +129,16 @@ namespace DocConvert_Server
                 }
             }
             #endregion
-
+            #region 가상 머신환경 체크
+            try
+            {
+                new LicenseInfo().getHWID();
+            }
+            catch (Exception) {
+                MessageBox.Show("해당 프로그램은 가상 환경에서 사용이 불가능합니다.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                program_Exit(true);
+            }
+            #endregion
             #region checkLicense
             try
             {
