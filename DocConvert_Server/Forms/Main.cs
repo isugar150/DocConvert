@@ -115,12 +115,17 @@ namespace DocConvert_Server
                         MessageBox.Show("설정 파일을 생성하였습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-                catch (Exception)
+                catch (Exception e1)
                 {
-                    if (MessageBox.Show("설정 파일이 손상되었습니다. 초기화하시겠습니까?", "알림", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    if (MessageBox.Show(string.Format("다음 위치에서 예외가 발생했습니다.\r\n{0}\r\n기존 파일은 자동으로 백업합니다. 초기화하시겠습니까?", new StackTrace(e1)), "알림", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
+                        FileInfo backupFile = new FileInfo("./DocConvert_Server.ini");
+                        backupFile.CopyTo(string.Format("DocConvert_Server.ini.{0}", DateTime.Now.ToString("yyMMdd")));
                         Setting.createSetting();
-                        MessageBox.Show("설정 파일을 초기화하였습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("설정 파일을 초기화하였습니다.\r\n환경 설정을 마무리하세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Process.Start("notepad", Application.StartupPath + @"\DocConvert_Server.ini");
+                        new MessageDialog("알림", "기존 라이센스번호를 입력하거나 다음 HWID와 함께 판매처로 문의하세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this);
+                        program_Exit(true);
                     }
                     else
                     {

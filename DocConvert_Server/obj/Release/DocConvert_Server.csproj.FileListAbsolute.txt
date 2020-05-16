@@ -96,7 +96,6 @@ D:\sources\DocConvert\bin\Release\FilePathCheckerModuleExample.dll
 D:\sources\DocConvert\bin\Release\pdfium.dll
 D:\sources\DocConvert\bin\Release\DocConvert_Server.exe
 D:\sources\DocConvert\bin\Release\DocConvert_Server.pdb
-D:\sources\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.csprojAssemblyReference.cache
 D:\sources\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.Forms.AboutForm.resources
 D:\sources\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.Form1.resources
 D:\sources\DocConvert\DocConvert_Server\obj\Release\DocConvert_Server.MessageDialog.resources

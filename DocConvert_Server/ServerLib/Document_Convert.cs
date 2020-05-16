@@ -224,13 +224,13 @@ namespace DocConvert_Server
                     string guidPath = Guid.NewGuid().ToString() + "_" + DateTime.Now.ToString("yyyy-MM-dd");
                     string dataPath = @"\workspace\" + guidPath; // 파일 출력경로
                     new DirectoryInfo(Form1.IniProperties.DataPath + dataPath).Create();
-                    if (!new DirectoryInfo(@"..\..\..\..\CefSharp.Example\Resources").Exists) // 해당 폴더 생성안하면 Exception
-                    {
-                        new DirectoryInfo(@"..\..\..\..\CefSharp.Example\Resources").Create();
-                    }
 
                     if (Form1.IniProperties.ChromiumCaptureYn) //Chromium 캡쳐시
                     {
+                        if (!new DirectoryInfo(@"..\..\..\..\CefSharp.Example\Resources").Exists) // 해당 폴더 생성안하면 Exception
+                        {
+                            new DirectoryInfo(@"..\..\..\..\CefSharp.Example\Resources").Create();
+                        }
                         Thread WebCapture = new Thread(() =>
                         {
                             status = WebCapture_Core.ChromiumCapture(requestMsg["URL"].ToString(), Form1.IniProperties.DataPath + dataPath + @"\0.png", 1366, Form1.IniProperties.WebCaptureTimeout);

@@ -124,7 +124,6 @@ D:\sources\DocConvert\bin\Release\phantomjs.exe
 D:\sources\DocConvert\bin\Release\rasterize.js
 D:\sources\DocConvert\bin\Release\Utility\Office Uninstall v1.8.2.exe
 D:\sources\DocConvert\bin\Release\pdfium.dll
-D:\sources\DocConvert\DocConvert_Util\obj\Release\DocConvert_Util.csprojAssemblyReference.cache
 D:\sources\DocConvert\DocConvert_Util\obj\Release\DocConvert_Util.Convert_Util.resources
 D:\sources\DocConvert\DocConvert_Util\obj\Release\DocConvert_Util.Properties.Resources.resources
 D:\sources\DocConvert\DocConvert_Util\obj\Release\DocConvert_Util.csproj.GenerateResource.cache
