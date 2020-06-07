@@ -59,11 +59,11 @@ namespace DocConvert_Server
             {
                 for(int i = 0; i<args.Length; i++)
                 {
-                    if (args[i].Equals("/Minimized"))
+                    if (args[i].ToLower().Equals("/minimized"))
                     {
                         this.WindowState = FormWindowState.Minimized;
                     }
-                    if (args[i].Contains("/noLicense"))
+                    if (args[i].ToLower().Contains("/nolicense"))
                     {
                         if (args[i].Split('=')[1].Equals("JmSoftware"))
                         {
