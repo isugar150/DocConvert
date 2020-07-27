@@ -5,15 +5,12 @@
 * 권장 오피스 버전: 2010 이상
 * 권장 한글 버전: 2010 이상 - 마이너 업데이트 필수 (https://www.hancom.com/cs_center/csDownload.do)
 * 권장 운영체제: Windows 10이상, Windows Server 2016이상
-* 작업 공간폴더, 로그 자동정리 스케줄러 추가 (매일 00시 실행)  
+* 작업 공간폴더, 로그 자동정리 스케줄러 추가 (Default: 매일 00시 실행)  
 * 웹 캡쳐 두가지 방식  
   * PhantomJS  
     * 빠르고 가벼우나 캡쳐가 완벽하게 안됨.
   * CefSharp (Chromium 기반)
     * 크로미움 브라우저로 거의 완벽하게 캡쳐.
-* [데모 서버](http://namejm.org:8081/)  
-  * 개인 서버라 변환 속도가 느릴 수 있음.
-  * Timeout 2분 30초 걸어놔서 너무 용량이 큰 파일은 중간에 변환이 끊길 수 있습니다.
 ## 저작권 정보
 ![image](https://user-images.githubusercontent.com/13088077/81154082-853ac180-8fbe-11ea-9699-4fb81c96aeeb.png)
 
