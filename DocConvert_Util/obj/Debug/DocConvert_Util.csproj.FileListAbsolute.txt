@@ -112,3 +112,19 @@ D:\sources\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.csproj.CoreCompi
 D:\sources\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.csproj.CopyComplete
 D:\sources\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.exe
 D:\sources\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.pdb
+C:\Users\JMKIM\Source\Repos\isugar150\DocConvert\bin\Debug\phantomjs.exe
+C:\Users\JMKIM\Source\Repos\isugar150\DocConvert\bin\Debug\rasterize.js
+C:\Users\JMKIM\Source\Repos\isugar150\DocConvert\bin\Debug\Utility\Office Uninstall v1.8.2.exe
+C:\Users\JMKIM\Source\Repos\isugar150\DocConvert\bin\Debug\NLog.config
+C:\Users\JMKIM\Source\Repos\isugar150\DocConvert\bin\Debug\FilePathCheckerModuleExample.dll
+C:\Users\JMKIM\Source\Repos\isugar150\DocConvert\bin\Debug\pdfium.dll
+C:\Users\JMKIM\Source\Repos\isugar150\DocConvert\bin\Debug\DocConvert_Util.exe
+C:\Users\JMKIM\Source\Repos\isugar150\DocConvert\bin\Debug\DocConvert_Util.pdb
+C:\Users\JMKIM\Source\Repos\isugar150\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.csprojAssemblyReference.cache
+C:\Users\JMKIM\Source\Repos\isugar150\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.Convert_Util.resources
+C:\Users\JMKIM\Source\Repos\isugar150\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.Properties.Resources.resources
+C:\Users\JMKIM\Source\Repos\isugar150\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.csproj.GenerateResource.cache
+C:\Users\JMKIM\Source\Repos\isugar150\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.csproj.CoreCompileInputs.cache
+C:\Users\JMKIM\Source\Repos\isugar150\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.csproj.CopyComplete
+C:\Users\JMKIM\Source\Repos\isugar150\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.exe
+C:\Users\JMKIM\Source\Repos\isugar150\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.pdb

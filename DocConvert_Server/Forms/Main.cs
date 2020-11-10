@@ -107,6 +107,11 @@ namespace DocConvert_Server
                         IniProperties.ChromiumCaptureYn = pairs["DC Server"]["ChromiumCaptureYn"].ToString2().Equals("Y");
                         IniProperties.WebCaptureTimeout = int.Parse(pairs["DC Server"]["WebCaptureTimeout"].ToString2());
 
+                        IniProperties.DRM_useYn = pairs["DRM Setting"]["DRM useYn"].ToString2().Equals("Y");
+                        IniProperties.DRM_Path = pairs["DRM Setting"]["DRM Path"].ToString2();
+                        IniProperties.DRM_Result = pairs["DRM Setting"]["DRM Result"].ToString2();
+                        IniProperties.DRM_Args = pairs["DRM Setting"]["DRM Args"].ToString2();
+
                         break;
                     }
                     else
@@ -120,11 +125,11 @@ namespace DocConvert_Server
                     if (MessageBox.Show(string.Format("다음 위치에서 예외가 발생했습니다.\r\n{0}\r\n기존 파일은 자동으로 백업합니다. 초기화하시겠습니까?", new StackTrace(e1)), "알림", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
                         FileInfo backupFile = new FileInfo("./DocConvert_Server.ini");
-                        backupFile.CopyTo(string.Format("DocConvert_Server.ini.{0}", DateTime.Now.ToString("yyMMdd")));
+                        backupFile.CopyTo(string.Format("DocConvert_Server.ini.{0}.{1}", DateTime.Now.ToString("yyMMdd"), CurrentTimeMillis()));
                         Setting.createSetting();
                         MessageBox.Show("설정 파일을 초기화하였습니다.\r\n환경 설정을 마무리하세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Process.Start("notepad", Application.StartupPath + @"\DocConvert_Server.ini");
-                        new MessageDialog("알림", "기존 라이센스번호를 입력하거나 다음 HWID와 함께 판매처로 문의하세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this);
+                        //new MessageDialog("알림", "기존 라이센스번호를 입력하거나 다음 HWID와 함께 판매처로 문의하세요.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this);
                         program_Exit(true);
                     }
                     else
@@ -134,7 +139,7 @@ namespace DocConvert_Server
                 }
             }
             #endregion
-            #region 가상 머신환경 체크
+            /*#region 가상 머신환경 체크
             try
             {
                 new LicenseInfo().getHWID();
@@ -143,8 +148,8 @@ namespace DocConvert_Server
                 MessageBox.Show("해당 프로그램은 가상 환경에서 사용이 불가능합니다.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 program_Exit(true);
             }
-            #endregion
-            #region checkLicense
+            #endregion*/
+            /*#region checkLicense
             try
             {
                 Debug.WriteLine(IniProperties.LicenseKEY);
@@ -162,7 +167,7 @@ namespace DocConvert_Server
                 }
             }
             catch (Exception) { new MessageDialog("라이센스 오류", "라이센스키 파싱오류.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); if (!noLicense) { program_Exit(true); return; } }
-            #endregion
+            #endregion*/
 
             #region 초기 설정 및 파싱 데이터 출력
             DirectoryInfo directoryInfo = new DirectoryInfo(IniProperties.DataPath + @"\tmp");
@@ -205,6 +210,16 @@ namespace DocConvert_Server
             }
 
             DevLog.Write("[INFO] 웹 캡쳐 타임아웃: " + IniProperties.WebCaptureTimeout + "초", LOG_LEVEL.INFO);
+
+            DevLog.Write("[INFO] DRM 사용 여부: " + IniProperties.DRM_useYn);
+            DevLog.Write("[INFO] DRM 경로: " + IniProperties.DRM_Path);
+            DevLog.Write("[INFO] DRM 성공 코드: " + IniProperties.DRM_Result);
+            // DRM 아규먼트 
+            string[] DRM_args = IniProperties.DRM_Args.Split(',');
+            for (int i = 0; i < DRM_args.Length; i++)
+            {
+                DevLog.Write("[INFO] DRM 아규먼트[" + i + "]: " + DRM_args[i]);
+            }
             #endregion
 
             #region 한글 DLL 레지스트리 등록
@@ -756,5 +771,11 @@ namespace DocConvert_Server
         }
 
         #endregion
+
+        public static long CurrentTimeMillis()
+        { 
+            DateTime Jan1st1970 = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+            return (long)(DateTime.UtcNow - Jan1st1970).TotalMilliseconds;
+        }
     }
 }

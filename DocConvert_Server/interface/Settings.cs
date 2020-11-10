@@ -22,6 +22,11 @@ namespace DocConvert_Core.interfaces
         int CleanLogDay { get; set; }
         bool ChromiumCaptureYn { get; set; }
         int WebCaptureTimeout { get; set; }
+
+        bool DRM_useYn { get; set; }
+        string DRM_Path { get; set; }
+        string DRM_Result { get; set; }
+        string DRM_Args { get; set; }
     }
 
     public class iniProperties : iniproperties
@@ -42,8 +47,14 @@ namespace DocConvert_Core.interfaces
         private int _CleanWorkspaceDay;
         private bool _CleanLogSchedulerYn;
         private int _CleanLogDay;
-        private bool _ChromiumCaptureYn { get; set; }
         private int _WebCaptureTimeout;
+
+        private bool _DRM_useYn;
+        private string _DRM_Path;
+        private string _DRM_Result;
+        private string _DRM_Args;
+
+        private bool _ChromiumCaptureYn { get; set; }
         public string LicenseKEY { get { return _LicenseKEY; } set { _LicenseKEY = value; } }
         public string BindIP { get { return _BindIP; } set { _BindIP = value; } }
         public int WebSocketPort { get { return _WebSocketPort; } set { _WebSocketPort = value; } }
@@ -62,6 +73,11 @@ namespace DocConvert_Core.interfaces
         public int CleanLogDay { get { return _CleanLogDay; } set { _CleanLogDay = value; } }
         public bool ChromiumCaptureYn { get { return _ChromiumCaptureYn; } set { _ChromiumCaptureYn = value; } }
         public int WebCaptureTimeout { get { return _WebCaptureTimeout; } set { _WebCaptureTimeout = value; } }
+
+        public bool DRM_useYn { get { return _DRM_useYn; } set { _DRM_useYn = value; } }
+        public string DRM_Path { get { return _DRM_Path; } set { _DRM_Path = value; } }
+        public string DRM_Result { get { return _DRM_Result; } set { _DRM_Result = value; } }
+        public string DRM_Args { get { return _DRM_Args; } set { _DRM_Args = value; } }
     }
 
     public class Setting
@@ -88,6 +104,11 @@ namespace DocConvert_Core.interfaces
             setting["DC Server"]["CleanLogDay"] = "10;로그 정리시 설정한 오래된 일수가 지난 파일 삭제 (단위: 일)";
             setting["DC Server"]["ChromiumCaptureYn"] = "n;(Y:크로미움기반 웹 문서 캡쳐 사용) (n:Phantom JS를 이용한 웹 문서 캡쳐)";
             setting["DC Server"]["WebCaptureTimeout"] = "30;특정 시간이지나면 캡쳐중인 콘솔창 자동 Kill (단위: 초)";
+            
+            setting["DRM Setting"]["DRM useYn"] = "n;DRM 사용 여부";
+            setting["DRM Setting"]["DRM Path"] = ";DRM 경로";
+            setting["DRM Setting"]["DRM Result"] = "0;DRM 성공 시 Result 코드 (해당 코드가 아니면 실패처리)";
+            setting["DRM Setting"]["DRM Args"] = "$Full_Path$,$Out_Full_Path$,$DRM_Type$ ;DRM 아규먼트 ','로 구분 { 풀 경로($Full_Path$), 파일 경로($File_Path$), 파일 명($File_Name$), 내보낼 풀 경로($Out_Full_Path$), 변환 타입($DRM_Type$) }";
 
             setting.Save("./DocConvert_Server.ini");
         }

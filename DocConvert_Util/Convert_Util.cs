@@ -372,6 +372,11 @@ namespace DocConvert_Util
                         {
                             requestMsg["useCompression"] = checkBox3.Checked;
                         }
+                        if (checkBox4.Checked)
+                        {
+                            requestMsg["DRM_useYn"] = checkBox4.Checked;
+                            requestMsg["DRM_Type"] = textBox3.Text;
+                        }
 
                         SendData(requestMsg.ToString());
                         #endregion
@@ -832,5 +837,13 @@ namespace DocConvert_Util
         }
 
         #endregion
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox4.Checked)
+                textBox3.Enabled = true;
+            else
+                textBox3.Enabled = false;
+        }
     }
 }

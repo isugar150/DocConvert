@@ -107,3 +107,21 @@ D:\sources\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.csproj.CopyC
 D:\sources\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.exe
 D:\sources\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.pdb
 D:\sources\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.csprojAssemblyReference.cache
+C:\Users\JMKIM\source\repos\isugar150\DocConvert\bin\Debug\phantomjs.exe
+C:\Users\JMKIM\source\repos\isugar150\DocConvert\bin\Debug\rasterize.js
+C:\Users\JMKIM\source\repos\isugar150\DocConvert\bin\Debug\Utility\Office Uninstall v1.8.2.exe
+C:\Users\JMKIM\source\repos\isugar150\DocConvert\bin\Debug\NLog.config
+C:\Users\JMKIM\source\repos\isugar150\DocConvert\bin\Debug\Install\FileZilla_Server-0_9_60_2.exe
+C:\Users\JMKIM\source\repos\isugar150\DocConvert\bin\Debug\FilePathCheckerModuleExample.dll
+C:\Users\JMKIM\source\repos\isugar150\DocConvert\bin\Debug\pdfium.dll
+C:\Users\JMKIM\source\repos\isugar150\DocConvert\bin\Debug\DocConvert_Server.exe
+C:\Users\JMKIM\source\repos\isugar150\DocConvert\bin\Debug\DocConvert_Server.pdb
+C:\Users\JMKIM\source\repos\isugar150\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.Forms.AboutForm.resources
+C:\Users\JMKIM\source\repos\isugar150\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.Form1.resources
+C:\Users\JMKIM\source\repos\isugar150\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.MessageDialog.resources
+C:\Users\JMKIM\source\repos\isugar150\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.Properties.Resources.resources
+C:\Users\JMKIM\source\repos\isugar150\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.csproj.GenerateResource.cache
+C:\Users\JMKIM\source\repos\isugar150\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.csproj.CoreCompileInputs.cache
+C:\Users\JMKIM\source\repos\isugar150\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.csproj.CopyComplete
+C:\Users\JMKIM\source\repos\isugar150\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.exe
+C:\Users\JMKIM\source\repos\isugar150\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.pdb

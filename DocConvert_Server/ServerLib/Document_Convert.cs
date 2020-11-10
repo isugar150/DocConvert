@@ -80,6 +80,7 @@ namespace DocConvert_Server
                     if (createDirectory.Exists)
                     {
                         createDirectory.Delete(true);
+                        logger.Info("다음 폴더가 이미 존재해서 삭제 후 다시만듬: "+ createDirectory.ToString());
                     }
 
                     createDirectory.Create();
@@ -100,10 +101,78 @@ namespace DocConvert_Server
                     if (moveFile.Exists)
                     {
                         moveFile.MoveTo(fileFullPath);
+                        logger.Info(moveFile.ToString() + " 파일을 " + fileFullPath + "로 이동.");
+                    }
+
+                    // DRM 변환
+                    bool DRM_useYn = Form1.IniProperties.DRM_useYn;
+
+                    logger.Info("DRM 사용여부: " + DRM_useYn);
+                    // DRM 사용 여부
+                    if (DRM_useYn)
+                    {
+                        logger.Info("=================== DRM ===================");
+                        string[] DRM_args_ori = Form1.IniProperties.DRM_Args.Split(',');
+                        string[] DRM_args = new string[DRM_args_ori.Length];
+
+                        FileInfo drmFile = new FileInfo(Path.GetDirectoryName(fileFullPath) + @"\ori_" + Path.GetFileName(fileName) );
+                        FileInfo decFile = new FileInfo(fileFullPath);
+
+                        if (decFile.Exists && requestMsg["DRM_useYn"].ToString().Equals("True"))
+                        {
+                            logger.Info("DRM 파일 이름 변경 ==> " + drmFile.FullName);
+                            File.Move(decFile.FullName, drmFile.FullName);
+                        }
+
+                        // DRM 아규먼트 
+                        for (int i = 0; i<DRM_args_ori.Length; i++)
+                        {
+                            if (DRM_args_ori[i].Equals("$Full_Path$"))
+                                DRM_args[i] = drmFile.FullName;
+                            else if (DRM_args_ori[i].Equals("$File_Path$"))
+                                DRM_args[i] = Path.GetDirectoryName(drmFile.FullName) + @"\";
+                            else if (DRM_args_ori[i].Equals("$File_Name$"))
+                                DRM_args[i] = Path.GetFileName(drmFile.FullName);
+                            else if (DRM_args_ori[i].Equals("$Out_Full_Path$"))
+                                DRM_args[i] = decFile.FullName;
+                            else if (DRM_args_ori[i].Equals("$DRM_Type$"))
+                                DRM_args[i] = requestMsg["DRM_Type"].ToString();
+                            else
+                                DRM_args[i] = DRM_args_ori[i];
+                        }
+
+                        string excuteFile = Form1.IniProperties.DRM_Path;
+                        string DRM_arguments = "";
+                        for (int i = 0; i<DRM_args.Length; i++)
+                        {
+                            if(i == 0)
+                                DRM_arguments = DRM_args[i];
+                            else
+                                DRM_arguments += " " + DRM_args[i];
+                        }
+                        logger.Info(excuteFile + " " + DRM_arguments);
+
+                        // DRM 실행
+                        string result = ProcessUtil.ProcessUtil.RunProcess(excuteFile, DRM_arguments).Replace(Environment.NewLine, "");
+
+                        logger.Info("DRM Result ===> " + result);
+
+                        if (result.Equals(Form1.IniProperties.DRM_Result))
+                            logger.Info("DRM 변환 성공 !!");
+                        else
+                        {
+                            logger.Info("DRM 변환 실패");
+                            responseMsg["URL"] = null;
+                            responseMsg["isSuccess"] = false;
+                            responseMsg["msg"] = "DRM 변환 실패 >> DRM Result: " + result;
+                            responseMsg["Method"] = requestMsg["Method"];
+
+                            return responseMsg;
+                        }
+                        logger.Info("===========================================");
                     }
 
                     // PDF로 변환
-
                     if (Path.GetExtension(fileFullPath).Equals(".docx") || Path.GetExtension(fileFullPath).Equals(".doc") || Path.GetExtension(fileFullPath).Equals(".txt") || Path.GetExtension(fileFullPath).Equals(".html"))
                     {
                         status = WordConvert_Core.WordSaveAs(fileFullPath, outPath, docPassword, PAGINGNUM, APPVISIBLE);

@@ -5,6 +5,7 @@ using NLog;
 using System;
 using System.Diagnostics;
 using System.Drawing.Printing;
+using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using MsoTriState = Microsoft.Office.Core.MsoTriState;
@@ -46,7 +47,7 @@ namespace DocConvert_Core.OfficeLib
                 // 파워포인트 매크로 실행 비활성화
                 powerpoint.AutomationSecurity = Microsoft.Office.Core.MsoAutomationSecurity.msoAutomationSecurityForceDisable;
                 // 파워포인트 알림 비활성화
-                powerpoint.DisplayAlerts = PowerPoint.PpAlertLevel.ppAlertsNone;
+                powerpoint.DisplayAlerts = PpAlertLevel.ppAlertsNone;
                 #endregion
 
                 #region 열기 옵션 https://docs.microsoft.com/en-us/previous-versions/office/developer/office-2010/ff763759(v%3Doffice.14)
@@ -65,7 +66,7 @@ namespace DocConvert_Core.OfficeLib
                 MsoTriState OpenAndRepair = MsoTriState.msoTrue; // 07 Only
                 #endregion
                 #region 문서 열기
-                try // Presentations.Open https://docs.microsoft.com/en-us/office/vba/api/powerpoint.presentations.open
+                if (Path.GetExtension(FilePath).Equals(".pptx")) // Presentations.Open https://docs.microsoft.com/en-us/office/vba/api/powerpoint.presentations.open
                 {
                     doc = multiPresentations.Open(
                         FileName: FilePath,
@@ -74,7 +75,7 @@ namespace DocConvert_Core.OfficeLib
                         WithWindow: WithWindow
                     );
                 }
-                catch (Exception) // Presentations.Open2007 https://docs.microsoft.com/en-us/office/vba/api/powerpoint.presentations.open2007
+                else // Presentations.Open2007 https://docs.microsoft.com/en-us/office/vba/api/powerpoint.presentations.open2007
                 {
                     doc = multiPresentations.Open2007(
                         FileName: FilePath,

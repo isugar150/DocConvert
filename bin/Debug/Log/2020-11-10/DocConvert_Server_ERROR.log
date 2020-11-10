@@ -1,0 +1,54 @@
+2020-11-10 23:16:23.4393 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:16:24.5368 ERROR - ==================== Method: document_Convert ====================
+2020-11-10 23:16:24.5368 ERROR -    위치: DocConvert_Core.OfficeLib.PowerPointConvert_Core.PowerPointSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible)
+   위치: DocConvert_Server.Document_Convert.document_Convert(String requestInfo)
+
+2020-11-10 23:16:24.5368 ERROR - 변환 실패: 지정된 파일을 찾을 수 없습니다. (예외가 발생한 HRESULT: 0x80070002)
+2020-11-10 23:16:24.5368 ERROR - ==================== End ====================
+2020-11-10 23:17:51.9028 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:19:27.7126 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:21:19.2387 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:23:24.7235 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:25:17.0540 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:26:28.5237 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:26:38.1158 ERROR - ==================== Method: document_Convert ====================
+2020-11-10 23:26:38.1158 ERROR -    위치: DocConvert_Core.OfficeLib.PowerPointConvert_Core.PowerPointSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible)
+   위치: DocConvert_Server.Document_Convert.document_Convert(String requestInfo)
+
+2020-11-10 23:26:38.1158 ERROR - 변환 실패: 지정된 파일을 찾을 수 없습니다. (예외가 발생한 HRESULT: 0x80070002)
+2020-11-10 23:26:38.1158 ERROR - ==================== End ====================
+2020-11-10 23:26:46.6463 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:27:27.2416 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:28:08.7540 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:29:35.8305 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:30:49.0432 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:31:33.4599 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:31:54.3331 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:38:23.8412 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:38:30.4118 ERROR - ==================== Method: document_Convert ====================
+2020-11-10 23:38:30.4118 ERROR -    위치: DocConvert_Core.OfficeLib.PowerPointConvert_Core.PowerPointSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible)
+   위치: DocConvert_Server.Document_Convert.document_Convert(String requestInfo)
+
+2020-11-10 23:38:30.4118 ERROR - 변환 실패: 지정된 파일을 찾을 수 없습니다. (예외가 발생한 HRESULT: 0x80070002)
+2020-11-10 23:38:30.4118 ERROR - ==================== End ====================
+2020-11-10 23:39:19.5845 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:39:20.2262 ERROR - ==================== Method: document_Convert ====================
+2020-11-10 23:39:20.2262 ERROR -    위치: DocConvert_Core.OfficeLib.PowerPointConvert_Core.PowerPointSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible)
+   위치: DocConvert_Server.Document_Convert.document_Convert(String requestInfo)
+
+2020-11-10 23:39:20.2262 ERROR - 변환 실패: 지정된 파일을 찾을 수 없습니다. (예외가 발생한 HRESULT: 0x80070002)
+2020-11-10 23:39:20.2262 ERROR - ==================== End ====================
+2020-11-10 23:39:32.4432 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:39:45.1143 ERROR - ==================== Method: document_Convert ====================
+2020-11-10 23:39:45.1143 ERROR -    위치: DocConvert_Core.OfficeLib.PowerPointConvert_Core.PowerPointSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible)
+   위치: DocConvert_Server.Document_Convert.document_Convert(String requestInfo)
+
+2020-11-10 23:39:45.1143 ERROR - 변환 실패: 지정된 파일을 찾을 수 없습니다. (예외가 발생한 HRESULT: 0x80070002)
+2020-11-10 23:39:45.1143 ERROR - ==================== End ====================
+2020-11-10 23:39:47.4642 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:41:28.0937 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:42:31.2914 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:43:02.1641 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:44:18.4512 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:46:05.1789 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt
+2020-11-10 23:46:42.1491 ERROR - C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt

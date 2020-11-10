@@ -78,6 +78,8 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -102,6 +104,8 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.checkBox4);
             this.groupBox1.Controls.Add(this.checkBox3);
             this.groupBox1.Controls.Add(this.checkBox2);
             this.groupBox1.Controls.Add(this.panel7);
@@ -617,6 +621,24 @@
             this.textBox2.Size = new System.Drawing.Size(621, 193);
             this.textBox2.TabIndex = 0;
             // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(5, 192);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(75, 19);
+            this.checkBox4.TabIndex = 105;
+            this.checkBox4.Text = "use DRM";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(83, 190);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(130, 23);
+            this.textBox3.TabIndex = 106;
+            // 
             // Convert_Util
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -711,6 +733,8 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.CheckBox checkBox4;
     }
 }
 
