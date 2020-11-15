@@ -16,7 +16,7 @@ namespace DocConvert_Server.ProcessUtil
             try
             {
                 Process pro = new Process();
-                pro.StartInfo.FileName = excuteFile;
+                pro.StartInfo.FileName = "\"" + excuteFile + "\"";
                 pro.StartInfo.Arguments = arguments;
                 pro.StartInfo.UseShellExecute = false;
                 pro.StartInfo.RedirectStandardOutput = true;

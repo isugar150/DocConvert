@@ -1,0 +1,38 @@
+2020-11-15 15:59:56.2401 ERROR - ==================== Method: document_Convert ====================
+2020-11-15 15:59:56.2401 ERROR -    위치: DocConvert_Server.Document_Convert.document_Convert(String requestInfo)
+
+2020-11-15 15:59:56.2401 ERROR - 변환 실패: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+2020-11-15 15:59:56.2401 ERROR - ==================== End ====================
+2020-11-15 16:01:06.2115 ERROR - ==================== Method: document_Convert ====================
+2020-11-15 16:01:06.2115 ERROR -    위치: DocConvert_Server.Document_Convert.document_Convert(String requestInfo)
+
+2020-11-15 16:01:06.2115 ERROR - 변환 실패: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+2020-11-15 16:01:06.2115 ERROR - ==================== End ====================
+2020-11-15 16:06:48.7656 ERROR - ==================== Method: document_Convert ====================
+2020-11-15 16:06:48.7656 ERROR -    위치: DocConvert_Server.Document_Convert.document_Convert(String requestInfo)
+
+2020-11-15 16:06:48.7656 ERROR - 변환 실패: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+2020-11-15 16:06:48.7656 ERROR - ==================== End ====================
+2020-11-15 16:32:28.4593 ERROR - ==================== Method: document_Convert ====================
+2020-11-15 16:32:28.4593 ERROR -    위치: DocConvert_Server.Document_Convert.document_Convert(String requestInfo)
+
+2020-11-15 16:32:28.4593 ERROR - 변환 실패: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+2020-11-15 16:32:28.4593 ERROR - ==================== End ====================
+2020-11-15 16:34:36.2925 ERROR - ==================== Method: document_Convert ====================
+2020-11-15 16:34:36.2925 ERROR -    위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   위치: System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   위치: System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   위치: System.IO.File.OpenRead(String path)
+   위치: DocConvert_Server.Document_Convert.document_Convert(String requestInfo)
+
+2020-11-15 16:34:36.2925 ERROR - 변환 실패: 'C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.zip' 파일을 찾을 수 없습니다.
+2020-11-15 16:34:36.2925 ERROR - ==================== End ====================
+2020-11-15 16:52:43.2486 ERROR - ==================== Method: document_Convert ====================
+2020-11-15 16:52:43.2486 ERROR -    위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   위치: System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   위치: System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   위치: System.IO.File.OpenRead(String path)
+   위치: DocConvert_Server.Document_Convert.document_Convert(String requestInfo)
+
+2020-11-15 16:52:43.2486 ERROR - 변환 실패: 'C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.zip' 파일을 찾을 수 없습니다.
+2020-11-15 16:52:43.2486 ERROR - ==================== End ====================

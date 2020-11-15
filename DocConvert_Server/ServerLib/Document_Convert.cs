@@ -20,8 +20,6 @@ namespace DocConvert_Server
 {
     public class Document_Convert
     {
-        private static Logger logger = LogManager.GetLogger("DocConvert_Server_Log");
-
         /// <summary>
         /// 웹소켓에서 들어온 요청을 처리하는 부분
         /// </summary>
@@ -32,55 +30,75 @@ namespace DocConvert_Server
             ReturnValue status = new ReturnValue();
             JObject responseMsg = new JObject();
             JObject requestMsg = new JObject();
+
+            string req_Key = "";
+            string req_FileData = "";
+            string req_Method = "";
+            string req_FileName = "";
+            int req_ConvertIMG = 0;
+            string req_DrmUseYn = "";
+            string req_DrmType = "";
+
+            string res_FileData = "";
+            bool res_isSuccess = false;
+            string res_Message = "";
+            string res_Method = "";
+            int res_ImgCnt = 0;
             try
             {
                 requestMsg = JObject.Parse(requestInfo); // 요청받은 JSON 파싱
 
-                if (!requestMsg["KEY"].ToString().Equals(Form1.IniProperties.ClientKEY) || requestMsg["KEY"] == null)
-                {
-                    responseMsg["URL"] = null;
-                    responseMsg["isSuccess"] = false;
-                    responseMsg["msg"] = "키가 유효하지 않습니다. 확인 후 다시시도하세요.";
-                    responseMsg["Method"] = requestMsg["Method"];
-                    return responseMsg;
-                }
+                req_Key = requestMsg["KEY"]?.ToString() ?? ""; // 신뢰하는 클라이언트 확인.
+                req_FileData = requestMsg["FileData"]?.ToString() ?? ""; // 물리 파일정보
+                req_Method = requestMsg["Method"]?.ToString() ?? ""; // 변환 메소드
+                req_FileName = requestMsg["FileName"]?.ToString() ?? ""; // 요청한 파일 이름.
+                req_ConvertIMG = int.Parse(requestMsg["ConvertIMG"]?.ToString() ?? "0"); // 이미지 변환 타입  0: NONE  1:JPEG  2:PNG  3:BMP
+                req_DrmUseYn = requestMsg["DRM_useYn"]?.ToString() ?? ""; // DRM 사용 여부
+                req_DrmType = requestMsg["DRM_Type"]?.ToString() ?? ""; // DRM 타입 
 
-                if (requestMsg["Method"].ToString().Equals("DocConvert"))
+                DevLog.Write("=======[Client => Server]=======");
+                DevLog.Write("req_Key ==> " + req_Key);
+                DevLog.Write("req_Method ==> " + req_Method);
+                DevLog.Write("req_FileName ==> " + req_FileName);
+                DevLog.Write("req_ConvertIMG ==> " + req_ConvertIMG);
+                DevLog.Write("============================");
+                res_Method = req_Method;
+
+                if (req_Method.Equals("DocConvert"))
                 {
                     #region DocConvert
-                    if (requestMsg["useCompression"].ToString().Equals("True") && requestMsg["ConvertIMG"].ToString().Equals("0"))
-                    {
-                        responseMsg["URL"] = null;
-                        responseMsg["isSuccess"] = false;
-                        responseMsg["msg"] = "이미지 변환을 하지 않으면 압축할 수 없습니다.";
-                        responseMsg["Method"] = requestMsg["Method"];
-                        return responseMsg;
-                    }
-
-                    bool PAGINGNUM = false;
-                    bool APPVISIBLE = Form1.IniProperties.OfficeDebugModeYn;
-                    string fileName = requestMsg["FileName"].ToString(); // 파일 이름
-                    string convertIMG = requestMsg["ConvertIMG"].ToString(); // 0: NONE  1:JPEG  2:PNG  3:BMP
+                    bool PAGINGNUM = false; // 변환 전 페이징 체크 여부 (느려짐)
+                    bool APPVISIBLE = Form1.IniProperties.OfficeDebugModeYn; // 변환 진행상황 표시 여부
                     //string docPassword = requestMsg["DocPassword"].ToString();
                     string docPassword = null; // 문서 비밀번호
                     string dataPath = Form1.IniProperties.DataPath; // 파일 출력경로
 
                     string documents = @"workspace";
-                    string tmpPath = @"tmp";
+                    string tmpDirName = @"tmp";
 
-                    string md5_filechecksum = MD5_CheckSUM(dataPath + @"\" + tmpPath + @"\" + fileName).ToString(); // 파일 체크섬 추출
+                    string tmpPath = dataPath + @"\" + tmpDirName + @"\" + req_FileName;
+
+                    // Byte To File
+                    byte[] fileBytes2 = Convert.FromBase64String(req_FileData);
+
+                    using (Stream file = File.OpenWrite(tmpPath))
+                    {
+                        file.Write(fileBytes2, 0, fileBytes2.Length);
+                    }
+
+                    string md5_filechecksum = MD5_CheckSUM(tmpPath).ToString(); // 파일 체크섬 추출
 
                     DirectoryInfo createDirectory = new DirectoryInfo(dataPath + @"\" + documents + @"\" + md5_filechecksum);
-                    FileInfo moveFile = new FileInfo(dataPath + @"\" + tmpPath + @"\" + fileName);
+                    FileInfo moveFile = new FileInfo(tmpPath);
 
-                    string fileFullPath = createDirectory.FullName + @"\" + fileName;
-                    string outPath = Path.GetDirectoryName(fileFullPath) + @"\" + Path.GetFileNameWithoutExtension(fileName) + ".pdf";
+                    string fileFullPath = createDirectory.FullName + @"\" + req_FileName;
+                    string outPath = Path.GetDirectoryName(fileFullPath) + @"\" + Path.GetFileNameWithoutExtension(req_FileName) + ".pdf";
 
                     // 폴더가 있으면 삭제
                     if (createDirectory.Exists)
                     {
                         createDirectory.Delete(true);
-                        logger.Info("다음 폴더가 이미 존재해서 삭제 후 다시만듬: "+ createDirectory.ToString());
+                        DevLog.Write("다음 폴더가 이미 존재해서 삭제 후 다시만듬: "+ createDirectory.ToString(), LOG_LEVEL.DEBUG);
                     }
 
                     createDirectory.Create();
@@ -88,12 +106,12 @@ namespace DocConvert_Server
                     #region File Unlock
                     try
                     {
-                        LockFile.UnLock_File(fileFullPath);
+                        LockFile.UnLock_File(moveFile.ToString());
                     }
                     catch (Exception e1)
                     {
-                        logger.Info("파일 언락 실패! 자세한내용 로그 참고");
-                        logger.Error(e1.Message);
+                        DevLog.Write("파일 언락 실패! 자세한내용 로그 참고");
+                        DevLog.Write(e1.Message);
                     }
                     #endregion
 
@@ -101,26 +119,26 @@ namespace DocConvert_Server
                     if (moveFile.Exists)
                     {
                         moveFile.MoveTo(fileFullPath);
-                        logger.Info(moveFile.ToString() + " 파일을 " + fileFullPath + "로 이동.");
+                        DevLog.Write(tmpPath.ToString() + " 파일을 " + fileFullPath + "로 이동.");
                     }
 
                     // DRM 변환
                     bool DRM_useYn = Form1.IniProperties.DRM_useYn;
 
-                    logger.Info("DRM 사용여부: " + DRM_useYn);
+                    DevLog.Write("DRM 사용여부: " + DRM_useYn);
                     // DRM 사용 여부
-                    if (DRM_useYn)
+                    if (DRM_useYn && req_DrmUseYn.Equals("True"))
                     {
-                        logger.Info("=================== DRM ===================");
+                        DevLog.Write("=================== DRM ===================");
                         string[] DRM_args_ori = Form1.IniProperties.DRM_Args.Split(',');
                         string[] DRM_args = new string[DRM_args_ori.Length];
 
-                        FileInfo drmFile = new FileInfo(Path.GetDirectoryName(fileFullPath) + @"\ori_" + Path.GetFileName(fileName) );
+                        FileInfo drmFile = new FileInfo(Path.GetDirectoryName(fileFullPath) + @"\ori_" + Path.GetFileName(req_FileName) );
                         FileInfo decFile = new FileInfo(fileFullPath);
 
-                        if (decFile.Exists && requestMsg["DRM_useYn"].ToString().Equals("True"))
+                        if (decFile.Exists && req_DrmUseYn.Equals("True"))
                         {
-                            logger.Info("DRM 파일 이름 변경 ==> " + drmFile.FullName);
+                            DevLog.Write("DRM 파일 이름 변경 ==> " + drmFile.FullName);
                             File.Move(decFile.FullName, drmFile.FullName);
                         }
 
@@ -146,30 +164,29 @@ namespace DocConvert_Server
                         for (int i = 0; i<DRM_args.Length; i++)
                         {
                             if(i == 0)
-                                DRM_arguments = DRM_args[i];
+                                DRM_arguments = "\"" + DRM_args[i] + "\"";
                             else
-                                DRM_arguments += " " + DRM_args[i];
+                                DRM_arguments += " \"" + DRM_args[i] + "\"";
                         }
-                        logger.Info(excuteFile + " " + DRM_arguments);
+                        DevLog.Write(excuteFile + " " + DRM_arguments);
 
                         // DRM 실행
                         string result = ProcessUtil.ProcessUtil.RunProcess(excuteFile, DRM_arguments).Replace(Environment.NewLine, "");
 
-                        logger.Info("DRM Result ===> " + result);
+                        DevLog.Write("DRM Result ===> " + result);
 
                         if (result.Equals(Form1.IniProperties.DRM_Result))
-                            logger.Info("DRM 변환 성공 !!");
+                            DevLog.Write("DRM 변환 성공 !!");
                         else
                         {
-                            logger.Info("DRM 변환 실패");
-                            responseMsg["URL"] = null;
-                            responseMsg["isSuccess"] = false;
-                            responseMsg["msg"] = "DRM 변환 실패 >> DRM Result: " + result;
-                            responseMsg["Method"] = requestMsg["Method"];
+                            DevLog.Write("DRM 변환 실패");
+                            res_FileData = null;
+                            res_isSuccess = false;
+                            res_Message = "DRM 변환 실패 >> DRM Result: " + result;
 
-                            return responseMsg;
+                            goto error;
                         }
-                        logger.Info("===========================================");
+                        DevLog.Write("===========================================");
                     }
 
                     // PDF로 변환
@@ -204,7 +221,7 @@ namespace DocConvert_Server
                     }
                     else if (Path.GetExtension(fileFullPath).Equals(".pdf"))
                     {
-                        if (convertIMG.Equals("0"))
+                        if (req_ConvertIMG.Equals("0"))
                         {
                             ReturnValue pdfreturnValue = new ReturnValue();
                             pdfreturnValue.isSuccess = true;
@@ -215,157 +232,118 @@ namespace DocConvert_Server
                     }
                     else
                     {
-                        responseMsg["URL"] = null;
-                        responseMsg["isSuccess"] = false;
-                        responseMsg["msg"] = "지원포맷 아님. 파싱한 확장자: " + Path.GetExtension(fileFullPath);
-                        responseMsg["Method"] = requestMsg["Method"];
-                        responseMsg["useCompression"] = requestMsg["useCompression"];
-                        return responseMsg;
+                        res_FileData = null;
+                        res_isSuccess = false;
+                        res_Message = "지원포맷 아님. 파싱한 확장자: " + Path.GetExtension(fileFullPath);
+                        res_Method = req_Method;
+
+                        goto error;
                     }
 
-                    if (!convertIMG.Equals("0"))
+                    // 이미지로 변환
+                    String imageOutput = Path.GetDirectoryName(outPath) + "\\" + Path.GetFileNameWithoutExtension(outPath) + "\\";
+                    if (!new DirectoryInfo(imageOutput).Exists)
                     {
-                        // 이미지로 변환
-                        String imageOutput = Path.GetDirectoryName(outPath) + "\\" + Path.GetFileNameWithoutExtension(outPath) + "\\";
-                        if (!new DirectoryInfo(imageOutput).Exists)
-                        {
-                            new DirectoryInfo(imageOutput).Create();
-                        }
-
-                        if (convertIMG.Equals("1"))
-                        {
-                            status = ConvertImg.PDFtoJpeg(outPath, imageOutput);
-                        }
-                        else if (convertIMG.Equals("2"))
-                        {
-                            status = ConvertImg.PDFtoPng(outPath, imageOutput);
-                        }
-                        else if (convertIMG.Equals("3"))
-                        {
-                            status = ConvertImg.PDFtoBmp(outPath, imageOutput);
-                        }
-                        if (status.isSuccess)
-                        {
-                            responseMsg["convertImgCnt"] = string.Format("{0}", status.PageCount);
-
-                            if (requestMsg["useCompression"].ToString().Equals("True"))
-                            {
-                                string zipoutPath = Path.GetDirectoryName(outPath) + @"\" + Path.GetFileNameWithoutExtension(outPath) + ".zip";
-                                if (File.Exists(zipoutPath))
-                                {
-                                    File.Delete(zipoutPath);
-                                }
-
-                                if (Directory.Exists(outPath + @"\" + Path.GetFileNameWithoutExtension(outPath)))
-                                {
-                                    Directory.Delete(outPath + @"\" + Path.GetFileNameWithoutExtension(outPath));
-                                }
-
-                                ZipLib.CreateZipFile(Directory.GetFiles(imageOutput), zipoutPath);
-                            }
-                        }
-                        else
-                        {
-                            responseMsg["URL"] = null;
-                            responseMsg["isSuccess"] = status.isSuccess;
-                            responseMsg["msg"] = status.Message;
-                            responseMsg["convertImgCnt"] = status.PageCount;
-                        }
+                        new DirectoryInfo(imageOutput).Create();
                     }
 
+                    if (req_ConvertIMG == 1)
+                    {
+                        status = ConvertImg.PDFtoJpeg(outPath, imageOutput);
+                    }
+                    else if (req_ConvertIMG == 2)
+                    {
+                        status = ConvertImg.PDFtoPng(outPath, imageOutput);
+                    }
+                    else if (req_ConvertIMG == 3)
+                    {
+                        status = ConvertImg.PDFtoBmp(outPath, imageOutput);
+                    }
                     if (status.isSuccess)
                     {
-                        responseMsg["URL"] = "/" + documents + "/" + md5_filechecksum;
-                        responseMsg["isSuccess"] = status.isSuccess;
+                        string zipoutPath = Path.GetDirectoryName(outPath) + @"\" + Path.GetFileNameWithoutExtension(outPath) + ".zip";
+                        string pdfoutPath = Path.GetDirectoryName(outPath) + @"\" + Path.GetFileNameWithoutExtension(outPath) + ".pdf";
+                        if (File.Exists(zipoutPath))
+                        {
+                            File.Delete(zipoutPath);
+                        }
+
+                        if (Directory.Exists(outPath + @"\" + Path.GetFileNameWithoutExtension(outPath)))
+                        {
+                            Directory.Delete(outPath + @"\" + Path.GetFileNameWithoutExtension(outPath));
+                        }
+
+                        if(req_ConvertIMG == 0)
+                        {
+                            ZipLib.CreateZipFile(new[] { pdfoutPath }, zipoutPath);
+                        }
+                        else
+                        {
+                            ZipLib.CreateZipFile(Directory.GetFiles(imageOutput), zipoutPath);
+                        }
+
+
+                        responseMsg["convertImgCnt"] = string.Format("{0}", status.PageCount);
+
+                        //Read file to byte array
+                        FileStream stream = File.OpenRead(Path.GetDirectoryName(outPath) + @"\" + Path.GetFileNameWithoutExtension(outPath) + ".zip");
+                        byte[] fileBytes = new byte[stream.Length];
+
+                        stream.Read(fileBytes, 0, fileBytes.Length);
+                        stream.Close();
+
+                        res_FileData = Convert.ToBase64String(fileBytes);
+
+                        res_isSuccess = status.isSuccess;
                         if (PAGINGNUM)
                         {
-                            responseMsg["pageNum"] = status.PageCount;
+                            res_ImgCnt = status.PageCount;
                         }
 
-                        responseMsg["msg"] = status.Message;
+                        res_Message = status.Message;
                     }
-                    responseMsg["useCompression"] = requestMsg["useCompression"];
-                    #endregion
-                }
-                else if (requestMsg["Method"].ToString().Equals("WebCapture"))
-                {
-                    #region WebCapture
-                    string guidPath = Guid.NewGuid().ToString() + "_" + DateTime.Now.ToString("yyyy-MM-dd");
-                    string dataPath = @"\workspace\" + guidPath; // 파일 출력경로
-                    new DirectoryInfo(Form1.IniProperties.DataPath + dataPath).Create();
-
-                    if (Form1.IniProperties.ChromiumCaptureYn) //Chromium 캡쳐시
+                    else
                     {
-                        if (!new DirectoryInfo(@"..\..\..\..\CefSharp.Example\Resources").Exists) // 해당 폴더 생성안하면 Exception
-                        {
-                            new DirectoryInfo(@"..\..\..\..\CefSharp.Example\Resources").Create();
-                        }
-                        Thread WebCapture = new Thread(() =>
-                        {
-                            status = WebCapture_Core.ChromiumCapture(requestMsg["URL"].ToString(), Form1.IniProperties.DataPath + dataPath + @"\0.png", 1366, Form1.IniProperties.WebCaptureTimeout);
-                        });
-                        WebCapture.SetApartmentState(ApartmentState.STA);
-                        WebCapture.Start();
-                        WebCapture.Join();
-                        if (status.isSuccess)
-                        {
-                            responseMsg["URL"] = "/" + "workspace" + "/" + guidPath + "/" + "0.png";
-                            responseMsg["isSuccess"] = status.isSuccess;
-                            responseMsg["msg"] = status.Message;
-                            responseMsg["convertImgCnt"] = status.PageCount;
-                        }
-                        else
-                        {
-                            responseMsg["isSuccess"] = status.isSuccess;
-                            responseMsg["msg"] = status.Message;
-                            responseMsg["convertImgCnt"] = status.PageCount;
-                        }
-                    }
-                    else //PhantomJS 사용시
-                    {
-                        Thread WebCapture = new Thread(() =>
-                        {
-                            status = WebCapture_Core.WebCapture(requestMsg["URL"].ToString(), Form1.IniProperties.DataPath + dataPath, Form1.IniProperties.WebCaptureTimeout);
-                        });
-                        WebCapture.SetApartmentState(ApartmentState.STA);
-                        WebCapture.Start();
-                        WebCapture.Join();
-                        if (status.isSuccess)
-                        {
-                            responseMsg["URL"] = "/" + "workspace" + "/" + guidPath + "/" + "0.png";
-                            responseMsg["isSuccess"] = status.isSuccess;
-                            responseMsg["msg"] = status.Message;
-                            responseMsg["convertImgCnt"] = status.PageCount;
-                        }
-                        else
-                        {
-                            responseMsg["isSuccess"] = status.isSuccess;
-                            responseMsg["msg"] = status.Message;
-                            responseMsg["convertImgCnt"] = status.PageCount;
-                        }
+                        res_FileData = null;
+                        res_isSuccess = status.isSuccess;
+                        res_Message = status.Message;
+                        res_ImgCnt = status.PageCount;
                     }
                     #endregion
                 }
                 else
                 {
-                    responseMsg["URL"] = null;
-                    responseMsg["isSuccess"] = false;
-                    responseMsg["msg"] = "메소드가 유효하지 않습니다.";
+                    res_FileData = null;
+                    res_isSuccess = false;
+                    res_Message = "메소드가 유효하지 않습니다.";
                 }
 
-                responseMsg["Method"] = requestMsg["Method"];
+                error:
+
+                responseMsg["isSuccess"] = res_isSuccess;
+                responseMsg["Method"] = res_Method;
+                responseMsg["Message"] = res_Message;
+                responseMsg["FileData"] = res_FileData;
+                responseMsg["ImgCnt"] = res_ImgCnt;
             }
             catch (Exception e1)
             {
-                logger.Info("변환중 오류발생 자세한 내용은 오류로그 참고");
-                logger.Error("==================== Method: " + MethodBase.GetCurrentMethod().Name + " ====================");
-                logger.Error(new StackTrace(e1, true));
-                logger.Error("변환 실패: " + e1.Message);
-                logger.Error("==================== End ====================");
+                DevLog.Write("변환중 오류발생 자세한 내용은 오류로그 참고", LOG_LEVEL.INFO);
+                DevLog.Write("==================== Method: " + MethodBase.GetCurrentMethod().Name + " ====================", LOG_LEVEL.ERROR);
+                DevLog.Write(new StackTrace(e1, true), LOG_LEVEL.ERROR);
+                DevLog.Write("변환 실패: " + e1.Message, LOG_LEVEL.ERROR);
+                DevLog.Write("==================== End ====================", LOG_LEVEL.ERROR);
                 responseMsg["isSuccess"] = false;
                 responseMsg["msg"] = e1.Message;
                 responseMsg["Method"] = requestMsg["Method"];
             }
+
+            DevLog.Write("=======[Server => Client]=======");
+            DevLog.Write("res_isSuccess ==> " + res_isSuccess);
+            DevLog.Write("res_Method ==> " + res_Method);
+            DevLog.Write("res_Message ==> " + res_Message);
+            DevLog.Write("res_ImgCnt ==> " + res_ImgCnt);
+            DevLog.Write("============================");
 
             return responseMsg;
         }

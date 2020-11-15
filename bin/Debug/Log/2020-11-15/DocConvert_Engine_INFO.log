@@ -1,0 +1,141 @@
+2020-11-15 16:02:43.2365  INFO - ==================== Start ====================
+2020-11-15 16:02:43.2585  INFO - Method: HwpSaveAs, FilePath: C:\Users\JMKIM\Desktop\Welcome to Hwp.hwp, outPath: C:\Users\JMKIM\Desktop\Welcome to Hwp.pdf
+2020-11-15 16:02:43.2585  INFO - 파일 언락 성공!
+2020-11-15 16:02:51.3432  INFO - ==================== End ====================
+2020-11-15 16:09:09.0292  INFO - ==================== Start ====================
+2020-11-15 16:09:09.0292  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 16:09:09.0392  INFO - 파일 언락 성공!
+2020-11-15 16:09:12.7445  INFO - ==================== End ====================
+2020-11-15 16:34:32.5454  INFO - ==================== Start ====================
+2020-11-15 16:34:32.5454  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 16:34:32.5534  INFO - 파일 언락 성공!
+2020-11-15 16:34:36.2561  INFO - ==================== End ====================
+2020-11-15 16:35:47.1309  INFO - ==================== Start ====================
+2020-11-15 16:35:47.1309  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 16:35:47.1309  INFO - 파일 언락 성공!
+2020-11-15 16:35:50.6367  INFO - ==================== End ====================
+2020-11-15 16:35:50.6546  INFO - ==================== Start ====================
+2020-11-15 16:35:50.6546  INFO - Method: PDFtoPng, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp\
+2020-11-15 16:35:50.7968  INFO - 이미지 변환 성공!
+2020-11-15 16:35:50.7968  INFO - ==================== End ====================
+2020-11-15 16:36:09.3725  INFO - ==================== Start ====================
+2020-11-15 16:36:09.3725  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 16:36:09.3855  INFO - 파일 언락 성공!
+2020-11-15 16:36:11.6534  INFO - ==================== End ====================
+2020-11-15 16:36:11.6634  INFO - ==================== Start ====================
+2020-11-15 16:36:11.6634  INFO - Method: PDFtoPng, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp\
+2020-11-15 16:36:11.7472  INFO - 이미지 변환 성공!
+2020-11-15 16:36:11.7472  INFO - ==================== End ====================
+2020-11-15 16:38:31.0563  INFO - ==================== Start ====================
+2020-11-15 16:38:31.0563  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 16:38:31.0563  INFO - 파일 언락 성공!
+2020-11-15 16:38:34.5236  INFO - ==================== End ====================
+2020-11-15 16:38:34.5416  INFO - ==================== Start ====================
+2020-11-15 16:38:34.5416  INFO - Method: PDFtoPng, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp\
+2020-11-15 16:38:34.6742  INFO - 이미지 변환 성공!
+2020-11-15 16:38:34.6742  INFO - ==================== End ====================
+2020-11-15 16:47:10.9282  INFO - ==================== Start ====================
+2020-11-15 16:47:10.9282  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 16:47:10.9282  INFO - 파일 언락 성공!
+2020-11-15 16:47:17.6025  INFO - ==================== End ====================
+2020-11-15 16:50:54.3556  INFO - ==================== Start ====================
+2020-11-15 16:50:54.3556  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 16:50:54.3556  INFO - 파일 언락 성공!
+2020-11-15 16:51:00.5486  INFO - ==================== End ====================
+2020-11-15 16:52:37.4181  INFO - ==================== Start ====================
+2020-11-15 16:52:37.4181  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 16:52:37.4181  INFO - 파일 언락 성공!
+2020-11-15 16:52:43.2386  INFO - ==================== End ====================
+2020-11-15 16:55:23.3379  INFO - ==================== Start ====================
+2020-11-15 16:55:23.3529  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 16:55:23.3529  INFO - 파일 언락 성공!
+2020-11-15 16:59:31.9376  INFO - ==================== Start ====================
+2020-11-15 16:59:31.9376  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 16:59:31.9465  INFO - 파일 언락 성공!
+2020-11-15 16:59:38.1809  INFO - ==================== End ====================
+2020-11-15 17:00:11.7112  INFO - ==================== Start ====================
+2020-11-15 17:00:11.7112  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 17:00:11.7112  INFO - 파일 언락 성공!
+2020-11-15 17:01:01.1943  INFO - ==================== Start ====================
+2020-11-15 17:01:01.1943  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 17:01:01.1943  INFO - 파일 언락 성공!
+2020-11-15 17:01:42.4268  INFO - ==================== Start ====================
+2020-11-15 17:01:42.4308  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 17:01:42.4308  INFO - 파일 언락 성공!
+2020-11-15 17:01:45.7359  INFO - ==================== End ====================
+2020-11-15 17:02:49.8462  INFO - ==================== Start ====================
+2020-11-15 17:02:49.8512  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 17:02:49.8512  INFO - 파일 언락 성공!
+2020-11-15 17:02:52.1814  INFO - ==================== End ====================
+2020-11-15 17:03:15.8787  INFO - ==================== Start ====================
+2020-11-15 17:03:15.8827  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 17:03:15.8827  INFO - 파일 언락 성공!
+2020-11-15 17:03:18.2461  INFO - ==================== End ====================
+2020-11-15 17:07:15.7830  INFO - ==================== Start ====================
+2020-11-15 17:07:15.7870  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 17:07:15.7870  INFO - 파일 언락 성공!
+2020-11-15 17:07:19.4293  INFO - ==================== End ====================
+2020-11-15 17:12:01.2656  INFO - ==================== Start ====================
+2020-11-15 17:12:01.2656  INFO - Method: PowerPointSaveAs, FilePath: C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt, outPath: C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.pdf, docPassword: 
+2020-11-15 17:12:11.7655  INFO - 변환 성공
+2020-11-15 17:12:11.8004  INFO - ==================== End ====================
+2020-11-15 17:14:44.5174  INFO - ==================== Start ====================
+2020-11-15 17:14:44.5214  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 17:14:44.5214  INFO - 파일 언락 성공!
+2020-11-15 17:14:48.6887  INFO - ==================== End ====================
+2020-11-15 17:16:22.2772  INFO - ==================== Start ====================
+2020-11-15 17:16:22.2772  INFO - Method: PowerPointSaveAs, FilePath: C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.ppt, outPath: C:\Data\workspace\C783754FFCA6ACC2F2430C5E8C651962\dec_0_1_11FADBEABE00B81E10B1E6B669C0DB17.pdf, docPassword: 
+2020-11-15 17:16:29.8830  INFO - 변환 성공
+2020-11-15 17:16:29.9169  INFO - ==================== End ====================
+2020-11-15 17:17:47.7407  INFO - ==================== Start ====================
+2020-11-15 17:17:47.7407  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 17:17:47.7576  INFO - 파일 언락 성공!
+2020-11-15 17:17:50.9944  INFO - ==================== End ====================
+2020-11-15 17:18:44.5902  INFO - ==================== Start ====================
+2020-11-15 17:18:44.5902  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 17:18:44.6021  INFO - 파일 언락 성공!
+2020-11-15 17:18:46.7838  INFO - ==================== End ====================
+2020-11-15 17:19:07.6171  INFO - ==================== Start ====================
+2020-11-15 17:19:07.6171  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 17:19:07.6171  INFO - 파일 언락 성공!
+2020-11-15 17:19:09.8970  INFO - ==================== End ====================
+2020-11-15 17:19:57.3434  INFO - ==================== Start ====================
+2020-11-15 17:19:57.3434  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 17:19:57.3554  INFO - 파일 언락 성공!
+2020-11-15 17:19:59.6207  INFO - ==================== End ====================
+2020-11-15 17:20:16.0600  INFO - ==================== Start ====================
+2020-11-15 17:20:16.0600  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 17:20:16.0709  INFO - 파일 언락 성공!
+2020-11-15 17:20:18.2805  INFO - ==================== End ====================
+2020-11-15 17:21:47.4149  INFO - ==================== Start ====================
+2020-11-15 17:21:47.4149  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 17:21:47.4149  INFO - 파일 언락 성공!
+2020-11-15 17:21:50.9402  INFO - ==================== End ====================
+2020-11-15 17:22:05.9139  INFO - ==================== Start ====================
+2020-11-15 17:22:05.9139  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 17:22:05.9139  INFO - 파일 언락 성공!
+2020-11-15 17:22:09.3042  INFO - ==================== End ====================
+2020-11-15 17:22:49.2785  INFO - ==================== Start ====================
+2020-11-15 17:22:49.2785  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 17:22:49.2875  INFO - 파일 언락 성공!
+2020-11-15 17:22:52.6263  INFO - ==================== End ====================
+2020-11-15 17:22:52.6482  INFO - ==================== Start ====================
+2020-11-15 17:22:52.6482  INFO - Method: PDFtoPng, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp\
+2020-11-15 17:22:52.7908  INFO - 이미지 변환 성공!
+2020-11-15 17:22:52.7908  INFO - ==================== End ====================
+2020-11-15 17:34:16.2926  INFO - ==================== Start ====================
+2020-11-15 17:34:16.2926  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 17:34:16.2926  INFO - 파일 언락 성공!
+2020-11-15 17:34:20.0588  INFO - ==================== End ====================
+2020-11-15 17:34:31.5372  INFO - ==================== Start ====================
+2020-11-15 17:34:31.5372  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 17:34:31.5372  INFO - 파일 언락 성공!
+2020-11-15 17:34:33.8528  INFO - ==================== End ====================
+2020-11-15 17:41:06.1045  INFO - ==================== Start ====================
+2020-11-15 17:41:06.1045  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 17:41:06.1045  INFO - 파일 언락 성공!
+2020-11-15 17:41:09.8685  INFO - ==================== End ====================
+2020-11-15 17:41:21.7672  INFO - ==================== Start ====================
+2020-11-15 17:41:21.7672  INFO - Method: HwpSaveAs, FilePath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp, outPath: C:\Data\workspace\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf
+2020-11-15 17:41:21.7762  INFO - 파일 언락 성공!
+2020-11-15 17:41:23.9811  INFO - ==================== End ====================

@@ -63,7 +63,7 @@ namespace DocConvert_Server
                     {
                         this.WindowState = FormWindowState.Minimized;
                     }
-                    if (args[i].ToLower().Contains("/nolicense"))
+                    /*if (args[i].ToLower().Contains("/nolicense"))
                     {
                         if (args[i].Split('=')[1].Equals("JmSoftware"))
                         {
@@ -71,10 +71,12 @@ namespace DocConvert_Server
                             DevLog.Write("라이센스없이 프로그램을 실행하였습니다.\r\n=========================>무단으로 사용할 경우 법적 처벌을 받을 수 있습니다.", LOG_LEVEL.DEBUG);
                             this.Text += " - No License Version ";
                         }
-                    }
+                    }*/
                 }
             }
             #endregion
+
+            noLicense = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -139,7 +141,9 @@ namespace DocConvert_Server
                 }
             }
             #endregion
-            /*#region 가상 머신환경 체크
+
+            #region 가상 머신환경 체크
+            /*
             try
             {
                 new LicenseInfo().getHWID();
@@ -167,7 +171,8 @@ namespace DocConvert_Server
                 }
             }
             catch (Exception) { new MessageDialog("라이센스 오류", "라이센스키 파싱오류.", "HWID: " + new LicenseInfo().getHWID()).ShowDialog(this); if (!noLicense) { program_Exit(true); return; } }
-            #endregion*/
+            */
+            #endregion
 
             #region 초기 설정 및 파싱 데이터 출력
             DirectoryInfo directoryInfo = new DirectoryInfo(IniProperties.DataPath + @"\tmp");
@@ -277,7 +282,7 @@ namespace DocConvert_Server
                 WebSocketListenerOptions options = new WebSocketListenerOptions()
                 {
                     WebSocketReceiveTimeout = new TimeSpan(0, time[0], time[1]), // 클라이언트가 서버로 요청했을때 서버가 바쁘면 Timeout
-                    WebSocketSendTimeout = new TimeSpan(0, 0, 5), // 클라이언트가 연결을 끊었을때 Timeout
+                    WebSocketSendTimeout = new TimeSpan(0, 1, 0), // 클라이언트가 연결을 끊었을때 Timeout
                     NegotiationTimeout = new TimeSpan(0, time[0], time[1]),
                     PingTimeout = new TimeSpan(0, time[0], time[1]),
                     PingMode = PingModes.LatencyControl
@@ -329,15 +334,6 @@ namespace DocConvert_Server
                             DevLog.Write("웹 소켓 서버가 비정상적으로 종료되어 재시작 하였습니다.");
                         }
                         catch (Exception e1) { DevLog.Write(e1.Message); }
-                    }
-
-                    if (IsTcpPortAvailable(IniProperties.FileServerPort))
-                    {
-                        pictureBox2.Image = Properties.Resources.success_icon;
-                    }
-                    else
-                    {
-                        pictureBox2.Image = Properties.Resources.error_icon;
                     }
 
                     // 라이센스 체크로직
@@ -408,12 +404,12 @@ namespace DocConvert_Server
                         {
                             DateTime timeTaken = DateTime.Now;
                             JObject requestMsg = JObject.Parse(requestInfo);
-                            DevLog.Write(string.Format("\r\n[WebSocket][Client => Server]\r\n{0}\r\n", requestMsg), LOG_LEVEL.INFO);
+                            //DevLog.Write(string.Format("\r\n[WebSocket][Client => Server]\r\n{0}\r\n", requestMsg), LOG_LEVEL.INFO);
 
                             // 문서변환 메소드
                             responseMsg = new Document_Convert().document_Convert(requestInfo);
 
-                            DevLog.Write(string.Format("\r\n[WebSocket][Server => Client]\r\n{0}\r\n", responseMsg), LOG_LEVEL.INFO);
+                            //DevLog.Write(string.Format("\r\n[WebSocket][Server => Client]\r\n{0}\r\n", responseMsg), LOG_LEVEL.INFO);
 
                             TimeSpan curTime = DateTime.Now - timeTaken;
                             DevLog.Write(string.Format("[WebSocket] 작업 소요시간: {0}", curTime.ToString()), LOG_LEVEL.INFO);

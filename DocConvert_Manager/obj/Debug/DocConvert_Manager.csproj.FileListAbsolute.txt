@@ -56,3 +56,19 @@ C:\Users\JMKIM\source\repos\isugar150\DocConvert\DocConvert_Manager\obj\Debug\Do
 C:\Users\JMKIM\source\repos\isugar150\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.csproj.CopyComplete
 C:\Users\JMKIM\source\repos\isugar150\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.exe
 C:\Users\JMKIM\source\repos\isugar150\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.pdb
+C:\Users\JMKIM\Documents\GitHub\DocConvert\bin\Debug\phantomjs.exe
+C:\Users\JMKIM\Documents\GitHub\DocConvert\bin\Debug\rasterize.js
+C:\Users\JMKIM\Documents\GitHub\DocConvert\bin\Debug\Utility\Office Uninstall v1.8.2.exe
+C:\Users\JMKIM\Documents\GitHub\DocConvert\bin\Debug\NLog.config
+C:\Users\JMKIM\Documents\GitHub\DocConvert\bin\Debug\FilePathCheckerModuleExample.dll
+C:\Users\JMKIM\Documents\GitHub\DocConvert\bin\Debug\pdfium.dll
+C:\Users\JMKIM\Documents\GitHub\DocConvert\bin\Debug\DocConvert_Manager.exe
+C:\Users\JMKIM\Documents\GitHub\DocConvert\bin\Debug\DocConvert_Manager.pdb
+C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.csprojAssemblyReference.cache
+C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.Manager.resources
+C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.Properties.Resources.resources
+C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.csproj.GenerateResource.cache
+C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.csproj.CoreCompileInputs.cache
+C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.csproj.CopyComplete
+C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.exe
+C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert_Manager\obj\Debug\DocConvert_Manager.pdb
