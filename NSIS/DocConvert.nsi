@@ -98,7 +98,6 @@ Section "MainSection"
   File "..\bin\Release\log4net.dll"
   File "..\bin\Release\Interop.HWPCONTROLLib.dll"
   File "..\bin\Release\ICSharpCode.SharpZipLib.dll"
-  File "..\bin\Release\FluentFTP.dll"
   File "..\bin\Release\FilePathCheckerModuleExample.dll"
   File "..\bin\Release\DocConvert_Util.exe"
   CreateShortCut "$DESKTOP\DocConvert Util.lnk" "$INSTDIR\DocConvert_Util.exe"
@@ -131,11 +130,11 @@ SectionEnd
 
 Function un.onUninstSuccess
   HideWindow
-  MessageBox MB_ICONINFORMATION|MB_OK "$(^Name)¸¦ ¿ÏÀüÈ÷ »èÁ¦ÇÏ¿´½À´Ï´Ù.."
+  MessageBox MB_ICONINFORMATION|MB_OK "$(^Name)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.."
 FunctionEnd
 
 Function un.onInit
-  MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "$(^Name)¸¦ ÄÄÇ»ÅÍ¿¡¼­ »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?" IDYES +2
+  MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "$(^Name)ï¿½ï¿½ ï¿½ï¿½Ç»ï¿½Í¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½Ã°Ú½ï¿½ï¿½Ï±ï¿½?" IDYES +2
   Abort
 FunctionEnd
 
@@ -150,7 +149,6 @@ Section Uninstall
   Delete "$INSTDIR\DocConvert_Util.exe"
   Delete "$INSTDIR\DocConvert_Manager.exe"
   Delete "$INSTDIR\FilePathCheckerModuleExample.dll"
-  Delete "$INSTDIR\FluentFTP.dll"
   Delete "$INSTDIR\ICSharpCode.SharpZipLib.dll"
   Delete "$INSTDIR\Interop.HWPCONTROLLib.dll"
   Delete "$INSTDIR\log4net.dll"
