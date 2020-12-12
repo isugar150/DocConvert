@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocConvert_Manager", "DocCo
 		{E66D151A-0A14-4EE5-97D8-DFC33B913AE0} = {E66D151A-0A14-4EE5-97D8-DFC33B913AE0}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocConvert_Console", "DocConvert_Console\DocConvert_Console.csproj", "{B9A24F2E-221A-4B7B-A084-8DA4A145D731}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{D8EC0B1A-7C5E-4561-B8F1-5AAD05D994EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8EC0B1A-7C5E-4561-B8F1-5AAD05D994EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8EC0B1A-7C5E-4561-B8F1-5AAD05D994EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9A24F2E-221A-4B7B-A084-8DA4A145D731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9A24F2E-221A-4B7B-A084-8DA4A145D731}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9A24F2E-221A-4B7B-A084-8DA4A145D731}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9A24F2E-221A-4B7B-A084-8DA4A145D731}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
