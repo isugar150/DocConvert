@@ -144,3 +144,4 @@ C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert_Server\obj\Debug\DocConver
 C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.csproj.CopyComplete
 C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.exe
 C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert_Server\obj\Debug\DocConvert_Server.pdb
+C:\Users\JMKIM\Documents\GitHub\DocConvert\bin\Debug\DocConvert_Server.exe.config

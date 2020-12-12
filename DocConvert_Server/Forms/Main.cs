@@ -5,7 +5,12 @@ using DocConvert_Server.License;
 using Microsoft.Win32;
 using Newtonsoft.Json.Linq;
 using NLog;
+using NWebDav.Server;
+using NWebDav.Server.Http;
+using NWebDav.Server.HttpListener;
+using NWebDav.Server.Stores;
 using System;
+using System.Configuration;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
@@ -90,29 +95,31 @@ namespace DocConvert_Server
                     if (new FileInfo("./DocConvert_Server.ini").Exists)
                     {
                         pairs.Load("./DocConvert_Server.ini");
-                        IniProperties.LicenseKEY = pairs["DC Server"]["LicenseKEY"].ToString2();
-                        IniProperties.BindIP = pairs["DC Server"]["BindIP"].ToString2();
-                        IniProperties.WebSocketPort = int.Parse(pairs["DC Server"]["WebSocketPort"].ToString2());
-                        IniProperties.FileServerPort = int.Parse(pairs["DC Server"]["FileServerPort"].ToString2());
-                        IniProperties.DisplayLogCnt = int.Parse(pairs["DC Server"]["DisplayLogCnt"].ToString2());
-                        IniProperties.ClientKEY = pairs["DC Server"]["ClientKEY"].ToString2();
-                        IniProperties.DataPath = pairs["DC Server"]["DataPath"].ToString2();
-                        IniProperties.ResponseTimeout = pairs["DC Server"]["ResponseTimeout"].ToString2();
-                        IniProperties.SchedulerTime = pairs["DC Server"]["SchedulerTime"].ToString2();
-                        IniProperties.OfficeDebugModeYn = pairs["DC Server"]["OfficeDebugModeYn"].ToString2().Equals("Y");
-                        IniProperties.ShowTextBoxYn = pairs["DC Server"]["ShowTextBoxYn"].ToString2().Equals("Y");
-                        IniProperties.FollowTailYn = pairs["DC Server"]["FollowTailYn"].ToString2().Equals("Y");
-                        IniProperties.CleanWorkspaceSchedulerYn = pairs["DC Server"]["CleanWorkspaceSchedulerYn"].ToString2().Equals("Y");
-                        IniProperties.CleanWorkspaceDay = int.Parse(pairs["DC Server"]["CleanWorkspaceDay"].ToString2());
-                        IniProperties.CleanLogSchedulerYn = pairs["DC Server"]["CleanLogSchedulerYn"].ToString2().Equals("Y");
-                        IniProperties.CleanLogDay = int.Parse(pairs["DC Server"]["CleanLogDay"].ToString2());
-                        IniProperties.ChromiumCaptureYn = pairs["DC Server"]["ChromiumCaptureYn"].ToString2().Equals("Y");
-                        IniProperties.WebCaptureTimeout = int.Parse(pairs["DC Server"]["WebCaptureTimeout"].ToString2());
+                        IniProperties.BindIP = pairs["Common"]["BindIP"].ToString2().Trim();
+                        IniProperties.WebSocketPort = int.Parse(pairs["Common"]["WebSocketPort"].ToString2().Trim());
+                        IniProperties.DisplayLogCnt = int.Parse(pairs["Common"]["DisplayLogCnt"].ToString2().Trim());
+                        IniProperties.ClientKEY = pairs["Common"]["ClientKEY"].ToString2().Trim();
+                        IniProperties.DataPath = pairs["Common"]["DataPath"].ToString2().Trim();
 
-                        IniProperties.DRM_useYn = pairs["DRM Setting"]["DRM useYn"].ToString2().Equals("Y");
-                        IniProperties.DRM_Path = pairs["DRM Setting"]["DRM Path"].ToString2();
-                        IniProperties.DRM_Result = pairs["DRM Setting"]["DRM Result"].ToString2();
-                        IniProperties.DRM_Args = pairs["DRM Setting"]["DRM Args"].ToString2();
+                        IniProperties.OfficeDebugModeYn = pairs["Options"]["OfficeDebugModeYn"].ToString2().Trim().Equals("Y");
+                        IniProperties.ShowTextBoxYn = pairs["Options"]["ShowTextBoxYn"].ToString2().Trim().Equals("Y");
+                        IniProperties.FollowTailYn = pairs["Options"]["FollowTailYn"].ToString2().Trim().Equals("Y");
+                        IniProperties.ResponseTimeout = pairs["Options"]["ResponseTimeout"].ToString2().Trim();
+
+                        IniProperties.FileServerUseYn = pairs["WebDAV"]["FileServerUseYn"].ToString2().Trim().Equals("Y");
+                        IniProperties.Http_Prefix = pairs["WebDAV"]["Http Prefix"].ToString2().Trim();
+                        IniProperties.FileServerPort = int.Parse(pairs["WebDAV"]["FileServerPort"].ToString2().Trim());
+
+                        IniProperties.SchedulerTime = pairs["Scheduler"]["SchedulerTime"].ToString2().Trim();
+                        IniProperties.CleanWorkspaceSchedulerYn = pairs["Scheduler"]["CleanWorkspaceSchedulerYn"].ToString2().Trim().Equals("Y");
+                        IniProperties.CleanWorkspaceDay = int.Parse(pairs["Scheduler"]["CleanWorkspaceDay"].ToString2().Trim());
+                        IniProperties.CleanLogSchedulerYn = pairs["Scheduler"]["CleanLogSchedulerYn"].ToString2().Trim().Equals("Y");
+                        IniProperties.CleanLogDay = int.Parse(pairs["Scheduler"]["CleanLogDay"].ToString2().Trim());
+
+                        IniProperties.DRM_useYn = pairs["DRM Setting"]["DRM useYn"].ToString2().Trim().Equals("Y");
+                        IniProperties.DRM_Path = pairs["DRM Setting"]["DRM Path"].ToString2().Trim();
+                        IniProperties.DRM_Result = pairs["DRM Setting"]["DRM Result"].ToString2().Trim();
+                        IniProperties.DRM_Args = pairs["DRM Setting"]["DRM Args"].ToString2().Trim();
 
                         break;
                     }
@@ -205,16 +212,6 @@ namespace DocConvert_Server
             DevLog.Write("[INFO] 데이터 경로: " + IniProperties.DataPath, LOG_LEVEL.INFO);
             DevLog.Write("[INFO] 클라이언트 키: " + IniProperties.ClientKEY, LOG_LEVEL.INFO);
             DevLog.Write("[INFO] 오피스 디버깅모드: " + IniProperties.OfficeDebugModeYn, LOG_LEVEL.INFO);
-            if (IniProperties.ChromiumCaptureYn)
-            {
-                DevLog.Write("[INFO] 웹 캡쳐 모드: Chromium Capture", LOG_LEVEL.INFO);
-            }
-            else
-            {
-                DevLog.Write("[INFO] 웹 캡쳐 모드: Phantom JS", LOG_LEVEL.INFO);
-            }
-
-            DevLog.Write("[INFO] 웹 캡쳐 타임아웃: " + IniProperties.WebCaptureTimeout + "초", LOG_LEVEL.INFO);
 
             DevLog.Write("[INFO] DRM 사용 여부: " + IniProperties.DRM_useYn);
             DevLog.Write("[INFO] DRM 경로: " + IniProperties.DRM_Path);
@@ -256,7 +253,7 @@ namespace DocConvert_Server
             DevLog.Write("[Scheduler] 다음 스케줄러 작동시간: " + (DateTime.Now + TimeSpan.FromMilliseconds(tScheduler.Interval)));
             #endregion
 
-            #region Create WebSocketServer
+            #region Create WebSocket Server
             try
             {
                 CancellationTokenSource cancellation = new CancellationTokenSource();
@@ -311,6 +308,53 @@ namespace DocConvert_Server
             }
             #endregion
 
+            #region Create WebDAV Server
+            if (IniProperties.FileServerUseYn)
+            {
+                new Thread(delegate ()
+                {
+                    // Obtain the HTTP binding settings
+                    var webdavProtocol = "http";
+                    var webdavIp = "127.0.0.1";
+                    var webdavPort = IniProperties.FileServerPort;
+                    var httpListener = new HttpListener();
+
+                    // Add the prefix
+                    httpListener.Prefixes.Add($"{webdavProtocol}://{webdavIp}:{webdavPort}/");
+
+                    // Use basic authentication if requested
+                    var webdavUseAuthentication = true;
+                    if (webdavUseAuthentication)
+                    {
+                        // Check if HTTPS is enabled
+                        if (webdavProtocol != "https")
+                            Console.WriteLine("Most WebDAV clients cannot use authentication on a non-HTTPS connection");
+
+                        // Set the authentication scheme and realm
+                        httpListener.AuthenticationSchemes = AuthenticationSchemes.Basic;
+                        httpListener.Realm = "WebDAV server";
+                    }
+                    else
+                    {
+                        // Allow anonymous access
+                        httpListener.AuthenticationSchemes = AuthenticationSchemes.Anonymous;
+                    }
+
+                    // Start the HTTP listener
+                    httpListener.Start();
+
+                    // Start dispatching requests
+                    var cancellationTokenSource = new CancellationTokenSource();
+                    DispatchHttpRequestsAsync(httpListener, cancellationTokenSource.Token);
+                    while (this.IsDisposed) { Thread.Sleep(100); } ;
+                    //cancellationTokenSource.Cancel();
+
+                    DevLog.Write("[INFO] WebDAV 서버 시작됨. " + IniProperties.Http_Prefix);
+
+                }).Start();
+            }
+            #endregion
+
             #region Thread
             workProcessTimer.Tick += new EventHandler(OnProcessTimedEvent);
             workProcessTimer.Interval = new TimeSpan(0, 0, 0, 0, 32);
@@ -347,6 +391,39 @@ namespace DocConvert_Server
             }).Start();
             #endregion
         }
+
+        #region WebDAV Method
+        private static async void DispatchHttpRequestsAsync(System.Net.HttpListener httpListener, CancellationToken cancellationToken)
+        {
+            // Create a request handler factory that uses basic authentication
+            var requestHandlerFactory = new RequestHandlerFactory();
+
+            // Create WebDAV dispatcher
+            //var homeFolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            var homeFolder = IniProperties.DataPath;
+            var webDavDispatcher = new WebDavDispatcher(new DiskStore(homeFolder), requestHandlerFactory);
+
+            // Determine the WebDAV username/password for authorization
+            // (only when basic authentication is enabled)
+            var webdavUsername = "test";
+            var webdavPassword = "test";
+
+            HttpListenerContext httpListenerContext;
+            httpListenerContext = await httpListener.GetContextAsync().ConfigureAwait(false);
+            while (!cancellationToken.IsCancellationRequested && (httpListenerContext != null))
+            {
+                // Determine the proper HTTP context
+                IHttpContext httpContext;
+                if (httpListenerContext.Request.IsAuthenticated)
+                    httpContext = new HttpBasicContext(httpListenerContext, checkIdentity: i => i.Name == webdavUsername && i.Password == webdavPassword);
+                else
+                    httpContext = new HttpContext(httpListenerContext);
+
+                // Dispatch the request
+                await webDavDispatcher.DispatchRequestAsync(httpContext).ConfigureAwait(false);
+            }
+        }
+        #endregion
 
         #region WebSocket Method
         /// <summary>
