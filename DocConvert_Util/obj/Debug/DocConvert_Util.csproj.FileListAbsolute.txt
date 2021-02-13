@@ -144,3 +144,19 @@ C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert_Util\obj\Debug\DocConvert_
 C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.csproj.CopyComplete
 C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.exe
 C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.pdb
+C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\phantomjs.exe
+C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\rasterize.js
+C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\Utility\Office Uninstall v1.8.2.exe
+C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\NLog.config
+C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\FilePathCheckerModuleExample.dll
+C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\pdfium.dll
+C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert_Util.exe
+C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert_Util.pdb
+C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.csprojAssemblyReference.cache
+C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.Convert_Util.resources
+C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.Properties.Resources.resources
+C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.csproj.GenerateResource.cache
+C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.csproj.CoreCompileInputs.cache
+C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.csproj.CopyComplete
+C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.exe
+C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Util\obj\Debug\DocConvert_Util.pdb

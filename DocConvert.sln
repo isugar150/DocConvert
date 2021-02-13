@@ -25,6 +25,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocConvert_Manager", "DocCo
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocConvert_Console", "DocConvert_Console\DocConvert_Console.csproj", "{B9A24F2E-221A-4B7B-A084-8DA4A145D731}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E66D151A-0A14-4EE5-97D8-DFC33B913AE0} = {E66D151A-0A14-4EE5-97D8-DFC33B913AE0}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

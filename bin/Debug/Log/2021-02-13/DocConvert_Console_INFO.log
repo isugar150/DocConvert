@@ -1,0 +1,583 @@
+2021-02-13 14:49:37.3992  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 14:49:37.3992  INFO - Parsing Ini File...
+2021-02-13 14:49:37.4276  INFO - Workspace Directory: 
+2021-02-13 14:49:48.3669  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 14:49:48.3669  INFO - Parsing Ini File...
+2021-02-13 14:49:48.3851  INFO - Workspace Directory: 
+2021-02-13 14:49:59.2074  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 14:49:59.2074  INFO - Parsing Ini File...
+2021-02-13 14:49:59.2275  INFO - Workspace Directory: 
+2021-02-13 14:52:07.5692  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 14:52:07.5692  INFO - Parsing Ini File...
+2021-02-13 14:52:07.5692  INFO - Workspace Directory: 
+2021-02-13 14:53:58.0444  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 14:53:58.0444  INFO - Parsing Ini File...
+2021-02-13 14:53:58.0599  INFO - The configuration file is created inC:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert_Server.ini
+2021-02-13 14:53:58.0599  INFO - Workspace Directory: 
+2021-02-13 14:54:27.0512  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 14:54:27.0512  INFO - Parsing Ini File...
+2021-02-13 14:54:27.0512  INFO - Workspace Directory: 
+2021-02-13 15:06:07.0681  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:06:07.0681  INFO - Parsing Ini File...
+2021-02-13 15:06:07.1558  INFO - Bind IP: 
+2021-02-13 15:06:07.1558  INFO - HTTP Port: 0
+2021-02-13 15:06:07.1604  INFO - Client KEY: 
+2021-02-13 15:06:07.1604  INFO - Workspace Directory: 
+2021-02-13 15:06:07.1604  INFO - SchedulerTime: 
+2021-02-13 15:06:07.1604  INFO - CleanWorkspaceSchedulerYn: False
+2021-02-13 15:06:07.1604  INFO - CleanWorkspaceDay: 0
+2021-02-13 15:06:07.1604  INFO - CleanLogSchedulerYn: False
+2021-02-13 15:06:07.1604  INFO - CleanLogDay: 0
+2021-02-13 15:06:07.1604  INFO - DRM useYn: False
+2021-02-13 15:06:07.1604  INFO - DRM Path: 
+2021-02-13 15:06:07.1768  INFO - DRM Result: 
+2021-02-13 15:06:07.1768  INFO - DRM Args: 
+2021-02-13 15:06:10.2228  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:06:10.2228  INFO - Parsing Ini File...
+2021-02-13 15:06:10.2472  INFO - Bind IP: 
+2021-02-13 15:06:10.2472  INFO - HTTP Port: 0
+2021-02-13 15:06:10.2552  INFO - Client KEY: 
+2021-02-13 15:06:10.2552  INFO - Workspace Directory: 
+2021-02-13 15:06:10.2552  INFO - SchedulerTime: 
+2021-02-13 15:06:10.2552  INFO - CleanWorkspaceSchedulerYn: False
+2021-02-13 15:06:10.2552  INFO - CleanWorkspaceDay: 0
+2021-02-13 15:06:10.2552  INFO - CleanLogSchedulerYn: False
+2021-02-13 15:06:10.2730  INFO - CleanLogDay: 0
+2021-02-13 15:06:10.2730  INFO - DRM useYn: False
+2021-02-13 15:06:10.2902  INFO - DRM Path: 
+2021-02-13 15:06:10.2902  INFO - DRM Result: 
+2021-02-13 15:06:10.2902  INFO - DRM Args: 
+2021-02-13 15:06:35.2409  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:06:35.2409  INFO - Parsing Ini File...
+2021-02-13 15:06:35.2669  INFO - The configuration file is created in C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert_Server.ini
+2021-02-13 15:06:35.2669  INFO - Bind IP: 
+2021-02-13 15:06:35.2698  INFO - HTTP Port: 0
+2021-02-13 15:06:35.2698  INFO - Client KEY: 
+2021-02-13 15:06:35.2698  INFO - Workspace Directory: 
+2021-02-13 15:06:35.2698  INFO - SchedulerTime: 
+2021-02-13 15:06:35.2698  INFO - CleanWorkspaceSchedulerYn: False
+2021-02-13 15:06:35.2698  INFO - CleanWorkspaceDay: 0
+2021-02-13 15:06:35.2698  INFO - CleanLogSchedulerYn: False
+2021-02-13 15:06:35.2698  INFO - CleanLogDay: 0
+2021-02-13 15:06:35.2698  INFO - DRM useYn: False
+2021-02-13 15:06:35.2698  INFO - DRM Path: 
+2021-02-13 15:06:35.2881  INFO - DRM Result: 
+2021-02-13 15:06:35.2881  INFO - DRM Args: 
+2021-02-13 15:08:44.6605  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:08:44.6605  INFO - Parsing Ini File...
+2021-02-13 15:08:44.6605  INFO - Bind IP: 0.0.0.0
+2021-02-13 15:08:44.6768  INFO - HTTP Port: 12000
+2021-02-13 15:08:44.6768  INFO - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:08:44.6768  INFO - Workspace Directory: C:\Data
+2021-02-13 15:08:44.6768  INFO - SchedulerTime: 1,0
+2021-02-13 15:08:44.6768  INFO - CleanWorkspaceSchedulerYn: True
+2021-02-13 15:08:44.6768  INFO - CleanWorkspaceDay: 3
+2021-02-13 15:08:44.6922  INFO - CleanLogSchedulerYn: True
+2021-02-13 15:08:44.6922  INFO - CleanLogDay: 10
+2021-02-13 15:08:44.6922  INFO - DRM useYn: False
+2021-02-13 15:08:44.6922  INFO - DRM Path: 
+2021-02-13 15:08:44.6922  INFO - DRM Result: 0
+2021-02-13 15:08:44.7073  INFO - DRM Args: $Full_Path$,$Out_Full_Path$,$DRM_Type$
+2021-02-13 15:10:00.1051  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:10:00.1051  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:10:00.1295  INFO - Bind IP: 0.0.0.0
+2021-02-13 15:10:00.1295  INFO - HTTP Port: 12000
+2021-02-13 15:10:00.1295  INFO - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:10:00.1295  INFO - Workspace Directory: C:\Data
+2021-02-13 15:10:00.1295  INFO - SchedulerTime: 1,0
+2021-02-13 15:10:00.1295  INFO - CleanWorkspaceSchedulerYn: True
+2021-02-13 15:10:00.1295  INFO - CleanWorkspaceDay: 3
+2021-02-13 15:10:00.1295  INFO - CleanLogSchedulerYn: True
+2021-02-13 15:10:00.1448  INFO - CleanLogDay: 10
+2021-02-13 15:10:00.1448  INFO - DRM useYn: False
+2021-02-13 15:10:00.1448  INFO - DRM Path: 
+2021-02-13 15:10:00.1448  INFO - DRM Result: 0
+2021-02-13 15:10:00.1448  INFO - DRM Args: $Full_Path$,$Out_Full_Path$,$DRM_Type$
+2021-02-13 15:10:00.1610  INFO - ----------------------------------------
+2021-02-13 15:10:11.4352  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:10:11.4424  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:10:11.4424  INFO - Bind IP: 0.0.0.0
+2021-02-13 15:10:11.4424  INFO - HTTP Port: 12000
+2021-02-13 15:10:11.4424  INFO - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:10:11.4577  INFO - Workspace Directory: C:\Data
+2021-02-13 15:10:11.4577  INFO - SchedulerTime: 1,0
+2021-02-13 15:10:11.4577  INFO - CleanWorkspaceSchedulerYn: True
+2021-02-13 15:10:11.4577  INFO - CleanWorkspaceDay: 3
+2021-02-13 15:10:11.4577  INFO - CleanLogSchedulerYn: True
+2021-02-13 15:10:11.4577  INFO - CleanLogDay: 10
+2021-02-13 15:10:11.4577  INFO - DRM useYn: False
+2021-02-13 15:10:11.4577  INFO - DRM Path: 
+2021-02-13 15:10:11.4730  INFO - DRM Result: 0
+2021-02-13 15:10:11.4730  INFO - DRM Args: $Full_Path$,$Out_Full_Path$,$DRM_Type$
+2021-02-13 15:10:11.4730  INFO - ------------------------------------------
+2021-02-13 15:10:49.4806  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:10:49.4806  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:10:49.4927  INFO - - Bind IP: 0.0.0.0
+2021-02-13 15:10:49.4927  INFO - - HTTP Port: 12000
+2021-02-13 15:10:49.4927  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:10:49.4927  INFO - - Workspace Directory: C:\Data
+2021-02-13 15:10:49.4927  INFO - - SchedulerTime: 1,0
+2021-02-13 15:10:49.4927  INFO - - CleanWorkspaceSchedulerYn: True
+2021-02-13 15:10:49.5040  INFO - - CleanWorkspaceDay: 3
+2021-02-13 15:10:49.5040  INFO - - CleanLogSchedulerYn: True
+2021-02-13 15:10:49.5040  INFO - - CleanLogDay: 10
+2021-02-13 15:10:49.5040  INFO - - DRM useYn: False
+2021-02-13 15:10:49.5040  INFO - - DRM Path: 
+2021-02-13 15:10:49.5040  INFO - - DRM Result: 0
+2021-02-13 15:10:49.5040  INFO - - DRM Args: $Full_Path$,$Out_Full_Path$,$DRM_Type$
+2021-02-13 15:10:49.5040  INFO - ------------------------------------------
+2021-02-13 15:11:11.0354  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:11:11.0354  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:11:11.0555  INFO - The configuration file is created in C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert_Server.ini
+2021-02-13 15:11:11.0555  INFO - - Bind IP: 0.0.0.0
+2021-02-13 15:11:11.0555  INFO - - HTTP Port: 12000
+2021-02-13 15:11:11.0555  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:11:11.0555  INFO - - Workspace Directory: C:\Data
+2021-02-13 15:11:11.0555  INFO - - SchedulerTime: 1,0
+2021-02-13 15:11:11.0665  INFO - - CleanWorkspaceSchedulerYn: False
+2021-02-13 15:11:11.0665  INFO - - CleanWorkspaceDay: 3
+2021-02-13 15:11:11.0665  INFO - - CleanLogSchedulerYn: False
+2021-02-13 15:11:11.0665  INFO - - CleanLogDay: 3
+2021-02-13 15:11:11.0665  INFO - - DRM useYn: False
+2021-02-13 15:11:11.0665  INFO - - DRM Path: 
+2021-02-13 15:11:11.0836  INFO - - DRM Result: 
+2021-02-13 15:11:11.0836  INFO - - DRM Args: 
+2021-02-13 15:11:11.0836  INFO - ------------------------------------------
+2021-02-13 15:12:47.2229  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:12:47.2229  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-13 15:12:47.2229  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:12:47.2229  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:12:47.2385  INFO - - Bind IP: 0.0.0.0
+2021-02-13 15:12:47.2385  INFO - - HTTP Port: 12000
+2021-02-13 15:12:47.2385  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:12:47.2385  INFO - - Workspace Directory: C:\Data
+2021-02-13 15:12:47.2385  INFO - - SchedulerTime: 1,0
+2021-02-13 15:12:47.2385  INFO - - CleanWorkspaceSchedulerYn: True
+2021-02-13 15:12:47.2385  INFO - - CleanWorkspaceDay: 3
+2021-02-13 15:12:47.2385  INFO - - CleanLogSchedulerYn: True
+2021-02-13 15:12:47.2385  INFO - - CleanLogDay: 10
+2021-02-13 15:12:47.2385  INFO - - DRM useYn: False
+2021-02-13 15:12:47.2385  INFO - - DRM Path: 
+2021-02-13 15:12:47.2385  INFO - - DRM Result: 0
+2021-02-13 15:12:47.2548  INFO - - DRM Args: $Full_Path$,$Out_Full_Path$,$DRM_Type$
+2021-02-13 15:12:47.2548  INFO - ------------------------------------------
+2021-02-13 15:15:07.1038  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:15:07.1038  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:15:07.1038  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:15:07.1038  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-13 15:15:07.1038  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:15:07.1222  INFO - - Bind IP: 0.0.0.0
+2021-02-13 15:15:07.1222  INFO - - HTTP Port: 12000
+2021-02-13 15:15:07.1222  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:15:07.1222  INFO - - Workspace Directory: C:\Data
+2021-02-13 15:15:07.1293  INFO - - SchedulerTime: 1,0
+2021-02-13 15:15:07.1293  INFO - - CleanWorkspaceSchedulerYn: True
+2021-02-13 15:15:07.1293  INFO - - CleanWorkspaceDay: 3
+2021-02-13 15:15:07.1293  INFO - - CleanLogSchedulerYn: True
+2021-02-13 15:15:07.1293  INFO - - CleanLogDay: 10
+2021-02-13 15:15:07.1293  INFO - - DRM useYn: False
+2021-02-13 15:15:07.1449  INFO - - DRM Path: 
+2021-02-13 15:15:07.1449  INFO - - DRM Result: 0
+2021-02-13 15:15:07.1449  INFO - - DRM Args: $Full_Path$,$Out_Full_Path$,$DRM_Type$
+2021-02-13 15:15:07.1449  INFO - ------------------------------------------
+2021-02-13 15:15:13.4598  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:15:13.4598  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:15:13.4598  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:15:13.4598  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-13 15:15:13.4738  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:15:13.4738  INFO - - Bind IP: 0.0.0.0
+2021-02-13 15:15:13.4738  INFO - - HTTP Port: 12000
+2021-02-13 15:15:13.4738  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:15:13.4892  INFO - - Workspace Directory: C:\Data
+2021-02-13 15:15:13.4892  INFO - - SchedulerTime: 1,0
+2021-02-13 15:15:13.4892  INFO - - CleanWorkspaceSchedulerYn: True
+2021-02-13 15:15:13.4892  INFO - - CleanWorkspaceDay: 3
+2021-02-13 15:15:13.4892  INFO - - CleanLogSchedulerYn: True
+2021-02-13 15:15:13.4892  INFO - - CleanLogDay: 10
+2021-02-13 15:15:13.5074  INFO - - DRM useYn: False
+2021-02-13 15:15:13.5074  INFO - - DRM Path: 
+2021-02-13 15:15:13.5074  INFO - - DRM Result: 0
+2021-02-13 15:15:13.5074  INFO - - DRM Args: $Full_Path$,$Out_Full_Path$,$DRM_Type$
+2021-02-13 15:15:13.5297  INFO - ------------------------------------------
+2021-02-13 15:16:55.1309  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:16:55.1309  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-13 15:16:55.1309  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:16:55.1309  INFO - User Domain Name: DESKTOP-6DNS55V
+2021-02-13 15:16:55.1309  INFO - User Name: o0_0o
+2021-02-13 15:16:55.1309  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:16:55.1470  INFO - - Bind IP: 0.0.0.0
+2021-02-13 15:16:55.1470  INFO - - HTTP Port: 12000
+2021-02-13 15:16:55.1470  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:16:55.1470  INFO - - Workspace Directory: C:\Data
+2021-02-13 15:16:55.1470  INFO - - SchedulerTime: 1,0
+2021-02-13 15:16:55.1470  INFO - - CleanWorkspaceSchedulerYn: True
+2021-02-13 15:16:55.1470  INFO - - CleanWorkspaceDay: 3
+2021-02-13 15:16:55.1470  INFO - - CleanLogSchedulerYn: True
+2021-02-13 15:16:55.1470  INFO - - CleanLogDay: 10
+2021-02-13 15:16:55.1620  INFO - - DRM useYn: False
+2021-02-13 15:16:55.1620  INFO - - DRM Path: 
+2021-02-13 15:16:55.1620  INFO - - DRM Result: 0
+2021-02-13 15:16:55.1620  INFO - - DRM Args: $Full_Path$,$Out_Full_Path$,$DRM_Type$
+2021-02-13 15:16:55.1620  INFO - ------------------------------------------
+2021-02-13 15:17:39.5472  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:17:39.5529  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-13 15:17:39.5529  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:17:39.5529  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-13 15:17:39.5529  INFO - User Name: o0_0o
+2021-02-13 15:17:39.5529  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:17:39.5694  INFO - - Bind IP: 0.0.0.0
+2021-02-13 15:17:39.5694  INFO - - HTTP Port: 12000
+2021-02-13 15:17:39.5694  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:17:39.5694  INFO - - Workspace Directory: C:\Data
+2021-02-13 15:17:39.5694  INFO - - SchedulerTime: 1,0
+2021-02-13 15:17:39.5694  INFO - - CleanWorkspaceSchedulerYn: True
+2021-02-13 15:17:39.5694  INFO - - CleanWorkspaceDay: 3
+2021-02-13 15:17:39.5854  INFO - - CleanLogSchedulerYn: True
+2021-02-13 15:17:39.5854  INFO - - CleanLogDay: 10
+2021-02-13 15:17:39.5854  INFO - - DRM useYn: False
+2021-02-13 15:17:39.5854  INFO - - DRM Path: 
+2021-02-13 15:17:39.5854  INFO - - DRM Result: 0
+2021-02-13 15:17:39.5854  INFO - - DRM Args: $Full_Path$,$Out_Full_Path$,$DRM_Type$
+2021-02-13 15:17:39.5854  INFO - ------------------------------------------
+2021-02-13 15:18:01.9478  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:18:01.9478  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-13 15:18:01.9478  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:18:01.9577  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-13 15:18:01.9577  INFO - User Name: o0_0o
+2021-02-13 15:18:01.9577  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:18:01.9947  INFO - - Bind IP: 0.0.0.0
+2021-02-13 15:18:01.9947  INFO - - HTTP Port: 12000
+2021-02-13 15:18:01.9947  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:18:01.9947  INFO - - Workspace Directory: C:\Data
+2021-02-13 15:18:02.0052  INFO - - SchedulerTime: 1,0
+2021-02-13 15:18:02.0052  INFO - - CleanWorkspaceSchedulerYn: False
+2021-02-13 15:18:02.0052  INFO - - CleanWorkspaceDay: 3
+2021-02-13 15:18:02.0052  INFO - - CleanLogSchedulerYn: False
+2021-02-13 15:18:02.0052  INFO - - CleanLogDay: 3
+2021-02-13 15:18:02.0303  INFO - - DRM useYn: False
+2021-02-13 15:18:02.0303  INFO - - DRM Path: 
+2021-02-13 15:18:02.0352  INFO - - DRM Result: 
+2021-02-13 15:18:02.0352  INFO - - DRM Args: 
+2021-02-13 15:18:02.0352  INFO - ------------------------------------------
+2021-02-13 15:18:20.9733  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:18:20.9733  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-13 15:18:20.9733  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:18:20.9733  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-13 15:18:20.9733  INFO - User Name: o0_0o
+2021-02-13 15:18:20.9882  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:18:21.0302  INFO - - Bind IP: 0.0.0.0
+2021-02-13 15:18:21.0363  INFO - - HTTP Port: 12000
+2021-02-13 15:18:21.0363  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:18:21.0363  INFO - - Workspace Directory: C:\Data
+2021-02-13 15:18:21.0363  INFO - - SchedulerTime: 1,0
+2021-02-13 15:18:21.0523  INFO - - CleanWorkspaceSchedulerYn: False
+2021-02-13 15:18:21.0523  INFO - - CleanWorkspaceDay: 3
+2021-02-13 15:18:21.0743  INFO - - CleanLogSchedulerYn: False
+2021-02-13 15:18:21.0743  INFO - - CleanLogDay: 3
+2021-02-13 15:18:21.0883  INFO - - DRM useYn: False
+2021-02-13 15:18:21.0883  INFO - - DRM Path: 
+2021-02-13 15:18:21.0883  INFO - - DRM Result: 
+2021-02-13 15:18:21.1002  INFO - - DRM Args: 
+2021-02-13 15:18:21.1002  INFO - ------------------------------------------
+2021-02-13 15:19:18.7085  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:19:18.7085  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-13 15:19:18.7085  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:19:18.7085  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-13 15:19:18.7085  INFO - User Name: o0_0o
+2021-02-13 15:19:18.7085  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:19:18.7603  INFO - - Bind IP: 0.0.0.0
+2021-02-13 15:19:18.7603  INFO - - HTTP Port: 12000
+2021-02-13 15:19:18.7723  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:19:18.7723  INFO - - Workspace Directory: C:\Data
+2021-02-13 15:19:18.7723  INFO - - SchedulerTime: 1,0
+2021-02-13 15:19:18.7723  INFO - - CleanWorkspaceSchedulerYn: False
+2021-02-13 15:19:18.7723  INFO - - CleanWorkspaceDay: 3
+2021-02-13 15:19:18.7863  INFO - - CleanLogSchedulerYn: False
+2021-02-13 15:19:18.7863  INFO - - CleanLogDay: 3
+2021-02-13 15:19:18.7863  INFO - - DRM useYn: False
+2021-02-13 15:19:18.7863  INFO - - DRM Path: 
+2021-02-13 15:19:18.7863  INFO - - DRM Result: 
+2021-02-13 15:19:18.8013  INFO - - DRM Args: 
+2021-02-13 15:19:18.8013  INFO - ------------------------------------------
+2021-02-13 15:20:25.9883  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:20:25.9883  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-13 15:20:25.9883  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:20:25.9883  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-13 15:20:25.9883  INFO - User Name: o0_0o
+2021-02-13 15:20:25.9883  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:20:26.0475  INFO - - Bind IP: 0.0.0.0
+2021-02-13 15:20:26.0515  INFO - - HTTP Port: 12000
+2021-02-13 15:20:26.0515  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:20:26.0515  INFO - - Workspace Directory: C:\Data
+2021-02-13 15:20:26.0515  INFO - - SchedulerTime: 1,0
+2021-02-13 15:20:26.0802  INFO - - CleanWorkspaceSchedulerYn: False
+2021-02-13 15:20:26.0849  INFO - - CleanWorkspaceDay: 3
+2021-02-13 15:20:26.0849  INFO - - CleanLogSchedulerYn: False
+2021-02-13 15:20:26.0849  INFO - - CleanLogDay: 3
+2021-02-13 15:20:26.0849  INFO - - DRM useYn: False
+2021-02-13 15:20:26.0849  INFO - - DRM Path: 
+2021-02-13 15:20:26.0849  INFO - - DRM Result: 
+2021-02-13 15:20:26.0977  INFO - - DRM Args: 
+2021-02-13 15:20:26.0977  INFO - ------------------------------------------
+2021-02-13 15:20:44.3335  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:20:44.3335  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-13 15:20:44.3335  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:20:44.3335  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-13 15:20:44.3335  INFO - User Name: o0_0o
+2021-02-13 15:20:44.3335  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:20:44.4182  INFO - - Bind IP: 0.0.0.0
+2021-02-13 15:20:44.4182  INFO - - HTTP Port: 12000
+2021-02-13 15:20:44.4182  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:20:44.4182  INFO - - Workspace Directory: C:\Data
+2021-02-13 15:20:44.4182  INFO - - SchedulerTime: 1,0
+2021-02-13 15:20:44.4182  INFO - - CleanWorkspaceSchedulerYn: False
+2021-02-13 15:20:44.4182  INFO - - CleanWorkspaceDay: 3
+2021-02-13 15:20:44.4182  INFO - - CleanLogSchedulerYn: False
+2021-02-13 15:20:44.4266  INFO - - CleanLogDay: 3
+2021-02-13 15:20:44.4266  INFO - - DRM useYn: False
+2021-02-13 15:20:44.4266  INFO - - DRM Path: 
+2021-02-13 15:20:44.4266  INFO - - DRM Result: 
+2021-02-13 15:20:44.4266  INFO - - DRM Args: 
+2021-02-13 15:20:44.4266  INFO - ------------------------------------------
+2021-02-13 15:20:58.1877  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:20:58.1921  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-13 15:20:58.1921  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:20:58.1921  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-13 15:20:58.1921  INFO - User Name: o0_0o
+2021-02-13 15:20:58.1921  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:20:58.2330  INFO - - Bind IP: 0.0.0.0
+2021-02-13 15:20:58.2330  INFO - - HTTP Port: 12000
+2021-02-13 15:20:58.2330  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:20:58.2390  INFO - - Workspace Directory: C:\Data
+2021-02-13 15:20:58.2390  INFO - - SchedulerTime: 1,0
+2021-02-13 15:20:58.2390  INFO - - CleanWorkspaceSchedulerYn: False
+2021-02-13 15:20:58.2390  INFO - - CleanWorkspaceDay: 3
+2021-02-13 15:20:58.2390  INFO - - CleanLogSchedulerYn: False
+2021-02-13 15:20:58.2390  INFO - - CleanLogDay: 3
+2021-02-13 15:20:58.2390  INFO - - DRM useYn: False
+2021-02-13 15:20:58.2541  INFO - - DRM Path: 
+2021-02-13 15:20:58.2541  INFO - - DRM Result: 
+2021-02-13 15:20:58.2541  INFO - - DRM Args: 
+2021-02-13 15:20:58.2541  INFO - ------------------------------------------
+2021-02-13 15:23:57.2326  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:23:57.2326  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-13 15:23:57.2383  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:23:57.2383  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-13 15:23:57.2383  INFO - User Name: o0_0o
+2021-02-13 15:23:57.2383  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:23:57.2828  INFO - - Bind IP: 0.0.0.0
+2021-02-13 15:23:57.2858  INFO - - HTTP Port: 12000
+2021-02-13 15:23:57.2858  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:23:57.2858  INFO - - Workspace Directory: C:\Data
+2021-02-13 15:23:57.2858  INFO - - SchedulerTime: 1,0
+2021-02-13 15:23:57.2858  INFO - - CleanWorkspaceSchedulerYn: False
+2021-02-13 15:23:57.2858  INFO - - CleanWorkspaceDay: 3
+2021-02-13 15:23:57.2858  INFO - - CleanLogSchedulerYn: False
+2021-02-13 15:23:57.2858  INFO - - CleanLogDay: 3
+2021-02-13 15:23:57.2858  INFO - - DRM useYn: False
+2021-02-13 15:23:57.3018  INFO - - DRM Path: 
+2021-02-13 15:23:57.3018  INFO - - DRM Result: 
+2021-02-13 15:23:57.3018  INFO - - DRM Args: 
+2021-02-13 15:23:57.3018  INFO - ------------------------------------------
+2021-02-13 15:31:29.6510  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:31:29.6510  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-13 15:31:29.6510  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:31:29.6510  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-13 15:31:29.6611  INFO - User Name: o0_0o
+2021-02-13 15:31:29.6611  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:31:29.7023  INFO - - Bind IP: 0.0.0.0
+2021-02-13 15:31:29.7073  INFO - - HTTP Port: 12000
+2021-02-13 15:31:29.7073  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:31:29.7073  INFO - - Workspace Directory: C:\Data
+2021-02-13 15:31:29.7073  INFO - - SchedulerTime: 1,0
+2021-02-13 15:31:29.7073  INFO - - CleanWorkspaceSchedulerYn: False
+2021-02-13 15:31:29.7073  INFO - - CleanWorkspaceDay: 3
+2021-02-13 15:31:29.7073  INFO - - CleanLogSchedulerYn: False
+2021-02-13 15:31:29.7073  INFO - - CleanLogDay: 3
+2021-02-13 15:31:29.7230  INFO - - DRM useYn: False
+2021-02-13 15:31:29.7230  INFO - - DRM Path: 
+2021-02-13 15:31:29.7230  INFO - - DRM Result: 
+2021-02-13 15:31:29.7230  INFO - - DRM Args: 
+2021-02-13 15:31:29.7230  INFO - ------------------------------------------
+2021-02-13 15:32:19.6610  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:32:19.6610  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-13 15:32:19.6610  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:32:19.6610  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-13 15:32:19.6610  INFO - User Name: o0_0o
+2021-02-13 15:32:19.6610  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:32:19.7195  INFO - - Bind IP: 0.0.0.0
+2021-02-13 15:32:19.7236  INFO - - HTTP Port: 12000
+2021-02-13 15:32:19.7236  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:32:19.7236  INFO - - Workspace Directory: C:\Data
+2021-02-13 15:32:19.7236  INFO - - SchedulerTime: 1,0
+2021-02-13 15:32:19.7236  INFO - - CleanWorkspaceSchedulerYn: False
+2021-02-13 15:32:19.7236  INFO - - CleanWorkspaceDay: 3
+2021-02-13 15:32:19.7236  INFO - - CleanLogSchedulerYn: False
+2021-02-13 15:32:19.7236  INFO - - CleanLogDay: 3
+2021-02-13 15:32:19.7407  INFO - - DRM useYn: False
+2021-02-13 15:32:19.7407  INFO - - DRM Path: 
+2021-02-13 15:32:19.7407  INFO - - DRM Result: 
+2021-02-13 15:32:19.7407  INFO - - DRM Args: 
+2021-02-13 15:32:19.7407  INFO - ------------------------------------------
+2021-02-13 15:34:49.2792  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:34:49.2792  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-13 15:34:49.2855  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:34:49.2855  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-13 15:34:49.2855  INFO - User Name: o0_0o
+2021-02-13 15:34:49.2855  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:34:49.3393  INFO - - Bind IP: 0.0.0.0
+2021-02-13 15:34:49.3393  INFO - - HTTP Port: 12000
+2021-02-13 15:34:49.3804  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:34:49.3804  INFO - - Workspace Directory: C:\Data
+2021-02-13 15:34:49.3804  INFO - - SchedulerTime: 1,0
+2021-02-13 15:34:49.3804  INFO - - CleanWorkspaceSchedulerYn: False
+2021-02-13 15:34:49.3804  INFO - - CleanWorkspaceDay: 3
+2021-02-13 15:34:49.3992  INFO - - CleanLogSchedulerYn: False
+2021-02-13 15:34:49.3992  INFO - - CleanLogDay: 3
+2021-02-13 15:34:49.3992  INFO - - DRM useYn: False
+2021-02-13 15:34:49.4108  INFO - - DRM Path: 
+2021-02-13 15:34:49.4108  INFO - - DRM Result: 
+2021-02-13 15:34:49.4108  INFO - - DRM Args: 
+2021-02-13 15:34:49.4108  INFO - ------------------------------------------
+2021-02-13 15:35:59.9933  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:35:59.9933  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-13 15:35:59.9933  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:36:00.0088  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-13 15:36:00.0088  INFO - User Name: o0_0o
+2021-02-13 15:36:00.0088  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:36:00.0532  INFO - - Bind IP: 0.0.0.0
+2021-02-13 15:36:00.0532  INFO - - HTTP Port: 12000
+2021-02-13 15:36:00.0532  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:36:00.0532  INFO - - Workspace Directory: C:\Data
+2021-02-13 15:36:00.0532  INFO - - SchedulerTime: 1,0
+2021-02-13 15:36:00.0682  INFO - - CleanWorkspaceSchedulerYn: False
+2021-02-13 15:36:00.0682  INFO - - CleanWorkspaceDay: 3
+2021-02-13 15:36:00.0682  INFO - - CleanLogSchedulerYn: False
+2021-02-13 15:36:00.0682  INFO - - CleanLogDay: 3
+2021-02-13 15:36:00.0682  INFO - - DRM useYn: False
+2021-02-13 15:36:00.0682  INFO - - DRM Path: 
+2021-02-13 15:36:00.0682  INFO - - DRM Result: 
+2021-02-13 15:36:00.0845  INFO - - DRM Args: 
+2021-02-13 15:36:00.0845  INFO - ------------------------------------------
+2021-02-13 15:36:17.9739  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:36:17.9739  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-13 15:36:17.9739  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:36:17.9739  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-13 15:36:17.9739  INFO - User Name: o0_0o
+2021-02-13 15:36:17.9739  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:36:17.9950  INFO - The configuration file is created in C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert_Server.ini
+2021-02-13 15:36:17.9950  INFO - - Bind IP: 0.0.0.0
+2021-02-13 15:36:17.9950  INFO - - HTTP Port: 12000
+2021-02-13 15:36:17.9950  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:36:18.0043  INFO - - Workspace Directory: C:\Data
+2021-02-13 15:36:18.0043  INFO - - SchedulerTime: 1,0
+2021-02-13 15:36:18.0043  INFO - - CleanWorkspaceSchedulerYn: False
+2021-02-13 15:36:18.0043  INFO - - CleanWorkspaceDay: 3
+2021-02-13 15:36:18.0043  INFO - - CleanLogSchedulerYn: False
+2021-02-13 15:36:18.0043  INFO - - CleanLogDay: 3
+2021-02-13 15:36:18.0043  INFO - - DRM useYn: False
+2021-02-13 15:36:18.0211  INFO - - DRM Path: 
+2021-02-13 15:36:18.0429  INFO - - DRM Result: 
+2021-02-13 15:36:18.0429  INFO - - DRM Args: 
+2021-02-13 15:36:18.0429  INFO - ------------------------------------------
+2021-02-13 15:36:48.1157  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:36:48.1157  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-13 15:36:48.1157  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:36:48.1157  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-13 15:36:48.1307  INFO - User Name: o0_0o
+2021-02-13 15:36:48.1307  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:36:48.1307  INFO - - Bind IP: 0.0.0.0
+2021-02-13 15:36:48.1455  INFO - - HTTP Port: 12000
+2021-02-13 15:36:48.1455  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:36:48.1455  INFO - - Workspace Directory: C:\Data
+2021-02-13 15:36:48.1455  INFO - - SchedulerTime: 1,0
+2021-02-13 15:36:48.1648  INFO - - CleanWorkspaceSchedulerYn: True
+2021-02-13 15:36:48.1648  INFO - - CleanWorkspaceDay: 3
+2021-02-13 15:36:48.1648  INFO - - CleanLogSchedulerYn: True
+2021-02-13 15:36:48.1648  INFO - - CleanLogDay: 10
+2021-02-13 15:36:48.1783  INFO - - DRM useYn: False
+2021-02-13 15:36:48.1783  INFO - - DRM Path: 
+2021-02-13 15:36:48.1934  INFO - - DRM Result: 0
+2021-02-13 15:36:48.1934  INFO - - DRM Args: $Full_Path$,$Out_Full_Path$,$DRM_Type$
+2021-02-13 15:36:48.1934  INFO - ------------------------------------------
+2021-02-13 15:37:00.5362  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:37:00.5362  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-13 15:37:00.5362  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:37:00.5362  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-13 15:37:00.5362  INFO - User Name: o0_0o
+2021-02-13 15:37:00.5362  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:37:00.5600  INFO - The configuration file is created in C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert_Server.ini
+2021-02-13 15:37:00.5600  INFO - - Bind IP: 0.0.0.0
+2021-02-13 15:37:00.5600  INFO - - HTTP Port: 12000
+2021-02-13 15:37:00.5600  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:37:00.5600  INFO - - Workspace Directory: C:\Data
+2021-02-13 15:37:00.5711  INFO - - SchedulerTime: 1,0
+2021-02-13 15:37:00.5711  INFO - - CleanWorkspaceSchedulerYn: False
+2021-02-13 15:37:00.5711  INFO - - CleanWorkspaceDay: 3
+2021-02-13 15:37:00.5711  INFO - - CleanLogSchedulerYn: False
+2021-02-13 15:37:00.5711  INFO - - CleanLogDay: 3
+2021-02-13 15:37:00.5711  INFO - - DRM useYn: False
+2021-02-13 15:37:00.5855  INFO - - DRM Path: 
+2021-02-13 15:37:00.5855  INFO - - DRM Result: 
+2021-02-13 15:37:00.5855  INFO - - DRM Args: 
+2021-02-13 15:37:00.5855  INFO - ------------------------------------------
+2021-02-13 15:38:14.6045  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:38:14.6045  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-13 15:38:14.6045  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:38:14.6045  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-13 15:38:14.6045  INFO - User Name: o0_0o
+2021-02-13 15:38:14.6137  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:38:14.6137  INFO - - Bind IP: 127.0.0.1
+2021-02-13 15:38:14.6137  INFO - - HTTP Port: 12300
+2021-02-13 15:38:14.6137  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:38:14.6137  INFO - - Workspace Directory: C:\Data
+2021-02-13 15:38:14.6137  INFO - - SchedulerTime: 3,0
+2021-02-13 15:38:14.6137  INFO - - CleanWorkspaceSchedulerYn: False
+2021-02-13 15:38:14.6137  INFO - - CleanWorkspaceDay: 5
+2021-02-13 15:38:14.6307  INFO - - CleanLogSchedulerYn: False
+2021-02-13 15:38:14.6307  INFO - - CleanLogDay: 7
+2021-02-13 15:38:14.6307  INFO - - DRM useYn: False
+2021-02-13 15:38:14.6307  INFO - - DRM Path: test
+2021-02-13 15:38:14.6307  INFO - - DRM Result: 1
+2021-02-13 15:38:14.6307  INFO - - DRM Args: $Full_Path$
+2021-02-13 15:38:14.6307  INFO - ------------------------------------------
+2021-02-13 15:38:48.0676  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:38:48.0676  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-13 15:38:48.0676  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:38:48.0676  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-13 15:38:48.0676  INFO - User Name: o0_0o
+2021-02-13 15:38:48.0676  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:38:48.0851  INFO - - Bind IP: 127.0.0.1
+2021-02-13 15:38:48.0851  INFO - - HTTP Port: 12300
+2021-02-13 15:38:48.0851  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-13 15:38:48.0851  INFO - - Workspace Directory: C:\Data\Test
+2021-02-13 15:38:48.0851  INFO - - SchedulerTime: 3,0
+2021-02-13 15:38:48.0851  INFO - - CleanWorkspaceSchedulerYn: False
+2021-02-13 15:38:48.0851  INFO - - CleanWorkspaceDay: 5
+2021-02-13 15:38:48.0851  INFO - - CleanLogSchedulerYn: False
+2021-02-13 15:38:48.0851  INFO - - CleanLogDay: 7
+2021-02-13 15:38:48.0851  INFO - - DRM useYn: False
+2021-02-13 15:38:48.0995  INFO - - DRM Path: test
+2021-02-13 15:38:48.0995  INFO - - DRM Result: 1
+2021-02-13 15:38:48.0995  INFO - - DRM Args: $Full_Path$
+2021-02-13 15:38:48.0995  INFO - ------------------------------------------
+2021-02-13 15:39:02.1918  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-13 15:39:02.1918  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-13 15:39:02.1918  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-13 15:39:02.1918  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-13 15:39:02.1918  INFO - User Name: o0_0o
+2021-02-13 15:39:02.1918  INFO - ------------ Parsing Ini File ------------
+2021-02-13 15:39:02.2119  INFO - - Bind IP: 127.0.0.1
+2021-02-13 15:39:02.2119  INFO - - HTTP Port: 12300
+2021-02-13 15:39:02.2119  INFO - - Client KEY: abcd
+2021-02-13 15:39:02.2119  INFO - - Workspace Directory: C:\Data\Test
+2021-02-13 15:39:02.2119  INFO - - SchedulerTime: 3,0
+2021-02-13 15:39:02.2119  INFO - - CleanWorkspaceSchedulerYn: False
+2021-02-13 15:39:02.2119  INFO - - CleanWorkspaceDay: 5
+2021-02-13 15:39:02.2247  INFO - - CleanLogSchedulerYn: False
+2021-02-13 15:39:02.2247  INFO - - CleanLogDay: 7
+2021-02-13 15:39:02.2247  INFO - - DRM useYn: False
+2021-02-13 15:39:02.2247  INFO - - DRM Path: test
+2021-02-13 15:39:02.2247  INFO - - DRM Result: 1
+2021-02-13 15:39:02.2247  INFO - - DRM Args: $Full_Path$
+2021-02-13 15:39:02.2247  INFO - ------------------------------------------
