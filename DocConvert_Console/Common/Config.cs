@@ -26,7 +26,7 @@ namespace DocConvert_Console.Common
         private string _Bind_IP = "0.0.0.0";
         private int _Socket_Port = 12000;
         private string _Client_KEY = "B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2";
-        private string _Workspace_Directory = "C:\\Data";
+        private string _Workspace_Directory = "C:\\Workspace";
 
         private string _SchedulerTime = "1,0";
         private bool _CleanWorkspaceSchedulerYn = false;
@@ -67,7 +67,7 @@ namespace DocConvert_Console.Common
             setting["Common"]["Bind IP"] = "0.0.0.0    ;바인드할 IP주소";
             setting["Common"]["Socket Port"] = "12000    ;HTTP 포트";
             setting["Common"]["Client KEY"] = "B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2     ;해당 클라이언트가 허용한 클라이언트인지 확인하는 문자열, 클라이언트와 동일하게 맞추면됨.";
-            setting["Common"]["Workspace Directory"] = "C:\\Data      ;작업폴더 실제 경로";
+            setting["Common"]["Workspace Directory"] = "C:\\Workspace      ;작업폴더 실제 경로";
 
             setting["Scheduler"]["SchedulerTime"] = "1,0       ;스케줄러 동작시간(매일) 24시간중 (시간,분)";
             setting["Scheduler"]["CleanWorkspaceSchedulerYn"] = "Y         ;작업공간 정리 스케줄러 사용 (Y:사용) (n:사용안함)";

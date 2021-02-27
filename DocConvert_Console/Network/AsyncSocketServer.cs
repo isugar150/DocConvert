@@ -1,6 +1,7 @@
 ﻿using DocConvert_Console.Common;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -87,7 +88,6 @@ namespace DocConvert_Console.Network
                     sb.Length = sb.Length - 2;
                     msg = sb.ToString();
                     JObject requestMsg = new JObject();
-                    JObject responseMsg = new JObject();
                     bool isjson = false;
 
                     try
@@ -112,18 +112,30 @@ namespace DocConvert_Console.Network
 
                     if (isjson)
                     {
+                        JObject responseMsg = new JObject();
+                        DateTime timeTaken = DateTime.Now;
                         try
                         {
                             LogMgr.Write("Received messages from " + remoteAddr.Address.ToString() + ":" + remoteAddr.Port.ToString() + "\r\n" + requestMsg.ToString(), LOG_LEVEL.DEBUG);
 
-                            DateTime timeTaken = DateTime.Now;
+                            string method = requestMsg["Method"]?.ToString().Trim() ?? ""; // 변환 메소드
+                            string key = requestMsg["KEY"]?.ToString().Trim() ?? "";  // 신뢰하는 클라이언트 확인.
+                            string fileName = requestMsg["FileName"]?.ToString().Trim() ?? "";  // 파일 이름
+                            string docPassword = requestMsg["DocPassword"]?.ToString().Trim() ?? "";  // 해당 파일 암호여부
+                            string drmUseYn = requestMsg["DRM_UseYn"]?.ToString().Trim() ?? "";  // DRM 사용 여부
+                            string drmType = requestMsg["DRM_Type"]?.ToString().Trim() ?? ""; // DRM 타입 
 
-                            // 문서변환 메소드
-                            responseMsg = new Flow.Document_Convert().docConvert(msg);
-
+                            // 문서 변환
+                            if (method.Equals("DocConvert"))
+                                responseMsg = new Flow.DocConvert()._DocConvert(fileName, docPassword, drmUseYn, drmType);
+                            else
+                            {
+                                responseMsg["ResultCode"] = define.INVALID_METHOD_ERROR.ToString();
+                                responseMsg["Message"] = "Invalid Method";
+                            }
 
                             TimeSpan curTime = DateTime.Now - timeTaken;
-                            LogMgr.Write(string.Format("작업 소요시간: {0}", curTime.ToString()), LOG_LEVEL.INFO);
+                            LogMgr.Write(string.Format("Processing time: {0}", curTime.ToString(@"ss\.fff")), LOG_LEVEL.DEBUG);
 
                             Send(responseMsg.ToString());
 
@@ -132,8 +144,20 @@ namespace DocConvert_Console.Network
                         }
                         catch (Exception e1)
                         {
-                            responseMsg["Msg"] = e1.Message;
+                            LogMgr.Write("ERROR CODE: " + define.UNDEFINE_ERROR.ToString(), ConsoleColor.Red, LOG_LEVEL.ERROR);
+                            LogMgr.Write("ERROR MESSAGE: " + e1.Message, ConsoleColor.Red, LOG_LEVEL.ERROR);
+                            if(LogMgr.getLogLevel("DocConvert_Console_Log").Equals("DEBUG"))
+                                LogMgr.Write("ERROR STACKTRACE\r\n" + e1.StackTrace, ConsoleColor.Red, LOG_LEVEL.ERROR);
+
+                            TimeSpan curTime = DateTime.Now - timeTaken;
+                            LogMgr.Write(string.Format("Processing time: {0}", curTime.ToString(@"ss\.fff")), LOG_LEVEL.DEBUG);
+
+                            responseMsg["ResultCode"] = define.UNDEFINE_ERROR.ToString();
+                            responseMsg["Message"] = e1.Message;
                             Send(responseMsg.ToString());
+
+                            socket.DisconnectAsync(this);
+                            return;
                         }
                     }
 
@@ -146,7 +170,7 @@ namespace DocConvert_Console.Network
             else
             {
                 // 접속이 끊겼다..
-                LogMgr.Write("Disconnected : (From:" + remoteAddr.Address.ToString() + ":" + remoteAddr.Port.ToString() + "Disconnected time: " + DateTime.Now.ToString(), LOG_LEVEL.INFO);
+                LogMgr.Write("Disconnected From:" + remoteAddr.Address.ToString() + ":" + remoteAddr.Port.ToString() + " Time: " + DateTime.Now.ToString(), LOG_LEVEL.INFO);
             }
         }
 

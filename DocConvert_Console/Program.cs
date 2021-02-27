@@ -4,6 +4,7 @@ using System.Threading;
 using DocConvert_Console.Common;
 using DocConvert_Core.IniLib;
 using Microsoft.Win32;
+using NLog;
 
 namespace DocConvert_Console
 {
@@ -14,7 +15,7 @@ namespace DocConvert_Console
         public static ManualResetEvent manualEvent = new ManualResetEvent(false);
 
         public static bool isHwpConverting = false;
-
+        
         static void Main(string[] args)
         {
             // 제품명 로그
@@ -40,6 +41,8 @@ namespace DocConvert_Console
             LogMgr.Write("OS Version: " + Environment.OSVersion.ToString(), ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("PC(Domain) Name: " + Environment.UserDomainName, ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("User Name: " + Environment.UserName, ConsoleColor.White, LOG_LEVEL.INFO);
+            LogMgr.Write("DocConvert_Core LogLevel: " + LogMgr.getLogLevel("DocConvert_Core_Log"), ConsoleColor.White, LOG_LEVEL.INFO);
+            LogMgr.Write("DocConvert_Console LogLevel: " + LogMgr.getLogLevel("DocConvert_Console_Log"), ConsoleColor.White, LOG_LEVEL.INFO);
             #region parse Ini File
             LogMgr.Write("------------ Parsing Ini File ------------", ConsoleColor.White, LOG_LEVEL.INFO);
             try
@@ -104,6 +107,21 @@ namespace DocConvert_Console
             }
 
             LogMgr.Write("------------------------------------------", ConsoleColor.White, LOG_LEVEL.INFO);
+            #endregion
+
+            #region Workspace 초기화
+            DirectoryInfo tmpDir = new DirectoryInfo(IniProperties.Workspace_Directory + @"\tmp");
+            DirectoryInfo dataDir = new DirectoryInfo(IniProperties.Workspace_Directory + @"\data");
+            if (!tmpDir.Exists)
+            {
+                tmpDir.Create();
+                LogMgr.Write("Created tmp Directory " + tmpDir.FullName, ConsoleColor.Yellow, LOG_LEVEL.INFO);
+            }
+            if (!dataDir.Exists)
+            {
+                dataDir.Create();
+                LogMgr.Write("Created data Directory " + dataDir.FullName, ConsoleColor.Yellow, LOG_LEVEL.INFO);
+            }
             #endregion
 
             #region init Socket Server

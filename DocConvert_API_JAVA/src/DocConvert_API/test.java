@@ -19,10 +19,10 @@ public class test {
             final JSONObject requestMsg = new JSONObject();
             requestMsg.put("KEY", "");
             requestMsg.put("Method", "DocConvert");
-            requestMsg.put("FileName", "test");
-            requestMsg.put("ConvertIMG", 2);
-            requestMsg.put("useCompression", false);
-            requestMsg.put("DocPassword", "");
+            requestMsg.put("FileName", "test.docx");
+            requestMsg.put("DocPassword", null);
+            requestMsg.put("DRM_UseYn", "n");
+            requestMsg.put("DRM_Type", "");
 
             writer.println(requestMsg);
 
