@@ -18,19 +18,43 @@ namespace DocConvert_Console.Common
     public class LogMgr
     {
         private static Logger logger = LogManager.GetLogger("DocConvert_Console_Log");
-        public static void Write(string text, ConsoleColor color, LOG_LEVEL logLevel)
+        public static void Write(string text, ConsoleColor color, LOG_LEVEL logLevel, bool noDate = false)
         {
+            #region build text
+            string consoleText = "";
+            if (logLevel == LOG_LEVEL.ERROR)
+            {
+                consoleText = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss") + " " + "[ERROR] " + text;
+            }
+            else if (logLevel == LOG_LEVEL.DEBUG)
+            {
+                consoleText = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss") + " " + "[DEBUG] " + text;
+            }
+            else if (logLevel == LOG_LEVEL.INFO)
+            {
+                consoleText = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss") + " " + "[INFO] " + text;
+            }
+            else if (logLevel == LOG_LEVEL.TRACE)
+            {
+                consoleText = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss") + " " + "[TRACE] " + text;
+            }
+            else if (logLevel == LOG_LEVEL.WARN)
+            {
+                consoleText = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss") + " " + "[WARN] " + text;
+            }
+            #endregion
             #region Console Log..
-            ConsoleColor originalColor = Console.ForegroundColor;
             Console.ForegroundColor = color;
 
-            Console.WriteLine(text);
+            if(noDate)
+                Console.WriteLine(text);
+            else
+                Console.WriteLine(consoleText);
             Console.Out.Flush();
 
-            Console.ForegroundColor = originalColor;
+            Console.ResetColor();
             #endregion
             #region NLog..
-
             if (logLevel == LOG_LEVEL.ERROR)
             {
                 logger.Error(text);
@@ -52,6 +76,19 @@ namespace DocConvert_Console.Common
                 logger.Warn(text);
             }
             #endregion
+        }
+
+        public static void Write(string text, LOG_LEVEL logLevel)
+        {
+            if(logLevel == LOG_LEVEL.ERROR)
+                Write(text, ConsoleColor.Red, logLevel);
+            else
+                Write(text, ConsoleColor.White, logLevel);
+        }
+
+        public static void Write(string text)
+        {
+            Write(text, ConsoleColor.White, LOG_LEVEL.DEBUG);
         }
     }
 }

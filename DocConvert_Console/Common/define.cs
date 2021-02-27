@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DocConvert_Console.define
+namespace DocConvert_Console
 {
     public static class define
     {

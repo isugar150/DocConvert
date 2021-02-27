@@ -5,7 +5,7 @@ namespace DocConvert_Console.Common
     internal interface iniproperties
     {
         string Bind_IP { get; set; }
-        int HTTP_Port { get; set; }
+        int Socket_Port { get; set; }
         string Client_KEY { get; set; }
         string Workspace_Directory { get; set; }
 
@@ -24,7 +24,7 @@ namespace DocConvert_Console.Common
     public class iniProperties : iniproperties
     {
         private string _Bind_IP = "0.0.0.0";
-        private int _HTTP_Port = 12000;
+        private int _Socket_Port = 12000;
         private string _Client_KEY = "B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2";
         private string _Workspace_Directory = "C:\\Data";
 
@@ -42,7 +42,7 @@ namespace DocConvert_Console.Common
 
 
         public string Bind_IP { get { return _Bind_IP; } set { _Bind_IP = value; } }
-        public int HTTP_Port { get { return _HTTP_Port; } set { _HTTP_Port = value; } }
+        public int Socket_Port { get { return _Socket_Port; } set { _Socket_Port = value; } }
         public string Client_KEY { get { return _Client_KEY; } set { _Client_KEY = value; } }
         public string Workspace_Directory { get { return _Workspace_Directory; } set { _Workspace_Directory = value; } }
 
@@ -65,7 +65,7 @@ namespace DocConvert_Console.Common
             IniFile setting = new IniFile();
 
             setting["Common"]["Bind IP"] = "0.0.0.0    ;바인드할 IP주소";
-            setting["Common"]["HTTP Port"] = "12000    ;HTTP 포트";
+            setting["Common"]["Socket Port"] = "12000    ;HTTP 포트";
             setting["Common"]["Client KEY"] = "B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2     ;해당 클라이언트가 허용한 클라이언트인지 확인하는 문자열, 클라이언트와 동일하게 맞추면됨.";
             setting["Common"]["Workspace Directory"] = "C:\\Data      ;작업폴더 실제 경로";
 

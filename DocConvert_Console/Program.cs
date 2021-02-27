@@ -1,14 +1,20 @@
 ﻿using System;
 using System.IO;
+using System.Threading;
 using DocConvert_Console.Common;
-using DocConvert_Console.define;
 using DocConvert_Core.IniLib;
+using Microsoft.Win32;
 
 namespace DocConvert_Console
 {
-    class Program
+    public class Program
     {
         public static iniProperties IniProperties = new iniProperties(); // Ini 설정값 변수
+
+        public static ManualResetEvent manualEvent = new ManualResetEvent(false);
+
+        public static bool isHwpConverting = false;
+
         static void Main(string[] args)
         {
             // 제품명 로그
@@ -25,9 +31,9 @@ namespace DocConvert_Console
           ____) |  __/ |   \ V /  __/ |                         
          |_____/ \___|_|    \_/ \___|_|  
 
-                ", ConsoleColor.Green, LOG_LEVEL.WARN);
+                ", ConsoleColor.Green, LOG_LEVEL.WARN, true);
             // 저작권 정보
-            LogMgr.Write("         Copyright© 2021. Jm's Corp. All rights reserved.\r\n\r\n", ConsoleColor.White, LOG_LEVEL.WARN);
+            LogMgr.Write("         Copyright© 2021. Jm's Corp. All rights reserved.\r\n\r\n", ConsoleColor.White, LOG_LEVEL.WARN, true);
             LogMgr.Write("Starting DocConvert Server..", ConsoleColor.White, LOG_LEVEL.WARN);
             LogMgr.Write("Program Directory: " + Environment.CurrentDirectory, ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write(".Net Framework Version: " + Environment.Version.ToString(), ConsoleColor.White, LOG_LEVEL.INFO);
@@ -43,7 +49,7 @@ namespace DocConvert_Console
                 {
                     pairs.Load(Environment.CurrentDirectory + "/DocConvert_Console.ini");
                     IniProperties.Bind_IP = pairs["Common"]["Bind IP"].ToString2().Trim();
-                    IniProperties.HTTP_Port = int.Parse(pairs["Common"]["HTTP Port"].ToString2().Trim());
+                    IniProperties.Socket_Port = int.Parse(pairs["Common"]["Socket Port"].ToString2().Trim());
                     IniProperties.Client_KEY = pairs["Common"]["Client KEY"].ToString2().Trim();
                     IniProperties.Workspace_Directory = pairs["Common"]["Workspace Directory"].ToString2().Trim();
 
@@ -65,13 +71,13 @@ namespace DocConvert_Console
                 }
             } catch (NullReferenceException e1)
             {
-                LogMgr.Write("ERROR CODE: " + define.define.PARSING_INI_ERROR.ToString(), ConsoleColor.Red, LOG_LEVEL.ERROR);
+                LogMgr.Write("ERROR CODE: " + define.PARSING_INI_ERROR.ToString(), ConsoleColor.Red, LOG_LEVEL.ERROR);
                 LogMgr.Write(e1.Message, ConsoleColor.Red, LOG_LEVEL.ERROR);
                 LogMgr.Write(e1.StackTrace, ConsoleColor.Red, LOG_LEVEL.ERROR);
                 LogMgr.Write("There is a problem with the config file and continues with default settings", ConsoleColor.Red, LOG_LEVEL.ERROR);
             } catch (Exception e1)
             {
-                LogMgr.Write("ERROR CODE: " + define.define.UNDEFINE_ERROR.ToString(), ConsoleColor.Red, LOG_LEVEL.ERROR);
+                LogMgr.Write("ERROR CODE: " + define.UNDEFINE_ERROR.ToString(), ConsoleColor.Red, LOG_LEVEL.ERROR);
                 LogMgr.Write(e1.Message, ConsoleColor.Red, LOG_LEVEL.ERROR);
                 LogMgr.Write(e1.StackTrace, ConsoleColor.Red, LOG_LEVEL.ERROR);
                 LogMgr.Write("There is a problem with the config file and continues with default settings", ConsoleColor.Red, LOG_LEVEL.ERROR);
@@ -79,7 +85,7 @@ namespace DocConvert_Console
 
             // 파싱한 설정 출력
             LogMgr.Write("- Bind IP: " + IniProperties.Bind_IP, ConsoleColor.White, LOG_LEVEL.INFO);
-            LogMgr.Write("- HTTP Port: " + IniProperties.HTTP_Port, ConsoleColor.White, LOG_LEVEL.INFO);
+            LogMgr.Write("- Socket Port: " + IniProperties.Socket_Port, ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("- Client KEY: " + IniProperties.Client_KEY, ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("- Workspace Directory: " + IniProperties.Workspace_Directory, ConsoleColor.White, LOG_LEVEL.INFO);
             
@@ -90,17 +96,49 @@ namespace DocConvert_Console
             LogMgr.Write("- CleanLogDay: " + IniProperties.CleanLogDay, ConsoleColor.White, LOG_LEVEL.INFO);
                           
             LogMgr.Write("- DRM useYn: " + IniProperties.DRM_useYn, ConsoleColor.White, LOG_LEVEL.INFO);
-            LogMgr.Write("- DRM Path: " + IniProperties.DRM_Path, ConsoleColor.White, LOG_LEVEL.INFO);
-            LogMgr.Write("- DRM Result: " + IniProperties.DRM_Result, ConsoleColor.White, LOG_LEVEL.INFO);
-            LogMgr.Write("- DRM Args: " + IniProperties.DRM_Args, ConsoleColor.White, LOG_LEVEL.INFO);
+            if (IniProperties.DRM_useYn)
+            {
+                LogMgr.Write("- DRM Path: " + IniProperties.DRM_Path, ConsoleColor.White, LOG_LEVEL.INFO);
+                LogMgr.Write("- DRM Result: " + IniProperties.DRM_Result, ConsoleColor.White, LOG_LEVEL.INFO);
+                LogMgr.Write("- DRM Args: " + IniProperties.DRM_Args, ConsoleColor.White, LOG_LEVEL.INFO);
+            }
 
             LogMgr.Write("------------------------------------------", ConsoleColor.White, LOG_LEVEL.INFO);
             #endregion
 
-            LogMgr.Write("DocConvert Server Started", ConsoleColor.White, LOG_LEVEL.WARN);
+            #region init Socket Server
+            Thread socket_Thread = new Thread(() =>
+            {
+                new Network.AsyncSocketServer(IniProperties.Bind_IP, IniProperties.Socket_Port);
+            });
+            socket_Thread.Start();
+            LogMgr.Write("Socket Server Listen On IP: " + IniProperties.Bind_IP + " PORT: " + IniProperties.Socket_Port, ConsoleColor.Green, LOG_LEVEL.WARN);
+            #endregion
 
-            //콘솔 안꺼지게
-            Console.ReadKey();
+            #region 한글 DLL 레지스트리 등록
+            if (File.Exists(Environment.CurrentDirectory + @"\FilePathCheckerModuleExample.dll"))
+            {
+                RegistryKey regKey = Registry.CurrentUser.CreateSubKey(@"Software\HNC\HwpCtrl\Modules", RegistryKeyPermissionCheck.ReadWriteSubTree);
+                LogMgr.Write("한글 DLL을 레지스트리에 등록하였습니다.", LOG_LEVEL.INFO);
+            }
+            else
+            {
+                LogMgr.Write("실행한 경로 내에 한글 DLL이 존재하지 않습니다.", LOG_LEVEL.ERROR);
+            }
+            #endregion
+
+            LogMgr.Write("DocConvert Server Started in " + DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss"), ConsoleColor.Green, LOG_LEVEL.WARN);
+
+
+            Console.WriteLine("Press the exit key to exit.");
+            while (true)
+            {
+                string k = Console.ReadLine();
+                if ("exit".Equals(k, StringComparison.OrdinalIgnoreCase))
+                {
+                    break;
+                }
+            }
         }
     }
 }
