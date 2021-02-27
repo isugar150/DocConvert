@@ -122,17 +122,20 @@ namespace DocConvert_Console.Network
                             string key = requestMsg["KEY"]?.ToString().Trim() ?? "";  // 신뢰하는 클라이언트 확인.
                             string fileName = requestMsg["FileName"]?.ToString().Trim() ?? "";  // 파일 이름
                             string docPassword = requestMsg["DocPassword"]?.ToString().Trim() ?? "";  // 해당 파일 암호여부
+                            int convertImg = int.Parse(requestMsg["ConvertImg"]?.ToString().Trim() ?? "0");  // 이미지 변환 여부 0:변환 안함, 1:jpeg, 2:png, 3:bmp
                             string drmUseYn = requestMsg["DRM_UseYn"]?.ToString().Trim() ?? "";  // DRM 사용 여부
                             string drmType = requestMsg["DRM_Type"]?.ToString().Trim() ?? ""; // DRM 타입 
 
                             // 문서 변환
                             if (method.Equals("DocConvert"))
-                                responseMsg = new Flow.DocConvert()._DocConvert(fileName, docPassword, drmUseYn, drmType);
+                                responseMsg = new Flow.DocConvert()._DocConvert(fileName, docPassword, convertImg, drmUseYn, drmType);
                             else
                             {
                                 responseMsg["ResultCode"] = define.INVALID_METHOD_ERROR.ToString();
                                 responseMsg["Message"] = "Invalid Method";
                             }
+
+                            LogMgr.Write("Response messages to " + remoteAddr.Address.ToString() + ":" + remoteAddr.Port.ToString() + "\r\n" + responseMsg.ToString(), LOG_LEVEL.DEBUG);
 
                             TimeSpan curTime = DateTime.Now - timeTaken;
                             LogMgr.Write(string.Format("Processing time: {0}", curTime.ToString(@"ss\.fff")), LOG_LEVEL.DEBUG);

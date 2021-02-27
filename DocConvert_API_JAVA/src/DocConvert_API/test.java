@@ -8,7 +8,7 @@ public class test {
     public static void main(String args[]){
         try {
             Socket socket = new Socket("localhost", 12000);
-            socket.setSoTimeout(30000);
+            socket.setSoTimeout(60000);
             OutputStream output = socket.getOutputStream();
             String realStr = "";
             byte[] data = realStr.getBytes(); //getBytes() 메서드를 사용 해 문자열을 Byte로 바꿔준다
@@ -19,7 +19,8 @@ public class test {
             final JSONObject requestMsg = new JSONObject();
             requestMsg.put("KEY", "");
             requestMsg.put("Method", "DocConvert");
-            requestMsg.put("FileName", "test.docx");
+            requestMsg.put("FileName", "test.xlsx");
+            requestMsg.put("ConvertImg", 0);
             requestMsg.put("DocPassword", null);
             requestMsg.put("DRM_UseYn", "n");
             requestMsg.put("DRM_Type", "");

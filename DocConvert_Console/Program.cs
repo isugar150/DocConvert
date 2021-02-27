@@ -6,6 +6,10 @@ using DocConvert_Core.IniLib;
 using Microsoft.Win32;
 using NLog;
 
+//TODO 파일 관리 스케줄러 만들어야됨.
+//TODO DRM 사용관련 업데이트해야함.
+
+
 namespace DocConvert_Console
 {
     public class Program
@@ -32,9 +36,9 @@ namespace DocConvert_Console
           ____) |  __/ |   \ V /  __/ |                         
          |_____/ \___|_|    \_/ \___|_|  
 
-                ", ConsoleColor.Green, LOG_LEVEL.WARN, true);
+                ", ConsoleColor.Green, LOG_LEVEL.FATAL, true);
             // 저작권 정보
-            LogMgr.Write("         Copyright© 2021. Jm's Corp. All rights reserved.\r\n\r\n", ConsoleColor.White, LOG_LEVEL.WARN, true);
+            LogMgr.Write("         Copyright© 2021. Jm's Corp. All rights reserved.\r\n\r\n", ConsoleColor.White, LOG_LEVEL.FATAL, true);
             LogMgr.Write("Starting DocConvert Server..", ConsoleColor.White, LOG_LEVEL.WARN);
             LogMgr.Write("Program Directory: " + Environment.CurrentDirectory, ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write(".Net Framework Version: " + Environment.Version.ToString(), ConsoleColor.White, LOG_LEVEL.INFO);
@@ -137,6 +141,7 @@ namespace DocConvert_Console
             if (File.Exists(Environment.CurrentDirectory + @"\FilePathCheckerModuleExample.dll"))
             {
                 RegistryKey regKey = Registry.CurrentUser.CreateSubKey(@"Software\HNC\HwpCtrl\Modules", RegistryKeyPermissionCheck.ReadWriteSubTree);
+                regKey.SetValue("FilePathCheckerModuleExample", Environment.CurrentDirectory + @"\FilePathCheckerModuleExample.dll", RegistryValueKind.String);
                 LogMgr.Write("Hangul DLL has been registered in the registry.", LOG_LEVEL.INFO);
             }
             else

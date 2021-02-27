@@ -13,7 +13,8 @@ namespace DocConvert_Console.Common
         DEBUG,
         INFO,
         WARN,
-        ERROR
+        ERROR,
+        FATAL
     }
     public class LogMgr
     {
@@ -33,7 +34,11 @@ namespace DocConvert_Console.Common
         {
             #region build text
             string consoleText = "";
-            if (logLevel == LOG_LEVEL.ERROR)
+            if (logLevel == LOG_LEVEL.FATAL)
+            {
+                consoleText = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss") + " " + "[FATAL] " + text;
+            }
+            else if(logLevel == LOG_LEVEL.ERROR)
             {
                 consoleText = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss") + " " + "[ERROR] " + text;
             }
@@ -66,7 +71,11 @@ namespace DocConvert_Console.Common
             Console.ResetColor();
             #endregion
             #region NLog..
-            if (logLevel == LOG_LEVEL.ERROR)
+            if (logLevel == LOG_LEVEL.FATAL)
+            {
+                consoleLogger.Fatal(text);
+            }
+            else if (logLevel == LOG_LEVEL.ERROR)
             {
                 consoleLogger.Error(text);
             }
