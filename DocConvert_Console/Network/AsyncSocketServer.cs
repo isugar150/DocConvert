@@ -1,4 +1,5 @@
 ﻿using DocConvert_Console.Common;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -61,7 +62,7 @@ namespace DocConvert_Console.Network
             // 접속 환영 메시지
             remoteAddr = (IPEndPoint)socket.RemoteEndPoint;
             LogMgr.Write("Connect Client From: " + remoteAddr.Address.ToString() + ":" + remoteAddr.Port.ToString() + "  Connection time: " + DateTime.Now.ToString(), LOG_LEVEL.INFO);
-            this.Send("Welcome DocConvert server!\r\n>");
+            this.Send("Welcome DocConvert server!\r\n");
         }
 
 
@@ -85,40 +86,57 @@ namespace DocConvert_Console.Network
                     // 개행은 없애고..
                     sb.Length = sb.Length - 2;
                     msg = sb.ToString();
-
-                    LogMgr.Write("Received messages from " + remoteAddr.Address.ToString() + ":" + remoteAddr.Port.ToString() + "\r\n" + msg, LOG_LEVEL.DEBUG);
-                    // Client로 Echo를 보낸다.
-
+                    JObject requestMsg = new JObject();
                     JObject responseMsg = new JObject();
+                    bool isjson = false;
+
                     try
                     {
-                        DateTime timeTaken = DateTime.Now;
-
-                        // 문서변환 메소드
-                        responseMsg = new Flow.Document_Convert().docConvert(msg);
-
-
-                        TimeSpan curTime = DateTime.Now - timeTaken;
-                        LogMgr.Write(string.Format("작업 소요시간: {0}", curTime.ToString()), LOG_LEVEL.INFO);
-
-                        Send(responseMsg.ToString());
-
-                        LogMgr.Write("[WebSocket] 클라이언트와 연결을 해제함.", LOG_LEVEL.INFO);
+                        requestMsg = JObject.Parse(msg);
+                        isjson = true;
                     }
-                    catch (Exception e1)
+                    catch (JsonReaderException)
                     {
-                        responseMsg["Msg"] = e1.Message;
+                        LogMgr.Write("Received messages from " + remoteAddr.Address.ToString() + ":" + remoteAddr.Port.ToString() + "\r\n" + msg, LOG_LEVEL.DEBUG);
+
+                        Send(msg + "\r\n");
+
+                        // 만약 메시지가 exit이면 접속을 끊는다.
+                        if ("exit".Equals(msg, StringComparison.OrdinalIgnoreCase))
+                        {
+                            // 접속을 중단한다.
+                            socket.DisconnectAsync(this);
+                            return;
+                        }
                     }
 
-                    // 만약 메시지가 exit이면 접속을 끊는다.
-                    if ("exit".Equals(msg, StringComparison.OrdinalIgnoreCase))
+                    if (isjson)
                     {
-                        // 접속 종료 메시지
-                        LogMgr.Write("Disconnected : (From:" + remoteAddr.Address.ToString() + ":" + remoteAddr.Port.ToString() + "Disconnected time: " + DateTime.Now.ToString() + " Token: " + this.UserToken, LOG_LEVEL.INFO);
-                        // 접속을 중단한다.
-                        socket.DisconnectAsync(this);
-                        return;
+                        try
+                        {
+                            LogMgr.Write("Received messages from " + remoteAddr.Address.ToString() + ":" + remoteAddr.Port.ToString() + "\r\n" + requestMsg.ToString(), LOG_LEVEL.DEBUG);
+
+                            DateTime timeTaken = DateTime.Now;
+
+                            // 문서변환 메소드
+                            responseMsg = new Flow.Document_Convert().docConvert(msg);
+
+
+                            TimeSpan curTime = DateTime.Now - timeTaken;
+                            LogMgr.Write(string.Format("작업 소요시간: {0}", curTime.ToString()), LOG_LEVEL.INFO);
+
+                            Send(responseMsg.ToString());
+
+                            socket.DisconnectAsync(this);
+                            return;
+                        }
+                        catch (Exception e1)
+                        {
+                            responseMsg["Msg"] = e1.Message;
+                            Send(responseMsg.ToString());
+                        }
                     }
+
                     // 버퍼를 비운다.
                     sb.Clear();
                 }
@@ -128,7 +146,7 @@ namespace DocConvert_Console.Network
             else
             {
                 // 접속이 끊겼다..
-                LogMgr.Write("Disconnected : (From:" + remoteAddr.Address.ToString() + ":" + remoteAddr.Port.ToString() + "Disconnected time: " + DateTime.Now.ToString() + " Token: " + this.UserToken, LOG_LEVEL.INFO);
+                LogMgr.Write("Disconnected : (From:" + remoteAddr.Address.ToString() + ":" + remoteAddr.Port.ToString() + "Disconnected time: " + DateTime.Now.ToString(), LOG_LEVEL.INFO);
             }
         }
 

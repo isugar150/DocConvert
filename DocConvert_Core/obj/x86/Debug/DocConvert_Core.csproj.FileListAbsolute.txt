@@ -41,8 +41,6 @@ D:\sources\DocConvert\bin\x86\Debug\NLog.config
 D:\sources\DocConvert\bin\x86\Debug\DocConvert_Core.dll.config
 D:\sources\DocConvert\bin\x86\Debug\DocConvert_Core.dll
 D:\sources\DocConvert\bin\x86\Debug\DocConvert_Core.pdb
-C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Core\bin\x86\Debug\phantomjs.exe
-C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Core\bin\x86\Debug\rasterize.js
 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Core\bin\x86\Debug\Utility\Office Uninstall v1.8.2.exe
 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Core\bin\x86\Debug\NLog.config
 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Core\bin\x86\Debug\FilePathCheckerModuleExample.dll
@@ -84,3 +82,4 @@ C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Core\obj\x86\Debug\DocConv
 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Core\obj\x86\Debug\DocConvert_Core.csproj.CopyComplete
 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Core\obj\x86\Debug\DocConvert_Core.dll
 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Core\obj\x86\Debug\DocConvert_Core.pdb
+C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Core\obj\x86\Debug\DocConvert_Core.csprojAssemblyReference.cache
