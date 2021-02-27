@@ -10,7 +10,7 @@ namespace DocConvert_Core.HWPLib
 {
     public class HWPConvert_Core
     {
-        private static Logger logger = LogManager.GetLogger("DocConvert_Engine_Log");
+        private static Logger logger = LogManager.GetLogger("DocConvert_Core_Log");
         /// <summary>
         /// 한글 문서를 PDF로 변환합니다.
         /// </summary>
@@ -28,11 +28,10 @@ namespace DocConvert_Core.HWPLib
             try
             {
                 LockFile.UnLock_File(FilePath);
-                logger.Info("파일 언락 성공!");
             }
             catch (Exception e1)
             {
-                logger.Info("파일 언락 실패! 자세한내용 로그 참고");
+                logger.Info("File unlock failed! See log for details");
                 logger.Error(e1.Message);
             }
             #endregion
@@ -62,8 +61,8 @@ namespace DocConvert_Core.HWPLib
                         catch (Exception e1)
                         {
                             returnValue.PageCount = -1;
-                            logger.Error("페이지 카운트 가져오는중 오류발생");
-                            logger.Error("오류내용: " + e1.Message);
+                            logger.Error("Error fetching page count");
+                            logger.Error("Error detail: " + e1.Message);
                         }
                     }
                     #endregion
@@ -74,13 +73,13 @@ namespace DocConvert_Core.HWPLib
                     axHwpCtrl.Clear(1);
                     #endregion
                     returnValue.isSuccess = true;
-                    returnValue.Message = "변환에 성공하였습니다.";
+                    returnValue.Message = "Conversion was successful.";
                     return returnValue;
                 }
                 else
                 {
                     returnValue.isSuccess = false;
-                    returnValue.Message = "문서 변환에 실패하였습니다. (알수없는 오류)";
+                    returnValue.Message = "Conversion failure (Unknown error)";
                     return returnValue;
                 }
                 #endregion
@@ -90,7 +89,7 @@ namespace DocConvert_Core.HWPLib
             {
                 logger.Error("======= Method: " + MethodBase.GetCurrentMethod().Name + " =======");
                 logger.Error(new StackTrace(e1, true).ToString());
-                logger.Error("변환 실패: " + e1.Message);
+                logger.Error("Image conversion failed. " + e1.Message);
                 logger.Error("================ End ================");
                 try
                 {
@@ -99,7 +98,7 @@ namespace DocConvert_Core.HWPLib
                 catch (Exception)
                 {
                     returnValue.isSuccess = false;
-                    returnValue.Message = "문서 변환에 실패하였습니다. (변환중 다른요청이 들어왔습니다.)";
+                    returnValue.Message = "Document conversion failed. (Another request came in during conversion.)";
                     return returnValue;
                 }
             }

@@ -86,7 +86,7 @@ namespace DocConvert_Console.Flow
                     if (createDirectory.Exists)
                     {
                         createDirectory.Delete(true);
-                        LogMgr.Write("다음 폴더가 이미 존재해서 삭제 후 다시만듬: " + createDirectory.ToString());
+                        LogMgr.Write("The following folders exist and are deleted and recreated. " + createDirectory.ToString());
                     }
 
                     createDirectory.Create();
@@ -98,7 +98,7 @@ namespace DocConvert_Console.Flow
                     }
                     catch (Exception e1)
                     {
-                        LogMgr.Write("파일 언락 실패! 자세한내용 로그 참고");
+                        LogMgr.Write("File unlock failed! See log for details");
                         LogMgr.Write(e1.Message);
                     }
                     #endregion
@@ -107,13 +107,13 @@ namespace DocConvert_Console.Flow
                     if (moveFile.Exists)
                     {
                         moveFile.MoveTo(fileFullPath);
-                        LogMgr.Write(tmpPath.ToString() + " 파일을 " + fileFullPath + "로 이동.");
+                        LogMgr.Write(tmpPath.ToString() + " Move files to " + fileFullPath);
                     }
 
                     // DRM 변환
                     bool DRM_useYn = Program.IniProperties.DRM_useYn;
 
-                    LogMgr.Write("DRM 사용여부: " + DRM_useYn);
+                    LogMgr.Write("use DRM: " + DRM_useYn);
                     // DRM 사용 여부
                     if (DRM_useYn && req_DrmUseYn.Equals("True"))
                     {
@@ -126,7 +126,7 @@ namespace DocConvert_Console.Flow
 
                         if (decFile.Exists && req_DrmUseYn.Equals("True"))
                         {
-                            LogMgr.Write("DRM 파일 이름 변경 ==> " + drmFile.FullName);
+                            LogMgr.Write("DRM file name change ==> " + drmFile.FullName);
                             File.Move(decFile.FullName, drmFile.FullName);
                         }
 
@@ -164,13 +164,13 @@ namespace DocConvert_Console.Flow
                         LogMgr.Write("DRM Result ===> " + result);
 
                         if (result.Equals(Program.IniProperties.DRM_Result))
-                            LogMgr.Write("DRM 변환 성공 !!");
+                            LogMgr.Write("DRM decryption success!");
                         else
                         {
-                            LogMgr.Write("DRM 변환 실패");
+                            LogMgr.Write("DRM decryption failed!");
                             res_FileData = null;
                             res_isSuccess = false;
-                            res_Message = "DRM 변환 실패 >> DRM Result: " + result;
+                            res_Message = "DRM decryption failed! >> DRM Result: " + result;
 
                             goto error;
                         }
@@ -213,7 +213,7 @@ namespace DocConvert_Console.Flow
                         {
                             ReturnValue pdfreturnValue = new ReturnValue();
                             pdfreturnValue.isSuccess = true;
-                            pdfreturnValue.Message = "PDF파일은 변환할 필요가 없습니다.";
+                            pdfreturnValue.Message = "There is no need to convert pdf files.";
                             pdfreturnValue.PageCount = ConvertImg.pdfPageCount(fileFullPath);
                             status = pdfreturnValue;
                         }
@@ -222,7 +222,7 @@ namespace DocConvert_Console.Flow
                     {
                         res_FileData = null;
                         res_isSuccess = false;
-                        res_Message = "지원포맷 아님. 파싱한 확장자: " + Path.GetExtension(fileFullPath);
+                        res_Message = "Not supported format. Parsed extension: " + Path.GetExtension(fileFullPath);
                         res_Method = req_Method;
 
                         goto error;
@@ -303,7 +303,7 @@ namespace DocConvert_Console.Flow
                 {
                     res_FileData = null;
                     res_isSuccess = false;
-                    res_Message = "메소드가 유효하지 않습니다.";
+                    res_Message = "Method is not valid.";
                 }
 
             error:
@@ -316,10 +316,10 @@ namespace DocConvert_Console.Flow
             }
             catch (Exception e1)
             {
-                LogMgr.Write("변환중 오류발생 자세한 내용은 오류로그 참고", LOG_LEVEL.ERROR);
+                LogMgr.Write("An error occurred during document conversion. See the error log for details.", LOG_LEVEL.ERROR);
                 LogMgr.Write("==================== Method: " + MethodBase.GetCurrentMethod().Name + " ====================", LOG_LEVEL.ERROR);
                 LogMgr.Write(new StackTrace(e1, true).ToString(), LOG_LEVEL.ERROR);
-                LogMgr.Write("변환 실패: " + e1.Message, LOG_LEVEL.ERROR);
+                LogMgr.Write("convert failure: " + e1.Message, LOG_LEVEL.ERROR);
                 LogMgr.Write("==================== End ====================", LOG_LEVEL.ERROR);
                 responseMsg["isSuccess"] = false;
                 responseMsg["msg"] = e1.Message;

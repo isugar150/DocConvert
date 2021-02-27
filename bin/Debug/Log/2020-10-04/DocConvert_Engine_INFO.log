@@ -1,8 +1,0 @@
-2020-10-04 23:42:35.6090  INFO - ==================== Start ====================
-2020-10-04 23:42:35.6349  INFO - Method: WordSaveAs, FilePath: C:\Users\JMKIM\Desktop\새 Microsoft Word 문서.docx, outPath: C:\Users\JMKIM\Desktop\새 Microsoft Word 문서.pdf, docPassword: 
-2020-10-04 23:42:38.9696  INFO - 변환 성공
-2020-10-04 23:42:39.0265  INFO - ==================== End ====================
-2020-10-04 23:42:39.0394  INFO - ==================== Start ====================
-2020-10-04 23:42:39.0394  INFO - Method: PDFtoPng, FilePath: C:\Users\JMKIM\Desktop\새 Microsoft Word 문서.pdf, outPath: C:\Users\JMKIM\Desktop\새 Microsoft Word 문서\
-2020-10-04 23:42:39.1402  INFO - 이미지 변환 성공!
-2020-10-04 23:42:39.1402  INFO - ==================== End ====================

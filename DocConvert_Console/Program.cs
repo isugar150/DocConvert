@@ -119,11 +119,11 @@ namespace DocConvert_Console
             if (File.Exists(Environment.CurrentDirectory + @"\FilePathCheckerModuleExample.dll"))
             {
                 RegistryKey regKey = Registry.CurrentUser.CreateSubKey(@"Software\HNC\HwpCtrl\Modules", RegistryKeyPermissionCheck.ReadWriteSubTree);
-                LogMgr.Write("한글 DLL을 레지스트리에 등록하였습니다.", LOG_LEVEL.INFO);
+                LogMgr.Write("Hangul DLL has been registered in the registry.", LOG_LEVEL.INFO);
             }
             else
             {
-                LogMgr.Write("실행한 경로 내에 한글 DLL이 존재하지 않습니다.", LOG_LEVEL.ERROR);
+                LogMgr.Write("Hangul DLL does not exist in the executed path.", LOG_LEVEL.ERROR);
             }
             #endregion
 

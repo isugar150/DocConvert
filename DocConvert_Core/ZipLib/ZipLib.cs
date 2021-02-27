@@ -10,7 +10,7 @@ namespace DocConvert_Core.ZipLib
 {
     public class ZipLib
     {
-        private static Logger logger = LogManager.GetLogger("DocConvert_Engine_Log");
+        private static Logger logger = LogManager.GetLogger("DocConvert_Core_Log");
         public static bool CreateZipFile(string[] filenames, string outPath)
         {
             try {
@@ -48,7 +48,7 @@ namespace DocConvert_Core.ZipLib
 
                 logger.Error("======= Method: " + MethodBase.GetCurrentMethod().Name + " =======");
                 logger.Error(new StackTrace(e1, true).ToString());
-                logger.Error("변환 실패: " + e1.Message);
+                logger.Error("Conversion failure: " + e1.Message);
                 logger.Error("================ End ================");
                 return false;
             }
@@ -103,7 +103,7 @@ namespace DocConvert_Core.ZipLib
 
                 logger.Error("======= Method: " + MethodBase.GetCurrentMethod().Name + " =======");
                 logger.Error(new StackTrace(e1, true).ToString());
-                logger.Error("변환 실패: " + e1.Message);
+                logger.Error("Conversion failure: " + e1.Message);
                 logger.Error("================ End ================");
                 return false;
             }

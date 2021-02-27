@@ -15,7 +15,7 @@ namespace DocConvert_Core.OfficeLib
 {
     public class PowerPointConvert_Core
     {
-        private static Logger logger = LogManager.GetLogger("DocConvert_Engine_Log");
+        private static Logger logger = LogManager.GetLogger("DocConvert_Core_Log");
         /// <summary>
         /// 워드파일을 PDF로 변환
         /// </summary>
@@ -35,7 +35,7 @@ namespace DocConvert_Core.OfficeLib
             }
             catch (Exception e1)
             {
-                logger.Info("파일 언락 실패! 자세한내용 로그 참고");
+                logger.Info("File unlock failed! See log for details");
                 logger.Error(e1.Message);
             }
             #endregion
@@ -158,16 +158,16 @@ namespace DocConvert_Core.OfficeLib
                 #region 문서 닫기
                 doc.Close();
                 #endregion
-                logger.Info("변환 성공");
+                logger.Info("Conversion success");
                 returnValue.isSuccess = true;
-                returnValue.Message = "변환에 성공하였습니다.";
+                returnValue.Message = "Conversion was successful.";
                 return returnValue;
             }
             catch (Exception e1)
             {
                 logger.Error("======= Method: " + MethodBase.GetCurrentMethod().Name + " =======");
                 logger.Error(new StackTrace(e1, true).ToString());
-                logger.Error("변환 실패: " + e1.Message);
+                logger.Error("Conversion failure: " + e1.Message);
                 logger.Error("================ End ================");
                 throw e1;
             }

@@ -50,7 +50,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <PlatformTarget>x86</PlatformTarget>
-    <OutputPath>bin\x86\Debug\</OutputPath>
+    <OutputPath>..\bin\Debug\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <PlatformTarget>x86</PlatformTarget>
@@ -149,9 +149,6 @@
     <Content Include="pdfium_x64\pdfium.dll" />
     <Content Include="pdfium.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Utility\Office Uninstall v1.8.2.exe">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

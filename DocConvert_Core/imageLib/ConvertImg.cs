@@ -12,7 +12,7 @@ namespace DocConvert_Core.imageLib
 {
     public class ConvertImg
     {
-        private static Logger logger = LogManager.GetLogger("DocConvert_Engine_Log");
+        private static Logger logger = LogManager.GetLogger("DocConvert_Core_Log");
 
         // 참고문서: https://github.com/pvginkel/PdfiumViewer
         public static ReturnValue PDFtoJpeg(string SourcePDF, string outPath)
@@ -73,23 +73,23 @@ namespace DocConvert_Core.imageLib
                 {
                     returnValue.PageCount = pageCount;
                     returnValue.isSuccess = true;
-                    returnValue.Message = "이미지 변환에 성공하였습니다.";
-                    logger.Info("이미지 변환 성공!");
+                    returnValue.Message = "Image conversion was successful.";
+                    logger.Info("Image conversion was successful.");
                 }
                 else
                 {
                     returnValue.PageCount = pageCount;
                     returnValue.isSuccess = false;
-                    returnValue.Message = "이미지 변환에 실패하였습니다.";
-                    logger.Error("이미지 변환 실패!");
-                    new IOException("이미지 변환에 실패하였습니다.");
+                    returnValue.Message = "Image conversion failed.";
+                    logger.Error("Image conversion failed.");
+                    new IOException("Image conversion failed.");
                 }
             }
             catch (Exception e1)
             {
                 logger.Error("======= Method: " + MethodBase.GetCurrentMethod().Name + " =======");
                 logger.Error(new StackTrace(e1, true).ToString());
-                logger.Error("변환 실패: " + e1.Message);
+                logger.Error("Conversion failure: " + e1.Message);
                 logger.Error("================ End ================");
                 throw e1;
             }
@@ -159,23 +159,23 @@ namespace DocConvert_Core.imageLib
                 {
                     returnValue.PageCount = pageCount;
                     returnValue.isSuccess = true;
-                    returnValue.Message = "이미지 변환에 성공하였습니다.";
-                    logger.Info("이미지 변환 성공!");
+                    returnValue.Message = "Image conversion was successful.";
+                    logger.Info("Image conversion was successful.");
                 }
                 else
                 {
                     returnValue.PageCount = pageCount;
                     returnValue.isSuccess = false;
-                    returnValue.Message = "이미지 변환에 실패하였습니다.";
-                    logger.Error("이미지 변환 실패!");
-                    new IOException("이미지 변환에 실패하였습니다.");
+                    returnValue.Message = "Image conversion failed.";
+                    logger.Error("Image conversion failed.");
+                    new IOException("Image conversion failed.");
                 }
             }
             catch (Exception e1)
             {
                 logger.Error("======= Method: " + MethodBase.GetCurrentMethod().Name + " =======");
                 logger.Error(new StackTrace(e1, true).ToString());
-                logger.Error("변환 실패: " + e1.Message);
+                logger.Error("Conversion failure: " + e1.Message);
                 logger.Error("================ End ================");
                 throw e1;
             }
@@ -246,23 +246,23 @@ namespace DocConvert_Core.imageLib
                 {
                     returnValue.PageCount = pageCount;
                     returnValue.isSuccess = true;
-                    returnValue.Message = "이미지 변환에 성공하였습니다.";
-                    logger.Info("이미지 변환 성공!");
+                    returnValue.Message = "Image conversion was successful.";
+                    logger.Info("Image conversion was successful.");
                 }
                 else
                 {
                     returnValue.PageCount = pageCount;
                     returnValue.isSuccess = false;
-                    returnValue.Message = "이미지 변환에 실패하였습니다.";
-                    logger.Error("이미지 변환 실패!");
-                    new IOException("이미지 변환에 실패하였습니다.");
+                    returnValue.Message = "Image conversion failed.";
+                    logger.Error("Image conversion failed.");
+                    new IOException("Image conversion failed.");
                 }
             }
             catch (Exception e1)
             {
                 logger.Error("======= Method: " + MethodBase.GetCurrentMethod().Name + " =======");
                 logger.Error(new StackTrace(e1, true).ToString());
-                logger.Error("변환 실패: " + e1.Message);
+                logger.Error("Conversion failure: " + e1.Message);
                 logger.Error("================ End ================");
                 throw e1;
             }
@@ -291,7 +291,7 @@ namespace DocConvert_Core.imageLib
             {
                 logger.Error("======= Method: " + MethodBase.GetCurrentMethod().Name + " =======");
                 logger.Error(new StackTrace(e1, true).ToString());
-                logger.Error("변환 카운팅 실패: " + e1.Message);
+                logger.Error("Image counting failure: " + e1.Message);
                 logger.Error("================ End ================");
                 return -1;
             }

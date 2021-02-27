@@ -80,9 +80,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\DocConvert_Server\interface\Settings.cs">
-      <Link>Settings.cs</Link>
-    </Compile>
     <Compile Include="Common\LogMgr.cs" />
     <Compile Include="Common\Config.cs" />
     <Compile Include="Common\define.cs" />

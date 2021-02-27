@@ -11,7 +11,7 @@ namespace DocConvert_Core.WebCaptureLib
 {
     public class WebCapture_Core
     {
-        private static Logger logger = LogManager.GetLogger("DocConvert_Engine_Log");
+        private static Logger logger = LogManager.GetLogger("DocConvert_Core_Log");
         /// <summary>
         /// 참고 API https://phantomjs.org/
         /// </summary>
@@ -52,13 +52,13 @@ namespace DocConvert_Core.WebCaptureLib
                 if (new FileInfo(outPath + @"\" + "0.png").Exists)
                 {
                     returnValue.isSuccess = true;
-                    returnValue.Message = "WebCapture에 성공하였습니다.";
+                    returnValue.Message = "Web page capture was successful.";
                     returnValue.PageCount = 1;
                 }
                 else
                 {
                     returnValue.isSuccess = false;
-                    returnValue.Message = "WebCapture에 실패하였습니다.";
+                    returnValue.Message = "Web page capture failed.";
                     returnValue.PageCount = 0;
                 }
             }
@@ -67,10 +67,10 @@ namespace DocConvert_Core.WebCaptureLib
                 returnValue.isSuccess = false;
                 returnValue.Message = e1.Message;
                 returnValue.PageCount = 0;
-                logger.Info("변환중 오류발생 자세한 내용은 오류로그 참고");
+                logger.Info("Error occurred during conversion For details, refer to the error log.");
                 logger.Error("==================== Method: " + MethodBase.GetCurrentMethod().Name + "====================");
                 logger.Error(new StackTrace(e1, true));
-                logger.Error("변환 실패: " + e1.Message);
+                logger.Error("Conversion failure: " + e1.Message);
                 logger.Error("==================== End ====================");
             }
 
@@ -131,13 +131,13 @@ namespace DocConvert_Core.WebCaptureLib
                 if (new FileInfo(outPath).Exists)
                 {
                     returnValue.isSuccess = true;
-                    returnValue.Message = "WebCapture에 성공하였습니다.";
+                    returnValue.Message = "Web page capture was successful.";
                     returnValue.PageCount = 1;
                 }
                 else
                 {
                     returnValue.isSuccess = false;
-                    returnValue.Message = "WebCapture에 실패하였습니다.";
+                    returnValue.Message = "Web page capture failed.";
                     returnValue.PageCount = 0;
                 }
             }
@@ -146,10 +146,10 @@ namespace DocConvert_Core.WebCaptureLib
                 returnValue.isSuccess = false;
                 returnValue.Message = e1.Message;
                 returnValue.PageCount = 0;
-                logger.Info("변환중 오류발생 자세한 내용은 오류로그 참고");
+                logger.Info("Error occurred during conversion For details, refer to the error log.");
                 logger.Error("==================== Method: " + MethodBase.GetCurrentMethod().Name + "====================");
                 logger.Error(new StackTrace(e1, true));
-                logger.Error("변환 실패: " + e1.Message);
+                logger.Error("Conversion failure: " + e1.Message);
                 logger.Error("==================== End ====================");
             }
 

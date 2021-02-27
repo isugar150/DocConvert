@@ -1,4 +1,4 @@
-2021-02-27 15:45:01.4283  WARN - 
+2021-02-27 16:41:18.3062  WARN - 
           _____              _____                          _   
          |  __ \            / ____|                        | |  
          | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
@@ -12,99 +12,33 @@
          |_____/ \___|_|    \_/ \___|_|  
 
                 
-2021-02-27 15:45:01.4707  WARN -          Copyright© 2021. Jm's Corp. All rights reserved.
+2021-02-27 16:41:18.3651  WARN -          Copyright© 2021. Jm's Corp. All rights reserved.
 
 
-2021-02-27 15:45:01.4707  WARN - Starting DocConvert Server..
-2021-02-27 15:45:01.4750  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
-2021-02-27 15:45:01.4750  INFO - .Net Framework Version: 4.0.30319.42000
-2021-02-27 15:45:01.4750  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
-2021-02-27 15:45:01.4750  INFO - PC(Domain) Name: DESKTOP-6DNS55V
-2021-02-27 15:45:01.4750  INFO - User Name: o0_0o
-2021-02-27 15:45:01.4750  INFO - ------------ Parsing Ini File ------------
-2021-02-27 15:45:01.4920  INFO - - Bind IP: 0.0.0.0
-2021-02-27 15:45:01.4920  INFO - - Socket Port: 12000
-2021-02-27 15:45:01.4920  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
-2021-02-27 15:45:01.4920  INFO - - Workspace Directory: C:\Data
-2021-02-27 15:45:01.4920  INFO - - SchedulerTime: 1,0
-2021-02-27 15:45:01.4920  INFO - - CleanWorkspaceSchedulerYn: True
-2021-02-27 15:45:01.4920  INFO - - CleanWorkspaceDay: 3
-2021-02-27 15:45:01.5092  INFO - - CleanLogSchedulerYn: True
-2021-02-27 15:45:01.5092  INFO - - CleanLogDay: 10
-2021-02-27 15:45:01.5092  INFO - - DRM useYn: False
-2021-02-27 15:45:01.5092  INFO - ------------------------------------------
-2021-02-27 15:45:01.5092  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
-2021-02-27 15:45:01.5092  INFO - 한글 DLL을 레지스트리에 등록하였습니다.
-2021-02-27 15:45:01.5232  WARN - DocConvert Server Started in 2021-02-27 03:45:01
-2021-02-27 15:45:21.9603  INFO - Connect Client From: 127.0.0.1:12792  Connection time: 2021-02-27 오후 3:45:21
-2021-02-27 15:45:21.9603 DEBUG - Received messages from 127.0.0.1:12792
-{"DocPassword":"","Method":"DocConvert","FileName":"test","useCompression":false,"KEY":"","ConvertIMG":2}
-2021-02-27 15:45:22.0256 DEBUG - =======[Client => Server]=======
-2021-02-27 15:45:22.0256 DEBUG - req_Key ==> 
-2021-02-27 15:45:22.0256 DEBUG - req_Method ==> DocConvert
-2021-02-27 15:45:22.0256 DEBUG - req_FileName ==> test
-2021-02-27 15:45:22.0256 DEBUG - req_ConvertIMG ==> 2
-2021-02-27 15:45:22.0256 DEBUG - ============================
-2021-02-27 15:45:22.0256 ERROR - 변환중 오류발생 자세한 내용은 오류로그 참고
-2021-02-27 15:45:22.0381 ERROR - ==================== Method: docConvert ====================
-2021-02-27 15:45:22.0381 ERROR -    위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   위치: System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   위치: System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
-   위치: System.IO.File.OpenRead(String path)
-   위치: DocConvert_Console.Flow.Document_Convert.MD5_CheckSUM(String filename) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\Document_Convert.cs:줄 341
-   위치: DocConvert_Console.Flow.Document_Convert.docConvert(String requestInfo) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\Document_Convert.cs:줄 77
-
-2021-02-27 15:45:22.0381 ERROR - 변환 실패: 'C:\Data\tmp\test' 경로의 일부를 찾을 수 없습니다.
-2021-02-27 15:45:22.0535 ERROR - ==================== End ====================
-2021-02-27 15:45:22.0535 DEBUG - =======[Server => Client]=======
-2021-02-27 15:45:22.0535 DEBUG - res_isSuccess ==> False
-2021-02-27 15:45:22.0535 DEBUG - res_Method ==> DocConvert
-2021-02-27 15:45:22.0535 DEBUG - res_Message ==> 
-2021-02-27 15:45:22.0535 DEBUG - res_ImgCnt ==> 0
-2021-02-27 15:45:22.0535 DEBUG - ============================
-2021-02-27 15:45:22.0699  INFO - 작업 소요시간: 00:00:00.0907890
-2021-02-27 15:45:22.1007  INFO - [WebSocket] 클라이언트와 연결을 해제함.
-2021-02-27 15:45:22.1007  INFO - Disconnected : (From:127.0.0.1:12792Disconnected time: 2021-02-27 오후 3:45:22 Token: System.Net.Sockets.Socket
-2021-02-27 15:56:00.7230  WARN - 
-          _____              _____                          _   
-         |  __ \            / ____|                        | |  
-         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
-         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
-         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
-         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
-          / ____|                                               
-         | (___   ___ _ ____   _____ _ __                       
-          \___ \ / _ \ '__\ \ / / _ \ '__|                      
-          ____) |  __/ |   \ V /  __/ |                         
-         |_____/ \___|_|    \_/ \___|_|  
-
-                
-2021-02-27 15:56:00.7573  WARN -          Copyright© 2021. Jm's Corp. All rights reserved.
-
-
-2021-02-27 15:56:00.7573  WARN - Starting DocConvert Server..
-2021-02-27 15:56:00.7573  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
-2021-02-27 15:56:00.7573  INFO - .Net Framework Version: 4.0.30319.42000
-2021-02-27 15:56:00.7573  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
-2021-02-27 15:56:00.7573  INFO - PC(Domain) Name: DESKTOP-6DNS55V
-2021-02-27 15:56:00.7573  INFO - User Name: o0_0o
-2021-02-27 15:56:00.7573  INFO - ------------ Parsing Ini File ------------
-2021-02-27 15:56:00.7847  INFO - - Bind IP: 0.0.0.0
-2021-02-27 15:56:00.7884  INFO - - Socket Port: 12000
-2021-02-27 15:56:00.7884  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
-2021-02-27 15:56:00.7884  INFO - - Workspace Directory: C:\Data
-2021-02-27 15:56:00.7884  INFO - - SchedulerTime: 1,0
-2021-02-27 15:56:00.7884  INFO - - CleanWorkspaceSchedulerYn: True
-2021-02-27 15:56:00.7884  INFO - - CleanWorkspaceDay: 3
-2021-02-27 15:56:00.8182  INFO - - CleanLogSchedulerYn: True
-2021-02-27 15:56:00.8209  INFO - - CleanLogDay: 10
-2021-02-27 15:56:00.8209  INFO - - DRM useYn: False
-2021-02-27 15:56:00.8209  INFO - ------------------------------------------
-2021-02-27 15:56:00.8209  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
-2021-02-27 15:56:00.8209  INFO - 한글 DLL을 레지스트리에 등록하였습니다.
-2021-02-27 15:56:00.8349  WARN - DocConvert Server Started in 2021-02-27 03:56:00
-2021-02-27 15:56:02.7993  INFO - Connect Client From: 127.0.0.1:12860  Connection time: 2021-02-27 오후 3:56:02
-2021-02-27 15:56:02.9064 DEBUG - Received messages from 127.0.0.1:12860
+2021-02-27 16:41:18.3651  WARN - Starting DocConvert Server..
+2021-02-27 16:41:18.3651  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-27 16:41:18.3651  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-27 16:41:18.3651  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-27 16:41:18.3797  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-27 16:41:18.3797  INFO - User Name: o0_0o
+2021-02-27 16:41:18.3797  INFO - ------------ Parsing Ini File ------------
+2021-02-27 16:41:18.4023  INFO - The configuration file is created in C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert_Server.ini
+2021-02-27 16:41:18.4023  INFO - - Bind IP: 0.0.0.0
+2021-02-27 16:41:18.4023  INFO - - Socket Port: 12000
+2021-02-27 16:41:18.4023  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-27 16:41:18.4098  INFO - - Workspace Directory: C:\Data
+2021-02-27 16:41:18.4098  INFO - - SchedulerTime: 1,0
+2021-02-27 16:41:18.4098  INFO - - CleanWorkspaceSchedulerYn: False
+2021-02-27 16:41:18.4098  INFO - - CleanWorkspaceDay: 3
+2021-02-27 16:41:18.4098  INFO - - CleanLogSchedulerYn: False
+2021-02-27 16:41:18.4098  INFO - - CleanLogDay: 3
+2021-02-27 16:41:18.4256  INFO - - DRM useYn: False
+2021-02-27 16:41:18.4256  INFO - ------------------------------------------
+2021-02-27 16:41:18.4256  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
+2021-02-27 16:41:18.4256  INFO - 한글 DLL을 레지스트리에 등록하였습니다.
+2021-02-27 16:41:18.4256  WARN - DocConvert Server Started in 2021-02-27 04:41:18
+2021-02-27 16:41:36.8836  INFO - Connect Client From: 127.0.0.1:5775  Connection time: 2021-02-27 오후 4:41:36
+2021-02-27 16:41:37.1103 DEBUG - Received messages from 127.0.0.1:5775
 {
   "DocPassword": "",
   "Method": "DocConvert",
@@ -113,35 +47,32 @@
   "KEY": "",
   "ConvertIMG": 2
 }
-2021-02-27 15:56:02.9148 DEBUG - =======[Client => Server]=======
-2021-02-27 15:56:02.9148 DEBUG - req_Key ==> 
-2021-02-27 15:56:02.9148 DEBUG - req_Method ==> DocConvert
-2021-02-27 15:56:02.9148 DEBUG - req_FileName ==> test
-2021-02-27 15:56:02.9148 DEBUG - req_ConvertIMG ==> 2
-2021-02-27 15:56:02.9290 DEBUG - ============================
-2021-02-27 15:56:02.9726 ERROR - 변환중 오류발생 자세한 내용은 오류로그 참고
-2021-02-27 15:56:02.9726 ERROR - ==================== Method: docConvert ====================
-2021-02-27 15:56:02.9895 ERROR -    위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+2021-02-27 16:41:37.1262 DEBUG - =======[Client => Server]=======
+2021-02-27 16:41:37.1303 DEBUG - req_Key ==> 
+2021-02-27 16:41:37.1303 DEBUG - req_Method ==> DocConvert
+2021-02-27 16:41:37.1303 DEBUG - req_FileName ==> test
+2021-02-27 16:41:37.1303 DEBUG - req_ConvertIMG ==> 2
+2021-02-27 16:41:37.1441 DEBUG - ============================
+2021-02-27 16:41:37.1441 ERROR - 변환중 오류발생 자세한 내용은 오류로그 참고
+2021-02-27 16:41:37.1441 ERROR - ==================== Method: docConvert ====================
+2021-02-27 16:41:37.1910 ERROR -    위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
    위치: System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
    위치: System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
    위치: System.IO.File.OpenRead(String path)
    위치: DocConvert_Console.Flow.Document_Convert.MD5_CheckSUM(String filename) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\Document_Convert.cs:줄 341
    위치: DocConvert_Console.Flow.Document_Convert.docConvert(String requestInfo) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\Document_Convert.cs:줄 77
 
-2021-02-27 15:56:02.9913 ERROR - 변환 실패: 'C:\Data\tmp\test' 경로의 일부를 찾을 수 없습니다.
-2021-02-27 15:56:02.9913 ERROR - ==================== End ====================
-2021-02-27 15:56:02.9913 DEBUG - =======[Server => Client]=======
-2021-02-27 15:56:02.9913 DEBUG - res_isSuccess ==> False
-2021-02-27 15:56:02.9913 DEBUG - res_Method ==> DocConvert
-2021-02-27 15:56:02.9913 DEBUG - res_Message ==> 
-2021-02-27 15:56:02.9913 DEBUG - res_ImgCnt ==> 0
-2021-02-27 15:56:03.0076 DEBUG - ============================
-2021-02-27 15:56:03.0076  INFO - 작업 소요시간: 00:00:00.1006144
-2021-02-27 15:56:03.0076  INFO - [WebSocket] 클라이언트와 연결을 해제함.
-2021-02-27 15:56:03.0076  INFO - Disconnected : (From:127.0.0.1:12860Disconnected time: 2021-02-27 오후 3:56:03 Token: System.Net.Sockets.Socket
-2021-02-27 15:56:15.0208  INFO - Connect Client From: 127.0.0.1:12866  Connection time: 2021-02-27 오후 3:56:15
-2021-02-27 15:56:24.1994  INFO - Disconnected : (From:127.0.0.1:12866Disconnected time: 2021-02-27 오후 3:56:24 Token: System.Net.Sockets.Socket
-2021-02-27 15:57:22.2839  WARN - 
+2021-02-27 16:41:37.1910 ERROR - 변환 실패: 'C:\Data\tmp\test' 경로의 일부를 찾을 수 없습니다.
+2021-02-27 16:41:37.1910 ERROR - ==================== End ====================
+2021-02-27 16:41:37.2056 DEBUG - =======[Server => Client]=======
+2021-02-27 16:41:37.2056 DEBUG - res_isSuccess ==> False
+2021-02-27 16:41:37.2056 DEBUG - res_Method ==> DocConvert
+2021-02-27 16:41:37.2370 DEBUG - res_Message ==> 
+2021-02-27 16:41:37.2370 DEBUG - res_ImgCnt ==> 0
+2021-02-27 16:41:37.2558 DEBUG - ============================
+2021-02-27 16:41:37.2558  INFO - 작업 소요시간: 00:00:00.1450263
+2021-02-27 16:41:37.2558  INFO - Disconnected : (From:127.0.0.1:5775Disconnected time: 2021-02-27 오후 4:41:37
+2021-02-27 16:59:42.6126  WARN - 
           _____              _____                          _   
          |  __ \            / ____|                        | |  
          | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
@@ -155,660 +86,27 @@
          |_____/ \___|_|    \_/ \___|_|  
 
                 
-2021-02-27 15:57:22.3132  WARN -          Copyright© 2021. Jm's Corp. All rights reserved.
+2021-02-27 16:59:42.6398  WARN -          Copyright© 2021. Jm's Corp. All rights reserved.
 
 
-2021-02-27 15:57:22.3132  WARN - Starting DocConvert Server..
-2021-02-27 15:57:22.3132  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
-2021-02-27 15:57:22.3195  INFO - .Net Framework Version: 4.0.30319.42000
-2021-02-27 15:57:22.3195  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
-2021-02-27 15:57:22.3195  INFO - PC(Domain) Name: DESKTOP-6DNS55V
-2021-02-27 15:57:22.3195  INFO - User Name: o0_0o
-2021-02-27 15:57:22.3195  INFO - ------------ Parsing Ini File ------------
-2021-02-27 15:57:22.3363  INFO - - Bind IP: 0.0.0.0
-2021-02-27 15:57:22.3363  INFO - - Socket Port: 12000
-2021-02-27 15:57:22.3363  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
-2021-02-27 15:57:22.3363  INFO - - Workspace Directory: C:\Data
-2021-02-27 15:57:22.3363  INFO - - SchedulerTime: 1,0
-2021-02-27 15:57:22.3363  INFO - - CleanWorkspaceSchedulerYn: True
-2021-02-27 15:57:22.3363  INFO - - CleanWorkspaceDay: 3
-2021-02-27 15:57:22.3505  INFO - - CleanLogSchedulerYn: True
-2021-02-27 15:57:22.3505  INFO - - CleanLogDay: 10
-2021-02-27 15:57:22.3505  INFO - - DRM useYn: False
-2021-02-27 15:57:22.3505  INFO - ------------------------------------------
-2021-02-27 15:57:22.3505  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
-2021-02-27 15:57:22.3505  INFO - 한글 DLL을 레지스트리에 등록하였습니다.
-2021-02-27 15:57:22.3668  WARN - DocConvert Server Started in 2021-02-27 03:57:22
-2021-02-27 15:57:26.5131  INFO - Connect Client From: 127.0.0.1:12872  Connection time: 2021-02-27 오후 3:57:26
-2021-02-27 15:57:26.5964 DEBUG - Received messages from 127.0.0.1:12872
-{
-  "DocPassword": "",
-  "Method": "DocConvert",
-  "FileName": "test",
-  "useCompression": false,
-  "KEY": "",
-  "ConvertIMG": 2
-}
-2021-02-27 15:57:26.6022 DEBUG - =======[Client => Server]=======
-2021-02-27 15:57:26.6022 DEBUG - req_Key ==> 
-2021-02-27 15:57:26.6022 DEBUG - req_Method ==> DocConvert
-2021-02-27 15:57:26.6022 DEBUG - req_FileName ==> test
-2021-02-27 15:57:26.6022 DEBUG - req_ConvertIMG ==> 2
-2021-02-27 15:57:26.6022 DEBUG - ============================
-2021-02-27 15:57:26.6549 ERROR - 변환중 오류발생 자세한 내용은 오류로그 참고
-2021-02-27 15:57:26.6549 ERROR - ==================== Method: docConvert ====================
-2021-02-27 15:57:26.6738 ERROR -    위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   위치: System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   위치: System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
-   위치: System.IO.File.OpenRead(String path)
-   위치: DocConvert_Console.Flow.Document_Convert.MD5_CheckSUM(String filename) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\Document_Convert.cs:줄 341
-   위치: DocConvert_Console.Flow.Document_Convert.docConvert(String requestInfo) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\Document_Convert.cs:줄 77
-
-2021-02-27 15:57:26.6738 ERROR - 변환 실패: 'C:\Data\tmp\test' 경로의 일부를 찾을 수 없습니다.
-2021-02-27 15:57:26.6738 ERROR - ==================== End ====================
-2021-02-27 15:57:26.6818 DEBUG - =======[Server => Client]=======
-2021-02-27 15:57:26.6818 DEBUG - res_isSuccess ==> False
-2021-02-27 15:57:26.6818 DEBUG - res_Method ==> DocConvert
-2021-02-27 15:57:26.6818 DEBUG - res_Message ==> 
-2021-02-27 15:57:26.6818 DEBUG - res_ImgCnt ==> 0
-2021-02-27 15:57:26.6818 DEBUG - ============================
-2021-02-27 15:57:26.6943  INFO - 작업 소요시간: 00:00:00.0969833
-2021-02-27 15:57:26.6943  INFO - [WebSocket] 클라이언트와 연결을 해제함.
-2021-02-27 15:57:26.6943  INFO - Disconnected : (From:127.0.0.1:12872Disconnected time: 2021-02-27 오후 3:57:26 Token: System.Net.Sockets.Socket
-2021-02-27 15:58:08.6022  WARN - 
-          _____              _____                          _   
-         |  __ \            / ____|                        | |  
-         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
-         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
-         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
-         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
-          / ____|                                               
-         | (___   ___ _ ____   _____ _ __                       
-          \___ \ / _ \ '__\ \ / / _ \ '__|                      
-          ____) |  __/ |   \ V /  __/ |                         
-         |_____/ \___|_|    \_/ \___|_|  
-
-                
-2021-02-27 15:58:08.6320  WARN -          Copyright© 2021. Jm's Corp. All rights reserved.
-
-
-2021-02-27 15:58:08.6320  WARN - Starting DocConvert Server..
-2021-02-27 15:58:08.6320  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
-2021-02-27 15:58:08.6320  INFO - .Net Framework Version: 4.0.30319.42000
-2021-02-27 15:58:08.6320  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
-2021-02-27 15:58:08.6320  INFO - PC(Domain) Name: DESKTOP-6DNS55V
-2021-02-27 15:58:08.6320  INFO - User Name: o0_0o
-2021-02-27 15:58:08.6320  INFO - ------------ Parsing Ini File ------------
-2021-02-27 15:58:08.6581  INFO - - Bind IP: 0.0.0.0
-2021-02-27 15:58:08.6581  INFO - - Socket Port: 12000
-2021-02-27 15:58:08.6581  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
-2021-02-27 15:58:08.6635  INFO - - Workspace Directory: C:\Data
-2021-02-27 15:58:08.6635  INFO - - SchedulerTime: 1,0
-2021-02-27 15:58:08.6635  INFO - - CleanWorkspaceSchedulerYn: True
-2021-02-27 15:58:08.6635  INFO - - CleanWorkspaceDay: 3
-2021-02-27 15:58:08.6635  INFO - - CleanLogSchedulerYn: True
-2021-02-27 15:58:08.6635  INFO - - CleanLogDay: 10
-2021-02-27 15:58:08.6794  INFO - - DRM useYn: False
-2021-02-27 15:58:08.6794  INFO - ------------------------------------------
-2021-02-27 15:58:08.6794  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
-2021-02-27 15:58:08.6962  INFO - 한글 DLL을 레지스트리에 등록하였습니다.
-2021-02-27 15:58:08.6962  WARN - DocConvert Server Started in 2021-02-27 03:58:08
-2021-02-27 15:58:17.7521  INFO - Connect Client From: 127.0.0.1:12881  Connection time: 2021-02-27 오후 3:58:17
-2021-02-27 15:58:19.2151 DEBUG - Received messages from 127.0.0.1:12881
-������
-2021-02-27 15:58:19.2621 DEBUG - Received messages from 127.0.0.1:12881
-{}
-2021-02-27 15:58:19.2931 ERROR - 변환중 오류발생 자세한 내용은 오류로그 참고
-2021-02-27 15:58:19.2931 ERROR - ==================== Method: docConvert ====================
-2021-02-27 15:58:19.3416 ERROR -    위치: Newtonsoft.Json.JsonTextReader.ParseValue()
-   위치: Newtonsoft.Json.JsonTextReader.Read()
-   위치: Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
-   위치: Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
-   위치: Newtonsoft.Json.Linq.JObject.Parse(String json)
-   위치: DocConvert_Console.Flow.Document_Convert.docConvert(String requestInfo) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\Document_Convert.cs:줄 45
-
-2021-02-27 15:58:19.3416 ERROR - 변환 실패: Unexpected character encountered while parsing value: �. Path '', line 0, position 0.
-2021-02-27 15:58:19.3508 ERROR - ==================== End ====================
-2021-02-27 15:58:19.3658 DEBUG - =======[Server => Client]=======
-2021-02-27 15:58:19.3658 DEBUG - res_isSuccess ==> False
-2021-02-27 15:58:19.3893 DEBUG - res_Method ==> 
-2021-02-27 15:58:19.3893 DEBUG - res_Message ==> 
-2021-02-27 15:58:19.3893 DEBUG - res_ImgCnt ==> 0
-2021-02-27 15:58:19.3975 DEBUG - ============================
-2021-02-27 15:58:19.3975  INFO - 작업 소요시간: 00:00:00.1354974
-2021-02-27 15:58:19.4135  INFO - [WebSocket] 클라이언트와 연결을 해제함.
-2021-02-27 15:58:55.7075  WARN - 
-          _____              _____                          _   
-         |  __ \            / ____|                        | |  
-         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
-         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
-         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
-         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
-          / ____|                                               
-         | (___   ___ _ ____   _____ _ __                       
-          \___ \ / _ \ '__\ \ / / _ \ '__|                      
-          ____) |  __/ |   \ V /  __/ |                         
-         |_____/ \___|_|    \_/ \___|_|  
-
-                
-2021-02-27 15:58:55.7313  WARN -          Copyright© 2021. Jm's Corp. All rights reserved.
-
-
-2021-02-27 15:58:55.7313  WARN - Starting DocConvert Server..
-2021-02-27 15:58:55.7313  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
-2021-02-27 15:58:55.7313  INFO - .Net Framework Version: 4.0.30319.42000
-2021-02-27 15:58:55.7313  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
-2021-02-27 15:58:55.7415  INFO - PC(Domain) Name: DESKTOP-6DNS55V
-2021-02-27 15:58:55.7415  INFO - User Name: o0_0o
-2021-02-27 15:58:55.7415  INFO - ------------ Parsing Ini File ------------
-2021-02-27 15:58:55.7415  INFO - - Bind IP: 0.0.0.0
-2021-02-27 15:58:55.7415  INFO - - Socket Port: 12000
-2021-02-27 15:58:55.7415  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
-2021-02-27 15:58:55.7588  INFO - - Workspace Directory: C:\Data
-2021-02-27 15:58:55.7588  INFO - - SchedulerTime: 1,0
-2021-02-27 15:58:55.7588  INFO - - CleanWorkspaceSchedulerYn: True
-2021-02-27 15:58:55.7588  INFO - - CleanWorkspaceDay: 3
-2021-02-27 15:58:55.7588  INFO - - CleanLogSchedulerYn: True
-2021-02-27 15:58:55.7732  INFO - - CleanLogDay: 10
-2021-02-27 15:58:55.7732  INFO - - DRM useYn: False
-2021-02-27 15:58:55.7732  INFO - ------------------------------------------
-2021-02-27 15:58:55.7732  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
-2021-02-27 15:58:55.7732  INFO - 한글 DLL을 레지스트리에 등록하였습니다.
-2021-02-27 15:58:55.7732  WARN - DocConvert Server Started in 2021-02-27 03:58:55
-2021-02-27 15:59:04.0112  INFO - Connect Client From: 127.0.0.1:12885  Connection time: 2021-02-27 오후 3:59:04
-2021-02-27 15:59:40.2023  WARN - 
-          _____              _____                          _   
-         |  __ \            / ____|                        | |  
-         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
-         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
-         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
-         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
-          / ____|                                               
-         | (___   ___ _ ____   _____ _ __                       
-          \___ \ / _ \ '__\ \ / / _ \ '__|                      
-          ____) |  __/ |   \ V /  __/ |                         
-         |_____/ \___|_|    \_/ \___|_|  
-
-                
-2021-02-27 15:59:40.2295  WARN -          Copyright© 2021. Jm's Corp. All rights reserved.
-
-
-2021-02-27 15:59:40.2295  WARN - Starting DocConvert Server..
-2021-02-27 15:59:40.2295  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
-2021-02-27 15:59:40.2295  INFO - .Net Framework Version: 4.0.30319.42000
-2021-02-27 15:59:40.2295  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
-2021-02-27 15:59:40.2295  INFO - PC(Domain) Name: DESKTOP-6DNS55V
-2021-02-27 15:59:40.2295  INFO - User Name: o0_0o
-2021-02-27 15:59:40.2417  INFO - ------------ Parsing Ini File ------------
-2021-02-27 15:59:40.2417  INFO - - Bind IP: 0.0.0.0
-2021-02-27 15:59:40.2417  INFO - - Socket Port: 12000
-2021-02-27 15:59:40.2572  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
-2021-02-27 15:59:40.2572  INFO - - Workspace Directory: C:\Data
-2021-02-27 15:59:40.2572  INFO - - SchedulerTime: 1,0
-2021-02-27 15:59:40.2572  INFO - - CleanWorkspaceSchedulerYn: True
-2021-02-27 15:59:40.2572  INFO - - CleanWorkspaceDay: 3
-2021-02-27 15:59:40.2738  INFO - - CleanLogSchedulerYn: True
-2021-02-27 15:59:40.2738  INFO - - CleanLogDay: 10
-2021-02-27 15:59:40.2738  INFO - - DRM useYn: False
-2021-02-27 15:59:40.2738  INFO - ------------------------------------------
-2021-02-27 15:59:40.2891  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
-2021-02-27 15:59:40.2891  INFO - 한글 DLL을 레지스트리에 등록하였습니다.
-2021-02-27 15:59:40.2891  WARN - DocConvert Server Started in 2021-02-27 03:59:40
-2021-02-27 15:59:46.6073  INFO - Connect Client From: 127.0.0.1:12890  Connection time: 2021-02-27 오후 3:59:46
-2021-02-27 15:59:50.6428 DEBUG - Received messages from 127.0.0.1:12890
-������ 
-2021-02-27 15:59:50.6477  INFO - Disconnected : (From:127.0.0.1:12890Disconnected time: 2021-02-27 오후 3:59:50
-2021-02-27 16:00:00.0287  WARN - 
-          _____              _____                          _   
-         |  __ \            / ____|                        | |  
-         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
-         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
-         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
-         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
-          / ____|                                               
-         | (___   ___ _ ____   _____ _ __                       
-          \___ \ / _ \ '__\ \ / / _ \ '__|                      
-          ____) |  __/ |   \ V /  __/ |                         
-         |_____/ \___|_|    \_/ \___|_|  
-
-                
-2021-02-27 16:00:00.0607  WARN -          Copyright© 2021. Jm's Corp. All rights reserved.
-
-
-2021-02-27 16:00:00.0607  WARN - Starting DocConvert Server..
-2021-02-27 16:00:00.0607  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
-2021-02-27 16:00:00.0607  INFO - .Net Framework Version: 4.0.30319.42000
-2021-02-27 16:00:00.0607  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
-2021-02-27 16:00:00.0697  INFO - PC(Domain) Name: DESKTOP-6DNS55V
-2021-02-27 16:00:00.0697  INFO - User Name: o0_0o
-2021-02-27 16:00:00.0697  INFO - ------------ Parsing Ini File ------------
-2021-02-27 16:00:00.0697  INFO - - Bind IP: 0.0.0.0
-2021-02-27 16:00:00.0697  INFO - - Socket Port: 12000
-2021-02-27 16:00:00.0847  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
-2021-02-27 16:00:00.0847  INFO - - Workspace Directory: C:\Data
-2021-02-27 16:00:00.0847  INFO - - SchedulerTime: 1,0
-2021-02-27 16:00:00.0847  INFO - - CleanWorkspaceSchedulerYn: True
-2021-02-27 16:00:00.0847  INFO - - CleanWorkspaceDay: 3
-2021-02-27 16:00:00.0847  INFO - - CleanLogSchedulerYn: True
-2021-02-27 16:00:00.0847  INFO - - CleanLogDay: 10
-2021-02-27 16:00:00.1053  INFO - - DRM useYn: False
-2021-02-27 16:00:00.1208  INFO - ------------------------------------------
-2021-02-27 16:00:00.1208  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
-2021-02-27 16:00:00.1208  INFO - 한글 DLL을 레지스트리에 등록하였습니다.
-2021-02-27 16:00:00.1378  WARN - DocConvert Server Started in 2021-02-27 04:00:00
-2021-02-27 16:00:07.8601  INFO - Connect Client From: 127.0.0.1:12899  Connection time: 2021-02-27 오후 4:00:07
-2021-02-27 16:00:09.0144 DEBUG - Received messages from 127.0.0.1:12899
-���� ����'������테스트
-2021-02-27 16:00:09.0220  INFO - Disconnected : (From:127.0.0.1:12899Disconnected time: 2021-02-27 오후 4:00:09
-2021-02-27 16:02:26.7990  WARN - 
-          _____              _____                          _   
-         |  __ \            / ____|                        | |  
-         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
-         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
-         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
-         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
-          / ____|                                               
-         | (___   ___ _ ____   _____ _ __                       
-          \___ \ / _ \ '__\ \ / / _ \ '__|                      
-          ____) |  __/ |   \ V /  __/ |                         
-         |_____/ \___|_|    \_/ \___|_|  
-
-                
-2021-02-27 16:02:26.8294  WARN -          Copyright© 2021. Jm's Corp. All rights reserved.
-
-
-2021-02-27 16:02:26.8294  WARN - Starting DocConvert Server..
-2021-02-27 16:02:26.8294  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
-2021-02-27 16:02:26.8294  INFO - .Net Framework Version: 4.0.30319.42000
-2021-02-27 16:02:26.8350  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
-2021-02-27 16:02:26.8350  INFO - PC(Domain) Name: DESKTOP-6DNS55V
-2021-02-27 16:02:26.8350  INFO - User Name: o0_0o
-2021-02-27 16:02:26.8350  INFO - ------------ Parsing Ini File ------------
-2021-02-27 16:02:26.8512  INFO - - Bind IP: 0.0.0.0
-2021-02-27 16:02:26.8512  INFO - - Socket Port: 12000
-2021-02-27 16:02:26.8512  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
-2021-02-27 16:02:26.8512  INFO - - Workspace Directory: C:\Data
-2021-02-27 16:02:26.8512  INFO - - SchedulerTime: 1,0
-2021-02-27 16:02:26.8512  INFO - - CleanWorkspaceSchedulerYn: True
-2021-02-27 16:02:26.8512  INFO - - CleanWorkspaceDay: 3
-2021-02-27 16:02:26.8512  INFO - - CleanLogSchedulerYn: True
-2021-02-27 16:02:26.8677  INFO - - CleanLogDay: 10
-2021-02-27 16:02:26.8677  INFO - - DRM useYn: False
-2021-02-27 16:02:26.8677  INFO - ------------------------------------------
-2021-02-27 16:02:26.8677  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
-2021-02-27 16:02:26.8677  INFO - 한글 DLL을 레지스트리에 등록하였습니다.
-2021-02-27 16:02:26.8820  WARN - DocConvert Server Started in 2021-02-27 04:02:26
-2021-02-27 16:02:40.7673  INFO - Connect Client From: 127.0.0.1:12931  Connection time: 2021-02-27 오후 4:02:40
-2021-02-27 16:02:41.5927 DEBUG - Received messages from 127.0.0.1:12931
-asdf
-2021-02-27 16:02:41.6376 DEBUG - Received messages from 127.0.0.1:12931
-{}
-2021-02-27 16:02:41.6682 ERROR - 변환중 오류발생 자세한 내용은 오류로그 참고
-2021-02-27 16:02:41.6682 ERROR - ==================== Method: docConvert ====================
-2021-02-27 16:02:41.7182 ERROR -    위치: Newtonsoft.Json.JsonTextReader.ParseValue()
-   위치: Newtonsoft.Json.JsonTextReader.Read()
-   위치: Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
-   위치: Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
-   위치: Newtonsoft.Json.Linq.JObject.Parse(String json)
-   위치: DocConvert_Console.Flow.Document_Convert.docConvert(String requestInfo) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\Document_Convert.cs:줄 45
-
-2021-02-27 16:02:41.7182 ERROR - 변환 실패: Unexpected character encountered while parsing value: a. Path '', line 0, position 0.
-2021-02-27 16:02:41.7182 ERROR - ==================== End ====================
-2021-02-27 16:02:41.7372 DEBUG - =======[Server => Client]=======
-2021-02-27 16:02:41.7409 DEBUG - res_isSuccess ==> False
-2021-02-27 16:02:41.7409 DEBUG - res_Method ==> 
-2021-02-27 16:02:41.7409 DEBUG - res_Message ==> 
-2021-02-27 16:02:41.7409 DEBUG - res_ImgCnt ==> 0
-2021-02-27 16:02:41.7409 DEBUG - ============================
-2021-02-27 16:02:41.7591  INFO - 작업 소요시간: 00:00:00.1153365
-2021-02-27 16:02:41.7755  INFO - [WebSocket] 클라이언트와 연결을 해제함.
-2021-02-27 16:02:44.9346 DEBUG - Received messages from 127.0.0.1:12931
-vsss
-2021-02-27 16:02:44.9346 DEBUG - Received messages from 127.0.0.1:12931
-{}
-2021-02-27 16:02:44.9488 ERROR - 변환중 오류발생 자세한 내용은 오류로그 참고
-2021-02-27 16:02:44.9488 ERROR - ==================== Method: docConvert ====================
-2021-02-27 16:02:44.9672 ERROR -    위치: Newtonsoft.Json.JsonTextReader.ParseValue()
-   위치: Newtonsoft.Json.JsonTextReader.Read()
-   위치: Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
-   위치: Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
-   위치: Newtonsoft.Json.Linq.JObject.Parse(String json)
-   위치: DocConvert_Console.Flow.Document_Convert.docConvert(String requestInfo) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\Document_Convert.cs:줄 45
-
-2021-02-27 16:02:44.9672 ERROR - 변환 실패: Unexpected character encountered while parsing value: v. Path '', line 0, position 0.
-2021-02-27 16:02:44.9672 ERROR - ==================== End ====================
-2021-02-27 16:02:44.9672 DEBUG - =======[Server => Client]=======
-2021-02-27 16:02:44.9752 DEBUG - res_isSuccess ==> False
-2021-02-27 16:02:44.9752 DEBUG - res_Method ==> 
-2021-02-27 16:02:44.9752 DEBUG - res_Message ==> 
-2021-02-27 16:02:44.9752 DEBUG - res_ImgCnt ==> 0
-2021-02-27 16:02:44.9912 DEBUG - ============================
-2021-02-27 16:02:44.9912  INFO - 작업 소요시간: 00:00:00.0528729
-2021-02-27 16:02:44.9912  INFO - [WebSocket] 클라이언트와 연결을 해제함.
-2021-02-27 16:02:46.5479 DEBUG - Received messages from 127.0.0.1:12931
-vsvsdvasvd
-2021-02-27 16:02:46.5479 DEBUG - Received messages from 127.0.0.1:12931
-{}
-2021-02-27 16:02:46.5642 ERROR - 변환중 오류발생 자세한 내용은 오류로그 참고
-2021-02-27 16:02:46.5642 ERROR - ==================== Method: docConvert ====================
-2021-02-27 16:02:46.5871 ERROR -    위치: Newtonsoft.Json.JsonTextReader.ParseValue()
-   위치: Newtonsoft.Json.JsonTextReader.Read()
-   위치: Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
-   위치: Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
-   위치: Newtonsoft.Json.Linq.JObject.Parse(String json)
-   위치: DocConvert_Console.Flow.Document_Convert.docConvert(String requestInfo) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\Document_Convert.cs:줄 45
-
-2021-02-27 16:02:46.5871 ERROR - 변환 실패: Unexpected character encountered while parsing value: v. Path '', line 0, position 0.
-2021-02-27 16:02:46.5871 ERROR - ==================== End ====================
-2021-02-27 16:02:46.6024 DEBUG - =======[Server => Client]=======
-2021-02-27 16:02:46.6024 DEBUG - res_isSuccess ==> False
-2021-02-27 16:02:46.6024 DEBUG - res_Method ==> 
-2021-02-27 16:02:46.6024 DEBUG - res_Message ==> 
-2021-02-27 16:02:46.6164 DEBUG - res_ImgCnt ==> 0
-2021-02-27 16:02:46.6164 DEBUG - ============================
-2021-02-27 16:02:46.6164  INFO - 작업 소요시간: 00:00:00.0681665
-2021-02-27 16:02:46.6164  INFO - [WebSocket] 클라이언트와 연결을 해제함.
-2021-02-27 16:02:48.7502  INFO - Disconnected : (From:127.0.0.1:12931Disconnected time: 2021-02-27 오후 4:02:48
-2021-02-27 16:04:05.2501  WARN - 
-          _____              _____                          _   
-         |  __ \            / ____|                        | |  
-         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
-         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
-         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
-         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
-          / ____|                                               
-         | (___   ___ _ ____   _____ _ __                       
-          \___ \ / _ \ '__\ \ / / _ \ '__|                      
-          ____) |  __/ |   \ V /  __/ |                         
-         |_____/ \___|_|    \_/ \___|_|  
-
-                
-2021-02-27 16:04:05.2734  WARN -          Copyright© 2021. Jm's Corp. All rights reserved.
-
-
-2021-02-27 16:04:05.2734  WARN - Starting DocConvert Server..
-2021-02-27 16:04:05.2734  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
-2021-02-27 16:04:05.2734  INFO - .Net Framework Version: 4.0.30319.42000
-2021-02-27 16:04:05.2734  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
-2021-02-27 16:04:05.2734  INFO - PC(Domain) Name: DESKTOP-6DNS55V
-2021-02-27 16:04:05.2734  INFO - User Name: o0_0o
-2021-02-27 16:04:05.2877  INFO - ------------ Parsing Ini File ------------
-2021-02-27 16:04:05.2877  INFO - - Bind IP: 0.0.0.0
-2021-02-27 16:04:05.2877  INFO - - Socket Port: 12000
-2021-02-27 16:04:05.3056  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
-2021-02-27 16:04:05.3056  INFO - - Workspace Directory: C:\Data
-2021-02-27 16:04:05.3056  INFO - - SchedulerTime: 1,0
-2021-02-27 16:04:05.3056  INFO - - CleanWorkspaceSchedulerYn: True
-2021-02-27 16:04:05.3056  INFO - - CleanWorkspaceDay: 3
-2021-02-27 16:04:05.3192  INFO - - CleanLogSchedulerYn: True
-2021-02-27 16:04:05.3192  INFO - - CleanLogDay: 10
-2021-02-27 16:04:05.3192  INFO - - DRM useYn: False
-2021-02-27 16:04:05.3192  INFO - ------------------------------------------
-2021-02-27 16:04:05.3522  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
-2021-02-27 16:04:05.3522  INFO - 한글 DLL을 레지스트리에 등록하였습니다.
-2021-02-27 16:04:05.3522  WARN - DocConvert Server Started in 2021-02-27 04:04:05
-2021-02-27 16:04:12.0358  INFO - Connect Client From: 127.0.0.1:12935  Connection time: 2021-02-27 오후 4:04:12
-2021-02-27 16:04:13.0316 DEBUG - Received messages from 127.0.0.1:12935
-test
-2021-02-27 16:04:15.1815 DEBUG - Received messages from 127.0.0.1:12935
-afaf
-2021-02-27 16:04:17.8576 DEBUG - Received messages from 127.0.0.1:12935
-vsvsv
-2021-02-27 16:04:19.8922 DEBUG - Received messages from 127.0.0.1:12935
-dienrnrnrn
-2021-02-27 16:04:21.5667 DEBUG - Received messages from 127.0.0.1:12935
-
-2021-02-27 16:04:21.7516 DEBUG - Received messages from 127.0.0.1:12935
-
-2021-02-27 16:04:22.2671 DEBUG - Received messages from 127.0.0.1:12935
-
-2021-02-27 16:04:22.4728 DEBUG - Received messages from 127.0.0.1:12935
-
-2021-02-27 16:04:23.9986 DEBUG - Received messages from 127.0.0.1:12935
-abcdef
-2021-02-27 16:04:26.0414 DEBUG - Received messages from 127.0.0.1:12935
-
-2021-02-27 16:04:35.2646  INFO - Disconnected : (From:127.0.0.1:12935Disconnected time: 2021-02-27 오후 4:04:35
-2021-02-27 16:04:46.8958  WARN - 
-          _____              _____                          _   
-         |  __ \            / ____|                        | |  
-         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
-         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
-         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
-         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
-          / ____|                                               
-         | (___   ___ _ ____   _____ _ __                       
-          \___ \ / _ \ '__\ \ / / _ \ '__|                      
-          ____) |  __/ |   \ V /  __/ |                         
-         |_____/ \___|_|    \_/ \___|_|  
-
-                
-2021-02-27 16:04:46.9210  WARN -          Copyright© 2021. Jm's Corp. All rights reserved.
-
-
-2021-02-27 16:04:46.9210  WARN - Starting DocConvert Server..
-2021-02-27 16:04:46.9210  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
-2021-02-27 16:04:46.9210  INFO - .Net Framework Version: 4.0.30319.42000
-2021-02-27 16:04:46.9300  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
-2021-02-27 16:04:46.9300  INFO - PC(Domain) Name: DESKTOP-6DNS55V
-2021-02-27 16:04:46.9300  INFO - User Name: o0_0o
-2021-02-27 16:04:46.9300  INFO - ------------ Parsing Ini File ------------
-2021-02-27 16:04:46.9479  INFO - - Bind IP: 0.0.0.0
-2021-02-27 16:04:46.9479  INFO - - Socket Port: 12000
-2021-02-27 16:04:46.9479  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
-2021-02-27 16:04:46.9479  INFO - - Workspace Directory: C:\Data
-2021-02-27 16:04:46.9479  INFO - - SchedulerTime: 1,0
-2021-02-27 16:04:46.9479  INFO - - CleanWorkspaceSchedulerYn: True
-2021-02-27 16:04:46.9603  INFO - - CleanWorkspaceDay: 3
-2021-02-27 16:04:46.9603  INFO - - CleanLogSchedulerYn: True
-2021-02-27 16:04:46.9603  INFO - - CleanLogDay: 10
-2021-02-27 16:04:46.9769  INFO - - DRM useYn: False
-2021-02-27 16:04:46.9769  INFO - ------------------------------------------
-2021-02-27 16:04:46.9769  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
-2021-02-27 16:04:46.9769  INFO - 한글 DLL을 레지스트리에 등록하였습니다.
-2021-02-27 16:04:46.9960  WARN - DocConvert Server Started in 2021-02-27 04:04:46
-2021-02-27 16:04:54.7871  INFO - Connect Client From: 127.0.0.1:12939  Connection time: 2021-02-27 오후 4:04:54
-2021-02-27 16:04:55.4375 DEBUG - Received messages from 127.0.0.1:12939
-
-2021-02-27 16:04:55.5626 DEBUG - Received messages from 127.0.0.1:12939
-
-2021-02-27 16:04:55.7178 DEBUG - Received messages from 127.0.0.1:12939
-
-2021-02-27 16:04:58.5277 DEBUG - Received messages from 127.0.0.1:12939
-exit
-2021-02-27 16:04:58.5277  INFO - Disconnected : (From:127.0.0.1:12939Disconnected time: 2021-02-27 오후 4:04:58
-2021-02-27 16:04:58.5400  INFO - Disconnected : (From:127.0.0.1:12939Disconnected time: 2021-02-27 오후 4:04:58
-2021-02-27 16:06:03.8544  WARN - 
-          _____              _____                          _   
-         |  __ \            / ____|                        | |  
-         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
-         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
-         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
-         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
-          / ____|                                               
-         | (___   ___ _ ____   _____ _ __                       
-          \___ \ / _ \ '__\ \ / / _ \ '__|                      
-          ____) |  __/ |   \ V /  __/ |                         
-         |_____/ \___|_|    \_/ \___|_|  
-
-                
-2021-02-27 16:06:03.8884  WARN -          Copyright© 2021. Jm's Corp. All rights reserved.
-
-
-2021-02-27 16:06:03.8884  WARN - Starting DocConvert Server..
-2021-02-27 16:06:03.8884  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
-2021-02-27 16:06:03.8884  INFO - .Net Framework Version: 4.0.30319.42000
-2021-02-27 16:06:03.8969  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
-2021-02-27 16:06:03.8969  INFO - PC(Domain) Name: DESKTOP-6DNS55V
-2021-02-27 16:06:03.8969  INFO - User Name: o0_0o
-2021-02-27 16:06:03.8969  INFO - ------------ Parsing Ini File ------------
-2021-02-27 16:06:03.8969  INFO - - Bind IP: 0.0.0.0
-2021-02-27 16:06:03.9126  INFO - - Socket Port: 12000
-2021-02-27 16:06:03.9126  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
-2021-02-27 16:06:03.9126  INFO - - Workspace Directory: C:\Data
-2021-02-27 16:06:03.9126  INFO - - SchedulerTime: 1,0
-2021-02-27 16:06:03.9126  INFO - - CleanWorkspaceSchedulerYn: True
-2021-02-27 16:06:03.9126  INFO - - CleanWorkspaceDay: 3
-2021-02-27 16:06:03.9126  INFO - - CleanLogSchedulerYn: True
-2021-02-27 16:06:03.9126  INFO - - CleanLogDay: 10
-2021-02-27 16:06:03.9294  INFO - - DRM useYn: False
-2021-02-27 16:06:03.9294  INFO - ------------------------------------------
-2021-02-27 16:06:03.9294  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
-2021-02-27 16:06:03.9294  INFO - 한글 DLL을 레지스트리에 등록하였습니다.
-2021-02-27 16:06:03.9294  WARN - DocConvert Server Started in 2021-02-27 04:06:03
-2021-02-27 16:06:10.8185  INFO - Connect Client From: 127.0.0.1:12947  Connection time: 2021-02-27 오후 4:06:10
-2021-02-27 16:06:12.1746 DEBUG - Received messages from 127.0.0.1:12947
-asdfasdf
-2021-02-27 16:06:14.8256 DEBUG - Received messages from 127.0.0.1:12947
-x������
-2021-02-27 16:06:16.9393 DEBUG - Received messages from 127.0.0.1:12947
-abcdef
-2021-02-27 16:06:18.2138 DEBUG - Received messages from 127.0.0.1:12947
-exit
-2021-02-27 16:06:18.2138  INFO - Disconnected : (From:127.0.0.1:12947Disconnected time: 2021-02-27 오후 4:06:18
-2021-02-27 16:08:44.6239  WARN - 
-          _____              _____                          _   
-         |  __ \            / ____|                        | |  
-         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
-         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
-         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
-         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
-          / ____|                                               
-         | (___   ___ _ ____   _____ _ __                       
-          \___ \ / _ \ '__\ \ / / _ \ '__|                      
-          ____) |  __/ |   \ V /  __/ |                         
-         |_____/ \___|_|    \_/ \___|_|  
-
-                
-2021-02-27 16:08:44.6534  WARN -          Copyright© 2021. Jm's Corp. All rights reserved.
-
-
-2021-02-27 16:08:44.6534  WARN - Starting DocConvert Server..
-2021-02-27 16:08:44.6534  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
-2021-02-27 16:08:44.6534  INFO - .Net Framework Version: 4.0.30319.42000
-2021-02-27 16:08:44.6534  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
-2021-02-27 16:08:44.6650  INFO - PC(Domain) Name: DESKTOP-6DNS55V
-2021-02-27 16:08:44.6650  INFO - User Name: o0_0o
-2021-02-27 16:08:44.6650  INFO - ------------ Parsing Ini File ------------
-2021-02-27 16:08:44.6802  INFO - - Bind IP: 0.0.0.0
-2021-02-27 16:08:44.6802  INFO - - Socket Port: 12000
-2021-02-27 16:08:44.6802  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
-2021-02-27 16:08:44.6802  INFO - - Workspace Directory: C:\Data
-2021-02-27 16:08:44.6802  INFO - - SchedulerTime: 1,0
-2021-02-27 16:08:44.6802  INFO - - CleanWorkspaceSchedulerYn: True
-2021-02-27 16:08:44.6961  INFO - - CleanWorkspaceDay: 3
-2021-02-27 16:08:44.6961  INFO - - CleanLogSchedulerYn: True
-2021-02-27 16:08:44.6961  INFO - - CleanLogDay: 10
-2021-02-27 16:08:44.6961  INFO - - DRM useYn: False
-2021-02-27 16:08:44.6961  INFO - ------------------------------------------
-2021-02-27 16:08:44.7208  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
-2021-02-27 16:08:44.7208  INFO - 한글 DLL을 레지스트리에 등록하였습니다.
-2021-02-27 16:08:44.7261  WARN - DocConvert Server Started in 2021-02-27 04:08:44
-2021-02-27 16:08:51.4372  INFO - Connect Client From: 127.0.0.1:12968  Connection time: 2021-02-27 오후 4:08:51
-2021-02-27 16:08:51.5400 DEBUG - Received messages from 127.0.0.1:12968
-{
-  "DocPassword": "",
-  "Method": "DocConvert",
-  "FileName": "test",
-  "useCompression": false,
-  "KEY": "",
-  "ConvertIMG": 2
-}
-2021-02-27 16:08:51.5400 DEBUG - =======[Client => Server]=======
-2021-02-27 16:08:51.5400 DEBUG - req_Key ==> 
-2021-02-27 16:08:51.5400 DEBUG - req_Method ==> DocConvert
-2021-02-27 16:08:51.5400 DEBUG - req_FileName ==> test
-2021-02-27 16:08:51.5549 DEBUG - req_ConvertIMG ==> 2
-2021-02-27 16:08:51.5549 DEBUG - ============================
-2021-02-27 16:08:51.6041 ERROR - 변환중 오류발생 자세한 내용은 오류로그 참고
-2021-02-27 16:08:51.6041 ERROR - ==================== Method: docConvert ====================
-2021-02-27 16:08:51.6217 ERROR -    위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   위치: System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   위치: System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
-   위치: System.IO.File.OpenRead(String path)
-   위치: DocConvert_Console.Flow.Document_Convert.MD5_CheckSUM(String filename) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\Document_Convert.cs:줄 341
-   위치: DocConvert_Console.Flow.Document_Convert.docConvert(String requestInfo) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\Document_Convert.cs:줄 77
-
-2021-02-27 16:08:51.6217 ERROR - 변환 실패: 'C:\Data\tmp\test' 경로의 일부를 찾을 수 없습니다.
-2021-02-27 16:08:51.6217 ERROR - ==================== End ====================
-2021-02-27 16:08:51.6217 DEBUG - =======[Server => Client]=======
-2021-02-27 16:08:51.6334 DEBUG - res_isSuccess ==> False
-2021-02-27 16:08:51.6334 DEBUG - res_Method ==> DocConvert
-2021-02-27 16:08:51.6334 DEBUG - res_Message ==> 
-2021-02-27 16:08:51.6334 DEBUG - res_ImgCnt ==> 0
-2021-02-27 16:08:51.6334 DEBUG - ============================
-2021-02-27 16:08:51.6334  INFO - 작업 소요시간: 00:00:00.0996325
-2021-02-27 16:08:51.6334  INFO - Disconnected : (From:127.0.0.1:12968Disconnected time: 2021-02-27 오후 4:08:51
-2021-02-27 16:09:18.5980  WARN - 
-          _____              _____                          _   
-         |  __ \            / ____|                        | |  
-         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
-         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
-         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
-         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
-          / ____|                                               
-         | (___   ___ _ ____   _____ _ __                       
-          \___ \ / _ \ '__\ \ / / _ \ '__|                      
-          ____) |  __/ |   \ V /  __/ |                         
-         |_____/ \___|_|    \_/ \___|_|  
-
-                
-2021-02-27 16:09:18.6276  WARN -          Copyright© 2021. Jm's Corp. All rights reserved.
-
-
-2021-02-27 16:09:18.6276  WARN - Starting DocConvert Server..
-2021-02-27 16:09:18.6322  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
-2021-02-27 16:09:18.6322  INFO - .Net Framework Version: 4.0.30319.42000
-2021-02-27 16:09:18.6322  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
-2021-02-27 16:09:18.6322  INFO - PC(Domain) Name: DESKTOP-6DNS55V
-2021-02-27 16:09:18.6322  INFO - User Name: o0_0o
-2021-02-27 16:09:18.6322  INFO - ------------ Parsing Ini File ------------
-2021-02-27 16:09:18.6556  INFO - - Bind IP: 0.0.0.0
-2021-02-27 16:09:18.6556  INFO - - Socket Port: 12000
-2021-02-27 16:09:18.6556  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
-2021-02-27 16:09:18.6556  INFO - - Workspace Directory: C:\Data
-2021-02-27 16:09:18.6556  INFO - - SchedulerTime: 1,0
-2021-02-27 16:09:18.6729  INFO - - CleanWorkspaceSchedulerYn: True
-2021-02-27 16:09:18.6729  INFO - - CleanWorkspaceDay: 3
-2021-02-27 16:09:18.6729  INFO - - CleanLogSchedulerYn: True
-2021-02-27 16:09:18.6797  INFO - - CleanLogDay: 10
-2021-02-27 16:09:18.6797  INFO - - DRM useYn: False
-2021-02-27 16:09:18.6797  INFO - ------------------------------------------
-2021-02-27 16:09:18.6797  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
-2021-02-27 16:09:18.6797  INFO - 한글 DLL을 레지스트리에 등록하였습니다.
-2021-02-27 16:09:18.6947  WARN - DocConvert Server Started in 2021-02-27 04:09:18
-2021-02-27 16:09:22.5276  INFO - Connect Client From: 127.0.0.1:12976  Connection time: 2021-02-27 오후 4:09:22
-2021-02-27 16:09:22.6213 DEBUG - Received messages from 127.0.0.1:12976
-{
-  "DocPassword": "",
-  "Method": "DocConvert",
-  "FileName": "test",
-  "useCompression": false,
-  "KEY": "",
-  "ConvertIMG": 2
-}
-2021-02-27 16:09:22.6213 DEBUG - =======[Client => Server]=======
-2021-02-27 16:09:22.6213 DEBUG - req_Key ==> 
-2021-02-27 16:09:22.6213 DEBUG - req_Method ==> DocConvert
-2021-02-27 16:09:22.6318 DEBUG - req_FileName ==> test
-2021-02-27 16:09:22.6318 DEBUG - req_ConvertIMG ==> 2
-2021-02-27 16:09:22.6318 DEBUG - ============================
-2021-02-27 16:09:22.6752 ERROR - 변환중 오류발생 자세한 내용은 오류로그 참고
-2021-02-27 16:09:22.6752 ERROR - ==================== Method: docConvert ====================
-2021-02-27 16:09:22.6915 ERROR -    위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   위치: System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   위치: System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
-   위치: System.IO.File.OpenRead(String path)
-   위치: DocConvert_Console.Flow.Document_Convert.MD5_CheckSUM(String filename) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\Document_Convert.cs:줄 341
-   위치: DocConvert_Console.Flow.Document_Convert.docConvert(String requestInfo) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\Document_Convert.cs:줄 77
-
-2021-02-27 16:09:22.6915 ERROR - 변환 실패: 'C:\Data\tmp\test' 경로의 일부를 찾을 수 없습니다.
-2021-02-27 16:09:22.6945 ERROR - ==================== End ====================
-2021-02-27 16:09:22.6945 DEBUG - =======[Server => Client]=======
-2021-02-27 16:09:22.6945 DEBUG - res_isSuccess ==> False
-2021-02-27 16:09:22.6945 DEBUG - res_Method ==> DocConvert
-2021-02-27 16:09:22.6945 DEBUG - res_Message ==> 
-2021-02-27 16:09:22.6945 DEBUG - res_ImgCnt ==> 0
-2021-02-27 16:09:22.6945 DEBUG - ============================
-2021-02-27 16:09:22.7096  INFO - 작업 소요시간: 00:00:00.0865048
-2021-02-27 16:09:22.7096  INFO - Disconnected : (From:127.0.0.1:12976Disconnected time: 2021-02-27 오후 4:09:22
+2021-02-27 16:59:42.6427  WARN - Starting DocConvert Server..
+2021-02-27 16:59:42.6427  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-27 16:59:42.6427  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-27 16:59:42.6427  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-27 16:59:42.6427  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-27 16:59:42.6427  INFO - User Name: o0_0o
+2021-02-27 16:59:42.6427  INFO - ------------ Parsing Ini File ------------
+2021-02-27 16:59:42.6647  INFO - - Bind IP: 0.0.0.0
+2021-02-27 16:59:42.6647  INFO - - Socket Port: 12000
+2021-02-27 16:59:42.6647  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-27 16:59:42.6647  INFO - - Workspace Directory: C:\Data
+2021-02-27 16:59:42.6647  INFO - - SchedulerTime: 1,0
+2021-02-27 16:59:42.6758  INFO - - CleanWorkspaceSchedulerYn: True
+2021-02-27 16:59:42.6758  INFO - - CleanWorkspaceDay: 3
+2021-02-27 16:59:42.6758  INFO - - CleanLogSchedulerYn: True
+2021-02-27 16:59:42.6758  INFO - - CleanLogDay: 10
+2021-02-27 16:59:42.6758  INFO - - DRM useYn: False
+2021-02-27 16:59:42.6758  INFO - ------------------------------------------
+2021-02-27 16:59:42.6898  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
+2021-02-27 16:59:42.6898  INFO - Hangul DLL has been registered in the registry.
+2021-02-27 16:59:42.6898  WARN - DocConvert Server Started in 2021-02-27 04:59:42
