@@ -200,8 +200,18 @@ namespace DocConvert_Console.Network
                 if (LogMgr.getLogLevel("DocConvert_Console_Log").Equals("DEBUG"))
                     LogMgr.Write("ERROR STACKTRACE\r\n" + e1.StackTrace, ConsoleColor.Red, LOG_LEVEL.ERROR);
 
-                socket.DisconnectAsync(this);
-                return;
+                try
+                {
+                    socket.DisconnectAsync(this);
+                    return;
+                }
+                catch (Exception e2)
+                {
+                    LogMgr.Write("ERROR CODE: " + define.UNDEFINE_ERROR.ToString(), ConsoleColor.Red, LOG_LEVEL.ERROR);
+                    LogMgr.Write("ERROR MESSAGE: " + e2.Message, ConsoleColor.Red, LOG_LEVEL.ERROR);
+                    if (LogMgr.getLogLevel("DocConvert_Console_Log").Equals("DEBUG"))
+                        LogMgr.Write("ERROR STACKTRACE\r\n" + e2.StackTrace, ConsoleColor.Red, LOG_LEVEL.ERROR);
+                }
             }
         }
     }
