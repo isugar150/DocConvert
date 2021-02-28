@@ -26031,7 +26031,7 @@
         </member>
         <member name="M:NLog.Targets.MailTarget.Write(NLog.Common.AsyncLogEventInfo)">
             <summary>
-            Renders the logging event message and adds it to the internal ArrayList of log messages.
+            Writes async log event to the mail target.
             </summary>
             <param name="logEvent">The logging event.</param>
         </member>
@@ -26047,7 +26047,7 @@
         </member>
         <member name="M:NLog.Targets.MailTarget.Write(System.Collections.Generic.IList{NLog.Common.AsyncLogEventInfo})">
             <summary>
-            Renders an array logging events.
+            Writes log events to the mail target.
             </summary>
             <param name="logEvents">Array of logging events.</param>
         </member>
@@ -26118,7 +26118,7 @@
         </member>
         <member name="T:NLog.Targets.MemoryTarget">
             <summary>
-            Writes log messages to an ArrayList in memory for programmatic retrieval.
+            Writes log messages to <see cref="P:NLog.Targets.MemoryTarget.Logs"/> in memory for programmatic retrieval.
             </summary>
             <seealso href="https://github.com/nlog/nlog/wiki/Memory-target">Documentation on NLog Wiki</seealso>
             <example>
@@ -26167,7 +26167,7 @@
         </member>
         <member name="M:NLog.Targets.MemoryTarget.Write(NLog.LogEventInfo)">
             <summary>
-            Renders the logging event message and adds it to the internal ArrayList of log messages.
+            Renders the logging event message and adds to <see cref="P:NLog.Targets.MemoryTarget.Logs"/>
             </summary>
             <param name="logEvent">The logging event.</param>
         </member>
