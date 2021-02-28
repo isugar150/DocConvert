@@ -110,13 +110,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DocConvert.ico" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\DocConvert_Core\DocConvert_Core.csproj">
       <Project>{e66d151a-0a14-4ee5-97d8-dfc33b913ae0}</Project>
       <Name>DocConvert_Core</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="DocConvert.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
