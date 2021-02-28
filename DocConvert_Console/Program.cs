@@ -51,30 +51,33 @@ namespace DocConvert_Console
             LogMgr.Write("------------ Parsing Ini File ------------", ConsoleColor.White, LOG_LEVEL.INFO);
             try
             {
-                IniFile pairs = new IniFile(); // Ini 변수 초기화
-                if (new FileInfo(Environment.CurrentDirectory + "/DocConvert_Console.ini").Exists)
+                for (int i = 0; i < 3; i++)
                 {
-                    pairs.Load(Environment.CurrentDirectory + "/DocConvert_Console.ini");
-                    IniProperties.Bind_IP = pairs["Common"]["Bind IP"].ToString2().Trim();
-                    IniProperties.Socket_Port = int.Parse(pairs["Common"]["Socket Port"].ToString2().Trim());
-                    IniProperties.Client_KEY = pairs["Common"]["Client KEY"].ToString2().Trim();
-                    IniProperties.Workspace_Directory = pairs["Common"]["Workspace Directory"].ToString2().Trim();
+                    IniFile pairs = new IniFile(); // Ini 변수 초기화
+                    if (new FileInfo(Environment.CurrentDirectory + "/DocConvert_Console.ini").Exists)
+                    {
+                        pairs.Load(Environment.CurrentDirectory + "/DocConvert_Console.ini");
+                        IniProperties.Bind_IP = pairs["Common"]["Bind IP"].ToString2().Trim();
+                        IniProperties.Socket_Port = int.Parse(pairs["Common"]["Socket Port"].ToString2().Trim());
+                        IniProperties.Client_KEY = pairs["Common"]["Client KEY"].ToString2().Trim();
+                        IniProperties.Workspace_Directory = pairs["Common"]["Workspace Directory"].ToString2().Trim();
 
-                    IniProperties.SchedulerTime = pairs["Scheduler"]["SchedulerTime"].ToString2().Trim();
-                    IniProperties.CleanWorkspaceSchedulerYn = pairs["Scheduler"]["CleanWorkspaceSchedulerYn"].ToString2().Trim().Equals("Y");
-                    IniProperties.CleanWorkspaceDay = int.Parse(pairs["Scheduler"]["CleanWorkspaceDay"].ToString2().Trim());
-                    IniProperties.CleanLogSchedulerYn = pairs["Scheduler"]["CleanLogSchedulerYn"].ToString2().Trim().Equals("Y");
-                    IniProperties.CleanLogDay = int.Parse(pairs["Scheduler"]["CleanLogDay"].ToString2().Trim());
+                        IniProperties.SchedulerTime = pairs["Scheduler"]["SchedulerTime"].ToString2().Trim();
+                        IniProperties.CleanWorkspaceSchedulerYn = pairs["Scheduler"]["CleanWorkspaceSchedulerYn"].ToString2().Trim().Equals("Y");
+                        IniProperties.CleanWorkspaceDay = int.Parse(pairs["Scheduler"]["CleanWorkspaceDay"].ToString2().Trim());
+                        IniProperties.CleanLogSchedulerYn = pairs["Scheduler"]["CleanLogSchedulerYn"].ToString2().Trim().Equals("Y");
+                        IniProperties.CleanLogDay = int.Parse(pairs["Scheduler"]["CleanLogDay"].ToString2().Trim());
 
-                    IniProperties.DRM_useYn = pairs["DRM Setting"]["DRM useYn"].ToString2().Trim().Equals("Y");
-                    IniProperties.DRM_Path = pairs["DRM Setting"]["DRM Path"].ToString2().Trim();
-                    IniProperties.DRM_Result = pairs["DRM Setting"]["DRM Result"].ToString2().Trim();
-                    IniProperties.DRM_Args = pairs["DRM Setting"]["DRM Args"].ToString2().Trim();
-                }
-                else
-                {
-                    Setting.createSetting();
-                    LogMgr.Write("The configuration file is created in " + Environment.CurrentDirectory + @"\DocConvert_Server.ini", ConsoleColor.Yellow, LOG_LEVEL.INFO);
+                        IniProperties.DRM_useYn = pairs["DRM Setting"]["DRM useYn"].ToString2().Trim().Equals("Y");
+                        IniProperties.DRM_Path = pairs["DRM Setting"]["DRM Path"].ToString2().Trim();
+                        IniProperties.DRM_Result = pairs["DRM Setting"]["DRM Result"].ToString2().Trim();
+                        IniProperties.DRM_Args = pairs["DRM Setting"]["DRM Args"].ToString2().Trim();
+                    }
+                    else
+                    {
+                        Setting.createSetting();
+                        LogMgr.Write("The configuration file is created in " + Environment.CurrentDirectory + @"\DocConvert_Server.ini", ConsoleColor.Yellow, LOG_LEVEL.INFO);
+                    }
                 }
             } catch (NullReferenceException e1)
             {

@@ -66,24 +66,49 @@ namespace DocConvert_Core.OfficeLib
                 MsoTriState OpenAndRepair = MsoTriState.msoTrue; // 07 Only
                 #endregion
                 #region 문서 열기
-                if (Path.GetExtension(FilePath).Equals(".pptx")) // Presentations.Open https://docs.microsoft.com/en-us/office/vba/api/powerpoint.presentations.open
+                try
                 {
-                    doc = multiPresentations.Open(
-                        FileName: FilePath,
-                        ReadOnly: ReadOnly,
-                        Untitled: Untitled,
-                        WithWindow: WithWindow
-                    );
-                }
-                else // Presentations.Open2007 https://docs.microsoft.com/en-us/office/vba/api/powerpoint.presentations.open2007
+                    if (Path.GetExtension(FilePath).Equals(".pptx")) // Presentations.Open https://docs.microsoft.com/en-us/office/vba/api/powerpoint.presentations.open
+                    {
+                        doc = multiPresentations.Open(
+                            FileName: FilePath,
+                            ReadOnly: ReadOnly,
+                            Untitled: Untitled,
+                            WithWindow: WithWindow
+                        );
+                    }
+                    else // Presentations.Open2007 https://docs.microsoft.com/en-us/office/vba/api/powerpoint.presentations.open2007
+                    {
+                        doc = multiPresentations.Open2007(
+                            FileName: FilePath,
+                            ReadOnly: ReadOnly,
+                            Untitled: Untitled,
+                            WithWindow: WithWindow,
+                            OpenAndRepair: OpenAndRepair
+                        );
+                    }
+                } catch(Exception)
                 {
-                    doc = multiPresentations.Open2007(
-                        FileName: FilePath,
-                        ReadOnly: ReadOnly,
-                        Untitled: Untitled,
-                        WithWindow: WithWindow,
-                        OpenAndRepair: OpenAndRepair
-                    );
+                    WithWindow = MsoTriState.msoTrue;
+                    if (Path.GetExtension(FilePath).Equals(".pptx")) // Presentations.Open https://docs.microsoft.com/en-us/office/vba/api/powerpoint.presentations.open
+                    {
+                        doc = multiPresentations.Open(
+                            FileName: FilePath,
+                            ReadOnly: ReadOnly,
+                            Untitled: Untitled,
+                            WithWindow: WithWindow
+                        );
+                    }
+                    else // Presentations.Open2007 https://docs.microsoft.com/en-us/office/vba/api/powerpoint.presentations.open2007
+                    {
+                        doc = multiPresentations.Open2007(
+                            FileName: FilePath,
+                            ReadOnly: ReadOnly,
+                            Untitled: Untitled,
+                            WithWindow: WithWindow,
+                            OpenAndRepair: OpenAndRepair
+                        );
+                    }
                 }
                 #endregion
                 #region 페이지수 얻기

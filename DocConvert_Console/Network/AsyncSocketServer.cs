@@ -119,12 +119,20 @@ namespace DocConvert_Console.Network
                             LogMgr.Write("Received messages from " + remoteAddr.Address.ToString() + ":" + remoteAddr.Port.ToString() + "\r\n" + requestMsg.ToString(), LOG_LEVEL.DEBUG);
 
                             string method = requestMsg["Method"]?.ToString().Trim() ?? ""; // 변환 메소드
-                            string key = requestMsg["KEY"]?.ToString().Trim() ?? "";  // 신뢰하는 클라이언트 확인.
+                            string clientKey = requestMsg["ClientKey"]?.ToString().Trim() ?? "";  // 신뢰하는 클라이언트 확인.
                             string fileName = requestMsg["FileName"]?.ToString().Trim() ?? "";  // 파일 이름
                             string docPassword = requestMsg["DocPassword"]?.ToString().Trim() ?? "";  // 해당 파일 암호여부
                             int convertImg = int.Parse(requestMsg["ConvertImg"]?.ToString().Trim() ?? "0");  // 이미지 변환 여부 0:변환 안함, 1:jpeg, 2:png, 3:bmp
                             string drmUseYn = requestMsg["DRM_UseYn"]?.ToString().Trim() ?? "";  // DRM 사용 여부
                             string drmType = requestMsg["DRM_Type"]?.ToString().Trim() ?? ""; // DRM 타입 
+
+                            // 클라이언트 키 일치하는지 확인
+                            if (!clientKey.Equals(Program.IniProperties.Client_KEY))
+                            {
+                                responseMsg["ResultCode"] = define.INVALID_CLIENT_KEY_ERROR.ToString();
+                                responseMsg["Message"] = "Invalid Client Key";
+                                goto sendPoint;
+                            }
 
                             // 문서 변환
                             if (method.Equals("DocConvert"))
@@ -134,6 +142,8 @@ namespace DocConvert_Console.Network
                                 responseMsg["ResultCode"] = define.INVALID_METHOD_ERROR.ToString();
                                 responseMsg["Message"] = "Invalid Method";
                             }
+
+                            sendPoint:
 
                             LogMgr.Write("Response messages to " + remoteAddr.Address.ToString() + ":" + remoteAddr.Port.ToString() + "\r\n" + responseMsg.ToString(), LOG_LEVEL.DEBUG);
 

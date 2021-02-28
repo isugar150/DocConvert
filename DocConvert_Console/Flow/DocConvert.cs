@@ -35,11 +35,24 @@ namespace DocConvert_Console.Flow
 
             DirectoryInfo workspacePath = new DirectoryInfo(Program.IniProperties.Workspace_Directory); // 파일 출력경로
             DirectoryInfo tmpPath = new DirectoryInfo(workspacePath + @"\tmp");
+            DirectoryInfo dataTodayMD5Path = null;
+            FileInfo targetFile = null;
+            FileInfo newPdfFile = null;
+            FileInfo newZipFile = null;
             FileInfo srcFile = new FileInfo(tmpPath.FullName + @"\" + fileName);
-            DirectoryInfo dataTodayMD5Path = new DirectoryInfo(workspacePath + @"\data\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + MD5_CheckSUM(srcFile.FullName));
-            FileInfo targetFile = new FileInfo(dataTodayMD5Path.FullName + @"\" + fileName);
-            FileInfo newPdfFile = new FileInfo(dataTodayMD5Path.FullName + @"\" + Path.GetFileNameWithoutExtension(fileName) + ".pdf");
-            FileInfo newZipFile = new FileInfo(dataTodayMD5Path.FullName + @"\" + Path.GetFileNameWithoutExtension(fileName) + ".zip");
+            // tmp 폴더에 파일이 있는지 체크
+            if (!srcFile.Exists)
+            {
+                status.isSuccess = false;
+                status.Message = "The file does not exist at " + srcFile.FullName;
+                status.PageCount = 0;
+                status.resultCode = define.INVALID_FILE_PATH_ERROR;
+                goto EndPoint;
+            }
+            dataTodayMD5Path = new DirectoryInfo(workspacePath.FullName + @"\data\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + MD5_CheckSUM(srcFile.FullName));
+            targetFile = new FileInfo(dataTodayMD5Path.FullName + @"\" + fileName);
+            newPdfFile = new FileInfo(dataTodayMD5Path.FullName + @"\" + Path.GetFileNameWithoutExtension(fileName) + ".pdf");
+            newZipFile = new FileInfo(dataTodayMD5Path.FullName + @"\" + Path.GetFileNameWithoutExtension(fileName) + ".zip");
 
             LogMgr.Write("Initialized variable ========>", LOG_LEVEL.DEBUG);
             LogMgr.Write("workspacePath ===> " + workspacePath.FullName, LOG_LEVEL.DEBUG);
@@ -54,12 +67,6 @@ namespace DocConvert_Console.Flow
                 responseMsg["ResultCode"] = define.INVALID_IMAGE_CONVERT_REQUEST_ERROR.ToString();
                 responseMsg["Message"] = "Invalid Image Convert Request Error";
                 return responseMsg;
-            }
-
-            // tmp 폴더에 파일이 있는지 체크
-            if (!srcFile.Exists)
-            {
-                throw new IOException("There is no file in " + srcFile.FullName);
             }
 
             // 이미 생성된 파일이 있으면..
@@ -196,9 +203,10 @@ namespace DocConvert_Console.Flow
             }
             else
             {
-                responseMsg["FilePath"] = "";
-                responseMsg["PageCnt"] = 0;
-                responseMsg["ResultCode"] = define.UNDEFINE_ERROR.ToString();
+                if(status.resultCode == 0)
+                    responseMsg["ResultCode"] = define.UNDEFINE_ERROR;
+                else
+                    responseMsg["ResultCode"] = status.resultCode;
                 responseMsg["Message"] = status.Message;
             }
 

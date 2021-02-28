@@ -15,5 +15,7 @@ namespace DocConvert_Console
         public static int INVALID_METHOD_ERROR = 1002; // 잘못된 변환 메소드
         public static int PDF_TO_PDF_ERROR = 1003; // PDF파일을 PDF로 변환 요청했을때
         public static int INVALID_IMAGE_CONVERT_REQUEST_ERROR = 1004; // PDF파일을 PDF로 변환 요청했을때
+        public static int INVALID_CLIENT_KEY_ERROR = 1005; // PDF파일을 PDF로 변환 요청했을때
+        public static int INVALID_FILE_PATH_ERROR = 1006; // PDF파일을 PDF로 변환 요청했을때
     }
 }

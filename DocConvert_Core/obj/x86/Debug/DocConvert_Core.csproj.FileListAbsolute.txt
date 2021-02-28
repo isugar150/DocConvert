@@ -87,4 +87,3 @@ C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\FilePathCheckerModuleExampl
 C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\pdfium.dll
 C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert_Core.dll
 C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert_Core.pdb
-C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Core\obj\x86\Debug\DocConvert_Core.csprojAssemblyReference.cache
