@@ -178,6 +178,7 @@ namespace DocConvert_Console.Flow
                     status = ConvertImg.PDFtoBmp(newPdfFile.FullName, imageOutPath.FullName, PdfiumViewer.PdfRenderFlags.ForPrinting);
                 }
 
+                // 압축
                 if(status.isSuccess)
                     ZipLib.CreateZipFile(Directory.GetFiles(imageOutPath.FullName), newZipFile.FullName);
             }

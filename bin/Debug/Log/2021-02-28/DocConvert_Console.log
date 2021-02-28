@@ -579,3 +579,331 @@
 }
 2021-02-28 02:30:26.4193 DEBUG - Processing time: 19.455
 2021-02-28 02:30:26.4193  INFO - Disconnected From:127.0.0.1:2609 Time: 2021-02-28 오전 2:30:26
+2021-02-28 10:11:57.5645 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-02-28 10:11:57.6641 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-02-28 10:11:57.7304  WARN - Starting DocConvert Server..
+2021-02-28 10:11:57.8634  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-28 10:11:57.9679  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-28 10:11:57.9723  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-28 10:11:57.9723  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-28 10:11:57.9723  INFO - User Name: o0_0o
+2021-02-28 10:11:58.0371  INFO - DocConvert_Core LogLevel: DEBUG
+2021-02-28 10:11:58.0607  INFO - DocConvert_Console LogLevel: DEBUG
+2021-02-28 10:11:58.1258  INFO - ------------ Parsing Ini File ------------
+2021-02-28 10:11:58.1831  INFO - - Bind IP: 0.0.0.0
+2021-02-28 10:11:58.2373  INFO - - Socket Port: 12000
+2021-02-28 10:11:58.2418  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-28 10:11:58.2418  INFO - - Workspace Directory: C:\workspace
+2021-02-28 10:11:58.2596  INFO - - SchedulerTime: 1,0
+2021-02-28 10:11:58.3236  INFO - - CleanWorkspaceSchedulerYn: True
+2021-02-28 10:11:58.3548  INFO - - CleanWorkspaceDay: 3
+2021-02-28 10:11:58.3548  INFO - - CleanLogSchedulerYn: True
+2021-02-28 10:11:58.4176  INFO - - CleanLogDay: 10
+2021-02-28 10:11:58.4759  INFO - - DRM useYn: False
+2021-02-28 10:11:58.4907  INFO - ------------------------------------------
+2021-02-28 10:11:58.5271  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
+2021-02-28 10:11:58.5549  INFO - Hangul DLL has been registered in the registry.
+2021-02-28 10:11:58.5934  WARN - DocConvert Server Started in 2021-02-28 10:11:58
+2021-02-28 10:12:12.4170  INFO - Connect Client From: 127.0.0.1:1881  Connection time: 2021-02-28 오전 10:12:12
+2021-02-28 10:12:12.6457 DEBUG - Received messages from 127.0.0.1:1881
+{
+  "DocPassword": null,
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "test.xlsx",
+  "ConvertImg": 0,
+  "DRM_Type": "",
+  "KEY": ""
+}
+2021-02-28 10:12:12.6678 DEBUG - Method DocConvert Start ==>
+2021-02-28 10:12:12.8155 ERROR - ERROR CODE: 1000
+2021-02-28 10:12:12.8221 ERROR - ERROR MESSAGE: 'C:\workspace\tmp\test.xlsx' 파일을 찾을 수 없습니다.
+2021-02-28 10:12:12.8783 ERROR - ERROR STACKTRACE
+   위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   위치: System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   위치: System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   위치: System.IO.File.OpenRead(String path)
+   위치: DocConvert_Console.Flow.DocConvert.MD5_CheckSUM(String filename) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\DocConvert.cs:줄 211
+   위치: DocConvert_Console.Flow.DocConvert._DocConvert(String fileName, String docPassword, Int32 convertImg, String drmUseYn, String drmType) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\DocConvert.cs:줄 39
+   위치: DocConvert_Console.Network.Client.Client_Completed(Object sender, SocketAsyncEventArgs e) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Network\AsyncSocketServer.cs:줄 131
+2021-02-28 10:12:12.8829 DEBUG - Processing time: 00.325
+2021-02-28 10:12:12.8829  INFO - Disconnected From:127.0.0.1:1881 Time: 2021-02-28 오전 10:12:12
+2021-02-28 10:13:25.8496 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-02-28 10:13:25.8745 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-02-28 10:13:25.8745  WARN - Starting DocConvert Server..
+2021-02-28 10:13:25.8800  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-28 10:13:25.8800  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-28 10:13:25.8800  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-28 10:13:25.8800  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-28 10:13:25.8800  INFO - User Name: o0_0o
+2021-02-28 10:13:25.8800  INFO - DocConvert_Core LogLevel: DEBUG
+2021-02-28 10:13:25.8800  INFO - DocConvert_Console LogLevel: DEBUG
+2021-02-28 10:13:25.8800  INFO - ------------ Parsing Ini File ------------
+2021-02-28 10:13:25.8993  INFO - - Bind IP: 0.0.0.0
+2021-02-28 10:13:25.8993  INFO - - Socket Port: 12000
+2021-02-28 10:13:25.8993  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-28 10:13:25.8993  INFO - - Workspace Directory: C:\workspace
+2021-02-28 10:13:25.8993  INFO - - SchedulerTime: 1,0
+2021-02-28 10:13:25.8993  INFO - - CleanWorkspaceSchedulerYn: True
+2021-02-28 10:13:25.8993  INFO - - CleanWorkspaceDay: 3
+2021-02-28 10:13:25.9103  INFO - - CleanLogSchedulerYn: True
+2021-02-28 10:13:25.9103  INFO - - CleanLogDay: 10
+2021-02-28 10:13:25.9103  INFO - - DRM useYn: False
+2021-02-28 10:13:25.9103  INFO - ------------------------------------------
+2021-02-28 10:13:25.9103  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
+2021-02-28 10:13:25.9103  INFO - Hangul DLL has been registered in the registry.
+2021-02-28 10:13:25.9103  WARN - DocConvert Server Started in 2021-02-28 10:13:25
+2021-02-28 10:13:29.3800  INFO - Connect Client From: 127.0.0.1:1888  Connection time: 2021-02-28 오전 10:13:29
+2021-02-28 10:13:34.6364 DEBUG - Received messages from 127.0.0.1:1888
+{
+  "DocPassword": null,
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "test.xlsx",
+  "ConvertImg": 0,
+  "DRM_Type": "",
+  "KEY": ""
+}
+2021-02-28 10:13:34.6483 DEBUG - Method DocConvert Start ==>
+2021-02-28 10:13:34.6908 ERROR - ERROR CODE: 1000
+2021-02-28 10:13:34.6936 ERROR - ERROR MESSAGE: 'C:\workspace\tmp\test.xlsx' 파일을 찾을 수 없습니다.
+2021-02-28 10:13:34.6936 ERROR - ERROR STACKTRACE
+   위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   위치: System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   위치: System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   위치: System.IO.File.OpenRead(String path)
+   위치: DocConvert_Console.Flow.DocConvert.MD5_CheckSUM(String filename) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\DocConvert.cs:줄 211
+   위치: DocConvert_Console.Flow.DocConvert._DocConvert(String fileName, String docPassword, Int32 convertImg, String drmUseYn, String drmType) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\DocConvert.cs:줄 39
+   위치: DocConvert_Console.Network.Client.Client_Completed(Object sender, SocketAsyncEventArgs e) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Network\AsyncSocketServer.cs:줄 131
+2021-02-28 10:13:34.6936 DEBUG - Processing time: 00.065
+2021-02-28 10:15:22.9796 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-02-28 10:15:23.0034 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-02-28 10:15:23.0054  WARN - Starting DocConvert Server..
+2021-02-28 10:15:23.0054  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-28 10:15:23.0054  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-28 10:15:23.0054  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-28 10:15:23.0054  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-28 10:15:23.0054  INFO - User Name: o0_0o
+2021-02-28 10:15:23.0054  INFO - DocConvert_Core LogLevel: DEBUG
+2021-02-28 10:15:23.0054  INFO - DocConvert_Console LogLevel: DEBUG
+2021-02-28 10:15:23.0054  INFO - ------------ Parsing Ini File ------------
+2021-02-28 10:15:23.0272  INFO - - Bind IP: 0.0.0.0
+2021-02-28 10:15:23.0272  INFO - - Socket Port: 12000
+2021-02-28 10:15:23.0272  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-28 10:15:23.0272  INFO - - Workspace Directory: C:\workspace
+2021-02-28 10:15:23.0272  INFO - - SchedulerTime: 1,0
+2021-02-28 10:15:23.0368  INFO - - CleanWorkspaceSchedulerYn: True
+2021-02-28 10:15:23.0368  INFO - - CleanWorkspaceDay: 3
+2021-02-28 10:15:23.0368  INFO - - CleanLogSchedulerYn: True
+2021-02-28 10:15:23.0368  INFO - - CleanLogDay: 10
+2021-02-28 10:15:23.0368  INFO - - DRM useYn: False
+2021-02-28 10:15:23.0368  INFO - ------------------------------------------
+2021-02-28 10:15:23.0368  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
+2021-02-28 10:15:23.0517  INFO - Hangul DLL has been registered in the registry.
+2021-02-28 10:15:23.0517  WARN - DocConvert Server Started in 2021-02-28 10:15:23
+2021-02-28 10:15:25.8697  INFO - Connect Client From: 127.0.0.1:1902  Connection time: 2021-02-28 오전 10:15:25
+2021-02-28 10:15:25.9938 DEBUG - Received messages from 127.0.0.1:1902
+{
+  "DocPassword": null,
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "test.xlsx",
+  "ConvertImg": 0,
+  "DRM_Type": "",
+  "KEY": ""
+}
+2021-02-28 10:15:25.9938 DEBUG - Method DocConvert Start ==>
+2021-02-28 10:15:26.0426 ERROR - ERROR CODE: 1000
+2021-02-28 10:15:26.0426 ERROR - ERROR MESSAGE: 'C:\workspace\tmp\test.xlsx' 파일을 찾을 수 없습니다.
+2021-02-28 10:15:26.0586 ERROR - ERROR STACKTRACE
+   위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   위치: System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   위치: System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   위치: System.IO.File.OpenRead(String path)
+   위치: DocConvert_Console.Flow.DocConvert.MD5_CheckSUM(String filename) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\DocConvert.cs:줄 211
+   위치: DocConvert_Console.Flow.DocConvert._DocConvert(String fileName, String docPassword, Int32 convertImg, String drmUseYn, String drmType) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\DocConvert.cs:줄 39
+   위치: DocConvert_Console.Network.Client.Client_Completed(Object sender, SocketAsyncEventArgs e) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Network\AsyncSocketServer.cs:줄 131
+2021-02-28 10:15:26.0586 DEBUG - Processing time: 00.095
+2021-02-28 10:15:26.0586  INFO - Disconnected From:127.0.0.1:1902 Time: 2021-02-28 오전 10:15:26
+2021-02-28 10:15:44.3297  INFO - Connect Client From: 127.0.0.1:1909  Connection time: 2021-02-28 오전 10:15:44
+2021-02-28 10:15:50.9604 DEBUG - Received messages from 127.0.0.1:1909
+{
+  "DocPassword": null,
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "test.xlsx",
+  "ConvertImg": 0,
+  "DRM_Type": "",
+  "KEY": ""
+}
+2021-02-28 10:15:50.9604 ERROR - ERROR CODE: 1000
+2021-02-28 10:15:50.9604 DEBUG - Method DocConvert Start ==>
+2021-02-28 10:15:50.9604 ERROR - ERROR MESSAGE: 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다
+2021-02-28 10:15:50.9739 ERROR - ERROR CODE: 1000
+2021-02-28 10:15:50.9739 ERROR - ERROR STACKTRACE
+   위치: System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   위치: System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 size, SocketFlags socketFlags)
+   위치: DocConvert_Console.Network.Client.Send(String msg) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Network\AsyncSocketServer.cs:줄 186
+2021-02-28 10:15:50.9739 ERROR - ERROR MESSAGE: 'C:\workspace\tmp\test.xlsx' 파일을 찾을 수 없습니다.
+2021-02-28 10:15:51.0048  INFO - Disconnected From:127.0.0.1:1909 Time: 2021-02-28 오전 10:15:51
+2021-02-28 10:15:51.0048 ERROR - ERROR STACKTRACE
+   위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   위치: System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   위치: System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   위치: System.IO.File.OpenRead(String path)
+   위치: DocConvert_Console.Flow.DocConvert.MD5_CheckSUM(String filename) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\DocConvert.cs:줄 211
+   위치: DocConvert_Console.Flow.DocConvert._DocConvert(String fileName, String docPassword, Int32 convertImg, String drmUseYn, String drmType) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\DocConvert.cs:줄 39
+   위치: DocConvert_Console.Network.Client.Client_Completed(Object sender, SocketAsyncEventArgs e) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Network\AsyncSocketServer.cs:줄 131
+2021-02-28 10:15:51.0048 DEBUG - Processing time: 00.050
+2021-02-28 10:16:36.7809 ERROR - ERROR CODE: 1000
+2021-02-28 10:16:36.7809 ERROR - ERROR MESSAGE: 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다
+2021-02-28 10:16:36.7851 ERROR - ERROR STACKTRACE
+   위치: System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   위치: System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 size, SocketFlags socketFlags)
+   위치: DocConvert_Console.Network.Client.Send(String msg) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Network\AsyncSocketServer.cs:줄 186
+2021-02-28 10:16:36.7851  INFO - Disconnected From:127.0.0.1:1909 Time: 2021-02-28 오전 10:16:36
+2021-02-28 10:17:26.6382 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-02-28 10:17:26.6675 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-02-28 10:17:26.6675  WARN - Starting DocConvert Server..
+2021-02-28 10:17:26.6675  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-28 10:17:26.6675  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-28 10:17:26.6675  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-28 10:17:26.6767  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-28 10:17:26.6767  INFO - User Name: o0_0o
+2021-02-28 10:17:26.6767  INFO - DocConvert_Core LogLevel: DEBUG
+2021-02-28 10:17:26.6767  INFO - DocConvert_Console LogLevel: DEBUG
+2021-02-28 10:17:26.6767  INFO - ------------ Parsing Ini File ------------
+2021-02-28 10:17:26.6926  INFO - - Bind IP: 0.0.0.0
+2021-02-28 10:17:26.6926  INFO - - Socket Port: 12000
+2021-02-28 10:17:26.6926  INFO - - Client KEY: B29D00A3 - F25 - 4EB7 - 93C1 - A77F5E31A7C2
+2021-02-28 10:17:26.6926  INFO - - Workspace Directory: C:\workspace
+2021-02-28 10:17:26.6926  INFO - - SchedulerTime: 1,0
+2021-02-28 10:17:26.6926  INFO - - CleanWorkspaceSchedulerYn: True
+2021-02-28 10:17:26.6926  INFO - - CleanWorkspaceDay: 3
+2021-02-28 10:17:26.6926  INFO - - CleanLogSchedulerYn: True
+2021-02-28 10:17:26.6926  INFO - - CleanLogDay: 10
+2021-02-28 10:17:26.7074  INFO - - DRM useYn: False
+2021-02-28 10:17:26.7074  INFO - ------------------------------------------
+2021-02-28 10:17:26.7074  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
+2021-02-28 10:17:26.7074  INFO - Hangul DLL has been registered in the registry.
+2021-02-28 10:17:26.7074  WARN - DocConvert Server Started in 2021-02-28 10:17:26
+2021-02-28 10:17:34.9379  INFO - Connect Client From: 127.0.0.1:1925  Connection time: 2021-02-28 오전 10:17:34
+2021-02-28 10:17:35.0320 DEBUG - Received messages from 127.0.0.1:1925
+{
+  "DocPassword": null,
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "test.xlsx",
+  "ConvertImg": 0,
+  "DRM_Type": "",
+  "KEY": ""
+}
+2021-02-28 10:17:35.0399 DEBUG - Method DocConvert Start ==>
+2021-02-28 10:17:35.0813 ERROR - ERROR CODE: 1000
+2021-02-28 10:17:35.0834 ERROR - ERROR MESSAGE: 'C:\workspace\tmp\test.xlsx' 파일을 찾을 수 없습니다.
+2021-02-28 10:17:35.0980 ERROR - ERROR STACKTRACE
+   위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   위치: System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   위치: System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   위치: System.IO.File.OpenRead(String path)
+   위치: DocConvert_Console.Flow.DocConvert.MD5_CheckSUM(String filename) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\DocConvert.cs:줄 211
+   위치: DocConvert_Console.Flow.DocConvert._DocConvert(String fileName, String docPassword, Int32 convertImg, String drmUseYn, String drmType) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\DocConvert.cs:줄 39
+   위치: DocConvert_Console.Network.Client.Client_Completed(Object sender, SocketAsyncEventArgs e) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Network\AsyncSocketServer.cs:줄 131
+2021-02-28 10:17:35.0980 DEBUG - Processing time: 00.099
+2021-02-28 10:17:35.0980  INFO - Disconnected From:127.0.0.1:1925 Time: 2021-02-28 오전 10:17:35
+2021-02-28 10:17:47.0029  INFO - Connect Client From: 127.0.0.1:1931  Connection time: 2021-02-28 오전 10:17:47
+2021-02-28 10:17:54.0885 DEBUG - Received messages from 127.0.0.1:1931
+{
+  "DocPassword": null,
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "test.xlsx",
+  "ConvertImg": 0,
+  "DRM_Type": "",
+  "KEY": ""
+}
+2021-02-28 10:17:54.0885 DEBUG - Method DocConvert Start ==>
+2021-02-28 10:17:54.0885 ERROR - ERROR CODE: 1000
+2021-02-28 10:17:54.0986 ERROR - ERROR MESSAGE: 'C:\workspace\tmp\test.xlsx' 파일을 찾을 수 없습니다.
+2021-02-28 10:17:54.0986 ERROR - ERROR STACKTRACE
+   위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   위치: System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   위치: System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   위치: System.IO.File.OpenRead(String path)
+   위치: DocConvert_Console.Flow.DocConvert.MD5_CheckSUM(String filename) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\DocConvert.cs:줄 211
+   위치: DocConvert_Console.Flow.DocConvert._DocConvert(String fileName, String docPassword, Int32 convertImg, String drmUseYn, String drmType) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Flow\DocConvert.cs:줄 39
+   위치: DocConvert_Console.Network.Client.Client_Completed(Object sender, SocketAsyncEventArgs e) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Network\AsyncSocketServer.cs:줄 131
+2021-02-28 10:17:54.0986 DEBUG - Processing time: 07.093
+2021-02-28 10:17:54.0986 ERROR - ERROR CODE: 1000
+2021-02-28 10:17:54.0986 ERROR - ERROR MESSAGE: 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다
+2021-02-28 10:17:54.1187 ERROR - ERROR STACKTRACE
+   위치: System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   위치: System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 size, SocketFlags socketFlags)
+   위치: DocConvert_Console.Network.Client.Send(String msg) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Network\AsyncSocketServer.cs:줄 195
+2021-02-28 10:17:54.1187  INFO - Disconnected From:127.0.0.1:1931 Time: 2021-02-28 오전 10:17:54
+2021-02-28 10:17:54.1336 ERROR - ERROR CODE: 1000
+2021-02-28 10:17:54.1336 ERROR - ERROR MESSAGE: "이 SocketAsyncEventArgs 인스턴스를 사용하여 비동기 소켓 작업이 이미 진행되고 있습니다.";
+2021-02-28 10:17:54.1336 ERROR - ERROR STACKTRACE
+   위치: System.Net.Sockets.SocketAsyncEventArgs.StartOperationCommon(Socket socket)
+   위치: System.Net.Sockets.Socket.DisconnectAsync(SocketAsyncEventArgs e)
+   위치: DocConvert_Console.Network.Client.Client_Completed(Object sender, SocketAsyncEventArgs e) 파일 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\Network\AsyncSocketServer.cs:줄 164

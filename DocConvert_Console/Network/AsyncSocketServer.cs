@@ -159,8 +159,17 @@ namespace DocConvert_Console.Network
                             responseMsg["Message"] = e1.Message;
                             Send(responseMsg.ToString());
 
-                            socket.DisconnectAsync(this);
-                            return;
+                            try
+                            {
+                                socket.DisconnectAsync(this);
+                                return;
+                            } catch(Exception e2)
+                            {
+                                LogMgr.Write("ERROR CODE: " + define.UNDEFINE_ERROR.ToString(), ConsoleColor.Red, LOG_LEVEL.ERROR);
+                                LogMgr.Write("ERROR MESSAGE: " + e2.Message, ConsoleColor.Red, LOG_LEVEL.ERROR);
+                                if (LogMgr.getLogLevel("DocConvert_Console_Log").Equals("DEBUG"))
+                                    LogMgr.Write("ERROR STACKTRACE\r\n" + e2.StackTrace, ConsoleColor.Red, LOG_LEVEL.ERROR);
+                            }
                         }
                     }
 
@@ -180,8 +189,20 @@ namespace DocConvert_Console.Network
         private void Send(String msg)
         {
             //byte[] sendData = Encoding.ASCII.GetBytes(msg);
-            byte[] sendData = Encoding.UTF8.GetBytes(msg);
-            socket.Send(sendData, sendData.Length, SocketFlags.None);
+            try
+            {
+                byte[] sendData = Encoding.UTF8.GetBytes(msg);
+                socket.Send(sendData, sendData.Length, SocketFlags.None);
+            } catch(Exception e1)
+            {
+                LogMgr.Write("ERROR CODE: " + define.UNDEFINE_ERROR.ToString(), ConsoleColor.Red, LOG_LEVEL.ERROR);
+                LogMgr.Write("ERROR MESSAGE: " + e1.Message, ConsoleColor.Red, LOG_LEVEL.ERROR);
+                if (LogMgr.getLogLevel("DocConvert_Console_Log").Equals("DEBUG"))
+                    LogMgr.Write("ERROR STACKTRACE\r\n" + e1.StackTrace, ConsoleColor.Red, LOG_LEVEL.ERROR);
+
+                socket.DisconnectAsync(this);
+                return;
+            }
         }
     }
 }

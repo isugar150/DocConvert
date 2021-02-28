@@ -8,7 +8,7 @@ public class test {
     public static void main(String args[]){
         try {
             Socket socket = new Socket("localhost", 12000);
-            socket.setSoTimeout(60000);
+            socket.setSoTimeout(1);
             OutputStream output = socket.getOutputStream();
             String realStr = "";
             byte[] data = realStr.getBytes(); //getBytes() 메서드를 사용 해 문자열을 Byte로 바꿔준다
