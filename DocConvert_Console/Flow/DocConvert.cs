@@ -35,25 +35,20 @@ namespace DocConvert_Console.Flow
 
             DirectoryInfo workspacePath = new DirectoryInfo(Program.IniProperties.Workspace_Directory); // 파일 출력경로
             DirectoryInfo tmpPath = new DirectoryInfo(workspacePath + @"\tmp");
-            DirectoryInfo dataTodayMD5Path = null;
-            FileInfo targetFile = null;
-            FileInfo newPdfFile = null;
-            FileInfo newZipFile = null;
             FileInfo srcFile = new FileInfo(tmpPath.FullName + @"\" + fileName);
-            // tmp 폴더에 파일이 있는지 체크
-            if (!srcFile.Exists)
+            DirectoryInfo dataTodayMD5Path = null;
+            try
             {
-                status.isSuccess = false;
-                status.Message = "The file does not exist at " + srcFile.FullName;
-                status.PageCount = 0;
-                status.resultCode = define.INVALID_FILE_PATH_ERROR;
-                goto EndPoint;
+                dataTodayMD5Path = new DirectoryInfo(workspacePath.FullName + @"\data\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + MD5_CheckSUM(srcFile.FullName));
+            } catch(Exception e1)
+            {
+                responseMsg["ResultCode"] = define.INVALID_FILE_NOT_FOUND_ERROR.ToString();
+                responseMsg["Message"] = "The file does not exist at " + srcFile.FullName;
+                return responseMsg;
             }
-            dataTodayMD5Path = new DirectoryInfo(workspacePath.FullName + @"\data\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + MD5_CheckSUM(srcFile.FullName));
-            targetFile = new FileInfo(dataTodayMD5Path.FullName + @"\" + fileName);
-            newPdfFile = new FileInfo(dataTodayMD5Path.FullName + @"\" + Path.GetFileNameWithoutExtension(fileName) + ".pdf");
-            newZipFile = new FileInfo(dataTodayMD5Path.FullName + @"\" + Path.GetFileNameWithoutExtension(fileName) + ".zip");
-
+            FileInfo targetFile = new FileInfo(dataTodayMD5Path.FullName + @"\" + fileName);
+            FileInfo newPdfFile = new FileInfo(dataTodayMD5Path.FullName + @"\" + Path.GetFileNameWithoutExtension(fileName) + ".pdf");
+            FileInfo newZipFile = new FileInfo(dataTodayMD5Path.FullName + @"\" + Path.GetFileNameWithoutExtension(fileName) + ".zip");
             LogMgr.Write("Initialized variable ========>", LOG_LEVEL.DEBUG);
             LogMgr.Write("workspacePath ===> " + workspacePath.FullName, LOG_LEVEL.DEBUG);
             LogMgr.Write("tmpPath ===> " + tmpPath.FullName, LOG_LEVEL.DEBUG);
@@ -62,7 +57,8 @@ namespace DocConvert_Console.Flow
             LogMgr.Write("targetFile ===> " + targetFile.FullName, LOG_LEVEL.DEBUG);
             LogMgr.Write("=============================>", LOG_LEVEL.DEBUG);
 
-            if(convertImg != 0 && convertImg != 1 && convertImg != 2 && convertImg != 3)
+            // convertImg 변수가 유효하지 않으면 리턴.
+            if (convertImg != 0 && convertImg != 1 && convertImg != 2 && convertImg != 3)
             {
                 responseMsg["ResultCode"] = define.INVALID_IMAGE_CONVERT_REQUEST_ERROR.ToString();
                 responseMsg["Message"] = "Invalid Image Convert Request Error";
@@ -79,6 +75,7 @@ namespace DocConvert_Console.Flow
                     if (convertImg == 0)
                     {
                         status.isSuccess = true;
+                        srcFile.Delete();
                         goto EndPoint;
                     }
                     // 이미지 변환을 요청하였을 경우..
@@ -88,10 +85,12 @@ namespace DocConvert_Console.Flow
                         if (newZipFile.Exists)
                         {
                             status.isSuccess = true;
+                            srcFile.Delete();
                             goto EndPoint;
                         }
                         else
                         {
+                            srcFile.Delete();
                             goto ConvertImagePoint;
                         }
                     }
@@ -203,10 +202,7 @@ namespace DocConvert_Console.Flow
             }
             else
             {
-                if(status.resultCode == 0)
-                    responseMsg["ResultCode"] = define.UNDEFINE_ERROR;
-                else
-                    responseMsg["ResultCode"] = status.resultCode;
+                responseMsg["ResultCode"] = define.UNDEFINE_ERROR;
                 responseMsg["Message"] = status.Message;
             }
 
