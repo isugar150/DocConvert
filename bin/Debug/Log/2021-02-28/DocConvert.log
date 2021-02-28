@@ -1,0 +1,170 @@
+2021-02-28 15:45:29.9103 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-02-28 15:45:29.9465 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-02-28 15:45:29.9465  WARN - Starting DocConvert Server..
+2021-02-28 15:45:29.9465  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-28 15:45:29.9465  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-28 15:45:29.9465  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-28 15:45:29.9465  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-28 15:45:29.9465  INFO - User Name: o0_0o
+2021-02-28 15:45:29.9616  INFO - DocConvert LogLevel: DEBUG
+2021-02-28 15:45:29.9616  INFO - DocConvert_Core LogLevel: DEBUG
+2021-02-28 15:45:29.9616  INFO - ------------ Parsing Ini File ------------
+2021-02-28 15:45:29.9816  INFO - The configuration file is created in C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert.ini
+2021-02-28 15:45:29.9816  INFO - The configuration file is created in C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert.ini
+2021-02-28 15:45:29.9971  INFO - The configuration file is created in C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert.ini
+2021-02-28 15:45:29.9971  INFO - - Bind IP: 0.0.0.0
+2021-02-28 15:45:29.9971  INFO - - Socket Port: 12000
+2021-02-28 15:45:29.9971  INFO - - Client KEY: 
+2021-02-28 15:45:29.9971  INFO - - Workspace Directory: C:\workspace
+2021-02-28 15:45:30.0096  INFO - - SchedulerTime: 1,0
+2021-02-28 15:45:30.0096  INFO - - CleanWorkspaceSchedulerYn: False
+2021-02-28 15:45:30.0096  INFO - - CleanWorkspaceDay: 3
+2021-02-28 15:45:30.0096  INFO - - CleanLogSchedulerYn: False
+2021-02-28 15:45:30.0096  INFO - - CleanLogDay: 3
+2021-02-28 15:45:30.0250  INFO - - DRM useYn: False
+2021-02-28 15:45:30.0250  INFO - ------------------------------------------
+2021-02-28 15:45:30.0250  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
+2021-02-28 15:45:30.0250  INFO - Hangul DLL has been registered in the registry.
+2021-02-28 15:45:30.0250  WARN - DocConvert Server Started in 2021-02-28 03:45:30
+2021-02-28 15:45:36.5373 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-02-28 15:45:36.5628 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-02-28 15:45:36.5628  WARN - Starting DocConvert Server..
+2021-02-28 15:45:36.5628  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-28 15:45:36.5684  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-28 15:45:36.5684  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-28 15:45:36.5684  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-28 15:45:36.5684  INFO - User Name: o0_0o
+2021-02-28 15:45:36.5684  INFO - DocConvert LogLevel: DEBUG
+2021-02-28 15:45:36.5684  INFO - DocConvert_Core LogLevel: DEBUG
+2021-02-28 15:45:36.5684  INFO - ------------ Parsing Ini File ------------
+2021-02-28 15:45:36.5968  INFO - The configuration file is created in C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert.ini
+2021-02-28 15:45:36.6056  INFO - The configuration file is created in C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert.ini
+2021-02-28 15:45:36.6056  INFO - The configuration file is created in C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert.ini
+2021-02-28 15:45:36.6155  INFO - - Bind IP: 0.0.0.0
+2021-02-28 15:45:36.6155  INFO - - Socket Port: 12000
+2021-02-28 15:45:36.6155  INFO - - Client KEY: 
+2021-02-28 15:45:36.6155  INFO - - Workspace Directory: C:\workspace
+2021-02-28 15:45:36.6155  INFO - - SchedulerTime: 1,0
+2021-02-28 15:45:36.6155  INFO - - CleanWorkspaceSchedulerYn: False
+2021-02-28 15:45:36.6155  INFO - - CleanWorkspaceDay: 3
+2021-02-28 15:45:36.6347  INFO - - CleanLogSchedulerYn: False
+2021-02-28 15:45:36.6347  INFO - - CleanLogDay: 3
+2021-02-28 15:45:36.6347  INFO - - DRM useYn: False
+2021-02-28 15:45:36.6347  INFO - ------------------------------------------
+2021-02-28 15:45:36.6347  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
+2021-02-28 15:45:36.6492  INFO - Hangul DLL has been registered in the registry.
+2021-02-28 15:45:36.6492  WARN - DocConvert Server Started in 2021-02-28 03:45:36
+2021-02-28 15:46:10.5869 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-02-28 15:46:10.6113 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-02-28 15:46:10.6113  WARN - Starting DocConvert Server..
+2021-02-28 15:46:10.6157  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-28 15:46:10.6157  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-28 15:46:10.6157  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-28 15:46:10.6157  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-28 15:46:10.6157  INFO - User Name: o0_0o
+2021-02-28 15:46:10.6157  INFO - DocConvert LogLevel: DEBUG
+2021-02-28 15:46:10.6157  INFO - DocConvert_Core LogLevel: DEBUG
+2021-02-28 15:46:10.6157  INFO - ------------ Parsing Ini File ------------
+2021-02-28 15:46:10.6476  INFO - The configuration file is created in C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert.ini
+2021-02-28 15:46:10.6746  INFO - The configuration file is created in C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert.ini
+2021-02-28 15:46:10.6844  INFO - The configuration file is created in C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert.ini
+2021-02-28 15:46:10.6844  INFO - - Bind IP: 0.0.0.0
+2021-02-28 15:46:10.6844  INFO - - Socket Port: 12000
+2021-02-28 15:46:10.6973  INFO - - Client KEY: 
+2021-02-28 15:46:10.6973  INFO - - Workspace Directory: C:\workspace
+2021-02-28 15:46:10.6973  INFO - - SchedulerTime: 1,0
+2021-02-28 15:46:10.7167  INFO - - CleanWorkspaceSchedulerYn: False
+2021-02-28 15:46:10.7167  INFO - - CleanWorkspaceDay: 3
+2021-02-28 15:46:10.7247  INFO - - CleanLogSchedulerYn: False
+2021-02-28 15:46:10.7247  INFO - - CleanLogDay: 3
+2021-02-28 15:46:10.7457  INFO - - DRM useYn: False
+2021-02-28 15:46:10.7457  INFO - ------------------------------------------
+2021-02-28 15:46:10.7457  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
+2021-02-28 15:46:10.7581  INFO - Hangul DLL has been registered in the registry.
+2021-02-28 15:46:10.7802  WARN - DocConvert Server Started in 2021-02-28 03:46:10
+2021-02-28 15:46:40.8647 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-02-28 15:46:40.8980 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-02-28 15:46:40.8980  WARN - Starting DocConvert Server..
+2021-02-28 15:46:40.8980  INFO - Program Directory: C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug
+2021-02-28 15:46:40.8980  INFO - .Net Framework Version: 4.0.30319.42000
+2021-02-28 15:46:40.8980  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-02-28 15:46:40.8980  INFO - PC(Domain) Name: DESKTOP-6DNS55V
+2021-02-28 15:46:40.8980  INFO - User Name: o0_0o
+2021-02-28 15:46:40.8980  INFO - DocConvert LogLevel: DEBUG
+2021-02-28 15:46:40.9283  INFO - DocConvert_Core LogLevel: DEBUG
+2021-02-28 15:46:40.9283  INFO - ------------ Parsing Ini File ------------
+2021-02-28 15:46:40.9487  INFO - The configuration file is created in C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert.ini
+2021-02-28 15:46:40.9673  INFO - - Bind IP: 0.0.0.0
+2021-02-28 15:46:40.9673  INFO - - Socket Port: 12000
+2021-02-28 15:46:40.9673  INFO - - Client KEY: 9e2efa1e-5421-4ab3-9670-1aaf21d674ce
+2021-02-28 15:46:40.9783  INFO - - Workspace Directory: C:\workspace
+2021-02-28 15:46:40.9783  INFO - - SchedulerTime: 1,0
+2021-02-28 15:46:40.9783  INFO - - CleanWorkspaceSchedulerYn: True
+2021-02-28 15:46:40.9909  INFO - - CleanWorkspaceDay: 3
+2021-02-28 15:46:40.9909  INFO - - CleanLogSchedulerYn: True
+2021-02-28 15:46:40.9909  INFO - - CleanLogDay: 10
+2021-02-28 15:46:40.9909  INFO - - DRM useYn: False
+2021-02-28 15:46:40.9909  INFO - ------------------------------------------
+2021-02-28 15:46:41.0132  WARN - Socket Server Listen On IP: 0.0.0.0 PORT: 12000
+2021-02-28 15:46:41.0132  INFO - Hangul DLL has been registered in the registry.
+2021-02-28 15:46:41.0341  WARN - DocConvert Server Started in 2021-02-28 03:46:41

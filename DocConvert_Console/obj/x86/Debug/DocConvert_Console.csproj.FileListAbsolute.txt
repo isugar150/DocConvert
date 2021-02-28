@@ -24,11 +24,11 @@ C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\bin\x86\Debug\nl\P
 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\obj\x86\Debug\DocConvert_Console.csprojAssemblyReference.cache
 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\obj\x86\Debug\DocConvert_Console.csproj.CoreCompileInputs.cache
 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\obj\x86\Debug\DocConvert_Console.csproj.CopyComplete
-C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\obj\x86\Debug\DocConvert_Console.exe
-C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\obj\x86\Debug\DocConvert_Console.pdb
 C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\NLog.config
 C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\FilePathCheckerModuleExample.dll
 C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\pdfium.dll
-C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert_Console.exe.config
-C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert_Console.exe
-C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert_Console.pdb
+C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert.exe.config
+C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert.exe
+C:\Users\o0_0o\Documents\Source\DocConvert\bin\Debug\DocConvert.pdb
+C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\obj\x86\Debug\DocConvert.exe
+C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\obj\x86\Debug\DocConvert.pdb

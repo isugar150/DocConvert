@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DocConvert_Console.Common
+namespace DocConvert.Common
 {
     public enum LOG_LEVEL
     {
@@ -18,7 +18,7 @@ namespace DocConvert_Console.Common
     }
     public class LogMgr
     {
-        private static Logger consoleLogger = LogManager.GetLogger("DocConvert_Console_Log");
+        private static Logger consoleLogger = LogManager.GetLogger("DocConvert_Log");
         private static Logger coreLogger = LogManager.GetLogger("DocConvert_Core_Log");
 
         /// <summary>
@@ -132,20 +132,7 @@ namespace DocConvert_Console.Common
         public static string getLogLevel(string loggerName)
         {
             string logLevel = "";
-            if (loggerName.Equals("DocConvert_Core_Log"))
-            {
-                if (coreLogger.IsTraceEnabled)
-                    logLevel = "TRACE";
-                else if (coreLogger.IsDebugEnabled)
-                    logLevel = "DEBUG";
-                else if (coreLogger.IsInfoEnabled)
-                    logLevel = "INFO";
-                else if (coreLogger.IsWarnEnabled)
-                    logLevel = "WARN";
-                else if (coreLogger.IsErrorEnabled)
-                    logLevel = "ERROR";
-                else logLevel = null;
-            } else if (loggerName.Equals("DocConvert_Console_Log"))
+            if (loggerName.Equals("DocConvert_Log"))
             {
                 if (consoleLogger.IsTraceEnabled)
                     logLevel = "TRACE";
@@ -156,6 +143,20 @@ namespace DocConvert_Console.Common
                 else if (consoleLogger.IsWarnEnabled)
                     logLevel = "WARN";
                 else if (consoleLogger.IsErrorEnabled)
+                    logLevel = "ERROR";
+                else logLevel = null;
+            }
+            else if (loggerName.Equals("DocConvert_Core_Log"))
+            {
+                if (coreLogger.IsTraceEnabled)
+                    logLevel = "TRACE";
+                else if (coreLogger.IsDebugEnabled)
+                    logLevel = "DEBUG";
+                else if (coreLogger.IsInfoEnabled)
+                    logLevel = "INFO";
+                else if (coreLogger.IsWarnEnabled)
+                    logLevel = "WARN";
+                else if (coreLogger.IsErrorEnabled)
                     logLevel = "ERROR";
                 else logLevel = null;
             }

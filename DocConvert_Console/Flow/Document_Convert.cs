@@ -1,4 +1,4 @@
-﻿using DocConvert_Console.Common;
+﻿using DocConvert.Common;
 using DocConvert_Core.FileLib;
 using DocConvert_Core.HWPLib;
 using DocConvert_Core.imageLib;
@@ -17,7 +17,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace DocConvert_Console.Flow
+namespace DocConvert.Flow
 {
     public class Document_Convert
     {

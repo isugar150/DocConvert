@@ -1,4 +1,4 @@
-﻿using DocConvert_Console.Common;
+﻿using DocConvert.Common;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using NLog;
@@ -10,7 +10,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DocConvert_Console.Network
+namespace DocConvert.Network
 {
     public class AsyncSocketServer : Socket
     {
@@ -159,7 +159,7 @@ namespace DocConvert_Console.Network
                         {
                             LogMgr.Write("ERROR CODE: " + define.UNDEFINE_ERROR.ToString(), ConsoleColor.Red, LOG_LEVEL.ERROR);
                             LogMgr.Write("ERROR MESSAGE: " + e1.Message, ConsoleColor.Red, LOG_LEVEL.ERROR);
-                            if(LogMgr.getLogLevel("DocConvert_Console_Log").Equals("DEBUG"))
+                            if(LogMgr.getLogLevel("DocConvert_Log").Equals("DEBUG"))
                                 LogMgr.Write("ERROR STACKTRACE\r\n" + e1.StackTrace, ConsoleColor.Red, LOG_LEVEL.ERROR);
 
                             TimeSpan curTime = DateTime.Now - timeTaken;
@@ -177,7 +177,7 @@ namespace DocConvert_Console.Network
                             {
                                 LogMgr.Write("ERROR CODE: " + define.UNDEFINE_ERROR.ToString(), ConsoleColor.Red, LOG_LEVEL.ERROR);
                                 LogMgr.Write("ERROR MESSAGE: " + e2.Message, ConsoleColor.Red, LOG_LEVEL.ERROR);
-                                if (LogMgr.getLogLevel("DocConvert_Console_Log").Equals("DEBUG"))
+                                if (LogMgr.getLogLevel("DocConvert_Log").Equals("DEBUG"))
                                     LogMgr.Write("ERROR STACKTRACE\r\n" + e2.StackTrace, ConsoleColor.Red, LOG_LEVEL.ERROR);
                             }
                         }
@@ -207,7 +207,7 @@ namespace DocConvert_Console.Network
             {
                 LogMgr.Write("ERROR CODE: " + define.UNDEFINE_ERROR.ToString(), ConsoleColor.Red, LOG_LEVEL.ERROR);
                 LogMgr.Write("ERROR MESSAGE: " + e1.Message, ConsoleColor.Red, LOG_LEVEL.ERROR);
-                if (LogMgr.getLogLevel("DocConvert_Console_Log").Equals("DEBUG"))
+                if (LogMgr.getLogLevel("DocConvert_Log").Equals("DEBUG"))
                     LogMgr.Write("ERROR STACKTRACE\r\n" + e1.StackTrace, ConsoleColor.Red, LOG_LEVEL.ERROR);
 
                 try
@@ -219,7 +219,7 @@ namespace DocConvert_Console.Network
                 {
                     LogMgr.Write("ERROR CODE: " + define.UNDEFINE_ERROR.ToString(), ConsoleColor.Red, LOG_LEVEL.ERROR);
                     LogMgr.Write("ERROR MESSAGE: " + e2.Message, ConsoleColor.Red, LOG_LEVEL.ERROR);
-                    if (LogMgr.getLogLevel("DocConvert_Console_Log").Equals("DEBUG"))
+                    if (LogMgr.getLogLevel("DocConvert_Log").Equals("DEBUG"))
                         LogMgr.Write("ERROR STACKTRACE\r\n" + e2.StackTrace, ConsoleColor.Red, LOG_LEVEL.ERROR);
                 }
             }

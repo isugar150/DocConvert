@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Threading;
-using DocConvert_Console.Common;
+using DocConvert.Common;
 using DocConvert_Core.IniLib;
 using Microsoft.Win32;
 using NLog;
@@ -10,7 +10,7 @@ using NLog;
 //TODO DRM 사용관련 업데이트해야함.
 
 
-namespace DocConvert_Console
+namespace DocConvert
 {
     public class Program
     {
@@ -45,8 +45,8 @@ namespace DocConvert_Console
             LogMgr.Write("OS Version: " + Environment.OSVersion.ToString(), ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("PC(Domain) Name: " + Environment.UserDomainName, ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("User Name: " + Environment.UserName, ConsoleColor.White, LOG_LEVEL.INFO);
+            LogMgr.Write("DocConvert LogLevel: " + LogMgr.getLogLevel("DocConvert_Log"), ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("DocConvert_Core LogLevel: " + LogMgr.getLogLevel("DocConvert_Core_Log"), ConsoleColor.White, LOG_LEVEL.INFO);
-            LogMgr.Write("DocConvert_Console LogLevel: " + LogMgr.getLogLevel("DocConvert_Console_Log"), ConsoleColor.White, LOG_LEVEL.INFO);
             #region parse Ini File
             LogMgr.Write("------------ Parsing Ini File ------------", ConsoleColor.White, LOG_LEVEL.INFO);
             try
@@ -54,9 +54,9 @@ namespace DocConvert_Console
                 for (int i = 0; i < 3; i++)
                 {
                     IniFile pairs = new IniFile(); // Ini 변수 초기화
-                    if (new FileInfo(Environment.CurrentDirectory + "/DocConvert_Console.ini").Exists)
+                    if (new FileInfo(Environment.CurrentDirectory + @"\DocConvert.ini").Exists)
                     {
-                        pairs.Load(Environment.CurrentDirectory + "/DocConvert_Console.ini");
+                        pairs.Load(Environment.CurrentDirectory + @"\DocConvert.ini");
                         IniProperties.Bind_IP = pairs["Common"]["Bind IP"].ToString2().Trim();
                         IniProperties.Socket_Port = int.Parse(pairs["Common"]["Socket Port"].ToString2().Trim());
                         IniProperties.Client_KEY = pairs["Common"]["Client KEY"].ToString2().Trim();
@@ -76,7 +76,7 @@ namespace DocConvert_Console
                     else
                     {
                         Setting.createSetting();
-                        LogMgr.Write("The configuration file is created in " + Environment.CurrentDirectory + @"\DocConvert_Server.ini", ConsoleColor.Yellow, LOG_LEVEL.INFO);
+                        LogMgr.Write("The configuration file is created in " + Environment.CurrentDirectory + @"\DocConvert.ini", ConsoleColor.Yellow, LOG_LEVEL.INFO);
                     }
                 }
             } catch (NullReferenceException e1)

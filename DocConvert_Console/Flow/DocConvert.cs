@@ -1,4 +1,4 @@
-﻿using DocConvert_Console.Common;
+﻿using DocConvert.Common;
 using DocConvert_Core.FileLib;
 using DocConvert_Core.HWPLib;
 using DocConvert_Core.imageLib;
@@ -15,7 +15,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace DocConvert_Console.Flow
+namespace DocConvert.Flow
 {
     class DocConvert
     {
@@ -40,7 +40,7 @@ namespace DocConvert_Console.Flow
             try
             {
                 dataTodayMD5Path = new DirectoryInfo(workspacePath.FullName + @"\data\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + MD5_CheckSUM(srcFile.FullName));
-            } catch(Exception e1)
+            } catch(Exception)
             {
                 responseMsg["ResultCode"] = define.INVALID_FILE_NOT_FOUND_ERROR.ToString();
                 responseMsg["Message"] = "The file does not exist at " + srcFile.FullName;

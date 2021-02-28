@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B9A24F2E-221A-4B7B-A084-8DA4A145D731}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DocConvert_Console</RootNamespace>
-    <AssemblyName>DocConvert_Console</AssemblyName>
+    <RootNamespace>DocConvert</RootNamespace>
+    <AssemblyName>DocConvert</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
