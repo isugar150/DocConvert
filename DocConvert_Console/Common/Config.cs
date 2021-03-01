@@ -9,6 +9,7 @@ namespace DocConvert.Common
         int Socket_Port { get; set; }
         string Client_KEY { get; set; }
         string Workspace_Directory { get; set; }
+        string Product_Name { get; set; }
 
         string SchedulerTime { get; set; }
         bool CleanWorkspaceSchedulerYn { get; set; }
@@ -28,6 +29,7 @@ namespace DocConvert.Common
         private int _Socket_Port = 12000;
         private string _Client_KEY = "";
         private string _Workspace_Directory = "C:\\workspace";
+        private string _Product_Name = "DocConvert";
 
         private string _SchedulerTime = "1,0";
         private bool _CleanWorkspaceSchedulerYn = false;
@@ -46,6 +48,7 @@ namespace DocConvert.Common
         public int Socket_Port { get { return _Socket_Port; } set { _Socket_Port = value; } }
         public string Client_KEY { get { return _Client_KEY; } set { _Client_KEY = value; } }
         public string Workspace_Directory { get { return _Workspace_Directory; } set { _Workspace_Directory = value; } }
+        public string Product_Name { get { return _Product_Name; } set { _Product_Name = value; } }
 
         public string SchedulerTime { get { return _SchedulerTime; } set { _SchedulerTime = value; } }
         public bool CleanWorkspaceSchedulerYn { get { return _CleanWorkspaceSchedulerYn; } set { _CleanWorkspaceSchedulerYn = value; } }
@@ -69,6 +72,7 @@ namespace DocConvert.Common
             setting["Common"]["Socket Port"] = "12000    ;HTTP 포트";
             setting["Common"]["Client KEY"] = Guid.NewGuid() + "     ;해당 클라이언트가 허용한 클라이언트인지 확인하는 문자열, 클라이언트와 동일하게 맞추면됨.";
             setting["Common"]["Workspace Directory"] = "C:\\workspace      ;작업폴더 실제 경로";
+            setting["Common"]["Product Name"] = "DocConvert      ;콘솔 타이틀";
 
             setting["Scheduler"]["SchedulerTime"] = "1,0       ;스케줄러 동작시간(매일) 24시간중 (시간,분)";
             setting["Scheduler"]["CleanWorkspaceSchedulerYn"] = "Y         ;작업공간 정리 스케줄러 사용 (Y:사용) (n:사용안함)";

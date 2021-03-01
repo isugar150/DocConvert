@@ -38,7 +38,7 @@ namespace DocConvert
                 if (prs.Id == oldPID)
                 {
                     prs.Kill();
-                    LogMgr.Write("I ended a program I had run before.");
+                    LogMgr.Write("I ended a program I had run before.", ConsoleColor.Yellow, LOG_LEVEL.WARN);
                     break;
                 }
             }
@@ -62,9 +62,9 @@ namespace DocConvert
           ____) |  __/ |   \ V /  __/ |                         
          |_____/ \___|_|    \_/ \___|_|  
 
-                ", ConsoleColor.Green, LOG_LEVEL.FATAL, true);
+                ", ConsoleColor.Gray, LOG_LEVEL.FATAL, true);
             // 저작권 정보
-            LogMgr.Write("         Copyright© 2021. Jm's Corp. All rights reserved.\r\n\r\n", ConsoleColor.White, LOG_LEVEL.FATAL, true);
+            LogMgr.Write("         Copyright© 2021. Jm's Corp. All rights reserved.\r\n\r\n", ConsoleColor.Gray, LOG_LEVEL.FATAL, true);
             LogMgr.Write("Starting DocConvert Server..", ConsoleColor.White, LOG_LEVEL.WARN);
             LogMgr.Write("Program Directory: " + Environment.CurrentDirectory, ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write(".Net Framework Version: " + Environment.Version.ToString(), ConsoleColor.White, LOG_LEVEL.INFO);
@@ -90,6 +90,7 @@ namespace DocConvert
                         IniProperties.Socket_Port = int.Parse(pairs["Common"]["Socket Port"].ToString2().Trim());
                         IniProperties.Client_KEY = pairs["Common"]["Client KEY"].ToString2().Trim();
                         IniProperties.Workspace_Directory = pairs["Common"]["Workspace Directory"].ToString2().Trim();
+                        IniProperties.Product_Name = pairs["Common"]["Product Name"].ToString2().Trim();
 
                         IniProperties.SchedulerTime = pairs["Scheduler"]["SchedulerTime"].ToString2().Trim();
                         IniProperties.CleanWorkspaceSchedulerYn = pairs["Scheduler"]["CleanWorkspaceSchedulerYn"].ToString2().Trim().Equals("Y");
@@ -127,7 +128,8 @@ namespace DocConvert
             LogMgr.Write("- Socket Port: " + IniProperties.Socket_Port, ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("- Client KEY: " + IniProperties.Client_KEY, ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("- Workspace Directory: " + IniProperties.Workspace_Directory, ConsoleColor.White, LOG_LEVEL.INFO);
-            
+            LogMgr.Write("- Product Name: " + IniProperties.Product_Name, ConsoleColor.White, LOG_LEVEL.INFO);
+
             LogMgr.Write("- SchedulerTime: " + IniProperties.SchedulerTime, ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("- CleanWorkspaceSchedulerYn: " + IniProperties.CleanWorkspaceSchedulerYn, ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("- CleanWorkspaceDay: " + IniProperties.CleanWorkspaceDay, ConsoleColor.White, LOG_LEVEL.INFO);
@@ -145,6 +147,10 @@ namespace DocConvert
             LogMgr.Write("------------------------------------------", ConsoleColor.White, LOG_LEVEL.INFO);
             #endregion
 
+            #region 프로그램 기본 설정
+            Console.Title = IniProperties.Product_Name;
+            #endregion
+
             #region Workspace 초기화
             DirectoryInfo tmpDir = new DirectoryInfo(IniProperties.Workspace_Directory + @"\tmp");
             DirectoryInfo dataDir = new DirectoryInfo(IniProperties.Workspace_Directory + @"\data");
@@ -160,15 +166,6 @@ namespace DocConvert
             }
             #endregion
 
-            #region init Socket Server
-            Thread socket_Thread = new Thread(() =>
-            {
-                new Network.AsyncSocketServer(IniProperties.Bind_IP, IniProperties.Socket_Port);
-            });
-            socket_Thread.Start();
-            LogMgr.Write("Socket Server Listen On IP: " + IniProperties.Bind_IP + " PORT: " + IniProperties.Socket_Port, ConsoleColor.Green, LOG_LEVEL.WARN);
-            #endregion
-
             #region 한글 DLL 레지스트리 등록
             if (File.Exists(Environment.CurrentDirectory + @"\FilePathCheckerModuleExample.dll"))
             {
@@ -182,8 +179,16 @@ namespace DocConvert
             }
             #endregion
 
-            LogMgr.Write("DocConvert Server Started in " + DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss"), ConsoleColor.Green, LOG_LEVEL.WARN);
+            #region init Socket Server
+            Thread socket_Thread = new Thread(() =>
+            {
+                new Network.AsyncSocketServer(IniProperties.Bind_IP, IniProperties.Socket_Port);
+            });
+            socket_Thread.Start();
+            LogMgr.Write("Socket Server Listen On " + IniProperties.Bind_IP + ":" + IniProperties.Socket_Port, ConsoleColor.Green, LOG_LEVEL.WARN);
+            #endregion
 
+            LogMgr.Write("DocConvert Server Started in " + DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss"), ConsoleColor.Green, LOG_LEVEL.WARN);
 
             Console.WriteLine("Press the exit key to exit.");
             while (true)
