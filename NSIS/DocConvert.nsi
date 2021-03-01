@@ -2,7 +2,7 @@
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "DocConvert"
-!define PRODUCT_VERSION "2.0.7730.26564"
+!define PRODUCT_VERSION "2.0.7730.33038"
 !define PRODUCT_PUBLISHER "Jm's Corp"
 !define PRODUCT_WEB_SITE "https://www.namejm.com/"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\DocConvert.exe"
@@ -17,16 +17,10 @@
 !define MUI_ICON "${NSISDIR}\Contrib\Graphics\Icons\modern-install.ico"
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
 
-; Language Selection Dialog Settings
-!define MUI_LANGDLL_REGISTRY_ROOT "${PRODUCT_UNINST_ROOT_KEY}"
-!define MUI_LANGDLL_REGISTRY_KEY "${PRODUCT_UNINST_KEY}"
-!define MUI_LANGDLL_REGISTRY_VALUENAME "NSIS:Language"
-
 ; Welcome page
 !insertmacro MUI_PAGE_WELCOME
 ; License page
-!define MUI_LICENSEPAGE_CHECKBOX
-!insertmacro MUI_PAGE_LICENSE ".\LICENSE.txt"
+!insertmacro MUI_PAGE_LICENSE "LICENSE.txt"
 ; Directory page
 !insertmacro MUI_PAGE_DIRECTORY
 ; Instfiles page
@@ -38,22 +32,16 @@
 !insertmacro MUI_UNPAGE_INSTFILES
 
 ; Language files
-!insertmacro MUI_LANGUAGE "English"
 !insertmacro MUI_LANGUAGE "Korean"
 
 ; MUI end ------
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
 OutFile "DocConvert Setup.exe"
-; InstallDir "$PROGRAMFILES\DocConvert"
 InstallDir "C:\DocConvert"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
 ShowUnInstDetails show
-
-Function .onInit
-  !insertmacro MUI_LANGDLL_DISPLAY
-FunctionEnd
 
 Section "MainSection" SEC01
   SetOutPath "$INSTDIR\API"
@@ -64,12 +52,19 @@ Section "MainSection" SEC01
   CreateDirectory "$SMPROGRAMS\DocConvert"
   CreateShortCut "$SMPROGRAMS\DocConvert\DocConvert.lnk" "$INSTDIR\DocConvert.exe"
   CreateShortCut "$DESKTOP\DocConvert.lnk" "$INSTDIR\DocConvert.exe"
+  File "..\bin\Release\DocConvert_BuildDate.txt"
   File "..\bin\Release\DocConvert_Core.dll"
+  File "..\bin\Release\DocConvert_Util.exe"
+  CreateShortCut "$DESKTOP\DocConvert Util.lnk" "$INSTDIR\DocConvert_Util.exe"
+  CreateShortCut "$SMPROGRAMS\DocConvert\DocConvert Util.lnk" "$INSTDIR\DocConvert_Util.exe"
+  File "..\bin\Release\DocConvert_Util.exe.config"
+  File "..\bin\Release\DocConvert_Util.pdb"
   File "..\bin\Release\FilePathCheckerModuleExample.dll"
   File "..\bin\Release\ICSharpCode.SharpZipLib.dll"
   File "..\bin\Release\Interop.HWPCONTROLLib.dll"
   File "..\bin\Release\NetOffice.dll"
   File "..\bin\Release\Newtonsoft.Json.dll"
+  File "..\bin\Release\Newtonsoft.Json.xml"
   SetOutPath "$INSTDIR\nl"
   File "..\bin\Release\nl\PdfiumViewer.resources.dll"
   SetOutPath "$INSTDIR"
@@ -78,6 +73,7 @@ Section "MainSection" SEC01
   File "..\bin\Release\OfficeApi.dll"
   File "..\bin\Release\pdfium.dll"
   File "..\bin\Release\PdfiumViewer.dll"
+  File "..\bin\Release\PdfiumViewer.xml"
   File "..\bin\Release\stdole.dll"
   File "..\bin\Release\System.Collections.Specialized.dll"
   File "..\bin\Release\System.Drawing.Common.dll"
@@ -111,7 +107,6 @@ Function un.onUninstSuccess
 FunctionEnd
 
 Function un.onInit
-!insertmacro MUI_UNGETLANGUAGE
   MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "$(^Name)을(를) 제거하시겠습니까?" IDYES +2
   Abort
 FunctionEnd
@@ -127,23 +122,31 @@ Section Uninstall
   Delete "$INSTDIR\System.Drawing.Common.dll"
   Delete "$INSTDIR\System.Collections.Specialized.dll"
   Delete "$INSTDIR\stdole.dll"
+  Delete "$INSTDIR\PdfiumViewer.xml"
   Delete "$INSTDIR\PdfiumViewer.dll"
   Delete "$INSTDIR\pdfium.dll"
   Delete "$INSTDIR\OfficeApi.dll"
   Delete "$INSTDIR\NLog.dll"
   Delete "$INSTDIR\NLog.config"
   Delete "$INSTDIR\nl\PdfiumViewer.resources.dll"
+  Delete "$INSTDIR\Newtonsoft.Json.xml"
   Delete "$INSTDIR\Newtonsoft.Json.dll"
   Delete "$INSTDIR\NetOffice.dll"
   Delete "$INSTDIR\Interop.HWPCONTROLLib.dll"
   Delete "$INSTDIR\ICSharpCode.SharpZipLib.dll"
   Delete "$INSTDIR\FilePathCheckerModuleExample.dll"
+  Delete "$INSTDIR\DocConvert_Util.pdb"
+  Delete "$INSTDIR\DocConvert_Util.exe.config"
+  Delete "$INSTDIR\DocConvert_Util.exe"
   Delete "$INSTDIR\DocConvert_Core.dll"
+  Delete "$INSTDIR\DocConvert_BuildDate.txt"
   Delete "$INSTDIR\DocConvert.exe"
   Delete "$INSTDIR\AxInterop.HWPCONTROLLib.dll"
   Delete "$INSTDIR\API\DocConvert_API.jar"
 
   Delete "$SMPROGRAMS\DocConvert\Uninstall.lnk"
+  Delete "$SMPROGRAMS\DocConvert\DocConvert Util.lnk"
+  Delete "$DESKTOP\DocConvert Util.lnk"
   Delete "$DESKTOP\DocConvert.lnk"
   Delete "$SMPROGRAMS\DocConvert\DocConvert.lnk"
 

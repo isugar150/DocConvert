@@ -14,29 +14,22 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocConvert_Util", "DocConve
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
-		Release|Any CPU = Release|Any CPU
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E66D151A-0A14-4EE5-97D8-DFC33B913AE0}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{E66D151A-0A14-4EE5-97D8-DFC33B913AE0}.Debug|x86.ActiveCfg = Debug|x86
 		{E66D151A-0A14-4EE5-97D8-DFC33B913AE0}.Debug|x86.Build.0 = Debug|x86
-		{E66D151A-0A14-4EE5-97D8-DFC33B913AE0}.Release|Any CPU.ActiveCfg = Release|x86
 		{E66D151A-0A14-4EE5-97D8-DFC33B913AE0}.Release|x86.ActiveCfg = Release|x86
 		{E66D151A-0A14-4EE5-97D8-DFC33B913AE0}.Release|x86.Build.0 = Release|x86
-		{B9A24F2E-221A-4B7B-A084-8DA4A145D731}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{B9A24F2E-221A-4B7B-A084-8DA4A145D731}.Debug|x86.ActiveCfg = Debug|x86
 		{B9A24F2E-221A-4B7B-A084-8DA4A145D731}.Debug|x86.Build.0 = Debug|x86
-		{B9A24F2E-221A-4B7B-A084-8DA4A145D731}.Release|Any CPU.ActiveCfg = Release|x86
 		{B9A24F2E-221A-4B7B-A084-8DA4A145D731}.Release|x86.ActiveCfg = Release|x86
 		{B9A24F2E-221A-4B7B-A084-8DA4A145D731}.Release|x86.Build.0 = Release|x86
-		{C0B7FFB0-EDCC-47B5-BDF5-DB867D0F7951}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{C0B7FFB0-EDCC-47B5-BDF5-DB867D0F7951}.Debug|x86.ActiveCfg = Debug|x86
 		{C0B7FFB0-EDCC-47B5-BDF5-DB867D0F7951}.Debug|x86.Build.0 = Debug|x86
-		{C0B7FFB0-EDCC-47B5-BDF5-DB867D0F7951}.Release|Any CPU.ActiveCfg = Release|x86
 		{C0B7FFB0-EDCC-47B5-BDF5-DB867D0F7951}.Release|x86.ActiveCfg = Release|x86
+		{C0B7FFB0-EDCC-47B5-BDF5-DB867D0F7951}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
