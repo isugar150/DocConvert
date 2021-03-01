@@ -149,6 +149,7 @@ namespace DocConvert_Util
         {
             try
             {
+                outputText("[서버 변환 시작]");
                 FileInfo srcFile = new FileInfo(textBox2.Text);
                 DirectoryInfo tmpDir = new DirectoryInfo(textBox9.Text);
                 FileInfo targetFile = new FileInfo(tmpDir + @"\" + Path.GetFileName(srcFile.FullName));

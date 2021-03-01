@@ -53,3 +53,4 @@ C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Core\obj\x86\Release\DocCo
 C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Core\obj\x86\Release\DocConvert_Core.csproj.CoreCompileInputs.cache
 C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Core\obj\x86\Release\DocConvert_Core.csproj.CopyComplete
 C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Core\obj\x86\Release\DocConvert_Core.dll
+C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Core\obj\x86\Release\DocConvert_Core.csprojAssemblyReference.cache

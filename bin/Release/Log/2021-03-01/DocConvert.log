@@ -1,0 +1,293 @@
+2021-03-01 22:29:26.1965 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-01 22:29:26.2205 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-01 22:29:26.2234  WARN - Starting DocConvert Server..
+2021-03-01 22:29:26.2234  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Release
+2021-03-01 22:29:26.2234  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-01 22:29:26.2234  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-01 22:29:26.2234  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-01 22:29:26.2234  INFO - User Name: JMKIM
+2021-03-01 22:29:26.2234  INFO - DocConvert Version: 2.0.7730.33038
+2021-03-01 22:29:26.2234  INFO - DocConvert PID: 16812
+2021-03-01 22:29:26.2234  INFO - DocConvert LogLevel: DEBUG
+2021-03-01 22:29:26.2234  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-01 22:29:26.2234  INFO - ------------ Parsing Ini File ------------
+2021-03-01 22:29:26.2504  INFO - The configuration file is created in C:\Users\JMKIM\Documents\source\DocConvert\bin\Release\DocConvert.ini
+2021-03-01 22:29:26.2504  INFO - - Bind IP: 0.0.0.0
+2021-03-01 22:29:26.2564  INFO - - Socket Port: 12000
+2021-03-01 22:29:26.2564  INFO - - Client KEY: f10bf21d-444a-423a-a883-3b2fb8380df3
+2021-03-01 22:29:26.2564  INFO - - Workspace Directory: C:\workspace
+2021-03-01 22:29:26.2564  INFO - - Product Name: DocConvert
+2021-03-01 22:29:26.2564  INFO - - SchedulerTime: 1,0
+2021-03-01 22:29:26.2564  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-01 22:29:26.2564  INFO - - CleanWorkspaceDay: 3
+2021-03-01 22:29:26.2564  INFO - - CleanLogSchedulerYn: True
+2021-03-01 22:29:26.2564  INFO - - CleanLogDay: 7
+2021-03-01 22:29:26.2564  INFO - - DRM useYn: False
+2021-03-01 22:29:26.2564  INFO - ------------------------------------------
+2021-03-01 22:29:26.2722  INFO - Hangul DLL has been registered in the registry.
+2021-03-01 22:29:26.2722  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-01 22:29:26.2942 DEBUG - Workspace Cleanup Scheduler: 3days
+2021-03-01 22:29:26.2942 DEBUG - Log cleanup scheduler: 7days
+2021-03-01 22:29:26.2942  WARN - Next scheduler operation time: 2021-03-02 오전 1:00:00
+2021-03-01 22:29:26.2942  WARN - Cleanup scheduler is working
+2021-03-01 22:29:26.2942  WARN - DocConvert Server Started in 2021-03-01 10:29:26
+2021-03-01 22:29:28.7393  INFO - Connect Client From: 127.0.0.1:12172  Connection time: 2021-03-01 오후 10:29:28
+2021-03-01 22:29:28.8860 DEBUG - Received messages from 127.0.0.1:12172
+{
+  "ClientKey": "6d2b63a1-1377-421c-8072-c5fadab65881",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작1_p1234.xlsx",
+  "ConvertImg": 0,
+  "DocPassword": "1234",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-01 22:29:28.8860 DEBUG - Response messages to 127.0.0.1:12172
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-01 22:29:28.8860 DEBUG - Processing time: 00.065
+2021-03-01 22:29:28.8860  INFO - Disconnected From:127.0.0.1:12172 Time: 2021-03-01 오후 10:29:28
+2021-03-01 22:29:41.0687  INFO - Connect Client From: 127.0.0.1:12174  Connection time: 2021-03-01 오후 10:29:41
+2021-03-01 22:29:41.0687 DEBUG - Received messages from 127.0.0.1:12174
+{
+  "ClientKey": "f10bf21d-444a-423a-a883-3b2fb8380df3",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작1_p1234.xlsx",
+  "ConvertImg": 0,
+  "DocPassword": "1234",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-01 22:29:41.1189 DEBUG - Method DocConvert Start ==>
+2021-03-01 22:29:41.1189 DEBUG - Initialized variable ========>
+2021-03-01 22:29:41.1189 DEBUG - workspacePath ===> C:\workspace
+2021-03-01 22:29:41.1315 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-01 22:29:41.1315 DEBUG - srcFile ===> C:\workspace\tmp\Excel 시작1_p1234.xlsx
+2021-03-01 22:29:41.1315 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210301\A7A2CA851DF8086DF0F353ED82D5CAAA
+2021-03-01 22:29:41.1315 DEBUG - targetFile ===> C:\workspace\data\20210301\A7A2CA851DF8086DF0F353ED82D5CAAA\Excel 시작1_p1234.xlsx
+2021-03-01 22:29:41.1315 DEBUG - =============================>
+2021-03-01 22:29:41.1315 ERROR - ERROR CODE: 1000
+2021-03-01 22:29:41.1315 ERROR - ERROR MESSAGE: 파일이 이미 있으므로 만들 수 없습니다.
+
+2021-03-01 22:29:41.1491 ERROR - ERROR STACKTRACE
+   위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   위치: System.IO.__Error.WinIOError()
+   위치: System.IO.FileInfo.MoveTo(String destFileName)
+   위치: DocConvert.Flow.DocConvert._DocConvert(String fileName, String docPassword, Int32 convertImg, String drmUseYn, String drmType)
+   위치: DocConvert.Network.Client.Client_Completed(Object sender, SocketAsyncEventArgs e)
+2021-03-01 22:29:41.1491 DEBUG - Processing time: 00.080
+2021-03-01 22:29:41.1491  INFO - Disconnected From:127.0.0.1:12174 Time: 2021-03-01 오후 10:29:41
+2021-03-01 22:29:49.2544  INFO - Connect Client From: 127.0.0.1:12175  Connection time: 2021-03-01 오후 10:29:49
+2021-03-01 22:29:49.2564 DEBUG - Received messages from 127.0.0.1:12175
+{
+  "ClientKey": "f10bf21d-444a-423a-a883-3b2fb8380df3",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작1_p1234.xlsx",
+  "ConvertImg": 0,
+  "DocPassword": "1234",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-01 22:29:49.2564 DEBUG - Method DocConvert Start ==>
+2021-03-01 22:29:49.2564 DEBUG - Initialized variable ========>
+2021-03-01 22:29:49.2564 DEBUG - workspacePath ===> C:\workspace
+2021-03-01 22:29:49.2564 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-01 22:29:49.2564 DEBUG - srcFile ===> C:\workspace\tmp\Excel 시작1_p1234.xlsx
+2021-03-01 22:29:49.2564 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210301\A7A2CA851DF8086DF0F353ED82D5CAAA
+2021-03-01 22:29:49.2564 DEBUG - targetFile ===> C:\workspace\data\20210301\A7A2CA851DF8086DF0F353ED82D5CAAA\Excel 시작1_p1234.xlsx
+2021-03-01 22:29:49.2564 DEBUG - =============================>
+2021-03-01 22:29:49.2718 ERROR - ERROR CODE: 1000
+2021-03-01 22:29:49.2718 ERROR - ERROR MESSAGE: 파일이 이미 있으므로 만들 수 없습니다.
+
+2021-03-01 22:29:49.2718 ERROR - ERROR STACKTRACE
+   위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   위치: System.IO.__Error.WinIOError()
+   위치: System.IO.FileInfo.MoveTo(String destFileName)
+   위치: DocConvert.Flow.DocConvert._DocConvert(String fileName, String docPassword, Int32 convertImg, String drmUseYn, String drmType)
+   위치: DocConvert.Network.Client.Client_Completed(Object sender, SocketAsyncEventArgs e)
+2021-03-01 22:29:49.2718 DEBUG - Processing time: 00.019
+2021-03-01 22:29:49.2718  INFO - Disconnected From:127.0.0.1:12175 Time: 2021-03-01 오후 10:29:49
+2021-03-01 22:29:58.0064  INFO - Connect Client From: 127.0.0.1:12176  Connection time: 2021-03-01 오후 10:29:58
+2021-03-01 22:29:58.0064 DEBUG - Received messages from 127.0.0.1:12176
+{
+  "ClientKey": "f10bf21d-444a-423a-a883-3b2fb8380df3",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작1_p1234.xlsx",
+  "ConvertImg": 0,
+  "DocPassword": "1234",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-01 22:29:58.0064 DEBUG - Method DocConvert Start ==>
+2021-03-01 22:29:58.0064 DEBUG - Initialized variable ========>
+2021-03-01 22:29:58.0064 DEBUG - workspacePath ===> C:\workspace
+2021-03-01 22:29:58.0212 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-01 22:29:58.0212 DEBUG - srcFile ===> C:\workspace\tmp\Excel 시작1_p1234.xlsx
+2021-03-01 22:29:58.0212 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210301\A7A2CA851DF8086DF0F353ED82D5CAAA
+2021-03-01 22:29:58.0212 DEBUG - targetFile ===> C:\workspace\data\20210301\A7A2CA851DF8086DF0F353ED82D5CAAA\Excel 시작1_p1234.xlsx
+2021-03-01 22:29:58.0212 DEBUG - =============================>
+2021-03-01 22:29:58.0212 ERROR - ERROR CODE: 1000
+2021-03-01 22:29:58.0212 ERROR - ERROR MESSAGE: 파일이 이미 있으므로 만들 수 없습니다.
+
+2021-03-01 22:29:58.0365 ERROR - ERROR STACKTRACE
+   위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   위치: System.IO.__Error.WinIOError()
+   위치: System.IO.FileInfo.MoveTo(String destFileName)
+   위치: DocConvert.Flow.DocConvert._DocConvert(String fileName, String docPassword, Int32 convertImg, String drmUseYn, String drmType)
+   위치: DocConvert.Network.Client.Client_Completed(Object sender, SocketAsyncEventArgs e)
+2021-03-01 22:29:58.0365 DEBUG - Processing time: 00.029
+2021-03-01 22:29:58.0365  INFO - Disconnected From:127.0.0.1:12176 Time: 2021-03-01 오후 10:29:58
+2021-03-01 22:30:05.6494  INFO - Connect Client From: 127.0.0.1:12178  Connection time: 2021-03-01 오후 10:30:05
+2021-03-01 22:30:05.6494 DEBUG - Received messages from 127.0.0.1:12178
+{
+  "ClientKey": "f10bf21d-444a-423a-a883-3b2fb8380df3",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작1_p1234.xlsx",
+  "ConvertImg": 0,
+  "DocPassword": "1234",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-01 22:30:05.6494 DEBUG - Method DocConvert Start ==>
+2021-03-01 22:30:05.6494 DEBUG - Initialized variable ========>
+2021-03-01 22:30:05.6494 DEBUG - workspacePath ===> C:\workspace
+2021-03-01 22:30:05.6625 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-01 22:30:05.6625 DEBUG - srcFile ===> C:\workspace\tmp\Excel 시작1_p1234.xlsx
+2021-03-01 22:30:05.6625 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210301\A7A2CA851DF8086DF0F353ED82D5CAAA
+2021-03-01 22:30:05.6625 DEBUG - targetFile ===> C:\workspace\data\20210301\A7A2CA851DF8086DF0F353ED82D5CAAA\Excel 시작1_p1234.xlsx
+2021-03-01 22:30:05.6625 DEBUG - =============================>
+2021-03-01 22:30:05.6625 ERROR - ERROR CODE: 1000
+2021-03-01 22:30:05.6625 ERROR - ERROR MESSAGE: 파일이 이미 있으므로 만들 수 없습니다.
+
+2021-03-01 22:30:05.6625 ERROR - ERROR STACKTRACE
+   위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   위치: System.IO.__Error.WinIOError()
+   위치: System.IO.FileInfo.MoveTo(String destFileName)
+   위치: DocConvert.Flow.DocConvert._DocConvert(String fileName, String docPassword, Int32 convertImg, String drmUseYn, String drmType)
+   위치: DocConvert.Network.Client.Client_Completed(Object sender, SocketAsyncEventArgs e)
+2021-03-01 22:30:05.6779 DEBUG - Processing time: 00.025
+2021-03-01 22:30:05.6779  INFO - Disconnected From:127.0.0.1:12178 Time: 2021-03-01 오후 10:30:05
+2021-03-01 22:30:07.1718  INFO - Connect Client From: 127.0.0.1:12179  Connection time: 2021-03-01 오후 10:30:07
+2021-03-01 22:30:07.1718 DEBUG - Received messages from 127.0.0.1:12179
+{
+  "ClientKey": "f10bf21d-444a-423a-a883-3b2fb8380df3",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작1_p1234.xlsx",
+  "ConvertImg": 0,
+  "DocPassword": "1234",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-01 22:30:07.1718 DEBUG - Method DocConvert Start ==>
+2021-03-01 22:30:07.1791 DEBUG - Initialized variable ========>
+2021-03-01 22:30:07.1791 DEBUG - workspacePath ===> C:\workspace
+2021-03-01 22:30:07.1791 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-01 22:30:07.1791 DEBUG - srcFile ===> C:\workspace\tmp\Excel 시작1_p1234.xlsx
+2021-03-01 22:30:07.1791 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210301\A7A2CA851DF8086DF0F353ED82D5CAAA
+2021-03-01 22:30:07.1791 DEBUG - targetFile ===> C:\workspace\data\20210301\A7A2CA851DF8086DF0F353ED82D5CAAA\Excel 시작1_p1234.xlsx
+2021-03-01 22:30:07.1791 DEBUG - =============================>
+2021-03-01 22:30:07.1951 ERROR - ERROR CODE: 1000
+2021-03-01 22:30:07.1951 ERROR - ERROR MESSAGE: 파일이 이미 있으므로 만들 수 없습니다.
+
+2021-03-01 22:30:07.1951 ERROR - ERROR STACKTRACE
+   위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   위치: System.IO.__Error.WinIOError()
+   위치: System.IO.FileInfo.MoveTo(String destFileName)
+   위치: DocConvert.Flow.DocConvert._DocConvert(String fileName, String docPassword, Int32 convertImg, String drmUseYn, String drmType)
+   위치: DocConvert.Network.Client.Client_Completed(Object sender, SocketAsyncEventArgs e)
+2021-03-01 22:30:07.1951 DEBUG - Processing time: 00.024
+2021-03-01 22:30:07.1951  INFO - Disconnected From:127.0.0.1:12179 Time: 2021-03-01 오후 10:30:07
+2021-03-01 22:30:24.0426  INFO - Connect Client From: 127.0.0.1:12180  Connection time: 2021-03-01 오후 10:30:24
+2021-03-01 22:30:24.0426 DEBUG - Received messages from 127.0.0.1:12180
+{
+  "ClientKey": "f10bf21d-444a-423a-a883-3b2fb8380df3",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작1_p1234.xlsx",
+  "ConvertImg": 0,
+  "DocPassword": "1234",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-01 22:30:24.0426 DEBUG - Method DocConvert Start ==>
+2021-03-01 22:30:24.0426 DEBUG - Initialized variable ========>
+2021-03-01 22:30:24.0516 DEBUG - workspacePath ===> C:\workspace
+2021-03-01 22:30:24.0516 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-01 22:30:24.0516 DEBUG - srcFile ===> C:\workspace\tmp\Excel 시작1_p1234.xlsx
+2021-03-01 22:30:24.0516 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210301\A7A2CA851DF8086DF0F353ED82D5CAAA
+2021-03-01 22:30:24.0516 DEBUG - targetFile ===> C:\workspace\data\20210301\A7A2CA851DF8086DF0F353ED82D5CAAA\Excel 시작1_p1234.xlsx
+2021-03-01 22:30:24.0516 DEBUG - =============================>
+2021-03-01 22:30:24.0516 ERROR - ERROR CODE: 1000
+2021-03-01 22:30:24.0516 ERROR - ERROR MESSAGE: 파일이 이미 있으므로 만들 수 없습니다.
+
+2021-03-01 22:30:24.0516 ERROR - ERROR STACKTRACE
+   위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   위치: System.IO.__Error.WinIOError()
+   위치: System.IO.FileInfo.MoveTo(String destFileName)
+   위치: DocConvert.Flow.DocConvert._DocConvert(String fileName, String docPassword, Int32 convertImg, String drmUseYn, String drmType)
+   위치: DocConvert.Network.Client.Client_Completed(Object sender, SocketAsyncEventArgs e)
+2021-03-01 22:30:24.0516 DEBUG - Processing time: 00.021
+2021-03-01 22:30:24.0674  INFO - Disconnected From:127.0.0.1:12180 Time: 2021-03-01 오후 10:30:24
+2021-03-01 22:30:37.3541 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-01 22:30:37.3754 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-01 22:30:37.3754  WARN - Starting DocConvert Server..
+2021-03-01 22:30:37.3754  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Release
+2021-03-01 22:30:37.3754  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-01 22:30:37.3754  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-01 22:30:37.3816  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-01 22:30:37.3816  INFO - User Name: JMKIM
+2021-03-01 22:30:37.3816  INFO - DocConvert Version: 2.0.7730.33038
+2021-03-01 22:30:37.3816  INFO - DocConvert PID: 6172
+2021-03-01 22:30:37.3816  INFO - DocConvert LogLevel: DEBUG
+2021-03-01 22:30:37.3816  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-01 22:30:37.3816  INFO - ------------ Parsing Ini File ------------
+2021-03-01 22:30:37.3816  INFO - - Bind IP: 0.0.0.0
+2021-03-01 22:30:37.3816  INFO - - Socket Port: 12000
+2021-03-01 22:30:37.3955  INFO - - Client KEY: f10bf21d-444a-423a-a883-3b2fb8380df3
+2021-03-01 22:30:37.3955  INFO - - Workspace Directory: C:\workspace
+2021-03-01 22:30:37.3955  INFO - - Product Name: DocConvert
+2021-03-01 22:30:37.3955  INFO - - SchedulerTime: 1,0
+2021-03-01 22:30:37.3955  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-01 22:30:37.3955  INFO - - CleanWorkspaceDay: 3
+2021-03-01 22:30:37.3955  INFO - - CleanLogSchedulerYn: True
+2021-03-01 22:30:37.3955  INFO - - CleanLogDay: 7
+2021-03-01 22:30:37.3955  INFO - - DRM useYn: False
+2021-03-01 22:30:37.3955  INFO - ------------------------------------------
+2021-03-01 22:30:37.3955  INFO - Hangul DLL has been registered in the registry.
+2021-03-01 22:30:37.3955  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-01 22:30:37.3955 DEBUG - Workspace Cleanup Scheduler: 3days
+2021-03-01 22:30:37.4115 DEBUG - Log cleanup scheduler: 7days
+2021-03-01 22:30:37.4115  WARN - Next scheduler operation time: 2021-03-02 오전 1:00:00
+2021-03-01 22:30:37.4115  WARN - Cleanup scheduler is working
+2021-03-01 22:30:37.4115  WARN - DocConvert Server Started in 2021-03-01 10:30:37

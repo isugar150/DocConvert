@@ -1,0 +1,29 @@
+2021-03-01 22:33:25.9594  INFO - ==================== Start ====================
+2021-03-01 22:33:25.9594  INFO - Method: ExcelSaveAs, FilePath: C:\workspace\data\20210301\A7A2CA851DF8086DF0F353ED82D5CAAA\Excel 시작1_p1234.xlsx, outPath: C:\workspace\data\20210301\A7A2CA851DF8086DF0F353ED82D5CAAA\Excel 시작1_p1234.pdf, docPassword: 1234
+2021-03-01 22:33:37.5134  INFO - Conversion success
+2021-03-01 22:33:38.2191  INFO - ==================== End ====================
+2021-03-01 22:33:55.1143  INFO - ==================== Start ====================
+2021-03-01 22:33:55.1143  INFO - Method: PowerPointSaveAs, FilePath: C:\workspace\data\20210301\664CB10CC59E4D3C60DD2782F02EE01A\PowerPoint 시작_p1234.pptx, outPath: C:\workspace\data\20210301\664CB10CC59E4D3C60DD2782F02EE01A\PowerPoint 시작_p1234.pdf, docPassword: 12345
+2021-03-01 22:34:04.5408 ERROR - ======= Method: PowerPointSaveAs =======
+2021-03-01 22:34:04.5408 ERROR -    위치: Microsoft.Office.Interop.PowerPoint.Presentations.Open(String FileName, MsoTriState ReadOnly, MsoTriState Untitled, MsoTriState WithWindow)
+   위치: DocConvert_Core.OfficeLib.PowerPointConvert_Core.PowerPointSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible)
+
+2021-03-01 22:34:04.5408 ERROR - Conversion failure: COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.
+2021-03-01 22:34:04.5408 ERROR - ================ End ================
+2021-03-01 22:34:04.6013  INFO - ==================== End ====================
+2021-03-01 22:34:09.5843  INFO - ==================== Start ====================
+2021-03-01 22:34:09.5843  INFO - Method: PowerPointSaveAs, FilePath: C:\workspace\data\20210301\664CB10CC59E4D3C60DD2782F02EE01A\PowerPoint 시작_p1234.pptx, outPath: C:\workspace\data\20210301\664CB10CC59E4D3C60DD2782F02EE01A\PowerPoint 시작_p1234.pdf, docPassword: 1234
+2021-03-01 22:34:17.8607 ERROR - ======= Method: PowerPointSaveAs =======
+2021-03-01 22:34:17.8607 ERROR -    위치: Microsoft.Office.Interop.PowerPoint.Presentations.Open(String FileName, MsoTriState ReadOnly, MsoTriState Untitled, MsoTriState WithWindow)
+   위치: DocConvert_Core.OfficeLib.PowerPointConvert_Core.PowerPointSaveAs(String FilePath, String outPath, String docPassword, Boolean pageCounting, Boolean appvisible)
+
+2021-03-01 22:34:17.8607 ERROR - Conversion failure: COM 구성 요소 호출에서 HRESULT E_FAIL 오류가 반환되었습니다.
+2021-03-01 22:34:17.8607 ERROR - ================ End ================
+2021-03-01 22:34:17.8766  INFO - ==================== End ====================
+2021-03-01 22:45:41.1924  INFO - ==================== Start ====================
+2021-03-01 22:45:41.1924  INFO - Method: WordSaveAs, FilePath: C:\workspace\data\20210301\825EE37DA3E9763E2DB4BA4C091C7173\Word 시작_p1234.docx, outPath: C:\workspace\data\20210301\825EE37DA3E9763E2DB4BA4C091C7173\Word 시작_p1234.pdf, docPassword: 1234
+2021-03-01 22:45:45.3022  INFO - Conversion success
+2021-03-01 22:45:45.4275  INFO - ==================== End ====================
+2021-03-01 22:46:53.8323  INFO - ==================== Start ====================
+2021-03-01 22:46:53.8328  INFO - Method: HwpSaveAs, FilePath: C:\workspace\data\20210301\8F6E33826C19E2612F179298B615058B\Welcome to Hwp_p12345.hwp, outPath: C:\workspace\data\20210301\8F6E33826C19E2612F179298B615058B\Welcome to Hwp_p12345.pdf
+2021-03-01 22:46:55.5950  INFO - ==================== End ====================

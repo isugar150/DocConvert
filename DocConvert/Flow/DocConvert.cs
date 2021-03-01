@@ -119,6 +119,8 @@ namespace DocConvert.Flow
             // tmp폴더에 있는 파일을 타겟 폴더로 이동
             if (srcFile.Exists)
             {
+                if (targetFile.Exists)
+                    targetFile.Delete();
                 new FileInfo(srcFile.FullName).MoveTo(targetFile.FullName); // 새로 안만들면 srcFile의 경로가 바뀌어버림
                 LogMgr.Write(srcFile.ToString() + " Move file to " + targetFile.FullName);
             }
