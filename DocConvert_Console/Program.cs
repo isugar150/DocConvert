@@ -9,8 +9,6 @@ using Microsoft.Win32;
 using NLog;
 
 //TODO 파일 관리 스케줄러 만들어야됨.
-//TODO DRM 사용관련 업데이트해야함.
-
 
 namespace DocConvert
 {
@@ -29,22 +27,25 @@ namespace DocConvert
         {
             #region 프로세스 실행중이면 종료
             string pidPath = @".\DocConvert.pid";
-
-            int oldPID = int.Parse(File.ReadAllText(pidPath));
-            Process[] process = Process.GetProcesses();
-
-            foreach (Process prs in process)
+            int myPID = 0;
+            try
             {
-                if (prs.Id == oldPID)
-                {
-                    prs.Kill();
-                    LogMgr.Write("I ended a program I had run before.", ConsoleColor.Yellow, LOG_LEVEL.WARN);
-                    break;
-                }
-            }
+                int oldPID = int.Parse(File.ReadAllText(pidPath));
+                Process[] process = Process.GetProcesses();
 
-            int myPID = GetCurrentProcessId(); // 현재 프로그램 PID 가져오기.
-            File.WriteAllText(pidPath, myPID.ToString());
+                foreach (Process prs in process)
+                {
+                    if (prs.Id == oldPID)
+                    {
+                        prs.Kill();
+                        LogMgr.Write("I ended a program I had run before.", ConsoleColor.Yellow, LOG_LEVEL.WARN);
+                        break;
+                    }
+                }
+                myPID = GetCurrentProcessId(); // 현재 프로그램 PID 가져오기.
+                File.WriteAllText(pidPath, myPID.ToString());
+            }
+            catch (Exception) { }
             #endregion
 
             #region 제품명 및 기본 정보 출력

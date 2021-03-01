@@ -12,6 +12,7 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -120,6 +121,71 @@ namespace DocConvert.Flow
             {
                 new FileInfo(srcFile.FullName).MoveTo(targetFile.FullName); // 새로 안만들면 srcFile의 경로가 바뀌어버림
                 LogMgr.Write(srcFile.ToString() + " Move file to " + targetFile.FullName);
+            }
+
+            // DRM 변환
+            bool DRM_useYn = Program.IniProperties.DRM_useYn;
+            
+            LogMgr.Write("use DRM: " + DRM_useYn);
+            // DRM 사용 여부
+            if (DRM_useYn && Regex.IsMatch(drmUseYn, "Y", RegexOptions.IgnoreCase))
+            {
+                LogMgr.Write("=================== DRM ===================");
+                string[] DRM_args_ori = Program.IniProperties.DRM_Args.Split(',');
+                string[] DRM_args = new string[DRM_args_ori.Length];
+
+                FileInfo drmFile = new FileInfo(dataTodayMD5Path.FullName + @"\ori_" + Path.GetFileName(fileName));
+                FileInfo decFile = new FileInfo(targetFile.FullName);
+
+                if (decFile.Exists && Regex.IsMatch(drmUseYn, "Y", RegexOptions.IgnoreCase))
+                {
+                    LogMgr.Write("DRM file name change ==> " + drmFile.FullName);
+                    File.Move(decFile.FullName, drmFile.FullName);
+                }
+
+                // DRM 아규먼트 
+                for (int i = 0; i < DRM_args_ori.Length; i++)
+                {
+                    if (DRM_args_ori[i].Equals("$Full_Path$"))
+                        DRM_args[i] = drmFile.FullName;
+                    else if (DRM_args_ori[i].Equals("$File_Path$"))
+                        DRM_args[i] = Path.GetDirectoryName(drmFile.FullName) + @"\";
+                    else if (DRM_args_ori[i].Equals("$File_Name$"))
+                        DRM_args[i] = Path.GetFileName(drmFile.FullName);
+                    else if (DRM_args_ori[i].Equals("$Out_Full_Path$"))
+                        DRM_args[i] = decFile.FullName;
+                    else if (DRM_args_ori[i].Equals("$DRM_Type$"))
+                        DRM_args[i] = drmType;
+                    else
+                        DRM_args[i] = DRM_args_ori[i];
+                }
+
+                string excuteFile = Program.IniProperties.DRM_Path;
+                string DRM_arguments = "";
+                for (int i = 0; i < DRM_args.Length; i++)
+                {
+                    if (i == 0)
+                        DRM_arguments = "\"" + DRM_args[i] + "\"";
+                    else
+                        DRM_arguments += " \"" + DRM_args[i] + "\"";
+                }
+                LogMgr.Write(excuteFile + " " + DRM_arguments);
+
+                // DRM 실행
+                string result = ProcessUtil.RunProcess(excuteFile, DRM_arguments).Replace(Environment.NewLine, "");
+
+                LogMgr.Write("DRM Result ===> " + result);
+
+                if (result.Equals(Program.IniProperties.DRM_Result))
+                    LogMgr.Write("DRM decryption success!");
+                else
+                {
+                    LogMgr.Write("DRM decryption failed!");
+                    responseMsg["ResultCode"] = define.DRM_DECRYPTION_ERROR.ToString();
+                    responseMsg["Message"] = "DRM decryption failed.";
+                    return responseMsg;
+                }
+                LogMgr.Write("===========================================");
             }
 
             // PDF로 변환
