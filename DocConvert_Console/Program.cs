@@ -25,22 +25,26 @@ namespace DocConvert
         static void Main(string[] args)
         {
             #region 프로세스 실행중이면 종료
+            Process[] process = Process.GetProcesses();
             string pidPath = @".\DocConvert.pid";
             int myPID = 0;
             try
             {
-                int oldPID = int.Parse(File.ReadAllText(pidPath));
-                Process[] process = Process.GetProcesses();
-
-                foreach (Process prs in process)
+                try
                 {
-                    if (prs.Id == oldPID)
+                    int oldPID = int.Parse(File.ReadAllText(pidPath));
+                    foreach (Process prs in process)
                     {
-                        prs.Kill();
-                        LogMgr.Write("I ended a program I had run before.", ConsoleColor.Yellow, LOG_LEVEL.WARN);
-                        break;
+                        if (prs.Id == oldPID)
+                        {
+                            prs.Kill();
+                            LogMgr.Write("I ended a program I had run before.", ConsoleColor.Yellow, LOG_LEVEL.WARN);
+                            break;
+                        }
                     }
                 }
+                catch (Exception) { }
+
                 myPID = GetCurrentProcessId(); // 현재 프로그램 PID 가져오기.
                 File.WriteAllText(pidPath, myPID.ToString());
             }
@@ -238,9 +242,9 @@ namespace DocConvert
             time[1] = int.Parse(timeStr[1]); // 분
             DateTime timeTaken = new DateTime();
             if (new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, time[0], time[1], 0) < DateTime.Now)
-                timeTaken = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, time[0], time[1], 0).AddDays(1);
+                timeTaken = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, time[0], time[1], 1).AddDays(1);
             else
-                timeTaken = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, time[0], time[1], 0);
+                timeTaken = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, time[0], time[1], 1);
 
             TimeSpan curTime = timeTaken - DateTime.Now;
 

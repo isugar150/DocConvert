@@ -41,3 +41,16 @@ C:\Users\o0_0o\Documents\Source\DocConvert\bin\Release\NLog.config
 C:\Users\o0_0o\Documents\Source\DocConvert\bin\Release\FilePathCheckerModuleExample.dll
 C:\Users\o0_0o\Documents\Source\DocConvert\bin\Release\pdfium.dll
 C:\Users\o0_0o\Documents\Source\DocConvert\bin\Release\DocConvert_Core.dll
+C:\Users\JMKIM\Documents\source\DocConvert\bin\Release\NLog.config
+C:\Users\JMKIM\Documents\source\DocConvert\bin\Release\FilePathCheckerModuleExample.dll
+C:\Users\JMKIM\Documents\source\DocConvert\bin\Release\pdfium.dll
+C:\Users\JMKIM\Documents\source\DocConvert\bin\Release\DocConvert_Core.dll
+C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Core\obj\x86\Release\DocConvert_Core.csprojAssemblyReference.cache
+C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Core\obj\x86\Release\Interop.HWPCONTROLLib.dll
+C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Core\obj\x86\Release\AxInterop.HWPCONTROLLib.dll
+C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Core\obj\x86\Release\DocConvert_Core.csproj.ResolveComReference.cache
+C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Core\obj\x86\Release\DocConvert_Core.Properties.Resources.resources
+C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Core\obj\x86\Release\DocConvert_Core.csproj.GenerateResource.cache
+C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Core\obj\x86\Release\DocConvert_Core.csproj.CoreCompileInputs.cache
+C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Core\obj\x86\Release\DocConvert_Core.csproj.CopyComplete
+C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Core\obj\x86\Release\DocConvert_Core.dll

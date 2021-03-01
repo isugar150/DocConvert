@@ -11,7 +11,7 @@
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
+    <Deterministic>false</Deterministic>
     <PublishUrl>게시\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -118,4 +118,15 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if not exist "$(TargetDir)API" mkdir "$(TargetDir)API"
+copy /Y "$(SolutionDir)DocConvert_API_JAVA\out\artifacts\DocConvert_API_jar\DocConvert_API.jar" "$(TargetDir)API\DocConvert_API.jar"
+del $(TargetDir)*.pdb
+del $(TargetDir)*.xml</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>FOR /f %25%25a IN ('WMIC OS GET LocalDateTime ^| FIND "+"') DO SET DTS=%25%25a  
+SET COMPILEDATETIME=%25DTS:~0,8%25-%25DTS:~8,10%25  
+echo %25COMPILEDATETIME%25 &gt; "$(ProjectDir)\Resources\BuildDate.txt"</PreBuildEvent>
+  </PropertyGroup>
 </Project>
