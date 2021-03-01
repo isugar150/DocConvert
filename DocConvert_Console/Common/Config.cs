@@ -78,7 +78,7 @@ namespace DocConvert.Common
             setting["Scheduler"]["CleanWorkspaceSchedulerYn"] = "Y         ;작업공간 정리 스케줄러 사용 (Y:사용) (n:사용안함)";
             setting["Scheduler"]["CleanWorkspaceDay"] = "3         ;작업공간 정리시 설정한 오래된 일수가 지난 파일 삭제 (단위: 일)";
             setting["Scheduler"]["CleanLogSchedulerYn"] = "Y       ;로그 정리 스케줄러 사용 (Y:사용) (n:사용안함)";
-            setting["Scheduler"]["CleanLogDay"] = "10         ;로그 정리시 설정한 오래된 일수가 지난 파일 삭제 (단위: 일)";
+            setting["Scheduler"]["CleanLogDay"] = "7         ;로그 정리시 설정한 오래된 일수가 지난 파일 삭제 (단위: 일)";
 
             setting["DRM Setting"]["DRM useYn"] = "n      ;DRM 사용 여부";
             setting["DRM Setting"]["DRM Path"] = "       ;DRM 경로";

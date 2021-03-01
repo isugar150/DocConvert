@@ -6,9 +6,6 @@ using System.Threading;
 using DocConvert.Common;
 using DocConvert_Core.IniLib;
 using Microsoft.Win32;
-using NLog;
-
-//TODO 파일 관리 스케줄러 만들어야됨.
 
 namespace DocConvert
 {
@@ -19,6 +16,8 @@ namespace DocConvert
         public static ManualResetEvent manualEvent = new ManualResetEvent(false);
 
         public static bool isHwpConverting = false;
+
+        private static Timer _Scheduler;
 
         [DllImport("kernel32")]
         public static extern Int32 GetCurrentProcessId();
@@ -110,13 +109,15 @@ namespace DocConvert
                         LogMgr.Write("The configuration file is created in " + Environment.CurrentDirectory + @"\DocConvert.ini", ConsoleColor.Yellow, LOG_LEVEL.INFO);
                     }
                 }
-            } catch (NullReferenceException e1)
+            }
+            catch (NullReferenceException e1)
             {
                 LogMgr.Write("ERROR CODE: " + define.PARSING_INI_ERROR.ToString(), ConsoleColor.Red, LOG_LEVEL.ERROR);
                 LogMgr.Write(e1.Message, ConsoleColor.Red, LOG_LEVEL.ERROR);
                 LogMgr.Write(e1.StackTrace, ConsoleColor.Red, LOG_LEVEL.ERROR);
                 LogMgr.Write("There is a problem with the config file and continues with default settings", ConsoleColor.Red, LOG_LEVEL.ERROR);
-            } catch (Exception e1)
+            }
+            catch (Exception e1)
             {
                 LogMgr.Write("ERROR CODE: " + define.UNDEFINE_ERROR.ToString(), ConsoleColor.Red, LOG_LEVEL.ERROR);
                 LogMgr.Write(e1.Message, ConsoleColor.Red, LOG_LEVEL.ERROR);
@@ -136,7 +137,7 @@ namespace DocConvert
             LogMgr.Write("- CleanWorkspaceDay: " + IniProperties.CleanWorkspaceDay, ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("- CleanLogSchedulerYn: " + IniProperties.CleanLogSchedulerYn, ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("- CleanLogDay: " + IniProperties.CleanLogDay, ConsoleColor.White, LOG_LEVEL.INFO);
-                          
+
             LogMgr.Write("- DRM useYn: " + IniProperties.DRM_useYn, ConsoleColor.White, LOG_LEVEL.INFO);
             if (IniProperties.DRM_useYn)
             {
@@ -189,6 +190,26 @@ namespace DocConvert
             LogMgr.Write("Socket Server Listen On " + IniProperties.Bind_IP + ":" + IniProperties.Socket_Port, ConsoleColor.Green, LOG_LEVEL.WARN);
             #endregion
 
+            #region 파일정리 스케줄러 등록
+            string SchedulerInfo = "";
+            if (IniProperties.CleanWorkspaceSchedulerYn)
+            {
+                LogMgr.Write(string.Format("Workspace Cleanup Scheduler: {0}days", IniProperties.CleanWorkspaceDay));
+            }
+
+            if (IniProperties.CleanLogSchedulerYn)
+            {
+                LogMgr.Write(SchedulerInfo += string.Format("Log cleanup scheduler: {0}days", IniProperties.CleanLogDay));
+            }
+
+            if (IniProperties.CleanWorkspaceSchedulerYn || IniProperties.CleanLogSchedulerYn)
+            {
+                _Scheduler = new Timer(Callback, null, CalculateTimerInterval(), Timeout.Infinite);
+                LogMgr.Write("Next scheduler operation time: " + (DateTime.Now + TimeSpan.FromMilliseconds(CalculateTimerInterval())), ConsoleColor.Yellow, LOG_LEVEL.WARN);
+                LogMgr.Write("Cleanup scheduler is working", ConsoleColor.Green, LOG_LEVEL.WARN);
+            }
+            #endregion
+
             LogMgr.Write("DocConvert Server Started in " + DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss"), ConsoleColor.Green, LOG_LEVEL.WARN);
 
             Console.WriteLine("Press the exit key to exit.");
@@ -201,5 +222,119 @@ namespace DocConvert
                 }
             }
         }
+
+        #region 스케줄러 관련 메소드
+
+        /// <summary>
+        /// 스케줄러 등록시 지정할 타이머
+        /// </summary>
+        /// <returns>해당 시간까지 Milliseconds</returns>
+        private static int CalculateTimerInterval()
+        {
+            string[] timeStr = IniProperties.SchedulerTime.Split(',');
+            int[] time = new int[3];
+            for (int i = 0; i < 2; i++)
+                time[0] = int.Parse(timeStr[0]); // 시
+            time[1] = int.Parse(timeStr[1]); // 분
+            DateTime timeTaken = new DateTime();
+            if (new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, time[0], time[1], 0) < DateTime.Now)
+                timeTaken = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, time[0], time[1], 0).AddDays(1);
+            else
+                timeTaken = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, time[0], time[1], 0);
+
+            TimeSpan curTime = timeTaken - DateTime.Now;
+
+            return (int)curTime.TotalMilliseconds;
+        }
+
+        private static void Callback(Object state)
+        {
+            Thread.Sleep(3000);
+            try
+            {
+                _Scheduler.Change(CalculateTimerInterval(), Timeout.Infinite);
+                LogMgr.Write("Next scheduler operation time: " + (DateTime.Now + TimeSpan.FromMilliseconds(CalculateTimerInterval())), ConsoleColor.Yellow, LOG_LEVEL.WARN);
+            }
+            catch (Exception) { _Scheduler.Dispose(); LogMgr.Write("An error occurred while the scheduler was running, so it was disabled.", LOG_LEVEL.ERROR); }
+            if (IniProperties.CleanWorkspaceSchedulerYn)
+            {
+                LogMgr.Write("Workspace cleanup scheduler has been run", LOG_LEVEL.INFO);
+                DirectoryInfo workspaceDir = new DirectoryInfo(IniProperties.Workspace_Directory);
+                deleteFolder(workspaceDir.FullName, IniProperties.CleanWorkspaceDay);
+                if (!workspaceDir.Exists)
+                    workspaceDir.Create();
+                DirectoryInfo dataDir = new DirectoryInfo(IniProperties.Workspace_Directory + @"\data");
+                if (!dataDir.Exists)
+                    dataDir.Create();
+                DirectoryInfo tmpDir = new DirectoryInfo(IniProperties.Workspace_Directory + @"\tmp");
+                if (!tmpDir.Exists)
+                    tmpDir.Create();
+            }
+            DirectoryInfo logDir = new DirectoryInfo(IniProperties.Workspace_Directory);
+            deleteFolder(logDir.FullName, 1);
+            if (!logDir.Exists)
+                logDir.Create();
+            if (IniProperties.CleanLogSchedulerYn)
+            {
+                LogMgr.Write("Logs cleanup scheduler has been run", LOG_LEVEL.INFO);
+                deleteFolder(Environment.CurrentDirectory + @"\Log", IniProperties.CleanLogDay);
+            }
+        }
+
+
+        /// <summary>
+        /// 수정날짜가 설정한 일수가 지났으면 디렉토리와 안의 파일까지 삭제하는 로직
+        /// </summary>
+        /// <param name="strPath">대상 경로</param>
+        /// <param name="DeletionCycle">지난 일수</param>
+        public static void deleteFolder(string strPath, int DeletionCycle)
+        {
+            DeletionCycle += 1;
+            foreach (string Folder in Directory.GetDirectories(strPath))
+            {
+                deleteFolder(Folder, DeletionCycle); //재귀함수 호출
+            }
+
+            foreach (string file in Directory.GetFiles(strPath))
+            {
+                FileInfo fi = new FileInfo(file);
+                if (fi.LastWriteTime <= DateTime.Now.AddDays(-DeletionCycle))
+                {
+                    fi.Delete();
+                    LogMgr.Write("File " + fi.FullName + " deleted");
+                }
+                if (!isFiles(fi.DirectoryName))
+                {
+                    DirectoryInfo di = new DirectoryInfo(fi.DirectoryName);
+                    LogMgr.Write("Folder " + fi.DirectoryName + " deleted");
+                    di.Delete(true);
+                }
+            }
+        }
+
+        /// <summary>
+        /// 파일인지 디렉토리인지 확인하는 로직.
+        /// </summary>
+        /// <param name="dir"></param>
+        /// <returns></returns>
+        private static bool isFiles(string dir)
+        {
+            string[] Directories = Directory.GetDirectories(dir);   // Defalut Folder
+            {
+                string[] Files = Directory.GetFiles(dir);   // File list Search
+                if (Files.Length != 0)
+                {
+                    return true;
+                }
+
+                foreach (string nodeDir in Directories)   // Folder list Search
+                {
+                    isFiles(nodeDir);   // reSearch
+                }
+            }
+            return false;
+        }
+
+        #endregion
     }
 }
