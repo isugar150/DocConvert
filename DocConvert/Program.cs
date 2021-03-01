@@ -75,6 +75,7 @@ namespace DocConvert
             LogMgr.Write("OS Version: " + Environment.OSVersion.ToString(), ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("PC(Domain) Name: " + Environment.UserDomainName, ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("User Name: " + Environment.UserName, ConsoleColor.White, LOG_LEVEL.INFO);
+            LogMgr.Write("DocConvert Version: " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString(), ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("DocConvert PID: " + myPID, ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("DocConvert LogLevel: " + LogMgr.getLogLevel("DocConvert_Log"), ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("DocConvert_Core LogLevel: " + LogMgr.getLogLevel("DocConvert_Core_Log"), ConsoleColor.White, LOG_LEVEL.INFO);
