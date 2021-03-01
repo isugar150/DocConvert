@@ -81,7 +81,7 @@ namespace DocConvert.Common
             setting["DRM Setting"]["DRM Result"] = "0       ;DRM 성공 시 Result 코드 (해당 코드가 아니면 실패처리)";
             setting["DRM Setting"]["DRM Args"] = "$Full_Path$,$Out_Full_Path$,$DRM_Type$            ;DRM 아규먼트 ','로 구분 { 풀 경로($Full_Path$), 파일 경로($File_Path$), 파일 명($File_Name$), 내보낼 풀 경로($Out_Full_Path$), 변환 타입($DRM_Type$) }";
 
-            setting.Save(Environment.CurrentDirectory + @"\DocConvert.ini");
+            setting.Save(Environment.CurrentDirectory + @".\DocConvert.ini");
         }
     }
 }

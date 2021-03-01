@@ -17,5 +17,6 @@ namespace DocConvert
         public static int INVALID_IMAGE_CONVERT_REQUEST_ERROR = 1004; // PDF파일을 PDF로 변환 요청했을때
         public static int INVALID_CLIENT_KEY_ERROR = 1005; // PDF파일을 PDF로 변환 요청했을때
         public static int INVALID_FILE_NOT_FOUND_ERROR = 1006; // PDF파일을 PDF로 변환 요청했을때
+        public static int SOCKET_PORT_BIND_ERROR = 1007; // PDF파일을 PDF로 변환 요청했을때
     }
 }

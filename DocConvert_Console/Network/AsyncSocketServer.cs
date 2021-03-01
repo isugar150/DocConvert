@@ -16,7 +16,19 @@ namespace DocConvert.Network
     {
         public AsyncSocketServer(string bindIP, int socketPORT) : base(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp)
         {
-            base.Bind(new IPEndPoint(IPAddress.Parse(bindIP), socketPORT));
+            try
+            {
+                base.Bind(new IPEndPoint(IPAddress.Parse(bindIP), socketPORT));
+            }
+            catch (SocketException e1)
+            {
+                LogMgr.Write("ERROR CODE: " + define.SOCKET_PORT_BIND_ERROR, LOG_LEVEL.ERROR);
+                LogMgr.Write("Failed to bind to socket port " + bindIP + ":" + socketPORT, LOG_LEVEL.ERROR);
+                if (LogMgr.getLogLevel("DocConvert_Log").Equals("DEBUG"))
+                    LogMgr.Write("ERROR STACKTRACE\r\n" + e1.StackTrace, ConsoleColor.Red, LOG_LEVEL.ERROR);
+                return;
+            }
+
             base.Listen(10); // 백로깅
             base.AcceptAsync(new AsyncSocketEvent(this));
         }

@@ -8,3 +8,13 @@ C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\obj\x86\Debug\DocC
 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\obj\x86\Debug\DocConvert.exe
 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\obj\x86\Debug\DocConvert.pdb
 C:\Users\o0_0o\Documents\Source\DocConvert\DocConvert_Console\obj\x86\Debug\DocConvert.csprojAssemblyReference.cache
+C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug\NLog.config
+C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug\FilePathCheckerModuleExample.dll
+C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug\pdfium.dll
+C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug\DocConvert.exe
+C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug\DocConvert.pdb
+C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Console\obj\x86\Debug\DocConvert.csprojAssemblyReference.cache
+C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Console\obj\x86\Debug\DocConvert.csproj.CoreCompileInputs.cache
+C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Console\obj\x86\Debug\DocConvert.csproj.CopyComplete
+C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Console\obj\x86\Debug\DocConvert.exe
+C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Console\obj\x86\Debug\DocConvert.pdb

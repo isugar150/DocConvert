@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Threading;
 using DocConvert.Common;
 using DocConvert_Core.IniLib;
@@ -19,9 +21,33 @@ namespace DocConvert
         public static ManualResetEvent manualEvent = new ManualResetEvent(false);
 
         public static bool isHwpConverting = false;
-        
+
+        [DllImport("kernel32")]
+        public static extern Int32 GetCurrentProcessId();
+
         static void Main(string[] args)
         {
+            #region 프로세스 실행중이면 종료
+            string pidPath = @".\DocConvert.pid";
+
+            int oldPID = int.Parse(File.ReadAllText(pidPath));
+            Process[] process = Process.GetProcesses();
+
+            foreach (Process prs in process)
+            {
+                if (prs.Id == oldPID)
+                {
+                    prs.Kill();
+                    LogMgr.Write("I ended a program I had run before.");
+                    break;
+                }
+            }
+
+            int myPID = GetCurrentProcessId(); // 현재 프로그램 PID 가져오기.
+            File.WriteAllText(pidPath, myPID.ToString());
+            #endregion
+
+            #region 제품명 및 기본 정보 출력
             // 제품명 로그
             LogMgr.Write(@"
           _____              _____                          _   
@@ -45,8 +71,11 @@ namespace DocConvert
             LogMgr.Write("OS Version: " + Environment.OSVersion.ToString(), ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("PC(Domain) Name: " + Environment.UserDomainName, ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("User Name: " + Environment.UserName, ConsoleColor.White, LOG_LEVEL.INFO);
+            LogMgr.Write("DocConvert PID: " + myPID, ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("DocConvert LogLevel: " + LogMgr.getLogLevel("DocConvert_Log"), ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("DocConvert_Core LogLevel: " + LogMgr.getLogLevel("DocConvert_Core_Log"), ConsoleColor.White, LOG_LEVEL.INFO);
+            #endregion
+
             #region parse Ini File
             LogMgr.Write("------------ Parsing Ini File ------------", ConsoleColor.White, LOG_LEVEL.INFO);
             try
@@ -54,9 +83,9 @@ namespace DocConvert
                 for (int i = 0; i < 3; i++)
                 {
                     IniFile pairs = new IniFile(); // Ini 변수 초기화
-                    if (new FileInfo(Environment.CurrentDirectory + @"\DocConvert.ini").Exists)
+                    if (new FileInfo(Environment.CurrentDirectory + @".\DocConvert.ini").Exists)
                     {
-                        pairs.Load(Environment.CurrentDirectory + @"\DocConvert.ini");
+                        pairs.Load(Environment.CurrentDirectory + @".\DocConvert.ini");
                         IniProperties.Bind_IP = pairs["Common"]["Bind IP"].ToString2().Trim();
                         IniProperties.Socket_Port = int.Parse(pairs["Common"]["Socket Port"].ToString2().Trim());
                         IniProperties.Client_KEY = pairs["Common"]["Client KEY"].ToString2().Trim();
