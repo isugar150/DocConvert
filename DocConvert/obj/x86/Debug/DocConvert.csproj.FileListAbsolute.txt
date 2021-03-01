@@ -18,3 +18,8 @@ C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Console\obj\x86\Debug\DocC
 C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Console\obj\x86\Debug\DocConvert.csproj.CopyComplete
 C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Console\obj\x86\Debug\DocConvert.exe
 C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Console\obj\x86\Debug\DocConvert.pdb
+C:\Users\JMKIM\Documents\source\DocConvert\DocConvert\obj\x86\Debug\DocConvert.csprojAssemblyReference.cache
+C:\Users\JMKIM\Documents\source\DocConvert\DocConvert\obj\x86\Debug\DocConvert.csproj.CoreCompileInputs.cache
+C:\Users\JMKIM\Documents\source\DocConvert\DocConvert\obj\x86\Debug\DocConvert.csproj.CopyComplete
+C:\Users\JMKIM\Documents\source\DocConvert\DocConvert\obj\x86\Debug\DocConvert.exe
+C:\Users\JMKIM\Documents\source\DocConvert\DocConvert\obj\x86\Debug\DocConvert.pdb

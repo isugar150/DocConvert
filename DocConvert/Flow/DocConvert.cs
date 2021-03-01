@@ -220,13 +220,11 @@ namespace DocConvert.Flow
             }
             else if (Path.GetExtension(targetFile.FullName).Equals(".pdf"))
             {
-                if (convertImg.Equals("0"))
+                if (convertImg == 0)
                 {
-                    ReturnValue pdfreturnValue = new ReturnValue();
-                    pdfreturnValue.isSuccess = true;
-                    pdfreturnValue.Message = "pdf files cannot be converted to pdf.";
-                    pdfreturnValue.PageCount = ConvertImg.pdfPageCount(targetFile.FullName);
-                    status = pdfreturnValue;
+                    responseMsg["ResultCode"] = define.PDF_TO_PDF_ERROR.ToString();
+                    responseMsg["Message"] = "pdf files cannot be converted to pdf.";
+                    return responseMsg;
                 }
             }
 

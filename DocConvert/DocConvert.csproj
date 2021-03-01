@@ -29,27 +29,6 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <TargetFrameworkProfile />
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>..\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <PlatformTarget>x86</PlatformTarget>
     <OutputPath>..\bin\Debug\</OutputPath>
@@ -121,6 +100,7 @@
   <PropertyGroup>
     <PostBuildEvent>if not exist "$(TargetDir)API" mkdir "$(TargetDir)API"
 copy /Y "$(SolutionDir)DocConvert_API_JAVA\out\artifacts\DocConvert_API_jar\DocConvert_API.jar" "$(TargetDir)API\DocConvert_API.jar"
+copy /Y "$(SolutionDir)DocConvert\Resources\BuildDate.txt" "$(TargetDir)DocConvert_BuildDate.txt"
 del $(TargetDir)*.pdb
 del $(TargetDir)*.xml</PostBuildEvent>
   </PropertyGroup>
