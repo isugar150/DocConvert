@@ -196,16 +196,6 @@ namespace DocConvert
             #endregion
 
             #region 파일정리 스케줄러 등록
-            if (IniProperties.CleanWorkspaceSchedulerYn)
-            {
-                LogMgr.Write(string.Format("Workspace Cleanup Scheduler: {0}day", IniProperties.CleanWorkspaceDay));
-            }
-
-            if (IniProperties.CleanLogSchedulerYn)
-            {
-                LogMgr.Write(string.Format("Log cleanup scheduler: {0}day", IniProperties.CleanLogDay));
-            }
-
             if (IniProperties.CleanWorkspaceSchedulerYn || IniProperties.CleanLogSchedulerYn)
             {
                 int workDateMilliseconds = CalculateTimerInterval();
@@ -213,8 +203,17 @@ namespace DocConvert
                 _Scheduler = new Timer(Callback, null, workDateMilliseconds, Timeout.Infinite);
                 LogMgr.Write("============ [Scheduler] ============", ConsoleColor.Yellow, LOG_LEVEL.INFO);
                 LogMgr.Write("Next scheduler operation time: " + (DateTime.Now + TimeSpan.FromMilliseconds(workDateMilliseconds)).ToString("yyyy/MM/dd HH:mm"), ConsoleColor.Yellow, LOG_LEVEL.INFO);
-                LogMgr.Write("If the workspace last modified date is past " + (DateTime.Now.AddDays(-IniProperties.CleanWorkspaceDay) + TimeSpan.FromMilliseconds(workDateMilliseconds)).ToString("yyyy/MM/dd HH:mm"), ConsoleColor.Yellow, LOG_LEVEL.INFO);
-                LogMgr.Write("If the log last modified date is past " + (DateTime.Now.AddDays(-IniProperties.CleanLogDay) + TimeSpan.FromMilliseconds(workDateMilliseconds)).ToString("yyyy/MM/dd HH:mm"), ConsoleColor.Yellow, LOG_LEVEL.INFO);
+
+                if (IniProperties.CleanWorkspaceSchedulerYn)
+                {
+                    LogMgr.Write("If the workspace last modified date is past " + (DateTime.Now.AddDays(-IniProperties.CleanWorkspaceDay) + TimeSpan.FromMilliseconds(workDateMilliseconds)).ToString("yyyy/MM/dd HH:mm"), ConsoleColor.Yellow, LOG_LEVEL.INFO);
+                }
+
+                if (IniProperties.CleanLogSchedulerYn)
+                {
+                    LogMgr.Write("If the log last modified date is past " + (DateTime.Now.AddDays(-IniProperties.CleanLogDay) + TimeSpan.FromMilliseconds(workDateMilliseconds)).ToString("yyyy/MM/dd HH:mm"), ConsoleColor.Yellow, LOG_LEVEL.INFO);
+                }
+
                 LogMgr.Write("=====================================", ConsoleColor.Yellow, LOG_LEVEL.INFO);
 
                 LogMgr.Write("Cleanup scheduler is working", ConsoleColor.Green, LOG_LEVEL.INFO);
@@ -267,8 +266,14 @@ namespace DocConvert
                 _Scheduler.Change(CalculateTimerInterval(), Timeout.Infinite);
                 LogMgr.Write("============ [Scheduler] ============", ConsoleColor.Yellow, LOG_LEVEL.INFO);
                 LogMgr.Write("Next scheduler operation time: " + (DateTime.Now + TimeSpan.FromMilliseconds(workDateMilliseconds)).ToString("yyyy/MM/dd HH:mm"), ConsoleColor.Yellow, LOG_LEVEL.INFO);
-                LogMgr.Write("If the workspace last modified date is past " + (DateTime.Now.AddDays(-IniProperties.CleanWorkspaceDay) + TimeSpan.FromMilliseconds(workDateMilliseconds)).ToString("yyyy/MM/dd HH:mm"), ConsoleColor.Yellow, LOG_LEVEL.INFO);
-                LogMgr.Write("If the log last modified date is past " + (DateTime.Now.AddDays(-IniProperties.CleanLogDay) + TimeSpan.FromMilliseconds(workDateMilliseconds)).ToString("yyyy/MM/dd HH:mm"), ConsoleColor.Yellow, LOG_LEVEL.INFO);
+                if (IniProperties.CleanWorkspaceSchedulerYn)
+                {
+                    LogMgr.Write("If the workspace last modified date is past " + (DateTime.Now.AddDays(-IniProperties.CleanWorkspaceDay) + TimeSpan.FromMilliseconds(workDateMilliseconds)).ToString("yyyy/MM/dd HH:mm"), ConsoleColor.Yellow, LOG_LEVEL.INFO);
+                }
+                if (IniProperties.CleanLogSchedulerYn)
+                {
+                    LogMgr.Write("If the log last modified date is past " + (DateTime.Now.AddDays(-IniProperties.CleanLogDay) + TimeSpan.FromMilliseconds(workDateMilliseconds)).ToString("yyyy/MM/dd HH:mm"), ConsoleColor.Yellow, LOG_LEVEL.INFO);
+                }
                 LogMgr.Write("=====================================", ConsoleColor.Yellow, LOG_LEVEL.INFO);
             }
             catch (Exception) { _Scheduler.Dispose(); LogMgr.Write("An error occurred while the scheduler was running, so it was disabled.", LOG_LEVEL.ERROR); }

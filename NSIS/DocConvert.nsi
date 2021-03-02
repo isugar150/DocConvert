@@ -36,7 +36,7 @@
 
 ; MUI end ------
 
-Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
+Name "${PRODUCT_NAME}"
 OutFile "DocConvert Setup.exe"
 InstallDir "C:\DocConvert"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
