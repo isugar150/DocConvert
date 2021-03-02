@@ -38,6 +38,10 @@ namespace DocConvert.Flow
             DirectoryInfo tmpPath = new DirectoryInfo(workspacePath + @"\tmp");
             FileInfo srcFile = new FileInfo(tmpPath.FullName + @"\" + fileName);
             DirectoryInfo dataTodayMD5Path = null;
+            // 파일 스케줄러로 인해 생성/수정/접근날짜 문서변환한 시간으로 설정
+            srcFile.CreationTime = DateTime.Now;
+            srcFile.LastAccessTime = DateTime.Now;
+            srcFile.LastWriteTime = DateTime.Now;
             try
             {
                 dataTodayMD5Path = new DirectoryInfo(workspacePath.FullName + @"\data\" + DateTime.Now.ToString("yyyyMMdd") + @"\" + MD5_CheckSUM(srcFile.FullName));
@@ -122,6 +126,7 @@ namespace DocConvert.Flow
                 if (targetFile.Exists)
                     targetFile.Delete();
                 new FileInfo(srcFile.FullName).MoveTo(targetFile.FullName); // 새로 안만들면 srcFile의 경로가 바뀌어버림
+                
                 LogMgr.Write(srcFile.ToString() + " Move file to " + targetFile.FullName);
             }
 

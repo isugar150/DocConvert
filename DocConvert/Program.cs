@@ -196,26 +196,32 @@ namespace DocConvert
             #endregion
 
             #region 파일정리 스케줄러 등록
-            string SchedulerInfo = "";
             if (IniProperties.CleanWorkspaceSchedulerYn)
             {
-                LogMgr.Write(string.Format("Workspace Cleanup Scheduler: {0}days", IniProperties.CleanWorkspaceDay));
+                LogMgr.Write(string.Format("Workspace Cleanup Scheduler: {0}day", IniProperties.CleanWorkspaceDay));
             }
 
             if (IniProperties.CleanLogSchedulerYn)
             {
-                LogMgr.Write(SchedulerInfo += string.Format("Log cleanup scheduler: {0}days", IniProperties.CleanLogDay));
+                LogMgr.Write(string.Format("Log cleanup scheduler: {0}day", IniProperties.CleanLogDay));
             }
 
             if (IniProperties.CleanWorkspaceSchedulerYn || IniProperties.CleanLogSchedulerYn)
             {
-                _Scheduler = new Timer(Callback, null, CalculateTimerInterval(), Timeout.Infinite);
-                LogMgr.Write("Next scheduler operation time: " + (DateTime.Now + TimeSpan.FromMilliseconds(CalculateTimerInterval())), ConsoleColor.Yellow, LOG_LEVEL.WARN);
-                LogMgr.Write("Cleanup scheduler is working", ConsoleColor.Green, LOG_LEVEL.WARN);
+                int workDateMilliseconds = CalculateTimerInterval();
+
+                _Scheduler = new Timer(Callback, null, workDateMilliseconds, Timeout.Infinite);
+                LogMgr.Write("============ [Scheduler] ============", ConsoleColor.Yellow, LOG_LEVEL.INFO);
+                LogMgr.Write("Next scheduler operation time: " + (DateTime.Now + TimeSpan.FromMilliseconds(workDateMilliseconds)).ToString("yyyy/MM/dd HH:mm"), ConsoleColor.Yellow, LOG_LEVEL.INFO);
+                LogMgr.Write("If the workspace last modified date is past " + (DateTime.Now.AddDays(-IniProperties.CleanWorkspaceDay) + TimeSpan.FromMilliseconds(workDateMilliseconds)).ToString("yyyy/MM/dd HH:mm"), ConsoleColor.Yellow, LOG_LEVEL.INFO);
+                LogMgr.Write("If the log last modified date is past " + (DateTime.Now.AddDays(-IniProperties.CleanLogDay) + TimeSpan.FromMilliseconds(workDateMilliseconds)).ToString("yyyy/MM/dd HH:mm"), ConsoleColor.Yellow, LOG_LEVEL.INFO);
+                LogMgr.Write("=====================================", ConsoleColor.Yellow, LOG_LEVEL.INFO);
+
+                LogMgr.Write("Cleanup scheduler is working", ConsoleColor.Green, LOG_LEVEL.INFO);
             }
             #endregion
 
-            LogMgr.Write("DocConvert Server Started in " + DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss"), ConsoleColor.Green, LOG_LEVEL.WARN);
+            LogMgr.Write("DocConvert Server Started in " + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"), ConsoleColor.Green, LOG_LEVEL.WARN);
 
             Console.WriteLine("Press the exit key to exit.");
             while (true)
@@ -257,13 +263,18 @@ namespace DocConvert
             Thread.Sleep(3000);
             try
             {
+                int workDateMilliseconds = CalculateTimerInterval();
                 _Scheduler.Change(CalculateTimerInterval(), Timeout.Infinite);
-                LogMgr.Write("Next scheduler operation time: " + (DateTime.Now + TimeSpan.FromMilliseconds(CalculateTimerInterval())), ConsoleColor.Yellow, LOG_LEVEL.WARN);
+                LogMgr.Write("============ [Scheduler] ============", ConsoleColor.Yellow, LOG_LEVEL.INFO);
+                LogMgr.Write("Next scheduler operation time: " + (DateTime.Now + TimeSpan.FromMilliseconds(workDateMilliseconds)).ToString("yyyy/MM/dd HH:mm"), ConsoleColor.Yellow, LOG_LEVEL.INFO);
+                LogMgr.Write("If the workspace last modified date is past " + (DateTime.Now.AddDays(-IniProperties.CleanWorkspaceDay) + TimeSpan.FromMilliseconds(workDateMilliseconds)).ToString("yyyy/MM/dd HH:mm"), ConsoleColor.Yellow, LOG_LEVEL.INFO);
+                LogMgr.Write("If the log last modified date is past " + (DateTime.Now.AddDays(-IniProperties.CleanLogDay) + TimeSpan.FromMilliseconds(workDateMilliseconds)).ToString("yyyy/MM/dd HH:mm"), ConsoleColor.Yellow, LOG_LEVEL.INFO);
+                LogMgr.Write("=====================================", ConsoleColor.Yellow, LOG_LEVEL.INFO);
             }
             catch (Exception) { _Scheduler.Dispose(); LogMgr.Write("An error occurred while the scheduler was running, so it was disabled.", LOG_LEVEL.ERROR); }
             if (IniProperties.CleanWorkspaceSchedulerYn)
             {
-                LogMgr.Write("Workspace cleanup scheduler has been run", LOG_LEVEL.INFO);
+                LogMgr.Write("Workspace cleanup scheduler has been run", LOG_LEVEL.WARN);
                 DirectoryInfo workspaceDir = new DirectoryInfo(IniProperties.Workspace_Directory);
                 deleteFolder(workspaceDir.FullName, IniProperties.CleanWorkspaceDay);
                 if (!workspaceDir.Exists)
@@ -276,12 +287,12 @@ namespace DocConvert
                     tmpDir.Create();
             }
             DirectoryInfo logDir = new DirectoryInfo(IniProperties.Workspace_Directory);
-            deleteFolder(logDir.FullName, 1);
+            deleteFolder(logDir.FullName, IniProperties.CleanLogDay);
             if (!logDir.Exists)
                 logDir.Create();
             if (IniProperties.CleanLogSchedulerYn)
             {
-                LogMgr.Write("Logs cleanup scheduler has been run", LOG_LEVEL.INFO);
+                LogMgr.Write("Logs cleanup scheduler has been run", LOG_LEVEL.WARN);
                 deleteFolder(Environment.CurrentDirectory + @"\Log", IniProperties.CleanLogDay);
             }
         }
@@ -294,7 +305,6 @@ namespace DocConvert
         /// <param name="DeletionCycle">지난 일수</param>
         public static void deleteFolder(string strPath, int DeletionCycle)
         {
-            DeletionCycle += 1;
             foreach (string Folder in Directory.GetDirectories(strPath))
             {
                 deleteFolder(Folder, DeletionCycle); //재귀함수 호출
@@ -303,7 +313,7 @@ namespace DocConvert
             foreach (string file in Directory.GetFiles(strPath))
             {
                 FileInfo fi = new FileInfo(file);
-                if (fi.LastWriteTime <= DateTime.Now.AddDays(-DeletionCycle))
+                if (fi.LastWriteTime <= DateTime.Now.AddDays(-DeletionCycle).AddSeconds(-4))  // -4초는 Sleep
                 {
                     fi.Delete();
                     LogMgr.Write("File " + fi.FullName + " deleted");

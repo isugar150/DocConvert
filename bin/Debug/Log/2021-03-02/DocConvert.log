@@ -1391,3 +1391,2225 @@
 }
 2021-03-02 22:23:15.5423 DEBUG - Processing time: 12.149
 2021-03-02 22:23:15.5423  INFO - Disconnected From:127.0.0.1:12054 Time: 2021-03-02 오후 10:23:15
+2021-03-02 22:24:20.3856 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:24:20.4065 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:24:20.4065  WARN - Starting DocConvert Server..
+2021-03-02 22:24:20.4065  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:24:20.4065  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:24:20.4111  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:24:20.4111  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:24:20.4111  INFO - User Name: JMKIM
+2021-03-02 22:24:20.4111  INFO - DocConvert Version: 2.0.7731.40274
+2021-03-02 22:24:20.4111  INFO - DocConvert PID: 16932
+2021-03-02 22:24:20.4111  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:24:20.4111  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:24:20.4111  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:24:20.4111  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:24:20.4111  INFO - - Socket Port: 12000
+2021-03-02 22:24:20.4266  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:24:20.4266  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:24:20.4266  INFO - - Product Name: DocConvert
+2021-03-02 22:24:20.4266  INFO - - SchedulerTime: 22,25
+2021-03-02 22:24:20.4266  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:24:20.4266  INFO - - CleanWorkspaceDay: 3
+2021-03-02 22:24:20.4266  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:24:20.4266  INFO - - CleanLogDay: 7
+2021-03-02 22:24:20.4266  INFO - - DRM useYn: False
+2021-03-02 22:24:20.4266  INFO - ------------------------------------------
+2021-03-02 22:24:20.4266  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:24:20.4266  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:24:20.4427 DEBUG - Workspace Cleanup Scheduler: 3days
+2021-03-02 22:24:20.4427 DEBUG - Log cleanup scheduler: 7days
+2021-03-02 22:24:20.4427  WARN - Next scheduler operation time: 2021-03-02 오후 10:25:00
+2021-03-02 22:24:20.4427  WARN - Cleanup scheduler is working
+2021-03-02 22:24:20.4427  WARN - DocConvert Server Started in 2021-03-02 10:24:20
+2021-03-02 22:24:56.5676 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:24:56.5895 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:24:56.5895  WARN - Starting DocConvert Server..
+2021-03-02 22:24:56.5895  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:24:56.5895  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:24:56.5895  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:24:56.5895  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:24:56.5895  INFO - User Name: JMKIM
+2021-03-02 22:24:56.5895  INFO - DocConvert Version: 2.0.7731.40274
+2021-03-02 22:24:56.5895  INFO - DocConvert PID: 4436
+2021-03-02 22:24:56.5895  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:24:56.5985  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:24:56.5985  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:24:56.5985  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:24:56.5985  INFO - - Socket Port: 12000
+2021-03-02 22:24:56.5985  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:24:56.5985  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:24:56.5985  INFO - - Product Name: DocConvert
+2021-03-02 22:24:56.5985  INFO - - SchedulerTime: 22,25
+2021-03-02 22:24:56.5985  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:24:56.5985  INFO - - CleanWorkspaceDay: 1
+2021-03-02 22:24:56.6146  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:24:56.6146  INFO - - CleanLogDay: 1
+2021-03-02 22:24:56.6146  INFO - - DRM useYn: False
+2021-03-02 22:24:56.6146  INFO - ------------------------------------------
+2021-03-02 22:24:56.6146  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:24:56.6146  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:24:56.6146 DEBUG - Workspace Cleanup Scheduler: 1days
+2021-03-02 22:24:56.6146 DEBUG - Log cleanup scheduler: 1days
+2021-03-02 22:24:56.6146  WARN - Next scheduler operation time: 2021-03-02 오후 10:25:00
+2021-03-02 22:24:56.6146  WARN - Cleanup scheduler is working
+2021-03-02 22:24:56.6348  WARN - DocConvert Server Started in 2021-03-02 10:24:56
+2021-03-02 22:25:04.0259  WARN - Next scheduler operation time: 2021-03-03 오후 10:25:00
+2021-03-02 22:25:04.0359  INFO - Workspace cleanup scheduler has been run
+2021-03-02 22:25:04.0359 DEBUG - File C:\workspace\data\20210301\0452378B72766F4FD0EE9110A9975F6B\Word 시작.docx deleted
+2021-03-02 22:25:04.0359 DEBUG - File C:\workspace\data\20210301\056510B3AC0E69062AF8B8335CDF5E60\5장.xlsx deleted
+2021-03-02 22:25:04.0545 DEBUG - File C:\workspace\data\20210301\243D3FE4D0D4594EACF0995A30DEA3E6\1장.docx deleted
+2021-03-02 22:25:04.0545 DEBUG - File C:\workspace\data\20210301\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp deleted
+2021-03-02 22:25:04.0545 DEBUG - File C:\workspace\data\20210301\6895CD871573A3D7F7BDABB65B618995\1장.xlsx deleted
+2021-03-02 22:25:04.0674 DEBUG - File C:\workspace\data\20210301\6C63F3FD7FC63D3957BC7556728C63B5\5장.docx deleted
+2021-03-02 22:25:04.0674 DEBUG - File C:\workspace\data\20210301\7D2686E0045E4C7F9FA39B5300CC2EEF\5장.hwp deleted
+2021-03-02 22:25:04.0674 DEBUG - File C:\workspace\data\20210301\AB604D811D943E5B31D20EB094FDF524\0_1_1E34E1166235C4DE66BA26F912640D29.hwp deleted
+2021-03-02 22:25:04.0825 DEBUG - File C:\workspace\data\20210301\AF49679A99A8C8C83F1F34955CF43346\PowerPoint 시작.pptx deleted
+2021-03-02 22:25:04.1192 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1.xlsx deleted
+2021-03-02 22:25:04.1192 DEBUG - File C:\workspace\data\20210301\C105C66336A7D88758F01BA68333007F\5장.pptx deleted
+2021-03-02 22:25:04.1192 DEBUG - File C:\workspace\data\20210301\E5427B53A5281F889FECF0443020E48C\1장.pptx deleted
+2021-03-02 22:25:04.1306 DEBUG - File C:\workspace\data\20210302\243D3FE4D0D4594EACF0995A30DEA3E6\1장.docx deleted
+2021-03-02 22:25:04.1306 DEBUG - File C:\workspace\data\20210302\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1.xlsx deleted
+2021-03-02 22:25:04.1306 DEBUG - File C:\workspace\tmp\0_1_1E34E1166235C4DE66BA26F912640D29.hwp deleted
+2021-03-02 22:25:04.1306 DEBUG - File C:\workspace\tmp\1장.docx deleted
+2021-03-02 22:25:04.1306 DEBUG - File C:\workspace\tmp\1장.pptx deleted
+2021-03-02 22:25:04.1306 DEBUG - File C:\workspace\tmp\1장.xlsx deleted
+2021-03-02 22:25:04.1477 DEBUG - File C:\workspace\tmp\5장.docx deleted
+2021-03-02 22:25:04.1477 DEBUG - File C:\workspace\tmp\Welcome to Hwp.hwp deleted
+2021-03-02 22:25:04.1477 DEBUG - Folder C:\workspace\tmp deleted
+2021-03-02 22:25:04.1846  INFO - Logs cleanup scheduler has been run
+2021-03-02 22:30:14.5513 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:30:14.5702 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:30:14.5702  WARN - Starting DocConvert Server..
+2021-03-02 22:30:14.5702  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:30:14.5702  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:30:14.5702  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:30:14.5702  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:30:14.5702  INFO - User Name: JMKIM
+2021-03-02 22:30:14.5702  INFO - DocConvert Version: 2.0.7731.40505
+2021-03-02 22:30:14.5702  INFO - DocConvert PID: 7328
+2021-03-02 22:30:14.5702  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:30:14.5829  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:30:14.5829  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:30:14.5829  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:30:14.5829  INFO - - Socket Port: 12000
+2021-03-02 22:30:14.5829  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:30:14.5829  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:30:14.5829  INFO - - Product Name: DocConvert
+2021-03-02 22:30:14.5985  INFO - - SchedulerTime: 22,25
+2021-03-02 22:30:14.5985  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:30:14.5985  INFO - - CleanWorkspaceDay: 1
+2021-03-02 22:30:14.5985  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:30:14.5985  INFO - - CleanLogDay: 1
+2021-03-02 22:30:14.5985  INFO - - DRM useYn: False
+2021-03-02 22:30:14.5985  INFO - ------------------------------------------
+2021-03-02 22:30:14.5985  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:30:14.5985  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:30:14.5985 DEBUG - Workspace Cleanup Scheduler: 1days
+2021-03-02 22:30:14.5985 DEBUG - Log cleanup scheduler: 1days
+2021-03-02 22:30:14.5985  WARN - Next scheduler operation time: 2021-03-03 오후 10:25:00
+2021-03-02 22:30:14.6138  WARN - Cleanup scheduler is working
+2021-03-02 22:30:14.6138  WARN - DocConvert Server Started in 2021-03-02 10:30:14
+2021-03-02 22:30:24.8849  INFO - Connect Client From: 127.0.0.1:12140  Connection time: 2021-03-02 오후 10:30:24
+2021-03-02 22:30:24.9789 DEBUG - Received messages from 127.0.0.1:12140
+{
+  "ClientKey": "41974d93-caf9-4ff5-8926-b32c905fdedd",
+  "Method": "DocConvert",
+  "FileName": "5장.docx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:30:24.9789 DEBUG - Method DocConvert Start ==>
+2021-03-02 22:30:24.9989 DEBUG - Initialized variable ========>
+2021-03-02 22:30:24.9989 DEBUG - workspacePath ===> C:\workspace
+2021-03-02 22:30:24.9989 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-02 22:30:24.9989 DEBUG - srcFile ===> C:\workspace\tmp\5장.docx
+2021-03-02 22:30:25.0057 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210302\6C63F3FD7FC63D3957BC7556728C63B5
+2021-03-02 22:30:25.0057 DEBUG - targetFile ===> C:\workspace\data\20210302\6C63F3FD7FC63D3957BC7556728C63B5\5장.docx
+2021-03-02 22:30:25.0057 DEBUG - =============================>
+2021-03-02 22:30:25.0057  INFO - Created DataTodayMD5Path Directory C:\workspace\data\20210302\6C63F3FD7FC63D3957BC7556728C63B5
+2021-03-02 22:30:25.0057 DEBUG - C:\workspace\tmp\5장.docx Move file to C:\workspace\data\20210302\6C63F3FD7FC63D3957BC7556728C63B5\5장.docx
+2021-03-02 22:30:25.0057 DEBUG - use DRM: False
+2021-03-02 22:30:27.6629 DEBUG - Response messages to 127.0.0.1:12140
+{
+  "FilePath": "/data/20210302/6C63F3FD7FC63D3957BC7556728C63B5/5장.pdf",
+  "PageCnt": 5,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2021-03-02 22:30:27.6629 DEBUG - Processing time: 02.710
+2021-03-02 22:30:27.6629  INFO - Disconnected From:127.0.0.1:12140 Time: 2021-03-02 오후 10:30:27
+2021-03-02 22:30:32.9208  INFO - Connect Client From: 127.0.0.1:12144  Connection time: 2021-03-02 오후 10:30:32
+2021-03-02 22:30:32.9208 DEBUG - Received messages from 127.0.0.1:12144
+{
+  "ClientKey": "41974d93-caf9-4ff5-8926-b32c905fdedd",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:30:32.9208 DEBUG - Method DocConvert Start ==>
+2021-03-02 22:30:32.9357 DEBUG - Initialized variable ========>
+2021-03-02 22:30:32.9357 DEBUG - workspacePath ===> C:\workspace
+2021-03-02 22:30:32.9357 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-02 22:30:32.9357 DEBUG - srcFile ===> C:\workspace\tmp\Welcome to Hwp.hwp
+2021-03-02 22:30:32.9357 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210302\2B699FCE2A5094957B24445F97FCE8CC
+2021-03-02 22:30:32.9432 DEBUG - targetFile ===> C:\workspace\data\20210302\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp
+2021-03-02 22:30:32.9432 DEBUG - =============================>
+2021-03-02 22:30:32.9432  INFO - Created DataTodayMD5Path Directory C:\workspace\data\20210302\2B699FCE2A5094957B24445F97FCE8CC
+2021-03-02 22:30:32.9432 DEBUG - C:\workspace\tmp\Welcome to Hwp.hwp Move file to C:\workspace\data\20210302\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp
+2021-03-02 22:30:32.9432 DEBUG - use DRM: False
+2021-03-02 22:30:38.4484 DEBUG - Response messages to 127.0.0.1:12144
+{
+  "FilePath": "/data/20210302/2B699FCE2A5094957B24445F97FCE8CC/Welcome to Hwp.pdf",
+  "PageCnt": 5,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2021-03-02 22:30:38.4484 DEBUG - Processing time: 05.525
+2021-03-02 22:30:38.4484  INFO - Disconnected From:127.0.0.1:12144 Time: 2021-03-02 오후 10:30:38
+2021-03-02 22:35:05.9090 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:35:05.9320 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:35:05.9320  WARN - Starting DocConvert Server..
+2021-03-02 22:35:05.9320  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:35:05.9320  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:35:05.9320  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:35:05.9320  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:35:05.9320  INFO - User Name: JMKIM
+2021-03-02 22:35:05.9320  INFO - DocConvert Version: 2.0.7731.40583
+2021-03-02 22:35:05.9320  INFO - DocConvert PID: 14720
+2021-03-02 22:35:05.9320  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:35:05.9420  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:35:05.9420  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:35:05.9420  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:35:05.9420  INFO - - Socket Port: 12000
+2021-03-02 22:35:05.9420  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:35:05.9420  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:35:05.9420  INFO - - Product Name: DocConvert
+2021-03-02 22:35:05.9420  INFO - - SchedulerTime: 22,36
+2021-03-02 22:35:05.9582  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:35:05.9582  INFO - - CleanWorkspaceDay: 1
+2021-03-02 22:35:05.9582  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:35:05.9582  INFO - - CleanLogDay: 1
+2021-03-02 22:35:05.9582  INFO - - DRM useYn: False
+2021-03-02 22:35:05.9582  INFO - ------------------------------------------
+2021-03-02 22:35:05.9582  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:35:05.9582  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:35:05.9582 DEBUG - Workspace Cleanup Scheduler: 1days
+2021-03-02 22:35:05.9582 DEBUG - Log cleanup scheduler: 1days
+2021-03-02 22:35:05.9582  WARN - Next scheduler operation time: 2021-03-02 오후 10:36:00
+2021-03-02 22:35:05.9582  WARN - Cleanup scheduler is working
+2021-03-02 22:35:05.9734  WARN - DocConvert Server Started in 2021-03-02 10:35:05
+2021-03-02 22:35:36.4471  INFO - Connect Client From: 127.0.0.1:12165  Connection time: 2021-03-02 오후 10:35:36
+2021-03-02 22:35:36.5449 DEBUG - Received messages from 127.0.0.1:12165
+{
+  "ClientKey": "41974d93-caf9-4ff5-8926-b32c905fdedd",
+  "Method": "DocConvert",
+  "FileName": "5장.xlsx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:35:36.5559 DEBUG - Method DocConvert Start ==>
+2021-03-02 22:35:36.5674 DEBUG - Initialized variable ========>
+2021-03-02 22:35:36.5674 DEBUG - workspacePath ===> C:\workspace
+2021-03-02 22:35:36.5674 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-02 22:35:36.5674 DEBUG - srcFile ===> C:\workspace\tmp\5장.xlsx
+2021-03-02 22:35:36.5674 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210302\056510B3AC0E69062AF8B8335CDF5E60
+2021-03-02 22:35:36.5674 DEBUG - targetFile ===> C:\workspace\data\20210302\056510B3AC0E69062AF8B8335CDF5E60\5장.xlsx
+2021-03-02 22:35:36.5844 DEBUG - =============================>
+2021-03-02 22:35:36.5844  INFO - Created DataTodayMD5Path Directory C:\workspace\data\20210302\056510B3AC0E69062AF8B8335CDF5E60
+2021-03-02 22:35:36.5844 DEBUG - C:\workspace\tmp\5장.xlsx Move file to C:\workspace\data\20210302\056510B3AC0E69062AF8B8335CDF5E60\5장.xlsx
+2021-03-02 22:35:36.5844 DEBUG - use DRM: False
+2021-03-02 22:35:38.7435 DEBUG - Response messages to 127.0.0.1:12165
+{
+  "FilePath": "/data/20210302/056510B3AC0E69062AF8B8335CDF5E60/5장.pdf",
+  "PageCnt": 9,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2021-03-02 22:35:38.7435 DEBUG - Processing time: 02.227
+2021-03-02 22:35:38.7435  INFO - Disconnected From:127.0.0.1:12165 Time: 2021-03-02 오후 10:35:38
+2021-03-02 22:35:52.6275  INFO - Connect Client From: 127.0.0.1:12180  Connection time: 2021-03-02 오후 10:35:52
+2021-03-02 22:35:52.6305 DEBUG - Received messages from 127.0.0.1:12180
+{
+  "ClientKey": "41974d93-caf9-4ff5-8926-b32c905fdedd",
+  "Method": "DocConvert",
+  "FileName": "Word 시작.docx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:35:52.6305 DEBUG - Method DocConvert Start ==>
+2021-03-02 22:35:52.6305 DEBUG - Initialized variable ========>
+2021-03-02 22:35:52.6305 DEBUG - workspacePath ===> C:\workspace
+2021-03-02 22:35:52.6305 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-02 22:35:52.6453 DEBUG - srcFile ===> C:\workspace\tmp\Word 시작.docx
+2021-03-02 22:35:52.6453 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210302\0452378B72766F4FD0EE9110A9975F6B
+2021-03-02 22:35:52.6453 DEBUG - targetFile ===> C:\workspace\data\20210302\0452378B72766F4FD0EE9110A9975F6B\Word 시작.docx
+2021-03-02 22:35:52.6453 DEBUG - =============================>
+2021-03-02 22:35:52.6453  INFO - Created DataTodayMD5Path Directory C:\workspace\data\20210302\0452378B72766F4FD0EE9110A9975F6B
+2021-03-02 22:35:52.6453 DEBUG - C:\workspace\tmp\Word 시작.docx Move file to C:\workspace\data\20210302\0452378B72766F4FD0EE9110A9975F6B\Word 시작.docx
+2021-03-02 22:35:52.6453 DEBUG - use DRM: False
+2021-03-02 22:35:56.2225 DEBUG - Response messages to 127.0.0.1:12180
+{
+  "FilePath": "/data/20210302/0452378B72766F4FD0EE9110A9975F6B/Word 시작.pdf",
+  "PageCnt": 8,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2021-03-02 22:35:56.2237 DEBUG - Processing time: 03.594
+2021-03-02 22:35:56.2237  INFO - Disconnected From:127.0.0.1:12180 Time: 2021-03-02 오후 10:35:56
+2021-03-02 22:36:01.3491  INFO - Connect Client From: 127.0.0.1:12184  Connection time: 2021-03-02 오후 10:36:01
+2021-03-02 22:36:01.3491 DEBUG - Received messages from 127.0.0.1:12184
+{
+  "ClientKey": "41974d93-caf9-4ff5-8926-b32c905fdedd",
+  "Method": "DocConvert",
+  "FileName": "PowerPoint 시작.pptx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:36:01.3491 DEBUG - Method DocConvert Start ==>
+2021-03-02 22:36:01.3815 DEBUG - Initialized variable ========>
+2021-03-02 22:36:01.3815 DEBUG - workspacePath ===> C:\workspace
+2021-03-02 22:36:01.3815 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-02 22:36:01.3815 DEBUG - srcFile ===> C:\workspace\tmp\PowerPoint 시작.pptx
+2021-03-02 22:36:01.3815 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210302\AF49679A99A8C8C83F1F34955CF43346
+2021-03-02 22:36:01.3815 DEBUG - targetFile ===> C:\workspace\data\20210302\AF49679A99A8C8C83F1F34955CF43346\PowerPoint 시작.pptx
+2021-03-02 22:36:01.3815 DEBUG - =============================>
+2021-03-02 22:36:01.3815  INFO - Created DataTodayMD5Path Directory C:\workspace\data\20210302\AF49679A99A8C8C83F1F34955CF43346
+2021-03-02 22:36:01.3815 DEBUG - C:\workspace\tmp\PowerPoint 시작.pptx Move file to C:\workspace\data\20210302\AF49679A99A8C8C83F1F34955CF43346\PowerPoint 시작.pptx
+2021-03-02 22:36:01.3967 DEBUG - use DRM: False
+2021-03-02 22:36:04.0147  WARN - Next scheduler operation time: 2021-03-03 오후 10:36:00
+2021-03-02 22:36:04.0147  INFO - Workspace cleanup scheduler has been run
+2021-03-02 22:36:04.0901  INFO - Logs cleanup scheduler has been run
+2021-03-02 22:36:04.8947 DEBUG - Response messages to 127.0.0.1:12184
+{
+  "FilePath": "/data/20210302/AF49679A99A8C8C83F1F34955CF43346/PowerPoint 시작.pdf",
+  "PageCnt": 9,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2021-03-02 22:36:04.8965 DEBUG - Processing time: 03.544
+2021-03-02 22:36:04.8965  INFO - Disconnected From:127.0.0.1:12184 Time: 2021-03-02 오후 10:36:04
+2021-03-02 22:38:26.9555 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:38:26.9772 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:38:26.9772  WARN - Starting DocConvert Server..
+2021-03-02 22:38:26.9772  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:38:26.9772  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:38:26.9772  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:38:26.9772  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:38:26.9772  INFO - User Name: JMKIM
+2021-03-02 22:38:26.9772  INFO - DocConvert Version: 2.0.7731.40583
+2021-03-02 22:38:26.9772  INFO - DocConvert PID: 12372
+2021-03-02 22:38:26.9772  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:38:26.9772  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:38:26.9772  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:38:26.9952  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:38:26.9952  INFO - - Socket Port: 12000
+2021-03-02 22:38:26.9952  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:38:26.9952  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:38:26.9952  INFO - - Product Name: DocConvert
+2021-03-02 22:38:26.9952  INFO - - SchedulerTime: 22,39
+2021-03-02 22:38:27.0052  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:38:27.0052  INFO - - CleanWorkspaceDay: 1
+2021-03-02 22:38:27.0052  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:38:27.0052  INFO - - CleanLogDay: 1
+2021-03-02 22:38:27.0052  INFO - - DRM useYn: False
+2021-03-02 22:38:27.0052  INFO - ------------------------------------------
+2021-03-02 22:38:27.0052  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:38:27.0052  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:38:27.0052 DEBUG - Workspace Cleanup Scheduler: 1days
+2021-03-02 22:38:27.0201 DEBUG - Log cleanup scheduler: 1days
+2021-03-02 22:38:27.0201  WARN - Next scheduler operation time: 2021-03-02 오후 10:39:00
+2021-03-02 22:38:27.0201  WARN - Cleanup scheduler is working
+2021-03-02 22:38:27.0201  WARN - DocConvert Server Started in 2021-03-02 10:38:27
+2021-03-02 22:39:04.0367  WARN - Next scheduler operation time: 2021-03-03 오후 10:39:00
+2021-03-02 22:39:04.0367  INFO - Workspace cleanup scheduler has been run
+2021-03-02 22:39:04.1205  INFO - Logs cleanup scheduler has been run
+2021-03-02 22:44:16.2433 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:44:16.2652 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:44:16.2652  WARN - Starting DocConvert Server..
+2021-03-02 22:44:16.2652  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:44:16.2652  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:44:16.2652  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:44:16.2718  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:44:16.2718  INFO - User Name: JMKIM
+2021-03-02 22:44:16.2718  INFO - DocConvert Version: 2.0.7731.40926
+2021-03-02 22:44:16.2718  INFO - DocConvert PID: 8264
+2021-03-02 22:44:16.2718  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:44:16.2718  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:44:16.2718  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:44:16.2886  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:44:16.2886  INFO - - Socket Port: 12000
+2021-03-02 22:44:16.2886  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:44:16.2886  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:44:16.2886  INFO - - Product Name: DocConvert
+2021-03-02 22:44:16.2886  INFO - - SchedulerTime: 22,39
+2021-03-02 22:44:16.2886  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:44:16.2886  INFO - - CleanWorkspaceDay: 1
+2021-03-02 22:44:16.2886  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:44:16.2886  INFO - - CleanLogDay: 1
+2021-03-02 22:44:16.2886  INFO - - DRM useYn: False
+2021-03-02 22:44:16.2886  INFO - ------------------------------------------
+2021-03-02 22:44:16.3028  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:44:16.3028  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:44:16.3028 DEBUG - Workspace Cleanup Scheduler: 1days
+2021-03-02 22:44:16.3028 DEBUG - Log cleanup scheduler: 1days
+2021-03-02 22:44:16.3028  WARN - Next scheduler operation time: 2021-03-03 오후 10:39:00
+2021-03-02 22:44:16.3028  WARN - Cleanup scheduler is working
+2021-03-02 22:44:16.3028  WARN - DocConvert Server Started in 2021-03-02 10:44:16
+2021-03-02 22:44:29.8949 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:44:29.9188 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:44:29.9188  WARN - Starting DocConvert Server..
+2021-03-02 22:44:29.9188  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:44:29.9188  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:44:29.9188  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:44:29.9188  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:44:29.9188  INFO - User Name: JMKIM
+2021-03-02 22:44:29.9270  INFO - DocConvert Version: 2.0.7731.40926
+2021-03-02 22:44:29.9270  INFO - DocConvert PID: 12300
+2021-03-02 22:44:29.9270  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:44:29.9270  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:44:29.9270  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:44:29.9270  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:44:29.9270  INFO - - Socket Port: 12000
+2021-03-02 22:44:29.9421  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:44:29.9421  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:44:29.9421  INFO - - Product Name: DocConvert
+2021-03-02 22:44:29.9421  INFO - - SchedulerTime: 22,45
+2021-03-02 22:44:29.9421  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:44:29.9421  INFO - - CleanWorkspaceDay: 1
+2021-03-02 22:44:29.9421  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:44:29.9421  INFO - - CleanLogDay: 1
+2021-03-02 22:44:29.9421  INFO - - DRM useYn: False
+2021-03-02 22:44:29.9421  INFO - ------------------------------------------
+2021-03-02 22:44:29.9421  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:44:29.9640  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:44:29.9640 DEBUG - Workspace Cleanup Scheduler: 1days
+2021-03-02 22:44:29.9640 DEBUG - Log cleanup scheduler: 1days
+2021-03-02 22:44:29.9640  WARN - Next scheduler operation time: 2021-03-02 오후 10:45:00
+2021-03-02 22:44:29.9640  WARN - Cleanup scheduler is working
+2021-03-02 22:44:29.9640  WARN - DocConvert Server Started in 2021-03-02 10:44:29
+2021-03-02 22:45:04.0303  WARN - Next scheduler operation time: 2021-03-03 오후 10:45:00
+2021-03-02 22:45:04.0357  INFO - Workspace cleanup scheduler has been run
+2021-03-02 22:45:04.0357 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.0357 DEBUG - File C:\workspace\data\20210301\0452378B72766F4FD0EE9110A9975F6B\Word 시작\1.png deleted
+2021-03-02 22:45:04.0357 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.0357 DEBUG - File C:\workspace\data\20210301\0452378B72766F4FD0EE9110A9975F6B\Word 시작\2.png deleted
+2021-03-02 22:45:04.0357 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.0357 DEBUG - File C:\workspace\data\20210301\0452378B72766F4FD0EE9110A9975F6B\Word 시작\3.png deleted
+2021-03-02 22:45:04.0524 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.0524 DEBUG - File C:\workspace\data\20210301\0452378B72766F4FD0EE9110A9975F6B\Word 시작\4.png deleted
+2021-03-02 22:45:04.0524 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.0524 DEBUG - File C:\workspace\data\20210301\0452378B72766F4FD0EE9110A9975F6B\Word 시작\5.png deleted
+2021-03-02 22:45:04.0524 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.0524 DEBUG - File C:\workspace\data\20210301\0452378B72766F4FD0EE9110A9975F6B\Word 시작\6.png deleted
+2021-03-02 22:45:04.0524 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.0524 DEBUG - File C:\workspace\data\20210301\0452378B72766F4FD0EE9110A9975F6B\Word 시작\7.png deleted
+2021-03-02 22:45:04.0524 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.0524 DEBUG - File C:\workspace\data\20210301\0452378B72766F4FD0EE9110A9975F6B\Word 시작\8.png deleted
+2021-03-02 22:45:04.0682 DEBUG - Folder C:\workspace\data\20210301\0452378B72766F4FD0EE9110A9975F6B\Word 시작 deleted
+2021-03-02 22:45:04.0682 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.0682 DEBUG - File C:\workspace\data\20210301\0452378B72766F4FD0EE9110A9975F6B\Word 시작.pdf deleted
+2021-03-02 22:45:04.0682 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.0682 DEBUG - File C:\workspace\data\20210301\0452378B72766F4FD0EE9110A9975F6B\Word 시작.zip deleted
+2021-03-02 22:45:04.0682 DEBUG - Folder C:\workspace\data\20210301\0452378B72766F4FD0EE9110A9975F6B deleted
+2021-03-02 22:45:04.0682 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.0682 DEBUG - File C:\workspace\data\20210301\056510B3AC0E69062AF8B8335CDF5E60\5장\1.png deleted
+2021-03-02 22:45:04.0682 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.0682 DEBUG - File C:\workspace\data\20210301\056510B3AC0E69062AF8B8335CDF5E60\5장\2.png deleted
+2021-03-02 22:45:04.0838 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.0838 DEBUG - File C:\workspace\data\20210301\056510B3AC0E69062AF8B8335CDF5E60\5장\3.png deleted
+2021-03-02 22:45:04.0838 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.0838 DEBUG - File C:\workspace\data\20210301\056510B3AC0E69062AF8B8335CDF5E60\5장\4.png deleted
+2021-03-02 22:45:04.0838 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.0838 DEBUG - File C:\workspace\data\20210301\056510B3AC0E69062AF8B8335CDF5E60\5장\5.png deleted
+2021-03-02 22:45:04.0838 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.0838 DEBUG - File C:\workspace\data\20210301\056510B3AC0E69062AF8B8335CDF5E60\5장\6.png deleted
+2021-03-02 22:45:04.0838 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.0838 DEBUG - File C:\workspace\data\20210301\056510B3AC0E69062AF8B8335CDF5E60\5장\7.png deleted
+2021-03-02 22:45:04.0838 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.0995 DEBUG - File C:\workspace\data\20210301\056510B3AC0E69062AF8B8335CDF5E60\5장\8.png deleted
+2021-03-02 22:45:04.0995 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.0995 DEBUG - File C:\workspace\data\20210301\056510B3AC0E69062AF8B8335CDF5E60\5장\9.png deleted
+2021-03-02 22:45:04.0995 DEBUG - Folder C:\workspace\data\20210301\056510B3AC0E69062AF8B8335CDF5E60\5장 deleted
+2021-03-02 22:45:04.0995 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.0995 DEBUG - File C:\workspace\data\20210301\056510B3AC0E69062AF8B8335CDF5E60\5장.pdf deleted
+2021-03-02 22:45:04.0995 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.0995 DEBUG - File C:\workspace\data\20210301\056510B3AC0E69062AF8B8335CDF5E60\5장.zip deleted
+2021-03-02 22:45:04.0995 DEBUG - Folder C:\workspace\data\20210301\056510B3AC0E69062AF8B8335CDF5E60 deleted
+2021-03-02 22:45:04.0995 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.0995 DEBUG - File C:\workspace\data\20210301\243D3FE4D0D4594EACF0995A30DEA3E6\1장\1.png deleted
+2021-03-02 22:45:04.1143 DEBUG - Folder C:\workspace\data\20210301\243D3FE4D0D4594EACF0995A30DEA3E6\1장 deleted
+2021-03-02 22:45:04.1143 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1143 DEBUG - File C:\workspace\data\20210301\243D3FE4D0D4594EACF0995A30DEA3E6\1장.pdf deleted
+2021-03-02 22:45:04.1143 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1143 DEBUG - File C:\workspace\data\20210301\243D3FE4D0D4594EACF0995A30DEA3E6\1장.zip deleted
+2021-03-02 22:45:04.1143 DEBUG - Folder C:\workspace\data\20210301\243D3FE4D0D4594EACF0995A30DEA3E6 deleted
+2021-03-02 22:45:04.1143 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1143 DEBUG - File C:\workspace\data\20210301\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp\1.png deleted
+2021-03-02 22:45:04.1143 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1143 DEBUG - File C:\workspace\data\20210301\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp\2.png deleted
+2021-03-02 22:45:04.1143 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1143 DEBUG - File C:\workspace\data\20210301\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp\3.png deleted
+2021-03-02 22:45:04.1143 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1143 DEBUG - File C:\workspace\data\20210301\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp\4.png deleted
+2021-03-02 22:45:04.1313 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1313 DEBUG - File C:\workspace\data\20210301\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp\5.png deleted
+2021-03-02 22:45:04.1313 DEBUG - Folder C:\workspace\data\20210301\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp deleted
+2021-03-02 22:45:04.1313 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1313 DEBUG - File C:\workspace\data\20210301\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.pdf deleted
+2021-03-02 22:45:04.1313 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1313 DEBUG - File C:\workspace\data\20210301\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.zip deleted
+2021-03-02 22:45:04.1313 DEBUG - Folder C:\workspace\data\20210301\2B699FCE2A5094957B24445F97FCE8CC deleted
+2021-03-02 22:45:04.1313 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1313 DEBUG - File C:\workspace\data\20210301\664CB10CC59E4D3C60DD2782F02EE01A\PowerPoint 시작_p1234.pptx deleted
+2021-03-02 22:45:04.1313 DEBUG - Folder C:\workspace\data\20210301\664CB10CC59E4D3C60DD2782F02EE01A deleted
+2021-03-02 22:45:04.1313 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1313 DEBUG - File C:\workspace\data\20210301\6895CD871573A3D7F7BDABB65B618995\1장\1.jpg deleted
+2021-03-02 22:45:04.1313 DEBUG - Folder C:\workspace\data\20210301\6895CD871573A3D7F7BDABB65B618995\1장 deleted
+2021-03-02 22:45:04.1464 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1464 DEBUG - File C:\workspace\data\20210301\6895CD871573A3D7F7BDABB65B618995\1장.pdf deleted
+2021-03-02 22:45:04.1464 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1464 DEBUG - File C:\workspace\data\20210301\6895CD871573A3D7F7BDABB65B618995\1장.zip deleted
+2021-03-02 22:45:04.1464 DEBUG - Folder C:\workspace\data\20210301\6895CD871573A3D7F7BDABB65B618995 deleted
+2021-03-02 22:45:04.1464 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1464 DEBUG - File C:\workspace\data\20210301\6C63F3FD7FC63D3957BC7556728C63B5\5장\1.jpg deleted
+2021-03-02 22:45:04.1464 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1464 DEBUG - File C:\workspace\data\20210301\6C63F3FD7FC63D3957BC7556728C63B5\5장\2.jpg deleted
+2021-03-02 22:45:04.1464 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1464 DEBUG - File C:\workspace\data\20210301\6C63F3FD7FC63D3957BC7556728C63B5\5장\3.jpg deleted
+2021-03-02 22:45:04.1464 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1464 DEBUG - File C:\workspace\data\20210301\6C63F3FD7FC63D3957BC7556728C63B5\5장\4.jpg deleted
+2021-03-02 22:45:04.1624 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1624 DEBUG - File C:\workspace\data\20210301\6C63F3FD7FC63D3957BC7556728C63B5\5장\5.jpg deleted
+2021-03-02 22:45:04.1624 DEBUG - Folder C:\workspace\data\20210301\6C63F3FD7FC63D3957BC7556728C63B5\5장 deleted
+2021-03-02 22:45:04.1624 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1624 DEBUG - File C:\workspace\data\20210301\6C63F3FD7FC63D3957BC7556728C63B5\5장.pdf deleted
+2021-03-02 22:45:04.1624 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1624 DEBUG - File C:\workspace\data\20210301\6C63F3FD7FC63D3957BC7556728C63B5\5장.zip deleted
+2021-03-02 22:45:04.1624 DEBUG - Folder C:\workspace\data\20210301\6C63F3FD7FC63D3957BC7556728C63B5 deleted
+2021-03-02 22:45:04.1624 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1624 DEBUG - File C:\workspace\data\20210301\7D2686E0045E4C7F9FA39B5300CC2EEF\5장\1.jpg deleted
+2021-03-02 22:45:04.1624 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1624 DEBUG - File C:\workspace\data\20210301\7D2686E0045E4C7F9FA39B5300CC2EEF\5장\2.jpg deleted
+2021-03-02 22:45:04.1624 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1772 DEBUG - File C:\workspace\data\20210301\7D2686E0045E4C7F9FA39B5300CC2EEF\5장\3.jpg deleted
+2021-03-02 22:45:04.1772 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1772 DEBUG - File C:\workspace\data\20210301\7D2686E0045E4C7F9FA39B5300CC2EEF\5장\4.jpg deleted
+2021-03-02 22:45:04.1772 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1772 DEBUG - File C:\workspace\data\20210301\7D2686E0045E4C7F9FA39B5300CC2EEF\5장\5.jpg deleted
+2021-03-02 22:45:04.1772 DEBUG - Folder C:\workspace\data\20210301\7D2686E0045E4C7F9FA39B5300CC2EEF\5장 deleted
+2021-03-02 22:45:04.1772 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1772 DEBUG - File C:\workspace\data\20210301\7D2686E0045E4C7F9FA39B5300CC2EEF\5장.pdf deleted
+2021-03-02 22:45:04.1772 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1772 DEBUG - File C:\workspace\data\20210301\7D2686E0045E4C7F9FA39B5300CC2EEF\5장.zip deleted
+2021-03-02 22:45:04.1772 DEBUG - Folder C:\workspace\data\20210301\7D2686E0045E4C7F9FA39B5300CC2EEF deleted
+2021-03-02 22:45:04.1772 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1921 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1921 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1921 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1921 DEBUG - File C:\workspace\data\20210301\A7A2CA851DF8086DF0F353ED82D5CAAA\Excel 시작1_p1234.pdf deleted
+2021-03-02 22:45:04.1921 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1921 DEBUG - File C:\workspace\data\20210301\A7A2CA851DF8086DF0F353ED82D5CAAA\Excel 시작1_p1234.xlsx deleted
+2021-03-02 22:45:04.1921 DEBUG - Folder C:\workspace\data\20210301\A7A2CA851DF8086DF0F353ED82D5CAAA deleted
+2021-03-02 22:45:04.1921 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1921 DEBUG - File C:\workspace\data\20210301\AB604D811D943E5B31D20EB094FDF524\0_1_1E34E1166235C4DE66BA26F912640D29\1.png deleted
+2021-03-02 22:45:04.1921 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.1921 DEBUG - File C:\workspace\data\20210301\AB604D811D943E5B31D20EB094FDF524\0_1_1E34E1166235C4DE66BA26F912640D29\2.png deleted
+2021-03-02 22:45:04.1921 DEBUG - Folder C:\workspace\data\20210301\AB604D811D943E5B31D20EB094FDF524\0_1_1E34E1166235C4DE66BA26F912640D29 deleted
+2021-03-02 22:45:04.1921 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2080 DEBUG - File C:\workspace\data\20210301\AB604D811D943E5B31D20EB094FDF524\0_1_1E34E1166235C4DE66BA26F912640D29.pdf deleted
+2021-03-02 22:45:04.2080 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2080 DEBUG - File C:\workspace\data\20210301\AB604D811D943E5B31D20EB094FDF524\0_1_1E34E1166235C4DE66BA26F912640D29.zip deleted
+2021-03-02 22:45:04.2080 DEBUG - Folder C:\workspace\data\20210301\AB604D811D943E5B31D20EB094FDF524 deleted
+2021-03-02 22:45:04.2080 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2080 DEBUG - File C:\workspace\data\20210301\AF49679A99A8C8C83F1F34955CF43346\PowerPoint 시작\1.png deleted
+2021-03-02 22:45:04.2080 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2080 DEBUG - File C:\workspace\data\20210301\AF49679A99A8C8C83F1F34955CF43346\PowerPoint 시작\2.png deleted
+2021-03-02 22:45:04.2080 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2080 DEBUG - File C:\workspace\data\20210301\AF49679A99A8C8C83F1F34955CF43346\PowerPoint 시작\3.png deleted
+2021-03-02 22:45:04.2080 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2080 DEBUG - File C:\workspace\data\20210301\AF49679A99A8C8C83F1F34955CF43346\PowerPoint 시작\4.png deleted
+2021-03-02 22:45:04.2080 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2235 DEBUG - File C:\workspace\data\20210301\AF49679A99A8C8C83F1F34955CF43346\PowerPoint 시작\5.png deleted
+2021-03-02 22:45:04.2235 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2235 DEBUG - File C:\workspace\data\20210301\AF49679A99A8C8C83F1F34955CF43346\PowerPoint 시작\6.png deleted
+2021-03-02 22:45:04.2235 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2235 DEBUG - File C:\workspace\data\20210301\AF49679A99A8C8C83F1F34955CF43346\PowerPoint 시작\7.png deleted
+2021-03-02 22:45:04.2235 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2235 DEBUG - File C:\workspace\data\20210301\AF49679A99A8C8C83F1F34955CF43346\PowerPoint 시작\8.png deleted
+2021-03-02 22:45:04.2235 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2235 DEBUG - File C:\workspace\data\20210301\AF49679A99A8C8C83F1F34955CF43346\PowerPoint 시작\9.png deleted
+2021-03-02 22:45:04.2235 DEBUG - Folder C:\workspace\data\20210301\AF49679A99A8C8C83F1F34955CF43346\PowerPoint 시작 deleted
+2021-03-02 22:45:04.2235 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2397 DEBUG - File C:\workspace\data\20210301\AF49679A99A8C8C83F1F34955CF43346\PowerPoint 시작.pdf deleted
+2021-03-02 22:45:04.2397 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2397 DEBUG - File C:\workspace\data\20210301\AF49679A99A8C8C83F1F34955CF43346\PowerPoint 시작.zip deleted
+2021-03-02 22:45:04.2397 DEBUG - Folder C:\workspace\data\20210301\AF49679A99A8C8C83F1F34955CF43346 deleted
+2021-03-02 22:45:04.2397 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2397 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\1.png deleted
+2021-03-02 22:45:04.2397 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2397 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\10.png deleted
+2021-03-02 22:45:04.2397 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2397 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\11.png deleted
+2021-03-02 22:45:04.2397 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2397 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\12.png deleted
+2021-03-02 22:45:04.2545 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2545 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\13.png deleted
+2021-03-02 22:45:04.2545 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2545 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\14.png deleted
+2021-03-02 22:45:04.2545 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2545 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\15.png deleted
+2021-03-02 22:45:04.2545 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2545 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\16.png deleted
+2021-03-02 22:45:04.2545 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2545 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\17.png deleted
+2021-03-02 22:45:04.2545 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2545 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\18.png deleted
+2021-03-02 22:45:04.2545 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2545 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\19.png deleted
+2021-03-02 22:45:04.2713 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2713 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\2.png deleted
+2021-03-02 22:45:04.2713 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2713 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\20.png deleted
+2021-03-02 22:45:04.2713 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2713 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\21.png deleted
+2021-03-02 22:45:04.2713 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2713 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\22.png deleted
+2021-03-02 22:45:04.2713 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2713 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\23.png deleted
+2021-03-02 22:45:04.2863 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2863 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\24.png deleted
+2021-03-02 22:45:04.2863 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2863 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\25.png deleted
+2021-03-02 22:45:04.2863 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2863 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\26.png deleted
+2021-03-02 22:45:04.2863 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2863 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\27.png deleted
+2021-03-02 22:45:04.2863 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2863 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\28.png deleted
+2021-03-02 22:45:04.2863 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2863 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\29.png deleted
+2021-03-02 22:45:04.2863 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.2863 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\3.png deleted
+2021-03-02 22:45:04.2863 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3022 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\30.png deleted
+2021-03-02 22:45:04.3022 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3022 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\31.png deleted
+2021-03-02 22:45:04.3022 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3022 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\32.png deleted
+2021-03-02 22:45:04.3022 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3022 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\33.png deleted
+2021-03-02 22:45:04.3022 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3022 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\34.png deleted
+2021-03-02 22:45:04.3022 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3022 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\35.png deleted
+2021-03-02 22:45:04.3022 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3175 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\36.png deleted
+2021-03-02 22:45:04.3175 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3175 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\37.png deleted
+2021-03-02 22:45:04.3175 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3175 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\38.png deleted
+2021-03-02 22:45:04.3175 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3175 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\39.png deleted
+2021-03-02 22:45:04.3175 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3175 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\4.png deleted
+2021-03-02 22:45:04.3175 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3175 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\40.png deleted
+2021-03-02 22:45:04.3175 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3175 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\41.png deleted
+2021-03-02 22:45:04.3175 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3175 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\42.png deleted
+2021-03-02 22:45:04.3335 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3335 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\43.png deleted
+2021-03-02 22:45:04.3335 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3335 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\44.png deleted
+2021-03-02 22:45:04.3335 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3335 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\45.png deleted
+2021-03-02 22:45:04.3335 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3335 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\46.png deleted
+2021-03-02 22:45:04.3335 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3335 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\47.png deleted
+2021-03-02 22:45:04.3335 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3482 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\48.png deleted
+2021-03-02 22:45:04.3482 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3482 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\49.png deleted
+2021-03-02 22:45:04.3482 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3482 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\5.png deleted
+2021-03-02 22:45:04.3482 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3482 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\50.png deleted
+2021-03-02 22:45:04.3482 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3482 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\51.png deleted
+2021-03-02 22:45:04.3482 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3482 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\52.png deleted
+2021-03-02 22:45:04.3482 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3482 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\53.png deleted
+2021-03-02 22:45:04.3482 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3642 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\54.png deleted
+2021-03-02 22:45:04.3642 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3642 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\55.png deleted
+2021-03-02 22:45:04.3642 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3642 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\56.png deleted
+2021-03-02 22:45:04.3642 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3642 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\57.png deleted
+2021-03-02 22:45:04.3642 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3642 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\58.png deleted
+2021-03-02 22:45:04.3642 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3642 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\59.png deleted
+2021-03-02 22:45:04.3642 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3642 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\6.png deleted
+2021-03-02 22:45:04.3801 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3801 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\60.png deleted
+2021-03-02 22:45:04.3801 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3801 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\61.png deleted
+2021-03-02 22:45:04.3801 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3801 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\62.png deleted
+2021-03-02 22:45:04.3801 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3801 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\63.png deleted
+2021-03-02 22:45:04.3801 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3801 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\64.png deleted
+2021-03-02 22:45:04.3801 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3801 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\65.png deleted
+2021-03-02 22:45:04.3801 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3801 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\66.png deleted
+2021-03-02 22:45:04.3951 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3951 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\67.png deleted
+2021-03-02 22:45:04.3951 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3951 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\68.png deleted
+2021-03-02 22:45:04.3951 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3951 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\69.png deleted
+2021-03-02 22:45:04.3951 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3951 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\7.png deleted
+2021-03-02 22:45:04.3951 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3951 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\70.png deleted
+2021-03-02 22:45:04.3951 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.3951 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\71.png deleted
+2021-03-02 22:45:04.3951 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4115 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\72.png deleted
+2021-03-02 22:45:04.4115 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4115 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\73.png deleted
+2021-03-02 22:45:04.4115 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4115 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\74.png deleted
+2021-03-02 22:45:04.4115 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4115 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\75.png deleted
+2021-03-02 22:45:04.4115 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4115 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\76.png deleted
+2021-03-02 22:45:04.4115 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4115 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\77.png deleted
+2021-03-02 22:45:04.4265 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4265 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\78.png deleted
+2021-03-02 22:45:04.4265 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4265 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\79.png deleted
+2021-03-02 22:45:04.4265 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4265 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\8.png deleted
+2021-03-02 22:45:04.4265 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4265 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\80.png deleted
+2021-03-02 22:45:04.4265 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4265 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\81.png deleted
+2021-03-02 22:45:04.4265 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4265 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\82.png deleted
+2021-03-02 22:45:04.4265 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4427 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\83.png deleted
+2021-03-02 22:45:04.4427 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4427 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\84.png deleted
+2021-03-02 22:45:04.4427 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4427 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\85.png deleted
+2021-03-02 22:45:04.4427 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4427 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\86.png deleted
+2021-03-02 22:45:04.4427 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4427 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\87.png deleted
+2021-03-02 22:45:04.4427 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4427 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\88.png deleted
+2021-03-02 22:45:04.4427 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4427 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\89.png deleted
+2021-03-02 22:45:04.4427 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4583 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\9.png deleted
+2021-03-02 22:45:04.4583 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4583 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\90.png deleted
+2021-03-02 22:45:04.4583 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4583 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\91.png deleted
+2021-03-02 22:45:04.4583 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4583 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\92.png deleted
+2021-03-02 22:45:04.4583 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4583 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1\93.png deleted
+2021-03-02 22:45:04.4583 DEBUG - Folder C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1 deleted
+2021-03-02 22:45:04.4583 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4583 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1.pdf deleted
+2021-03-02 22:45:04.4583 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4583 DEBUG - File C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1.zip deleted
+2021-03-02 22:45:04.4736 DEBUG - Folder C:\workspace\data\20210301\BFF0CED46552E55EEF1B895A83577D5F deleted
+2021-03-02 22:45:04.4736 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4736 DEBUG - File C:\workspace\data\20210301\C105C66336A7D88758F01BA68333007F\5장\1.png deleted
+2021-03-02 22:45:04.4736 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4736 DEBUG - File C:\workspace\data\20210301\C105C66336A7D88758F01BA68333007F\5장\2.png deleted
+2021-03-02 22:45:04.4736 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4897 DEBUG - File C:\workspace\data\20210301\C105C66336A7D88758F01BA68333007F\5장\3.png deleted
+2021-03-02 22:45:04.4897 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4897 DEBUG - File C:\workspace\data\20210301\C105C66336A7D88758F01BA68333007F\5장\4.png deleted
+2021-03-02 22:45:04.4897 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4897 DEBUG - File C:\workspace\data\20210301\C105C66336A7D88758F01BA68333007F\5장\5.png deleted
+2021-03-02 22:45:04.4897 DEBUG - Folder C:\workspace\data\20210301\C105C66336A7D88758F01BA68333007F\5장 deleted
+2021-03-02 22:45:04.4897 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4897 DEBUG - File C:\workspace\data\20210301\C105C66336A7D88758F01BA68333007F\5장.pdf deleted
+2021-03-02 22:45:04.4897 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4897 DEBUG - File C:\workspace\data\20210301\C105C66336A7D88758F01BA68333007F\5장.zip deleted
+2021-03-02 22:45:04.4897 DEBUG - Folder C:\workspace\data\20210301\C105C66336A7D88758F01BA68333007F deleted
+2021-03-02 22:45:04.4897 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.4897 DEBUG - File C:\workspace\data\20210301\E5427B53A5281F889FECF0443020E48C\1장\1.png deleted
+2021-03-02 22:45:04.5047 DEBUG - Folder C:\workspace\data\20210301\E5427B53A5281F889FECF0443020E48C\1장 deleted
+2021-03-02 22:45:04.5047 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5047 DEBUG - File C:\workspace\data\20210301\E5427B53A5281F889FECF0443020E48C\1장.pdf deleted
+2021-03-02 22:45:04.5047 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5047 DEBUG - File C:\workspace\data\20210301\E5427B53A5281F889FECF0443020E48C\1장.zip deleted
+2021-03-02 22:45:04.5047 DEBUG - Folder C:\workspace\data\20210301\E5427B53A5281F889FECF0443020E48C deleted
+2021-03-02 22:45:04.5047 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5047 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5047 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5047 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5047 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5047 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5047 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5047 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5207 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5207 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5207 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5207 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5207 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5207 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5207 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5207 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5207 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5207 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5207 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5207 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5207 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5207 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5359 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5359  INFO - Logs cleanup scheduler has been run
+2021-03-02 22:45:04.5359 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:45:04.5359 DEBUG - ★★★★★★★ DateTime.Now.AddDays(-DeletionCycle) is 2021-03-01 오후 10:45:04
+2021-03-02 22:48:14.8290 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:48:14.8502 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:48:14.8502  WARN - Starting DocConvert Server..
+2021-03-02 22:48:14.8502  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:48:14.8502  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:48:14.8502  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:48:14.8502  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:48:14.8502  INFO - User Name: JMKIM
+2021-03-02 22:48:14.8502  INFO - DocConvert Version: 2.0.7731.41041
+2021-03-02 22:48:14.8502  INFO - DocConvert PID: 344
+2021-03-02 22:48:14.8502  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:48:14.8502  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:48:14.8502  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:48:14.8666  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:48:14.8666  INFO - - Socket Port: 12000
+2021-03-02 22:48:14.8666  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:48:14.8666  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:48:14.8666  INFO - - Product Name: DocConvert
+2021-03-02 22:48:14.8666  INFO - - SchedulerTime: 22,49
+2021-03-02 22:48:14.8666  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:48:14.8666  INFO - - CleanWorkspaceDay: 1
+2021-03-02 22:48:14.8666  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:48:14.8666  INFO - - CleanLogDay: 1
+2021-03-02 22:48:14.8666  INFO - - DRM useYn: False
+2021-03-02 22:48:14.8666  INFO - ------------------------------------------
+2021-03-02 22:48:14.8666  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:48:14.8809  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:48:14.8809 DEBUG - Workspace Cleanup Scheduler: 1days
+2021-03-02 22:48:14.8809 DEBUG - Log cleanup scheduler: 1days
+2021-03-02 22:48:14.8809  WARN - Next scheduler operation time: 2021-03-02 오후 10:49:00
+2021-03-02 22:48:14.8809  WARN - Cleanup scheduler is working
+2021-03-02 22:48:14.8809  WARN - DocConvert Server Started in 2021-03-02 10:48:14
+2021-03-02 22:48:25.6382 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:48:25.6711 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:48:25.6711  WARN - Starting DocConvert Server..
+2021-03-02 22:48:25.6711  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:48:25.6711  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:48:25.6764  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:48:25.6764  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:48:25.6764  INFO - User Name: JMKIM
+2021-03-02 22:48:25.6764  INFO - DocConvert Version: 2.0.7731.41052
+2021-03-02 22:48:25.6764  INFO - DocConvert PID: 14056
+2021-03-02 22:48:25.6764  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:48:25.6764  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:48:25.6929  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:48:25.6929  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:48:25.6929  INFO - - Socket Port: 12000
+2021-03-02 22:48:25.6929  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:48:25.7088  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:48:25.7392  INFO - - Product Name: DocConvert
+2021-03-02 22:48:25.7392  INFO - - SchedulerTime: 22,49
+2021-03-02 22:48:25.7392  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:48:25.7392  INFO - - CleanWorkspaceDay: 1
+2021-03-02 22:48:25.7392  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:48:25.7565  INFO - - CleanLogDay: 1
+2021-03-02 22:48:25.7565  INFO - - DRM useYn: False
+2021-03-02 22:48:25.7565  INFO - ------------------------------------------
+2021-03-02 22:48:25.7774  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:48:25.7774  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:48:25.7774 DEBUG - Workspace Cleanup Scheduler: 1days
+2021-03-02 22:48:25.7774 DEBUG - Log cleanup scheduler: 1days
+2021-03-02 22:48:25.7865  WARN - Next scheduler operation time: 2021-03-02 오후 10:49:00
+2021-03-02 22:48:25.7865  WARN - Cleanup scheduler is working
+2021-03-02 22:48:25.7865  WARN - DocConvert Server Started in 2021-03-02 10:48:25
+2021-03-02 22:49:04.0301  WARN - Next scheduler operation time: 2021-03-03 오후 10:49:00
+2021-03-02 22:49:04.0301  INFO - Workspace cleanup scheduler has been run
+2021-03-02 22:49:04.0391 DEBUG - File C:\workspace\data\20210301\825EE37DA3E9763E2DB4BA4C091C7173\Word 시작_p1234.docx deleted
+2021-03-02 22:49:04.0391 DEBUG - File C:\workspace\data\20210301\825EE37DA3E9763E2DB4BA4C091C7173\Word 시작_p1234.pdf deleted
+2021-03-02 22:49:04.0391 DEBUG - Folder C:\workspace\data\20210301\825EE37DA3E9763E2DB4BA4C091C7173 deleted
+2021-03-02 22:49:04.0391 DEBUG - File C:\workspace\data\20210301\8F6E33826C19E2612F179298B615058B\Welcome to Hwp_p12345.hwp deleted
+2021-03-02 22:49:04.0391 DEBUG - Folder C:\workspace\data\20210301\8F6E33826C19E2612F179298B615058B deleted
+2021-03-02 22:49:04.0545  INFO - Logs cleanup scheduler has been run
+2021-03-02 22:54:45.3302 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:54:45.3538 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:54:45.3538  WARN - Starting DocConvert Server..
+2021-03-02 22:54:45.3538  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:54:45.3538  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:54:45.3538  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:54:45.3538  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:54:45.3538  INFO - User Name: JMKIM
+2021-03-02 22:54:45.3538  INFO - DocConvert Version: 2.0.7731.41242
+2021-03-02 22:54:45.3538  INFO - DocConvert PID: 6232
+2021-03-02 22:54:45.3538  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:54:45.3538  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:54:45.3538  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:54:45.3698  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:54:45.3698  INFO - - Socket Port: 12000
+2021-03-02 22:54:45.3698  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:54:45.3698  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:54:45.3698  INFO - - Product Name: DocConvert
+2021-03-02 22:54:45.3698  INFO - - SchedulerTime: 22,49
+2021-03-02 22:54:45.3698  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:54:45.3797  INFO - - CleanWorkspaceDay: 1
+2021-03-02 22:54:45.3797  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:54:45.3797  INFO - - CleanLogDay: 1
+2021-03-02 22:54:45.3797  INFO - - DRM useYn: False
+2021-03-02 22:54:45.3797  INFO - ------------------------------------------
+2021-03-02 22:54:45.3797  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:54:45.3797  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:54:45.3797 DEBUG - Workspace Cleanup Scheduler: 1days
+2021-03-02 22:54:45.3797 DEBUG - Log cleanup scheduler: 1days
+2021-03-02 22:54:45.3950  WARN - Next scheduler operation time: 2021-03-03 오후 10:49:00
+2021-03-02 22:54:45.3950  WARN - If the workspace last modified date is past 2021-03-01 오후 10:54:41
+2021-03-02 22:54:45.3950  WARN - If the log last modified date is past 2021-03-01 오후 10:54:41
+2021-03-02 22:54:45.3950  WARN - Cleanup scheduler is working
+2021-03-02 22:54:45.3950  WARN - DocConvert Server Started in 2021-03-02 10:54:45
+2021-03-02 22:57:14.8502 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:57:14.8732 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:57:14.8732  WARN - Starting DocConvert Server..
+2021-03-02 22:57:14.8732  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:57:14.8732  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:57:14.8732  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:57:14.8802  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:57:14.8802  INFO - User Name: JMKIM
+2021-03-02 22:57:14.8802  INFO - DocConvert Version: 2.0.7731.41316
+2021-03-02 22:57:14.8802  INFO - DocConvert PID: 18196
+2021-03-02 22:57:14.8802  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:57:14.8802  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:57:14.8802  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:57:14.8802  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:57:14.9055  INFO - - Socket Port: 12000
+2021-03-02 22:57:14.9055  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:57:14.9055  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:57:14.9131  INFO - - Product Name: DocConvert
+2021-03-02 22:57:14.9131  INFO - - SchedulerTime: 22,49
+2021-03-02 22:57:14.9131  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:57:14.9131  INFO - - CleanWorkspaceDay: 1
+2021-03-02 22:57:14.9131  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:57:14.9131  INFO - - CleanLogDay: 1
+2021-03-02 22:57:14.9369  INFO - - DRM useYn: False
+2021-03-02 22:57:14.9369  INFO - ------------------------------------------
+2021-03-02 22:57:14.9692  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:57:14.9692  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:57:14.9734 DEBUG - Workspace Cleanup Scheduler: 1days
+2021-03-02 22:57:14.9734 DEBUG - Log cleanup scheduler: 1days
+2021-03-02 22:57:14.9734  WARN - Next scheduler operation time: 2021-03-03 오후 10:49:00
+2021-03-02 22:57:14.9734  WARN - If the workspace last modified date is past 1969-12-31 오후 11:51:42
+2021-03-02 22:57:14.9734  WARN - If the log last modified date is past 1969-12-31 오후 11:51:42
+2021-03-02 22:57:15.0042  WARN - Cleanup scheduler is working
+2021-03-02 22:57:15.0051  WARN - DocConvert Server Started in 2021-03-02 10:57:15
+2021-03-02 22:59:26.0884 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:59:26.1129 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:59:26.1147  WARN - Starting DocConvert Server..
+2021-03-02 22:59:26.1147  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:59:26.1147  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:59:26.1147  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:59:26.1147  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:59:26.1147  INFO - User Name: JMKIM
+2021-03-02 22:59:26.1147  INFO - DocConvert Version: 2.0.7731.41382
+2021-03-02 22:59:26.1147  INFO - DocConvert PID: 8352
+2021-03-02 22:59:26.1147  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:59:26.1147  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:59:26.1147  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:59:26.1327  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:59:26.1327  INFO - - Socket Port: 12000
+2021-03-02 22:59:26.1327  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:59:26.1327  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:59:26.1327  INFO - - Product Name: DocConvert
+2021-03-02 22:59:26.1327  INFO - - SchedulerTime: 22,49
+2021-03-02 22:59:26.1327  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:59:26.1456  INFO - - CleanWorkspaceDay: 1
+2021-03-02 22:59:26.1456  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:59:26.1456  INFO - - CleanLogDay: 1
+2021-03-02 22:59:26.1456  INFO - - DRM useYn: False
+2021-03-02 22:59:26.1456  INFO - ------------------------------------------
+2021-03-02 22:59:26.1456  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:59:26.1456  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:59:26.1625 DEBUG - Workspace Cleanup Scheduler: 1days
+2021-03-02 22:59:26.1625 DEBUG - Log cleanup scheduler: 1days
+2021-03-02 22:59:26.1625  WARN - Next scheduler operation time: 2021-03-03 오후 10:49:00
+2021-03-02 22:59:26.1625  WARN - If the workspace last modified date is past 1969-12-31 오전 12:01:21
+2021-03-02 22:59:26.1625  WARN - If the log last modified date is past 1969-12-31 오전 12:01:21
+2021-03-02 22:59:26.1625  WARN - Cleanup scheduler is working
+2021-03-02 22:59:26.1878  WARN - DocConvert Server Started in 2021-03-02 10:59:26
+2021-03-02 23:00:01.4056 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 23:00:01.4289 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 23:00:01.4289  WARN - Starting DocConvert Server..
+2021-03-02 23:00:01.4289  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 23:00:01.4289  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 23:00:01.4289  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 23:00:01.4289  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 23:00:01.4289  INFO - User Name: JMKIM
+2021-03-02 23:00:01.4289  INFO - DocConvert Version: 2.0.7731.41400
+2021-03-02 23:00:01.4289  INFO - DocConvert PID: 16164
+2021-03-02 23:00:01.4289  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 23:00:01.4423  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 23:00:01.4423  INFO - ------------ Parsing Ini File ------------
+2021-03-02 23:00:01.4423  INFO - - Bind IP: 0.0.0.0
+2021-03-02 23:00:01.4423  INFO - - Socket Port: 12000
+2021-03-02 23:00:01.4423  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 23:00:01.4423  INFO - - Workspace Directory: C:\workspace
+2021-03-02 23:00:01.4423  INFO - - Product Name: DocConvert
+2021-03-02 23:00:01.4580  INFO - - SchedulerTime: 22,49
+2021-03-02 23:00:01.4580  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 23:00:01.4580  INFO - - CleanWorkspaceDay: 1
+2021-03-02 23:00:01.4580  INFO - - CleanLogSchedulerYn: True
+2021-03-02 23:00:01.4580  INFO - - CleanLogDay: 1
+2021-03-02 23:00:01.4580  INFO - - DRM useYn: False
+2021-03-02 23:00:01.4580  INFO - ------------------------------------------
+2021-03-02 23:00:01.4580  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 23:00:01.4580  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 23:00:01.4746 DEBUG - Workspace Cleanup Scheduler: 1days
+2021-03-02 23:00:01.4746 DEBUG - Log cleanup scheduler: 1days
+2021-03-02 23:00:01.4746  WARN - Next scheduler operation time: 2021-03-03 오후 10:49:00
+2021-03-02 23:00:01.4746  WARN - If the workspace last modified date is past 2021-02-28 오전 12:01:21
+2021-03-02 23:00:01.4746  WARN - If the log last modified date is past 2021-02-28 오전 12:01:21
+2021-03-02 23:00:01.4746  WARN - Cleanup scheduler is working
+2021-03-02 23:00:01.4746  WARN - DocConvert Server Started in 2021-03-02 11:00:01
+2021-03-02 23:00:32.3963 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 23:00:32.4203 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 23:00:32.4203  WARN - Starting DocConvert Server..
+2021-03-02 23:00:32.4203  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 23:00:32.4203  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 23:00:32.4203  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 23:00:32.4272  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 23:00:32.4272  INFO - User Name: JMKIM
+2021-03-02 23:00:32.4272  INFO - DocConvert Version: 2.0.7731.41400
+2021-03-02 23:00:32.4272  INFO - DocConvert PID: 11876
+2021-03-02 23:00:32.4272  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 23:00:32.4272  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 23:00:32.4272  INFO - ------------ Parsing Ini File ------------
+2021-03-02 23:00:32.4429  INFO - - Bind IP: 0.0.0.0
+2021-03-02 23:00:32.4429  INFO - - Socket Port: 12000
+2021-03-02 23:00:32.4429  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 23:00:32.4429  INFO - - Workspace Directory: C:\workspace
+2021-03-02 23:00:32.4429  INFO - - Product Name: DocConvert
+2021-03-02 23:00:32.4429  INFO - - SchedulerTime: 22,49
+2021-03-02 23:00:32.4429  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 23:00:32.4429  INFO - - CleanWorkspaceDay: 1
+2021-03-02 23:00:32.4429  INFO - - CleanLogSchedulerYn: True
+2021-03-02 23:00:32.4582  INFO - - CleanLogDay: 1
+2021-03-02 23:00:32.4582  INFO - - DRM useYn: False
+2021-03-02 23:00:32.4582  INFO - ------------------------------------------
+2021-03-02 23:00:32.4582  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 23:00:32.4582  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 23:00:32.4582 DEBUG - Workspace Cleanup Scheduler: 1days
+2021-03-02 23:00:32.4582 DEBUG - Log cleanup scheduler: 1days
+2021-03-02 23:00:46.6996 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 23:00:46.7226 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 23:00:46.7246  WARN - Starting DocConvert Server..
+2021-03-02 23:00:46.7246  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 23:00:46.7246  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 23:00:46.7246  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 23:00:46.7246  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 23:00:46.7246  INFO - User Name: JMKIM
+2021-03-02 23:00:46.7246  INFO - DocConvert Version: 2.0.7731.41400
+2021-03-02 23:00:46.7246  INFO - DocConvert PID: 12144
+2021-03-02 23:00:46.7246  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 23:00:46.7246  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 23:00:46.7246  INFO - ------------ Parsing Ini File ------------
+2021-03-02 23:00:46.7416  INFO - - Bind IP: 0.0.0.0
+2021-03-02 23:00:46.7416  INFO - - Socket Port: 12000
+2021-03-02 23:00:46.7416  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 23:00:46.7416  INFO - - Workspace Directory: C:\workspace
+2021-03-02 23:00:46.7416  INFO - - Product Name: DocConvert
+2021-03-02 23:00:46.7416  INFO - - SchedulerTime: 22,49
+2021-03-02 23:00:46.7416  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 23:00:46.7546  INFO - - CleanWorkspaceDay: 1
+2021-03-02 23:00:46.7546  INFO - - CleanLogSchedulerYn: True
+2021-03-02 23:00:46.7546  INFO - - CleanLogDay: 1
+2021-03-02 23:00:46.7546  INFO - - DRM useYn: False
+2021-03-02 23:00:46.7546  INFO - ------------------------------------------
+2021-03-02 23:00:46.7546  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 23:00:46.7546  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 23:00:46.7546 DEBUG - Workspace Cleanup Scheduler: 1days
+2021-03-02 23:00:46.7546 DEBUG - Log cleanup scheduler: 1days
+2021-03-02 23:03:35.3278 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 23:03:35.3510 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 23:03:35.3510  WARN - Starting DocConvert Server..
+2021-03-02 23:03:35.3510  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 23:03:35.3510  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 23:03:35.3510  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 23:03:35.3510  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 23:03:35.3510  INFO - User Name: JMKIM
+2021-03-02 23:03:35.3510  INFO - DocConvert Version: 2.0.7731.41507
+2021-03-02 23:03:35.3510  INFO - DocConvert PID: 12924
+2021-03-02 23:03:35.3510  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 23:03:35.3510  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 23:03:35.3510  INFO - ------------ Parsing Ini File ------------
+2021-03-02 23:03:35.3693  INFO - - Bind IP: 0.0.0.0
+2021-03-02 23:03:35.3693  INFO - - Socket Port: 12000
+2021-03-02 23:03:35.3693  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 23:03:35.3693  INFO - - Workspace Directory: C:\workspace
+2021-03-02 23:03:35.3693  INFO - - Product Name: DocConvert
+2021-03-02 23:03:35.3693  INFO - - SchedulerTime: 22,49
+2021-03-02 23:03:35.3798  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 23:03:35.3798  INFO - - CleanWorkspaceDay: 1
+2021-03-02 23:03:35.3798  INFO - - CleanLogSchedulerYn: True
+2021-03-02 23:03:35.3798  INFO - - CleanLogDay: 1
+2021-03-02 23:03:35.3798  INFO - - DRM useYn: False
+2021-03-02 23:03:35.3798  INFO - ------------------------------------------
+2021-03-02 23:03:35.3798  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 23:03:35.3798  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 23:03:35.3798 DEBUG - Workspace Cleanup Scheduler: 1days
+2021-03-02 23:03:35.3966 DEBUG - Log cleanup scheduler: 1days
+2021-03-02 23:03:35.3966  WARN - Next scheduler operation time: 2021-03-03 오후 10:49:01
+2021-03-02 23:03:35.3966  WARN - If the workspace last modified date is past 2021-03-02 오후 10:49:01
+2021-03-02 23:03:35.3966  WARN - If the log last modified date is past 2021-03-01 오후 11:03:31
+2021-03-02 23:03:35.3966  WARN - Cleanup scheduler is working
+2021-03-02 23:03:35.3966  WARN - DocConvert Server Started in 2021-03-02 11:03:35
+2021-03-02 23:04:15.1064 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 23:04:15.1283 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 23:04:15.1303  WARN - Starting DocConvert Server..
+2021-03-02 23:04:15.1303  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 23:04:15.1303  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 23:04:15.1303  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 23:04:15.1303  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 23:04:15.1303  INFO - User Name: JMKIM
+2021-03-02 23:04:15.1303  INFO - DocConvert Version: 2.0.7731.41527
+2021-03-02 23:04:15.1303  INFO - DocConvert PID: 15948
+2021-03-02 23:04:15.1303  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 23:04:15.1303  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 23:04:15.1303  INFO - ------------ Parsing Ini File ------------
+2021-03-02 23:04:15.1477  INFO - - Bind IP: 0.0.0.0
+2021-03-02 23:04:15.1477  INFO - - Socket Port: 12000
+2021-03-02 23:04:15.1477  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 23:04:15.1477  INFO - - Workspace Directory: C:\workspace
+2021-03-02 23:04:15.1477  INFO - - Product Name: DocConvert
+2021-03-02 23:04:15.1477  INFO - - SchedulerTime: 22,49
+2021-03-02 23:04:15.1477  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 23:04:15.1477  INFO - - CleanWorkspaceDay: 1
+2021-03-02 23:04:15.1610  INFO - - CleanLogSchedulerYn: True
+2021-03-02 23:04:15.1610  INFO - - CleanLogDay: 2
+2021-03-02 23:04:15.1610  INFO - - DRM useYn: False
+2021-03-02 23:04:15.1610  INFO - ------------------------------------------
+2021-03-02 23:04:15.1610  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 23:04:15.1610  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 23:04:15.1610 DEBUG - Workspace Cleanup Scheduler: 1days
+2021-03-02 23:04:15.1610 DEBUG - Log cleanup scheduler: 2days
+2021-03-02 23:04:15.1610  WARN - Next scheduler operation time: 2021-03-03 오후 10:49:01
+2021-03-02 23:04:15.1610  WARN - If the workspace last modified date is past 2021-03-02 오후 10:49:00
+2021-03-02 23:04:15.1767  WARN - If the log last modified date is past 2021-03-01 오후 10:49:00
+2021-03-02 23:04:15.1767  WARN - Cleanup scheduler is working
+2021-03-02 23:04:15.1767  WARN - DocConvert Server Started in 2021-03-02 11:04:15
+2021-03-02 23:04:37.0717 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 23:04:37.1041 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 23:04:37.1041  WARN - Starting DocConvert Server..
+2021-03-02 23:04:37.1041  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 23:04:37.1041  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 23:04:37.1041  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 23:04:37.1041  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 23:04:37.1041  INFO - User Name: JMKIM
+2021-03-02 23:04:37.1041  INFO - DocConvert Version: 2.0.7731.41537
+2021-03-02 23:04:37.1041  INFO - DocConvert PID: 17852
+2021-03-02 23:04:37.1041  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 23:04:37.1145  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 23:04:37.1145  INFO - ------------ Parsing Ini File ------------
+2021-03-02 23:04:37.1387  INFO - - Bind IP: 0.0.0.0
+2021-03-02 23:04:37.1387  INFO - - Socket Port: 12000
+2021-03-02 23:04:37.1387  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 23:04:37.1387  INFO - - Workspace Directory: C:\workspace
+2021-03-02 23:04:37.1453  INFO - - Product Name: DocConvert
+2021-03-02 23:04:37.1453  INFO - - SchedulerTime: 22,49
+2021-03-02 23:04:37.1453  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 23:04:37.1453  INFO - - CleanWorkspaceDay: 1
+2021-03-02 23:04:37.1453  INFO - - CleanLogSchedulerYn: True
+2021-03-02 23:04:37.1453  INFO - - CleanLogDay: 2
+2021-03-02 23:04:37.1762  INFO - - DRM useYn: False
+2021-03-02 23:04:37.1775  INFO - ------------------------------------------
+2021-03-02 23:04:37.1775  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 23:04:37.1775  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 23:04:37.1775 DEBUG - Workspace Cleanup Scheduler: 1days
+2021-03-02 23:04:37.2087 DEBUG - Log cleanup scheduler: 2days
+2021-03-02 23:04:37.2087  WARN - Next scheduler operation time: 2021-03-03 오후 10:48:59
+2021-03-02 23:04:37.2087  WARN - If the workspace last modified date is past 2021-03-02 오후 10:49:00
+2021-03-02 23:04:37.2087  WARN - If the log last modified date is past 2021-03-01 오후 10:49:00
+2021-03-02 23:04:37.2413  WARN - Cleanup scheduler is working
+2021-03-02 23:04:37.2413  WARN - DocConvert Server Started in 2021-03-02 11:04:37
+2021-03-02 23:04:47.6208 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 23:04:47.6544 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 23:04:47.6544  WARN - Starting DocConvert Server..
+2021-03-02 23:04:47.6544  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 23:04:47.6544  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 23:04:47.6544  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 23:04:47.6544  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 23:04:47.6544  INFO - User Name: JMKIM
+2021-03-02 23:04:47.6613  INFO - DocConvert Version: 2.0.7731.41543
+2021-03-02 23:04:47.6613  INFO - DocConvert PID: 2788
+2021-03-02 23:04:47.6613  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 23:04:47.6613  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 23:04:47.6613  INFO - ------------ Parsing Ini File ------------
+2021-03-02 23:04:47.6832  INFO - - Bind IP: 0.0.0.0
+2021-03-02 23:04:47.6832  INFO - - Socket Port: 12000
+2021-03-02 23:04:47.6968  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 23:04:47.6968  INFO - - Workspace Directory: C:\workspace
+2021-03-02 23:04:47.6968  INFO - - Product Name: DocConvert
+2021-03-02 23:04:47.6968  INFO - - SchedulerTime: 22,49
+2021-03-02 23:04:47.6968  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 23:04:47.6968  INFO - - CleanWorkspaceDay: 1
+2021-03-02 23:04:47.6968  INFO - - CleanLogSchedulerYn: True
+2021-03-02 23:04:47.7118  INFO - - CleanLogDay: 2
+2021-03-02 23:04:47.7118  INFO - - DRM useYn: False
+2021-03-02 23:04:47.7118  INFO - ------------------------------------------
+2021-03-02 23:04:47.7252  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 23:04:47.7252  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 23:04:47.7416 DEBUG - Workspace Cleanup Scheduler: 1days
+2021-03-02 23:04:47.7416 DEBUG - Log cleanup scheduler: 2days
+2021-03-02 23:04:47.7732  WARN - Next scheduler operation time: 2021-03-03 오후 10:49:00
+2021-03-02 23:04:47.7732  WARN - If the workspace last modified date is past 2021-03-02 오후 10:49:00
+2021-03-02 23:04:47.8216  WARN - If the log last modified date is past 2021-03-01 오후 10:49:00
+2021-03-02 23:04:47.8383  WARN - Cleanup scheduler is working
+2021-03-02 23:04:47.8383  WARN - DocConvert Server Started in 2021-03-02 11:04:47
+2021-03-02 23:06:07.6090 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 23:06:07.6342 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 23:06:07.6342  WARN - Starting DocConvert Server..
+2021-03-02 23:06:07.6342  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 23:06:07.6342  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 23:06:07.6342  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 23:06:07.6342  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 23:06:07.6342  INFO - User Name: JMKIM
+2021-03-02 23:06:07.6342  INFO - DocConvert Version: 2.0.7731.41577
+2021-03-02 23:06:07.6342  INFO - DocConvert PID: 15012
+2021-03-02 23:06:07.6455  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 23:06:07.6455  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 23:06:07.6455  INFO - ------------ Parsing Ini File ------------
+2021-03-02 23:06:07.6455  INFO - - Bind IP: 0.0.0.0
+2021-03-02 23:06:07.6455  INFO - - Socket Port: 12000
+2021-03-02 23:06:07.6455  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 23:06:07.6455  INFO - - Workspace Directory: C:\workspace
+2021-03-02 23:06:07.6455  INFO - - Product Name: DocConvert
+2021-03-02 23:06:07.6455  INFO - - SchedulerTime: 23,07
+2021-03-02 23:06:07.6455  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 23:06:07.6455  INFO - - CleanWorkspaceDay: 1
+2021-03-02 23:06:07.6614  INFO - - CleanLogSchedulerYn: True
+2021-03-02 23:06:07.6614  INFO - - CleanLogDay: 2
+2021-03-02 23:06:07.6614  INFO - - DRM useYn: False
+2021-03-02 23:06:07.6614  INFO - ------------------------------------------
+2021-03-02 23:06:07.6614  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 23:06:07.6614  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 23:06:07.6614 DEBUG - Workspace Cleanup Scheduler: 1days
+2021-03-02 23:06:07.6614 DEBUG - Log cleanup scheduler: 2days
+2021-03-02 23:06:07.6614  WARN - Next scheduler operation time: 2021-03-02 오후 11:07:00
+2021-03-02 23:06:07.6614  WARN - If the workspace last modified date is past 2021-03-01 오후 11:07:00
+2021-03-02 23:06:07.6614  WARN - If the log last modified date is past 2021-02-28 오후 11:07:00
+2021-03-02 23:06:07.6614  WARN - Cleanup scheduler is working
+2021-03-02 23:06:07.6771  WARN - DocConvert Server Started in 2021-03-02 11:06:07
+2021-03-02 23:07:04.0164  WARN - Next scheduler operation time: 2021-03-03 오후 11:06:59
+2021-03-02 23:07:04.0164  WARN - If the workspace last modified date is past 2021-03-02 오후 11:06:57
+2021-03-02 23:07:04.0164  WARN - If the log last modified date is past 2021-03-01 오후 11:06:57
+2021-03-02 23:07:04.0214  INFO - Workspace cleanup scheduler has been run
+2021-03-02 23:07:04.0214  INFO - Logs cleanup scheduler has been run
+2021-03-02 23:07:40.3627 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 23:07:40.3886 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 23:07:40.3886  WARN - Starting DocConvert Server..
+2021-03-02 23:07:40.3886  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 23:07:40.3886  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 23:07:40.3886  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 23:07:40.3886  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 23:07:40.3972  INFO - User Name: JMKIM
+2021-03-02 23:07:40.3972  INFO - DocConvert Version: 2.0.7731.41629
+2021-03-02 23:07:40.3972  INFO - DocConvert PID: 9340
+2021-03-02 23:07:40.3972  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 23:07:40.3972  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 23:07:40.3972  INFO - ------------ Parsing Ini File ------------
+2021-03-02 23:07:40.4128  INFO - - Bind IP: 0.0.0.0
+2021-03-02 23:07:40.4128  INFO - - Socket Port: 12000
+2021-03-02 23:07:40.4128  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 23:07:40.4128  INFO - - Workspace Directory: C:\workspace
+2021-03-02 23:07:40.4128  INFO - - Product Name: DocConvert
+2021-03-02 23:07:40.4128  INFO - - SchedulerTime: 23,08
+2021-03-02 23:07:40.4128  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 23:07:40.4128  INFO - - CleanWorkspaceDay: 1
+2021-03-02 23:07:40.4409  INFO - - CleanLogSchedulerYn: True
+2021-03-02 23:07:40.4430  INFO - - CleanLogDay: 2
+2021-03-02 23:07:40.4738  INFO - - DRM useYn: False
+2021-03-02 23:07:40.4920  INFO - ------------------------------------------
+2021-03-02 23:07:40.4920  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 23:07:40.5080  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 23:07:40.5571 DEBUG - Workspace Cleanup Scheduler: 1days
+2021-03-02 23:07:40.5741 DEBUG - Log cleanup scheduler: 2days
+2021-03-02 23:07:40.5741  WARN - Next scheduler operation time: 2021-03-02 오후 11:08:00
+2021-03-02 23:07:40.5741  WARN - If the workspace last modified date is past 2021-03-01 오후 11:08:00
+2021-03-02 23:07:40.5914  WARN - If the log last modified date is past 2021-02-28 오후 11:08:00
+2021-03-02 23:07:40.6432  WARN - Cleanup scheduler is working
+2021-03-02 23:07:40.6457  WARN - DocConvert Server Started in 2021-03-02 11:07:40
+2021-03-02 23:08:04.0182  WARN - Next scheduler operation time: 2021-03-03 오후 11:08:00
+2021-03-02 23:08:04.0272  WARN - If the workspace last modified date is past 2021-03-02 오후 11:08:00
+2021-03-02 23:08:04.0272  WARN - If the log last modified date is past 2021-03-01 오후 11:08:00
+2021-03-02 23:08:04.0272  INFO - Workspace cleanup scheduler has been run
+2021-03-02 23:08:04.0422  INFO - Logs cleanup scheduler has been run
+2021-03-02 23:10:52.6003 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 23:10:52.6233 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 23:10:52.6233  WARN - Starting DocConvert Server..
+2021-03-02 23:10:52.6233  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 23:10:52.6233  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 23:10:52.6233  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 23:10:52.6233  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 23:10:52.6233  INFO - User Name: JMKIM
+2021-03-02 23:10:52.6299  INFO - DocConvert Version: 2.0.7731.41725
+2021-03-02 23:10:52.6299  INFO - DocConvert PID: 10552
+2021-03-02 23:10:52.6299  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 23:10:52.6299  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 23:10:52.6299  INFO - ------------ Parsing Ini File ------------
+2021-03-02 23:10:52.6299  INFO - - Bind IP: 0.0.0.0
+2021-03-02 23:10:52.6299  INFO - - Socket Port: 12000
+2021-03-02 23:10:52.6299  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 23:10:52.6299  INFO - - Workspace Directory: C:\workspace
+2021-03-02 23:10:52.6299  INFO - - Product Name: DocConvert
+2021-03-02 23:10:52.6458  INFO - - SchedulerTime: 23,08
+2021-03-02 23:10:52.6458  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 23:10:52.6458  INFO - - CleanWorkspaceDay: 1
+2021-03-02 23:10:52.6458  INFO - - CleanLogSchedulerYn: True
+2021-03-02 23:10:52.6458  INFO - - CleanLogDay: 2
+2021-03-02 23:10:52.6458  INFO - - DRM useYn: False
+2021-03-02 23:10:52.6458  INFO - ------------------------------------------
+2021-03-02 23:10:52.6458  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 23:10:52.6458  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 23:10:52.6458 DEBUG - Workspace Cleanup Scheduler: 1day
+2021-03-02 23:10:52.6616 DEBUG - Log cleanup scheduler: 2day
+2021-03-02 23:10:52.6616 DEBUG - ============ [Scheduler] ============
+2021-03-02 23:10:52.6616  INFO - Next scheduler operation time: 2021-03-03 오후 11:08:01
+2021-03-02 23:10:52.6616  INFO - If the workspace last modified date is past 2021-03-02 오후 11:08:00
+2021-03-02 23:10:52.6616  INFO - If the log last modified date is past 2021-03-01 오후 11:08:00
+2021-03-02 23:10:52.6616 DEBUG - =====================================
+2021-03-02 23:10:52.6616  INFO - Cleanup scheduler is working
+2021-03-02 23:10:52.6616  WARN - DocConvert Server Started in 2021-03-02 11:10:52
+2021-03-02 23:11:12.4781 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 23:11:12.5001 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 23:11:12.5001  WARN - Starting DocConvert Server..
+2021-03-02 23:11:12.5001  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 23:11:12.5001  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 23:11:12.5001  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 23:11:12.5052  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 23:11:12.5052  INFO - User Name: JMKIM
+2021-03-02 23:11:12.5052  INFO - DocConvert Version: 2.0.7731.41735
+2021-03-02 23:11:12.5052  INFO - DocConvert PID: 7348
+2021-03-02 23:11:12.5052  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 23:11:12.5052  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 23:11:12.5052  INFO - ------------ Parsing Ini File ------------
+2021-03-02 23:11:12.5288  INFO - - Bind IP: 0.0.0.0
+2021-03-02 23:11:12.5288  INFO - - Socket Port: 12000
+2021-03-02 23:11:12.5288  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 23:11:12.5288  INFO - - Workspace Directory: C:\workspace
+2021-03-02 23:11:12.5633  INFO - - Product Name: DocConvert
+2021-03-02 23:11:12.5633  INFO - - SchedulerTime: 23,08
+2021-03-02 23:11:12.5633  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 23:11:12.5633  INFO - - CleanWorkspaceDay: 1
+2021-03-02 23:11:12.5677  INFO - - CleanLogSchedulerYn: True
+2021-03-02 23:11:12.5677  INFO - - CleanLogDay: 2
+2021-03-02 23:11:12.5677  INFO - - DRM useYn: False
+2021-03-02 23:11:12.5677  INFO - ------------------------------------------
+2021-03-02 23:11:12.5677  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 23:11:12.5677  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 23:11:12.5995 DEBUG - Workspace Cleanup Scheduler: 1day
+2021-03-02 23:11:12.5995 DEBUG - Log cleanup scheduler: 2day
+2021-03-02 23:11:12.5995 DEBUG - ============ [Scheduler] ============
+2021-03-02 23:11:12.5995  INFO - Next scheduler operation time: 2021-03-03 오후 11:08:01
+2021-03-02 23:11:12.5995  INFO - If the workspace last modified date is past 2021-03-02 오후 11:08:00
+2021-03-02 23:11:12.6318  INFO - If the log last modified date is past 2021-03-01 오후 11:08:00
+2021-03-02 23:11:12.6318 DEBUG - =====================================
+2021-03-02 23:11:12.6318  INFO - Cleanup scheduler is working
+2021-03-02 23:11:12.6318  WARN - DocConvert Server Started in 2021-03-02 11:11:12
+2021-03-02 23:11:23.4131 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 23:11:23.4351 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 23:11:23.4351  WARN - Starting DocConvert Server..
+2021-03-02 23:11:23.4351  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 23:11:23.4351  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 23:11:23.4351  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 23:11:23.4351  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 23:11:23.4351  INFO - User Name: JMKIM
+2021-03-02 23:11:23.4351  INFO - DocConvert Version: 2.0.7731.41741
+2021-03-02 23:11:23.4422  INFO - DocConvert PID: 12532
+2021-03-02 23:11:23.4422  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 23:11:23.4422  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 23:11:23.4422  INFO - ------------ Parsing Ini File ------------
+2021-03-02 23:11:23.4422  INFO - - Bind IP: 0.0.0.0
+2021-03-02 23:11:23.4422  INFO - - Socket Port: 12000
+2021-03-02 23:11:23.4422  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 23:11:23.4422  INFO - - Workspace Directory: C:\workspace
+2021-03-02 23:11:23.4585  INFO - - Product Name: DocConvert
+2021-03-02 23:11:23.4585  INFO - - SchedulerTime: 23,08
+2021-03-02 23:11:23.4585  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 23:11:23.4585  INFO - - CleanWorkspaceDay: 1
+2021-03-02 23:11:23.4585  INFO - - CleanLogSchedulerYn: True
+2021-03-02 23:11:23.4585  INFO - - CleanLogDay: 2
+2021-03-02 23:11:23.4585  INFO - - DRM useYn: False
+2021-03-02 23:11:23.4585  INFO - ------------------------------------------
+2021-03-02 23:11:23.4585  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 23:11:23.4749  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 23:11:23.4749 DEBUG - Workspace Cleanup Scheduler: 1day
+2021-03-02 23:11:23.4749 DEBUG - Log cleanup scheduler: 2day
+2021-03-02 23:11:23.4749  INFO - ============ [Scheduler] ============
+2021-03-02 23:11:23.4749  INFO - Next scheduler operation time: 2021-03-03 오후 11:08:01
+2021-03-02 23:11:23.4749  INFO - If the workspace last modified date is past 2021-03-02 오후 11:08:00
+2021-03-02 23:11:23.4749  INFO - If the log last modified date is past 2021-03-01 오후 11:08:00
+2021-03-02 23:11:23.4749  INFO - =====================================
+2021-03-02 23:11:23.4749  INFO - Cleanup scheduler is working
+2021-03-02 23:11:23.4891  WARN - DocConvert Server Started in 2021-03-02 11:11:23
+2021-03-02 23:13:14.4587 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 23:13:14.4841 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 23:13:14.4841  WARN - Starting DocConvert Server..
+2021-03-02 23:13:14.4841  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 23:13:14.4841  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 23:13:14.4841  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 23:13:14.4891  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 23:13:14.4891  INFO - User Name: JMKIM
+2021-03-02 23:13:14.4891  INFO - DocConvert Version: 2.0.7731.41796
+2021-03-02 23:13:14.4891  INFO - DocConvert PID: 3840
+2021-03-02 23:13:14.4891  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 23:13:14.4891  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 23:13:14.4891  INFO - ------------ Parsing Ini File ------------
+2021-03-02 23:13:14.5095  INFO - - Bind IP: 0.0.0.0
+2021-03-02 23:13:14.5095  INFO - - Socket Port: 12000
+2021-03-02 23:13:14.5095  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 23:13:14.5095  INFO - - Workspace Directory: C:\workspace
+2021-03-02 23:13:14.5095  INFO - - Product Name: DocConvert
+2021-03-02 23:13:14.5095  INFO - - SchedulerTime: 23,08
+2021-03-02 23:13:14.5095  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 23:13:14.5211  INFO - - CleanWorkspaceDay: 1
+2021-03-02 23:13:14.5211  INFO - - CleanLogSchedulerYn: True
+2021-03-02 23:13:14.5211  INFO - - CleanLogDay: 2
+2021-03-02 23:13:14.5211  INFO - - DRM useYn: False
+2021-03-02 23:13:14.5461  INFO - ------------------------------------------
+2021-03-02 23:13:14.5461  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 23:13:14.5943  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 23:13:14.5943 DEBUG - Workspace Cleanup Scheduler: 1day
+2021-03-02 23:13:14.5985 DEBUG - Log cleanup scheduler: 2day
+2021-03-02 23:13:14.5985  INFO - ============ [Scheduler] ============
+2021-03-02 23:13:14.5985  INFO - Next scheduler operation time: 2021-03-03 오후 23:08
+2021-03-02 23:13:14.5985  INFO - If the workspace last modified date is past 2021-03-02 오후 23:08
+2021-03-02 23:13:14.5985  INFO - If the log last modified date is past 2021-03-01 오후 23:08
+2021-03-02 23:13:14.5985  INFO - =====================================
+2021-03-02 23:13:14.5985  INFO - Cleanup scheduler is working
+2021-03-02 23:13:14.6288  WARN - DocConvert Server Started in 2021-03-02 11:13:14
+2021-03-02 23:13:43.6119 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 23:13:43.6400 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 23:13:43.6400  WARN - Starting DocConvert Server..
+2021-03-02 23:13:43.6400  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 23:13:43.6400  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 23:13:43.6453  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 23:13:43.6453  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 23:13:43.6453  INFO - User Name: JMKIM
+2021-03-02 23:13:43.6453  INFO - DocConvert Version: 2.0.7731.41811
+2021-03-02 23:13:43.6453  INFO - DocConvert PID: 9840
+2021-03-02 23:13:43.6453  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 23:13:43.6453  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 23:13:43.6453  INFO - ------------ Parsing Ini File ------------
+2021-03-02 23:13:43.6453  INFO - - Bind IP: 0.0.0.0
+2021-03-02 23:13:43.6613  INFO - - Socket Port: 12000
+2021-03-02 23:13:43.6613  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 23:13:43.6613  INFO - - Workspace Directory: C:\workspace
+2021-03-02 23:13:43.6613  INFO - - Product Name: DocConvert
+2021-03-02 23:13:43.6613  INFO - - SchedulerTime: 23,08
+2021-03-02 23:13:43.6777  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 23:13:43.6777  INFO - - CleanWorkspaceDay: 1
+2021-03-02 23:13:43.6777  INFO - - CleanLogSchedulerYn: True
+2021-03-02 23:13:43.7032  INFO - - CleanLogDay: 2
+2021-03-02 23:13:43.7032  INFO - - DRM useYn: False
+2021-03-02 23:13:43.7077  INFO - ------------------------------------------
+2021-03-02 23:13:43.7380  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 23:13:43.7482  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 23:13:43.7482 DEBUG - Workspace Cleanup Scheduler: 1day
+2021-03-02 23:13:43.7547 DEBUG - Log cleanup scheduler: 2day
+2021-03-02 23:13:43.7547  INFO - ============ [Scheduler] ============
+2021-03-02 23:13:43.7858  INFO - Next scheduler operation time: 2021-03-03 오후 23:08
+2021-03-02 23:13:43.7858  INFO - If the workspace last modified date is past 2021--03-02 오후 23:08
+2021-03-02 23:13:43.7858  INFO - If the log last modified date is past 2021-03-01 오후 23:08
+2021-03-02 23:13:43.7858  INFO - =====================================
+2021-03-02 23:13:43.7858  INFO - Cleanup scheduler is working
+2021-03-02 23:13:43.7858  WARN - DocConvert Server Started in 2021-03-02 11:13:43
+2021-03-02 23:14:10.7407 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 23:14:10.7671 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 23:14:10.7671  WARN - Starting DocConvert Server..
+2021-03-02 23:14:10.7671  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 23:14:10.7701  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 23:14:10.7701  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 23:14:10.7701  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 23:14:10.7701  INFO - User Name: JMKIM
+2021-03-02 23:14:10.7701  INFO - DocConvert Version: 2.0.7731.41824
+2021-03-02 23:14:10.7701  INFO - DocConvert PID: 17652
+2021-03-02 23:14:10.7701  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 23:14:10.7701  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 23:14:10.7701  INFO - ------------ Parsing Ini File ------------
+2021-03-02 23:14:10.7870  INFO - - Bind IP: 0.0.0.0
+2021-03-02 23:14:10.7870  INFO - - Socket Port: 12000
+2021-03-02 23:14:10.7870  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 23:14:10.7870  INFO - - Workspace Directory: C:\workspace
+2021-03-02 23:14:10.8103  INFO - - Product Name: DocConvert
+2021-03-02 23:14:10.8103  INFO - - SchedulerTime: 23,08
+2021-03-02 23:14:10.8434  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 23:14:10.8434  INFO - - CleanWorkspaceDay: 1
+2021-03-02 23:14:10.8434  INFO - - CleanLogSchedulerYn: True
+2021-03-02 23:14:10.8484  INFO - - CleanLogDay: 2
+2021-03-02 23:14:10.8484  INFO - - DRM useYn: False
+2021-03-02 23:14:10.8484  INFO - ------------------------------------------
+2021-03-02 23:14:10.8484  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 23:14:10.8778  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 23:14:10.8778 DEBUG - Workspace Cleanup Scheduler: 1day
+2021-03-02 23:14:10.8818 DEBUG - Log cleanup scheduler: 2day
+2021-03-02 23:14:10.8818  INFO - ============ [Scheduler] ============
+2021-03-02 23:14:10.8818  INFO - Next scheduler operation time: 2021-03-03 오후 23:08
+2021-03-02 23:14:10.8818  INFO - If the workspace last modified date is past 2021/03/02 오후 23:08
+2021-03-02 23:14:10.9140  INFO - If the log last modified date is past 2021-03-01 오후 23:08
+2021-03-02 23:14:10.9140  INFO - =====================================
+2021-03-02 23:14:10.9140  INFO - Cleanup scheduler is working
+2021-03-02 23:14:10.9140  WARN - DocConvert Server Started in 2021-03-02 11:14:10
+2021-03-02 23:14:34.4434 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 23:14:34.4645 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 23:14:34.4645  WARN - Starting DocConvert Server..
+2021-03-02 23:14:34.4645  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 23:14:34.4645  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 23:14:34.4645  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 23:14:34.4645  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 23:14:34.4645  INFO - User Name: JMKIM
+2021-03-02 23:14:34.4645  INFO - DocConvert Version: 2.0.7731.41836
+2021-03-02 23:14:34.4645  INFO - DocConvert PID: 15544
+2021-03-02 23:14:34.4645  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 23:14:34.4738  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 23:14:34.4738  INFO - ------------ Parsing Ini File ------------
+2021-03-02 23:14:34.4738  INFO - - Bind IP: 0.0.0.0
+2021-03-02 23:14:34.4738  INFO - - Socket Port: 12000
+2021-03-02 23:14:34.4738  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 23:14:34.4738  INFO - - Workspace Directory: C:\workspace
+2021-03-02 23:14:34.4738  INFO - - Product Name: DocConvert
+2021-03-02 23:14:34.4738  INFO - - SchedulerTime: 23,08
+2021-03-02 23:14:34.4738  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 23:14:34.4897  INFO - - CleanWorkspaceDay: 1
+2021-03-02 23:14:34.4897  INFO - - CleanLogSchedulerYn: True
+2021-03-02 23:14:34.4897  INFO - - CleanLogDay: 2
+2021-03-02 23:14:34.4897  INFO - - DRM useYn: False
+2021-03-02 23:14:34.4897  INFO - ------------------------------------------
+2021-03-02 23:14:34.4897  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 23:14:34.4897  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 23:14:34.4897 DEBUG - Workspace Cleanup Scheduler: 1day
+2021-03-02 23:14:34.4897 DEBUG - Log cleanup scheduler: 2day
+2021-03-02 23:14:34.4897  INFO - ============ [Scheduler] ============
+2021-03-02 23:14:34.4897  INFO - Next scheduler operation time: 2021/03/03 오후 23:08
+2021-03-02 23:14:34.5051  INFO - If the workspace last modified date is past 2021/03/02 오후 23:08
+2021-03-02 23:14:34.5051  INFO - If the log last modified date is past 2021/03/01 오후 23:08
+2021-03-02 23:14:34.5051  INFO - =====================================
+2021-03-02 23:14:34.5051  INFO - Cleanup scheduler is working
+2021-03-02 23:14:34.5051  WARN - DocConvert Server Started in 2021-03-02 11:14:34
+2021-03-02 23:14:55.6092 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 23:14:55.6311 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 23:14:55.6311  WARN - Starting DocConvert Server..
+2021-03-02 23:14:55.6311  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 23:14:55.6311  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 23:14:55.6311  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 23:14:55.6311  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 23:14:55.6311  INFO - User Name: JMKIM
+2021-03-02 23:14:55.6311  INFO - DocConvert Version: 2.0.7731.41847
+2021-03-02 23:14:55.6311  INFO - DocConvert PID: 8132
+2021-03-02 23:14:55.6311  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 23:14:55.6311  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 23:14:55.6311  INFO - ------------ Parsing Ini File ------------
+2021-03-02 23:14:55.6509  INFO - - Bind IP: 0.0.0.0
+2021-03-02 23:14:55.6509  INFO - - Socket Port: 12000
+2021-03-02 23:14:55.6509  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 23:14:55.6509  INFO - - Workspace Directory: C:\workspace
+2021-03-02 23:14:55.6509  INFO - - Product Name: DocConvert
+2021-03-02 23:14:55.6509  INFO - - SchedulerTime: 23,08
+2021-03-02 23:14:55.6509  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 23:14:55.6509  INFO - - CleanWorkspaceDay: 1
+2021-03-02 23:14:55.6608  INFO - - CleanLogSchedulerYn: True
+2021-03-02 23:14:55.6608  INFO - - CleanLogDay: 2
+2021-03-02 23:14:55.6608  INFO - - DRM useYn: False
+2021-03-02 23:14:55.6608  INFO - ------------------------------------------
+2021-03-02 23:14:55.6608  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 23:14:55.6608  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 23:14:55.6608 DEBUG - Workspace Cleanup Scheduler: 1day
+2021-03-02 23:14:55.6608 DEBUG - Log cleanup scheduler: 2day
+2021-03-02 23:14:55.6767  INFO - ============ [Scheduler] ============
+2021-03-02 23:14:55.6767  INFO - Next scheduler operation time: 2021/03/03 23:08
+2021-03-02 23:14:55.6767  INFO - If the workspace last modified date is past 2021/03/02 23:08
+2021-03-02 23:14:55.6767  INFO - If the log last modified date is past 2021/03/01 23:08
+2021-03-02 23:14:55.6767  INFO - =====================================
+2021-03-02 23:14:55.6930  INFO - Cleanup scheduler is working
+2021-03-02 23:14:55.6930  WARN - DocConvert Server Started in 2021-03-02 11:14:55
+2021-03-02 23:15:39.7233 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 23:15:39.7442 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 23:15:39.7442  WARN - Starting DocConvert Server..
+2021-03-02 23:15:39.7442  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 23:15:39.7442  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 23:15:39.7442  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 23:15:39.7442  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 23:15:39.7442  INFO - User Name: JMKIM
+2021-03-02 23:15:39.7442  INFO - DocConvert Version: 2.0.7731.41869
+2021-03-02 23:15:39.7442  INFO - DocConvert PID: 11716
+2021-03-02 23:15:39.7442  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 23:15:39.7442  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 23:15:39.7545  INFO - ------------ Parsing Ini File ------------
+2021-03-02 23:15:39.7545  INFO - - Bind IP: 0.0.0.0
+2021-03-02 23:15:39.7545  INFO - - Socket Port: 12000
+2021-03-02 23:15:39.7545  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 23:15:39.7545  INFO - - Workspace Directory: C:\workspace
+2021-03-02 23:15:39.7710  INFO - - Product Name: DocConvert
+2021-03-02 23:15:39.7710  INFO - - SchedulerTime: 23,16
+2021-03-02 23:15:39.7710  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 23:15:39.7710  INFO - - CleanWorkspaceDay: 1
+2021-03-02 23:15:39.7710  INFO - - CleanLogSchedulerYn: True
+2021-03-02 23:15:39.7710  INFO - - CleanLogDay: 2
+2021-03-02 23:15:39.7858  INFO - - DRM useYn: False
+2021-03-02 23:15:39.7858  INFO - ------------------------------------------
+2021-03-02 23:15:39.7858  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 23:15:39.7858  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 23:15:39.7858 DEBUG - Workspace Cleanup Scheduler: 1day
+2021-03-02 23:15:39.7858 DEBUG - Log cleanup scheduler: 2day
+2021-03-02 23:15:39.7858  INFO - ============ [Scheduler] ============
+2021-03-02 23:15:39.7858  INFO - Next scheduler operation time: 2021/03/02 23:16
+2021-03-02 23:15:39.7858  INFO - If the workspace last modified date is past 2021/03/01 23:16
+2021-03-02 23:15:39.8026  INFO - If the log last modified date is past 2021/02/28 23:16
+2021-03-02 23:15:39.8026  INFO - =====================================
+2021-03-02 23:15:39.8026  INFO - Cleanup scheduler is working
+2021-03-02 23:15:39.8026  WARN - DocConvert Server Started in 2021-03-02 11:15:39
+2021-03-02 23:16:04.0332  INFO - ============ [Scheduler] ============
+2021-03-02 23:16:04.0361  INFO - Next scheduler operation time: 2021/03/03 23:16
+2021-03-02 23:16:04.0361  INFO - If the workspace last modified date is past 2021/03/02 23:16
+2021-03-02 23:16:04.0361  INFO - If the log last modified date is past 2021/03/01 23:16
+2021-03-02 23:16:04.0361  INFO - =====================================
+2021-03-02 23:16:04.0361  WARN - Workspace cleanup scheduler has been run
+2021-03-02 23:16:04.0361  WARN - Logs cleanup scheduler has been run
+2021-03-02 23:16:48.7296 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 23:16:48.7564 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 23:16:48.7564  WARN - Starting DocConvert Server..
+2021-03-02 23:16:48.7564  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 23:16:48.7564  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 23:16:48.7564  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 23:16:48.7564  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 23:16:48.7564  INFO - User Name: JMKIM
+2021-03-02 23:16:48.7564  INFO - DocConvert Version: 2.0.7731.41903
+2021-03-02 23:16:48.7564  INFO - DocConvert PID: 7184
+2021-03-02 23:16:48.7564  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 23:16:48.7564  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 23:16:48.7564  INFO - ------------ Parsing Ini File ------------
+2021-03-02 23:16:48.7750  INFO - - Bind IP: 0.0.0.0
+2021-03-02 23:16:48.7960  INFO - - Socket Port: 12000
+2021-03-02 23:16:48.7960  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 23:16:48.7960  INFO - - Workspace Directory: C:\workspace
+2021-03-02 23:16:48.7960  INFO - - Product Name: DocConvert
+2021-03-02 23:16:48.8024  INFO - - SchedulerTime: 23,16
+2021-03-02 23:16:48.8024  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 23:16:48.8024  INFO - - CleanWorkspaceDay: 1
+2021-03-02 23:16:48.8024  INFO - - CleanLogSchedulerYn: True
+2021-03-02 23:16:48.8315  INFO - - CleanLogDay: 2
+2021-03-02 23:16:48.8362  INFO - - DRM useYn: False
+2021-03-02 23:16:48.8362  INFO - ------------------------------------------
+2021-03-02 23:16:48.8362  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 23:16:48.8362  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 23:16:48.8362 DEBUG - Workspace Cleanup Scheduler: 1day
+2021-03-02 23:16:48.8362 DEBUG - Log cleanup scheduler: 2day
+2021-03-02 23:16:48.8494  INFO - ============ [Scheduler] ============
+2021-03-02 23:16:48.8494  INFO - Next scheduler operation time: 2021/03/03 23:16
+2021-03-02 23:16:48.8642  INFO - If the workspace last modified date is past 2021/03/02 23:16
+2021-03-02 23:16:48.8642  INFO - If the log last modified date is past 2021/03/01 23:16
+2021-03-02 23:16:48.8968  INFO - =====================================
+2021-03-02 23:16:48.8968  INFO - Cleanup scheduler is working
+2021-03-02 23:16:48.8968  WARN - DocConvert Server Started in 03/02/2021 23:16:48
+2021-03-02 23:17:36.9635 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 23:17:36.9891 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 23:17:36.9891  WARN - Starting DocConvert Server..
+2021-03-02 23:17:36.9891  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 23:17:36.9891  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 23:17:36.9891  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 23:17:36.9891  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 23:17:36.9891  INFO - User Name: JMKIM
+2021-03-02 23:17:36.9891  INFO - DocConvert Version: 2.0.7731.41927
+2021-03-02 23:17:36.9891  INFO - DocConvert PID: 3264
+2021-03-02 23:17:36.9891  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 23:17:36.9891  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 23:17:36.9891  INFO - ------------ Parsing Ini File ------------
+2021-03-02 23:17:37.0062  INFO - - Bind IP: 0.0.0.0
+2021-03-02 23:17:37.0062  INFO - - Socket Port: 12000
+2021-03-02 23:17:37.0062  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 23:17:37.0062  INFO - - Workspace Directory: C:\workspace
+2021-03-02 23:17:37.0062  INFO - - Product Name: DocConvert
+2021-03-02 23:17:37.0062  INFO - - SchedulerTime: 23,16
+2021-03-02 23:17:37.0062  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 23:17:37.0062  INFO - - CleanWorkspaceDay: 1
+2021-03-02 23:17:37.0062  INFO - - CleanLogSchedulerYn: True
+2021-03-02 23:17:37.0062  INFO - - CleanLogDay: 2
+2021-03-02 23:17:37.0062  INFO - - DRM useYn: False
+2021-03-02 23:17:37.0200  INFO - ------------------------------------------
+2021-03-02 23:17:37.0200  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 23:17:37.0200  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 23:17:37.0200 DEBUG - Workspace Cleanup Scheduler: 1day
+2021-03-02 23:17:37.0200 DEBUG - Log cleanup scheduler: 2day
+2021-03-02 23:17:37.0200  INFO - ============ [Scheduler] ============
+2021-03-02 23:17:37.0200  INFO - Next scheduler operation time: 03/03/2021 23:16
+2021-03-02 23:17:37.0200  INFO - If the workspace last modified date is past 03/02/2021 23:16
+2021-03-02 23:17:37.0200  INFO - If the log last modified date is past 03/01/2021 23:16
+2021-03-02 23:17:37.0200  INFO - =====================================
+2021-03-02 23:17:37.0365  INFO - Cleanup scheduler is working
+2021-03-02 23:17:37.0365  WARN - DocConvert Server Started in 03/02/2021 23:17:37
+2021-03-02 23:18:51.8552 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 23:18:51.8874 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 23:18:51.8874  WARN - Starting DocConvert Server..
+2021-03-02 23:18:51.8874  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 23:18:51.8874  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 23:18:51.8874  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 23:18:51.8874  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 23:18:51.8874  INFO - User Name: JMKIM
+2021-03-02 23:18:51.8954  INFO - DocConvert Version: 2.0.7731.41965
+2021-03-02 23:18:51.8954  INFO - DocConvert PID: 13820
+2021-03-02 23:18:51.8954  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 23:18:51.8954  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 23:18:51.8954  INFO - ------------ Parsing Ini File ------------
+2021-03-02 23:18:51.8954  INFO - - Bind IP: 0.0.0.0
+2021-03-02 23:18:51.9344  INFO - - Socket Port: 12000
+2021-03-02 23:18:51.9344  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 23:18:51.9344  INFO - - Workspace Directory: C:\workspace
+2021-03-02 23:18:51.9344  INFO - - Product Name: DocConvert
+2021-03-02 23:18:51.9344  INFO - - SchedulerTime: 23,16
+2021-03-02 23:18:51.9344  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 23:18:51.9426  INFO - - CleanWorkspaceDay: 1
+2021-03-02 23:18:51.9426  INFO - - CleanLogSchedulerYn: True
+2021-03-02 23:18:51.9611  INFO - - CleanLogDay: 2
+2021-03-02 23:18:51.9611  INFO - - DRM useYn: False
+2021-03-02 23:18:51.9611  INFO - ------------------------------------------
+2021-03-02 23:18:51.9611  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 23:18:52.0145  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 23:18:52.0145 DEBUG - Workspace Cleanup Scheduler: 1day
+2021-03-02 23:18:52.0145 DEBUG - Log cleanup scheduler: 2day
+2021-03-02 23:18:52.0210  INFO - ============ [Scheduler] ============
+2021-03-02 23:18:52.0210  INFO - Next scheduler operation time: 2021-03-03 23:16
+2021-03-02 23:18:52.0210  INFO - If the workspace last modified date is past 2021-03-02 23:16
+2021-03-02 23:18:52.0210  INFO - If the log last modified date is past 2021-03-01 23:16
+2021-03-02 23:18:52.0210  INFO - =====================================
+2021-03-02 23:18:52.0210  INFO - Cleanup scheduler is working
+2021-03-02 23:18:52.0499  WARN - DocConvert Server Started in 2021-03-02 23:18:52
