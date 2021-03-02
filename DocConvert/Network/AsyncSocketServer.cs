@@ -8,7 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace DocConvert.Network
 {
@@ -18,6 +18,7 @@ namespace DocConvert.Network
         {
             try
             {
+                base.LingerState = new LingerOption(true, 0); // TimeWait 안걸리게
                 base.Bind(new IPEndPoint(IPAddress.Parse(bindIP), socketPORT));
             }
             catch (SocketException e1)
@@ -118,6 +119,8 @@ namespace DocConvert.Network
                         {
                             // 접속을 중단한다.
                             socket.DisconnectAsync(this);
+                            Thread.Sleep(500);
+                            socket.Close();
                             return;
                         }
                     }
@@ -165,6 +168,7 @@ namespace DocConvert.Network
                             Send(responseMsg.ToString());
 
                             socket.DisconnectAsync(this);
+                            socket.Close();
                             return;
                         }
                         catch (Exception e1)
@@ -184,6 +188,7 @@ namespace DocConvert.Network
                             try
                             {
                                 socket.DisconnectAsync(this);
+                                socket.Close();
                                 return;
                             } catch(Exception e2)
                             {
@@ -225,6 +230,7 @@ namespace DocConvert.Network
                 try
                 {
                     socket.DisconnectAsync(this);
+                    socket.Close();
                     return;
                 }
                 catch (Exception e2)

@@ -102,4 +102,3 @@ C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Core\obj\x86\Debug\DocConv
 C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Core\obj\x86\Debug\DocConvert_Core.csproj.CopyComplete
 C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Core\obj\x86\Debug\DocConvert_Core.dll
 C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Core\obj\x86\Debug\DocConvert_Core.pdb
-C:\Users\JMKIM\Documents\source\DocConvert\DocConvert_Core\obj\x86\Debug\DocConvert_Core.csprojAssemblyReference.cache

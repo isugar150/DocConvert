@@ -1,0 +1,1393 @@
+2021-03-02 21:58:50.2141 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 21:58:50.2351 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 21:58:50.2351  WARN - Starting DocConvert Server..
+2021-03-02 21:58:50.2391  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 21:58:50.2391  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 21:58:50.2391  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 21:58:50.2391  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 21:58:50.2391  INFO - User Name: JMKIM
+2021-03-02 21:58:50.2391  INFO - DocConvert Version: 2.0.7731.39556
+2021-03-02 21:58:50.2391  INFO - DocConvert PID: 12328
+2021-03-02 21:58:50.2391  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 21:58:50.2391  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 21:58:50.2391  INFO - ------------ Parsing Ini File ------------
+2021-03-02 21:58:50.2580  INFO - The configuration file is created in C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug\DocConvert.ini
+2021-03-02 21:58:50.2580  INFO - - Bind IP: 0.0.0.0
+2021-03-02 21:58:50.2580  INFO - - Socket Port: 12000
+2021-03-02 21:58:50.2580  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 21:58:50.2580  INFO - - Workspace Directory: C:\workspace
+2021-03-02 21:58:50.2580  INFO - - Product Name: DocConvert
+2021-03-02 21:58:50.2580  INFO - - SchedulerTime: 1,0
+2021-03-02 21:58:50.2580  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 21:58:50.2580  INFO - - CleanWorkspaceDay: 3
+2021-03-02 21:58:50.2580  INFO - - CleanLogSchedulerYn: True
+2021-03-02 21:58:50.2710  INFO - - CleanLogDay: 7
+2021-03-02 21:58:50.2710  INFO - - DRM useYn: False
+2021-03-02 21:58:50.2710  INFO - ------------------------------------------
+2021-03-02 21:58:50.2710  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 21:58:50.2710  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 21:58:50.2710 DEBUG - Workspace Cleanup Scheduler: 3days
+2021-03-02 21:58:50.2710 DEBUG - Log cleanup scheduler: 7days
+2021-03-02 21:58:50.2710  WARN - Next scheduler operation time: 2021-03-03 오전 1:00:00
+2021-03-02 21:58:50.2710  WARN - Cleanup scheduler is working
+2021-03-02 21:58:50.2710  WARN - DocConvert Server Started in 2021-03-02 09:58:50
+2021-03-02 21:58:57.5611  INFO - Connect Client From: 127.0.0.1:11685  Connection time: 2021-03-02 오후 9:58:57
+2021-03-02 21:58:57.6607 DEBUG - Received messages from 127.0.0.1:11685
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "1장.docx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 21:58:57.6607 DEBUG - Response messages to 127.0.0.1:11685
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 21:58:57.6607 DEBUG - Processing time: 00.030
+2021-03-02 21:58:58.1760  INFO - Disconnected From:127.0.0.1:11685 Time: 2021-03-02 오후 9:58:58
+2021-03-02 21:59:07.2166  INFO - Connect Client From: 127.0.0.1:11687  Connection time: 2021-03-02 오후 9:59:07
+2021-03-02 21:59:07.2166 DEBUG - Received messages from 127.0.0.1:11687
+{
+  "ClientKey": "41974d93-caf9-4ff5-8926-b32c905fdedd",
+  "Method": "DocConvert",
+  "FileName": "1장.docx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 21:59:07.2590 DEBUG - Method DocConvert Start ==>
+2021-03-02 21:59:07.2710 DEBUG - Initialized variable ========>
+2021-03-02 21:59:07.2710 DEBUG - workspacePath ===> C:\workspace
+2021-03-02 21:59:07.2710 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-02 21:59:07.2710 DEBUG - srcFile ===> C:\workspace\tmp\1장.docx
+2021-03-02 21:59:07.2710 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210302\243D3FE4D0D4594EACF0995A30DEA3E6
+2021-03-02 21:59:07.2710 DEBUG - targetFile ===> C:\workspace\data\20210302\243D3FE4D0D4594EACF0995A30DEA3E6\1장.docx
+2021-03-02 21:59:07.2710 DEBUG - =============================>
+2021-03-02 21:59:07.2710  INFO - Created DataTodayMD5Path Directory C:\workspace\data\20210302\243D3FE4D0D4594EACF0995A30DEA3E6
+2021-03-02 21:59:07.2873 DEBUG - C:\workspace\tmp\1장.docx Move file to C:\workspace\data\20210302\243D3FE4D0D4594EACF0995A30DEA3E6\1장.docx
+2021-03-02 21:59:07.2873 DEBUG - use DRM: False
+2021-03-02 21:59:10.3597 DEBUG - Response messages to 127.0.0.1:11687
+{
+  "FilePath": "/data/20210302/243D3FE4D0D4594EACF0995A30DEA3E6/1장.pdf",
+  "PageCnt": 1,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2021-03-02 21:59:10.3597 DEBUG - Processing time: 03.142
+2021-03-02 21:59:10.8943  INFO - Disconnected From:127.0.0.1:11687 Time: 2021-03-02 오후 9:59:10
+2021-03-02 21:59:45.3479 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 21:59:45.3748 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 21:59:45.3748  WARN - Starting DocConvert Server..
+2021-03-02 21:59:45.3748  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 21:59:45.3748  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 21:59:45.3798  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 21:59:45.3798  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 21:59:45.3798  INFO - User Name: JMKIM
+2021-03-02 21:59:45.3798  INFO - DocConvert Version: 2.0.7731.39556
+2021-03-02 21:59:45.3798  INFO - DocConvert PID: 3720
+2021-03-02 21:59:45.3957  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 21:59:45.3957  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 21:59:45.3957  INFO - ------------ Parsing Ini File ------------
+2021-03-02 21:59:45.3957  INFO - - Bind IP: 0.0.0.0
+2021-03-02 21:59:45.3957  INFO - - Socket Port: 12000
+2021-03-02 21:59:45.3957  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 21:59:45.3957  INFO - - Workspace Directory: C:\workspace
+2021-03-02 21:59:45.4135  INFO - - Product Name: DocConvert
+2021-03-02 21:59:45.4135  INFO - - SchedulerTime: 1,0
+2021-03-02 21:59:45.4135  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 21:59:45.4135  INFO - - CleanWorkspaceDay: 3
+2021-03-02 21:59:45.4135  INFO - - CleanLogSchedulerYn: True
+2021-03-02 21:59:45.4135  INFO - - CleanLogDay: 7
+2021-03-02 21:59:45.4563  INFO - - DRM useYn: False
+2021-03-02 21:59:45.4595  INFO - ------------------------------------------
+2021-03-02 21:59:45.4595  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 21:59:45.4595  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 21:59:45.4595 DEBUG - Workspace Cleanup Scheduler: 3days
+2021-03-02 21:59:45.4595 DEBUG - Log cleanup scheduler: 7days
+2021-03-02 21:59:45.4595  WARN - Next scheduler operation time: 2021-03-03 오전 1:00:00
+2021-03-02 21:59:45.4595  WARN - Cleanup scheduler is working
+2021-03-02 21:59:45.4942  WARN - DocConvert Server Started in 2021-03-02 09:59:45
+2021-03-02 22:00:05.9961  INFO - Connect Client From: 127.0.0.1:11713  Connection time: 2021-03-02 오후 10:00:05
+2021-03-02 22:00:06.1017 DEBUG - Received messages from 127.0.0.1:11713
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "1장.docx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:00:06.1017 DEBUG - Response messages to 127.0.0.1:11713
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:00:06.1017 DEBUG - Processing time: 00.028
+2021-03-02 22:00:06.6282  INFO - Disconnected From:127.0.0.1:11713 Time: 2021-03-02 오후 10:00:06
+2021-03-02 22:01:55.9464 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:01:55.9707 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:01:55.9707  WARN - Starting DocConvert Server..
+2021-03-02 22:01:55.9707  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:01:55.9738  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:01:55.9738  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:01:55.9738  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:01:55.9738  INFO - User Name: JMKIM
+2021-03-02 22:01:55.9738  INFO - DocConvert Version: 2.0.7731.39657
+2021-03-02 22:01:55.9738  INFO - DocConvert PID: 3992
+2021-03-02 22:01:55.9738  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:01:55.9738  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:01:55.9738  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:01:55.9888  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:01:55.9888  INFO - - Socket Port: 12000
+2021-03-02 22:01:55.9888  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:01:55.9888  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:01:55.9888  INFO - - Product Name: DocConvert
+2021-03-02 22:01:56.0057  INFO - - SchedulerTime: 1,0
+2021-03-02 22:01:56.0057  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:01:56.0057  INFO - - CleanWorkspaceDay: 3
+2021-03-02 22:01:56.0057  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:01:56.0057  INFO - - CleanLogDay: 7
+2021-03-02 22:01:56.0057  INFO - - DRM useYn: False
+2021-03-02 22:01:56.0368  INFO - ------------------------------------------
+2021-03-02 22:01:56.0368  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:01:56.0368  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:01:56.0368 DEBUG - Workspace Cleanup Scheduler: 3days
+2021-03-02 22:01:56.0368 DEBUG - Log cleanup scheduler: 7days
+2021-03-02 22:01:56.0368  WARN - Next scheduler operation time: 2021-03-03 오전 1:00:00
+2021-03-02 22:01:56.0520  WARN - Cleanup scheduler is working
+2021-03-02 22:01:56.0674  WARN - DocConvert Server Started in 2021-03-02 10:01:56
+2021-03-02 22:02:02.8997  INFO - Connect Client From: 127.0.0.1:11738  Connection time: 2021-03-02 오후 10:02:02
+2021-03-02 22:02:03.0039 DEBUG - Received messages from 127.0.0.1:11738
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "5장.docx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:02:03.0079 DEBUG - Response messages to 127.0.0.1:11738
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:02:03.0079 DEBUG - Processing time: 00.034
+2021-03-02 22:02:03.0079  INFO - Disconnected From:127.0.0.1:11738 Time: 2021-03-02 오후 10:02:03
+2021-03-02 22:02:16.8290  INFO - Connect Client From: 127.0.0.1:11739  Connection time: 2021-03-02 오후 10:02:16
+2021-03-02 22:02:16.8290 DEBUG - Received messages from 127.0.0.1:11739
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "5장.docx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:02:16.8325 DEBUG - Response messages to 127.0.0.1:11739
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:02:16.8325 DEBUG - Processing time: 00.003
+2021-03-02 22:02:16.8325  INFO - Disconnected From:127.0.0.1:11739 Time: 2021-03-02 오후 10:02:16
+2021-03-02 22:02:52.1213 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:02:52.1442 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:02:52.1452  WARN - Starting DocConvert Server..
+2021-03-02 22:02:52.1452  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:02:52.1452  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:02:52.1452  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:02:52.1452  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:02:52.1452  INFO - User Name: JMKIM
+2021-03-02 22:02:52.1452  INFO - DocConvert Version: 2.0.7731.39685
+2021-03-02 22:02:52.1452  INFO - DocConvert PID: 11272
+2021-03-02 22:02:52.1452  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:02:52.1452  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:02:52.1452  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:02:52.1612  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:02:52.1612  INFO - - Socket Port: 12000
+2021-03-02 22:02:52.1612  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:02:52.1612  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:02:52.1612  INFO - - Product Name: DocConvert
+2021-03-02 22:02:52.1612  INFO - - SchedulerTime: 1,0
+2021-03-02 22:02:52.1612  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:02:52.1612  INFO - - CleanWorkspaceDay: 3
+2021-03-02 22:02:52.1612  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:02:52.1612  INFO - - CleanLogDay: 7
+2021-03-02 22:02:52.1612  INFO - - DRM useYn: False
+2021-03-02 22:02:52.1612  INFO - ------------------------------------------
+2021-03-02 22:02:52.1781  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:02:52.1781  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:02:52.1781 DEBUG - Workspace Cleanup Scheduler: 3days
+2021-03-02 22:02:52.1781 DEBUG - Log cleanup scheduler: 7days
+2021-03-02 22:02:52.1781  WARN - Next scheduler operation time: 2021-03-03 오전 1:00:00
+2021-03-02 22:02:52.1781  WARN - Cleanup scheduler is working
+2021-03-02 22:02:52.1781  WARN - DocConvert Server Started in 2021-03-02 10:02:52
+2021-03-02 22:02:56.1133  INFO - Connect Client From: 127.0.0.1:11742  Connection time: 2021-03-02 오후 10:02:56
+2021-03-02 22:02:56.1877 DEBUG - Received messages from 127.0.0.1:11742
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "1장.docx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:02:56.1877 DEBUG - Response messages to 127.0.0.1:11742
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:02:56.1927 DEBUG - Processing time: 00.029
+2021-03-02 22:02:56.1927  INFO - Disconnected From:127.0.0.1:11742 Time: 2021-03-02 오후 10:02:56
+2021-03-02 22:03:09.2826  INFO - Connect Client From: 127.0.0.1:11743  Connection time: 2021-03-02 오후 10:03:09
+2021-03-02 22:03:09.2826 DEBUG - Received messages from 127.0.0.1:11743
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "1장.docx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:03:09.2826 DEBUG - Response messages to 127.0.0.1:11743
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:03:09.2866 DEBUG - Processing time: 00.001
+2021-03-02 22:03:09.2866  INFO - Disconnected From:127.0.0.1:11743 Time: 2021-03-02 오후 10:03:09
+2021-03-02 22:07:52.9912 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:07:53.0164 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:07:53.0164  WARN - Starting DocConvert Server..
+2021-03-02 22:07:53.0217  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:07:53.0217  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:07:53.0217  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:07:53.0217  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:07:53.0217  INFO - User Name: JMKIM
+2021-03-02 22:07:53.0217  INFO - DocConvert Version: 2.0.7731.39836
+2021-03-02 22:07:53.0217  INFO - DocConvert PID: 17868
+2021-03-02 22:07:53.0217  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:07:53.0217  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:07:53.0217  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:07:53.0381  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:07:53.0381  INFO - - Socket Port: 12000
+2021-03-02 22:07:53.0381  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:07:53.0381  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:07:53.0526  INFO - - Product Name: DocConvert
+2021-03-02 22:07:53.0526  INFO - - SchedulerTime: 1,0
+2021-03-02 22:07:53.0526  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:07:53.0526  INFO - - CleanWorkspaceDay: 3
+2021-03-02 22:07:53.0526  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:07:53.0526  INFO - - CleanLogDay: 7
+2021-03-02 22:07:53.0811  INFO - - DRM useYn: False
+2021-03-02 22:07:53.0831  INFO - ------------------------------------------
+2021-03-02 22:07:53.1121  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:07:53.1149  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:07:53.1149 DEBUG - Workspace Cleanup Scheduler: 3days
+2021-03-02 22:07:53.1149 DEBUG - Log cleanup scheduler: 7days
+2021-03-02 22:07:53.1149  WARN - Next scheduler operation time: 2021-03-03 오전 1:00:00
+2021-03-02 22:07:53.1149  WARN - Cleanup scheduler is working
+2021-03-02 22:07:53.1149  WARN - DocConvert Server Started in 2021-03-02 10:07:53
+2021-03-02 22:07:57.4631  INFO - Connect Client From: 127.0.0.1:11893  Connection time: 2021-03-02 오후 10:07:57
+2021-03-02 22:07:57.5396 DEBUG - Received messages from 127.0.0.1:11893
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "1장.docx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:07:57.5396 DEBUG - Response messages to 127.0.0.1:11893
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:07:57.5396 DEBUG - Processing time: 00.035
+2021-03-02 22:07:58.5617  INFO - Disconnected From:127.0.0.1:11893 Time: 2021-03-02 오후 10:07:58
+2021-03-02 22:12:24.7830 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:12:24.8063 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:12:24.8063  WARN - Starting DocConvert Server..
+2021-03-02 22:12:24.8063  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:12:24.8063  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:12:24.8063  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:12:24.8063  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:12:24.8063  INFO - User Name: JMKIM
+2021-03-02 22:12:24.8169  INFO - DocConvert Version: 2.0.7731.39971
+2021-03-02 22:12:24.8169  INFO - DocConvert PID: 6984
+2021-03-02 22:12:24.8169  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:12:24.8169  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:12:24.8169  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:12:24.8169  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:12:24.8169  INFO - - Socket Port: 12000
+2021-03-02 22:12:24.8330  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:12:24.8330  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:12:24.8330  INFO - - Product Name: DocConvert
+2021-03-02 22:12:24.8330  INFO - - SchedulerTime: 1,0
+2021-03-02 22:12:24.8505  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:12:24.8505  INFO - - CleanWorkspaceDay: 3
+2021-03-02 22:12:24.8505  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:12:24.8505  INFO - - CleanLogDay: 7
+2021-03-02 22:12:24.8505  INFO - - DRM useYn: False
+2021-03-02 22:12:24.8505  INFO - ------------------------------------------
+2021-03-02 22:12:24.8505  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:12:24.8761  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:12:24.8845 DEBUG - Workspace Cleanup Scheduler: 3days
+2021-03-02 22:12:24.8845 DEBUG - Log cleanup scheduler: 7days
+2021-03-02 22:12:24.8845  WARN - Next scheduler operation time: 2021-03-03 오전 1:00:00
+2021-03-02 22:12:24.8845  WARN - Cleanup scheduler is working
+2021-03-02 22:12:24.8845  WARN - DocConvert Server Started in 2021-03-02 10:12:24
+2021-03-02 22:12:30.8375  WARN - I ended a program I had run before.
+2021-03-02 22:12:30.8686 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:12:30.8686 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:12:30.8686  WARN - Starting DocConvert Server..
+2021-03-02 22:12:30.8686  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:12:30.8686  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:12:30.8686  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:12:30.8686  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:12:30.8686  INFO - User Name: JMKIM
+2021-03-02 22:12:30.8686  INFO - DocConvert Version: 2.0.7731.39971
+2021-03-02 22:12:30.8686  INFO - DocConvert PID: 11084
+2021-03-02 22:12:30.8686  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:12:30.8794  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:12:30.8794  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:12:30.8794  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:12:30.8794  INFO - - Socket Port: 12000
+2021-03-02 22:12:30.8794  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:12:30.8794  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:12:30.8960  INFO - - Product Name: DocConvert
+2021-03-02 22:12:30.8960  INFO - - SchedulerTime: 1,0
+2021-03-02 22:12:30.8960  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:12:30.8960  INFO - - CleanWorkspaceDay: 3
+2021-03-02 22:12:30.8960  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:12:30.8960  INFO - - CleanLogDay: 7
+2021-03-02 22:12:30.8960  INFO - - DRM useYn: False
+2021-03-02 22:12:30.8960  INFO - ------------------------------------------
+2021-03-02 22:12:30.8960  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:12:30.8960  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:12:30.9110 DEBUG - Workspace Cleanup Scheduler: 3days
+2021-03-02 22:12:30.9110 DEBUG - Log cleanup scheduler: 7days
+2021-03-02 22:12:30.9110  WARN - Next scheduler operation time: 2021-03-03 오전 1:00:00
+2021-03-02 22:12:30.9110  WARN - Cleanup scheduler is working
+2021-03-02 22:12:30.9110  WARN - DocConvert Server Started in 2021-03-02 10:12:30
+2021-03-02 22:12:38.7778  INFO - Connect Client From: 127.0.0.1:11927  Connection time: 2021-03-02 오후 10:12:38
+2021-03-02 22:12:38.8687 DEBUG - Received messages from 127.0.0.1:11927
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "1장.docx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:12:38.8687 DEBUG - Response messages to 127.0.0.1:11927
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:12:38.8687 DEBUG - Processing time: 00.028
+2021-03-02 22:13:01.1435  INFO - Connect Client From: 127.0.0.1:11928  Connection time: 2021-03-02 오후 10:13:01
+2021-03-02 22:13:01.1464 DEBUG - Received messages from 127.0.0.1:11928
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "1장.docx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:13:01.1464 DEBUG - Response messages to 127.0.0.1:11928
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:13:01.1464 DEBUG - Processing time: 00.003
+2021-03-02 22:13:12.7504 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:13:12.7765 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:13:12.7765  WARN - Starting DocConvert Server..
+2021-03-02 22:13:12.7765  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:13:12.7765  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:13:12.7765  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:13:12.7765  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:13:12.7765  INFO - User Name: JMKIM
+2021-03-02 22:13:12.7869  INFO - DocConvert Version: 2.0.7731.39995
+2021-03-02 22:13:12.7869  INFO - DocConvert PID: 18084
+2021-03-02 22:13:12.7869  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:13:12.7869  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:13:12.7869  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:13:12.7869  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:13:12.8176  INFO - - Socket Port: 12000
+2021-03-02 22:13:12.8176  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:13:12.8176  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:13:12.8503  INFO - - Product Name: DocConvert
+2021-03-02 22:13:12.8503  INFO - - SchedulerTime: 1,0
+2021-03-02 22:13:12.8503  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:13:12.8503  INFO - - CleanWorkspaceDay: 3
+2021-03-02 22:13:12.8503  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:13:12.8503  INFO - - CleanLogDay: 7
+2021-03-02 22:13:12.8503  INFO - - DRM useYn: False
+2021-03-02 22:13:12.8662  INFO - ------------------------------------------
+2021-03-02 22:13:12.8831  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:13:12.8831  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:13:12.8831 DEBUG - Workspace Cleanup Scheduler: 3days
+2021-03-02 22:13:12.8831 DEBUG - Log cleanup scheduler: 7days
+2021-03-02 22:13:12.9176  WARN - Next scheduler operation time: 2021-03-03 오전 1:00:00
+2021-03-02 22:13:12.9176  WARN - Cleanup scheduler is working
+2021-03-02 22:13:12.9176  WARN - DocConvert Server Started in 2021-03-02 10:13:12
+2021-03-02 22:13:19.7729  INFO - Connect Client From: 127.0.0.1:11930  Connection time: 2021-03-02 오후 10:13:19
+2021-03-02 22:13:19.8873 DEBUG - Received messages from 127.0.0.1:11930
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "1장.pptx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:13:19.8873 DEBUG - Response messages to 127.0.0.1:11930
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:13:19.8873 DEBUG - Processing time: 00.038
+2021-03-02 22:16:56.1654 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:16:56.1970 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:16:56.1970  WARN - Starting DocConvert Server..
+2021-03-02 22:16:56.1970  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:16:56.1970  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:16:56.1970  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:16:56.1970  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:16:56.1970  INFO - User Name: JMKIM
+2021-03-02 22:16:56.1970  INFO - DocConvert Version: 2.0.7731.40107
+2021-03-02 22:16:56.1970  INFO - DocConvert PID: 15460
+2021-03-02 22:16:56.2090  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:16:56.2090  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:16:56.2090  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:16:56.2090  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:16:56.2339  INFO - - Socket Port: 12000
+2021-03-02 22:16:56.2339  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:16:56.2673  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:16:56.2673  INFO - - Product Name: DocConvert
+2021-03-02 22:16:56.2713  INFO - - SchedulerTime: 1,0
+2021-03-02 22:16:56.2713  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:16:56.2713  INFO - - CleanWorkspaceDay: 3
+2021-03-02 22:16:56.2713  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:16:56.2713  INFO - - CleanLogDay: 7
+2021-03-02 22:16:56.2713  INFO - - DRM useYn: False
+2021-03-02 22:16:56.2996  INFO - ------------------------------------------
+2021-03-02 22:16:56.3040  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:16:56.3040  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:16:56.3040 DEBUG - Workspace Cleanup Scheduler: 3days
+2021-03-02 22:16:56.3333 DEBUG - Log cleanup scheduler: 7days
+2021-03-02 22:16:56.3333  WARN - Next scheduler operation time: 2021-03-03 오전 1:00:00
+2021-03-02 22:16:56.3333  WARN - Cleanup scheduler is working
+2021-03-02 22:16:56.3333  WARN - DocConvert Server Started in 2021-03-02 10:16:56
+2021-03-02 22:17:00.7549  INFO - Connect Client From: 127.0.0.1:12012  Connection time: 2021-03-02 오후 10:17:00
+2021-03-02 22:17:00.8541 DEBUG - Received messages from 127.0.0.1:12012
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "1장.docx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:17:00.8541 DEBUG - Response messages to 127.0.0.1:12012
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:17:00.8541 DEBUG - Processing time: 00.028
+2021-03-02 22:17:01.8668  INFO - Disconnected From:127.0.0.1:12012 Time: 2021-03-02 오후 10:17:01
+2021-03-02 22:17:48.8582 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:17:48.8831 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:17:48.8831  WARN - Starting DocConvert Server..
+2021-03-02 22:17:48.8831  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:17:48.8831  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:17:48.8831  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:17:48.8831  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:17:48.8831  INFO - User Name: JMKIM
+2021-03-02 22:17:48.8831  INFO - DocConvert Version: 2.0.7731.40133
+2021-03-02 22:17:48.8831  INFO - DocConvert PID: 17500
+2021-03-02 22:17:48.8831  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:17:48.8831  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:17:48.8831  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:17:48.8990  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:17:48.8990  INFO - - Socket Port: 12000
+2021-03-02 22:17:48.8990  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:17:48.8990  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:17:48.8990  INFO - - Product Name: DocConvert
+2021-03-02 22:17:48.8990  INFO - - SchedulerTime: 1,0
+2021-03-02 22:17:48.8990  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:17:48.8990  INFO - - CleanWorkspaceDay: 3
+2021-03-02 22:17:48.8990  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:17:48.8990  INFO - - CleanLogDay: 7
+2021-03-02 22:17:48.9110  INFO - - DRM useYn: False
+2021-03-02 22:17:48.9110  INFO - ------------------------------------------
+2021-03-02 22:17:48.9110  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:17:48.9110  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:17:48.9110 DEBUG - Workspace Cleanup Scheduler: 3days
+2021-03-02 22:17:48.9110 DEBUG - Log cleanup scheduler: 7days
+2021-03-02 22:17:48.9110  WARN - Next scheduler operation time: 2021-03-03 오전 1:00:00
+2021-03-02 22:17:48.9110  WARN - Cleanup scheduler is working
+2021-03-02 22:17:48.9272  WARN - DocConvert Server Started in 2021-03-02 10:17:48
+2021-03-02 22:18:08.6508 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:18:08.6771 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:18:08.6771  WARN - Starting DocConvert Server..
+2021-03-02 22:18:08.6771  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:18:08.6771  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:18:08.6771  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:18:08.6771  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:18:08.6771  INFO - User Name: JMKIM
+2021-03-02 22:18:08.6771  INFO - DocConvert Version: 2.0.7731.40143
+2021-03-02 22:18:08.6771  INFO - DocConvert PID: 16856
+2021-03-02 22:18:08.6771  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:18:08.6771  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:18:08.6771  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:18:08.6931  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:18:08.6931  INFO - - Socket Port: 12000
+2021-03-02 22:18:08.6931  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:18:08.6931  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:18:08.6931  INFO - - Product Name: DocConvert
+2021-03-02 22:18:08.6931  INFO - - SchedulerTime: 1,0
+2021-03-02 22:18:08.6931  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:18:08.7082  INFO - - CleanWorkspaceDay: 3
+2021-03-02 22:18:08.7082  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:18:08.7082  INFO - - CleanLogDay: 7
+2021-03-02 22:18:08.7082  INFO - - DRM useYn: False
+2021-03-02 22:18:08.7373  INFO - ------------------------------------------
+2021-03-02 22:18:08.7393  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:18:08.7393  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:18:08.7393 DEBUG - Workspace Cleanup Scheduler: 3days
+2021-03-02 22:18:08.7393 DEBUG - Log cleanup scheduler: 7days
+2021-03-02 22:18:08.7393  WARN - Next scheduler operation time: 2021-03-03 오전 1:00:00
+2021-03-02 22:18:08.7393  WARN - Cleanup scheduler is working
+2021-03-02 22:18:08.7393  WARN - DocConvert Server Started in 2021-03-02 10:18:08
+2021-03-02 22:18:17.6134  INFO - Connect Client From: 127.0.0.1:12021  Connection time: 2021-03-02 오후 10:18:17
+2021-03-02 22:18:17.7268 DEBUG - Received messages from 127.0.0.1:12021
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "1장.docx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:18:17.7268 DEBUG - Response messages to 127.0.0.1:12021
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:18:17.7268 DEBUG - Processing time: 00.029
+2021-03-02 22:18:17.7268  INFO - Disconnected From:127.0.0.1:12021 Time: 2021-03-02 오후 10:18:17
+2021-03-02 22:18:20.2425  INFO - Connect Client From: 127.0.0.1:12022  Connection time: 2021-03-02 오후 10:18:20
+2021-03-02 22:18:20.2425 DEBUG - Received messages from 127.0.0.1:12022
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "1장.docx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:18:20.2425 DEBUG - Response messages to 127.0.0.1:12022
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:18:20.2425 DEBUG - Processing time: 00.003
+2021-03-02 22:18:20.2425  INFO - Disconnected From:127.0.0.1:12022 Time: 2021-03-02 오후 10:18:20
+2021-03-02 22:18:23.4982  INFO - Connect Client From: 127.0.0.1:12023  Connection time: 2021-03-02 오후 10:18:23
+2021-03-02 22:18:23.4982 DEBUG - Received messages from 127.0.0.1:12023
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "1장.docx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:18:23.4982 DEBUG - Response messages to 127.0.0.1:12023
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:18:23.5057 DEBUG - Processing time: 00.004
+2021-03-02 22:18:23.5057  INFO - Disconnected From:127.0.0.1:12023 Time: 2021-03-02 오후 10:18:23
+2021-03-02 22:19:01.9982 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:19:02.0265 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:19:02.0265  WARN - Starting DocConvert Server..
+2021-03-02 22:19:02.0265  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:19:02.0265  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:19:02.0265  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:19:02.0265  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:19:02.0265  INFO - User Name: JMKIM
+2021-03-02 22:19:02.0265  INFO - DocConvert Version: 2.0.7731.40170
+2021-03-02 22:19:02.0265  INFO - DocConvert PID: 6072
+2021-03-02 22:19:02.0362  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:19:02.0362  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:19:02.0362  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:19:02.0362  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:19:02.0592  INFO - - Socket Port: 12000
+2021-03-02 22:19:02.0592  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:19:02.0592  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:19:02.0592  INFO - - Product Name: DocConvert
+2021-03-02 22:19:02.0725  INFO - - SchedulerTime: 1,0
+2021-03-02 22:19:02.0920  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:19:02.1422  INFO - - CleanWorkspaceDay: 3
+2021-03-02 22:19:02.1422  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:19:02.1755  INFO - - CleanLogDay: 7
+2021-03-02 22:19:02.1767  INFO - - DRM useYn: False
+2021-03-02 22:19:02.1767  INFO - ------------------------------------------
+2021-03-02 22:19:02.1767  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:19:02.1767  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:19:02.1767 DEBUG - Workspace Cleanup Scheduler: 3days
+2021-03-02 22:19:02.1767 DEBUG - Log cleanup scheduler: 7days
+2021-03-02 22:19:02.1767  WARN - Next scheduler operation time: 2021-03-03 오전 1:00:00
+2021-03-02 22:19:02.1935  WARN - Cleanup scheduler is working
+2021-03-02 22:19:02.1935  WARN - DocConvert Server Started in 2021-03-02 10:19:02
+2021-03-02 22:19:10.0390  INFO - Connect Client From: 127.0.0.1:12025  Connection time: 2021-03-02 오후 10:19:10
+2021-03-02 22:19:10.1504 DEBUG - Received messages from 127.0.0.1:12025
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "5장.docx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:19:10.1504 DEBUG - Response messages to 127.0.0.1:12025
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:19:10.1504 DEBUG - Processing time: 00.030
+2021-03-02 22:19:10.1504  INFO - Disconnected From:127.0.0.1:12025 Time: 2021-03-02 오후 10:19:10
+2021-03-02 22:19:49.8137 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:19:49.8361 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:19:49.8361  WARN - Starting DocConvert Server..
+2021-03-02 22:19:49.8361  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:19:49.8361  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:19:49.8361  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:19:49.8361  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:19:49.8361  INFO - User Name: JMKIM
+2021-03-02 22:19:49.8361  INFO - DocConvert Version: 2.0.7731.40193
+2021-03-02 22:19:49.8361  INFO - DocConvert PID: 17352
+2021-03-02 22:19:49.8361  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:19:49.8361  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:19:49.8361  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:19:49.8523  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:19:49.8523  INFO - - Socket Port: 12000
+2021-03-02 22:19:49.8523  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:19:49.8523  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:19:49.8523  INFO - - Product Name: DocConvert
+2021-03-02 22:19:49.8523  INFO - - SchedulerTime: 1,0
+2021-03-02 22:19:49.8523  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:19:49.8523  INFO - - CleanWorkspaceDay: 3
+2021-03-02 22:19:49.8523  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:19:49.8523  INFO - - CleanLogDay: 7
+2021-03-02 22:19:49.8643  INFO - - DRM useYn: False
+2021-03-02 22:19:49.8643  INFO - ------------------------------------------
+2021-03-02 22:19:49.8643  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:19:49.8643  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:19:49.8643 DEBUG - Workspace Cleanup Scheduler: 3days
+2021-03-02 22:19:49.8643 DEBUG - Log cleanup scheduler: 7days
+2021-03-02 22:19:49.8643  WARN - Next scheduler operation time: 2021-03-03 오전 1:00:00
+2021-03-02 22:19:49.8643  WARN - Cleanup scheduler is working
+2021-03-02 22:19:49.8643  WARN - DocConvert Server Started in 2021-03-02 10:19:49
+2021-03-02 22:19:54.8803  INFO - Connect Client From: 127.0.0.1:12029  Connection time: 2021-03-02 오후 10:19:54
+2021-03-02 22:19:54.9772 DEBUG - Received messages from 127.0.0.1:12029
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "1장.docx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:19:54.9772 DEBUG - Response messages to 127.0.0.1:12029
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:19:54.9772 DEBUG - Processing time: 00.032
+2021-03-02 22:19:54.9772  INFO - Disconnected From:127.0.0.1:12029 Time: 2021-03-02 오후 10:19:54
+2021-03-02 22:20:15.6933 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:20:15.7289 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:20:15.7289  WARN - Starting DocConvert Server..
+2021-03-02 22:20:15.7289  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:20:15.7289  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:20:15.7289  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:20:15.7289  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:20:15.7289  INFO - User Name: JMKIM
+2021-03-02 22:20:15.7289  INFO - DocConvert Version: 2.0.7731.40193
+2021-03-02 22:20:15.7289  INFO - DocConvert PID: 6812
+2021-03-02 22:20:15.7391  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:20:15.7391  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:20:15.7391  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:20:15.7391  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:20:15.7695  INFO - - Socket Port: 12000
+2021-03-02 22:20:15.7715  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:20:15.8018  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:20:15.8018  INFO - - Product Name: DocConvert
+2021-03-02 22:20:15.8018  INFO - - SchedulerTime: 1,0
+2021-03-02 22:20:15.8018  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:20:15.8018  INFO - - CleanWorkspaceDay: 3
+2021-03-02 22:20:15.8018  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:20:15.8018  INFO - - CleanLogDay: 7
+2021-03-02 22:20:15.8018  INFO - - DRM useYn: False
+2021-03-02 22:20:15.8181  INFO - ------------------------------------------
+2021-03-02 22:20:15.8181  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:20:15.8376  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:20:15.8376 DEBUG - Workspace Cleanup Scheduler: 3days
+2021-03-02 22:20:15.8376 DEBUG - Log cleanup scheduler: 7days
+2021-03-02 22:20:15.8376  WARN - Next scheduler operation time: 2021-03-03 오전 1:00:00
+2021-03-02 22:20:15.8376  WARN - Cleanup scheduler is working
+2021-03-02 22:20:15.8862  WARN - DocConvert Server Started in 2021-03-02 10:20:15
+2021-03-02 22:20:20.7367 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:20:20.7581 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:20:20.7581  WARN - Starting DocConvert Server..
+2021-03-02 22:20:20.7581  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:20:20.7581  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:20:20.7581  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:20:20.7581  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:20:20.7581  INFO - User Name: JMKIM
+2021-03-02 22:20:20.7581  INFO - DocConvert Version: 2.0.7731.40209
+2021-03-02 22:20:20.7581  INFO - DocConvert PID: 10828
+2021-03-02 22:20:20.7581  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:20:20.7581  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:20:20.7581  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:20:20.7741  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:20:20.7741  INFO - - Socket Port: 12000
+2021-03-02 22:20:20.7741  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:20:20.7741  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:20:20.7741  INFO - - Product Name: DocConvert
+2021-03-02 22:20:20.7741  INFO - - SchedulerTime: 1,0
+2021-03-02 22:20:20.7741  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:20:20.7741  INFO - - CleanWorkspaceDay: 3
+2021-03-02 22:20:20.7741  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:20:20.7741  INFO - - CleanLogDay: 7
+2021-03-02 22:20:20.7741  INFO - - DRM useYn: False
+2021-03-02 22:20:20.7861  INFO - ------------------------------------------
+2021-03-02 22:20:20.7861  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:20:20.7861  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:20:20.7861 DEBUG - Workspace Cleanup Scheduler: 3days
+2021-03-02 22:20:20.7861 DEBUG - Log cleanup scheduler: 7days
+2021-03-02 22:20:20.7861  WARN - Next scheduler operation time: 2021-03-03 오전 1:00:00
+2021-03-02 22:20:20.7861  WARN - Cleanup scheduler is working
+2021-03-02 22:20:20.7861  WARN - DocConvert Server Started in 2021-03-02 10:20:20
+2021-03-02 22:20:26.1554  INFO - Connect Client From: 127.0.0.1:12031  Connection time: 2021-03-02 오후 10:20:26
+2021-03-02 22:20:26.2535 DEBUG - Received messages from 127.0.0.1:12031
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "1장.xlsx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:20:26.2584 DEBUG - Response messages to 127.0.0.1:12031
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:20:26.2584 DEBUG - Processing time: 00.029
+2021-03-02 22:20:26.2584  INFO - Disconnected From:127.0.0.1:12031 Time: 2021-03-02 오후 10:20:26
+2021-03-02 22:20:30.4995  INFO - Connect Client From: 127.0.0.1:12032  Connection time: 2021-03-02 오후 10:20:30
+2021-03-02 22:20:30.4995 DEBUG - Received messages from 127.0.0.1:12032
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "1장.xlsx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:20:30.4995 DEBUG - Response messages to 127.0.0.1:12032
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:20:30.5045 DEBUG - Processing time: 00.002
+2021-03-02 22:20:30.5045  INFO - Disconnected From:127.0.0.1:12032 Time: 2021-03-02 오후 10:20:30
+2021-03-02 22:20:45.8473  INFO - Connect Client From: 127.0.0.1:12033  Connection time: 2021-03-02 오후 10:20:45
+2021-03-02 22:20:45.8508 DEBUG - Received messages from 127.0.0.1:12033
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:20:45.8508 DEBUG - Response messages to 127.0.0.1:12033
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:20:45.8508 DEBUG - Processing time: 00.004
+2021-03-02 22:20:45.8508  INFO - Disconnected From:127.0.0.1:12033 Time: 2021-03-02 오후 10:20:45
+2021-03-02 22:21:44.8018 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:21:44.8266 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:21:44.8266  WARN - Starting DocConvert Server..
+2021-03-02 22:21:44.8266  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:21:44.8266  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:21:44.8266  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:21:44.8266  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:21:44.8266  INFO - User Name: JMKIM
+2021-03-02 22:21:44.8325  INFO - DocConvert Version: 2.0.7731.40251
+2021-03-02 22:21:44.8325  INFO - DocConvert PID: 5176
+2021-03-02 22:21:44.8325  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:21:44.8325  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:21:44.8325  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:21:44.8325  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:21:44.8325  INFO - - Socket Port: 12000
+2021-03-02 22:21:44.8325  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:21:44.8325  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:21:44.8325  INFO - - Product Name: DocConvert
+2021-03-02 22:21:44.8493  INFO - - SchedulerTime: 1,0
+2021-03-02 22:21:44.8493  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:21:44.8493  INFO - - CleanWorkspaceDay: 3
+2021-03-02 22:21:44.8493  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:21:44.8493  INFO - - CleanLogDay: 7
+2021-03-02 22:21:44.8648  INFO - - DRM useYn: False
+2021-03-02 22:21:44.8648  INFO - ------------------------------------------
+2021-03-02 22:21:44.8648  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:21:44.8648  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:21:44.8648 DEBUG - Workspace Cleanup Scheduler: 3days
+2021-03-02 22:21:44.8648 DEBUG - Log cleanup scheduler: 7days
+2021-03-02 22:21:44.8648  WARN - Next scheduler operation time: 2021-03-03 오전 1:00:00
+2021-03-02 22:21:44.8648  WARN - Cleanup scheduler is working
+2021-03-02 22:21:44.8648  WARN - DocConvert Server Started in 2021-03-02 10:21:44
+2021-03-02 22:21:51.4089 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:21:51.4295 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:21:51.4295  WARN - Starting DocConvert Server..
+2021-03-02 22:21:51.4295  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:21:51.4295  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:21:51.4295  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:21:51.4295  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:21:51.4295  INFO - User Name: JMKIM
+2021-03-02 22:21:51.4295  INFO - DocConvert Version: 2.0.7731.40253
+2021-03-02 22:21:51.4295  INFO - DocConvert PID: 11536
+2021-03-02 22:21:51.4295  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:21:51.4295  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:21:51.4295  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:21:51.4475  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:21:51.4475  INFO - - Socket Port: 12000
+2021-03-02 22:21:51.4475  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:21:51.4475  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:21:51.4475  INFO - - Product Name: DocConvert
+2021-03-02 22:21:51.4475  INFO - - SchedulerTime: 1,0
+2021-03-02 22:21:51.4475  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:21:51.4475  INFO - - CleanWorkspaceDay: 3
+2021-03-02 22:21:51.4475  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:21:51.4475  INFO - - CleanLogDay: 7
+2021-03-02 22:21:51.4585  INFO - - DRM useYn: False
+2021-03-02 22:21:51.4585  INFO - ------------------------------------------
+2021-03-02 22:21:51.4585  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:21:51.4585  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:21:51.4585 DEBUG - Workspace Cleanup Scheduler: 3days
+2021-03-02 22:21:51.4585 DEBUG - Log cleanup scheduler: 7days
+2021-03-02 22:21:51.4585  WARN - Next scheduler operation time: 2021-03-03 오전 1:00:00
+2021-03-02 22:21:51.4585  WARN - Cleanup scheduler is working
+2021-03-02 22:21:51.4585  WARN - DocConvert Server Started in 2021-03-02 10:21:51
+2021-03-02 22:22:13.2003  INFO - Connect Client From: 127.0.0.1:12044  Connection time: 2021-03-02 오후 10:22:13
+2021-03-02 22:22:13.2996 DEBUG - Received messages from 127.0.0.1:12044
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "5장.docx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:22:13.3016 DEBUG - Response messages to 127.0.0.1:12044
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:22:13.3016 DEBUG - Processing time: 00.029
+2021-03-02 22:22:13.3016  INFO - Disconnected From:127.0.0.1:12044 Time: 2021-03-02 오후 10:22:13
+2021-03-02 22:22:33.6129 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-02 22:22:33.6338 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-02 22:22:33.6338  WARN - Starting DocConvert Server..
+2021-03-02 22:22:33.6338  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-02 22:22:33.6338  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-02 22:22:33.6338  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-02 22:22:33.6338  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-02 22:22:33.6338  INFO - User Name: JMKIM
+2021-03-02 22:22:33.6457  INFO - DocConvert Version: 2.0.7731.40274
+2021-03-02 22:22:33.6457  INFO - DocConvert PID: 6668
+2021-03-02 22:22:33.6457  INFO - DocConvert LogLevel: DEBUG
+2021-03-02 22:22:33.6457  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-02 22:22:33.6457  INFO - ------------ Parsing Ini File ------------
+2021-03-02 22:22:33.6457  INFO - - Bind IP: 0.0.0.0
+2021-03-02 22:22:33.6457  INFO - - Socket Port: 12000
+2021-03-02 22:22:33.6457  INFO - - Client KEY: 41974d93-caf9-4ff5-8926-b32c905fdedd
+2021-03-02 22:22:33.6608  INFO - - Workspace Directory: C:\workspace
+2021-03-02 22:22:33.6608  INFO - - Product Name: DocConvert
+2021-03-02 22:22:33.6608  INFO - - SchedulerTime: 1,0
+2021-03-02 22:22:33.6608  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-02 22:22:33.6608  INFO - - CleanWorkspaceDay: 3
+2021-03-02 22:22:33.6608  INFO - - CleanLogSchedulerYn: True
+2021-03-02 22:22:33.6608  INFO - - CleanLogDay: 7
+2021-03-02 22:22:33.6608  INFO - - DRM useYn: False
+2021-03-02 22:22:33.6608  INFO - ------------------------------------------
+2021-03-02 22:22:33.6608  INFO - Hangul DLL has been registered in the registry.
+2021-03-02 22:22:33.6608  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-02 22:22:33.6608 DEBUG - Workspace Cleanup Scheduler: 3days
+2021-03-02 22:22:33.6608 DEBUG - Log cleanup scheduler: 7days
+2021-03-02 22:22:33.6778  WARN - Next scheduler operation time: 2021-03-03 오전 1:00:00
+2021-03-02 22:22:33.6778  WARN - Cleanup scheduler is working
+2021-03-02 22:22:33.6778  WARN - DocConvert Server Started in 2021-03-02 10:22:33
+2021-03-02 22:22:37.6625  INFO - Connect Client From: 127.0.0.1:12046  Connection time: 2021-03-02 오후 10:22:37
+2021-03-02 22:22:37.7571 DEBUG - Received messages from 127.0.0.1:12046
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "1장.xlsx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:22:37.7571 DEBUG - Response messages to 127.0.0.1:12046
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:22:37.7571 DEBUG - Processing time: 00.032
+2021-03-02 22:22:37.7571  INFO - Disconnected From:127.0.0.1:12046 Time: 2021-03-02 오후 10:22:37
+2021-03-02 22:22:40.7648  INFO - Connect Client From: 127.0.0.1:12047  Connection time: 2021-03-02 오후 10:22:40
+2021-03-02 22:22:40.7648 DEBUG - Received messages from 127.0.0.1:12047
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "1장.xlsx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:22:40.7648 DEBUG - Response messages to 127.0.0.1:12047
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:22:40.7709 DEBUG - Processing time: 00.002
+2021-03-02 22:22:40.7709  INFO - Disconnected From:127.0.0.1:12047 Time: 2021-03-02 오후 10:22:40
+2021-03-02 22:22:40.9819  INFO - Connect Client From: 127.0.0.1:12048  Connection time: 2021-03-02 오후 10:22:40
+2021-03-02 22:22:40.9819 DEBUG - Received messages from 127.0.0.1:12048
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "1장.xlsx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:22:40.9819 DEBUG - Response messages to 127.0.0.1:12048
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:22:40.9819 DEBUG - Processing time: 00.001
+2021-03-02 22:22:40.9819  INFO - Disconnected From:127.0.0.1:12048 Time: 2021-03-02 오후 10:22:40
+2021-03-02 22:22:47.5940  INFO - Connect Client From: 127.0.0.1:12049  Connection time: 2021-03-02 오후 10:22:47
+2021-03-02 22:22:47.5940 DEBUG - Received messages from 127.0.0.1:12049
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작1.xlsx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:22:47.5940 DEBUG - Response messages to 127.0.0.1:12049
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:22:47.6000 DEBUG - Processing time: 00.003
+2021-03-02 22:22:47.6000  INFO - Disconnected From:127.0.0.1:12049 Time: 2021-03-02 오후 10:22:47
+2021-03-02 22:22:47.8515  INFO - Connect Client From: 127.0.0.1:12050  Connection time: 2021-03-02 오후 10:22:47
+2021-03-02 22:22:47.8515 DEBUG - Received messages from 127.0.0.1:12050
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작1.xlsx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:22:47.8515 DEBUG - Response messages to 127.0.0.1:12050
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:22:47.8515 DEBUG - Processing time: 00.003
+2021-03-02 22:22:47.8515  INFO - Disconnected From:127.0.0.1:12050 Time: 2021-03-02 오후 10:22:47
+2021-03-02 22:22:48.0295  INFO - Connect Client From: 127.0.0.1:12051  Connection time: 2021-03-02 오후 10:22:48
+2021-03-02 22:22:48.0295 DEBUG - Received messages from 127.0.0.1:12051
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작1.xlsx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:22:48.0295 DEBUG - Response messages to 127.0.0.1:12051
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:22:48.0295 DEBUG - Processing time: 00.002
+2021-03-02 22:22:48.0295  INFO - Disconnected From:127.0.0.1:12051 Time: 2021-03-02 오후 10:22:48
+2021-03-02 22:22:48.1740  INFO - Connect Client From: 127.0.0.1:12052  Connection time: 2021-03-02 오후 10:22:48
+2021-03-02 22:22:48.1851 DEBUG - Received messages from 127.0.0.1:12052
+{
+  "ClientKey": "",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작1.xlsx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:22:48.1851 DEBUG - Response messages to 127.0.0.1:12052
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-02 22:22:48.1851 DEBUG - Processing time: 00.011
+2021-03-02 22:22:48.1851  INFO - Disconnected From:127.0.0.1:12052 Time: 2021-03-02 오후 10:22:48
+2021-03-02 22:23:03.3914  INFO - Connect Client From: 127.0.0.1:12054  Connection time: 2021-03-02 오후 10:23:03
+2021-03-02 22:23:03.3914 DEBUG - Received messages from 127.0.0.1:12054
+{
+  "ClientKey": "41974d93-caf9-4ff5-8926-b32c905fdedd",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작1.xlsx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2021-03-02 22:23:03.4000 DEBUG - Method DocConvert Start ==>
+2021-03-02 22:23:03.4149 DEBUG - Initialized variable ========>
+2021-03-02 22:23:03.4149 DEBUG - workspacePath ===> C:\workspace
+2021-03-02 22:23:03.4149 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-02 22:23:03.4149 DEBUG - srcFile ===> C:\workspace\tmp\Excel 시작1.xlsx
+2021-03-02 22:23:03.4149 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210302\BFF0CED46552E55EEF1B895A83577D5F
+2021-03-02 22:23:03.4149 DEBUG - targetFile ===> C:\workspace\data\20210302\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1.xlsx
+2021-03-02 22:23:03.4149 DEBUG - =============================>
+2021-03-02 22:23:03.4149  INFO - Created DataTodayMD5Path Directory C:\workspace\data\20210302\BFF0CED46552E55EEF1B895A83577D5F
+2021-03-02 22:23:03.4285 DEBUG - C:\workspace\tmp\Excel 시작1.xlsx Move file to C:\workspace\data\20210302\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1.xlsx
+2021-03-02 22:23:03.4285 DEBUG - use DRM: False
+2021-03-02 22:23:15.5423 DEBUG - Response messages to 127.0.0.1:12054
+{
+  "FilePath": "/data/20210302/BFF0CED46552E55EEF1B895A83577D5F/Excel 시작1.pdf",
+  "PageCnt": 93,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2021-03-02 22:23:15.5423 DEBUG - Processing time: 12.149
+2021-03-02 22:23:15.5423  INFO - Disconnected From:127.0.0.1:12054 Time: 2021-03-02 오후 10:23:15

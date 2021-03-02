@@ -192,8 +192,8 @@ namespace DocConvert_Util
                 string data = Encoding.UTF8.GetString(receiverBuff, 0, bytesRec);
                 outputText("Recive Data\r\n" + data);
 
-                sock.Shutdown(SocketShutdown.Both);
-                sock.Close();
+                sock.Shutdown(SocketShutdown.Receive);
+                //sock.Close();
             } catch(Exception e1)
             {
                 outputText(e1.Message);
