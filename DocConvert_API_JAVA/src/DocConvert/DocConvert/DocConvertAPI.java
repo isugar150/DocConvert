@@ -1,5 +1,6 @@
 package DocConvert;
 
+import com.sun.corba.se.spi.orbutil.fsm.Input;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
@@ -57,12 +58,29 @@ public class DocConvertAPI {
     }
 
     public static void main(String args[]){
-        String clientKey = "c0cd4954-d586-4e2e-b561-9fa5b9139d11";
+        String clientKey = "c8d959df-226d-4860-bfab-8a75342feb10";
         DocConvertAPI docapi = new DocConvertAPI("127.0.0.1", 12000, 60000, clientKey);
+        String fileName = "0_1_A4A99D04196229EDEEFCE02EF2FECEA5.pptx";
         try {
-            System.out.println(docapi.DocConvert("test.docx", 2, "", "n", ""));
+            copyFile("C:\\Users\\JMKIM\\Documents\\Document\\doc\\" + fileName, "C:\\workspace\\tmp\\" + fileName);
+            System.out.println(docapi.DocConvert(fileName, 2, "", "n", ""));
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static void copyFile(String _srcFile, String _targetFile) throws IOException{
+        File srcFile = new File(_srcFile);
+        File targetFile = new File(_targetFile);
+
+        FileInputStream in = new FileInputStream(srcFile);
+        FileOutputStream out = new FileOutputStream(targetFile);
+
+        int fileByte = 0;
+        while((fileByte = in.read()) != -1){
+            out.write(fileByte);
+        }
+        in.close();
+        out.close();
     }
 }

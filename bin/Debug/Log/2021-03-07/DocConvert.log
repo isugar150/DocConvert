@@ -98,3 +98,819 @@
 2021-03-07 12:29:41.3477  WARN - Starting DocConvert Server..
 2021-03-07 12:29:41.3703  WARN - Socket Server Listen On 0.0.0.0:12000
 2021-03-07 12:29:41.3703  WARN - DocConvert Server Started in 2021-03-07 12:29:41
+2021-03-07 12:51:55.3761 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-07 12:51:55.4072 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-07 12:51:55.4072  WARN - Starting DocConvert Server..
+2021-03-07 12:51:55.4101  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-07 12:51:55.4101  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-07 12:51:55.4101  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-07 12:51:55.4101  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-07 12:51:55.4101  INFO - User Name: JMKIM
+2021-03-07 12:51:55.4101  INFO - DocConvert Version: 2.0.7736.23156
+2021-03-07 12:51:55.4101  INFO - DocConvert PID: 14836
+2021-03-07 12:51:55.4101  INFO - DocConvert LogLevel: DEBUG
+2021-03-07 12:51:55.4101  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-07 12:51:55.4101  INFO - ------------ Parsing Ini File ------------
+2021-03-07 12:51:55.4295  INFO - - Bind IP: 0.0.0.0
+2021-03-07 12:51:55.4295  INFO - - Socket Port: 12000
+2021-03-07 12:51:55.4295  INFO - - Client KEY: c8d959df-226d-4860-bfab-8a75342feb10
+2021-03-07 12:51:55.4295  INFO - - Workspace Directory: C:\workspace
+2021-03-07 12:51:55.4295  INFO - - Product Name: DocConvert
+2021-03-07 12:51:55.4295  INFO - - SchedulerTime: 1,0
+2021-03-07 12:51:55.4295  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-07 12:51:55.4410  INFO - - CleanWorkspaceDay: 3
+2021-03-07 12:51:55.4410  INFO - - CleanLogSchedulerYn: True
+2021-03-07 12:51:55.4410  INFO - - CleanLogDay: 7
+2021-03-07 12:51:55.4410  INFO - - DRM useYn: False
+2021-03-07 12:51:55.4410  INFO - ------------------------------------------
+2021-03-07 12:51:55.4410  INFO - Hangul DLL has been registered in the registry.
+2021-03-07 12:51:55.4410  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-07 12:51:55.4576  INFO - ============ [Scheduler] ============
+2021-03-07 12:51:55.4576  INFO - Next scheduler operation time: 2021-03-08 01:00
+2021-03-07 12:51:55.4576  INFO - If the workspace last modified date is past 2021-03-05 01:00
+2021-03-07 12:51:55.4576  INFO - If the log last modified date is past 2021-03-01 01:00
+2021-03-07 12:51:55.4576  INFO - =====================================
+2021-03-07 12:51:55.4576  INFO - Cleanup scheduler is working
+2021-03-07 12:51:55.4576  WARN - DocConvert Server Started in 2021-03-07 12:51:55
+2021-03-07 13:00:47.1484  INFO - Connect Client From: 127.0.0.1:9022  Connection time: 2021-03-07 오후 1:00:47
+2021-03-07 13:00:47.2573 DEBUG - Received messages from 127.0.0.1:9022
+{
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "test.docx",
+  "ConvertImg": 2,
+  "DRM_Type": "",
+  "ClientKey": "c0cd4954-d586-4e2e-b561-9fa5b9139d11"
+}
+2021-03-07 13:00:47.2573 DEBUG - Response messages to 127.0.0.1:9022
+{
+  "ResultCode": "1005",
+  "Message": "Invalid Client Key"
+}
+2021-03-07 13:00:47.2573 DEBUG - Processing time: 00.043
+2021-03-07 13:00:47.2573  INFO - Disconnected From:127.0.0.1:9022 Time: 2021-03-07 오후 1:00:47
+2021-03-07 13:01:23.5997  INFO - Connect Client From: 127.0.0.1:9039  Connection time: 2021-03-07 오후 1:01:23
+2021-03-07 13:01:23.5997 DEBUG - Received messages from 127.0.0.1:9039
+{
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "test.docx",
+  "ConvertImg": 2,
+  "DRM_Type": "",
+  "ClientKey": "c8d959df-226d-4860-bfab-8a75342feb10"
+}
+2021-03-07 13:01:23.6593 DEBUG - Method DocConvert Start ==>
+2021-03-07 13:01:23.7122 ERROR - ERROR CODE: 1000
+2021-03-07 13:01:23.7122 ERROR - ERROR MESSAGE: 'C:\workspace\tmp\test.docx' 파일을 찾을 수 없습니다.
+2021-03-07 13:01:23.7244 ERROR - ERROR STACKTRACE
+   위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   위치: System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   위치: System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   위치: System.IO.File.OpenFile(String path, FileAccess access, SafeFileHandle& handle)
+   위치: System.IO.File.SetCreationTimeUtc(String path, DateTime creationTimeUtc)
+   위치: System.IO.FileSystemInfo.set_CreationTimeUtc(DateTime value)
+   위치: System.IO.FileSystemInfo.set_CreationTime(DateTime value)
+   위치: DocConvert.Flow.DocConvert._DocConvert(String fileName, String docPassword, Int32 convertImg, String drmUseYn, String drmType)
+   위치: DocConvert.Network.Client.Client_Completed(Object sender, SocketAsyncEventArgs e)
+2021-03-07 13:01:23.7244 DEBUG - Processing time: 00.121
+2021-03-07 13:01:23.7244  INFO - Disconnected From:127.0.0.1:9039 Time: 2021-03-07 오후 1:01:23
+2021-03-07 13:01:58.3960  INFO - Connect Client From: 127.0.0.1:9054  Connection time: 2021-03-07 오후 1:01:58
+2021-03-07 13:01:58.3960 DEBUG - Received messages from 127.0.0.1:9054
+{
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "PowerPoint 시작.pptx",
+  "ConvertImg": 2,
+  "DRM_Type": "",
+  "ClientKey": "c8d959df-226d-4860-bfab-8a75342feb10"
+}
+2021-03-07 13:01:58.3960 DEBUG - Method DocConvert Start ==>
+2021-03-07 13:01:58.4320 DEBUG - Initialized variable ========>
+2021-03-07 13:01:58.4320 DEBUG - workspacePath ===> C:\workspace
+2021-03-07 13:01:58.4320 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-07 13:01:58.4320 DEBUG - srcFile ===> C:\workspace\tmp\PowerPoint 시작.pptx
+2021-03-07 13:01:58.4320 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210307\AF49679A99A8C8C83F1F34955CF43346
+2021-03-07 13:01:58.4406 DEBUG - targetFile ===> C:\workspace\data\20210307\AF49679A99A8C8C83F1F34955CF43346\PowerPoint 시작.pptx
+2021-03-07 13:01:58.4406 DEBUG - =============================>
+2021-03-07 13:01:58.4406  INFO - Created DataTodayMD5Path Directory C:\workspace\data\20210307\AF49679A99A8C8C83F1F34955CF43346
+2021-03-07 13:01:58.4406 DEBUG - C:\workspace\tmp\PowerPoint 시작.pptx Move file to C:\workspace\data\20210307\AF49679A99A8C8C83F1F34955CF43346\PowerPoint 시작.pptx
+2021-03-07 13:01:58.4406 DEBUG - use DRM: False
+2021-03-07 13:02:03.5172 DEBUG - Response messages to 127.0.0.1:9054
+{
+  "FilePath": "/data/20210307/AF49679A99A8C8C83F1F34955CF43346/PowerPoint 시작.zip",
+  "PageCnt": 9,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2021-03-07 13:02:03.5191 DEBUG - Processing time: 05.116
+2021-03-07 13:02:03.5191  INFO - Disconnected From:127.0.0.1:9054 Time: 2021-03-07 오후 1:02:03
+2021-03-07 13:03:10.9458  INFO - Connect Client From: 127.0.0.1:13428  Connection time: 2021-03-07 오후 1:03:10
+2021-03-07 13:03:10.9458 DEBUG - Received messages from 127.0.0.1:13428
+{
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작1.xlsx",
+  "ConvertImg": 2,
+  "DRM_Type": "",
+  "ClientKey": "c8d959df-226d-4860-bfab-8a75342feb10"
+}
+2021-03-07 13:03:10.9458 DEBUG - Method DocConvert Start ==>
+2021-03-07 13:03:10.9651 DEBUG - Initialized variable ========>
+2021-03-07 13:03:10.9651 DEBUG - workspacePath ===> C:\workspace
+2021-03-07 13:03:10.9651 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-07 13:03:10.9651 DEBUG - srcFile ===> C:\workspace\tmp\Excel 시작1.xlsx
+2021-03-07 13:03:10.9734 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210307\BFF0CED46552E55EEF1B895A83577D5F
+2021-03-07 13:03:10.9734 DEBUG - targetFile ===> C:\workspace\data\20210307\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1.xlsx
+2021-03-07 13:03:10.9734 DEBUG - =============================>
+2021-03-07 13:03:10.9734  INFO - Created DataTodayMD5Path Directory C:\workspace\data\20210307\BFF0CED46552E55EEF1B895A83577D5F
+2021-03-07 13:03:10.9734 DEBUG - C:\workspace\tmp\Excel 시작1.xlsx Move file to C:\workspace\data\20210307\BFF0CED46552E55EEF1B895A83577D5F\Excel 시작1.xlsx
+2021-03-07 13:03:10.9734 DEBUG - use DRM: False
+2021-03-07 13:03:27.4108 DEBUG - Response messages to 127.0.0.1:13428
+{
+  "FilePath": "/data/20210307/BFF0CED46552E55EEF1B895A83577D5F/Excel 시작1.zip",
+  "PageCnt": 92,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2021-03-07 13:03:27.4108 DEBUG - Processing time: 16.462
+2021-03-07 13:03:27.4108  INFO - Disconnected From:127.0.0.1:13428 Time: 2021-03-07 오후 1:03:27
+2021-03-07 13:04:19.4015 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-07 13:04:19.4258 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-07 13:04:19.4258  WARN - Starting DocConvert Server..
+2021-03-07 13:04:19.4258  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-07 13:04:19.4258  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-07 13:04:19.4258  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-07 13:04:19.4258  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-07 13:04:19.4258  INFO - User Name: JMKIM
+2021-03-07 13:04:19.4258  INFO - DocConvert Version: 2.0.7736.23529
+2021-03-07 13:04:19.4258  INFO - DocConvert PID: 14568
+2021-03-07 13:04:19.4408  INFO - DocConvert LogLevel: DEBUG
+2021-03-07 13:04:19.4408  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-07 13:04:19.4408  INFO - ------------ Parsing Ini File ------------
+2021-03-07 13:04:19.4408  INFO - - Bind IP: 0.0.0.0
+2021-03-07 13:04:19.4408  INFO - - Socket Port: 12000
+2021-03-07 13:04:19.4408  INFO - - Client KEY: c8d959df-226d-4860-bfab-8a75342feb10
+2021-03-07 13:04:19.4572  INFO - - Workspace Directory: C:\workspace
+2021-03-07 13:04:19.4572  INFO - - Product Name: DocConvert
+2021-03-07 13:04:19.4572  INFO - - SchedulerTime: 1,0
+2021-03-07 13:04:19.4572  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-07 13:04:19.4572  INFO - - CleanWorkspaceDay: 3
+2021-03-07 13:04:19.4572  INFO - - CleanLogSchedulerYn: True
+2021-03-07 13:04:19.4572  INFO - - CleanLogDay: 7
+2021-03-07 13:04:19.4572  INFO - - DRM useYn: False
+2021-03-07 13:04:19.4572  INFO - ------------------------------------------
+2021-03-07 13:04:19.4721  INFO - Hangul DLL has been registered in the registry.
+2021-03-07 13:04:19.4721  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-07 13:04:19.5041  INFO - ============ [Scheduler] ============
+2021-03-07 13:04:19.5041  INFO - Next scheduler operation time: 2021-03-08 01:00
+2021-03-07 13:04:19.5041  INFO - If the workspace last modified date is past 2021-03-05 01:00
+2021-03-07 13:04:19.5041  INFO - If the log last modified date is past 2021-03-01 01:00
+2021-03-07 13:04:19.5041  INFO - =====================================
+2021-03-07 13:04:19.5041  INFO - Cleanup scheduler is working
+2021-03-07 13:04:19.5041  WARN - DocConvert Server Started in 2021-03-07 13:04:19
+2021-03-07 13:04:44.7288  INFO - Connect Client From: 127.0.0.1:13462  Connection time: 2021-03-07 오후 1:04:44
+2021-03-07 13:04:44.8092 DEBUG - Received messages from 127.0.0.1:13462
+{
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "Word 시작.docx",
+  "ConvertImg": 2,
+  "DRM_Type": "",
+  "ClientKey": "c8d959df-226d-4860-bfab-8a75342feb10"
+}
+2021-03-07 13:04:44.8250 DEBUG - Method DocConvert Start ==>
+2021-03-07 13:04:44.8428 DEBUG - Initialized variable ========>
+2021-03-07 13:04:44.8428 DEBUG - workspacePath ===> C:\workspace
+2021-03-07 13:04:44.8428 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-07 13:04:44.8485 DEBUG - srcFile ===> C:\workspace\tmp\Word 시작.docx
+2021-03-07 13:04:44.8485 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210307\0452378B72766F4FD0EE9110A9975F6B
+2021-03-07 13:04:44.8485 DEBUG - targetFile ===> C:\workspace\data\20210307\0452378B72766F4FD0EE9110A9975F6B\Word 시작.docx
+2021-03-07 13:04:44.8485 DEBUG - =============================>
+2021-03-07 13:04:44.8652 DEBUG - Created DataTodayMD5Path Directory C:\workspace\data\20210307\0452378B72766F4FD0EE9110A9975F6B
+2021-03-07 13:04:44.8652 DEBUG - C:\workspace\tmp\Word 시작.docx Move file to C:\workspace\data\20210307\0452378B72766F4FD0EE9110A9975F6B\Word 시작.docx
+2021-03-07 13:04:44.8652 DEBUG - use DRM: False
+2021-03-07 13:04:49.8597 DEBUG - Response messages to 127.0.0.1:13462
+{
+  "FilePath": "/data/20210307/0452378B72766F4FD0EE9110A9975F6B/Word 시작.zip",
+  "PageCnt": 8,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2021-03-07 13:04:49.8597 DEBUG - Processing time: 05.079
+2021-03-07 13:04:49.8676  INFO - Disconnected From:127.0.0.1:13462 Time: 2021-03-07 오후 1:04:49
+2021-03-07 13:05:57.4908  INFO - Connect Client From: 127.0.0.1:13483  Connection time: 2021-03-07 오후 1:05:57
+2021-03-07 13:05:57.4908 DEBUG - Received messages from 127.0.0.1:13483
+{
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertImg": 2,
+  "DRM_Type": "",
+  "ClientKey": "c8d959df-226d-4860-bfab-8a75342feb10"
+}
+2021-03-07 13:05:57.4908 DEBUG - Method DocConvert Start ==>
+2021-03-07 13:05:57.5086 DEBUG - Initialized variable ========>
+2021-03-07 13:05:57.5086 DEBUG - workspacePath ===> C:\workspace
+2021-03-07 13:05:57.5086 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-07 13:05:57.5086 DEBUG - srcFile ===> C:\workspace\tmp\Welcome to Hwp.hwp
+2021-03-07 13:05:57.5086 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210307\2B699FCE2A5094957B24445F97FCE8CC
+2021-03-07 13:05:57.5196 DEBUG - targetFile ===> C:\workspace\data\20210307\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp
+2021-03-07 13:05:57.5196 DEBUG - =============================>
+2021-03-07 13:05:57.5196 DEBUG - Created DataTodayMD5Path Directory C:\workspace\data\20210307\2B699FCE2A5094957B24445F97FCE8CC
+2021-03-07 13:05:57.5196 DEBUG - C:\workspace\tmp\Welcome to Hwp.hwp Move file to C:\workspace\data\20210307\2B699FCE2A5094957B24445F97FCE8CC\Welcome to Hwp.hwp
+2021-03-07 13:05:57.5196 DEBUG - use DRM: False
+2021-03-07 13:06:03.9560 DEBUG - Response messages to 127.0.0.1:13483
+{
+  "FilePath": "/data/20210307/2B699FCE2A5094957B24445F97FCE8CC/Welcome to Hwp.zip",
+  "PageCnt": 5,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2021-03-07 13:06:03.9560 DEBUG - Processing time: 06.463
+2021-03-07 13:06:03.9560  INFO - Disconnected From:127.0.0.1:13483 Time: 2021-03-07 오후 1:06:03
+2021-03-07 13:15:20.4547  INFO - Connect Client From: 127.0.0.1:13557  Connection time: 2021-03-07 오후 1:15:20
+2021-03-07 13:15:20.4607 DEBUG - Received messages from 127.0.0.1:13557
+{
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertImg": 2,
+  "DRM_Type": "",
+  "ClientKey": "c8d959df-226d-4860-bfab-8a75342feb10"
+}
+2021-03-07 13:15:20.4607 DEBUG - Method DocConvert Start ==>
+2021-03-07 13:15:20.4934 ERROR - ERROR CODE: 1000
+2021-03-07 13:15:20.4934 ERROR - ERROR MESSAGE: 'C:\workspace\tmp\Welcome to Hwp.hwp' 파일을 찾을 수 없습니다.
+2021-03-07 13:15:20.5050 ERROR - ERROR STACKTRACE
+   위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   위치: System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   위치: System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   위치: System.IO.File.OpenFile(String path, FileAccess access, SafeFileHandle& handle)
+   위치: System.IO.File.SetCreationTimeUtc(String path, DateTime creationTimeUtc)
+   위치: System.IO.FileSystemInfo.set_CreationTimeUtc(DateTime value)
+   위치: System.IO.FileSystemInfo.set_CreationTime(DateTime value)
+   위치: DocConvert.Flow.DocConvert._DocConvert(String fileName, String docPassword, Int32 convertImg, String drmUseYn, String drmType)
+   위치: DocConvert.Network.Client.Client_Completed(Object sender, SocketAsyncEventArgs e)
+2021-03-07 13:15:20.5050 DEBUG - Processing time: 00.048
+2021-03-07 13:15:20.5050  INFO - Disconnected From:127.0.0.1:13557 Time: 2021-03-07 오후 1:15:20
+2021-03-07 13:15:36.3074  INFO - Connect Client From: 127.0.0.1:13570  Connection time: 2021-03-07 오후 1:15:36
+2021-03-07 13:15:36.3153 DEBUG - Received messages from 127.0.0.1:13570
+{
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "0_1_0F4ABF5CE25B8F453020CE3A521FC51A.docx",
+  "ConvertImg": 2,
+  "DRM_Type": "",
+  "ClientKey": "c8d959df-226d-4860-bfab-8a75342feb10"
+}
+2021-03-07 13:15:36.3153 DEBUG - Method DocConvert Start ==>
+2021-03-07 13:15:36.3153 DEBUG - Initialized variable ========>
+2021-03-07 13:15:36.3153 DEBUG - workspacePath ===> C:\workspace
+2021-03-07 13:15:36.3153 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-07 13:15:36.3316 DEBUG - srcFile ===> C:\workspace\tmp\0_1_0F4ABF5CE25B8F453020CE3A521FC51A.docx
+2021-03-07 13:15:36.3316 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210307\0156A737EB7335B733CE8738859B3FF5
+2021-03-07 13:15:36.3316 DEBUG - targetFile ===> C:\workspace\data\20210307\0156A737EB7335B733CE8738859B3FF5\0_1_0F4ABF5CE25B8F453020CE3A521FC51A.docx
+2021-03-07 13:15:36.3316 DEBUG - =============================>
+2021-03-07 13:15:36.3316 DEBUG - Created DataTodayMD5Path Directory C:\workspace\data\20210307\0156A737EB7335B733CE8738859B3FF5
+2021-03-07 13:15:36.3316 DEBUG - C:\workspace\tmp\0_1_0F4ABF5CE25B8F453020CE3A521FC51A.docx Move file to C:\workspace\data\20210307\0156A737EB7335B733CE8738859B3FF5\0_1_0F4ABF5CE25B8F453020CE3A521FC51A.docx
+2021-03-07 13:15:36.3316 DEBUG - use DRM: False
+2021-03-07 13:15:41.6794 DEBUG - Response messages to 127.0.0.1:13570
+{
+  "FilePath": "/data/20210307/0156A737EB7335B733CE8738859B3FF5/0_1_0F4ABF5CE25B8F453020CE3A521FC51A.zip",
+  "PageCnt": 8,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2021-03-07 13:15:41.6794 DEBUG - Processing time: 05.366
+2021-03-07 13:15:41.6794  INFO - Disconnected From:127.0.0.1:13570 Time: 2021-03-07 오후 1:15:41
+2021-03-07 13:15:58.3473  INFO - Connect Client From: 127.0.0.1:13586  Connection time: 2021-03-07 오후 1:15:58
+2021-03-07 13:15:58.3473 DEBUG - Received messages from 127.0.0.1:13586
+{
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "0_1_0FC5D3FEC1E1A1B2EF8821A30ABC6510.hwp",
+  "ConvertImg": 2,
+  "DRM_Type": "",
+  "ClientKey": "c8d959df-226d-4860-bfab-8a75342feb10"
+}
+2021-03-07 13:15:58.3473 DEBUG - Method DocConvert Start ==>
+2021-03-07 13:15:58.3625 DEBUG - Initialized variable ========>
+2021-03-07 13:15:58.3625 DEBUG - workspacePath ===> C:\workspace
+2021-03-07 13:15:58.3625 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-07 13:15:58.3625 DEBUG - srcFile ===> C:\workspace\tmp\0_1_0FC5D3FEC1E1A1B2EF8821A30ABC6510.hwp
+2021-03-07 13:15:58.3625 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210307\7D2686E0045E4C7F9FA39B5300CC2EEF
+2021-03-07 13:15:58.3625 DEBUG - targetFile ===> C:\workspace\data\20210307\7D2686E0045E4C7F9FA39B5300CC2EEF\0_1_0FC5D3FEC1E1A1B2EF8821A30ABC6510.hwp
+2021-03-07 13:15:58.3625 DEBUG - =============================>
+2021-03-07 13:15:58.3625 DEBUG - Created DataTodayMD5Path Directory C:\workspace\data\20210307\7D2686E0045E4C7F9FA39B5300CC2EEF
+2021-03-07 13:15:58.3816 DEBUG - C:\workspace\tmp\0_1_0FC5D3FEC1E1A1B2EF8821A30ABC6510.hwp Move file to C:\workspace\data\20210307\7D2686E0045E4C7F9FA39B5300CC2EEF\0_1_0FC5D3FEC1E1A1B2EF8821A30ABC6510.hwp
+2021-03-07 13:15:58.3816 DEBUG - use DRM: False
+2021-03-07 13:16:00.2743 DEBUG - Response messages to 127.0.0.1:13586
+{
+  "FilePath": "/data/20210307/7D2686E0045E4C7F9FA39B5300CC2EEF/0_1_0FC5D3FEC1E1A1B2EF8821A30ABC6510.zip",
+  "PageCnt": 5,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2021-03-07 13:16:00.2743 DEBUG - Processing time: 01.924
+2021-03-07 13:16:00.2743  INFO - Disconnected From:127.0.0.1:13586 Time: 2021-03-07 오후 1:16:00
+2021-03-07 13:16:12.5994  INFO - Connect Client From: 127.0.0.1:13599  Connection time: 2021-03-07 오후 1:16:12
+2021-03-07 13:16:12.5994 DEBUG - Received messages from 127.0.0.1:13599
+{
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "0_1_2B0F695C4D95C120ECA6BF05EF8F5F98.docx",
+  "ConvertImg": 2,
+  "DRM_Type": "",
+  "ClientKey": "c8d959df-226d-4860-bfab-8a75342feb10"
+}
+2021-03-07 13:16:12.5994 DEBUG - Method DocConvert Start ==>
+2021-03-07 13:16:12.6137 DEBUG - Initialized variable ========>
+2021-03-07 13:16:12.6137 DEBUG - workspacePath ===> C:\workspace
+2021-03-07 13:16:12.6137 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-07 13:16:12.6137 DEBUG - srcFile ===> C:\workspace\tmp\0_1_2B0F695C4D95C120ECA6BF05EF8F5F98.docx
+2021-03-07 13:16:12.6137 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210307\243D3FE4D0D4594EACF0995A30DEA3E6
+2021-03-07 13:16:12.6137 DEBUG - targetFile ===> C:\workspace\data\20210307\243D3FE4D0D4594EACF0995A30DEA3E6\0_1_2B0F695C4D95C120ECA6BF05EF8F5F98.docx
+2021-03-07 13:16:12.6137 DEBUG - =============================>
+2021-03-07 13:16:12.6291 DEBUG - Created DataTodayMD5Path Directory C:\workspace\data\20210307\243D3FE4D0D4594EACF0995A30DEA3E6
+2021-03-07 13:16:12.6291 DEBUG - C:\workspace\tmp\0_1_2B0F695C4D95C120ECA6BF05EF8F5F98.docx Move file to C:\workspace\data\20210307\243D3FE4D0D4594EACF0995A30DEA3E6\0_1_2B0F695C4D95C120ECA6BF05EF8F5F98.docx
+2021-03-07 13:16:12.6291 DEBUG - use DRM: False
+2021-03-07 13:16:15.3252 DEBUG - Response messages to 127.0.0.1:13599
+{
+  "FilePath": "/data/20210307/243D3FE4D0D4594EACF0995A30DEA3E6/0_1_2B0F695C4D95C120ECA6BF05EF8F5F98.zip",
+  "PageCnt": 1,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2021-03-07 13:16:15.3252 DEBUG - Processing time: 02.723
+2021-03-07 13:16:15.3252  INFO - Disconnected From:127.0.0.1:13599 Time: 2021-03-07 오후 1:16:15
+2021-03-07 13:16:27.4535  INFO - Connect Client From: 127.0.0.1:13617  Connection time: 2021-03-07 오후 1:16:27
+2021-03-07 13:16:27.4583 DEBUG - Received messages from 127.0.0.1:13617
+{
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "0_1_3BE374CB580ECAF0273A940F05DC4C40.pptx",
+  "ConvertImg": 2,
+  "DRM_Type": "",
+  "ClientKey": "c8d959df-226d-4860-bfab-8a75342feb10"
+}
+2021-03-07 13:16:27.4583 DEBUG - Method DocConvert Start ==>
+2021-03-07 13:16:27.7474 DEBUG - Initialized variable ========>
+2021-03-07 13:16:27.7474 DEBUG - workspacePath ===> C:\workspace
+2021-03-07 13:16:27.7474 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-07 13:16:27.7549 DEBUG - srcFile ===> C:\workspace\tmp\0_1_3BE374CB580ECAF0273A940F05DC4C40.pptx
+2021-03-07 13:16:27.7549 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210307\D66F5EF27DE6515E19363FA9AD778B29
+2021-03-07 13:16:27.7549 DEBUG - targetFile ===> C:\workspace\data\20210307\D66F5EF27DE6515E19363FA9AD778B29\0_1_3BE374CB580ECAF0273A940F05DC4C40.pptx
+2021-03-07 13:16:27.7549 DEBUG - =============================>
+2021-03-07 13:16:27.7549 DEBUG - Created DataTodayMD5Path Directory C:\workspace\data\20210307\D66F5EF27DE6515E19363FA9AD778B29
+2021-03-07 13:16:27.7691 DEBUG - C:\workspace\tmp\0_1_3BE374CB580ECAF0273A940F05DC4C40.pptx Move file to C:\workspace\data\20210307\D66F5EF27DE6515E19363FA9AD778B29\0_1_3BE374CB580ECAF0273A940F05DC4C40.pptx
+2021-03-07 13:16:27.7691 DEBUG - use DRM: False
+2021-03-07 13:16:32.8253 DEBUG - Response messages to 127.0.0.1:13617
+{
+  "FilePath": "/data/20210307/D66F5EF27DE6515E19363FA9AD778B29/0_1_3BE374CB580ECAF0273A940F05DC4C40.zip",
+  "PageCnt": 11,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2021-03-07 13:16:32.8253 DEBUG - Processing time: 05.372
+2021-03-07 13:16:32.8253  INFO - Disconnected From:127.0.0.1:13617 Time: 2021-03-07 오후 1:16:32
+2021-03-07 13:16:57.4828  INFO - Connect Client From: 127.0.0.1:13634  Connection time: 2021-03-07 오후 1:16:57
+2021-03-07 13:16:57.4912 DEBUG - Received messages from 127.0.0.1:13634
+{
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "0_1_6D37D13D49D99E23A45D1CF343B5817A.pptx",
+  "ConvertImg": 2,
+  "DRM_Type": "",
+  "ClientKey": "c8d959df-226d-4860-bfab-8a75342feb10"
+}
+2021-03-07 13:16:57.4912 DEBUG - Method DocConvert Start ==>
+2021-03-07 13:16:57.5115 DEBUG - Initialized variable ========>
+2021-03-07 13:16:57.5115 DEBUG - workspacePath ===> C:\workspace
+2021-03-07 13:16:57.5115 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-07 13:16:57.5115 DEBUG - srcFile ===> C:\workspace\tmp\0_1_6D37D13D49D99E23A45D1CF343B5817A.pptx
+2021-03-07 13:16:57.5115 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210307\0105146987803D3A5CCCC8A339CC6906
+2021-03-07 13:16:57.5196 DEBUG - targetFile ===> C:\workspace\data\20210307\0105146987803D3A5CCCC8A339CC6906\0_1_6D37D13D49D99E23A45D1CF343B5817A.pptx
+2021-03-07 13:16:57.5196 DEBUG - =============================>
+2021-03-07 13:16:57.5340 DEBUG - Created DataTodayMD5Path Directory C:\workspace\data\20210307\0105146987803D3A5CCCC8A339CC6906
+2021-03-07 13:16:57.5340 DEBUG - C:\workspace\tmp\0_1_6D37D13D49D99E23A45D1CF343B5817A.pptx Move file to C:\workspace\data\20210307\0105146987803D3A5CCCC8A339CC6906\0_1_6D37D13D49D99E23A45D1CF343B5817A.pptx
+2021-03-07 13:16:57.5340 DEBUG - use DRM: False
+2021-03-07 13:17:06.7498 DEBUG - Response messages to 127.0.0.1:13634
+{
+  "FilePath": "/data/20210307/0105146987803D3A5CCCC8A339CC6906/0_1_6D37D13D49D99E23A45D1CF343B5817A.zip",
+  "PageCnt": 143,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2021-03-07 13:17:06.7543 DEBUG - Processing time: 09.263
+2021-03-07 13:17:06.7543  INFO - Disconnected From:127.0.0.1:13634 Time: 2021-03-07 오후 1:17:06
+2021-03-07 13:18:28.1003  INFO - Connect Client From: 127.0.0.1:13654  Connection time: 2021-03-07 오후 1:18:28
+2021-03-07 13:18:28.1003 DEBUG - Received messages from 127.0.0.1:13654
+{
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "0_1_49B9855F8D1771C7CE137B93491DF8A6.pptx",
+  "ConvertImg": 2,
+  "DRM_Type": "",
+  "ClientKey": "c8d959df-226d-4860-bfab-8a75342feb10"
+}
+2021-03-07 13:18:28.1003 DEBUG - Method DocConvert Start ==>
+2021-03-07 13:18:28.1675 DEBUG - Initialized variable ========>
+2021-03-07 13:18:28.1675 DEBUG - workspacePath ===> C:\workspace
+2021-03-07 13:18:28.1675 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-07 13:18:28.1757 DEBUG - srcFile ===> C:\workspace\tmp\0_1_49B9855F8D1771C7CE137B93491DF8A6.pptx
+2021-03-07 13:18:28.1757 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210307\066A3DA69804BEA08545FB5695E7124D
+2021-03-07 13:18:28.1757 DEBUG - targetFile ===> C:\workspace\data\20210307\066A3DA69804BEA08545FB5695E7124D\0_1_49B9855F8D1771C7CE137B93491DF8A6.pptx
+2021-03-07 13:18:28.1757 DEBUG - =============================>
+2021-03-07 13:18:28.1757 DEBUG - Created DataTodayMD5Path Directory C:\workspace\data\20210307\066A3DA69804BEA08545FB5695E7124D
+2021-03-07 13:18:28.1926 DEBUG - C:\workspace\tmp\0_1_49B9855F8D1771C7CE137B93491DF8A6.pptx Move file to C:\workspace\data\20210307\066A3DA69804BEA08545FB5695E7124D\0_1_49B9855F8D1771C7CE137B93491DF8A6.pptx
+2021-03-07 13:18:28.1926 DEBUG - use DRM: False
+2021-03-07 13:18:53.1106 DEBUG - Response messages to 127.0.0.1:13654
+{
+  "FilePath": "/data/20210307/066A3DA69804BEA08545FB5695E7124D/0_1_49B9855F8D1771C7CE137B93491DF8A6.zip",
+  "PageCnt": 100,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2021-03-07 13:18:53.1131 DEBUG - Processing time: 25.006
+2021-03-07 13:18:53.1131  INFO - Disconnected From:127.0.0.1:13654 Time: 2021-03-07 오후 1:18:53
+2021-03-07 13:20:43.8280 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-07 13:20:43.8592 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-07 13:20:43.8592  WARN - Starting DocConvert Server..
+2021-03-07 13:20:43.8621  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-07 13:20:43.8621  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-07 13:20:43.8621  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-07 13:20:43.8621  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-07 13:20:43.8621  INFO - User Name: JMKIM
+2021-03-07 13:20:43.8621  INFO - DocConvert Version: 2.0.7736.23529
+2021-03-07 13:20:43.8621  INFO - DocConvert PID: 7408
+2021-03-07 13:20:43.8621  INFO - DocConvert LogLevel: DEBUG
+2021-03-07 13:20:43.8621  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-07 13:20:43.8621  INFO - ------------ Parsing Ini File ------------
+2021-03-07 13:20:43.8852  INFO - - Bind IP: 0.0.0.0
+2021-03-07 13:20:43.8852  INFO - - Socket Port: 12000
+2021-03-07 13:20:43.8852  INFO - - Client KEY: c8d959df-226d-4860-bfab-8a75342feb10
+2021-03-07 13:20:43.8852  INFO - - Workspace Directory: C:\workspace
+2021-03-07 13:20:43.8852  INFO - - Product Name: DocConvert
+2021-03-07 13:20:43.8852  INFO - - SchedulerTime: 1,0
+2021-03-07 13:20:43.8952  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-07 13:20:43.8952  INFO - - CleanWorkspaceDay: 3
+2021-03-07 13:20:43.8952  INFO - - CleanLogSchedulerYn: True
+2021-03-07 13:20:43.8952  INFO - - CleanLogDay: 7
+2021-03-07 13:20:43.9117  INFO - - DRM useYn: False
+2021-03-07 13:20:43.9117  INFO - ------------------------------------------
+2021-03-07 13:20:43.9117  INFO - Hangul DLL has been registered in the registry.
+2021-03-07 13:20:43.9117  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-07 13:20:43.9117  INFO - ============ [Scheduler] ============
+2021-03-07 13:20:43.9117  INFO - Next scheduler operation time: 2021-03-08 01:00
+2021-03-07 13:20:43.9338  INFO - If the workspace last modified date is past 2021-03-05 01:00
+2021-03-07 13:20:43.9338  INFO - If the log last modified date is past 2021-03-01 01:00
+2021-03-07 13:20:43.9689  INFO - =====================================
+2021-03-07 13:20:43.9689  INFO - Cleanup scheduler is working
+2021-03-07 13:20:43.9742  WARN - DocConvert Server Started in 2021-03-07 13:20:43
+2021-03-07 13:21:52.8780  INFO - Connect Client From: 127.0.0.1:13697  Connection time: 2021-03-07 오후 1:21:52
+2021-03-07 13:21:52.9657 DEBUG - Received messages from 127.0.0.1:13697
+{
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "0_1_49B9855F8D1771C7CE137B93491DF8A6.pptx",
+  "ConvertImg": 2,
+  "DRM_Type": "",
+  "ClientKey": "c8d959df-226d-4860-bfab-8a75342feb10"
+}
+2021-03-07 13:21:52.9782 DEBUG - Method DocConvert Start ==>
+2021-03-07 13:21:53.0418 DEBUG - Initialized variable ========>
+2021-03-07 13:21:53.0418 DEBUG - workspacePath ===> C:\workspace
+2021-03-07 13:21:53.0418 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-07 13:21:53.0418 DEBUG - srcFile ===> C:\workspace\tmp\0_1_49B9855F8D1771C7CE137B93491DF8A6.pptx
+2021-03-07 13:21:53.0503 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210307\066A3DA69804BEA08545FB5695E7124D
+2021-03-07 13:21:53.0503 DEBUG - targetFile ===> C:\workspace\data\20210307\066A3DA69804BEA08545FB5695E7124D\0_1_49B9855F8D1771C7CE137B93491DF8A6.pptx
+2021-03-07 13:21:53.0503 DEBUG - =============================>
+2021-03-07 13:21:53.0503 DEBUG - Created DataTodayMD5Path Directory C:\workspace\data\20210307\066A3DA69804BEA08545FB5695E7124D
+2021-03-07 13:21:53.0503 DEBUG - C:\workspace\tmp\0_1_49B9855F8D1771C7CE137B93491DF8A6.pptx Move file to C:\workspace\data\20210307\066A3DA69804BEA08545FB5695E7124D\0_1_49B9855F8D1771C7CE137B93491DF8A6.pptx
+2021-03-07 13:21:53.0653 DEBUG - use DRM: False
+2021-03-07 13:22:19.9681 DEBUG - Response messages to 127.0.0.1:13697
+{
+  "FilePath": "/data/20210307/066A3DA69804BEA08545FB5695E7124D/0_1_49B9855F8D1771C7CE137B93491DF8A6.zip",
+  "PageCnt": 100,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2021-03-07 13:22:19.9681 DEBUG - Processing time: 27.037
+2021-03-07 13:22:19.9750  INFO - Disconnected From:127.0.0.1:13697 Time: 2021-03-07 오후 1:22:19
+2021-03-07 13:23:04.4599 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-07 13:23:04.4913 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-07 13:23:04.4913  WARN - Starting DocConvert Server..
+2021-03-07 13:23:04.4913  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-07 13:23:04.4913  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-07 13:23:04.4913  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-07 13:23:04.4913  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-07 13:23:04.5102  INFO - User Name: JMKIM
+2021-03-07 13:23:04.5102  INFO - DocConvert Version: 2.0.7736.23529
+2021-03-07 13:23:04.5102  INFO - DocConvert PID: 1548
+2021-03-07 13:23:04.5102  INFO - DocConvert LogLevel: DEBUG
+2021-03-07 13:23:04.5102  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-07 13:23:04.5102  INFO - ------------ Parsing Ini File ------------
+2021-03-07 13:23:04.5440  INFO - - Bind IP: 0.0.0.0
+2021-03-07 13:23:04.5440  INFO - - Socket Port: 12000
+2021-03-07 13:23:04.5440  INFO - - Client KEY: c8d959df-226d-4860-bfab-8a75342feb10
+2021-03-07 13:23:04.5504  INFO - - Workspace Directory: C:\workspace
+2021-03-07 13:23:04.5504  INFO - - Product Name: DocConvert
+2021-03-07 13:23:04.5504  INFO - - SchedulerTime: 1,0
+2021-03-07 13:23:04.5504  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-07 13:23:04.5504  INFO - - CleanWorkspaceDay: 3
+2021-03-07 13:23:04.5504  INFO - - CleanLogSchedulerYn: True
+2021-03-07 13:23:04.5803  INFO - - CleanLogDay: 7
+2021-03-07 13:23:04.5912  INFO - - DRM useYn: False
+2021-03-07 13:23:04.5912  INFO - ------------------------------------------
+2021-03-07 13:23:04.5912  INFO - Hangul DLL has been registered in the registry.
+2021-03-07 13:23:04.6001  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-07 13:23:04.6001  INFO - ============ [Scheduler] ============
+2021-03-07 13:23:04.6001  INFO - Next scheduler operation time: 2021-03-08 01:00
+2021-03-07 13:23:04.6001  INFO - If the workspace last modified date is past 2021-03-05 01:00
+2021-03-07 13:23:04.6001  INFO - If the log last modified date is past 2021-03-01 01:00
+2021-03-07 13:23:04.6001  INFO - =====================================
+2021-03-07 13:23:04.6315  INFO - Cleanup scheduler is working
+2021-03-07 13:23:04.6315  WARN - DocConvert Server Started in 2021-03-07 13:23:04
+2021-03-07 13:24:55.8580  INFO - Connect Client From: 127.0.0.1:13722  Connection time: 2021-03-07 오후 1:24:55
+2021-03-07 13:24:55.9380 DEBUG - Received messages from 127.0.0.1:13722
+{
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "0_1_4811C8B8B90541B93C6C2B78E3461AA4.doc",
+  "ConvertImg": 2,
+  "DRM_Type": "",
+  "ClientKey": "c8d959df-226d-4860-bfab-8a75342feb10"
+}
+2021-03-07 13:24:55.9529 DEBUG - Method DocConvert Start ==>
+2021-03-07 13:24:56.0296 DEBUG - Initialized variable ========>
+2021-03-07 13:24:56.0296 DEBUG - workspacePath ===> C:\workspace
+2021-03-07 13:24:56.0357 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-07 13:24:56.0357 DEBUG - srcFile ===> C:\workspace\tmp\0_1_4811C8B8B90541B93C6C2B78E3461AA4.doc
+2021-03-07 13:24:56.0357 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210307\08D9377FDCBA8CF400B615509F50B995
+2021-03-07 13:24:56.0357 DEBUG - targetFile ===> C:\workspace\data\20210307\08D9377FDCBA8CF400B615509F50B995\0_1_4811C8B8B90541B93C6C2B78E3461AA4.doc
+2021-03-07 13:24:56.0357 DEBUG - =============================>
+2021-03-07 13:24:56.0513 DEBUG - Created DataTodayMD5Path Directory C:\workspace\data\20210307\08D9377FDCBA8CF400B615509F50B995
+2021-03-07 13:24:56.0513 DEBUG - C:\workspace\tmp\0_1_4811C8B8B90541B93C6C2B78E3461AA4.doc Move file to C:\workspace\data\20210307\08D9377FDCBA8CF400B615509F50B995\0_1_4811C8B8B90541B93C6C2B78E3461AA4.doc
+2021-03-07 13:24:56.0513 DEBUG - use DRM: False
+2021-03-07 13:25:07.0360 DEBUG - Response messages to 127.0.0.1:13722
+{
+  "FilePath": "/data/20210307/08D9377FDCBA8CF400B615509F50B995/0_1_4811C8B8B90541B93C6C2B78E3461AA4.zip",
+  "PageCnt": 27,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2021-03-07 13:25:07.0360 DEBUG - Processing time: 11.128
+2021-03-07 13:25:07.0360  INFO - Disconnected From:127.0.0.1:13722 Time: 2021-03-07 오후 1:25:07
+2021-03-07 13:32:30.5683 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-07 13:32:30.5920 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-07 13:32:30.5920  WARN - Starting DocConvert Server..
+2021-03-07 13:32:30.5920  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-07 13:32:30.5920  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-07 13:32:30.5973  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-07 13:32:30.5973  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-07 13:32:30.5973  INFO - User Name: JMKIM
+2021-03-07 13:32:30.5973  INFO - DocConvert Version: 2.0.7736.24374
+2021-03-07 13:32:30.5973  INFO - DocConvert PID: 9252
+2021-03-07 13:32:30.5973  INFO - DocConvert LogLevel: DEBUG
+2021-03-07 13:32:30.5973  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-07 13:32:30.5973  INFO - ------------ Parsing Ini File ------------
+2021-03-07 13:32:30.6172  INFO - - Bind IP: 0.0.0.0
+2021-03-07 13:32:30.6172  INFO - - Socket Port: 12000
+2021-03-07 13:32:30.6172  INFO - - Client KEY: c8d959df-226d-4860-bfab-8a75342feb10
+2021-03-07 13:32:30.6172  INFO - - Workspace Directory: C:\workspace
+2021-03-07 13:32:30.6172  INFO - - Product Name: DocConvert
+2021-03-07 13:32:30.6172  INFO - - SchedulerTime: 1,0
+2021-03-07 13:32:30.6172  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-07 13:32:30.6288  INFO - - CleanWorkspaceDay: 3
+2021-03-07 13:32:30.6288  INFO - - CleanLogSchedulerYn: True
+2021-03-07 13:32:30.6288  INFO - - CleanLogDay: 7
+2021-03-07 13:32:30.6288  INFO - - DRM useYn: False
+2021-03-07 13:32:30.6288  INFO - ------------------------------------------
+2021-03-07 13:32:30.6288  INFO - Hangul DLL has been registered in the registry.
+2021-03-07 13:32:30.6440  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-07 13:32:30.6440  INFO - ============ [Scheduler] ============
+2021-03-07 13:32:30.6440  INFO - Next scheduler operation time: 2021-03-08 01:00
+2021-03-07 13:32:30.6440  INFO - If the workspace last modified date is past 2021-03-05 01:00
+2021-03-07 13:32:30.6615  INFO - If the log last modified date is past 2021-03-01 01:00
+2021-03-07 13:32:30.6615  INFO - =====================================
+2021-03-07 13:32:30.6615  INFO - Cleanup scheduler is working
+2021-03-07 13:32:30.6615  WARN - DocConvert Server Started in 2021-03-07 13:32:30
+2021-03-07 13:34:13.6623  INFO - Connect Client From: 127.0.0.1:13770  Connection time: 2021-03-07 오후 1:34:13
+2021-03-07 13:34:13.7440 DEBUG - Received messages from 127.0.0.1:13770
+{
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "0_1_4811C8B8B90541B93C6C2B78E3461AA4.doc",
+  "ConvertImg": 2,
+  "DRM_Type": "",
+  "ClientKey": "c8d959df-226d-4860-bfab-8a75342feb10"
+}
+2021-03-07 13:34:13.7582 DEBUG - Method DocConvert Start ==>
+2021-03-07 13:34:13.8378 DEBUG - Initialized variable ========>
+2021-03-07 13:34:13.8378 DEBUG - workspacePath ===> C:\workspace
+2021-03-07 13:34:13.8378 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-07 13:34:13.8378 DEBUG - srcFile ===> C:\workspace\tmp\0_1_4811C8B8B90541B93C6C2B78E3461AA4.doc
+2021-03-07 13:34:13.8471 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210307\08D9377FDCBA8CF400B615509F50B995
+2021-03-07 13:34:13.8471 DEBUG - targetFile ===> C:\workspace\data\20210307\08D9377FDCBA8CF400B615509F50B995\0_1_4811C8B8B90541B93C6C2B78E3461AA4.doc
+2021-03-07 13:34:13.8471 DEBUG - =============================>
+2021-03-07 13:34:13.8471 DEBUG - Created DataTodayMD5Path Directory C:\workspace\data\20210307\08D9377FDCBA8CF400B615509F50B995
+2021-03-07 13:34:13.8687 DEBUG - C:\workspace\tmp\0_1_4811C8B8B90541B93C6C2B78E3461AA4.doc Move file to C:\workspace\data\20210307\08D9377FDCBA8CF400B615509F50B995\0_1_4811C8B8B90541B93C6C2B78E3461AA4.doc
+2021-03-07 13:34:13.8687 DEBUG - use DRM: False
+2021-03-07 13:34:13.8687 DEBUG - ============= Document To PDF Start =============
+2021-03-07 13:34:24.2395 DEBUG - Document To PDF Processing time: 10.366
+2021-03-07 13:34:24.2395 DEBUG - =================================================
+2021-03-07 13:34:24.2395 DEBUG - ============= PDF To Image Start =============
+2021-03-07 13:34:25.6328 DEBUG - PDF To Image Processing time: 01.384
+2021-03-07 13:34:25.6328 DEBUG - ==============================================
+2021-03-07 13:34:25.6442 DEBUG - ============= Create Zip Start =============
+2021-03-07 13:34:25.8834 DEBUG - Create Zip Processing time: 00.236
+2021-03-07 13:34:25.8834 DEBUG - ==============================================
+2021-03-07 13:34:25.9737 DEBUG - Response messages to 127.0.0.1:13770
+{
+  "FilePath": "/data/20210307/08D9377FDCBA8CF400B615509F50B995/0_1_4811C8B8B90541B93C6C2B78E3461AA4.zip",
+  "PageCnt": 27,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2021-03-07 13:34:25.9737 DEBUG - Processing time: 12.261
+2021-03-07 13:34:25.9737  INFO - Disconnected From:127.0.0.1:13770 Time: 2021-03-07 오후 1:34:25
+2021-03-07 13:35:56.0615 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-07 13:35:56.1116 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-07 13:35:56.1151  WARN - Starting DocConvert Server..
+2021-03-07 13:35:56.1151  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Debug
+2021-03-07 13:35:56.1151  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-07 13:35:56.1151  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-07 13:35:56.1151  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-07 13:35:56.1151  INFO - User Name: JMKIM
+2021-03-07 13:35:56.1151  INFO - DocConvert Version: 2.0.7736.24477
+2021-03-07 13:35:56.1151  INFO - DocConvert PID: 6092
+2021-03-07 13:35:56.1361  INFO - DocConvert LogLevel: DEBUG
+2021-03-07 13:35:56.1361  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-07 13:35:56.1361  INFO - ------------ Parsing Ini File ------------
+2021-03-07 13:35:56.1466  INFO - - Bind IP: 0.0.0.0
+2021-03-07 13:35:56.1466  INFO - - Socket Port: 12000
+2021-03-07 13:35:56.1466  INFO - - Client KEY: c8d959df-226d-4860-bfab-8a75342feb10
+2021-03-07 13:35:56.1466  INFO - - Workspace Directory: C:\workspace
+2021-03-07 13:35:56.1466  INFO - - Product Name: DocConvert
+2021-03-07 13:35:56.1466  INFO - - SchedulerTime: 1,0
+2021-03-07 13:35:56.1466  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-07 13:35:56.1466  INFO - - CleanWorkspaceDay: 3
+2021-03-07 13:35:56.1466  INFO - - CleanLogSchedulerYn: True
+2021-03-07 13:35:56.1858  INFO - - CleanLogDay: 7
+2021-03-07 13:35:56.1905  INFO - - DRM useYn: False
+2021-03-07 13:35:56.1905  INFO - ------------------------------------------
+2021-03-07 13:35:56.1905  INFO - Hangul DLL has been registered in the registry.
+2021-03-07 13:35:56.1905  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-07 13:35:56.1905  INFO - ============ [Scheduler] ============
+2021-03-07 13:35:56.2062  INFO - Next scheduler operation time: 2021-03-08 01:00
+2021-03-07 13:35:56.2062  INFO - If the workspace last modified date is past 2021-03-05 01:00
+2021-03-07 13:35:56.2062  INFO - If the log last modified date is past 2021-03-01 01:00
+2021-03-07 13:35:56.2225  INFO - =====================================
+2021-03-07 13:35:56.2225  INFO - Cleanup scheduler is working
+2021-03-07 13:35:56.2225  WARN - DocConvert Server Started in 2021-03-07 13:35:56
+2021-03-07 13:37:16.8738  INFO - Connect Client From: 127.0.0.1:13796  Connection time: 2021-03-07 오후 1:37:16
+2021-03-07 13:37:16.9490 DEBUG - Received messages from 127.0.0.1:13796
+{
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "Method": "DocConvert",
+  "FileName": "0_1_A4A99D04196229EDEEFCE02EF2FECEA5.pptx",
+  "ConvertImg": 2,
+  "DRM_Type": "",
+  "ClientKey": "c8d959df-226d-4860-bfab-8a75342feb10"
+}
+2021-03-07 13:37:16.9637 DEBUG - Method DocConvert Start ==>
+2021-03-07 13:37:18.1051 DEBUG - Initialized variable ========>
+2021-03-07 13:37:18.1051 DEBUG - workspacePath ===> C:\workspace
+2021-03-07 13:37:18.1051 DEBUG - tmpPath ===> C:\workspace\tmp
+2021-03-07 13:37:18.1136 DEBUG - srcFile ===> C:\workspace\tmp\0_1_A4A99D04196229EDEEFCE02EF2FECEA5.pptx
+2021-03-07 13:37:18.1136 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20210307\D707411DEAB89C5BF24124E806EEE998
+2021-03-07 13:37:18.1136 DEBUG - targetFile ===> C:\workspace\data\20210307\D707411DEAB89C5BF24124E806EEE998\0_1_A4A99D04196229EDEEFCE02EF2FECEA5.pptx
+2021-03-07 13:37:18.1136 DEBUG - =============================>
+2021-03-07 13:37:18.1136 DEBUG - Created DataTodayMD5Path Directory C:\workspace\data\20210307\D707411DEAB89C5BF24124E806EEE998
+2021-03-07 13:37:18.1337 DEBUG - C:\workspace\tmp\0_1_A4A99D04196229EDEEFCE02EF2FECEA5.pptx Move file to C:\workspace\data\20210307\D707411DEAB89C5BF24124E806EEE998\0_1_A4A99D04196229EDEEFCE02EF2FECEA5.pptx
+2021-03-07 13:37:18.1337 DEBUG - use DRM: False
+2021-03-07 13:37:18.1337 DEBUG - ============= Document To PDF Start =============>
+2021-03-07 13:37:24.1039 DEBUG - Document To PDF Processing time: 05.964
+2021-03-07 13:37:24.1039 DEBUG - =================================================>
+2021-03-07 13:37:24.1039 DEBUG - ============= PDF To Image Start =============>
+2021-03-07 13:37:25.2312 DEBUG - PDF To Image Processing time: 01.122
+2021-03-07 13:37:25.2394 DEBUG - ==============================================>
+2021-03-07 13:37:25.2394 DEBUG - ============= Create Zip Start =============>
+2021-03-07 13:37:25.4061 DEBUG - Create Zip Processing time: 00.161
+2021-03-07 13:37:25.4061 DEBUG - ==============================================>
+2021-03-07 13:37:25.4828 DEBUG - Response messages to 127.0.0.1:13796
+{
+  "FilePath": "/data/20210307/D707411DEAB89C5BF24124E806EEE998/0_1_A4A99D04196229EDEEFCE02EF2FECEA5.zip",
+  "PageCnt": 17,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2021-03-07 13:37:25.4828 DEBUG - All Processing time: 08.562
+2021-03-07 13:37:25.4922  INFO - Disconnected From:127.0.0.1:13796 Time: 2021-03-07 오후 1:37:25

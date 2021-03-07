@@ -106,7 +106,7 @@ namespace DocConvert.Flow
             if (!dataTodayMD5Path.Exists)
             {
                 dataTodayMD5Path.Create();
-                LogMgr.Write("Created DataTodayMD5Path Directory " + dataTodayMD5Path.FullName, ConsoleColor.Yellow, LOG_LEVEL.INFO);
+                LogMgr.Write("Created DataTodayMD5Path Directory " + dataTodayMD5Path.FullName);
             }
 
             // 대상이 잠겨있으면 해제한다.
@@ -137,7 +137,8 @@ namespace DocConvert.Flow
             // DRM 사용 여부
             if (DRM_useYn && Regex.IsMatch(drmUseYn, "Y", RegexOptions.IgnoreCase))
             {
-                LogMgr.Write("=================== DRM ===================");
+                LogMgr.Write("============== DRM Decrypt Start ==============>");
+                DateTime drmTimeTaken = DateTime.Now;
                 string[] DRM_args_ori = Program.IniProperties.DRM_Args.Split(',');
                 string[] DRM_args = new string[DRM_args_ori.Length];
 
@@ -192,9 +193,13 @@ namespace DocConvert.Flow
                     responseMsg["Message"] = "DRM decryption failed.";
                     return responseMsg;
                 }
-                LogMgr.Write("===========================================");
+                TimeSpan drmCurTime = DateTime.Now - drmTimeTaken;
+                LogMgr.Write(string.Format("DRM Processing time: {0}", drmCurTime.ToString(@"ss\.fff")), LOG_LEVEL.DEBUG);
+                LogMgr.Write("===============================================>");
             }
 
+            LogMgr.Write("============= Document To PDF Start =============>");
+            DateTime dcTimeTaken = DateTime.Now;
             // PDF로 변환
             if (Path.GetExtension(targetFile.FullName).Equals(".docx") || Path.GetExtension(targetFile.FullName).Equals(".doc") || Path.GetExtension(targetFile.FullName).Equals(".txt") || Path.GetExtension(targetFile.FullName).Equals(".html"))
             {
@@ -234,11 +239,16 @@ namespace DocConvert.Flow
                     return responseMsg;
                 }
             }
+            TimeSpan dcCurTime = DateTime.Now - dcTimeTaken;
+            LogMgr.Write(string.Format("Document To PDF Processing time: {0}", dcCurTime.ToString(@"ss\.fff")), LOG_LEVEL.DEBUG);
+            LogMgr.Write("=================================================>");
 
             ConvertImagePoint:
             // 이미지 변환
             if (convertImg != 0)
             {
+                LogMgr.Write("============= PDF To Image Start =============>");
+                DateTime imgTimeTaken = DateTime.Now;
                 DirectoryInfo imageOutPath = new DirectoryInfo(dataTodayMD5Path + @"\" + Path.GetFileNameWithoutExtension(fileName) + "\\");
                 if (!imageOutPath.Exists)
                     imageOutPath.Create();
@@ -254,10 +264,20 @@ namespace DocConvert.Flow
                 {
                     status = ConvertImg.PDFtoBmp(newPdfFile.FullName, imageOutPath.FullName, PdfiumViewer.PdfRenderFlags.ForPrinting);
                 }
-
+                TimeSpan imgCurTime = DateTime.Now - imgTimeTaken;
+                LogMgr.Write(string.Format("PDF To Image Processing time: {0}", imgCurTime.ToString(@"ss\.fff")), LOG_LEVEL.DEBUG);
+                LogMgr.Write("==============================================>");
                 // 압축
-                if(status.isSuccess)
+
+                if (status.isSuccess)
+                {
+                    LogMgr.Write("============= Create Zip Start =============>");
+                    DateTime zipTimeTaken = DateTime.Now;
                     ZipLib.CreateZipFile(Directory.GetFiles(imageOutPath.FullName), newZipFile.FullName);
+                    TimeSpan zipCurTime = DateTime.Now - zipTimeTaken;
+                    LogMgr.Write(string.Format("Create Zip Processing time: {0}", zipCurTime.ToString(@"ss\.fff")), LOG_LEVEL.DEBUG);
+                    LogMgr.Write("==============================================>");
+                }
             }
 
             EndPoint: 

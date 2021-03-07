@@ -163,7 +163,7 @@ namespace DocConvert.Network
                             LogMgr.Write("Response messages to " + remoteAddr.Address.ToString() + ":" + remoteAddr.Port.ToString() + "\r\n" + responseMsg.ToString(), LOG_LEVEL.DEBUG);
 
                             TimeSpan curTime = DateTime.Now - timeTaken;
-                            LogMgr.Write(string.Format("Processing time: {0}", curTime.ToString(@"ss\.fff")), LOG_LEVEL.DEBUG);
+                            LogMgr.Write(string.Format("All Processing time: {0}", curTime.ToString(@"ss\.fff")), LOG_LEVEL.DEBUG);
 
                             Send(responseMsg.ToString());
 
