@@ -63,9 +63,9 @@ namespace DocConvert.Common
             Console.ForegroundColor = color;
 
             if(noDate)
-                Console.WriteLine(text);
+                consoleWrite(text, logLevel);
             else
-                Console.WriteLine(consoleText);
+                consoleWrite(consoleText, logLevel);
             Console.Out.Flush();
 
             Console.ResetColor();
@@ -96,6 +96,14 @@ namespace DocConvert.Common
                 consoleLogger.Warn(text);
             }
             #endregion
+        }
+
+        public static void consoleWrite(string text, LOG_LEVEL level)
+        {
+            if(Program.logLevel <= level)
+            {
+                Console.WriteLine(text);
+            }
         }
 
         /// <summary>
@@ -129,6 +137,11 @@ namespace DocConvert.Common
             Write(text, consoleColor, LOG_LEVEL.DEBUG);
         }
 
+        /// <summary>
+        /// 현재 설정된 로그레벨을 가져옴.
+        /// </summary>
+        /// <param name="loggerName">xml에 명시되어있는 로그 레벨</param>
+        /// <returns></returns>
         public static string getLogLevel(string loggerName)
         {
             string logLevel = "";

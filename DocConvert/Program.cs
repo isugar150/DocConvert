@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 using System.Threading;
 using DocConvert.Common;
 using DocConvert_Core.IniLib;
@@ -16,6 +17,8 @@ namespace DocConvert
         public static ManualResetEvent manualEvent = new ManualResetEvent(false);
 
         public static bool isHwpConverting = false;
+
+        public static LOG_LEVEL logLevel = LOG_LEVEL.ERROR;
 
         private static Timer _Scheduler;
 
@@ -77,6 +80,32 @@ namespace DocConvert
             LogMgr.Write("User Name: " + Environment.UserName, ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("DocConvert Version: " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString(), ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("DocConvert PID: " + myPID, ConsoleColor.White, LOG_LEVEL.INFO);
+            #region logLevel변수에 로그레벨 초기화
+            if (Regex.IsMatch(LogMgr.getLogLevel("DocConvert_Log"), "TRACE", RegexOptions.IgnoreCase))
+            {
+                logLevel = LOG_LEVEL.TRACE;
+            } 
+            else if (Regex.IsMatch(LogMgr.getLogLevel("DocConvert_Log"), "DEBUG", RegexOptions.IgnoreCase))
+            {
+                logLevel = LOG_LEVEL.DEBUG;
+            }
+            else if (Regex.IsMatch(LogMgr.getLogLevel("DocConvert_Log"), "INFO", RegexOptions.IgnoreCase))
+            {
+                logLevel = LOG_LEVEL.INFO;
+            }
+            else if (Regex.IsMatch(LogMgr.getLogLevel("DocConvert_Log"), "WARN", RegexOptions.IgnoreCase))
+            {
+                logLevel = LOG_LEVEL.WARN;
+            }
+            else if (Regex.IsMatch(LogMgr.getLogLevel("DocConvert_Log"), "ERROR", RegexOptions.IgnoreCase))
+            {
+                logLevel = LOG_LEVEL.ERROR;
+            }
+            else
+            {
+                logLevel = LOG_LEVEL.FATAL;
+            }
+            #endregion
             LogMgr.Write("DocConvert LogLevel: " + LogMgr.getLogLevel("DocConvert_Log"), ConsoleColor.White, LOG_LEVEL.INFO);
             LogMgr.Write("DocConvert_Core LogLevel: " + LogMgr.getLogLevel("DocConvert_Core_Log"), ConsoleColor.White, LOG_LEVEL.INFO);
             #endregion

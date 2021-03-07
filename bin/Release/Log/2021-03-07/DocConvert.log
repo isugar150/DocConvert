@@ -1,0 +1,225 @@
+2021-03-07 12:12:42.2926 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-07 12:12:42.3233 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-07 12:12:42.3233  WARN - Starting DocConvert Server..
+2021-03-07 12:12:42.3322  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Release
+2021-03-07 12:12:42.3322  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-07 12:12:42.3322  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-07 12:12:42.3322  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-07 12:12:42.3322  INFO - User Name: JMKIM
+2021-03-07 12:12:42.3322  INFO - DocConvert Version: 2.0.7731.42104
+2021-03-07 12:12:42.3322  INFO - DocConvert PID: 756
+2021-03-07 12:12:42.3453  INFO - DocConvert LogLevel: DEBUG
+2021-03-07 12:12:42.3453  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-07 12:12:42.3453  INFO - ------------ Parsing Ini File ------------
+2021-03-07 12:12:42.3654  INFO - The configuration file is created in C:\Users\JMKIM\Documents\source\DocConvert\bin\Release\DocConvert.ini
+2021-03-07 12:12:42.3654  INFO - - Bind IP: 0.0.0.0
+2021-03-07 12:12:42.3654  INFO - - Socket Port: 12000
+2021-03-07 12:12:42.3654  INFO - - Client KEY: 959bbf1c-0731-46ff-bafe-e3f2c1a58122
+2021-03-07 12:12:42.3758  INFO - - Workspace Directory: C:\workspace
+2021-03-07 12:12:42.3758  INFO - - Product Name: DocConvert
+2021-03-07 12:12:42.3758  INFO - - SchedulerTime: 1,0
+2021-03-07 12:12:42.3758  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-07 12:12:42.3758  INFO - - CleanWorkspaceDay: 3
+2021-03-07 12:12:42.3758  INFO - - CleanLogSchedulerYn: True
+2021-03-07 12:12:42.3758  INFO - - CleanLogDay: 7
+2021-03-07 12:12:42.3758  INFO - - DRM useYn: False
+2021-03-07 12:12:42.3927  INFO - ------------------------------------------
+2021-03-07 12:12:42.3927  INFO - Hangul DLL has been registered in the registry.
+2021-03-07 12:12:42.3927  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-07 12:12:42.3927  INFO - ============ [Scheduler] ============
+2021-03-07 12:12:42.3927  INFO - Next scheduler operation time: 2021-03-08 01:00
+2021-03-07 12:12:42.3927  INFO - If the workspace last modified date is past 2021-03-05 01:00
+2021-03-07 12:12:42.4077  INFO - If the log last modified date is past 2021-03-01 01:00
+2021-03-07 12:12:42.4077  INFO - =====================================
+2021-03-07 12:12:42.4077  INFO - Cleanup scheduler is working
+2021-03-07 12:12:42.4077  WARN - DocConvert Server Started in 2021-03-07 12:12:42
+2021-03-07 12:24:15.7500 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-07 12:24:15.7754 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-07 12:24:15.7754  WARN - Starting DocConvert Server..
+2021-03-07 12:24:15.7754  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Release
+2021-03-07 12:24:15.7754  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-07 12:24:15.7852  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-07 12:24:15.7852  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-07 12:24:15.7852  INFO - User Name: JMKIM
+2021-03-07 12:24:15.7852  INFO - DocConvert Version: 2.0.7736.22327
+2021-03-07 12:24:15.7852  INFO - DocConvert PID: 9932
+2021-03-07 12:24:15.7852  INFO - DocConvert LogLevel: DEBUG
+2021-03-07 12:24:15.7852  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-07 12:24:15.7852  INFO - ------------ Parsing Ini File ------------
+2021-03-07 12:24:15.8060  INFO - - Bind IP: 0.0.0.0
+2021-03-07 12:24:15.8060  INFO - - Socket Port: 12000
+2021-03-07 12:24:15.8060  INFO - - Client KEY: 959bbf1c-0731-46ff-bafe-e3f2c1a58122
+2021-03-07 12:24:15.8060  INFO - - Workspace Directory: C:\workspace
+2021-03-07 12:24:15.8165  INFO - - Product Name: DocConvert
+2021-03-07 12:24:15.8165  INFO - - SchedulerTime: 1,0
+2021-03-07 12:24:15.8165  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-07 12:24:15.8165  INFO - - CleanWorkspaceDay: 3
+2021-03-07 12:24:15.8165  INFO - - CleanLogSchedulerYn: True
+2021-03-07 12:24:15.8165  INFO - - CleanLogDay: 7
+2021-03-07 12:24:15.8325  INFO - - DRM useYn: False
+2021-03-07 12:24:15.8325  INFO - ------------------------------------------
+2021-03-07 12:24:15.8325  INFO - Hangul DLL has been registered in the registry.
+2021-03-07 12:24:15.8325  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-07 12:24:15.8325  INFO - ============ [Scheduler] ============
+2021-03-07 12:24:15.8483  INFO - Next scheduler operation time: 2021-03-08 01:00
+2021-03-07 12:24:15.8483  INFO - If the workspace last modified date is past 2021-03-05 01:00
+2021-03-07 12:24:15.8483  INFO - If the log last modified date is past 2021-03-01 01:00
+2021-03-07 12:24:15.8483  INFO - =====================================
+2021-03-07 12:24:15.8656  INFO - Cleanup scheduler is working
+2021-03-07 12:24:15.8656  WARN - DocConvert Server Started in 2021-03-07 12:24:15
+2021-03-07 12:24:37.6659 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-07 12:24:37.6975 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-07 12:24:37.6975  WARN - Starting DocConvert Server..
+2021-03-07 12:24:37.6975  INFO - Program Directory: C:\Users\JMKIM\Documents\source\DocConvert\bin\Release
+2021-03-07 12:24:37.6975  INFO - .Net Framework Version: 4.0.30319.42000
+2021-03-07 12:24:37.7073  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2021-03-07 12:24:37.7073  INFO - PC(Domain) Name: DESKTOP-SHSO0U2
+2021-03-07 12:24:37.7073  INFO - User Name: JMKIM
+2021-03-07 12:24:37.7073  INFO - DocConvert Version: 2.0.7736.22327
+2021-03-07 12:24:37.7073  INFO - DocConvert PID: 5004
+2021-03-07 12:24:37.7073  INFO - DocConvert LogLevel: INFO
+2021-03-07 12:24:37.7073  INFO - DocConvert_Core LogLevel: DEBUG
+2021-03-07 12:24:37.7073  INFO - ------------ Parsing Ini File ------------
+2021-03-07 12:24:37.7279  INFO - - Bind IP: 0.0.0.0
+2021-03-07 12:24:37.7279  INFO - - Socket Port: 12000
+2021-03-07 12:24:37.7279  INFO - - Client KEY: 959bbf1c-0731-46ff-bafe-e3f2c1a58122
+2021-03-07 12:24:37.7279  INFO - - Workspace Directory: C:\workspace
+2021-03-07 12:24:37.7501  INFO - - Product Name: DocConvert
+2021-03-07 12:24:37.7501  INFO - - SchedulerTime: 1,0
+2021-03-07 12:24:37.7552  INFO - - CleanWorkspaceSchedulerYn: True
+2021-03-07 12:24:37.7552  INFO - - CleanWorkspaceDay: 3
+2021-03-07 12:24:37.7552  INFO - - CleanLogSchedulerYn: True
+2021-03-07 12:24:37.7552  INFO - - CleanLogDay: 7
+2021-03-07 12:24:37.7552  INFO - - DRM useYn: False
+2021-03-07 12:24:37.7768  INFO - ------------------------------------------
+2021-03-07 12:24:37.7768  INFO - Hangul DLL has been registered in the registry.
+2021-03-07 12:24:37.7768  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-07 12:24:37.7856  INFO - ============ [Scheduler] ============
+2021-03-07 12:24:37.7856  INFO - Next scheduler operation time: 2021-03-08 01:00
+2021-03-07 12:24:37.7856  INFO - If the workspace last modified date is past 2021-03-05 01:00
+2021-03-07 12:24:37.7856  INFO - If the log last modified date is past 2021-03-01 01:00
+2021-03-07 12:24:37.7856  INFO - =====================================
+2021-03-07 12:24:37.7856  INFO - Cleanup scheduler is working
+2021-03-07 12:24:37.7856  WARN - DocConvert Server Started in 2021-03-07 12:24:37
+2021-03-07 12:24:48.8545 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-07 12:24:48.8818 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-07 12:25:40.6322 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-07 12:25:40.6684 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-07 12:25:40.6684  WARN - Starting DocConvert Server..
+2021-03-07 12:25:40.7155  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-07 12:25:40.7244  WARN - DocConvert Server Started in 2021-03-07 12:25:40
+2021-03-07 12:26:19.6900 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-07 12:26:19.7189 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-07 12:26:19.7189  WARN - Starting DocConvert Server..
+2021-03-07 12:26:19.7925  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-07 12:26:19.8531  WARN - DocConvert Server Started in 2021-03-07 12:26:19
+2021-03-07 12:26:35.2442 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2021-03-07 12:26:35.2683 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2021-03-07 12:26:35.2704  WARN - Starting DocConvert Server..
+2021-03-07 12:26:35.3129  WARN - Socket Server Listen On 0.0.0.0:12000
+2021-03-07 12:26:35.3189  WARN - DocConvert Server Started in 2021-03-07 12:26:35
