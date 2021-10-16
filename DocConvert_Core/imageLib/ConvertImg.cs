@@ -51,12 +51,12 @@ namespace DocConvert_Core.imageLib
                     {
                         x = 100;
                     }
-
+                    
                     for (int j = i * 100; j < (i * 100) + x; j++)
                     {
                         int dpi = 300;
-
-                        using (System.Drawing.Image image = document[i].Render(j, dpi, dpi, quality))
+                        System.Drawing.Image imageInfo = document[i].Render(j, dpi, dpi, quality);
+                        using (System.Drawing.Image image = document[i].Render(j, Convert.ToInt32(imageInfo.Width * 1.5), Convert.ToInt32(imageInfo.Height * 1.5), dpi, dpi, quality))
                         {
                             ImageCodecInfo encoder = ImageCodecInfo.GetImageEncoders()
                                 .First(c => c.FormatID == ImageFormat.Jpeg.Guid);
@@ -142,7 +142,8 @@ namespace DocConvert_Core.imageLib
                     {
                         int dpi = 300;
 
-                        using (System.Drawing.Image image = document[i].Render(j, dpi, dpi, quality))
+                        System.Drawing.Image imageInfo = document[i].Render(j, dpi, dpi, quality);
+                        using (System.Drawing.Image image = document[i].Render(j, Convert.ToInt32(imageInfo.Width * 1.5), Convert.ToInt32(imageInfo.Height * 1.5), dpi, dpi, quality))
                         {
                             ImageCodecInfo encoder = ImageCodecInfo.GetImageEncoders()
                                 .First(c => c.FormatID == ImageFormat.Bmp.Guid);
@@ -229,7 +230,8 @@ namespace DocConvert_Core.imageLib
                     {
                         int dpi = 300;
 
-                        using (System.Drawing.Image image = document[i].Render(j, dpi, dpi, quality))
+                        System.Drawing.Image imageInfo = document[i].Render(j, dpi, dpi, quality);
+                        using (System.Drawing.Image image = document[i].Render(j, Convert.ToInt32(imageInfo.Width * 1.5), Convert.ToInt32(imageInfo.Height * 1.5), dpi, dpi, quality))
                         {
                             ImageCodecInfo encoder = ImageCodecInfo.GetImageEncoders()
                                 .First(c => c.FormatID == ImageFormat.Png.Guid);

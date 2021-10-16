@@ -1,0 +1,40 @@
+2021-10-16 13:39:43.9246  INFO - ==================== Start ====================
+2021-10-16 13:39:43.9246  INFO - Method: WordSaveAs, FilePath: C:\workspace\data\20211016\21F8A16C607339872E09C6BE71F0F386\1장.docx, outPath: C:\workspace\data\20211016\21F8A16C607339872E09C6BE71F0F386\1장.pdf, docPassword: 
+2021-10-16 13:39:46.8587  INFO - Conversion success
+2021-10-16 13:39:47.0057  INFO - ==================== End ====================
+2021-10-16 13:39:47.0186  INFO - ==================== Start ====================
+2021-10-16 13:39:47.0186  INFO - Method: PDFtoPng, FilePath: C:\workspace\data\20211016\21F8A16C607339872E09C6BE71F0F386\1장.pdf, outPath: C:\workspace\data\20211016\21F8A16C607339872E09C6BE71F0F386\1장\
+2021-10-16 13:39:47.0672  INFO - Image conversion was successful.
+2021-10-16 13:39:47.0672  INFO - ==================== End ====================
+2021-10-16 13:39:53.9237  INFO - ==================== Start ====================
+2021-10-16 13:39:53.9237  INFO - Method: PowerPointSaveAs, FilePath: C:\workspace\data\20211016\6EBEAEB70DF196419228ACC43FFCE76B\1장.pptx, outPath: C:\workspace\data\20211016\6EBEAEB70DF196419228ACC43FFCE76B\1장.pdf, docPassword: 
+2021-10-16 13:39:56.5772  INFO - Conversion success
+2021-10-16 13:39:56.6006  INFO - ==================== End ====================
+2021-10-16 13:39:56.6006  INFO - ==================== Start ====================
+2021-10-16 13:39:56.6006  INFO - Method: PDFtoPng, FilePath: C:\workspace\data\20211016\6EBEAEB70DF196419228ACC43FFCE76B\1장.pdf, outPath: C:\workspace\data\20211016\6EBEAEB70DF196419228ACC43FFCE76B\1장\
+2021-10-16 13:39:56.6275  INFO - Image conversion was successful.
+2021-10-16 13:39:56.6275  INFO - ==================== End ====================
+2021-10-16 13:40:00.5857  INFO - ==================== Start ====================
+2021-10-16 13:40:00.5857  INFO - Method: ExcelSaveAs, FilePath: C:\workspace\data\20211016\67A8EAD733ABA340AACD75B09CDFE958\1장.xlsx, outPath: C:\workspace\data\20211016\67A8EAD733ABA340AACD75B09CDFE958\1장.pdf, docPassword: 
+2021-10-16 13:40:01.4876  INFO - Conversion success
+2021-10-16 13:40:02.2010  INFO - ==================== End ====================
+2021-10-16 13:40:02.2058  INFO - ==================== Start ====================
+2021-10-16 13:40:02.2058  INFO - Method: PDFtoPng, FilePath: C:\workspace\data\20211016\67A8EAD733ABA340AACD75B09CDFE958\1장.pdf, outPath: C:\workspace\data\20211016\67A8EAD733ABA340AACD75B09CDFE958\1장\
+2021-10-16 13:40:02.2230  INFO - Image conversion was successful.
+2021-10-16 13:40:02.2230  INFO - ==================== End ====================
+2021-10-16 13:40:05.6423  INFO - ==================== Start ====================
+2021-10-16 13:40:05.6423  INFO - Method: PDFtoPng, FilePath: C:\workspace\data\20211016\FC1FA4FA025DE46405CA56AD4EA27E9A\통화정책의 현재와 미래_게시용.pdf, outPath: C:\workspace\data\20211016\FC1FA4FA025DE46405CA56AD4EA27E9A\통화정책의 현재와 미래_게시용\
+2021-10-16 13:40:28.0917  INFO - Image conversion was successful.
+2021-10-16 13:40:28.0917  INFO - ==================== End ====================
+2021-10-16 13:42:46.5967  INFO - ==================== Start ====================
+2021-10-16 13:42:46.5967  INFO - Method: PDFtoPng, FilePath: C:\workspace\data\20211016\FC1FA4FA025DE46405CA56AD4EA27E9A\통화정책의 현재와 미래_게시용.pdf, outPath: C:\workspace\data\20211016\FC1FA4FA025DE46405CA56AD4EA27E9A\통화정책의 현재와 미래_게시용\
+2021-10-16 13:43:06.0409  INFO - Image conversion was successful.
+2021-10-16 13:43:06.0409  INFO - ==================== End ====================
+2021-10-16 13:44:10.3618  INFO - ==================== Start ====================
+2021-10-16 13:44:10.3618  INFO - Method: PDFtoPng, FilePath: C:\workspace\data\20211016\FC1FA4FA025DE46405CA56AD4EA27E9A\통화정책의 현재와 미래_게시용.pdf, outPath: C:\workspace\data\20211016\FC1FA4FA025DE46405CA56AD4EA27E9A\통화정책의 현재와 미래_게시용\
+2021-10-16 13:44:32.5086  INFO - Image conversion was successful.
+2021-10-16 13:44:32.5086  INFO - ==================== End ====================
+2021-10-16 13:54:00.9709  INFO - ==================== Start ====================
+2021-10-16 13:54:00.9709  INFO - Method: PDFtoPng, FilePath: C:\workspace\data\20211016\FC1FA4FA025DE46405CA56AD4EA27E9A\통화정책의 현재와 미래_게시용.pdf, outPath: C:\workspace\data\20211016\FC1FA4FA025DE46405CA56AD4EA27E9A\통화정책의 현재와 미래_게시용\
+2021-10-16 13:54:30.6775  INFO - Image conversion was successful.
+2021-10-16 13:54:30.6775  INFO - ==================== End ====================
