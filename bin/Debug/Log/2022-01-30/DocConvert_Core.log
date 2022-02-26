@@ -1,0 +1,23 @@
+2022-01-30 12:31:08.8917  INFO - ==================== Start ====================
+2022-01-30 12:31:08.8917  INFO - Method: ExcelSaveAs, FilePath: C:\workspace\data\20220130\09FACE967F4E3E56CFBE136E530CBFD3\Excel 시작.xlsx, outPath: C:\workspace\data\20220130\09FACE967F4E3E56CFBE136E530CBFD3\Excel 시작.pdf, docPassword: 
+2022-01-30 12:31:17.5312  INFO - Conversion success
+2022-01-30 12:31:17.8948  INFO - ==================== End ====================
+2022-01-30 12:33:14.3595  INFO - ==================== Start ====================
+2022-01-30 12:33:14.3595  INFO - Method: PDFtoPng, FilePath: C:\workspace\data\20220130\09FACE967F4E3E56CFBE136E530CBFD3\Excel 시작.pdf, outPath: C:\workspace\data\20220130\09FACE967F4E3E56CFBE136E530CBFD3\Excel 시작\
+2022-01-30 12:33:15.0982  INFO - Image conversion was successful.
+2022-01-30 12:33:15.0982  INFO - ==================== End ====================
+2022-01-30 12:33:33.7348  INFO - ==================== Start ====================
+2022-01-30 12:33:33.7348  INFO - Method: ExcelSaveAs, FilePath: C:\workspace\data\20220130\09FACE967F4E3E56CFBE136E530CBFD3\Excel 시작.xlsx, outPath: C:\workspace\data\20220130\09FACE967F4E3E56CFBE136E530CBFD3\Excel 시작.pdf, docPassword: 
+2022-01-30 12:33:41.0034  INFO - Conversion success
+2022-01-30 12:33:41.2597  INFO - ==================== End ====================
+2022-01-30 12:33:41.2597  INFO - ==================== Start ====================
+2022-01-30 12:33:41.2597  INFO - Method: PDFtoPng, FilePath: C:\workspace\data\20220130\09FACE967F4E3E56CFBE136E530CBFD3\Excel 시작.pdf, outPath: C:\workspace\data\20220130\09FACE967F4E3E56CFBE136E530CBFD3\Excel 시작\
+2022-01-30 12:33:41.8947  INFO - Image conversion was successful.
+2022-01-30 12:33:41.8947  INFO - ==================== End ====================
+2022-01-30 12:36:32.5783  INFO - ==================== Start ====================
+2022-01-30 12:36:32.5783  INFO - Method: HwpSaveAs, FilePath: C:\workspace\data\20220130\BD2EED092AC398DD70B811A8F0BB7B86\Welcome to Hwp.hwp, outPath: C:\workspace\data\20220130\BD2EED092AC398DD70B811A8F0BB7B86\Welcome to Hwp.pdf
+2022-01-30 12:36:35.3704  INFO - ==================== End ====================
+2022-01-30 12:36:35.3784  INFO - ==================== Start ====================
+2022-01-30 12:36:35.3784  INFO - Method: PDFtoPng, FilePath: C:\workspace\data\20220130\BD2EED092AC398DD70B811A8F0BB7B86\Welcome to Hwp.pdf, outPath: C:\workspace\data\20220130\BD2EED092AC398DD70B811A8F0BB7B86\Welcome to Hwp\
+2022-01-30 12:36:35.4662  INFO - Image conversion was successful.
+2022-01-30 12:36:35.4662  INFO - ==================== End ====================

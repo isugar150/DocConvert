@@ -1,0 +1,393 @@
+2022-01-30 12:29:01.5087 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2022-01-30 12:29:01.5317 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2022-01-30 12:29:01.5317  WARN - Starting DocConvert Server..
+2022-01-30 12:29:01.5317  INFO - Program Directory: C:\Users\jmkim\Documents\GitHub\DocConvert\bin\Debug
+2022-01-30 12:29:01.5317  INFO - .Net Framework Version: 4.0.30319.42000
+2022-01-30 12:29:01.5317  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2022-01-30 12:29:01.5317  INFO - PC(Domain) Name: NAMEJM
+2022-01-30 12:29:01.5317  INFO - User Name: jmkim
+2022-01-30 12:29:01.5317  INFO - DocConvert Version: 2.0.8064.36631
+2022-01-30 12:29:01.5317  INFO - DocConvert PID: 11400
+2022-01-30 12:29:01.5317  INFO - DocConvert LogLevel: DEBUG
+2022-01-30 12:29:01.5317  INFO - DocConvert_Core LogLevel: DEBUG
+2022-01-30 12:29:01.5317  INFO - ------------ Parsing Ini File ------------
+2022-01-30 12:29:01.5317  INFO - - Bind IP: 0.0.0.0
+2022-01-30 12:29:01.5317  INFO - - Socket Port: 12000
+2022-01-30 12:29:01.5317  INFO - - Client KEY: c8d959df-226d-4860-bfab-8a75342feb10
+2022-01-30 12:29:01.5317  INFO - - Workspace Directory: C:\workspace
+2022-01-30 12:29:01.5317  INFO - - Product Name: DocConvert
+2022-01-30 12:29:01.5317  INFO - - SchedulerTime: 1,0
+2022-01-30 12:29:01.5317  INFO - - CleanWorkspaceSchedulerYn: True
+2022-01-30 12:29:01.5317  INFO - - CleanWorkspaceDay: 3
+2022-01-30 12:29:01.5317  INFO - - CleanLogSchedulerYn: True
+2022-01-30 12:29:01.5317  INFO - - CleanLogDay: 7
+2022-01-30 12:29:01.5317  INFO - - DRM useYn: False
+2022-01-30 12:29:01.5317  INFO - ------------------------------------------
+2022-01-30 12:29:01.5317  INFO - Hangul DLL has been registered in the registry.
+2022-01-30 12:29:01.5476  WARN - Socket Server Listen On 0.0.0.0:12000
+2022-01-30 12:29:01.5476  INFO - ============ [Scheduler] ============
+2022-01-30 12:29:01.5476  INFO - Next scheduler operation time: 2022-01-31 01:00
+2022-01-30 12:29:01.5476  INFO - If the workspace last modified date is past 2022-01-28 01:00
+2022-01-30 12:29:01.5476  INFO - If the log last modified date is past 2022-01-24 01:00
+2022-01-30 12:29:01.5476  INFO - =====================================
+2022-01-30 12:29:01.5476  INFO - Cleanup scheduler is working
+2022-01-30 12:29:01.5476  WARN - DocConvert Server Started in 2022-01-30 12:29:01
+2022-01-30 12:29:07.6263 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2022-01-30 12:29:07.6407 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2022-01-30 12:29:07.6407  WARN - Starting DocConvert Server..
+2022-01-30 12:29:07.6407  INFO - Program Directory: C:\Users\jmkim\Documents\GitHub\DocConvert\bin\Debug
+2022-01-30 12:29:07.6407  INFO - .Net Framework Version: 4.0.30319.42000
+2022-01-30 12:29:07.6407  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2022-01-30 12:29:07.6407  INFO - PC(Domain) Name: NAMEJM
+2022-01-30 12:29:07.6407  INFO - User Name: jmkim
+2022-01-30 12:29:07.6407  INFO - DocConvert Version: 2.0.8064.36631
+2022-01-30 12:29:07.6407  INFO - DocConvert PID: 14616
+2022-01-30 12:29:07.6572  INFO - DocConvert LogLevel: DEBUG
+2022-01-30 12:29:07.6572  INFO - DocConvert_Core LogLevel: DEBUG
+2022-01-30 12:29:07.6572  INFO - ------------ Parsing Ini File ------------
+2022-01-30 12:29:07.6572  INFO - - Bind IP: 0.0.0.0
+2022-01-30 12:29:07.6572  INFO - - Socket Port: 12000
+2022-01-30 12:29:07.6572  INFO - - Client KEY: c8d959df-226d-4860-bfab-8a75342feb10
+2022-01-30 12:29:07.6572  INFO - - Workspace Directory: C:\workspace
+2022-01-30 12:29:07.6572  INFO - - Product Name: DocConvert
+2022-01-30 12:29:07.6572  INFO - - SchedulerTime: 1,0
+2022-01-30 12:29:07.6572  INFO - - CleanWorkspaceSchedulerYn: True
+2022-01-30 12:29:07.6572  INFO - - CleanWorkspaceDay: 3
+2022-01-30 12:29:07.6572  INFO - - CleanLogSchedulerYn: True
+2022-01-30 12:29:07.6572  INFO - - CleanLogDay: 7
+2022-01-30 12:29:07.6572  INFO - - DRM useYn: False
+2022-01-30 12:29:07.6572  INFO - ------------------------------------------
+2022-01-30 12:29:07.6572  INFO - Hangul DLL has been registered in the registry.
+2022-01-30 12:29:07.6572  WARN - Socket Server Listen On 0.0.0.0:12000
+2022-01-30 12:29:07.6572  INFO - ============ [Scheduler] ============
+2022-01-30 12:29:07.6572  INFO - Next scheduler operation time: 2022-01-31 01:00
+2022-01-30 12:29:07.6572  INFO - If the workspace last modified date is past 2022-01-28 01:00
+2022-01-30 12:29:07.6572  INFO - If the log last modified date is past 2022-01-24 01:00
+2022-01-30 12:29:07.6572  INFO - =====================================
+2022-01-30 12:29:07.6572  INFO - Cleanup scheduler is working
+2022-01-30 12:29:07.6572  WARN - DocConvert Server Started in 2022-01-30 12:29:07
+2022-01-30 12:29:52.2233 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2022-01-30 12:29:52.2383 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2022-01-30 12:29:52.2383  WARN - Starting DocConvert Server..
+2022-01-30 12:29:52.2383  INFO - Program Directory: C:\Users\jmkim\Documents\GitHub\DocConvert\bin\Debug
+2022-01-30 12:29:52.2383  INFO - .Net Framework Version: 4.0.30319.42000
+2022-01-30 12:29:52.2383  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2022-01-30 12:29:52.2383  INFO - PC(Domain) Name: NAMEJM
+2022-01-30 12:29:52.2383  INFO - User Name: jmkim
+2022-01-30 12:29:52.2383  INFO - DocConvert Version: 2.0.8064.36631
+2022-01-30 12:29:52.2383  INFO - DocConvert PID: 316
+2022-01-30 12:29:52.2383  INFO - DocConvert LogLevel: DEBUG
+2022-01-30 12:29:52.2383  INFO - DocConvert_Core LogLevel: DEBUG
+2022-01-30 12:29:52.2383  INFO - ------------ Parsing Ini File ------------
+2022-01-30 12:29:52.2383  INFO - - Bind IP: 0.0.0.0
+2022-01-30 12:29:52.2383  INFO - - Socket Port: 12000
+2022-01-30 12:29:52.2383  INFO - - Client KEY: c8d959df-226d-4860-bfab-8a75342feb10
+2022-01-30 12:29:52.2383  INFO - - Workspace Directory: C:\workspace
+2022-01-30 12:29:52.2383  INFO - - Product Name: DocConvert
+2022-01-30 12:29:52.2383  INFO - - SchedulerTime: 1,0
+2022-01-30 12:29:52.2383  INFO - - CleanWorkspaceSchedulerYn: True
+2022-01-30 12:29:52.2383  INFO - - CleanWorkspaceDay: 3
+2022-01-30 12:29:52.2383  INFO - - CleanLogSchedulerYn: True
+2022-01-30 12:29:52.2383  INFO - - CleanLogDay: 7
+2022-01-30 12:29:52.2383  INFO - - DRM useYn: False
+2022-01-30 12:29:52.2522  INFO - ------------------------------------------
+2022-01-30 12:29:52.2522  INFO - Hangul DLL has been registered in the registry.
+2022-01-30 12:29:52.2522  WARN - Socket Server Listen On 0.0.0.0:12000
+2022-01-30 12:29:52.2522  INFO - ============ [Scheduler] ============
+2022-01-30 12:29:52.2522  INFO - Next scheduler operation time: 2022-01-31 01:00
+2022-01-30 12:29:52.2522  INFO - If the workspace last modified date is past 2022-01-28 01:00
+2022-01-30 12:29:52.2522  INFO - If the log last modified date is past 2022-01-24 01:00
+2022-01-30 12:29:52.2522  INFO - =====================================
+2022-01-30 12:29:52.2522  INFO - Cleanup scheduler is working
+2022-01-30 12:29:52.2522  WARN - DocConvert Server Started in 2022-01-30 12:29:52
+2022-01-30 12:30:25.4015 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2022-01-30 12:30:25.4154 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2022-01-30 12:30:25.4154  WARN - Starting DocConvert Server..
+2022-01-30 12:30:25.4154  INFO - Program Directory: C:\Users\jmkim\Documents\GitHub\DocConvert\bin\Debug
+2022-01-30 12:30:25.4154  INFO - .Net Framework Version: 4.0.30319.42000
+2022-01-30 12:30:25.4154  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2022-01-30 12:30:25.4154  INFO - PC(Domain) Name: NAMEJM
+2022-01-30 12:30:25.4154  INFO - User Name: jmkim
+2022-01-30 12:30:25.4154  INFO - DocConvert Version: 2.0.8064.36631
+2022-01-30 12:30:25.4154  INFO - DocConvert PID: 15392
+2022-01-30 12:30:25.4154  INFO - DocConvert LogLevel: DEBUG
+2022-01-30 12:30:25.4154  INFO - DocConvert_Core LogLevel: DEBUG
+2022-01-30 12:30:25.4154  INFO - ------------ Parsing Ini File ------------
+2022-01-30 12:30:25.4234  INFO - - Bind IP: 0.0.0.0
+2022-01-30 12:30:25.4234  INFO - - Socket Port: 12000
+2022-01-30 12:30:25.4234  INFO - - Client KEY: c8d959df-226d-4860-bfab-8a75342feb10
+2022-01-30 12:30:25.4234  INFO - - Workspace Directory: C:\workspace
+2022-01-30 12:30:25.4234  INFO - - Product Name: DocConvert
+2022-01-30 12:30:25.4234  INFO - - SchedulerTime: 1,0
+2022-01-30 12:30:25.4234  INFO - - CleanWorkspaceSchedulerYn: True
+2022-01-30 12:30:25.4234  INFO - - CleanWorkspaceDay: 3
+2022-01-30 12:30:25.4234  INFO - - CleanLogSchedulerYn: True
+2022-01-30 12:30:25.4234  INFO - - CleanLogDay: 7
+2022-01-30 12:30:25.4234  INFO - - DRM useYn: False
+2022-01-30 12:30:25.4234  INFO - ------------------------------------------
+2022-01-30 12:30:25.4234  INFO - Hangul DLL has been registered in the registry.
+2022-01-30 12:30:25.4234  WARN - Socket Server Listen On 0.0.0.0:12000
+2022-01-30 12:30:25.4234  INFO - ============ [Scheduler] ============
+2022-01-30 12:30:25.4234  INFO - Next scheduler operation time: 2022-01-31 01:00
+2022-01-30 12:30:25.4234  INFO - If the workspace last modified date is past 2022-01-28 01:00
+2022-01-30 12:30:25.4234  INFO - If the log last modified date is past 2022-01-24 01:00
+2022-01-30 12:30:25.4234  INFO - =====================================
+2022-01-30 12:30:25.4234  INFO - Cleanup scheduler is working
+2022-01-30 12:30:25.4234  WARN - DocConvert Server Started in 2022-01-30 12:30:25
+2022-01-30 12:31:08.8151  INFO - Connect Client From: 127.0.0.1:58273  Connection time: 2022-01-30 오후 12:31:08
+2022-01-30 12:31:08.8799 DEBUG - Received messages from 127.0.0.1:58273
+{
+  "ClientKey": "c8d959df-226d-4860-bfab-8a75342feb10",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작.xlsx",
+  "ConvertImg": 0,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2022-01-30 12:31:08.8799 DEBUG - Method DocConvert Start ==>
+2022-01-30 12:31:08.8917 DEBUG - Initialized variable ========>
+2022-01-30 12:31:08.8917 DEBUG - workspacePath ===> C:\workspace
+2022-01-30 12:31:08.8917 DEBUG - tmpPath ===> C:\workspace\tmp
+2022-01-30 12:31:08.8917 DEBUG - srcFile ===> C:\workspace\tmp\Excel 시작.xlsx
+2022-01-30 12:31:08.8917 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20220130\09FACE967F4E3E56CFBE136E530CBFD3
+2022-01-30 12:31:08.8917 DEBUG - targetFile ===> C:\workspace\data\20220130\09FACE967F4E3E56CFBE136E530CBFD3\Excel 시작.xlsx
+2022-01-30 12:31:08.8917 DEBUG - =============================>
+2022-01-30 12:31:08.8917 DEBUG - Created DataTodayMD5Path Directory C:\workspace\data\20220130\09FACE967F4E3E56CFBE136E530CBFD3
+2022-01-30 12:31:08.8917 DEBUG - C:\workspace\tmp\Excel 시작.xlsx Move file to C:\workspace\data\20220130\09FACE967F4E3E56CFBE136E530CBFD3\Excel 시작.xlsx
+2022-01-30 12:31:08.8917 DEBUG - use DRM: False
+2022-01-30 12:31:08.8917 DEBUG - ============= Document To PDF Start =============>
+2022-01-30 12:31:17.8948 DEBUG - Document To PDF Processing time: 08.991
+2022-01-30 12:31:17.8948 DEBUG - =================================================>
+2022-01-30 12:31:18.0026 DEBUG - Response messages to 127.0.0.1:58273
+{
+  "FilePath": "/data/20220130/09FACE967F4E3E56CFBE136E530CBFD3/Excel 시작.pdf",
+  "PageCnt": 16,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2022-01-30 12:31:18.0026 DEBUG - All Processing time: 09.143
+2022-01-30 12:31:18.0026  INFO - Disconnected From:127.0.0.1:58273 Time: 2022-01-30 오후 12:31:18
+2022-01-30 12:32:56.8834 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2022-01-30 12:32:56.8984 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2022-01-30 12:32:56.8984  WARN - Starting DocConvert Server..
+2022-01-30 12:32:56.8984  INFO - Program Directory: C:\Users\jmkim\Documents\GitHub\DocConvert\bin\Debug
+2022-01-30 12:32:56.8984  INFO - .Net Framework Version: 4.0.30319.42000
+2022-01-30 12:32:56.8984  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2022-01-30 12:32:56.8984  INFO - PC(Domain) Name: NAMEJM
+2022-01-30 12:32:56.8984  INFO - User Name: jmkim
+2022-01-30 12:32:56.8984  INFO - DocConvert Version: 2.0.8064.36631
+2022-01-30 12:32:56.8984  INFO - DocConvert PID: 3016
+2022-01-30 12:32:56.8984  INFO - DocConvert LogLevel: DEBUG
+2022-01-30 12:32:56.8984  INFO - DocConvert_Core LogLevel: DEBUG
+2022-01-30 12:32:56.8984  INFO - ------------ Parsing Ini File ------------
+2022-01-30 12:32:56.9064  INFO - - Bind IP: 0.0.0.0
+2022-01-30 12:32:56.9064  INFO - - Socket Port: 12000
+2022-01-30 12:32:56.9064  INFO - - Client KEY: c8d959df-226d-4860-bfab-8a75342feb10
+2022-01-30 12:32:56.9064  INFO - - Workspace Directory: C:\workspace
+2022-01-30 12:32:56.9064  INFO - - Product Name: DocConvert
+2022-01-30 12:32:56.9064  INFO - - SchedulerTime: 1,0
+2022-01-30 12:32:56.9064  INFO - - CleanWorkspaceSchedulerYn: True
+2022-01-30 12:32:56.9064  INFO - - CleanWorkspaceDay: 3
+2022-01-30 12:32:56.9064  INFO - - CleanLogSchedulerYn: True
+2022-01-30 12:32:56.9064  INFO - - CleanLogDay: 7
+2022-01-30 12:32:56.9064  INFO - - DRM useYn: False
+2022-01-30 12:32:56.9064  INFO - ------------------------------------------
+2022-01-30 12:32:56.9064  INFO - Hangul DLL has been registered in the registry.
+2022-01-30 12:32:56.9064  WARN - Socket Server Listen On 0.0.0.0:12000
+2022-01-30 12:32:56.9064  INFO - ============ [Scheduler] ============
+2022-01-30 12:32:56.9064  INFO - Next scheduler operation time: 2022-01-31 01:00
+2022-01-30 12:32:56.9064  INFO - If the workspace last modified date is past 2022-01-28 01:00
+2022-01-30 12:32:56.9064  INFO - If the log last modified date is past 2022-01-24 01:00
+2022-01-30 12:32:56.9064  INFO - =====================================
+2022-01-30 12:32:56.9064  INFO - Cleanup scheduler is working
+2022-01-30 12:32:56.9249  WARN - DocConvert Server Started in 2022-01-30 12:32:56
+2022-01-30 12:33:14.2800  INFO - Connect Client From: 127.0.0.1:58420  Connection time: 2022-01-30 오후 12:33:14
+2022-01-30 12:33:14.3210 DEBUG - Received messages from 127.0.0.1:58420
+{
+  "ClientKey": "c8d959df-226d-4860-bfab-8a75342feb10",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작.xlsx",
+  "ConvertImg": 2,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2022-01-30 12:33:14.3210 DEBUG - Method DocConvert Start ==>
+2022-01-30 12:33:14.3456 DEBUG - Initialized variable ========>
+2022-01-30 12:33:14.3456 DEBUG - workspacePath ===> C:\workspace
+2022-01-30 12:33:14.3595 DEBUG - tmpPath ===> C:\workspace\tmp
+2022-01-30 12:33:14.3595 DEBUG - srcFile ===> C:\workspace\tmp\Excel 시작.xlsx
+2022-01-30 12:33:14.3595 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20220130\09FACE967F4E3E56CFBE136E530CBFD3
+2022-01-30 12:33:14.3595 DEBUG - targetFile ===> C:\workspace\data\20220130\09FACE967F4E3E56CFBE136E530CBFD3\Excel 시작.xlsx
+2022-01-30 12:33:14.3595 DEBUG - =============================>
+2022-01-30 12:33:14.3595 DEBUG - ============= PDF To Image Start =============>
+2022-01-30 12:33:15.0982 DEBUG - PDF To Image Processing time: 00.732
+2022-01-30 12:33:15.0982 DEBUG - ==============================================>
+2022-01-30 12:33:15.0982 DEBUG - ============= Create Zip Start =============>
+2022-01-30 12:33:15.1886 DEBUG - Create Zip Processing time: 00.080
+2022-01-30 12:33:15.1886 DEBUG - ==============================================>
+2022-01-30 12:33:15.2973 DEBUG - Response messages to 127.0.0.1:58420
+{
+  "FilePath": "/data/20220130/09FACE967F4E3E56CFBE136E530CBFD3/Excel 시작.zip",
+  "PageCnt": 16,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2022-01-30 12:33:15.2973 DEBUG - All Processing time: 00.995
+2022-01-30 12:33:15.2973  INFO - Disconnected From:127.0.0.1:58420 Time: 2022-01-30 오후 12:33:15
+2022-01-30 12:33:33.7257  INFO - Connect Client From: 127.0.0.1:58425  Connection time: 2022-01-30 오후 12:33:33
+2022-01-30 12:33:33.7257 DEBUG - Received messages from 127.0.0.1:58425
+{
+  "ClientKey": "c8d959df-226d-4860-bfab-8a75342feb10",
+  "Method": "DocConvert",
+  "FileName": "Excel 시작.xlsx",
+  "ConvertImg": 2,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2022-01-30 12:33:33.7257 DEBUG - Method DocConvert Start ==>
+2022-01-30 12:33:33.7257 DEBUG - Initialized variable ========>
+2022-01-30 12:33:33.7257 DEBUG - workspacePath ===> C:\workspace
+2022-01-30 12:33:33.7257 DEBUG - tmpPath ===> C:\workspace\tmp
+2022-01-30 12:33:33.7257 DEBUG - srcFile ===> C:\workspace\tmp\Excel 시작.xlsx
+2022-01-30 12:33:33.7257 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20220130\09FACE967F4E3E56CFBE136E530CBFD3
+2022-01-30 12:33:33.7257 DEBUG - targetFile ===> C:\workspace\data\20220130\09FACE967F4E3E56CFBE136E530CBFD3\Excel 시작.xlsx
+2022-01-30 12:33:33.7348 DEBUG - =============================>
+2022-01-30 12:33:33.7348 DEBUG - Created DataTodayMD5Path Directory C:\workspace\data\20220130\09FACE967F4E3E56CFBE136E530CBFD3
+2022-01-30 12:33:33.7348 DEBUG - C:\workspace\tmp\Excel 시작.xlsx Move file to C:\workspace\data\20220130\09FACE967F4E3E56CFBE136E530CBFD3\Excel 시작.xlsx
+2022-01-30 12:33:33.7348 DEBUG - use DRM: False
+2022-01-30 12:33:33.7348 DEBUG - ============= Document To PDF Start =============>
+2022-01-30 12:33:41.2597 DEBUG - Document To PDF Processing time: 07.518
+2022-01-30 12:33:41.2597 DEBUG - =================================================>
+2022-01-30 12:33:41.2597 DEBUG - ============= PDF To Image Start =============>
+2022-01-30 12:33:41.8947 DEBUG - PDF To Image Processing time: 00.632
+2022-01-30 12:33:41.8947 DEBUG - ==============================================>
+2022-01-30 12:33:41.8947 DEBUG - ============= Create Zip Start =============>
+2022-01-30 12:33:41.9617 DEBUG - Create Zip Processing time: 00.061
+2022-01-30 12:33:41.9617 DEBUG - ==============================================>
+2022-01-30 12:33:42.0584 DEBUG - Response messages to 127.0.0.1:58425
+{
+  "FilePath": "/data/20220130/09FACE967F4E3E56CFBE136E530CBFD3/Excel 시작.zip",
+  "PageCnt": 16,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2022-01-30 12:33:42.0584 DEBUG - All Processing time: 08.332
+2022-01-30 12:33:42.0584  INFO - Disconnected From:127.0.0.1:58425 Time: 2022-01-30 오후 12:33:42
+2022-01-30 12:36:32.5717  INFO - Connect Client From: 127.0.0.1:58514  Connection time: 2022-01-30 오후 12:36:32
+2022-01-30 12:36:32.5717 DEBUG - Received messages from 127.0.0.1:58514
+{
+  "ClientKey": "c8d959df-226d-4860-bfab-8a75342feb10",
+  "Method": "DocConvert",
+  "FileName": "Welcome to Hwp.hwp",
+  "ConvertImg": 2,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2022-01-30 12:36:32.5717 DEBUG - Method DocConvert Start ==>
+2022-01-30 12:36:32.5717 DEBUG - Initialized variable ========>
+2022-01-30 12:36:32.5717 DEBUG - workspacePath ===> C:\workspace
+2022-01-30 12:36:32.5783 DEBUG - tmpPath ===> C:\workspace\tmp
+2022-01-30 12:36:32.5783 DEBUG - srcFile ===> C:\workspace\tmp\Welcome to Hwp.hwp
+2022-01-30 12:36:32.5783 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20220130\BD2EED092AC398DD70B811A8F0BB7B86
+2022-01-30 12:36:32.5783 DEBUG - targetFile ===> C:\workspace\data\20220130\BD2EED092AC398DD70B811A8F0BB7B86\Welcome to Hwp.hwp
+2022-01-30 12:36:32.5783 DEBUG - =============================>
+2022-01-30 12:36:32.5783 DEBUG - Created DataTodayMD5Path Directory C:\workspace\data\20220130\BD2EED092AC398DD70B811A8F0BB7B86
+2022-01-30 12:36:32.5783 DEBUG - C:\workspace\tmp\Welcome to Hwp.hwp Move file to C:\workspace\data\20220130\BD2EED092AC398DD70B811A8F0BB7B86\Welcome to Hwp.hwp
+2022-01-30 12:36:32.5783 DEBUG - use DRM: False
+2022-01-30 12:36:32.5783 DEBUG - ============= Document To PDF Start =============>
+2022-01-30 12:36:35.3784 DEBUG - Document To PDF Processing time: 02.792
+2022-01-30 12:36:35.3784 DEBUG - =================================================>
+2022-01-30 12:36:35.3784 DEBUG - ============= PDF To Image Start =============>
+2022-01-30 12:36:35.4662 DEBUG - PDF To Image Processing time: 00.085
+2022-01-30 12:36:35.4692 DEBUG - ==============================================>
+2022-01-30 12:36:35.4692 DEBUG - ============= Create Zip Start =============>
+2022-01-30 12:36:35.4883 DEBUG - Create Zip Processing time: 00.017
+2022-01-30 12:36:35.4883 DEBUG - ==============================================>
+2022-01-30 12:36:35.4883 DEBUG - Response messages to 127.0.0.1:58514
+{
+  "FilePath": "/data/20220130/BD2EED092AC398DD70B811A8F0BB7B86/Welcome to Hwp.zip",
+  "PageCnt": 5,
+  "ResultCode": "0",
+  "Message": "success"
+}
+2022-01-30 12:36:35.4883 DEBUG - All Processing time: 02.923
+2022-01-30 12:36:35.4883  INFO - Disconnected From:127.0.0.1:58514 Time: 2022-01-30 오후 12:36:35

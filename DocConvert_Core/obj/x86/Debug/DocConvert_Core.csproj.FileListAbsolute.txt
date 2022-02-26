@@ -108,7 +108,6 @@ C:\Users\JMKIM\Documents\GitHub\DocConvert\bin\Debug\FilePathCheckerModuleExampl
 C:\Users\JMKIM\Documents\GitHub\DocConvert\bin\Debug\pdfium.dll
 C:\Users\JMKIM\Documents\GitHub\DocConvert\bin\Debug\DocConvert_Core.dll
 C:\Users\JMKIM\Documents\GitHub\DocConvert\bin\Debug\DocConvert_Core.pdb
-C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert_Core\obj\x86\Debug\DocConvert_Core.csproj.AssemblyReference.cache
 C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert_Core\obj\x86\Debug\Interop.HWPCONTROLLib.dll
 C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert_Core\obj\x86\Debug\AxInterop.HWPCONTROLLib.dll
 C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert_Core\obj\x86\Debug\DocConvert_Core.csproj.ResolveComReference.cache

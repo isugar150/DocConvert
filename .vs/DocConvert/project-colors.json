@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c0b7ffb0-edcc-47b5-bdf5-db867d0f7951": {
+      "ProjectGuid": "c0b7ffb0-edcc-47b5-bdf5-db867d0f7951",
+      "DisplayName": "DocConvert_Util",
+      "ColorIndex": 0
+    },
+    "e66d151a-0a14-4ee5-97d8-dfc33b913ae0": {
+      "ProjectGuid": "e66d151a-0a14-4ee5-97d8-dfc33b913ae0",
+      "DisplayName": "DocConvert_Core",
+      "ColorIndex": 1
+    },
+    "b9a24f2e-221a-4b7b-a084-8da4a145d731": {
+      "ProjectGuid": "b9a24f2e-221a-4b7b-a084-8da4a145d731",
+      "DisplayName": "DocConvert",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

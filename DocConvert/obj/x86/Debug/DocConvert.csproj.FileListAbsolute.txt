@@ -33,3 +33,4 @@ C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert\obj\x86\Debug\DocConvert.c
 C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert\obj\x86\Debug\DocConvert.csproj.CopyComplete
 C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert\obj\x86\Debug\DocConvert.exe
 C:\Users\JMKIM\Documents\GitHub\DocConvert\DocConvert\obj\x86\Debug\DocConvert.pdb
+C:\Users\jmkim\Documents\GitHub\DocConvert\DocConvert\obj\x86\Debug\DocConvert.csproj.SuggestedBindingRedirects.cache

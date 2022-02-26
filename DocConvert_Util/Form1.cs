@@ -22,8 +22,8 @@ namespace DocConvert_Util
 {
     public partial class Form1 : Form
     {
-        string openDialogFilter = "지원하는 형식 (*.docx;*.doc;*.hwp;*.xlsx;*.xls;*.csv;*.pptx;*.ppt;*.pdf;*.txt;*.html;)|*.docx;*.doc;*.hwp;*.xlsx;*.xls;*.csv;*.pptx;*.ppt;*.ppt;*.pdf;*.txt;*.html;" +
-                "|Word 형식 (*.docx;*.doc;*.hwp;*.txt;*.html;)|*.docx;*.doc;*.hwp;*.txt;*.html;" +
+        string openDialogFilter = "지원하는 형식 (*.docx;*.doc;*.hwp;*.hwpx;*.xlsx;*.xls;*.csv;*.pptx;*.ppt;*.pdf;*.txt;*.html;)|*.docx;*.doc;*.hwp;*.hwpx;*.xlsx;*.xls;*.csv;*.pptx;*.ppt;*.ppt;*.pdf;*.txt;*.html;" +
+                "|Word 형식 (*.docx;*.doc;*.hwp;*.hwpx;*.txt;*.html;)|*.docx;*.doc;*.hwp;*.hwpx;*.txt;*.html;" +
                 "|Cell 형식 (*.xlsx;*.xls;*.csv;)|*.xlsx;*.xls*.csv;;" +
                 "|PPT 형식 (*.pptx;*.ppt;)|*.pptx;*.ppt;" +
                 "|PDF 형식 (*.pdf)|*.pdf" +
@@ -82,7 +82,7 @@ namespace DocConvert_Util
             {
                 status = PowerPointConvert_Core.PowerPointSaveAs(targetFile, newPdfFile, docPassword, PAGINGNUM, APPVISIBLE);
             }
-            else if (Path.GetExtension(targetFile).Equals(".hwp"))
+            else if (Path.GetExtension(targetFile).Equals(".hwp") || Path.GetExtension(targetFile).Equals(".hwpx"))
             {
                 Thread HWPConvert = new Thread(() =>
                 {

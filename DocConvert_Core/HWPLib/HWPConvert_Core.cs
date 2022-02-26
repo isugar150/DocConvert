@@ -3,6 +3,7 @@ using DocConvert_Core.interfaces;
 using NLog;
 using System;
 using System.Diagnostics;
+using System.IO;
 using System.Reflection;
 using System.Threading;
 
@@ -49,41 +50,86 @@ namespace DocConvert_Core.HWPLib
 
                 axHwpCtrl.RegisterModule("FilePathCheckDLL", "FilePathCheckerModuleExample");
                 #region 문서 열기
-                if (axHwpCtrl.Open(FilePath, "HWP", "suspendpassword:TRUE;forceopen:TRUE;versionwarning:FALSE"))
+                if (Path.GetFileNameWithoutExtension("FilePath").Equals("HWP"))
                 {
-                    #region 페이지수 얻기
-                    if (PageCounting)
+                    if (axHwpCtrl.Open(FilePath, "HWP", "suspendpassword:TRUE;forceopen:TRUE;versionwarning:FALSE"))
                     {
-                        try
+                        #region 페이지수 얻기
+                        if (PageCounting)
                         {
-                            returnValue.PageCount = axHwpCtrl.PageCount;
+                            try
+                            {
+                                returnValue.PageCount = axHwpCtrl.PageCount;
+                            }
+                            catch (Exception e1)
+                            {
+                                returnValue.PageCount = -1;
+                                logger.Error("Error fetching page count");
+                                logger.Error("Error detail: " + e1.Message);
+                            }
                         }
-                        catch (Exception e1)
-                        {
-                            returnValue.PageCount = -1;
-                            logger.Error("Error fetching page count");
-                            logger.Error("Error detail: " + e1.Message);
-                        }
+                        #endregion
+                        #region PDF저장
+                        axHwpCtrl.SaveAs(outPath, "PDF", "");
+                        #endregion
+                        #region 문서 닫기
+                        axHwpCtrl.Clear(1);
+                        #endregion
+                        returnValue.isSuccess = true;
+                        returnValue.Message = "Conversion was successful.";
+                        return returnValue;
                     }
-                    #endregion
-                    #region PDF저장
-                    axHwpCtrl.SaveAs(outPath, "PDF", "");
-                    #endregion
-                    #region 문서 닫기
-                    axHwpCtrl.Clear(1);
-                    #endregion
-                    returnValue.isSuccess = true;
-                    returnValue.Message = "Conversion was successful.";
-                    return returnValue;
+                    else
+                    {
+                        returnValue.isSuccess = false;
+                        returnValue.Message = "Conversion failure (Unknown error)";
+                        return returnValue;
+                    }
+                }
+                else if(Path.GetFileNameWithoutExtension("FilePath").Equals("HWPX"))
+                {
+                    if (axHwpCtrl.Open(FilePath, "HWPX", "suspendpassword:TRUE;forceopen:TRUE;versionwarning:FALSE"))
+                    {
+                        #region 페이지수 얻기
+                        if (PageCounting)
+                        {
+                            try
+                            {
+                                returnValue.PageCount = axHwpCtrl.PageCount;
+                            }
+                            catch (Exception e1)
+                            {
+                                returnValue.PageCount = -1;
+                                logger.Error("Error fetching page count");
+                                logger.Error("Error detail: " + e1.Message);
+                            }
+                        }
+                        #endregion
+                        #region PDF저장
+                        axHwpCtrl.SaveAs(outPath, "PDF", "");
+                        #endregion
+                        #region 문서 닫기
+                        axHwpCtrl.Clear(1);
+                        #endregion
+                        returnValue.isSuccess = true;
+                        returnValue.Message = "Conversion was successful.";
+                        return returnValue;
+                    }
+                    else
+                    {
+                        returnValue.isSuccess = false;
+                        returnValue.Message = "Conversion failure (Unknown error)";
+                        return returnValue;
+                    }
                 }
                 else
                 {
                     returnValue.isSuccess = false;
-                    returnValue.Message = "Conversion failure (Unknown error)";
+                    returnValue.Message = "Invalid HWP format";
                     return returnValue;
                 }
                 #endregion
-            }
+            } 
 
             catch (Exception e1)
             {

@@ -1,0 +1,53 @@
+2022-02-25 22:42:02.3867  INFO - ==================== Start ====================
+2022-02-25 22:42:02.4106  INFO - Method: HwpSaveAs, FilePath: C:\Users\jmkim\Desktop\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.hwpx, outPath: C:\Users\jmkim\Desktop\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.pdf
+2022-02-25 22:42:03.6826  INFO - ==================== End ====================
+2022-02-25 22:42:03.7155 ERROR - ======= Method: pdfPageCount =======
+2022-02-25 22:42:03.7205 ERROR -    위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   위치: System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   위치: System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   위치: PdfiumViewer.PdfDocument.Load(String path, String password)
+   위치: PdfiumViewer.PdfDocument.Load(String path)
+   위치: DocConvert_Core.imageLib.ConvertImg.pdfPageCount(String SourcePDF) 파일 C:\Users\jmkim\Documents\GitHub\DocConvert\DocConvert_Core\imageLib\ConvertImg.cs:줄 287
+
+2022-02-25 22:42:03.7205 ERROR - Image counting failure: 'C:\Users\jmkim\Desktop\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.pdf' 파일을 찾을 수 없습니다.
+2022-02-25 22:42:03.7205 ERROR - ================ End ================
+2022-02-25 22:42:03.7205  INFO - ==================== Start ====================
+2022-02-25 22:42:03.7205  INFO - Method: PDFtoPng, FilePath: C:\Users\jmkim\Desktop\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.pdf, outPath: C:\Users\jmkim\Desktop\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ\
+2022-02-25 22:42:03.7205 ERROR - ======= Method: PDFtoPng =======
+2022-02-25 22:42:03.7205 ERROR -    위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   위치: System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   위치: System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   위치: PdfiumViewer.PdfDocument.Load(String path, String password)
+   위치: PdfiumViewer.PdfDocument.Load(String path)
+   위치: DocConvert_Core.imageLib.ConvertImg.PDFtoPng(String SourcePDF, String outPath, PdfRenderFlags quality) 파일 C:\Users\jmkim\Documents\GitHub\DocConvert\DocConvert_Core\imageLib\ConvertImg.cs:줄 210
+
+2022-02-25 22:42:03.7205 ERROR - Conversion failure: 'C:\Users\jmkim\Desktop\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.pdf' 파일을 찾을 수 없습니다.
+2022-02-25 22:42:03.7205 ERROR - ================ End ================
+2022-02-25 22:47:02.3454  INFO - ==================== Start ====================
+2022-02-25 22:47:02.3605  INFO - Method: HwpSaveAs, FilePath: C:\Users\jmkim\Desktop\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.hwpx, outPath: C:\Users\jmkim\Desktop\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.pdf
+2022-02-25 22:47:04.8961  INFO - ==================== End ====================
+2022-02-25 22:47:04.9237  INFO - ==================== Start ====================
+2022-02-25 22:47:04.9237  INFO - Method: PDFtoPng, FilePath: C:\Users\jmkim\Desktop\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.pdf, outPath: C:\Users\jmkim\Desktop\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ\
+2022-02-25 22:47:04.9237  INFO - Image conversion was successful.
+2022-02-25 22:47:04.9237  INFO - ==================== End ====================
+2022-02-25 22:49:56.6402  INFO - ==================== Start ====================
+2022-02-25 22:49:56.6561  INFO - Method: HwpSaveAs, FilePath: C:\Users\jmkim\Desktop\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.hwpx, outPath: C:\Users\jmkim\Desktop\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.pdf
+2022-02-25 22:49:58.1039  INFO - ==================== End ====================
+2022-02-25 22:51:53.9243  INFO - ==================== Start ====================
+2022-02-25 22:51:53.9243  INFO - Method: HwpSaveAs, FilePath: C:\workspace\data\20220225\848682C9C736BA574BC4C9E04B3CFF43\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.hwpx, outPath: C:\workspace\data\20220225\848682C9C736BA574BC4C9E04B3CFF43\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.pdf
+2022-02-25 22:51:54.9338  INFO - ==================== End ====================
+2022-02-25 22:51:54.9418  INFO - ==================== Start ====================
+2022-02-25 22:51:54.9418  INFO - Method: PDFtoPng, FilePath: C:\workspace\data\20220225\848682C9C736BA574BC4C9E04B3CFF43\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.pdf, outPath: C:\workspace\data\20220225\848682C9C736BA574BC4C9E04B3CFF43\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ\
+2022-02-25 22:51:54.9418 ERROR - ======= Method: PDFtoPng =======
+2022-02-25 22:51:54.9418 ERROR -    위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   위치: System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   위치: System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   위치: PdfiumViewer.PdfDocument.Load(String path, String password)
+   위치: PdfiumViewer.PdfDocument.Load(String path)
+   위치: DocConvert_Core.imageLib.ConvertImg.PDFtoPng(String SourcePDF, String outPath, PdfRenderFlags quality)
+
+2022-02-25 22:51:54.9418 ERROR - Conversion failure: 'C:\workspace\data\20220225\848682C9C736BA574BC4C9E04B3CFF43\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.pdf' 파일을 찾을 수 없습니다.
+2022-02-25 22:51:54.9418 ERROR - ================ End ================
+2022-02-25 22:51:54.9418  INFO - ==================== End ====================
+2022-02-25 22:52:33.9407  INFO - ==================== Start ====================
+2022-02-25 22:52:33.9536  INFO - Method: HwpSaveAs, FilePath: C:\workspace\data\20220225\848682C9C736BA574BC4C9E04B3CFF43\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.hwpx, outPath: C:\workspace\data\20220225\848682C9C736BA574BC4C9E04B3CFF43\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.pdf

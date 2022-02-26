@@ -1,0 +1,105 @@
+2022-02-25 22:51:35.9878 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2022-02-25 22:51:36.0057 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2022-02-25 22:51:36.0057  WARN - Starting DocConvert Server..
+2022-02-25 22:51:36.0057  INFO - Program Directory: C:\Users\jmkim\Documents\GitHub\DocConvert\bin\Debug
+2022-02-25 22:51:36.0057  INFO - .Net Framework Version: 4.0.30319.42000
+2022-02-25 22:51:36.0057  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2022-02-25 22:51:36.0057  INFO - PC(Domain) Name: NAMEJM
+2022-02-25 22:51:36.0057  INFO - User Name: jmkim
+2022-02-25 22:51:36.0057  INFO - DocConvert Version: 2.0.8091.41145
+2022-02-25 22:51:36.0057  INFO - DocConvert PID: 10480
+2022-02-25 22:51:36.0057  INFO - DocConvert LogLevel: DEBUG
+2022-02-25 22:51:36.0057  INFO - DocConvert_Core LogLevel: DEBUG
+2022-02-25 22:51:36.0057  INFO - ------------ Parsing Ini File ------------
+2022-02-25 22:51:36.0161  INFO - - Bind IP: 0.0.0.0
+2022-02-25 22:51:36.0161  INFO - - Socket Port: 12000
+2022-02-25 22:51:36.0161  INFO - - Client KEY: c8d959df-226d-4860-bfab-8a75342feb10
+2022-02-25 22:51:36.0161  INFO - - Workspace Directory: C:\workspace
+2022-02-25 22:51:36.0161  INFO - - Product Name: DocConvert
+2022-02-25 22:51:36.0161  INFO - - SchedulerTime: 1,0
+2022-02-25 22:51:36.0161  INFO - - CleanWorkspaceSchedulerYn: True
+2022-02-25 22:51:36.0161  INFO - - CleanWorkspaceDay: 3
+2022-02-25 22:51:36.0161  INFO - - CleanLogSchedulerYn: True
+2022-02-25 22:51:36.0161  INFO - - CleanLogDay: 7
+2022-02-25 22:51:36.0161  INFO - - DRM useYn: False
+2022-02-25 22:51:36.0161  INFO - ------------------------------------------
+2022-02-25 22:51:36.0161  INFO - Hangul DLL has been registered in the registry.
+2022-02-25 22:51:36.0161  WARN - Socket Server Listen On 0.0.0.0:12000
+2022-02-25 22:51:36.0161  INFO - ============ [Scheduler] ============
+2022-02-25 22:51:36.0161  INFO - Next scheduler operation time: 2022-02-26 01:00
+2022-02-25 22:51:36.0161  INFO - If the workspace last modified date is past 2022-02-23 01:00
+2022-02-25 22:51:36.0161  INFO - If the log last modified date is past 2022-02-19 01:00
+2022-02-25 22:51:36.0161  INFO - =====================================
+2022-02-25 22:51:36.0161  INFO - Cleanup scheduler is working
+2022-02-25 22:51:36.0161  WARN - DocConvert Server Started in 2022-02-25 22:51:36
+2022-02-25 22:51:53.8228  INFO - Connect Client From: 127.0.0.1:8585  Connection time: 2022-02-25 오후 10:51:53
+2022-02-25 22:51:53.8994 DEBUG - Received messages from 127.0.0.1:8585
+{
+  "ClientKey": "c8d959df-226d-4860-bfab-8a75342feb10",
+  "Method": "DocConvert",
+  "FileName": "ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.hwpx",
+  "ConvertImg": 2,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2022-02-25 22:51:53.8994 DEBUG - Method DocConvert Start ==>
+2022-02-25 22:51:53.9064 DEBUG - Initialized variable ========>
+2022-02-25 22:51:53.9064 DEBUG - workspacePath ===> C:\workspace
+2022-02-25 22:51:53.9064 DEBUG - tmpPath ===> C:\workspace\tmp
+2022-02-25 22:51:53.9064 DEBUG - srcFile ===> C:\workspace\tmp\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.hwpx
+2022-02-25 22:51:53.9064 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20220225\848682C9C736BA574BC4C9E04B3CFF43
+2022-02-25 22:51:53.9064 DEBUG - targetFile ===> C:\workspace\data\20220225\848682C9C736BA574BC4C9E04B3CFF43\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.hwpx
+2022-02-25 22:51:53.9064 DEBUG - =============================>
+2022-02-25 22:51:53.9064 DEBUG - Created DataTodayMD5Path Directory C:\workspace\data\20220225\848682C9C736BA574BC4C9E04B3CFF43
+2022-02-25 22:51:53.9064 DEBUG - C:\workspace\tmp\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.hwpx Move file to C:\workspace\data\20220225\848682C9C736BA574BC4C9E04B3CFF43\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.hwpx
+2022-02-25 22:51:53.9064 DEBUG - use DRM: False
+2022-02-25 22:51:53.9064 DEBUG - ============= Document To PDF Start =============>
+2022-02-25 22:51:54.9418 DEBUG - Document To PDF Processing time: 01.023
+2022-02-25 22:51:54.9418 DEBUG - =================================================>
+2022-02-25 22:51:54.9418 DEBUG - ============= PDF To Image Start =============>
+2022-02-25 22:51:54.9418 ERROR - ERROR CODE: 1000
+2022-02-25 22:51:54.9418 ERROR - ERROR MESSAGE: 'C:\workspace\data\20220225\848682C9C736BA574BC4C9E04B3CFF43\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.pdf' 파일을 찾을 수 없습니다.
+2022-02-25 22:51:54.9418 ERROR - ERROR STACKTRACE
+   위치: DocConvert_Core.imageLib.ConvertImg.PDFtoPng(String SourcePDF, String outPath, PdfRenderFlags quality)
+   위치: DocConvert.Flow.DocConvert._DocConvert(String fileName, String docPassword, Int32 convertImg, String drmUseYn, String drmType)
+   위치: DocConvert.Network.Client.Client_Completed(Object sender, SocketAsyncEventArgs e)
+2022-02-25 22:51:54.9418 DEBUG - Processing time: 01.075
+2022-02-25 22:51:54.9553  INFO - Disconnected From:127.0.0.1:8585 Time: 2022-02-25 오후 10:51:54
+2022-02-25 22:52:33.9407  INFO - Connect Client From: 127.0.0.1:8611  Connection time: 2022-02-25 오후 10:52:33
+2022-02-25 22:52:33.9407 DEBUG - Received messages from 127.0.0.1:8611
+{
+  "ClientKey": "c8d959df-226d-4860-bfab-8a75342feb10",
+  "Method": "DocConvert",
+  "FileName": "ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.hwpx",
+  "ConvertImg": 2,
+  "DocPassword": "",
+  "DRM_UseYn": "n",
+  "DRM_Type": ""
+}
+2022-02-25 22:52:33.9407 DEBUG - Method DocConvert Start ==>
+2022-02-25 22:52:33.9407 DEBUG - Initialized variable ========>
+2022-02-25 22:52:33.9407 DEBUG - workspacePath ===> C:\workspace
+2022-02-25 22:52:33.9407 DEBUG - tmpPath ===> C:\workspace\tmp
+2022-02-25 22:52:33.9407 DEBUG - srcFile ===> C:\workspace\tmp\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.hwpx
+2022-02-25 22:52:33.9407 DEBUG - dataTodayMD5Path ===> C:\workspace\data\20220225\848682C9C736BA574BC4C9E04B3CFF43
+2022-02-25 22:52:33.9407 DEBUG - targetFile ===> C:\workspace\data\20220225\848682C9C736BA574BC4C9E04B3CFF43\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.hwpx
+2022-02-25 22:52:33.9407 DEBUG - =============================>
+2022-02-25 22:52:33.9407 DEBUG - C:\workspace\tmp\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.hwpx Move file to C:\workspace\data\20220225\848682C9C736BA574BC4C9E04B3CFF43\ㄴㅇㄹㄹㄴㅁㅇㄹㄴㅁㅇㄹ.hwpx
+2022-02-25 22:52:33.9407 DEBUG - use DRM: False
+2022-02-25 22:52:33.9407 DEBUG - ============= Document To PDF Start =============>

@@ -1,0 +1,7 @@
+2022-02-11 19:26:23.8648  INFO - ==================== Start ====================
+2022-02-11 19:26:23.8853  INFO - Method: HwpSaveAs, FilePath: C:\Users\jmkim\Desktop\900.hwp, outPath: C:\Users\jmkim\Desktop\900.pdf
+2022-02-11 19:27:43.8263  INFO - ==================== End ====================
+2022-02-11 19:27:45.3560  INFO - ==================== Start ====================
+2022-02-11 19:27:45.3560  INFO - Method: PDFtoPng, FilePath: C:\Users\jmkim\Desktop\900.pdf, outPath: C:\Users\jmkim\Desktop\900\
+2022-02-11 19:28:18.5423  INFO - Image conversion was successful.
+2022-02-11 19:28:18.5423  INFO - ==================== End ====================

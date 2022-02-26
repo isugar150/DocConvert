@@ -1,0 +1,51 @@
+2022-01-29 20:21:05.6448 FATAL - 
+          _____              _____                          _   
+         |  __ \            / ____|                        | |  
+         | |  | | ___   ___| |     ___  _ ____   _____ _ __| |_ 
+         | |  | |/ _ \ / __| |    / _ \| '_ \ \ / / _ \ '__| __|
+         | |__| | (_) | (__| |___| (_) | | | \ V /  __/ |  | |_ 
+         |_____/ \___/ \___|\_____\___/|_| |_|\_/ \___|_|   \__|
+          / ____|                                               
+         | (___   ___ _ ____   _____ _ __                       
+          \___ \ / _ \ '__\ \ / / _ \ '__|                      
+          ____) |  __/ |   \ V /  __/ |                         
+         |_____/ \___|_|    \_/ \___|_|  
+
+                
+2022-01-29 20:21:05.6692 FATAL -          Copyright© 2021. Jm's Corp. All rights reserved.
+
+
+2022-01-29 20:21:05.6692  WARN - Starting DocConvert Server..
+2022-01-29 20:21:05.6692  INFO - Program Directory: C:\Users\jmkim\Documents\GitHub\DocConvert\bin\Debug
+2022-01-29 20:21:05.6692  INFO - .Net Framework Version: 4.0.30319.42000
+2022-01-29 20:21:05.6692  INFO - OS Version: Microsoft Windows NT 6.2.9200.0
+2022-01-29 20:21:05.6692  INFO - PC(Domain) Name: NAMEJM
+2022-01-29 20:21:05.6722  INFO - User Name: jmkim
+2022-01-29 20:21:05.6722  INFO - DocConvert Version: 2.0.8064.36631
+2022-01-29 20:21:05.6722  INFO - DocConvert PID: 3320
+2022-01-29 20:21:05.6722  INFO - DocConvert LogLevel: DEBUG
+2022-01-29 20:21:05.6722  INFO - DocConvert_Core LogLevel: DEBUG
+2022-01-29 20:21:05.6722  INFO - ------------ Parsing Ini File ------------
+2022-01-29 20:21:05.6722  INFO - - Bind IP: 0.0.0.0
+2022-01-29 20:21:05.6722  INFO - - Socket Port: 12000
+2022-01-29 20:21:05.6722  INFO - - Client KEY: c8d959df-226d-4860-bfab-8a75342feb10
+2022-01-29 20:21:05.6722  INFO - - Workspace Directory: C:\workspace
+2022-01-29 20:21:05.6722  INFO - - Product Name: DocConvert
+2022-01-29 20:21:05.6722  INFO - - SchedulerTime: 1,0
+2022-01-29 20:21:05.6722  INFO - - CleanWorkspaceSchedulerYn: True
+2022-01-29 20:21:05.6722  INFO - - CleanWorkspaceDay: 3
+2022-01-29 20:21:05.6722  INFO - - CleanLogSchedulerYn: True
+2022-01-29 20:21:05.6722  INFO - - CleanLogDay: 7
+2022-01-29 20:21:05.6722  INFO - - DRM useYn: False
+2022-01-29 20:21:05.6722  INFO - ------------------------------------------
+2022-01-29 20:21:05.6722  INFO - Created tmp Directory C:\workspace\tmp
+2022-01-29 20:21:05.6722  INFO - Created data Directory C:\workspace\data
+2022-01-29 20:21:05.6722  INFO - Hangul DLL has been registered in the registry.
+2022-01-29 20:21:05.6722  WARN - Socket Server Listen On 0.0.0.0:12000
+2022-01-29 20:21:05.6882  INFO - ============ [Scheduler] ============
+2022-01-29 20:21:05.6882  INFO - Next scheduler operation time: 2022-01-30 01:00
+2022-01-29 20:21:05.6882  INFO - If the workspace last modified date is past 2022-01-27 01:00
+2022-01-29 20:21:05.6882  INFO - If the log last modified date is past 2022-01-23 01:00
+2022-01-29 20:21:05.6882  INFO - =====================================
+2022-01-29 20:21:05.6882  INFO - Cleanup scheduler is working
+2022-01-29 20:21:05.6882  WARN - DocConvert Server Started in 2022-01-29 20:21:05

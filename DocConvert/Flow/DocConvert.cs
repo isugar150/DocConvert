@@ -213,7 +213,7 @@ namespace DocConvert.Flow
             {
                 status = PowerPointConvert_Core.PowerPointSaveAs(targetFile.FullName, newPdfFile.FullName, docPassword, PAGINGNUM, APPVISIBLE);
             }
-            else if (Path.GetExtension(targetFile.FullName).Equals(".hwp"))
+            else if (Path.GetExtension(targetFile.FullName).Equals(".hwp") || Path.GetExtension(targetFile.FullName).Equals(".hwpx"))
             {
                 while (Program.isHwpConverting)
                 {
