@@ -6,11 +6,6 @@
 * 권장 한글 버전: 2010 이상 - 마이너 업데이트 필수 (https://www.hancom.com/cs_center/csDownload.do)
 * 권장 운영체제: Windows 10이상, Windows Server 2016이상
 * 작업 공간폴더, 로그 자동정리 스케줄러 추가 (Default: 매일 00시 실행)  
-* 웹 캡쳐 두가지 방식  
-  * PhantomJS  
-    * 빠르고 가벼우나 캡쳐가 완벽하게 안됨.
-  * CefSharp (Chromium 기반)
-    * 크로미움 브라우저로 거의 완벽하게 캡쳐.
 
 ## 설치 가이드
 1. 압축 해제후 DocConvert_Server.ini 환경에 맞게 설정
