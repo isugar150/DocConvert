@@ -32,7 +32,7 @@
 * 서버가 정상 동작하는지 가장빠르게 확인할수있는 프로그램  
 ![image](https://user-images.githubusercontent.com/13088077/80710846-5f2ea080-8b2a-11ea-86f0-030d05112780.png)  
 <DocConvert 유틸 메인화면>  
-* 자바 개발시 서버에 요청하고 다운로드받는 작업을 도와주는 API
+* 자바 개발시 서버에 요청하고 다운로드받는 작업을 도와주는 라이브러리
 ![image](https://user-images.githubusercontent.com/13088077/80711207-f136a900-8b2a-11ea-869e-1d4eb244a901.png)  
 <JAVA API를 사용하여 변환시 CentOS 환경>  
 
