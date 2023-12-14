@@ -15,13 +15,6 @@
 5. Edit - Users에서 Add-유저이름입력 Password지정 왼쪽 탭에 Shared folders클릭 후 Add - 변환 폴더 지정, 오른쪽 Files와 Directories AllCheck후 확인
 6. Convert_Util로 변환되는지 확인.
 
-[![Video Label](http://www.namejm.org/resources/img/20200408_DEMO_000.jpg)](https://youtu.be/AfrIzDilIZo)  
-**<데모 동영상>**
-
-![dcLogic](https://user-images.githubusercontent.com/13088077/78665631-16137400-7911-11ea-8843-5320c42fa519.png)   
-
-> 사용된 C#라이브러리: vtortola.WebSockets, websocket-sharp, pdfium, NLOG, OfficeAPI, HWP API, log4j, FluentFTP, phantomjs    
-> 사용된 Java라이브러리: commons-net-3.6.jar, Java-WebSocket-1.4.1.jar, json-simple-1.1.1.jar, slf4j-api-1.7.25.jar  
 ## 프로그램별 설명
 * 설정한 포트로 WebSocket을 Listen하며 요청이 들어오면 해당 문서를 변환해주는 역할  
 ![image](https://user-images.githubusercontent.com/13088077/80710856-635abe00-8b2a-11ea-9cf6-db09143aac8b.png)  
