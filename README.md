@@ -63,7 +63,7 @@
   "Method": "WebCapture"
 ```  
 
-## DocConverter Engien
+## DocConverter Engine
 ```
 WordConvert_Core.WordSaveAs(String FilePath, String outPath, String docPassword, bool pageCounting, bool appvisible)
 String FilePath: 소스 파일경로  
